@@ -1,0 +1,28 @@
+{
+    "name": "tkijewski/php-lnrpc",
+    "description": "PHP LND RPC Implementation",
+    "require": {
+        "grpc/grpc": "^1.22.0",
+        "google/protobuf": "^3.8.0",
+        "ext-grpc": "*",
+        "google/common-protos": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lnrpc\\": "Lnrpc/",
+            "GPBMetadata\\Google\\": "grpc/third_party/protobuf/php/src/GPBMetadata/Google/Protobuf/",
+            "GPBMetadata\\": "GPBMetadata/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "git submodule update --init"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Tim Kijewski",
+            "email": "tim.kijewski@gmail.com"
+        }
+    ]
+}
