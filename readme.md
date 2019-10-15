@@ -1,6 +1,14 @@
 # LND RPC FOR PHP
 
 
+## PHP Requirements
+
+```
+$ sudo apt-get install php-dev php-pear
+$ pecl install grpc
+$ echo 'extension=grpc.so' >> /etc/php/7.2/cli/php.ini
+```
+
 `composer require tkijewski/lnrpc`
 
 Then can be used as such: 
