@@ -16,7 +16,7 @@ Then can be used as such:
 ```
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $certPath = '/path/to/tls.cert';
 
