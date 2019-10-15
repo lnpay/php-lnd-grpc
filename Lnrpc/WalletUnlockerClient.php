@@ -8,19 +8,19 @@ namespace Lnrpc;
  * Comments in this file will be directly parsed into the API
  * Documentation as descriptions of the associated method, message, or field.
  * These descriptions should go right above the definition of the object, and
- * can be in either block or /// comment format.
- *
+ * can be in either block or /// comment format. 
+ * 
  * One edge case exists where a // comment followed by a /// comment in the
  * next line will cause the description not to show up in the documentation. In
  * that instance, simply separate the two comments with a blank line.
- *
+ * 
  * An RPC method can be matched to an lncli command by placing a line in the
  * beginning of the description in exactly the following format:
  * lncli: `methodname`
- *
+ * 
  * Failure to specify the exact name of the command will cause documentation
  * generation to fail.
- *
+ * 
  * More information on how exactly the gRPC documentation is generated from
  * this proto file can be found here:
  * https://github.com/lightninglabs/lightning-api
@@ -62,7 +62,7 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     * * 
      * InitWallet is used when lnd is starting up for the first time to fully
      * initialize the daemon and its internal wallet. At the very least a wallet
      * password must be provided. This will be used to encrypt sensitive material

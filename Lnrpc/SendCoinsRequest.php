@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendCoinsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The address to send coins to
+     *&#47; The address to send coins to 
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      */
@@ -54,7 +54,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $addr
-     *          &#47; The address to send coins to
+     *          &#47; The address to send coins to 
      *     @type int|string $amount
      *          &#47; The amount in satoshis to send
      *     @type int $target_conf
@@ -74,7 +74,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The address to send coins to
+     *&#47; The address to send coins to 
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      * @return string
@@ -85,7 +85,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The address to send coins to
+     *&#47; The address to send coins to 
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      * @param string $var

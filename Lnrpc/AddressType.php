@@ -7,7 +7,7 @@ namespace Lnrpc;
 use UnexpectedValueException;
 
 /**
- **
+ ** 
  *`AddressType` has to be one of:
  *- `p2wkh`: Pay to witness key hash (`WITNESS_PUBKEY_HASH` = 0)
  *- `np2wkh`: Pay to nested witness key hash (`NESTED_PUBKEY_HASH` = 1)

@@ -44,7 +44,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     private $block_height = 0;
     /**
-     *&#47; Timestamp of this transaction
+     *&#47; Timestamp of this transaction 
      *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      */
@@ -85,7 +85,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type int $block_height
      *          &#47; The height of the block this transaction was included in
      *     @type int|string $time_stamp
-     *          &#47; Timestamp of this transaction
+     *          &#47; Timestamp of this transaction 
      *     @type int|string $total_fees
      *          &#47; Fees paid for this transaction
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $dest_addresses
@@ -230,7 +230,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of this transaction
+     *&#47; Timestamp of this transaction 
      *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      * @return int|string
@@ -241,7 +241,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of this transaction
+     *&#47; Timestamp of this transaction 
      *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      * @param int|string $var

@@ -55,7 +55,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      */
     private $pub_key = '';
     /**
-     **
+     ** 
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format.
      *
@@ -85,7 +85,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *          An optional public key of the hop. If the public key is given, the payment
      *          can be executed without relying on a copy of the channel graph.
      *     @type bool $tlv_payload
-     *          *
+     *          * 
      *          If set to true, then this hop will be encoded using the new variable length
      *          TLV format.
      * }
@@ -290,7 +290,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
+     ** 
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format.
      *
@@ -303,7 +303,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
+     ** 
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format.
      *

@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeInfoRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The 33-byte hex-encoded compressed public of the target node
+     *&#47; The 33-byte hex-encoded compressed public of the target node 
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
@@ -33,7 +33,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *          &#47; The 33-byte hex-encoded compressed public of the target node
+     *          &#47; The 33-byte hex-encoded compressed public of the target node 
      *     @type bool $include_channels
      *          &#47; If true, will include all known channels associated with the node.
      * }
@@ -44,7 +44,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The 33-byte hex-encoded compressed public of the target node
+     *&#47; The 33-byte hex-encoded compressed public of the target node 
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The 33-byte hex-encoded compressed public of the target node
+     *&#47; The 33-byte hex-encoded compressed public of the target node 
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var

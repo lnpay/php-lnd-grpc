@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The outpoint (txid:index) of the funding transaction.
+     *&#47; The outpoint (txid:index) of the funding transaction. 
      *
      * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
      */
     private $channel_point = '';
     /**
-     *&#47;  The unique channel ID for the channel.
+     *&#47;  The unique channel ID for the channel. 
      *
      * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id"];</code>
      */
@@ -81,9 +81,9 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $channel_point
-     *          &#47; The outpoint (txid:index) of the funding transaction.
+     *          &#47; The outpoint (txid:index) of the funding transaction. 
      *     @type int|string $chan_id
-     *          &#47;  The unique channel ID for the channel.
+     *          &#47;  The unique channel ID for the channel. 
      *     @type string $chain_hash
      *          &#47; The hash of the genesis block that this channel resides within.
      *     @type string $closing_tx_hash
@@ -108,7 +108,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The outpoint (txid:index) of the funding transaction.
+     *&#47; The outpoint (txid:index) of the funding transaction. 
      *
      * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
      * @return string
@@ -119,7 +119,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The outpoint (txid:index) of the funding transaction.
+     *&#47; The outpoint (txid:index) of the funding transaction. 
      *
      * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
      * @param string $var
@@ -134,7 +134,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47;  The unique channel ID for the channel.
+     *&#47;  The unique channel ID for the channel. 
      *
      * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id"];</code>
      * @return int|string
@@ -145,7 +145,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47;  The unique channel ID for the channel.
+     *&#47;  The unique channel ID for the channel. 
      *
      * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id"];</code>
      * @param int|string $var

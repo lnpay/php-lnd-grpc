@@ -164,7 +164,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *If true, then this channel uses the modern commitment format where the key
      *in the output of the remote party does not change each state. This makes
      *back up and recovery easier as when the channel is closed, the funds go
-     *directly to that key.
+     *directly to that key. 
      *
      * Generated from protobuf field <code>bool static_remote_key = 22[json_name = "static_remote_key"];</code>
      */
@@ -243,7 +243,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *          If true, then this channel uses the modern commitment format where the key
      *          in the output of the remote party does not change each state. This makes
      *          back up and recovery easier as when the channel is closed, the funds go
-     *          directly to that key.
+     *          directly to that key. 
      * }
      */
     public function __construct($data = NULL) {
@@ -842,7 +842,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *If true, then this channel uses the modern commitment format where the key
      *in the output of the remote party does not change each state. This makes
      *back up and recovery easier as when the channel is closed, the funds go
-     *directly to that key.
+     *directly to that key. 
      *
      * Generated from protobuf field <code>bool static_remote_key = 22[json_name = "static_remote_key"];</code>
      * @return bool
@@ -857,7 +857,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *If true, then this channel uses the modern commitment format where the key
      *in the output of the remote party does not change each state. This makes
      *back up and recovery easier as when the channel is closed, the funds go
-     *directly to that key.
+     *directly to that key. 
      *
      * Generated from protobuf field <code>bool static_remote_key = 22[json_name = "static_remote_key"];</code>
      * @param bool $var

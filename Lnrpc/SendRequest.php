@@ -79,15 +79,16 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      */
     private $outgoing_chan_id = 0;
     /**
-     **
-     *An optional maximum total time lock for the route. If zero, there is no
-     *maximum enforced.
+     ** 
+     *An optional maximum total time lock for the route. This should not exceed
+     *lnd's `--max-cltv-expiry` setting. If zero, then the value of
+     *`--max-cltv-expiry` is enforced.
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 10;</code>
      */
     private $cltv_limit = 0;
     /**
-     **
+     ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt.
@@ -132,11 +133,12 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *          The channel id of the channel that must be taken to the first hop. If zero,
      *          any channel may be used.
      *     @type int $cltv_limit
-     *          *
-     *          An optional maximum total time lock for the route. If zero, there is no
-     *          maximum enforced.
+     *          * 
+     *          An optional maximum total time lock for the route. This should not exceed
+     *          lnd's `--max-cltv-expiry` setting. If zero, then the value of
+     *          `--max-cltv-expiry` is enforced.
      *     @type array|\Google\Protobuf\Internal\MapField $dest_tlv
-     *          *
+     *          * 
      *          An optional field that can be used to pass an arbitrary set of TLV records
      *          to a peer which understands the new records. This can be used to pass
      *          application specific data during the payment attempt.
@@ -404,9 +406,10 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *An optional maximum total time lock for the route. If zero, there is no
-     *maximum enforced.
+     ** 
+     *An optional maximum total time lock for the route. This should not exceed
+     *lnd's `--max-cltv-expiry` setting. If zero, then the value of
+     *`--max-cltv-expiry` is enforced.
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 10;</code>
      * @return int
@@ -417,9 +420,10 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *An optional maximum total time lock for the route. If zero, there is no
-     *maximum enforced.
+     ** 
+     *An optional maximum total time lock for the route. This should not exceed
+     *lnd's `--max-cltv-expiry` setting. If zero, then the value of
+     *`--max-cltv-expiry` is enforced.
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 10;</code>
      * @param int $var
@@ -434,7 +438,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
+     ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt.
@@ -448,7 +452,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
+     ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt.

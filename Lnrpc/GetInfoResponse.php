@@ -62,9 +62,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      */
     private $synced_to_chain = false;
     /**
-     **
-     *Whether the current node is connected to testnet. This field is
-     *deprecated and the network field should be used instead
+     ** 
+     *Whether the current node is connected to testnet. This field is 
+     *deprecated and the network field should be used instead 
      *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet", deprecated = true];</code>
      */
@@ -135,9 +135,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *     @type bool $synced_to_chain
      *          &#47; Whether the wallet's view is synced to the main chain
      *     @type bool $testnet
-     *          *
-     *          Whether the current node is connected to testnet. This field is
-     *          deprecated and the network field should be used instead
+     *          * 
+     *          Whether the current node is connected to testnet. This field is 
+     *          deprecated and the network field should be used instead 
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $uris
      *          &#47; The URIs of the current node.
      *     @type int|string $best_header_timestamp
@@ -368,9 +368,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *Whether the current node is connected to testnet. This field is
-     *deprecated and the network field should be used instead
+     ** 
+     *Whether the current node is connected to testnet. This field is 
+     *deprecated and the network field should be used instead 
      *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet", deprecated = true];</code>
      * @return bool
@@ -381,9 +381,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *Whether the current node is connected to testnet. This field is
-     *deprecated and the network field should be used instead
+     ** 
+     *Whether the current node is connected to testnet. This field is 
+     *deprecated and the network field should be used instead 
      *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet", deprecated = true];</code>
      * @param bool $var

@@ -78,6 +78,15 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.NodePair ignored_pairs = 10;</code>
      */
     private $ignored_pairs;
+    /**
+     ** 
+     *An optional maximum total time lock for the route. If the source is empty or
+     *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
+     *zero, then the value of `--max-cltv-expiry` is used as the limit.
+     *
+     * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
+     */
+    private $cltv_limit = 0;
 
     /**
      * Constructor.
@@ -114,6 +123,11 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *     @type \Lnrpc\NodePair[]|\Google\Protobuf\Internal\RepeatedField $ignored_pairs
      *          *
      *          A list of directed node pairs that will be ignored during path finding.
+     *     @type int $cltv_limit
+     *          * 
+     *          An optional maximum total time lock for the route. If the source is empty or
+     *          ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
+     *          zero, then the value of `--max-cltv-expiry` is used as the limit.
      * }
      */
     public function __construct($data = NULL) {
@@ -373,6 +387,38 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\NodePair::class);
         $this->ignored_pairs = $arr;
+
+        return $this;
+    }
+
+    /**
+     ** 
+     *An optional maximum total time lock for the route. If the source is empty or
+     *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
+     *zero, then the value of `--max-cltv-expiry` is used as the limit.
+     *
+     * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
+     * @return int
+     */
+    public function getCltvLimit()
+    {
+        return $this->cltv_limit;
+    }
+
+    /**
+     ** 
+     *An optional maximum total time lock for the route. If the source is empty or
+     *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
+     *zero, then the value of `--max-cltv-expiry` is used as the limit.
+     *
+     * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCltvLimit($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->cltv_limit = $var;
 
         return $this;
     }
