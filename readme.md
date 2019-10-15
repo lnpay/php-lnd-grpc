@@ -9,7 +9,17 @@ $ pecl install grpc
 $ echo 'extension=grpc.so' >> /etc/php/7.2/cli/php.ini
 ```
 
-`composer require tkijewski/lnrpc`
+Installation
+------------
+
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/):
+
+```
+composer require tkijewski/lnrpc
+```
+
+Basic Usage
+-----------
 
 Then can be used as such: 
 
