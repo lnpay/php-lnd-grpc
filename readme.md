@@ -15,7 +15,7 @@ Installation
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/):
 
 ```
-composer require tkijewski/lnrpc
+composer require tkijewski/php-lnrpc
 ```
 
 Basic Usage
