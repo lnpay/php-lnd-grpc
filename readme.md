@@ -26,15 +26,21 @@ Then can be used as such:
 ```
 <?php
 
+putenv('GRPC_SSL_CIPHER_SUITES=HIGH+ECDSA');
+
 require __DIR__ . '/vendor/autoload.php';
 
-$certPath = '/path/to/tls.cert';
+$certPath = '../.lnd/tls.cert';
+$macaroonPath = '../.lnd/data/chain/bitcoin/mainnet/admin.macaroon';
 
 $cert = file_get_contents($certPath);
+$macaroon = file_get_contents($macaroonPath);
+$callback = function ($metadata) use ($macaroon) {
+        return ['macaroon' => [bin2hex($macaroon)]];
+    };
 
 $credentials = \Grpc\ChannelCredentials::createSsl($cert);
-$x = new \Lnrpc\LightningClient('52.87.176.11:10009',['credentials'=>$credentials]);
-
+$x = new \Lnrpc\LightningClient('127.0.0.1:10009',['credentials'=>$credentials,'update_metadata'=>$callback]);
 $gir = new \Lnrpc\WalletBalanceRequest();
 $result = $x->WalletBalance($gir);
 print_r( $result->wait() );
