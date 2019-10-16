@@ -4,9 +4,9 @@
 ## PHP Requirements
 
 ```
-$ sudo apt-get install php-dev php-pear
+$ sudo apt-get install php-dev php-pear zlib1g-dev zip unzip
 $ pecl install grpc
-$ echo 'extension=grpc.so' >> /etc/php/7.2/cli/php.ini
+$ sudo sh -c "echo 'extension=grpc.so' >> /etc/php/7.2/cli/php.ini" #depends on PHP version you are using. Add this line in the ini file
 ```
 
 Installation
