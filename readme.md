@@ -43,7 +43,7 @@ $credentials = \Grpc\ChannelCredentials::createSsl($cert);
 $x = new \Lnrpc\LightningClient('127.0.0.1:10009',['credentials'=>$credentials,'update_metadata'=>$callback]);
 $gir = new \Lnrpc\WalletBalanceRequest();
 $result = $x->WalletBalance($gir);
-print_r( $result->wait() );
+echo "Balance:".$result->wait()[0]->getTotalBalance();
 
 ```
 
