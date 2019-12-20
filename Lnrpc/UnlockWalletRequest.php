@@ -17,11 +17,11 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      **
      *wallet_password should be the current valid passphrase for the daemon. This
      *will be required to decrypt on-disk material that the daemon requires to
-     *function properly.
+     *function properly. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      */
-    private $wallet_password = '';
+    protected $wallet_password = '';
     /**
      **
      *recovery_window is an optional argument specifying the address lookahead
@@ -32,7 +32,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 recovery_window = 2;</code>
      */
-    private $recovery_window = 0;
+    protected $recovery_window = 0;
     /**
      **
      *channel_backups is an optional argument that allows clients to recover the
@@ -44,7 +44,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChanBackupSnapshot channel_backups = 3;</code>
      */
-    private $channel_backups = null;
+    protected $channel_backups = null;
 
     /**
      * Constructor.
@@ -56,7 +56,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      *          *
      *          wallet_password should be the current valid passphrase for the daemon. This
      *          will be required to decrypt on-disk material that the daemon requires to
-     *          function properly.
+     *          function properly. When using REST, this field must be encoded as base64.
      *     @type int $recovery_window
      *          *
      *          recovery_window is an optional argument specifying the address lookahead
@@ -83,7 +83,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      **
      *wallet_password should be the current valid passphrase for the daemon. This
      *will be required to decrypt on-disk material that the daemon requires to
-     *function properly.
+     *function properly. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      * @return string
@@ -97,7 +97,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      **
      *wallet_password should be the current valid passphrase for the daemon. This
      *will be required to decrypt on-disk material that the daemon requires to
-     *function properly.
+     *function properly. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      * @param string $var

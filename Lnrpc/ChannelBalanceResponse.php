@@ -18,13 +18,13 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 balance = 1[json_name = "balance"];</code>
      */
-    private $balance = 0;
+    protected $balance = 0;
     /**
      *&#47; Sum of channels pending balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 pending_open_balance = 2[json_name = "pending_open_balance"];</code>
      */
-    private $pending_open_balance = 0;
+    protected $pending_open_balance = 0;
 
     /**
      * Constructor.

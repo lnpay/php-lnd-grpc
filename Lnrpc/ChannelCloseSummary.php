@@ -18,61 +18,61 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
      *&#47;  The unique channel ID for the channel. 
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      *&#47; The hash of the genesis block that this channel resides within.
      *
      * Generated from protobuf field <code>string chain_hash = 3[json_name = "chain_hash"];</code>
      */
-    private $chain_hash = '';
+    protected $chain_hash = '';
     /**
      *&#47; The txid of the transaction which ultimately closed this channel.
      *
      * Generated from protobuf field <code>string closing_tx_hash = 4[json_name = "closing_tx_hash"];</code>
      */
-    private $closing_tx_hash = '';
+    protected $closing_tx_hash = '';
     /**
      *&#47; Public key of the remote peer that we formerly had a channel with.
      *
      * Generated from protobuf field <code>string remote_pubkey = 5[json_name = "remote_pubkey"];</code>
      */
-    private $remote_pubkey = '';
+    protected $remote_pubkey = '';
     /**
      *&#47; Total capacity of the channel.
      *
      * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      *&#47; Height at which the funding transaction was spent.
      *
      * Generated from protobuf field <code>uint32 close_height = 7[json_name = "close_height"];</code>
      */
-    private $close_height = 0;
+    protected $close_height = 0;
     /**
      *&#47; Settled balance at the time of channel closure
      *
      * Generated from protobuf field <code>int64 settled_balance = 8[json_name = "settled_balance"];</code>
      */
-    private $settled_balance = 0;
+    protected $settled_balance = 0;
     /**
      *&#47; The sum of all the time-locked outputs at the time of channel closure
      *
      * Generated from protobuf field <code>int64 time_locked_balance = 9[json_name = "time_locked_balance"];</code>
      */
-    private $time_locked_balance = 0;
+    protected $time_locked_balance = 0;
     /**
      *&#47; Details on how the channel was closed.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10[json_name = "close_type"];</code>
      */
-    private $close_type = 0;
+    protected $close_type = 0;
 
     /**
      * Constructor.
@@ -136,7 +136,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47;  The unique channel ID for the channel. 
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -147,7 +147,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47;  The unique channel ID for the channel. 
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */

@@ -18,13 +18,13 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee_sat = 1[json_name = "fee_sat"];</code>
      */
-    private $fee_sat = 0;
+    protected $fee_sat = 0;
     /**
      *&#47; The fee rate in satoshi/byte.
      *
      * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2[json_name = "feerate_sat_per_byte"];</code>
      */
-    private $feerate_sat_per_byte = 0;
+    protected $feerate_sat_per_byte = 0;
 
     /**
      * Constructor.

@@ -22,88 +22,95 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
      */
-    private $memo = '';
-    /**
-     ** Deprecated. An optional cryptographic receipt of payment which is not
-     *implemented.
-     *
-     * Generated from protobuf field <code>bytes receipt = 2[json_name = "receipt", deprecated = true];</code>
-     */
-    private $receipt = '';
+    protected $memo = '';
     /**
      **
      *The hex-encoded preimage (32 byte) which will allow settling an incoming
-     *HTLC payable to this preimage
+     *HTLC payable to this preimage. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
      */
-    private $r_preimage = '';
+    protected $r_preimage = '';
     /**
-     *&#47; The hash of the preimage
+     **
+     *The hash of the preimage. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
      */
-    private $r_hash = '';
+    protected $r_hash = '';
     /**
-     *&#47; The value of this invoice in satoshis
+     **
+     *The value of this invoice in satoshis
+     *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
      */
-    private $value = 0;
+    protected $value = 0;
+    /**
+     **
+     *The value of this invoice in millisatoshis
+     *The fields value and value_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 value_msat = 23[json_name = "value_msat"];</code>
+     */
+    protected $value_msat = 0;
     /**
      *&#47; Whether this invoice has been fulfilled
      *
      * Generated from protobuf field <code>bool settled = 6[json_name = "settled", deprecated = true];</code>
      */
-    private $settled = false;
+    protected $settled = false;
     /**
      *&#47; When this invoice was created
      *
      * Generated from protobuf field <code>int64 creation_date = 7[json_name = "creation_date"];</code>
      */
-    private $creation_date = 0;
+    protected $creation_date = 0;
     /**
      *&#47; When this invoice was settled
      *
      * Generated from protobuf field <code>int64 settle_date = 8[json_name = "settle_date"];</code>
      */
-    private $settle_date = 0;
+    protected $settle_date = 0;
     /**
      **
-     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
      * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
      */
-    private $payment_request = '';
+    protected $payment_request = '';
     /**
      **
      *Hash (SHA-256) of a description of the payment. Used if the description of
      *payment (memo) is too long to naturally fit within the description field
-     *of an encoded payment request.
+     *of an encoded payment request. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes description_hash = 10[json_name = "description_hash"];</code>
      */
-    private $description_hash = '';
+    protected $description_hash = '';
     /**
      *&#47; Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
      * Generated from protobuf field <code>int64 expiry = 11[json_name = "expiry"];</code>
      */
-    private $expiry = 0;
+    protected $expiry = 0;
     /**
      *&#47; Fallback on-chain address.
      *
      * Generated from protobuf field <code>string fallback_addr = 12[json_name = "fallback_addr"];</code>
      */
-    private $fallback_addr = '';
+    protected $fallback_addr = '';
     /**
      *&#47; Delta to use for the time-lock of the CLTV extended to the final hop.
      *
      * Generated from protobuf field <code>uint64 cltv_expiry = 13[json_name = "cltv_expiry"];</code>
      */
-    private $cltv_expiry = 0;
+    protected $cltv_expiry = 0;
     /**
      **
      *Route hints that can each be individually used to assist in reaching the
@@ -117,7 +124,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool private = 15[json_name = "private"];</code>
      */
-    private $private = false;
+    protected $private = false;
     /**
      **
      *The "add" index of this invoice. Each newly created invoice will increment
@@ -127,7 +134,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
      */
-    private $add_index = 0;
+    protected $add_index = 0;
     /**
      **
      *The "settle" index of this invoice. Each newly settled invoice will
@@ -137,13 +144,13 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 settle_index = 17[json_name = "settle_index"];</code>
      */
-    private $settle_index = 0;
+    protected $settle_index = 0;
     /**
      *&#47; Deprecated, use amt_paid_sat or amt_paid_msat.
      *
      * Generated from protobuf field <code>int64 amt_paid = 18[json_name = "amt_paid", deprecated = true];</code>
      */
-    private $amt_paid = 0;
+    protected $amt_paid = 0;
     /**
      **
      *The amount that was accepted for this invoice, in satoshis. This will ONLY
@@ -155,7 +162,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_paid_sat = 19[json_name = "amt_paid_sat"];</code>
      */
-    private $amt_paid_sat = 0;
+    protected $amt_paid_sat = 0;
     /**
      **
      *The amount that was accepted for this invoice, in millisatoshis. This will
@@ -167,20 +174,26 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_paid_msat = 20[json_name = "amt_paid_msat"];</code>
      */
-    private $amt_paid_msat = 0;
+    protected $amt_paid_msat = 0;
     /**
      **
      *The state the invoice is in.
      *
      * Generated from protobuf field <code>.lnrpc.Invoice.InvoiceState state = 21[json_name = "state"];</code>
      */
-    private $state = 0;
+    protected $state = 0;
     /**
      *&#47; List of HTLCs paying to this invoice [EXPERIMENTAL].
      *
      * Generated from protobuf field <code>repeated .lnrpc.InvoiceHTLC htlcs = 22[json_name = "htlcs"];</code>
      */
     private $htlcs;
+    /**
+     *&#47; List of features advertised on the invoice.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 24[json_name = "features"];</code>
+     */
+    private $features;
 
     /**
      * Constructor.
@@ -194,17 +207,23 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          purposes for the invoice's creator, and will also be set in the description
      *          field of the encoded payment request if the description_hash field is not
      *          being used.
-     *     @type string $receipt
-     *          * Deprecated. An optional cryptographic receipt of payment which is not
-     *          implemented.
      *     @type string $r_preimage
      *          *
      *          The hex-encoded preimage (32 byte) which will allow settling an incoming
-     *          HTLC payable to this preimage
+     *          HTLC payable to this preimage. When using REST, this field must be encoded
+     *          as base64.
      *     @type string $r_hash
-     *          &#47; The hash of the preimage
+     *          *
+     *          The hash of the preimage. When using REST, this field must be encoded as
+     *          base64.
      *     @type int|string $value
-     *          &#47; The value of this invoice in satoshis
+     *          *
+     *          The value of this invoice in satoshis
+     *          The fields value and value_msat are mutually exclusive.
+     *     @type int|string $value_msat
+     *          *
+     *          The value of this invoice in millisatoshis
+     *          The fields value and value_msat are mutually exclusive.
      *     @type bool $settled
      *          &#47; Whether this invoice has been fulfilled
      *     @type int|string $creation_date
@@ -213,14 +232,15 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          &#47; When this invoice was settled
      *     @type string $payment_request
      *          *
-     *          A bare-bones invoice for a payment within the Lightning Network.  With the
+     *          A bare-bones invoice for a payment within the Lightning Network. With the
      *          details of the invoice, the sender has all the data necessary to send a
      *          payment to the recipient.
      *     @type string $description_hash
      *          *
      *          Hash (SHA-256) of a description of the payment. Used if the description of
      *          payment (memo) is too long to naturally fit within the description field
-     *          of an encoded payment request.
+     *          of an encoded payment request. When using REST, this field must be encoded
+     *          as base64.
      *     @type int|string $expiry
      *          &#47; Payment request expiry time in seconds. Default is 3600 (1 hour).
      *     @type string $fallback_addr
@@ -268,6 +288,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          The state the invoice is in.
      *     @type \Lnrpc\InvoiceHTLC[]|\Google\Protobuf\Internal\RepeatedField $htlcs
      *          &#47; List of HTLCs paying to this invoice [EXPERIMENTAL].
+     *     @type array|\Google\Protobuf\Internal\MapField $features
+     *          &#47; List of features advertised on the invoice.
      * }
      */
     public function __construct($data = NULL) {
@@ -310,37 +332,10 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** Deprecated. An optional cryptographic receipt of payment which is not
-     *implemented.
-     *
-     * Generated from protobuf field <code>bytes receipt = 2[json_name = "receipt", deprecated = true];</code>
-     * @return string
-     */
-    public function getReceipt()
-    {
-        return $this->receipt;
-    }
-
-    /**
-     ** Deprecated. An optional cryptographic receipt of payment which is not
-     *implemented.
-     *
-     * Generated from protobuf field <code>bytes receipt = 2[json_name = "receipt", deprecated = true];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setReceipt($var)
-    {
-        GPBUtil::checkString($var, False);
-        $this->receipt = $var;
-
-        return $this;
-    }
-
-    /**
      **
      *The hex-encoded preimage (32 byte) which will allow settling an incoming
-     *HTLC payable to this preimage
+     *HTLC payable to this preimage. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
      * @return string
@@ -353,7 +348,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      **
      *The hex-encoded preimage (32 byte) which will allow settling an incoming
-     *HTLC payable to this preimage
+     *HTLC payable to this preimage. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
      * @param string $var
@@ -368,7 +364,9 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash of the preimage
+     **
+     *The hash of the preimage. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
      * @return string
@@ -379,7 +377,9 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash of the preimage
+     **
+     *The hash of the preimage. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
      * @param string $var
@@ -394,7 +394,9 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The value of this invoice in satoshis
+     **
+     *The value of this invoice in satoshis
+     *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
      * @return int|string
@@ -405,7 +407,9 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The value of this invoice in satoshis
+     **
+     *The value of this invoice in satoshis
+     *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
      * @param int|string $var
@@ -415,6 +419,36 @@ class Invoice extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->value = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The value of this invoice in millisatoshis
+     *The fields value and value_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 value_msat = 23[json_name = "value_msat"];</code>
+     * @return int|string
+     */
+    public function getValueMsat()
+    {
+        return $this->value_msat;
+    }
+
+    /**
+     **
+     *The value of this invoice in millisatoshis
+     *The fields value and value_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 value_msat = 23[json_name = "value_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setValueMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->value_msat = $var;
 
         return $this;
     }
@@ -499,7 +533,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
@@ -513,7 +547,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
@@ -533,7 +567,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
      **
      *Hash (SHA-256) of a description of the payment. Used if the description of
      *payment (memo) is too long to naturally fit within the description field
-     *of an encoded payment request.
+     *of an encoded payment request. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes description_hash = 10[json_name = "description_hash"];</code>
      * @return string
@@ -547,7 +582,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
      **
      *Hash (SHA-256) of a description of the payment. Used if the description of
      *payment (memo) is too long to naturally fit within the description field
-     *of an encoded payment request.
+     *of an encoded payment request. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes description_hash = 10[json_name = "description_hash"];</code>
      * @param string $var
@@ -915,6 +951,32 @@ class Invoice extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\InvoiceHTLC::class);
         $this->htlcs = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; List of features advertised on the invoice.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 24[json_name = "features"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     *&#47; List of features advertised on the invoice.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 24[json_name = "features"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setFeatures($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
+        $this->features = $arr;
 
         return $this;
     }

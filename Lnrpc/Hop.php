@@ -19,33 +19,33 @@ class Hop extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
      */
-    private $chan_capacity = 0;
+    protected $chan_capacity = 0;
     /**
      * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
      */
-    private $amt_to_forward = 0;
+    protected $amt_to_forward = 0;
     /**
      * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
      */
-    private $fee = 0;
+    protected $fee = 0;
     /**
      * Generated from protobuf field <code>uint32 expiry = 5[json_name = "expiry"];</code>
      */
-    private $expiry = 0;
+    protected $expiry = 0;
     /**
      * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
      */
-    private $amt_to_forward_msat = 0;
+    protected $amt_to_forward_msat = 0;
     /**
      * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
      */
-    private $fee_msat = 0;
+    protected $fee_msat = 0;
     /**
      **
      *An optional public key of the hop. If the public key is given, the payment
@@ -53,15 +53,35 @@ class Hop extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 8[json_name = "pub_key"];</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      ** 
      *If set to true, then this hop will be encoded using the new variable length
-     *TLV format.
+     *TLV format. Note that if any custom tlv_records below are specified, then
+     *this field MUST be set to true for them to be encoded properly.
      *
      * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
      */
-    private $tlv_payload = false;
+    protected $tlv_payload = false;
+    /**
+     **
+     *An optional TLV record tha singals the use of an MPP payment. If present,
+     *the receiver will enforce that that the same mpp_record is included in the
+     *final hop payload of all non-zero payments in the HTLC set. If empty, a
+     *regular single-shot payment is or was attempted.
+     *
+     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
+     */
+    protected $mpp_record = null;
+    /**
+     **
+     *An optional set of key-value TLV records. This is useful within the context
+     *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
+     *to drop off at each hop within the onion.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11[json_name = "custom_records"];</code>
+     */
+    private $custom_records;
 
     /**
      * Constructor.
@@ -87,7 +107,19 @@ class Hop extends \Google\Protobuf\Internal\Message
      *     @type bool $tlv_payload
      *          * 
      *          If set to true, then this hop will be encoded using the new variable length
-     *          TLV format.
+     *          TLV format. Note that if any custom tlv_records below are specified, then
+     *          this field MUST be set to true for them to be encoded properly.
+     *     @type \Lnrpc\MPPRecord $mpp_record
+     *          *
+     *          An optional TLV record tha singals the use of an MPP payment. If present,
+     *          the receiver will enforce that that the same mpp_record is included in the
+     *          final hop payload of all non-zero payments in the HTLC set. If empty, a
+     *          regular single-shot payment is or was attempted.
+     *     @type array|\Google\Protobuf\Internal\MapField $custom_records
+     *          *
+     *          An optional set of key-value TLV records. This is useful within the context
+     *          of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
+     *          to drop off at each hop within the onion.
      * }
      */
     public function __construct($data = NULL) {
@@ -101,7 +133,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -115,7 +147,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -292,7 +324,8 @@ class Hop extends \Google\Protobuf\Internal\Message
     /**
      ** 
      *If set to true, then this hop will be encoded using the new variable length
-     *TLV format.
+     *TLV format. Note that if any custom tlv_records below are specified, then
+     *this field MUST be set to true for them to be encoded properly.
      *
      * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
      * @return bool
@@ -305,7 +338,8 @@ class Hop extends \Google\Protobuf\Internal\Message
     /**
      ** 
      *If set to true, then this hop will be encoded using the new variable length
-     *TLV format.
+     *TLV format. Note that if any custom tlv_records below are specified, then
+     *this field MUST be set to true for them to be encoded properly.
      *
      * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
      * @param bool $var
@@ -315,6 +349,72 @@ class Hop extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->tlv_payload = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *An optional TLV record tha singals the use of an MPP payment. If present,
+     *the receiver will enforce that that the same mpp_record is included in the
+     *final hop payload of all non-zero payments in the HTLC set. If empty, a
+     *regular single-shot payment is or was attempted.
+     *
+     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
+     * @return \Lnrpc\MPPRecord
+     */
+    public function getMppRecord()
+    {
+        return $this->mpp_record;
+    }
+
+    /**
+     **
+     *An optional TLV record tha singals the use of an MPP payment. If present,
+     *the receiver will enforce that that the same mpp_record is included in the
+     *final hop payload of all non-zero payments in the HTLC set. If empty, a
+     *regular single-shot payment is or was attempted.
+     *
+     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
+     * @param \Lnrpc\MPPRecord $var
+     * @return $this
+     */
+    public function setMppRecord($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\MPPRecord::class);
+        $this->mpp_record = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *An optional set of key-value TLV records. This is useful within the context
+     *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
+     *to drop off at each hop within the onion.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11[json_name = "custom_records"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getCustomRecords()
+    {
+        return $this->custom_records;
+    }
+
+    /**
+     **
+     *An optional set of key-value TLV records. This is useful within the context
+     *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
+     *to drop off at each hop within the onion.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11[json_name = "custom_records"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setCustomRecords($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
+        $this->custom_records = $arr;
 
         return $this;
     }

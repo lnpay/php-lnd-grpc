@@ -28,7 +28,7 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>double success_prob = 2[json_name = "success_prob"];</code>
      */
-    private $success_prob = 0.0;
+    protected $success_prob = 0.0;
 
     /**
      * Constructor.

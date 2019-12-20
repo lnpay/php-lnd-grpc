@@ -18,51 +18,63 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Short channel id over which the htlc was received.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      *&#47; Index identifying the htlc on the channel.
      *
      * Generated from protobuf field <code>uint64 htlc_index = 2[json_name = "htlc_index"];</code>
      */
-    private $htlc_index = 0;
+    protected $htlc_index = 0;
     /**
      *&#47; The amount of the htlc in msat.
      *
      * Generated from protobuf field <code>uint64 amt_msat = 3[json_name = "amt_msat"];</code>
      */
-    private $amt_msat = 0;
+    protected $amt_msat = 0;
     /**
      *&#47; Block height at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int32 accept_height = 4[json_name = "accept_height"];</code>
      */
-    private $accept_height = 0;
+    protected $accept_height = 0;
     /**
      *&#47; Time at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int64 accept_time = 5[json_name = "accept_time"];</code>
      */
-    private $accept_time = 0;
+    protected $accept_time = 0;
     /**
      *&#47; Time at which this htlc was settled or canceled.
      *
      * Generated from protobuf field <code>int64 resolve_time = 6[json_name = "resolve_time"];</code>
      */
-    private $resolve_time = 0;
+    protected $resolve_time = 0;
     /**
      *&#47; Block height at which this htlc expires.
      *
      * Generated from protobuf field <code>int32 expiry_height = 7[json_name = "expiry_height"];</code>
      */
-    private $expiry_height = 0;
+    protected $expiry_height = 0;
     /**
      *&#47; Current state the htlc is in.
      *
      * Generated from protobuf field <code>.lnrpc.InvoiceHTLCState state = 8[json_name = "state"];</code>
      */
-    private $state = 0;
+    protected $state = 0;
+    /**
+     *&#47; Custom tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9[json_name = "custom_records"];</code>
+     */
+    private $custom_records;
+    /**
+     *&#47; The total amount of the mpp payment in msat.
+     *
+     * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10[json_name = "mpp_total_amt_msat"];</code>
+     */
+    protected $mpp_total_amt_msat = 0;
 
     /**
      * Constructor.
@@ -86,6 +98,10 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
      *          &#47; Block height at which this htlc expires.
      *     @type int $state
      *          &#47; Current state the htlc is in.
+     *     @type array|\Google\Protobuf\Internal\MapField $custom_records
+     *          &#47; Custom tlv records.
+     *     @type int|string $mpp_total_amt_msat
+     *          &#47; The total amount of the mpp payment in msat.
      * }
      */
     public function __construct($data = NULL) {
@@ -96,7 +112,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Short channel id over which the htlc was received.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -107,7 +123,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Short channel id over which the htlc was received.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -297,6 +313,58 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Lnrpc\InvoiceHTLCState::class);
         $this->state = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; Custom tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9[json_name = "custom_records"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getCustomRecords()
+    {
+        return $this->custom_records;
+    }
+
+    /**
+     *&#47; Custom tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9[json_name = "custom_records"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setCustomRecords($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
+        $this->custom_records = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The total amount of the mpp payment in msat.
+     *
+     * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10[json_name = "mpp_total_amt_msat"];</code>
+     * @return int|string
+     */
+    public function getMppTotalAmtMsat()
+    {
+        return $this->mpp_total_amt_msat;
+    }
+
+    /**
+     *&#47; The total amount of the mpp payment in msat.
+     *
+     * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10[json_name = "mpp_total_amt_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setMppTotalAmtMsat($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->mpp_total_amt_msat = $var;
 
         return $this;
     }

@@ -17,11 +17,12 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      **
      *wallet_password is the passphrase that should be used to encrypt the
      *wallet. This MUST be at least 8 chars in length. After creation, this
-     *password is required to unlock the daemon.
+     *password is required to unlock the daemon. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      */
-    private $wallet_password = '';
+    protected $wallet_password = '';
     /**
      **
      *cipher_seed_mnemonic is a 24-word mnemonic that encodes a prior aezeed
@@ -34,11 +35,12 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *aezeed_passphrase is an optional user provided passphrase that will be used
-     *to encrypt the generated aezeed cipher seed.
+     *to encrypt the generated aezeed cipher seed. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 3;</code>
      */
-    private $aezeed_passphrase = '';
+    protected $aezeed_passphrase = '';
     /**
      **
      *recovery_window is an optional argument specifying the address lookahead
@@ -49,7 +51,7 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 recovery_window = 4;</code>
      */
-    private $recovery_window = 0;
+    protected $recovery_window = 0;
     /**
      **
      *channel_backups is an optional argument that allows clients to recover the
@@ -61,7 +63,7 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChanBackupSnapshot channel_backups = 5;</code>
      */
-    private $channel_backups = null;
+    protected $channel_backups = null;
 
     /**
      * Constructor.
@@ -73,7 +75,8 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      *          *
      *          wallet_password is the passphrase that should be used to encrypt the
      *          wallet. This MUST be at least 8 chars in length. After creation, this
-     *          password is required to unlock the daemon.
+     *          password is required to unlock the daemon. When using REST, this field
+     *          must be encoded as base64.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $cipher_seed_mnemonic
      *          *
      *          cipher_seed_mnemonic is a 24-word mnemonic that encodes a prior aezeed
@@ -82,7 +85,8 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      *     @type string $aezeed_passphrase
      *          *
      *          aezeed_passphrase is an optional user provided passphrase that will be used
-     *          to encrypt the generated aezeed cipher seed.
+     *          to encrypt the generated aezeed cipher seed. When using REST, this field
+     *          must be encoded as base64.
      *     @type int $recovery_window
      *          *
      *          recovery_window is an optional argument specifying the address lookahead
@@ -109,7 +113,8 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      **
      *wallet_password is the passphrase that should be used to encrypt the
      *wallet. This MUST be at least 8 chars in length. After creation, this
-     *password is required to unlock the daemon.
+     *password is required to unlock the daemon. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      * @return string
@@ -123,7 +128,8 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      **
      *wallet_password is the passphrase that should be used to encrypt the
      *wallet. This MUST be at least 8 chars in length. After creation, this
-     *password is required to unlock the daemon.
+     *password is required to unlock the daemon. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      * @param string $var
@@ -172,7 +178,8 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *aezeed_passphrase is an optional user provided passphrase that will be used
-     *to encrypt the generated aezeed cipher seed.
+     *to encrypt the generated aezeed cipher seed. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 3;</code>
      * @return string
@@ -185,7 +192,8 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *aezeed_passphrase is an optional user provided passphrase that will be used
-     *to encrypt the generated aezeed cipher seed.
+     *to encrypt the generated aezeed cipher seed. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 3;</code>
      * @param string $var

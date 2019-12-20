@@ -19,16 +19,17 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1[json_name = "chan_point"];</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
     /**
      **
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
-     *order to trigger the recovery protocol.
+     *order to trigger the recovery protocol. When using REST, this field must be
+     *encoded as base64.
      *
      * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
      */
-    private $chan_backup = '';
+    protected $chan_backup = '';
 
     /**
      * Constructor.
@@ -43,7 +44,8 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *          *
      *          Is an encrypted single-chan backup. this can be passed to
      *          RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
-     *          order to trigger the recovery protocol.
+     *          order to trigger the recovery protocol. When using REST, this field must be
+     *          encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -83,7 +85,8 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      **
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
-     *order to trigger the recovery protocol.
+     *order to trigger the recovery protocol. When using REST, this field must be
+     *encoded as base64.
      *
      * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
      * @return string
@@ -97,7 +100,8 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      **
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
-     *order to trigger the recovery protocol.
+     *order to trigger the recovery protocol. When using REST, this field must be
+     *encoded as base64.
      *
      * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
      * @param string $var

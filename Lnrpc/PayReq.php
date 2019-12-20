@@ -16,43 +16,55 @@ class PayReq extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
      */
-    private $destination = '';
+    protected $destination = '';
     /**
      * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
      */
-    private $num_satoshis = 0;
+    protected $num_satoshis = 0;
     /**
      * Generated from protobuf field <code>int64 timestamp = 4[json_name = "timestamp"];</code>
      */
-    private $timestamp = 0;
+    protected $timestamp = 0;
     /**
      * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
      */
-    private $expiry = 0;
+    protected $expiry = 0;
     /**
      * Generated from protobuf field <code>string description = 6[json_name = "description"];</code>
      */
-    private $description = '';
+    protected $description = '';
     /**
      * Generated from protobuf field <code>string description_hash = 7[json_name = "description_hash"];</code>
      */
-    private $description_hash = '';
+    protected $description_hash = '';
     /**
      * Generated from protobuf field <code>string fallback_addr = 8[json_name = "fallback_addr"];</code>
      */
-    private $fallback_addr = '';
+    protected $fallback_addr = '';
     /**
      * Generated from protobuf field <code>int64 cltv_expiry = 9[json_name = "cltv_expiry"];</code>
      */
-    private $cltv_expiry = 0;
+    protected $cltv_expiry = 0;
     /**
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
      */
     private $route_hints;
+    /**
+     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     */
+    protected $payment_addr = '';
+    /**
+     * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
+     */
+    protected $num_msat = 0;
+    /**
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
+     */
+    private $features;
 
     /**
      * Constructor.
@@ -70,6 +82,9 @@ class PayReq extends \Google\Protobuf\Internal\Message
      *     @type string $fallback_addr
      *     @type int|string $cltv_expiry
      *     @type \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $route_hints
+     *     @type string $payment_addr
+     *     @type int|string $num_msat
+     *     @type array|\Google\Protobuf\Internal\MapField $features
      * }
      */
     public function __construct($data = NULL) {
@@ -293,6 +308,72 @@ class PayReq extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\RouteHint::class);
         $this->route_hints = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * @return string
+     */
+    public function getPaymentAddr()
+    {
+        return $this->payment_addr;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentAddr($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->payment_addr = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
+     * @return int|string
+     */
+    public function getNumMsat()
+    {
+        return $this->num_msat;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setNumMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->num_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setFeatures($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
+        $this->features = $arr;
 
         return $this;
     }

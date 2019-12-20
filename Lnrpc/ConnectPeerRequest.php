@@ -18,14 +18,14 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      */
-    private $addr = null;
+    protected $addr = null;
     /**
      ** If set, the daemon will attempt to persistently connect to the target
-     * peer.  Otherwise, the call will be synchronous. 
+     * peer. Otherwise, the call will be synchronous. 
      *
      * Generated from protobuf field <code>bool perm = 2;</code>
      */
-    private $perm = false;
+    protected $perm = false;
 
     /**
      * Constructor.
@@ -37,7 +37,7 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      *          &#47; Lightning address of the peer, in the format `<pubkey>&#64;host`
      *     @type bool $perm
      *          * If set, the daemon will attempt to persistently connect to the target
-     *           peer.  Otherwise, the call will be synchronous. 
+     *           peer. Otherwise, the call will be synchronous. 
      * }
      */
     public function __construct($data = NULL) {
@@ -73,7 +73,7 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
 
     /**
      ** If set, the daemon will attempt to persistently connect to the target
-     * peer.  Otherwise, the call will be synchronous. 
+     * peer. Otherwise, the call will be synchronous. 
      *
      * Generated from protobuf field <code>bool perm = 2;</code>
      * @return bool
@@ -85,7 +85,7 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
 
     /**
      ** If set, the daemon will attempt to persistently connect to the target
-     * peer.  Otherwise, the call will be synchronous. 
+     * peer. Otherwise, the call will be synchronous. 
      *
      * Generated from protobuf field <code>bool perm = 2;</code>
      * @param bool $var

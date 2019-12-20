@@ -24,11 +24,12 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      **
      *A single encrypted blob containing all the static channel backups of the
      *channel listed above. This can be stored as a single file or blob, and
-     *safely be replaced with any prior/future versions.
+     *safely be replaced with any prior/future versions. When using REST, this
+     *field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      */
-    private $multi_chan_backup = '';
+    protected $multi_chan_backup = '';
 
     /**
      * Constructor.
@@ -43,7 +44,8 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *          *
      *          A single encrypted blob containing all the static channel backups of the
      *          channel listed above. This can be stored as a single file or blob, and
-     *          safely be replaced with any prior/future versions.
+     *          safely be replaced with any prior/future versions. When using REST, this
+     *          field must be encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -83,7 +85,8 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      **
      *A single encrypted blob containing all the static channel backups of the
      *channel listed above. This can be stored as a single file or blob, and
-     *safely be replaced with any prior/future versions.
+     *safely be replaced with any prior/future versions. When using REST, this
+     *field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      * @return string
@@ -97,7 +100,8 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      **
      *A single encrypted blob containing all the static channel backups of the
      *channel listed above. This can be stored as a single file or blob, and
-     *safely be replaced with any prior/future versions.
+     *safely be replaced with any prior/future versions. When using REST, this
+     *field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      * @param string $var

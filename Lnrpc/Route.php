@@ -22,23 +22,23 @@ class Route extends \Google\Protobuf\Internal\Message
 {
     /**
      **
-     *The cumulative (final) time lock across the entire route.  This is the CLTV
+     *The cumulative (final) time lock across the entire route. This is the CLTV
      *value that should be extended to the first hop in the route. All other hops
      *will decrement the time-lock as advertised, leaving enough time for all
      *hops to wait for or present the payment preimage to complete the payment.
      *
      * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
      */
-    private $total_time_lock = 0;
+    protected $total_time_lock = 0;
     /**
      **
-     *The sum of the fees paid at each hop within the final route.  In the case
+     *The sum of the fees paid at each hop within the final route. In the case
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *to ourselves.
      *
      * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees", deprecated = true];</code>
      */
-    private $total_fees = 0;
+    protected $total_fees = 0;
     /**
      **
      *The total amount of funds required to complete a payment over this route.
@@ -49,7 +49,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt", deprecated = true];</code>
      */
-    private $total_amt = 0;
+    protected $total_amt = 0;
     /**
      **
      *Contains details concerning the specific forwarding details at each hop.
@@ -63,14 +63,14 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_fees_msat = 5[json_name = "total_fees_msat"];</code>
      */
-    private $total_fees_msat = 0;
+    protected $total_fees_msat = 0;
     /**
      **
      *The total amount in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_amt_msat = 6[json_name = "total_amt_msat"];</code>
      */
-    private $total_amt_msat = 0;
+    protected $total_amt_msat = 0;
 
     /**
      * Constructor.
@@ -80,13 +80,13 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      *     @type int $total_time_lock
      *          *
-     *          The cumulative (final) time lock across the entire route.  This is the CLTV
+     *          The cumulative (final) time lock across the entire route. This is the CLTV
      *          value that should be extended to the first hop in the route. All other hops
      *          will decrement the time-lock as advertised, leaving enough time for all
      *          hops to wait for or present the payment preimage to complete the payment.
      *     @type int|string $total_fees
      *          *
-     *          The sum of the fees paid at each hop within the final route.  In the case
+     *          The sum of the fees paid at each hop within the final route. In the case
      *          of a one-hop payment, this value will be zero as we don't need to pay a fee
      *          to ourselves.
      *     @type int|string $total_amt
@@ -114,7 +114,7 @@ class Route extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The cumulative (final) time lock across the entire route.  This is the CLTV
+     *The cumulative (final) time lock across the entire route. This is the CLTV
      *value that should be extended to the first hop in the route. All other hops
      *will decrement the time-lock as advertised, leaving enough time for all
      *hops to wait for or present the payment preimage to complete the payment.
@@ -129,7 +129,7 @@ class Route extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The cumulative (final) time lock across the entire route.  This is the CLTV
+     *The cumulative (final) time lock across the entire route. This is the CLTV
      *value that should be extended to the first hop in the route. All other hops
      *will decrement the time-lock as advertised, leaving enough time for all
      *hops to wait for or present the payment preimage to complete the payment.
@@ -148,7 +148,7 @@ class Route extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The sum of the fees paid at each hop within the final route.  In the case
+     *The sum of the fees paid at each hop within the final route. In the case
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *to ourselves.
      *
@@ -162,7 +162,7 @@ class Route extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The sum of the fees paid at each hop within the final route.  In the case
+     *The sum of the fees paid at each hop within the final route. In the case
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *to ourselves.
      *

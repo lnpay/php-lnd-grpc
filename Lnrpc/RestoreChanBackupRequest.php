@@ -22,7 +22,12 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelBackups $chan_backups
+     *          *
+     *          The channels to restore as a list of channel/backup pairs.
      *     @type string $multi_chan_backup
+     *          *
+     *          The channels to restore in the packed multi backup format. When using
+     *          REST, this field must be encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -31,6 +36,9 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The channels to restore as a list of channel/backup pairs.
+     *
      * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1[json_name = "chan_backups"];</code>
      * @return \Lnrpc\ChannelBackups
      */
@@ -40,6 +48,9 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The channels to restore as a list of channel/backup pairs.
+     *
      * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1[json_name = "chan_backups"];</code>
      * @param \Lnrpc\ChannelBackups $var
      * @return $this
@@ -53,6 +64,10 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The channels to restore in the packed multi backup format. When using
+     *REST, this field must be encoded as base64.
+     *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      * @return string
      */
@@ -62,6 +77,10 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
+     *The channels to restore in the packed multi backup format. When using
+     *REST, this field must be encoded as base64.
+     *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      * @param string $var
      * @return $this

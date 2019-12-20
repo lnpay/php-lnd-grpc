@@ -16,29 +16,29 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
      */
-    private $remote_node_pub = '';
+    protected $remote_node_pub = '';
     /**
      * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
      * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
      */
-    private $local_balance = 0;
+    protected $local_balance = 0;
     /**
      * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
      */
-    private $remote_balance = 0;
+    protected $remote_balance = 0;
     /**
      *&#47; The minimum satoshis this node is required to reserve in its balance.
      *
      * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6[json_name = "local_chan_reserve_sat"];</code>
      */
-    private $local_chan_reserve_sat = 0;
+    protected $local_chan_reserve_sat = 0;
     /**
      **
      *The minimum satoshis the other node is required to reserve in its
@@ -46,7 +46,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7[json_name = "remote_chan_reserve_sat"];</code>
      */
-    private $remote_chan_reserve_sat = 0;
+    protected $remote_chan_reserve_sat = 0;
 
     /**
      * Constructor.

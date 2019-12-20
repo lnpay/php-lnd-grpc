@@ -18,7 +18,7 @@ class PayReqString extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pay_req = 1;</code>
      */
-    private $pay_req = '';
+    protected $pay_req = '';
 
     /**
      * Constructor.

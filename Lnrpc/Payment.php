@@ -18,23 +18,23 @@ class Payment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      *&#47; Deprecated, use value_sat or value_msat.
      *
      * Generated from protobuf field <code>int64 value = 2[json_name = "value", deprecated = true];</code>
      */
-    private $value = 0;
+    protected $value = 0;
     /**
-     *&#47; The date of this payment
+     *&#47; Deprecated, use creation_time_ns
      *
-     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
      */
-    private $creation_date = 0;
+    protected $creation_date = 0;
     /**
-     *&#47; The path this payment took
+     *&#47; The path this payment took.
      *
-     * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
+     * Generated from protobuf field <code>repeated string path = 4[json_name = "path", deprecated = true];</code>
      */
     private $path;
     /**
@@ -42,49 +42,61 @@ class Payment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee = 5[json_name = "fee", deprecated = true];</code>
      */
-    private $fee = 0;
+    protected $fee = 0;
     /**
      *&#47; The payment preimage
      *
      * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
      */
-    private $payment_preimage = '';
+    protected $payment_preimage = '';
     /**
      *&#47; The value of the payment in satoshis
      *
      * Generated from protobuf field <code>int64 value_sat = 7[json_name = "value_sat"];</code>
      */
-    private $value_sat = 0;
+    protected $value_sat = 0;
     /**
      *&#47; The value of the payment in milli-satoshis
      *
      * Generated from protobuf field <code>int64 value_msat = 8[json_name = "value_msat"];</code>
      */
-    private $value_msat = 0;
+    protected $value_msat = 0;
     /**
      *&#47; The optional payment request being fulfilled.
      *
      * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
      */
-    private $payment_request = '';
+    protected $payment_request = '';
     /**
      * The status of the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10[json_name = "status"];</code>
      */
-    private $status = 0;
+    protected $status = 0;
     /**
      *&#47;  The fee paid for this payment in satoshis
      *
      * Generated from protobuf field <code>int64 fee_sat = 11[json_name = "fee_sat"];</code>
      */
-    private $fee_sat = 0;
+    protected $fee_sat = 0;
     /**
      *&#47;  The fee paid for this payment in milli-satoshis
      *
      * Generated from protobuf field <code>int64 fee_msat = 12[json_name = "fee_msat"];</code>
      */
-    private $fee_msat = 0;
+    protected $fee_msat = 0;
+    /**
+     *&#47; The time in UNIX nanoseconds at which the payment was created.
+     *
+     * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
+     */
+    protected $creation_time_ns = 0;
+    /**
+     *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14[json_name = "htlcs"];</code>
+     */
+    private $htlcs;
 
     /**
      * Constructor.
@@ -97,9 +109,9 @@ class Payment extends \Google\Protobuf\Internal\Message
      *     @type int|string $value
      *          &#47; Deprecated, use value_sat or value_msat.
      *     @type int|string $creation_date
-     *          &#47; The date of this payment
+     *          &#47; Deprecated, use creation_time_ns
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $path
-     *          &#47; The path this payment took
+     *          &#47; The path this payment took.
      *     @type int|string $fee
      *          &#47; Deprecated, use fee_sat or fee_msat.
      *     @type string $payment_preimage
@@ -116,6 +128,10 @@ class Payment extends \Google\Protobuf\Internal\Message
      *          &#47;  The fee paid for this payment in satoshis
      *     @type int|string $fee_msat
      *          &#47;  The fee paid for this payment in milli-satoshis
+     *     @type int|string $creation_time_ns
+     *          &#47; The time in UNIX nanoseconds at which the payment was created.
+     *     @type \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $htlcs
+     *          &#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      * }
      */
     public function __construct($data = NULL) {
@@ -176,9 +192,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The date of this payment
+     *&#47; Deprecated, use creation_time_ns
      *
-     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
      * @return int|string
      */
     public function getCreationDate()
@@ -187,9 +203,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The date of this payment
+     *&#47; Deprecated, use creation_time_ns
      *
-     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date"];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -202,9 +218,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The path this payment took
+     *&#47; The path this payment took.
      *
-     * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
+     * Generated from protobuf field <code>repeated string path = 4[json_name = "path", deprecated = true];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPath()
@@ -213,9 +229,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The path this payment took
+     *&#47; The path this payment took.
      *
-     * Generated from protobuf field <code>repeated string path = 4[json_name = "path"];</code>
+     * Generated from protobuf field <code>repeated string path = 4[json_name = "path", deprecated = true];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -431,6 +447,58 @@ class Payment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->fee_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The time in UNIX nanoseconds at which the payment was created.
+     *
+     * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
+     * @return int|string
+     */
+    public function getCreationTimeNs()
+    {
+        return $this->creation_time_ns;
+    }
+
+    /**
+     *&#47; The time in UNIX nanoseconds at which the payment was created.
+     *
+     * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreationTimeNs($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->creation_time_ns = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14[json_name = "htlcs"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getHtlcs()
+    {
+        return $this->htlcs;
+    }
+
+    /**
+     *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14[json_name = "htlcs"];</code>
+     * @param \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setHtlcs($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\HTLCAttempt::class);
+        $this->htlcs = $arr;
 
         return $this;
     }

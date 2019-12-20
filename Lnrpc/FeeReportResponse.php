@@ -24,19 +24,19 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 day_fee_sum = 2[json_name = "day_fee_sum"];</code>
      */
-    private $day_fee_sum = 0;
+    protected $day_fee_sum = 0;
     /**
      *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 week.
      *
      * Generated from protobuf field <code>uint64 week_fee_sum = 3[json_name = "week_fee_sum"];</code>
      */
-    private $week_fee_sum = 0;
+    protected $week_fee_sum = 0;
     /**
      *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 month.
      *
      * Generated from protobuf field <code>uint64 month_fee_sum = 4[json_name = "month_fee_sum"];</code>
      */
-    private $month_fee_sum = 0;
+    protected $month_fee_sum = 0;
 
     /**
      * Constructor.

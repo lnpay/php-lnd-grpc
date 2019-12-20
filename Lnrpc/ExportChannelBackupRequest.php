@@ -18,7 +18,7 @@ class ExportChannelBackupRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
 
     /**
      * Constructor.

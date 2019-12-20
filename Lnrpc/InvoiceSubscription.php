@@ -22,7 +22,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
      */
-    private $add_index = 0;
+    protected $add_index = 0;
     /**
      **
      *If specified (non-zero), then we'll first start by sending out
@@ -32,7 +32,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
      */
-    private $settle_index = 0;
+    protected $settle_index = 0;
 
     /**
      * Constructor.

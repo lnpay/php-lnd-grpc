@@ -26,37 +26,37 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
      */
-    private $channel_id = 0;
+    protected $channel_id = 0;
     /**
      * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
      */
-    private $chan_point = '';
+    protected $chan_point = '';
     /**
      * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update", deprecated = true];</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
     /**
      * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
      */
-    private $node1_pub = '';
+    protected $node1_pub = '';
     /**
      * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
      */
-    private $node2_pub = '';
+    protected $node2_pub = '';
     /**
      * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
      */
-    private $node1_policy = null;
+    protected $node1_policy = null;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
      */
-    private $node2_policy = null;
+    protected $node2_policy = null;
 
     /**
      * Constructor.
@@ -89,7 +89,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChannelId()
@@ -103,7 +103,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id"];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
