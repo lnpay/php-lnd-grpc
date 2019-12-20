@@ -16,19 +16,19 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *current_password should be the current valid passphrase used to unlock the
-     *daemon.
+     *daemon. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes current_password = 1;</code>
      */
-    private $current_password = '';
+    protected $current_password = '';
     /**
      **
      *new_password should be the new passphrase that will be needed to unlock the
-     *daemon.
+     *daemon. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes new_password = 2;</code>
      */
-    private $new_password = '';
+    protected $new_password = '';
 
     /**
      * Constructor.
@@ -39,11 +39,11 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
      *     @type string $current_password
      *          *
      *          current_password should be the current valid passphrase used to unlock the
-     *          daemon.
+     *          daemon. When using REST, this field must be encoded as base64.
      *     @type string $new_password
      *          *
      *          new_password should be the new passphrase that will be needed to unlock the
-     *          daemon.
+     *          daemon. When using REST, this field must be encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +54,7 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *current_password should be the current valid passphrase used to unlock the
-     *daemon.
+     *daemon. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes current_password = 1;</code>
      * @return string
@@ -67,7 +67,7 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *current_password should be the current valid passphrase used to unlock the
-     *daemon.
+     *daemon. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes current_password = 1;</code>
      * @param string $var
@@ -84,7 +84,7 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *new_password should be the new passphrase that will be needed to unlock the
-     *daemon.
+     *daemon. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes new_password = 2;</code>
      * @return string
@@ -97,7 +97,7 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *new_password should be the new passphrase that will be needed to unlock the
-     *daemon.
+     *daemon. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes new_password = 2;</code>
      * @param string $var

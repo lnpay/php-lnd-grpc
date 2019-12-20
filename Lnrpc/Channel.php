@@ -18,13 +18,13 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool active = 1[json_name = "active"];</code>
      */
-    private $active = false;
+    protected $active = false;
     /**
      *&#47; The identity pubkey of the remote node
      *
      * Generated from protobuf field <code>string remote_pubkey = 2[json_name = "remote_pubkey"];</code>
      */
-    private $remote_pubkey = '';
+    protected $remote_pubkey = '';
     /**
      **
      *The outpoint (txid:index) of the funding transaction. With this value, Bob
@@ -33,34 +33,34 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string channel_point = 3[json_name = "channel_point"];</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
      **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id", jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      *&#47; The total amount of funds held in this channel
      *
      * Generated from protobuf field <code>int64 capacity = 5[json_name = "capacity"];</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      *&#47; This node's current balance in this channel
      *
      * Generated from protobuf field <code>int64 local_balance = 6[json_name = "local_balance"];</code>
      */
-    private $local_balance = 0;
+    protected $local_balance = 0;
     /**
      *&#47; The counterparty's current balance in this channel
      *
      * Generated from protobuf field <code>int64 remote_balance = 7[json_name = "remote_balance"];</code>
      */
-    private $remote_balance = 0;
+    protected $remote_balance = 0;
     /**
      **
      *The amount calculated to be paid in fees for the current set of commitment
@@ -70,13 +70,13 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 commit_fee = 8[json_name = "commit_fee"];</code>
      */
-    private $commit_fee = 0;
+    protected $commit_fee = 0;
     /**
      *&#47; The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 9[json_name = "commit_weight"];</code>
      */
-    private $commit_weight = 0;
+    protected $commit_weight = 0;
     /**
      **
      *The required number of satoshis per kilo-weight that the requester will pay
@@ -85,34 +85,34 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee_per_kw = 10[json_name = "fee_per_kw"];</code>
      */
-    private $fee_per_kw = 0;
+    protected $fee_per_kw = 0;
     /**
      *&#47; The unsettled balance in this channel
      *
      * Generated from protobuf field <code>int64 unsettled_balance = 11[json_name = "unsettled_balance"];</code>
      */
-    private $unsettled_balance = 0;
+    protected $unsettled_balance = 0;
     /**
      **
      *The total number of satoshis we've sent within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_sent = 12[json_name = "total_satoshis_sent"];</code>
      */
-    private $total_satoshis_sent = 0;
+    protected $total_satoshis_sent = 0;
     /**
      **
      *The total number of satoshis we've received within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_received = 13[json_name = "total_satoshis_received"];</code>
      */
-    private $total_satoshis_received = 0;
+    protected $total_satoshis_received = 0;
     /**
      **
      *The total number of updates conducted within this channel.
      *
      * Generated from protobuf field <code>uint64 num_updates = 14[json_name = "num_updates"];</code>
      */
-    private $num_updates = 0;
+    protected $num_updates = 0;
     /**
      **
      *The list of active, uncleared HTLCs currently pending within the channel.
@@ -127,38 +127,38 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 csv_delay = 16[json_name = "csv_delay"];</code>
      */
-    private $csv_delay = 0;
+    protected $csv_delay = 0;
     /**
      *&#47; Whether this channel is advertised to the network or not.
      *
      * Generated from protobuf field <code>bool private = 17[json_name = "private"];</code>
      */
-    private $private = false;
+    protected $private = false;
     /**
      *&#47; True if we were the ones that created the channel.
      *
      * Generated from protobuf field <code>bool initiator = 18[json_name = "initiator"];</code>
      */
-    private $initiator = false;
+    protected $initiator = false;
     /**
      *&#47; A set of flags showing the current state of the channel.
      *
      * Generated from protobuf field <code>string chan_status_flags = 19[json_name = "chan_status_flags"];</code>
      */
-    private $chan_status_flags = '';
+    protected $chan_status_flags = '';
     /**
      *&#47; The minimum satoshis this node is required to reserve in its balance.
      *
      * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20[json_name = "local_chan_reserve_sat"];</code>
      */
-    private $local_chan_reserve_sat = 0;
+    protected $local_chan_reserve_sat = 0;
     /**
      **
      *The minimum satoshis the other node is required to reserve in its balance.
      *
      * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21[json_name = "remote_chan_reserve_sat"];</code>
      */
-    private $remote_chan_reserve_sat = 0;
+    protected $remote_chan_reserve_sat = 0;
     /**
      **
      *If true, then this channel uses the modern commitment format where the key
@@ -168,7 +168,35 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool static_remote_key = 22[json_name = "static_remote_key"];</code>
      */
-    private $static_remote_key = false;
+    protected $static_remote_key = false;
+    /**
+     **
+     *The number of seconds that the channel has been monitored by the channel
+     *scoring system. Scores are currently not persisted, so this value may be
+     *less than the lifetime of the channel [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>int64 lifetime = 23[json_name = "lifetime"];</code>
+     */
+    protected $lifetime = 0;
+    /**
+     **
+     *The number of seconds that the remote peer has been observed as being online
+     *by the channel scoring system over the lifetime of the channel [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>int64 uptime = 24[json_name = "uptime"];</code>
+     */
+    protected $uptime = 0;
+    /**
+     **
+     *Close address is the address that we will enforce payout to on cooperative
+     *close if the channel was opened utilizing option upfront shutdown. This
+     *value can be set on channel open by setting close_address in an open channel
+     *request. If this value is not set, you can still choose a payout address by
+     *cooperatively closing with the delivery_address field set.
+     *
+     * Generated from protobuf field <code>string close_address = 25[json_name = "close_address"];</code>
+     */
+    protected $close_address = '';
 
     /**
      * Constructor.
@@ -244,6 +272,22 @@ class Channel extends \Google\Protobuf\Internal\Message
      *          in the output of the remote party does not change each state. This makes
      *          back up and recovery easier as when the channel is closed, the funds go
      *          directly to that key. 
+     *     @type int|string $lifetime
+     *          *
+     *          The number of seconds that the channel has been monitored by the channel
+     *          scoring system. Scores are currently not persisted, so this value may be
+     *          less than the lifetime of the channel [EXPERIMENTAL].
+     *     @type int|string $uptime
+     *          *
+     *          The number of seconds that the remote peer has been observed as being online
+     *          by the channel scoring system over the lifetime of the channel [EXPERIMENTAL].
+     *     @type string $close_address
+     *          *
+     *          Close address is the address that we will enforce payout to on cooperative
+     *          close if the channel was opened utilizing option upfront shutdown. This
+     *          value can be set on channel open by setting close_address in an open channel
+     *          request. If this value is not set, you can still choose a payout address by
+     *          cooperatively closing with the delivery_address field set.
      * }
      */
     public function __construct($data = NULL) {
@@ -341,7 +385,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id", jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -355,7 +399,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id"];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 4[json_name = "chan_id", jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -867,6 +911,104 @@ class Channel extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->static_remote_key = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The number of seconds that the channel has been monitored by the channel
+     *scoring system. Scores are currently not persisted, so this value may be
+     *less than the lifetime of the channel [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>int64 lifetime = 23[json_name = "lifetime"];</code>
+     * @return int|string
+     */
+    public function getLifetime()
+    {
+        return $this->lifetime;
+    }
+
+    /**
+     **
+     *The number of seconds that the channel has been monitored by the channel
+     *scoring system. Scores are currently not persisted, so this value may be
+     *less than the lifetime of the channel [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>int64 lifetime = 23[json_name = "lifetime"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setLifetime($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->lifetime = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The number of seconds that the remote peer has been observed as being online
+     *by the channel scoring system over the lifetime of the channel [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>int64 uptime = 24[json_name = "uptime"];</code>
+     * @return int|string
+     */
+    public function getUptime()
+    {
+        return $this->uptime;
+    }
+
+    /**
+     **
+     *The number of seconds that the remote peer has been observed as being online
+     *by the channel scoring system over the lifetime of the channel [EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>int64 uptime = 24[json_name = "uptime"];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setUptime($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->uptime = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Close address is the address that we will enforce payout to on cooperative
+     *close if the channel was opened utilizing option upfront shutdown. This
+     *value can be set on channel open by setting close_address in an open channel
+     *request. If this value is not set, you can still choose a payout address by
+     *cooperatively closing with the delivery_address field set.
+     *
+     * Generated from protobuf field <code>string close_address = 25[json_name = "close_address"];</code>
+     * @return string
+     */
+    public function getCloseAddress()
+    {
+        return $this->close_address;
+    }
+
+    /**
+     **
+     *Close address is the address that we will enforce payout to on cooperative
+     *close if the channel was opened utilizing option upfront shutdown. This
+     *value can be set on channel open by setting close_address in an open channel
+     *request. If this value is not set, you can still choose a payout address by
+     *cooperatively closing with the delivery_address field set.
+     *
+     * Generated from protobuf field <code>string close_address = 25[json_name = "close_address"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCloseAddress($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->close_address = $var;
 
         return $this;
     }

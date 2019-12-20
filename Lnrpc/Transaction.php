@@ -18,43 +18,43 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
      */
-    private $tx_hash = '';
+    protected $tx_hash = '';
     /**
      *&#47; The transaction amount, denominated in satoshis
      *
      * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
      */
-    private $amount = 0;
+    protected $amount = 0;
     /**
      *&#47; The number of confirmations
      *
      * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
      */
-    private $num_confirmations = 0;
+    protected $num_confirmations = 0;
     /**
      *&#47; The hash of the block this transaction was included in
      *
      * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
      */
-    private $block_hash = '';
+    protected $block_hash = '';
     /**
      *&#47; The height of the block this transaction was included in
      *
      * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
      */
-    private $block_height = 0;
+    protected $block_height = 0;
     /**
      *&#47; Timestamp of this transaction 
      *
      * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
      */
-    private $time_stamp = 0;
+    protected $time_stamp = 0;
     /**
      *&#47; Fees paid for this transaction
      *
      * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
      */
-    private $total_fees = 0;
+    protected $total_fees = 0;
     /**
      *&#47; Addresses that received funds for this transaction
      *
@@ -66,7 +66,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string raw_tx_hex = 9[json_name = "raw_tx_hex"];</code>
      */
-    private $raw_tx_hex = '';
+    protected $raw_tx_hex = '';
 
     /**
      * Constructor.

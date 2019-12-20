@@ -16,19 +16,19 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string payment_error = 1[json_name = "payment_error"];</code>
      */
-    private $payment_error = '';
+    protected $payment_error = '';
     /**
      * Generated from protobuf field <code>bytes payment_preimage = 2[json_name = "payment_preimage"];</code>
      */
-    private $payment_preimage = '';
+    protected $payment_preimage = '';
     /**
      * Generated from protobuf field <code>.lnrpc.Route payment_route = 3[json_name = "payment_route"];</code>
      */
-    private $payment_route = null;
+    protected $payment_route = null;
     /**
      * Generated from protobuf field <code>bytes payment_hash = 4[json_name = "payment_hash"];</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
 
     /**
      * Constructor.

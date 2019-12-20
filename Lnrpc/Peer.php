@@ -18,55 +18,61 @@ class Peer extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
      * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
      */
-    private $address = '';
+    protected $address = '';
     /**
      *&#47; Bytes of data transmitted to this peer
      *
      * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
      */
-    private $bytes_sent = 0;
+    protected $bytes_sent = 0;
     /**
      *&#47; Bytes of data transmitted from this peer
      *
      * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
      */
-    private $bytes_recv = 0;
+    protected $bytes_recv = 0;
     /**
      *&#47; Satoshis sent to this peer
      *
      * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
      */
-    private $sat_sent = 0;
+    protected $sat_sent = 0;
     /**
      *&#47; Satoshis received from this peer
      *
      * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
      */
-    private $sat_recv = 0;
+    protected $sat_recv = 0;
     /**
      *&#47; A channel is inbound if the counterparty initiated the channel
      *
      * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
      */
-    private $inbound = false;
+    protected $inbound = false;
     /**
      *&#47; Ping time to this peer
      *
      * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
      */
-    private $ping_time = 0;
+    protected $ping_time = 0;
     /**
      * The type of sync we are currently performing with this peer.
      *
      * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10[json_name = "sync_type"];</code>
      */
-    private $sync_type = 0;
+    protected $sync_type = 0;
+    /**
+     *&#47; Features advertised by the remote peer in their init message.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11[json_name = "features"];</code>
+     */
+    private $features;
 
     /**
      * Constructor.
@@ -92,6 +98,8 @@ class Peer extends \Google\Protobuf\Internal\Message
      *          &#47; Ping time to this peer
      *     @type int $sync_type
      *           The type of sync we are currently performing with this peer.
+     *     @type array|\Google\Protobuf\Internal\MapField $features
+     *          &#47; Features advertised by the remote peer in their init message.
      * }
      */
     public function __construct($data = NULL) {
@@ -329,6 +337,32 @@ class Peer extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Lnrpc\Peer_SyncType::class);
         $this->sync_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; Features advertised by the remote peer in their init message.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11[json_name = "features"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     *&#47; Features advertised by the remote peer in their init message.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11[json_name = "features"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setFeatures($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
+        $this->features = $arr;
 
         return $this;
     }

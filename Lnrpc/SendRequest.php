@@ -14,44 +14,62 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The identity pubkey of the payment recipient
+     **
+     *The identity pubkey of the payment recipient. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
-    private $dest = '';
+    protected $dest = '';
     /**
-     *&#47; The hex-encoded identity pubkey of the payment recipient
+     **
+     *The hex-encoded identity pubkey of the payment recipient. Deprecated now
+     *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string dest_string = 2;</code>
+     * Generated from protobuf field <code>string dest_string = 2 [deprecated = true];</code>
      */
-    private $dest_string = '';
+    protected $dest_string = '';
     /**
-     *&#47; Number of satoshis to send.
+     **
+     *The amount to send expressed in satoshis.
+     *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      */
-    private $amt = 0;
+    protected $amt = 0;
     /**
-     *&#47; The hash to use within the payment's HTLC
+     **
+     *The amount to send expressed in millisatoshis.
+     *The fields amt and amt_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 amt_msat = 12;</code>
+     */
+    protected $amt_msat = 0;
+    /**
+     **
+     *The hash to use within the payment's HTLC. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      */
-    private $payment_hash = '';
-    /**
-     *&#47; The hex-encoded hash to use within the payment's HTLC
-     *
-     * Generated from protobuf field <code>string payment_hash_string = 5;</code>
-     */
-    private $payment_hash_string = '';
+    protected $payment_hash = '';
     /**
      **
-     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *The hex-encoded hash to use within the payment's HTLC. Deprecated now
+     *that the REST gateway supports base64 encoding of bytes fields.
+     *
+     * Generated from protobuf field <code>string payment_hash_string = 5 [deprecated = true];</code>
+     */
+    protected $payment_hash_string = '';
+    /**
+     **
+     *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
      * Generated from protobuf field <code>string payment_request = 6;</code>
      */
-    private $payment_request = '';
+    protected $payment_request = '';
     /**
      **
      *The CLTV delta from the current height that should be used to set the
@@ -59,7 +77,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
      */
-    private $final_cltv_delta = 0;
+    protected $final_cltv_delta = 0;
     /**
      **
      *The maximum number of satoshis that will be paid as a fee of the payment.
@@ -69,15 +87,22 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 8;</code>
      */
-    private $fee_limit = null;
+    protected $fee_limit = null;
     /**
      **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
-     * Generated from protobuf field <code>uint64 outgoing_chan_id = 9;</code>
+     * Generated from protobuf field <code>uint64 outgoing_chan_id = 9 [jstype = JS_STRING];</code>
      */
-    private $outgoing_chan_id = 0;
+    protected $outgoing_chan_id = 0;
+    /**
+     **
+     *The pubkey of the last hop of the route. If empty, any hop may be used.
+     *
+     * Generated from protobuf field <code>bytes last_hop_pubkey = 13;</code>
+     */
+    protected $last_hop_pubkey = '';
     /**
      ** 
      *An optional maximum total time lock for the route. This should not exceed
@@ -86,16 +111,35 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 10;</code>
      */
-    private $cltv_limit = 0;
+    protected $cltv_limit = 0;
     /**
      ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
-     *application specific data during the payment attempt.
+     *application specific data during the payment attempt. Record types are
+     *required to be in the custom range >= 65536. When using REST, the values
+     *must be encoded as base64.
      *
-     * Generated from protobuf field <code>map<uint64, bytes> dest_tlv = 11;</code>
+     * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 11;</code>
      */
-    private $dest_tlv;
+    private $dest_custom_records;
+    /**
+     *&#47; If set, circular payments to self are permitted.
+     *
+     * Generated from protobuf field <code>bool allow_self_payment = 14;</code>
+     */
+    protected $allow_self_payment = false;
+    /**
+     **
+     *Features assumed to be supported by the final node. All transitive feature
+     *depdencies must also be set properly. For a given feature bit pair, either
+     *optional or remote may be set, but not both. If this field is nil or empty,
+     *the router will try to load destination features from the graph as a
+     *fallback.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 15;</code>
+     */
+    private $dest_features;
 
     /**
      * Constructor.
@@ -104,18 +148,32 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $dest
-     *          &#47; The identity pubkey of the payment recipient
+     *          *
+     *          The identity pubkey of the payment recipient. When using REST, this field
+     *          must be encoded as base64.
      *     @type string $dest_string
-     *          &#47; The hex-encoded identity pubkey of the payment recipient
+     *          *
+     *          The hex-encoded identity pubkey of the payment recipient. Deprecated now
+     *          that the REST gateway supports base64 encoding of bytes fields.
      *     @type int|string $amt
-     *          &#47; Number of satoshis to send.
+     *          *
+     *          The amount to send expressed in satoshis.
+     *          The fields amt and amt_msat are mutually exclusive.
+     *     @type int|string $amt_msat
+     *          *
+     *          The amount to send expressed in millisatoshis.
+     *          The fields amt and amt_msat are mutually exclusive.
      *     @type string $payment_hash
-     *          &#47; The hash to use within the payment's HTLC
+     *          *
+     *          The hash to use within the payment's HTLC. When using REST, this field
+     *          must be encoded as base64.
      *     @type string $payment_hash_string
-     *          &#47; The hex-encoded hash to use within the payment's HTLC
+     *          *
+     *          The hex-encoded hash to use within the payment's HTLC. Deprecated now
+     *          that the REST gateway supports base64 encoding of bytes fields.
      *     @type string $payment_request
      *          *
-     *          A bare-bones invoice for a payment within the Lightning Network.  With the
+     *          A bare-bones invoice for a payment within the Lightning Network. With the
      *          details of the invoice, the sender has all the data necessary to send a
      *          payment to the recipient.
      *     @type int $final_cltv_delta
@@ -132,16 +190,30 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *          *
      *          The channel id of the channel that must be taken to the first hop. If zero,
      *          any channel may be used.
+     *     @type string $last_hop_pubkey
+     *          *
+     *          The pubkey of the last hop of the route. If empty, any hop may be used.
      *     @type int $cltv_limit
      *          * 
      *          An optional maximum total time lock for the route. This should not exceed
      *          lnd's `--max-cltv-expiry` setting. If zero, then the value of
      *          `--max-cltv-expiry` is enforced.
-     *     @type array|\Google\Protobuf\Internal\MapField $dest_tlv
+     *     @type array|\Google\Protobuf\Internal\MapField $dest_custom_records
      *          * 
      *          An optional field that can be used to pass an arbitrary set of TLV records
      *          to a peer which understands the new records. This can be used to pass
-     *          application specific data during the payment attempt.
+     *          application specific data during the payment attempt. Record types are
+     *          required to be in the custom range >= 65536. When using REST, the values
+     *          must be encoded as base64.
+     *     @type bool $allow_self_payment
+     *          &#47; If set, circular payments to self are permitted.
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $dest_features
+     *          *
+     *          Features assumed to be supported by the final node. All transitive feature
+     *          depdencies must also be set properly. For a given feature bit pair, either
+     *          optional or remote may be set, but not both. If this field is nil or empty,
+     *          the router will try to load destination features from the graph as a
+     *          fallback.
      * }
      */
     public function __construct($data = NULL) {
@@ -150,7 +222,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the payment recipient
+     **
+     *The identity pubkey of the payment recipient. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      * @return string
@@ -161,7 +235,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the payment recipient
+     **
+     *The identity pubkey of the payment recipient. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      * @param string $var
@@ -176,9 +252,11 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hex-encoded identity pubkey of the payment recipient
+     **
+     *The hex-encoded identity pubkey of the payment recipient. Deprecated now
+     *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string dest_string = 2;</code>
+     * Generated from protobuf field <code>string dest_string = 2 [deprecated = true];</code>
      * @return string
      */
     public function getDestString()
@@ -187,9 +265,11 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hex-encoded identity pubkey of the payment recipient
+     **
+     *The hex-encoded identity pubkey of the payment recipient. Deprecated now
+     *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string dest_string = 2;</code>
+     * Generated from protobuf field <code>string dest_string = 2 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -202,7 +282,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of satoshis to send.
+     **
+     *The amount to send expressed in satoshis.
+     *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      * @return int|string
@@ -213,7 +295,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of satoshis to send.
+     **
+     *The amount to send expressed in satoshis.
+     *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      * @param int|string $var
@@ -228,7 +312,39 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash to use within the payment's HTLC
+     **
+     *The amount to send expressed in millisatoshis.
+     *The fields amt and amt_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 amt_msat = 12;</code>
+     * @return int|string
+     */
+    public function getAmtMsat()
+    {
+        return $this->amt_msat;
+    }
+
+    /**
+     **
+     *The amount to send expressed in millisatoshis.
+     *The fields amt and amt_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 amt_msat = 12;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setAmtMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->amt_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The hash to use within the payment's HTLC. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      * @return string
@@ -239,7 +355,9 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash to use within the payment's HTLC
+     **
+     *The hash to use within the payment's HTLC. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      * @param string $var
@@ -254,9 +372,11 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hex-encoded hash to use within the payment's HTLC
+     **
+     *The hex-encoded hash to use within the payment's HTLC. Deprecated now
+     *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string payment_hash_string = 5;</code>
+     * Generated from protobuf field <code>string payment_hash_string = 5 [deprecated = true];</code>
      * @return string
      */
     public function getPaymentHashString()
@@ -265,9 +385,11 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hex-encoded hash to use within the payment's HTLC
+     **
+     *The hex-encoded hash to use within the payment's HTLC. Deprecated now
+     *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string payment_hash_string = 5;</code>
+     * Generated from protobuf field <code>string payment_hash_string = 5 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -281,7 +403,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
@@ -295,7 +417,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *A bare-bones invoice for a payment within the Lightning Network.  With the
+     *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
@@ -380,7 +502,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
-     * Generated from protobuf field <code>uint64 outgoing_chan_id = 9;</code>
+     * Generated from protobuf field <code>uint64 outgoing_chan_id = 9 [jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getOutgoingChanId()
@@ -393,7 +515,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
-     * Generated from protobuf field <code>uint64 outgoing_chan_id = 9;</code>
+     * Generated from protobuf field <code>uint64 outgoing_chan_id = 9 [jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -401,6 +523,34 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->outgoing_chan_id = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The pubkey of the last hop of the route. If empty, any hop may be used.
+     *
+     * Generated from protobuf field <code>bytes last_hop_pubkey = 13;</code>
+     * @return string
+     */
+    public function getLastHopPubkey()
+    {
+        return $this->last_hop_pubkey;
+    }
+
+    /**
+     **
+     *The pubkey of the last hop of the route. If empty, any hop may be used.
+     *
+     * Generated from protobuf field <code>bytes last_hop_pubkey = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLastHopPubkey($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->last_hop_pubkey = $var;
 
         return $this;
     }
@@ -441,30 +591,96 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
-     *application specific data during the payment attempt.
+     *application specific data during the payment attempt. Record types are
+     *required to be in the custom range >= 65536. When using REST, the values
+     *must be encoded as base64.
      *
-     * Generated from protobuf field <code>map<uint64, bytes> dest_tlv = 11;</code>
+     * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 11;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
-    public function getDestTlv()
+    public function getDestCustomRecords()
     {
-        return $this->dest_tlv;
+        return $this->dest_custom_records;
     }
 
     /**
      ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
-     *application specific data during the payment attempt.
+     *application specific data during the payment attempt. Record types are
+     *required to be in the custom range >= 65536. When using REST, the values
+     *must be encoded as base64.
      *
-     * Generated from protobuf field <code>map<uint64, bytes> dest_tlv = 11;</code>
+     * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 11;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setDestTlv($var)
+    public function setDestCustomRecords($var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
-        $this->dest_tlv = $arr;
+        $this->dest_custom_records = $arr;
+
+        return $this;
+    }
+
+    /**
+     *&#47; If set, circular payments to self are permitted.
+     *
+     * Generated from protobuf field <code>bool allow_self_payment = 14;</code>
+     * @return bool
+     */
+    public function getAllowSelfPayment()
+    {
+        return $this->allow_self_payment;
+    }
+
+    /**
+     *&#47; If set, circular payments to self are permitted.
+     *
+     * Generated from protobuf field <code>bool allow_self_payment = 14;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAllowSelfPayment($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->allow_self_payment = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Features assumed to be supported by the final node. All transitive feature
+     *depdencies must also be set properly. For a given feature bit pair, either
+     *optional or remote may be set, but not both. If this field is nil or empty,
+     *the router will try to load destination features from the graph as a
+     *fallback.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 15;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getDestFeatures()
+    {
+        return $this->dest_features;
+    }
+
+    /**
+     **
+     *Features assumed to be supported by the final node. All transitive feature
+     *depdencies must also be set properly. For a given feature bit pair, either
+     *optional or remote may be set, but not both. If this field is nil or empty,
+     *the router will try to load destination features from the graph as a
+     *fallback.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 15;</code>
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setDestFeatures($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Lnrpc\FeatureBit::class);
+        $this->dest_features = $arr;
 
         return $this;
     }

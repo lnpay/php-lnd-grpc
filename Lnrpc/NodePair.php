@@ -14,17 +14,21 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodePair extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The sending node of the pair.
+     **
+     *The sending node of the pair. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes from = 1;</code>
      */
-    private $from = '';
+    protected $from = '';
     /**
-     *&#47; The receiving node of the pair.
+     **
+     *The receiving node of the pair. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes to = 2;</code>
      */
-    private $to = '';
+    protected $to = '';
 
     /**
      * Constructor.
@@ -33,9 +37,13 @@ class NodePair extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $from
-     *          &#47; The sending node of the pair.
+     *          *
+     *          The sending node of the pair. When using REST, this field must be encoded as
+     *          base64.
      *     @type string $to
-     *          &#47; The receiving node of the pair.
+     *          *
+     *          The receiving node of the pair. When using REST, this field must be encoded
+     *          as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +52,9 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The sending node of the pair.
+     **
+     *The sending node of the pair. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes from = 1;</code>
      * @return string
@@ -55,7 +65,9 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The sending node of the pair.
+     **
+     *The sending node of the pair. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes from = 1;</code>
      * @param string $var
@@ -70,7 +82,9 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The receiving node of the pair.
+     **
+     *The receiving node of the pair. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes to = 2;</code>
      * @return string
@@ -81,7 +95,9 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The receiving node of the pair.
+     **
+     *The receiving node of the pair. When using REST, this field must be encoded
+     *as base64.
      *
      * Generated from protobuf field <code>bytes to = 2;</code>
      * @param string $var

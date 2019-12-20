@@ -20,7 +20,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1[json_name = "single_chan_backups"];</code>
      */
-    private $single_chan_backups = null;
+    protected $single_chan_backups = null;
     /**
      **
      *A multi-channel backup that covers all open channels currently known to
@@ -28,7 +28,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      */
-    private $multi_chan_backup = null;
+    protected $multi_chan_backup = null;
 
     /**
      * Constructor.

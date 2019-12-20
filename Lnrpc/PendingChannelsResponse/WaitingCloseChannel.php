@@ -18,13 +18,13 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    private $channel = null;
+    protected $channel = null;
     /**
      *&#47; The balance in satoshis encumbered in this channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 2[json_name = "limbo_balance"];</code>
      */
-    private $limbo_balance = 0;
+    protected $limbo_balance = 0;
 
     /**
      * Constructor.

@@ -16,31 +16,31 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
      */
-    private $time_lock_delta = 0;
+    protected $time_lock_delta = 0;
     /**
      * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
      */
-    private $min_htlc = 0;
+    protected $min_htlc = 0;
     /**
      * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
      */
-    private $fee_base_msat = 0;
+    protected $fee_base_msat = 0;
     /**
      * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
      */
-    private $fee_rate_milli_msat = 0;
+    protected $fee_rate_milli_msat = 0;
     /**
      * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
      */
-    private $disabled = false;
+    protected $disabled = false;
     /**
      * Generated from protobuf field <code>uint64 max_htlc_msat = 6[json_name = "max_htlc_msat"];</code>
      */
-    private $max_htlc_msat = 0;
+    protected $max_htlc_msat = 0;
     /**
      * Generated from protobuf field <code>uint32 last_update = 7[json_name = "last_update"];</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
 
     /**
      * Constructor.

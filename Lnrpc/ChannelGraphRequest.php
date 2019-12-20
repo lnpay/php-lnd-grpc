@@ -21,7 +21,7 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool include_unannounced = 1[json_name = "include_unannounced"];</code>
      */
-    private $include_unannounced = false;
+    protected $include_unannounced = false;
 
     /**
      * Constructor.

@@ -18,13 +18,13 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1[json_name = "channel"];</code>
      */
-    private $channel = null;
+    protected $channel = null;
     /**
      *&#47; The height at which this channel will be confirmed
      *
      * Generated from protobuf field <code>uint32 confirmation_height = 2[json_name = "confirmation_height"];</code>
      */
-    private $confirmation_height = 0;
+    protected $confirmation_height = 0;
     /**
      **
      *The amount calculated to be paid in fees for the current set of
@@ -35,13 +35,13 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 commit_fee = 4[json_name = "commit_fee"];</code>
      */
-    private $commit_fee = 0;
+    protected $commit_fee = 0;
     /**
      *&#47; The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 5[json_name = "commit_weight"];</code>
      */
-    private $commit_weight = 0;
+    protected $commit_weight = 0;
     /**
      **
      *The required number of satoshis per kilo-weight that the requester will
@@ -50,7 +50,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee_per_kw = 6[json_name = "fee_per_kw"];</code>
      */
-    private $fee_per_kw = 0;
+    protected $fee_per_kw = 0;
 
     /**
      * Constructor.

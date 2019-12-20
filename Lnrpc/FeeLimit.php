@@ -22,7 +22,13 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $fixed
-     *          &#47; The fee limit expressed as a fixed amount of satoshis.
+     *          *
+     *          The fee limit expressed as a fixed amount of satoshis.
+     *          The fields fixed and fixed_msat are mutually exclusive.
+     *     @type int|string $fixed_msat
+     *          *
+     *          The fee limit expressed as a fixed amount of millisatoshis.
+     *          The fields fixed and fixed_msat are mutually exclusive.
      *     @type int|string $percent
      *          &#47; The fee limit expressed as a percentage of the payment amount.
      * }
@@ -33,7 +39,9 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The fee limit expressed as a fixed amount of satoshis.
+     **
+     *The fee limit expressed as a fixed amount of satoshis.
+     *The fields fixed and fixed_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 fixed = 1;</code>
      * @return int|string
@@ -44,7 +52,9 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The fee limit expressed as a fixed amount of satoshis.
+     **
+     *The fee limit expressed as a fixed amount of satoshis.
+     *The fields fixed and fixed_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 fixed = 1;</code>
      * @param int|string $var
@@ -54,6 +64,36 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->writeOneof(1, $var);
+
+        return $this;
+    }
+
+    /**
+     **
+     *The fee limit expressed as a fixed amount of millisatoshis.
+     *The fields fixed and fixed_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 fixed_msat = 3;</code>
+     * @return int|string
+     */
+    public function getFixedMsat()
+    {
+        return $this->readOneof(3);
+    }
+
+    /**
+     **
+     *The fee limit expressed as a fixed amount of millisatoshis.
+     *The fields fixed and fixed_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 fixed_msat = 3;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setFixedMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->writeOneof(3, $var);
 
         return $this;
     }

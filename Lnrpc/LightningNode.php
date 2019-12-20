@@ -22,15 +22,15 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
     /**
      * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
      */
-    private $alias = '';
+    protected $alias = '';
     /**
      * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
      */
@@ -38,7 +38,11 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
      */
-    private $color = '';
+    protected $color = '';
+    /**
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6[json_name = "features"];</code>
+     */
+    private $features;
 
     /**
      * Constructor.
@@ -51,6 +55,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
      *     @type string $alias
      *     @type \Lnrpc\NodeAddress[]|\Google\Protobuf\Internal\RepeatedField $addresses
      *     @type string $color
+     *     @type array|\Google\Protobuf\Internal\MapField $features
      * }
      */
     public function __construct($data = NULL) {
@@ -164,6 +169,28 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->color = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6[json_name = "features"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6[json_name = "features"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setFeatures($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
+        $this->features = $arr;
 
         return $this;
     }

@@ -16,7 +16,7 @@ class AbandonChannelRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    private $channel_point = null;
+    protected $channel_point = null;
 
     /**
      * Constructor.

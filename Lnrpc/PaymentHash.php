@@ -17,16 +17,20 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      **
      *The hex-encoded payment hash of the invoice to be looked up. The passed
      *payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *Deprecated now that the REST gateway supports base64 encoding of bytes
+     *fields.
      *
-     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
      */
-    private $r_hash_str = '';
+    protected $r_hash_str = '';
     /**
-     *&#47; The payment hash of the invoice to be looked up.
+     **
+     *The payment hash of the invoice to be looked up. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      */
-    private $r_hash = '';
+    protected $r_hash = '';
 
     /**
      * Constructor.
@@ -38,8 +42,12 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *          *
      *          The hex-encoded payment hash of the invoice to be looked up. The passed
      *          payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *          Deprecated now that the REST gateway supports base64 encoding of bytes
+     *          fields.
      *     @type string $r_hash
-     *          &#47; The payment hash of the invoice to be looked up.
+     *          *
+     *          The payment hash of the invoice to be looked up. When using REST, this field
+     *          must be encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -51,8 +59,10 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      **
      *The hex-encoded payment hash of the invoice to be looked up. The passed
      *payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *Deprecated now that the REST gateway supports base64 encoding of bytes
+     *fields.
      *
-     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
      * @return string
      */
     public function getRHashStr()
@@ -64,8 +74,10 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      **
      *The hex-encoded payment hash of the invoice to be looked up. The passed
      *payment hash must be exactly 32 bytes, otherwise an error is returned.
+     *Deprecated now that the REST gateway supports base64 encoding of bytes
+     *fields.
      *
-     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str"];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -78,7 +90,9 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The payment hash of the invoice to be looked up.
+     **
+     *The payment hash of the invoice to be looked up. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      * @return string
@@ -89,7 +103,9 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The payment hash of the invoice to be looked up.
+     **
+     *The payment hash of the invoice to be looked up. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      * @param string $var

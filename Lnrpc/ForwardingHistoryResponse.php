@@ -24,7 +24,7 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 last_offset_index = 2[json_name = "last_offset_index"];</code>
      */
-    private $last_offset_index = 0;
+    protected $last_offset_index = 0;
 
     /**
      * Constructor.

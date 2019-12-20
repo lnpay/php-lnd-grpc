@@ -18,7 +18,7 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
      */
-    private $txid = '';
+    protected $txid = '';
 
     /**
      * Constructor.

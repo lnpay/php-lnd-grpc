@@ -14,17 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The message over which the signature is to be verified
+     **
+     *The message over which the signature is to be verified. When using REST,
+     *this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
      */
-    private $msg = '';
+    protected $msg = '';
     /**
      *&#47; The signature to be verified over the given message
      *
      * Generated from protobuf field <code>string signature = 2[json_name = "signature"];</code>
      */
-    private $signature = '';
+    protected $signature = '';
 
     /**
      * Constructor.
@@ -33,7 +35,9 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $msg
-     *          &#47; The message over which the signature is to be verified
+     *          *
+     *          The message over which the signature is to be verified. When using REST,
+     *          this field must be encoded as base64.
      *     @type string $signature
      *          &#47; The signature to be verified over the given message
      * }
@@ -44,7 +48,9 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The message over which the signature is to be verified
+     **
+     *The message over which the signature is to be verified. When using REST,
+     *this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
      * @return string
@@ -55,7 +61,9 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The message over which the signature is to be verified
+     **
+     *The message over which the signature is to be verified. When using REST,
+     *this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
      * @param string $var

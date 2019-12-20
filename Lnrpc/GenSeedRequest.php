@@ -16,19 +16,21 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *aezeed_passphrase is an optional user provided passphrase that will be used
-     *to encrypt the generated aezeed cipher seed.
+     *to encrypt the generated aezeed cipher seed. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 1;</code>
      */
-    private $aezeed_passphrase = '';
+    protected $aezeed_passphrase = '';
     /**
      **
      *seed_entropy is an optional 16-bytes generated via CSPRNG. If not
      *specified, then a fresh set of randomness will be used to create the seed.
+     *When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes seed_entropy = 2;</code>
      */
-    private $seed_entropy = '';
+    protected $seed_entropy = '';
 
     /**
      * Constructor.
@@ -39,11 +41,13 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
      *     @type string $aezeed_passphrase
      *          *
      *          aezeed_passphrase is an optional user provided passphrase that will be used
-     *          to encrypt the generated aezeed cipher seed.
+     *          to encrypt the generated aezeed cipher seed. When using REST, this field
+     *          must be encoded as base64.
      *     @type string $seed_entropy
      *          *
      *          seed_entropy is an optional 16-bytes generated via CSPRNG. If not
      *          specified, then a fresh set of randomness will be used to create the seed.
+     *          When using REST, this field must be encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +58,8 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *aezeed_passphrase is an optional user provided passphrase that will be used
-     *to encrypt the generated aezeed cipher seed.
+     *to encrypt the generated aezeed cipher seed. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 1;</code>
      * @return string
@@ -67,7 +72,8 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *aezeed_passphrase is an optional user provided passphrase that will be used
-     *to encrypt the generated aezeed cipher seed.
+     *to encrypt the generated aezeed cipher seed. When using REST, this field
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 1;</code>
      * @param string $var
@@ -85,6 +91,7 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
      **
      *seed_entropy is an optional 16-bytes generated via CSPRNG. If not
      *specified, then a fresh set of randomness will be used to create the seed.
+     *When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes seed_entropy = 2;</code>
      * @return string
@@ -98,6 +105,7 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
      **
      *seed_entropy is an optional 16-bytes generated via CSPRNG. If not
      *specified, then a fresh set of randomness will be used to create the seed.
+     *When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes seed_entropy = 2;</code>
      * @param string $var

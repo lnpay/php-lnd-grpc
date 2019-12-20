@@ -18,49 +18,49 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string identity_pubkey = 1[json_name = "identity_pubkey"];</code>
      */
-    private $identity_pubkey = '';
+    protected $identity_pubkey = '';
     /**
      *&#47; If applicable, the alias of the current node, e.g. "bob"
      *
      * Generated from protobuf field <code>string alias = 2[json_name = "alias"];</code>
      */
-    private $alias = '';
+    protected $alias = '';
     /**
      *&#47; Number of pending channels
      *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3[json_name = "num_pending_channels"];</code>
      */
-    private $num_pending_channels = 0;
+    protected $num_pending_channels = 0;
     /**
      *&#47; Number of active channels
      *
      * Generated from protobuf field <code>uint32 num_active_channels = 4[json_name = "num_active_channels"];</code>
      */
-    private $num_active_channels = 0;
+    protected $num_active_channels = 0;
     /**
      *&#47; Number of peers
      *
      * Generated from protobuf field <code>uint32 num_peers = 5[json_name = "num_peers"];</code>
      */
-    private $num_peers = 0;
+    protected $num_peers = 0;
     /**
      *&#47; The node's current view of the height of the best block
      *
      * Generated from protobuf field <code>uint32 block_height = 6[json_name = "block_height"];</code>
      */
-    private $block_height = 0;
+    protected $block_height = 0;
     /**
      *&#47; The node's current view of the hash of the best block
      *
      * Generated from protobuf field <code>string block_hash = 8[json_name = "block_hash"];</code>
      */
-    private $block_hash = '';
+    protected $block_hash = '';
     /**
      *&#47; Whether the wallet's view is synced to the main chain
      *
      * Generated from protobuf field <code>bool synced_to_chain = 9[json_name = "synced_to_chain"];</code>
      */
-    private $synced_to_chain = false;
+    protected $synced_to_chain = false;
     /**
      ** 
      *Whether the current node is connected to testnet. This field is 
@@ -68,7 +68,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool testnet = 10[json_name = "testnet", deprecated = true];</code>
      */
-    private $testnet = false;
+    protected $testnet = false;
     /**
      *&#47; The URIs of the current node.
      *
@@ -80,19 +80,19 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 best_header_timestamp = 13[json_name = "best_header_timestamp"];</code>
      */
-    private $best_header_timestamp = 0;
+    protected $best_header_timestamp = 0;
     /**
      *&#47; The version of the LND software that the node is running.
      *
      * Generated from protobuf field <code>string version = 14[json_name = "version"];</code>
      */
-    private $version = '';
+    protected $version = '';
     /**
      *&#47; Number of inactive channels
      *
      * Generated from protobuf field <code>uint32 num_inactive_channels = 15[json_name = "num_inactive_channels"];</code>
      */
-    private $num_inactive_channels = 0;
+    protected $num_inactive_channels = 0;
     /**
      *&#47; A list of active chains the node is connected to
      *
@@ -104,13 +104,20 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string color = 17[json_name = "color"];</code>
      */
-    private $color = '';
+    protected $color = '';
     /**
      * Whether we consider ourselves synced with the public channel graph.
      *
      * Generated from protobuf field <code>bool synced_to_graph = 18[json_name = "synced_to_graph"];</code>
      */
-    private $synced_to_graph = false;
+    protected $synced_to_graph = false;
+    /**
+     *Features that our node has advertised in our init message, node
+     *announcements and invoices.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 19[json_name = "features"];</code>
+     */
+    private $features;
 
     /**
      * Constructor.
@@ -152,6 +159,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *          &#47; The color of the current node in hex code format
      *     @type bool $synced_to_graph
      *           Whether we consider ourselves synced with the public channel graph.
+     *     @type array|\Google\Protobuf\Internal\MapField $features
+     *          Features that our node has advertised in our init message, node
+     *          announcements and invoices.
      * }
      */
     public function __construct($data = NULL) {
@@ -575,6 +585,34 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->synced_to_graph = $var;
+
+        return $this;
+    }
+
+    /**
+     *Features that our node has advertised in our init message, node
+     *announcements and invoices.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 19[json_name = "features"];</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     *Features that our node has advertised in our init message, node
+     *announcements and invoices.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 19[json_name = "features"];</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setFeatures($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
+        $this->features = $arr;
 
         return $this;
     }

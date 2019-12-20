@@ -18,19 +18,34 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
-     *&#47; The amount to send expressed in satoshis
+     **
+     *The amount to send expressed in satoshis.
+     *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
-    private $amt = 0;
+    protected $amt = 0;
     /**
-     *&#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     **
+     *The amount to send expressed in millisatoshis.
+     *The fields amt and amt_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 amt_msat = 12;</code>
+     */
+    protected $amt_msat = 0;
+    /**
+     **
+     *An optional CLTV delta from the current height that should be used for the
+     *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
+     *not add any additional block padding on top of final_ctlv_delta. This
+     *padding of a few blocks needs to be added manually or otherwise failures may
+     *happen when a block comes in while the payment is in flight.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      */
-    private $final_cltv_delta = 0;
+    protected $final_cltv_delta = 0;
     /**
      **
      *The maximum number of satoshis that will be paid as a fee of the payment.
@@ -40,10 +55,11 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
      */
-    private $fee_limit = null;
+    protected $fee_limit = null;
     /**
      **
-     *A list of nodes to ignore during path finding.
+     *A list of nodes to ignore during path finding. When using REST, these fields
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>repeated bytes ignored_nodes = 6;</code>
      */
@@ -62,7 +78,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string source_pub_key = 8;</code>
      */
-    private $source_pub_key = '';
+    protected $source_pub_key = '';
     /**
      **
      *If set to true, edge probabilities from mission control will be used to get
@@ -70,7 +86,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool use_mission_control = 9;</code>
      */
-    private $use_mission_control = false;
+    protected $use_mission_control = false;
     /**
      **
      *A list of directed node pairs that will be ignored during path finding.
@@ -86,7 +102,19 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
      */
-    private $cltv_limit = 0;
+    protected $cltv_limit = 0;
+    /**
+     ** 
+     *An optional field that can be used to pass an arbitrary set of TLV records
+     *to a peer which understands the new records. This can be used to pass
+     *application specific data during the payment attempt. If the destination
+     *does not support the specified recrods, and error will be returned.
+     *Record types are required to be in the custom range >= 65536. When using
+     *REST, the values must be encoded as base64.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 13;</code>
+     */
+    private $dest_custom_records;
 
     /**
      * Constructor.
@@ -97,9 +125,20 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *     @type string $pub_key
      *          &#47; The 33-byte hex-encoded public key for the payment destination
      *     @type int|string $amt
-     *          &#47; The amount to send expressed in satoshis
+     *          *
+     *          The amount to send expressed in satoshis.
+     *          The fields amt and amt_msat are mutually exclusive.
+     *     @type int|string $amt_msat
+     *          *
+     *          The amount to send expressed in millisatoshis.
+     *          The fields amt and amt_msat are mutually exclusive.
      *     @type int $final_cltv_delta
-     *          &#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     *          *
+     *          An optional CLTV delta from the current height that should be used for the
+     *          timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
+     *          not add any additional block padding on top of final_ctlv_delta. This
+     *          padding of a few blocks needs to be added manually or otherwise failures may
+     *          happen when a block comes in while the payment is in flight.
      *     @type \Lnrpc\FeeLimit $fee_limit
      *          *
      *          The maximum number of satoshis that will be paid as a fee of the payment.
@@ -108,7 +147,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *          send the payment.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ignored_nodes
      *          *
-     *          A list of nodes to ignore during path finding.
+     *          A list of nodes to ignore during path finding. When using REST, these fields
+     *          must be encoded as base64.
      *     @type \Lnrpc\EdgeLocator[]|\Google\Protobuf\Internal\RepeatedField $ignored_edges
      *          *
      *          Deprecated. A list of edges to ignore during path finding.
@@ -128,6 +168,14 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *          An optional maximum total time lock for the route. If the source is empty or
      *          ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *          zero, then the value of `--max-cltv-expiry` is used as the limit.
+     *     @type array|\Google\Protobuf\Internal\MapField $dest_custom_records
+     *          * 
+     *          An optional field that can be used to pass an arbitrary set of TLV records
+     *          to a peer which understands the new records. This can be used to pass
+     *          application specific data during the payment attempt. If the destination
+     *          does not support the specified recrods, and error will be returned.
+     *          Record types are required to be in the custom range >= 65536. When using
+     *          REST, the values must be encoded as base64.
      * }
      */
     public function __construct($data = NULL) {
@@ -162,7 +210,9 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The amount to send expressed in satoshis
+     **
+     *The amount to send expressed in satoshis.
+     *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      * @return int|string
@@ -173,7 +223,9 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The amount to send expressed in satoshis
+     **
+     *The amount to send expressed in satoshis.
+     *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      * @param int|string $var
@@ -188,7 +240,42 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     **
+     *The amount to send expressed in millisatoshis.
+     *The fields amt and amt_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 amt_msat = 12;</code>
+     * @return int|string
+     */
+    public function getAmtMsat()
+    {
+        return $this->amt_msat;
+    }
+
+    /**
+     **
+     *The amount to send expressed in millisatoshis.
+     *The fields amt and amt_msat are mutually exclusive.
+     *
+     * Generated from protobuf field <code>int64 amt_msat = 12;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setAmtMsat($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->amt_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *An optional CLTV delta from the current height that should be used for the
+     *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
+     *not add any additional block padding on top of final_ctlv_delta. This
+     *padding of a few blocks needs to be added manually or otherwise failures may
+     *happen when a block comes in while the payment is in flight.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      * @return int
@@ -199,7 +286,12 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; An optional CLTV delta from the current height that should be used for the timelock of the final hop
+     **
+     *An optional CLTV delta from the current height that should be used for the
+     *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
+     *not add any additional block padding on top of final_ctlv_delta. This
+     *padding of a few blocks needs to be added manually or otherwise failures may
+     *happen when a block comes in while the payment is in flight.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      * @param int $var
@@ -249,7 +341,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *A list of nodes to ignore during path finding.
+     *A list of nodes to ignore during path finding. When using REST, these fields
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>repeated bytes ignored_nodes = 6;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -261,7 +354,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *A list of nodes to ignore during path finding.
+     *A list of nodes to ignore during path finding. When using REST, these fields
+     *must be encoded as base64.
      *
      * Generated from protobuf field <code>repeated bytes ignored_nodes = 6;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -419,6 +513,44 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->cltv_limit = $var;
+
+        return $this;
+    }
+
+    /**
+     ** 
+     *An optional field that can be used to pass an arbitrary set of TLV records
+     *to a peer which understands the new records. This can be used to pass
+     *application specific data during the payment attempt. If the destination
+     *does not support the specified recrods, and error will be returned.
+     *Record types are required to be in the custom range >= 65536. When using
+     *REST, the values must be encoded as base64.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 13;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getDestCustomRecords()
+    {
+        return $this->dest_custom_records;
+    }
+
+    /**
+     ** 
+     *An optional field that can be used to pass an arbitrary set of TLV records
+     *to a peer which understands the new records. This can be used to pass
+     *application specific data during the payment attempt. If the destination
+     *does not support the specified recrods, and error will be returned.
+     *Record types are required to be in the custom range >= 65536. When using
+     *REST, the values must be encoded as base64.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 13;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setDestCustomRecords($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
+        $this->dest_custom_records = $arr;
 
         return $this;
     }

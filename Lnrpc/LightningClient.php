@@ -251,6 +251,23 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
+     * *
+     * SubscribePeerEvents creates a uni-directional stream from the server to
+     * the client in which any events relevant to the state of peers are sent
+     * over. Events include peers going online and offline.
+     * @param \Lnrpc\PeerEventSubscription $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function SubscribePeerEvents(\Lnrpc\PeerEventSubscription $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/lnrpc.Lightning/SubscribePeerEvents',
+        $argument,
+        ['\Lnrpc\PeerEvent', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * * lncli: `getinfo`
      * GetInfo returns general information concerning the lightning node including
      * it's identity pubkey, alias, the chains it is connected to, and information
@@ -554,9 +571,9 @@ class LightningClient extends \Grpc\BaseStub {
      * notifying the client of newly added/settled invoices. The caller can
      * optionally specify the add_index and/or the settle_index. If the add_index
      * is specified, then we'll first start by sending add invoice events for all
-     * invoices with an add_index greater than the specified value.  If the
+     * invoices with an add_index greater than the specified value. If the
      * settle_index is specified, the next, we'll send out all settle events for
-     * invoices with a settle_index greater than the specified value.  One or both
+     * invoices with a settle_index greater than the specified value. One or both
      * of these fields can be set. If no fields are set, then we'll only send out
      * the latest add/settle events.
      * @param \Lnrpc\InvoiceSubscription $argument input argument
@@ -623,7 +640,7 @@ class LightningClient extends \Grpc\BaseStub {
      * DescribeGraph returns a description of the latest graph state from the
      * point of view of the node. The graph information is partitioned into two
      * components: all the nodes/vertexes, and all the edges that connect the
-     * vertexes themselves.  As this is a directed graph, the edges also contain
+     * vertexes themselves. As this is a directed graph, the edges also contain
      * the node directional specific routing policy which includes: the time lock
      * delta, fee information, etc.
      * @param \Lnrpc\ChannelGraphRequest $argument input argument
@@ -802,7 +819,7 @@ class LightningClient extends \Grpc\BaseStub {
      *
      * A list of forwarding events are returned. The size of each forwarding event
      * is 40 bytes, and the max message size able to be returned in gRPC is 4 MiB.
-     * As a result each message can only contain 50k entries.  Each response has
+     * As a result each message can only contain 50k entries. Each response has
      * the index offset of the last entry. The index offset can be provided to the
      * request to allow the caller to skip a series of records.
      * @param \Lnrpc\ForwardingHistoryRequest $argument input argument
@@ -909,6 +926,23 @@ class LightningClient extends \Grpc\BaseStub {
         return $this->_serverStreamRequest('/lnrpc.Lightning/SubscribeChannelBackups',
         $argument,
         ['\Lnrpc\ChanBackupSnapshot', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * * lncli: `bakemacaroon`
+     * BakeMacaroon allows the creation of a new macaroon with custom read and
+     * write permissions. No first-party caveats are added since this can be done
+     * offline.
+     * @param \Lnrpc\BakeMacaroonRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function BakeMacaroon(\Lnrpc\BakeMacaroonRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/BakeMacaroon',
+        $argument,
+        ['\Lnrpc\BakeMacaroonResponse', 'decode'],
         $metadata, $options);
     }
 

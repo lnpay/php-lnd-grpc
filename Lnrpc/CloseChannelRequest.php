@@ -21,25 +21,34 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    private $channel_point = null;
+    protected $channel_point = null;
     /**
      *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
      *
      * Generated from protobuf field <code>bool force = 2;</code>
      */
-    private $force = false;
+    protected $force = false;
     /**
      *&#47; The target number of blocks that the closure transaction should be confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    private $target_conf = 0;
+    protected $target_conf = 0;
     /**
      *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
      */
-    private $sat_per_byte = 0;
+    protected $sat_per_byte = 0;
+    /**
+     *An optional address to send funds to in the case of a cooperative close.
+     *If the channel was opened with an upfront shutdown script and this field
+     *is set, the request to close will fail because the channel must pay out
+     *to the upfront shutdown addresss.
+     *
+     * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
+     */
+    protected $delivery_address = '';
 
     /**
      * Constructor.
@@ -58,6 +67,11 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *          &#47; The target number of blocks that the closure transaction should be confirmed by.
      *     @type int|string $sat_per_byte
      *          &#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *     @type string $delivery_address
+     *          An optional address to send funds to in the case of a cooperative close.
+     *          If the channel was opened with an upfront shutdown script and this field
+     *          is set, the request to close will fail because the channel must pay out
+     *          to the upfront shutdown addresss.
      * }
      */
     public function __construct($data = NULL) {
@@ -171,6 +185,38 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->sat_per_byte = $var;
+
+        return $this;
+    }
+
+    /**
+     *An optional address to send funds to in the case of a cooperative close.
+     *If the channel was opened with an upfront shutdown script and this field
+     *is set, the request to close will fail because the channel must pay out
+     *to the upfront shutdown addresss.
+     *
+     * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
+     * @return string
+     */
+    public function getDeliveryAddress()
+    {
+        return $this->delivery_address;
+    }
+
+    /**
+     *An optional address to send funds to in the case of a cooperative close.
+     *If the channel was opened with an upfront shutdown script and this field
+     *is set, the request to close will fail because the channel must pay out
+     *to the upfront shutdown addresss.
+     *
+     * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDeliveryAddress($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->delivery_address = $var;
 
         return $this;
     }

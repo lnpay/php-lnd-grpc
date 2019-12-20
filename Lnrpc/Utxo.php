@@ -18,37 +18,37 @@ class Utxo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1[json_name = "address_type"];</code>
      */
-    private $type = 0;
+    protected $type = 0;
     /**
      *&#47; The address
      *
      * Generated from protobuf field <code>string address = 2[json_name = "address"];</code>
      */
-    private $address = '';
+    protected $address = '';
     /**
      *&#47; The value of the unspent coin in satoshis
      *
      * Generated from protobuf field <code>int64 amount_sat = 3[json_name = "amount_sat"];</code>
      */
-    private $amount_sat = 0;
+    protected $amount_sat = 0;
     /**
      *&#47; The pkscript in hex
      *
      * Generated from protobuf field <code>string pk_script = 4[json_name = "pk_script"];</code>
      */
-    private $pk_script = '';
+    protected $pk_script = '';
     /**
      *&#47; The outpoint in format txid:n
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5[json_name = "outpoint"];</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      *&#47; The number of confirmations for the Utxo
      *
      * Generated from protobuf field <code>int64 confirmations = 6[json_name = "confirmations"];</code>
      */
-    private $confirmations = 0;
+    protected $confirmations = 0;
 
     /**
      * Constructor.

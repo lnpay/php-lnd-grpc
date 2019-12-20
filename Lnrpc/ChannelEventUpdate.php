@@ -16,7 +16,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5[json_name = "type"];</code>
      */
-    private $type = 0;
+    protected $type = 0;
     protected $channel;
 
     /**
