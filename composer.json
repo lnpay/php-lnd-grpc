@@ -9,6 +9,7 @@
     "autoload": {
         "psr-4": {
             "Lnrpc\\": "Lnrpc/",
+            "Invoicesrpc\\": "Invoicesrpc/",
             "GPBMetadata\\Google\\": "grpc/third_party/protobuf/php/src/GPBMetadata/Google/Protobuf/",
             "GPBMetadata\\": "GPBMetadata/"
         }
