@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 curl -o rpc.proto https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/rpc.proto
+curl -o invoices.proto https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/invoicesrpc/invoices.proto
 
 git submodule update --init
 
