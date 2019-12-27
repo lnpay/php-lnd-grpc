@@ -47,6 +47,29 @@ echo "Balance:".$result->wait()[0]->getTotalBalance();
 
 ```
 
+## Multiple client example
+```
+//EXAMPLE BY @MrHash
+
+use Invoicesrpc\InvoicesClient;
+use Lnrpc\LightningClient;
+
+final class LndGrpcClient
+{
+    /** @var LightningClient */
+    public $lnrpc;
+
+    /** @var InvoicesClient */
+    public $invoicesrpc;
+
+    public function __construct(string $endpoint, array $options)
+    {
+        $this->lnrpc = new LightningClient($endpoint, $options); //$options example seen in Basic Usage
+        $this->invoicesrpc = new InvoicesClient($endpoint, $options); //$options example seen in Basic Usage
+    }
+}
+```
+
 ## Updating the RPC definitions
 
 ```
