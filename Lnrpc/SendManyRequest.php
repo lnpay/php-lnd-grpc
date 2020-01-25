@@ -24,13 +24,13 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
     /**
      *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
 
     /**
      * Constructor.

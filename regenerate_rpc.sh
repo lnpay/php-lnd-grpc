@@ -3,7 +3,14 @@
 curl -o rpc.proto https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/rpc.proto
 curl -o invoices.proto https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/invoicesrpc/invoices.proto
 
-git submodule update --init
+git submodule update --init --recursive
+
+apt-get update
+apt-get install build-essential autoconf automake libtool pkg-config
+
+cd grpc;
+make
+cd ..
 
 ./grpc/bins/opt/protobuf/protoc \
 	--proto_path=googleapis/ \

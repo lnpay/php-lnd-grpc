@@ -22,7 +22,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
      */
-    protected $memo = '';
+    private $memo = '';
     /**
      **
      *The hex-encoded preimage (32 byte) which will allow settling an incoming
@@ -31,7 +31,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes r_preimage = 3[json_name = "r_preimage"];</code>
      */
-    protected $r_preimage = '';
+    private $r_preimage = '';
     /**
      **
      *The hash of the preimage. When using REST, this field must be encoded as
@@ -39,7 +39,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes r_hash = 4[json_name = "r_hash"];</code>
      */
-    protected $r_hash = '';
+    private $r_hash = '';
     /**
      **
      *The value of this invoice in satoshis
@@ -47,7 +47,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 value = 5[json_name = "value"];</code>
      */
-    protected $value = 0;
+    private $value = 0;
     /**
      **
      *The value of this invoice in millisatoshis
@@ -55,25 +55,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 value_msat = 23[json_name = "value_msat"];</code>
      */
-    protected $value_msat = 0;
+    private $value_msat = 0;
     /**
      *&#47; Whether this invoice has been fulfilled
      *
      * Generated from protobuf field <code>bool settled = 6[json_name = "settled", deprecated = true];</code>
      */
-    protected $settled = false;
+    private $settled = false;
     /**
      *&#47; When this invoice was created
      *
      * Generated from protobuf field <code>int64 creation_date = 7[json_name = "creation_date"];</code>
      */
-    protected $creation_date = 0;
+    private $creation_date = 0;
     /**
      *&#47; When this invoice was settled
      *
      * Generated from protobuf field <code>int64 settle_date = 8[json_name = "settle_date"];</code>
      */
-    protected $settle_date = 0;
+    private $settle_date = 0;
     /**
      **
      *A bare-bones invoice for a payment within the Lightning Network. With the
@@ -82,7 +82,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      **
      *Hash (SHA-256) of a description of the payment. Used if the description of
@@ -92,25 +92,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes description_hash = 10[json_name = "description_hash"];</code>
      */
-    protected $description_hash = '';
+    private $description_hash = '';
     /**
      *&#47; Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
      * Generated from protobuf field <code>int64 expiry = 11[json_name = "expiry"];</code>
      */
-    protected $expiry = 0;
+    private $expiry = 0;
     /**
      *&#47; Fallback on-chain address.
      *
      * Generated from protobuf field <code>string fallback_addr = 12[json_name = "fallback_addr"];</code>
      */
-    protected $fallback_addr = '';
+    private $fallback_addr = '';
     /**
      *&#47; Delta to use for the time-lock of the CLTV extended to the final hop.
      *
      * Generated from protobuf field <code>uint64 cltv_expiry = 13[json_name = "cltv_expiry"];</code>
      */
-    protected $cltv_expiry = 0;
+    private $cltv_expiry = 0;
     /**
      **
      *Route hints that can each be individually used to assist in reaching the
@@ -124,7 +124,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool private = 15[json_name = "private"];</code>
      */
-    protected $private = false;
+    private $private = false;
     /**
      **
      *The "add" index of this invoice. Each newly created invoice will increment
@@ -134,7 +134,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
      */
-    protected $add_index = 0;
+    private $add_index = 0;
     /**
      **
      *The "settle" index of this invoice. Each newly settled invoice will
@@ -144,13 +144,13 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 settle_index = 17[json_name = "settle_index"];</code>
      */
-    protected $settle_index = 0;
+    private $settle_index = 0;
     /**
      *&#47; Deprecated, use amt_paid_sat or amt_paid_msat.
      *
      * Generated from protobuf field <code>int64 amt_paid = 18[json_name = "amt_paid", deprecated = true];</code>
      */
-    protected $amt_paid = 0;
+    private $amt_paid = 0;
     /**
      **
      *The amount that was accepted for this invoice, in satoshis. This will ONLY
@@ -162,7 +162,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_paid_sat = 19[json_name = "amt_paid_sat"];</code>
      */
-    protected $amt_paid_sat = 0;
+    private $amt_paid_sat = 0;
     /**
      **
      *The amount that was accepted for this invoice, in millisatoshis. This will
@@ -174,14 +174,14 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_paid_msat = 20[json_name = "amt_paid_msat"];</code>
      */
-    protected $amt_paid_msat = 0;
+    private $amt_paid_msat = 0;
     /**
      **
      *The state the invoice is in.
      *
      * Generated from protobuf field <code>.lnrpc.Invoice.InvoiceState state = 21[json_name = "state"];</code>
      */
-    protected $state = 0;
+    private $state = 0;
     /**
      *&#47; List of HTLCs paying to this invoice [EXPERIMENTAL].
      *
@@ -194,6 +194,14 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 24[json_name = "features"];</code>
      */
     private $features;
+    /**
+     **
+     *Indicates if this invoice was a spontaneous payment that arrived via keysend
+     *[EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>bool is_keysend = 25[json_name = "is_keysend"];</code>
+     */
+    private $is_keysend = false;
 
     /**
      * Constructor.
@@ -290,6 +298,10 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          &#47; List of HTLCs paying to this invoice [EXPERIMENTAL].
      *     @type array|\Google\Protobuf\Internal\MapField $features
      *          &#47; List of features advertised on the invoice.
+     *     @type bool $is_keysend
+     *          *
+     *          Indicates if this invoice was a spontaneous payment that arrived via keysend
+     *          [EXPERIMENTAL].
      * }
      */
     public function __construct($data = NULL) {
@@ -977,6 +989,36 @@ class Invoice extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
         $this->features = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Indicates if this invoice was a spontaneous payment that arrived via keysend
+     *[EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>bool is_keysend = 25[json_name = "is_keysend"];</code>
+     * @return bool
+     */
+    public function getIsKeysend()
+    {
+        return $this->is_keysend;
+    }
+
+    /**
+     **
+     *Indicates if this invoice was a spontaneous payment that arrived via keysend
+     *[EXPERIMENTAL].
+     *
+     * Generated from protobuf field <code>bool is_keysend = 25[json_name = "is_keysend"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsKeysend($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_keysend = $var;
 
         return $this;
     }

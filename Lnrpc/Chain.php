@@ -18,13 +18,13 @@ class Chain extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string chain = 1[json_name = "chain"];</code>
      */
-    protected $chain = '';
+    private $chain = '';
     /**
      *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
      * Generated from protobuf field <code>string network = 2[json_name = "network"];</code>
      */
-    protected $network = '';
+    private $network = '';
 
     /**
      * Constructor.

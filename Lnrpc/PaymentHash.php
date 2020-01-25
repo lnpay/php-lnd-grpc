@@ -22,7 +22,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
      */
-    protected $r_hash_str = '';
+    private $r_hash_str = '';
     /**
      **
      *The payment hash of the invoice to be looked up. When using REST, this field
@@ -30,7 +30,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
      */
-    protected $r_hash = '';
+    private $r_hash = '';
 
     /**
      * Constructor.

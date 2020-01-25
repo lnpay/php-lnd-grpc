@@ -18,55 +18,55 @@ class Peer extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
      * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
      */
-    protected $address = '';
+    private $address = '';
     /**
      *&#47; Bytes of data transmitted to this peer
      *
      * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
      */
-    protected $bytes_sent = 0;
+    private $bytes_sent = 0;
     /**
      *&#47; Bytes of data transmitted from this peer
      *
      * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
      */
-    protected $bytes_recv = 0;
+    private $bytes_recv = 0;
     /**
      *&#47; Satoshis sent to this peer
      *
      * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
      */
-    protected $sat_sent = 0;
+    private $sat_sent = 0;
     /**
      *&#47; Satoshis received from this peer
      *
      * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
      */
-    protected $sat_recv = 0;
+    private $sat_recv = 0;
     /**
      *&#47; A channel is inbound if the counterparty initiated the channel
      *
      * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
      */
-    protected $inbound = false;
+    private $inbound = false;
     /**
      *&#47; Ping time to this peer
      *
      * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
      */
-    protected $ping_time = 0;
+    private $ping_time = 0;
     /**
      * The type of sync we are currently performing with this peer.
      *
      * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10[json_name = "sync_type"];</code>
      */
-    protected $sync_type = 0;
+    private $sync_type = 0;
     /**
      *&#47; Features advertised by the remote peer in their init message.
      *

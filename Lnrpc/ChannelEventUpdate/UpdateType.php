@@ -27,12 +27,17 @@ class UpdateType
      * Generated from protobuf enum <code>INACTIVE_CHANNEL = 3;</code>
      */
     const INACTIVE_CHANNEL = 3;
+    /**
+     * Generated from protobuf enum <code>PENDING_OPEN_CHANNEL = 4;</code>
+     */
+    const PENDING_OPEN_CHANNEL = 4;
 
     private static $valueToName = [
         self::OPEN_CHANNEL => 'OPEN_CHANNEL',
         self::CLOSED_CHANNEL => 'CLOSED_CHANNEL',
         self::ACTIVE_CHANNEL => 'ACTIVE_CHANNEL',
         self::INACTIVE_CHANNEL => 'INACTIVE_CHANNEL',
+        self::PENDING_OPEN_CHANNEL => 'PENDING_OPEN_CHANNEL',
     ];
 
     public static function name($value)

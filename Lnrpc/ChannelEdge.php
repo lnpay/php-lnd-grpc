@@ -28,35 +28,35 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
      */
-    protected $channel_id = 0;
+    private $channel_id = 0;
     /**
      * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
      */
-    protected $chan_point = '';
+    private $chan_point = '';
     /**
      * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update", deprecated = true];</code>
      */
-    protected $last_update = 0;
+    private $last_update = 0;
     /**
      * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
      */
-    protected $node1_pub = '';
+    private $node1_pub = '';
     /**
      * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
      */
-    protected $node2_pub = '';
+    private $node2_pub = '';
     /**
      * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
      */
-    protected $capacity = 0;
+    private $capacity = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
      */
-    protected $node1_policy = null;
+    private $node1_policy = null;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
      */
-    protected $node2_policy = null;
+    private $node2_policy = null;
 
     /**
      * Constructor.

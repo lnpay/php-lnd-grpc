@@ -19,7 +19,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1[json_name = "chan_point"];</code>
      */
-    protected $chan_point = null;
+    private $chan_point = null;
     /**
      **
      *Is an encrypted single-chan backup. this can be passed to
@@ -29,7 +29,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
      */
-    protected $chan_backup = '';
+    private $chan_backup = '';
 
     /**
      * Constructor.

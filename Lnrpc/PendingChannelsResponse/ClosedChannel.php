@@ -18,13 +18,13 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    protected $channel = null;
+    private $channel = null;
     /**
      *&#47; The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2[json_name = "closing_txid"];</code>
      */
-    protected $closing_txid = '';
+    private $closing_txid = '';
 
     /**
      * Constructor.

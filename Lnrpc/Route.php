@@ -29,7 +29,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 total_time_lock = 1[json_name = "total_time_lock"];</code>
      */
-    protected $total_time_lock = 0;
+    private $total_time_lock = 0;
     /**
      **
      *The sum of the fees paid at each hop within the final route. In the case
@@ -38,7 +38,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_fees = 2[json_name = "total_fees", deprecated = true];</code>
      */
-    protected $total_fees = 0;
+    private $total_fees = 0;
     /**
      **
      *The total amount of funds required to complete a payment over this route.
@@ -49,7 +49,7 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_amt = 3[json_name = "total_amt", deprecated = true];</code>
      */
-    protected $total_amt = 0;
+    private $total_amt = 0;
     /**
      **
      *Contains details concerning the specific forwarding details at each hop.
@@ -63,14 +63,14 @@ class Route extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_fees_msat = 5[json_name = "total_fees_msat"];</code>
      */
-    protected $total_fees_msat = 0;
+    private $total_fees_msat = 0;
     /**
      **
      *The total amount in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_amt_msat = 6[json_name = "total_amt_msat"];</code>
      */
-    protected $total_amt_msat = 0;
+    private $total_amt_msat = 0;
 
     /**
      * Constructor.

@@ -20,7 +20,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool pending_only = 1[json_name = "pending_only"];</code>
      */
-    protected $pending_only = false;
+    private $pending_only = false;
     /**
      **
      *The index of an invoice that will be used as either the start or end of a
@@ -28,13 +28,13 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 index_offset = 4[json_name = "index_offset"];</code>
      */
-    protected $index_offset = 0;
+    private $index_offset = 0;
     /**
      *&#47; The max number of invoices to return in the response to this query.
      *
      * Generated from protobuf field <code>uint64 num_max_invoices = 5[json_name = "num_max_invoices"];</code>
      */
-    protected $num_max_invoices = 0;
+    private $num_max_invoices = 0;
     /**
      **
      *If set, the invoices returned will result from seeking backwards from the
@@ -42,7 +42,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool reversed = 6[json_name = "reversed"];</code>
      */
-    protected $reversed = false;
+    private $reversed = false;
 
     /**
      * Constructor.

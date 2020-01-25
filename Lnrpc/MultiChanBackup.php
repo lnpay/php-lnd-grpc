@@ -29,7 +29,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
      */
-    protected $multi_chan_backup = '';
+    private $multi_chan_backup = '';
 
     /**
      * Constructor.

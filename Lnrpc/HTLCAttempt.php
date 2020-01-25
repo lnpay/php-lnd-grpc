@@ -18,19 +18,19 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1[json_name = "status"];</code>
      */
-    protected $status = 0;
+    private $status = 0;
     /**
      *&#47; The route taken by this HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2[json_name = "route"];</code>
      */
-    protected $route = null;
+    private $route = null;
     /**
      *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
      * Generated from protobuf field <code>int64 attempt_time_ns = 3[json_name = "attempt_time_ns"];</code>
      */
-    protected $attempt_time_ns = 0;
+    private $attempt_time_ns = 0;
     /**
      **
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
@@ -38,7 +38,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 resolve_time_ns = 4[json_name = "resolve_time_ns"];</code>
      */
-    protected $resolve_time_ns = 0;
+    private $resolve_time_ns = 0;
 
     /**
      * Constructor.

@@ -18,14 +18,14 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      */
-    protected $addr = null;
+    private $addr = null;
     /**
      ** If set, the daemon will attempt to persistently connect to the target
      * peer. Otherwise, the call will be synchronous. 
      *
      * Generated from protobuf field <code>bool perm = 2;</code>
      */
-    protected $perm = false;
+    private $perm = false;
 
     /**
      * Constructor.

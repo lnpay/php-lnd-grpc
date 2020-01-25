@@ -18,7 +18,7 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
 
     /**
      * Constructor.

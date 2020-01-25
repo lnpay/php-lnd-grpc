@@ -16,39 +16,39 @@ class PayReq extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
      */
-    protected $destination = '';
+    private $destination = '';
     /**
      * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
      */
-    protected $num_satoshis = 0;
+    private $num_satoshis = 0;
     /**
      * Generated from protobuf field <code>int64 timestamp = 4[json_name = "timestamp"];</code>
      */
-    protected $timestamp = 0;
+    private $timestamp = 0;
     /**
      * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
      */
-    protected $expiry = 0;
+    private $expiry = 0;
     /**
      * Generated from protobuf field <code>string description = 6[json_name = "description"];</code>
      */
-    protected $description = '';
+    private $description = '';
     /**
      * Generated from protobuf field <code>string description_hash = 7[json_name = "description_hash"];</code>
      */
-    protected $description_hash = '';
+    private $description_hash = '';
     /**
      * Generated from protobuf field <code>string fallback_addr = 8[json_name = "fallback_addr"];</code>
      */
-    protected $fallback_addr = '';
+    private $fallback_addr = '';
     /**
      * Generated from protobuf field <code>int64 cltv_expiry = 9[json_name = "cltv_expiry"];</code>
      */
-    protected $cltv_expiry = 0;
+    private $cltv_expiry = 0;
     /**
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
      */
@@ -56,11 +56,11 @@ class PayReq extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
      */
-    protected $payment_addr = '';
+    private $payment_addr = '';
     /**
      * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
      */
-    protected $num_msat = 0;
+    private $num_msat = 0;
     /**
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
      */

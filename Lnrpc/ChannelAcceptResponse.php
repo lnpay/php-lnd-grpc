@@ -18,13 +18,13 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool accept = 1;</code>
      */
-    protected $accept = false;
+    private $accept = false;
     /**
      *&#47; The pending channel id to which this response applies.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
 
     /**
      * Constructor.

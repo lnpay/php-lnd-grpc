@@ -28,7 +28,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
      */
-    protected $last_index_offset = 0;
+    private $last_index_offset = 0;
     /**
      **
      *The index of the last item in the set of returned invoices. This can be used
@@ -36,7 +36,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
      */
-    protected $first_index_offset = 0;
+    private $first_index_offset = 0;
 
     /**
      * Constructor.

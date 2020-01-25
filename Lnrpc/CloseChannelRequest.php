@@ -21,25 +21,25 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    protected $channel_point = null;
+    private $channel_point = null;
     /**
      *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
      *
      * Generated from protobuf field <code>bool force = 2;</code>
      */
-    protected $force = false;
+    private $force = false;
     /**
      *&#47; The target number of blocks that the closure transaction should be confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
     /**
      *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
     /**
      *An optional address to send funds to in the case of a cooperative close.
      *If the channel was opened with an upfront shutdown script and this field
@@ -48,7 +48,7 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
      */
-    protected $delivery_address = '';
+    private $delivery_address = '';
 
     /**
      * Constructor.

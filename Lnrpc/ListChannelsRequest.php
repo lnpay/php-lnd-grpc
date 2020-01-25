@@ -16,19 +16,19 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool active_only = 1;</code>
      */
-    protected $active_only = false;
+    private $active_only = false;
     /**
      * Generated from protobuf field <code>bool inactive_only = 2;</code>
      */
-    protected $inactive_only = false;
+    private $inactive_only = false;
     /**
      * Generated from protobuf field <code>bool public_only = 3;</code>
      */
-    protected $public_only = false;
+    private $public_only = false;
     /**
      * Generated from protobuf field <code>bool private_only = 4;</code>
      */
-    protected $private_only = false;
+    private $private_only = false;
 
     /**
      * Constructor.

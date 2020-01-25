@@ -18,25 +18,25 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      */
-    protected $addr = '';
+    private $addr = '';
     /**
      *&#47; The amount in satoshis to send
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    protected $amount = 0;
+    private $amount = 0;
     /**
      *&#47; The target number of blocks that this transaction should be confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
     /**
      *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
     /**
      **
      *If set, then the amount field will be ignored, and lnd will attempt to
@@ -45,7 +45,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool send_all = 6;</code>
      */
-    protected $send_all = false;
+    private $send_all = false;
 
     /**
      * Constructor.
