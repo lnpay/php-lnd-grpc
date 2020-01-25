@@ -18,7 +18,7 @@ class SendManyResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
      */
-    protected $txid = '';
+    private $txid = '';
 
     /**
      * Constructor.

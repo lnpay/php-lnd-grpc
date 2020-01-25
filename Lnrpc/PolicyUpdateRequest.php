@@ -18,37 +18,37 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 3[json_name = "base_fee_msat"];</code>
      */
-    protected $base_fee_msat = 0;
+    private $base_fee_msat = 0;
     /**
      *&#47; The effective fee rate in milli-satoshis. The precision of this value goes up to 6 decimal places, so 1e-6.
      *
      * Generated from protobuf field <code>double fee_rate = 4[json_name = "fee_rate"];</code>
      */
-    protected $fee_rate = 0.0;
+    private $fee_rate = 0.0;
     /**
      *&#47; The required timelock delta for HTLCs forwarded over the channel.
      *
      * Generated from protobuf field <code>uint32 time_lock_delta = 5[json_name = "time_lock_delta"];</code>
      */
-    protected $time_lock_delta = 0;
+    private $time_lock_delta = 0;
     /**
      *&#47; If set, the maximum HTLC size in milli-satoshis. If unset, the maximum HTLC will be unchanged.
      *
      * Generated from protobuf field <code>uint64 max_htlc_msat = 6[json_name = "max_htlc_msat"];</code>
      */
-    protected $max_htlc_msat = 0;
+    private $max_htlc_msat = 0;
     /**
      *&#47; The minimum HTLC size in milli-satoshis. Only applied if min_htlc_msat_specified is true.
      *
      * Generated from protobuf field <code>uint64 min_htlc_msat = 7[json_name = "min_htlc_msat"];</code>
      */
-    protected $min_htlc_msat = 0;
+    private $min_htlc_msat = 0;
     /**
      *&#47; If true, min_htlc_msat is applied.
      *
      * Generated from protobuf field <code>bool min_htlc_msat_specified = 8[json_name = "set_min_htlc_msat"];</code>
      */
-    protected $min_htlc_msat_specified = false;
+    private $min_htlc_msat_specified = false;
     protected $scope;
 
     /**

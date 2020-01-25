@@ -16,49 +16,49 @@ class NetworkInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>uint32 graph_diameter = 1[json_name = "graph_diameter"];</code>
      */
-    protected $graph_diameter = 0;
+    private $graph_diameter = 0;
     /**
      * Generated from protobuf field <code>double avg_out_degree = 2[json_name = "avg_out_degree"];</code>
      */
-    protected $avg_out_degree = 0.0;
+    private $avg_out_degree = 0.0;
     /**
      * Generated from protobuf field <code>uint32 max_out_degree = 3[json_name = "max_out_degree"];</code>
      */
-    protected $max_out_degree = 0;
+    private $max_out_degree = 0;
     /**
      * Generated from protobuf field <code>uint32 num_nodes = 4[json_name = "num_nodes"];</code>
      */
-    protected $num_nodes = 0;
+    private $num_nodes = 0;
     /**
      * Generated from protobuf field <code>uint32 num_channels = 5[json_name = "num_channels"];</code>
      */
-    protected $num_channels = 0;
+    private $num_channels = 0;
     /**
      * Generated from protobuf field <code>int64 total_network_capacity = 6[json_name = "total_network_capacity"];</code>
      */
-    protected $total_network_capacity = 0;
+    private $total_network_capacity = 0;
     /**
      * Generated from protobuf field <code>double avg_channel_size = 7[json_name = "avg_channel_size"];</code>
      */
-    protected $avg_channel_size = 0.0;
+    private $avg_channel_size = 0.0;
     /**
      * Generated from protobuf field <code>int64 min_channel_size = 8[json_name = "min_channel_size"];</code>
      */
-    protected $min_channel_size = 0;
+    private $min_channel_size = 0;
     /**
      * Generated from protobuf field <code>int64 max_channel_size = 9[json_name = "max_channel_size"];</code>
      */
-    protected $max_channel_size = 0;
+    private $max_channel_size = 0;
     /**
      * Generated from protobuf field <code>int64 median_channel_size_sat = 10[json_name = "median_channel_size_sat"];</code>
      */
-    protected $median_channel_size_sat = 0;
+    private $median_channel_size_sat = 0;
     /**
      * The number of edges marked as zombies.
      *
      * Generated from protobuf field <code>uint64 num_zombie_chans = 11[json_name = "num_zombie_chans"];</code>
      */
-    protected $num_zombie_chans = 0;
+    private $num_zombie_chans = 0;
 
     /**
      * Constructor.

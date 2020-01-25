@@ -20,13 +20,13 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
      */
-    protected $msg = '';
+    private $msg = '';
     /**
      *&#47; The signature to be verified over the given message
      *
      * Generated from protobuf field <code>string signature = 2[json_name = "signature"];</code>
      */
-    protected $signature = '';
+    private $signature = '';
 
     /**
      * Constructor.

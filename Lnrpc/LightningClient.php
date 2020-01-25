@@ -378,7 +378,10 @@ class LightningClient extends \Grpc\BaseStub {
      * request to a remote peer. Users are able to specify a target number of
      * blocks that the funding transaction should be confirmed in, or a manual fee
      * rate to us for the funding transaction. If neither are specified, then a
-     * lax block confirmation target is used.
+     * lax block confirmation target is used. Each OpenStatusUpdate will return
+     * the pending channel ID of the in-progress channel. Depending on the
+     * arguments specified in the OpenChannelRequest, this pending channel ID can
+     * then be used to manually progress the channel funding flow.
      * @param \Lnrpc\OpenChannelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -388,6 +391,28 @@ class LightningClient extends \Grpc\BaseStub {
         return $this->_serverStreamRequest('/lnrpc.Lightning/OpenChannel',
         $argument,
         ['\Lnrpc\OpenStatusUpdate', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * *
+     * FundingStateStep is an advanced funding related call that allows the caller
+     * to either execute some preparatory steps for a funding workflow, or
+     * manually progress a funding workflow. The primary way a funding flow is
+     * identified is via its pending channel ID. As an example, this method can be
+     * used to specify that we're expecting a funding flow for a particular
+     * pending channel ID, for which we need to use specific parameters.
+     * Alternatively, this can be used to interactively drive PSBT signing for
+     * funding for partially complete funding transactions.
+     * @param \Lnrpc\FundingTransitionMsg $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function FundingStateStep(\Lnrpc\FundingTransitionMsg $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/FundingStateStep',
+        $argument,
+        ['\Lnrpc\FundingStateStepResp', 'decode'],
         $metadata, $options);
     }
 

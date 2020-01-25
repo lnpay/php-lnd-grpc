@@ -20,7 +20,7 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
      */
-    protected $msg = '';
+    private $msg = '';
 
     /**
      * Constructor.

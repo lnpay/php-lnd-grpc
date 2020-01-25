@@ -21,7 +21,7 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool include_incomplete = 1;</code>
      */
-    protected $include_incomplete = false;
+    private $include_incomplete = false;
 
     /**
      * Constructor.

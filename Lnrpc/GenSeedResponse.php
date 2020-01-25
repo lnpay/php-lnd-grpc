@@ -31,7 +31,7 @@ class GenSeedResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes enciphered_seed = 2;</code>
      */
-    protected $enciphered_seed = '';
+    private $enciphered_seed = '';
 
     /**
      * Constructor.

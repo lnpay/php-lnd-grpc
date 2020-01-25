@@ -18,19 +18,19 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_balance = 1[json_name = "total_balance"];</code>
      */
-    protected $total_balance = 0;
+    private $total_balance = 0;
     /**
      *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
      *
      * Generated from protobuf field <code>int64 confirmed_balance = 2[json_name = "confirmed_balance"];</code>
      */
-    protected $confirmed_balance = 0;
+    private $confirmed_balance = 0;
     /**
      *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
      *
      * Generated from protobuf field <code>int64 unconfirmed_balance = 3[json_name = "unconfirmed_balance"];</code>
      */
-    protected $unconfirmed_balance = 0;
+    private $unconfirmed_balance = 0;
 
     /**
      * Constructor.

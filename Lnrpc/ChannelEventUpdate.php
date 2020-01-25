@@ -16,7 +16,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5[json_name = "type"];</code>
      */
-    protected $type = 0;
+    private $type = 0;
     protected $channel;
 
     /**
@@ -29,6 +29,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
      *     @type \Lnrpc\ChannelCloseSummary $closed_channel
      *     @type \Lnrpc\ChannelPoint $active_channel
      *     @type \Lnrpc\ChannelPoint $inactive_channel
+     *     @type \Lnrpc\PendingUpdate $pending_open_channel
      *     @type int $type
      * }
      */
@@ -121,6 +122,28 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelPoint::class);
         $this->writeOneof(4, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate pending_open_channel = 6[json_name = "pending_open_channel"];</code>
+     * @return \Lnrpc\PendingUpdate
+     */
+    public function getPendingOpenChannel()
+    {
+        return $this->readOneof(6);
+    }
+
+    /**
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate pending_open_channel = 6[json_name = "pending_open_channel"];</code>
+     * @param \Lnrpc\PendingUpdate $var
+     * @return $this
+     */
+    public function setPendingOpenChannel($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\PendingUpdate::class);
+        $this->writeOneof(6, $var);
 
         return $this;
     }

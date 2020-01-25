@@ -18,13 +18,13 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string entity = 1[json_name = "entity"];</code>
      */
-    protected $entity = '';
+    private $entity = '';
     /**
      *&#47; The action that is granted.
      *
      * Generated from protobuf field <code>string action = 2[json_name = "action"];</code>
      */
-    protected $action = '';
+    private $action = '';
 
     /**
      * Constructor.

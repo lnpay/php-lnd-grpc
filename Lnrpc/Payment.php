@@ -18,19 +18,19 @@ class Payment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      *&#47; Deprecated, use value_sat or value_msat.
      *
      * Generated from protobuf field <code>int64 value = 2[json_name = "value", deprecated = true];</code>
      */
-    protected $value = 0;
+    private $value = 0;
     /**
      *&#47; Deprecated, use creation_time_ns
      *
      * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
      */
-    protected $creation_date = 0;
+    private $creation_date = 0;
     /**
      *&#47; The path this payment took.
      *
@@ -42,55 +42,55 @@ class Payment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee = 5[json_name = "fee", deprecated = true];</code>
      */
-    protected $fee = 0;
+    private $fee = 0;
     /**
      *&#47; The payment preimage
      *
      * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
      */
-    protected $payment_preimage = '';
+    private $payment_preimage = '';
     /**
      *&#47; The value of the payment in satoshis
      *
      * Generated from protobuf field <code>int64 value_sat = 7[json_name = "value_sat"];</code>
      */
-    protected $value_sat = 0;
+    private $value_sat = 0;
     /**
      *&#47; The value of the payment in milli-satoshis
      *
      * Generated from protobuf field <code>int64 value_msat = 8[json_name = "value_msat"];</code>
      */
-    protected $value_msat = 0;
+    private $value_msat = 0;
     /**
      *&#47; The optional payment request being fulfilled.
      *
      * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      * The status of the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10[json_name = "status"];</code>
      */
-    protected $status = 0;
+    private $status = 0;
     /**
      *&#47;  The fee paid for this payment in satoshis
      *
      * Generated from protobuf field <code>int64 fee_sat = 11[json_name = "fee_sat"];</code>
      */
-    protected $fee_sat = 0;
+    private $fee_sat = 0;
     /**
      *&#47;  The fee paid for this payment in milli-satoshis
      *
      * Generated from protobuf field <code>int64 fee_msat = 12[json_name = "fee_msat"];</code>
      */
-    protected $fee_msat = 0;
+    private $fee_msat = 0;
     /**
      *&#47; The time in UNIX nanoseconds at which the payment was created.
      *
      * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
      */
-    protected $creation_time_ns = 0;
+    private $creation_time_ns = 0;
     /**
      *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *

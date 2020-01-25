@@ -20,7 +20,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
-    protected $dest = '';
+    private $dest = '';
     /**
      **
      *The hex-encoded identity pubkey of the payment recipient. Deprecated now
@@ -28,7 +28,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string dest_string = 2 [deprecated = true];</code>
      */
-    protected $dest_string = '';
+    private $dest_string = '';
     /**
      **
      *The amount to send expressed in satoshis.
@@ -36,7 +36,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt = 3;</code>
      */
-    protected $amt = 0;
+    private $amt = 0;
     /**
      **
      *The amount to send expressed in millisatoshis.
@@ -44,7 +44,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_msat = 12;</code>
      */
-    protected $amt_msat = 0;
+    private $amt_msat = 0;
     /**
      **
      *The hash to use within the payment's HTLC. When using REST, this field
@@ -52,7 +52,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      **
      *The hex-encoded hash to use within the payment's HTLC. Deprecated now
@@ -60,7 +60,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_hash_string = 5 [deprecated = true];</code>
      */
-    protected $payment_hash_string = '';
+    private $payment_hash_string = '';
     /**
      **
      *A bare-bones invoice for a payment within the Lightning Network. With the
@@ -69,7 +69,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 6;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      **
      *The CLTV delta from the current height that should be used to set the
@@ -77,7 +77,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 7;</code>
      */
-    protected $final_cltv_delta = 0;
+    private $final_cltv_delta = 0;
     /**
      **
      *The maximum number of satoshis that will be paid as a fee of the payment.
@@ -87,7 +87,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 8;</code>
      */
-    protected $fee_limit = null;
+    private $fee_limit = null;
     /**
      **
      *The channel id of the channel that must be taken to the first hop. If zero,
@@ -95,14 +95,14 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 9 [jstype = JS_STRING];</code>
      */
-    protected $outgoing_chan_id = 0;
+    private $outgoing_chan_id = 0;
     /**
      **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 13;</code>
      */
-    protected $last_hop_pubkey = '';
+    private $last_hop_pubkey = '';
     /**
      ** 
      *An optional maximum total time lock for the route. This should not exceed
@@ -111,7 +111,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 10;</code>
      */
-    protected $cltv_limit = 0;
+    private $cltv_limit = 0;
     /**
      ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
@@ -128,7 +128,7 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool allow_self_payment = 14;</code>
      */
-    protected $allow_self_payment = false;
+    private $allow_self_payment = false;
     /**
      **
      *Features assumed to be supported by the final node. All transitive feature

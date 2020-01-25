@@ -22,7 +22,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
      */
-    protected $payment_addr = '';
+    private $payment_addr = '';
     /**
      **
      *The total amount in milli-satoshis being sent as part of a larger multi-path
@@ -32,7 +32,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_amt_msat = 10[json_name = "total_amt_msat"];</code>
      */
-    protected $total_amt_msat = 0;
+    private $total_amt_msat = 0;
 
     /**
      * Constructor.

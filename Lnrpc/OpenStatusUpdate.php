@@ -13,6 +13,14 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
 {
+    /**
+     **
+     *The pending channel ID of the created channel. This value may be used to
+     *further the funding flow manually via the FundingStateStep method.
+     *
+     * Generated from protobuf field <code>bytes pending_chan_id = 4[json_name = "pending_chan_id"];</code>
+     */
+    private $pending_chan_id = '';
     protected $update;
 
     /**
@@ -23,6 +31,10 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
      *
      *     @type \Lnrpc\PendingUpdate $chan_pending
      *     @type \Lnrpc\ChannelOpenUpdate $chan_open
+     *     @type string $pending_chan_id
+     *          *
+     *          The pending channel ID of the created channel. This value may be used to
+     *          further the funding flow manually via the FundingStateStep method.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,6 +82,36 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelOpenUpdate::class);
         $this->writeOneof(3, $var);
+
+        return $this;
+    }
+
+    /**
+     **
+     *The pending channel ID of the created channel. This value may be used to
+     *further the funding flow manually via the FundingStateStep method.
+     *
+     * Generated from protobuf field <code>bytes pending_chan_id = 4[json_name = "pending_chan_id"];</code>
+     * @return string
+     */
+    public function getPendingChanId()
+    {
+        return $this->pending_chan_id;
+    }
+
+    /**
+     **
+     *The pending channel ID of the created channel. This value may be used to
+     *further the funding flow manually via the FundingStateStep method.
+     *
+     * Generated from protobuf field <code>bytes pending_chan_id = 4[json_name = "pending_chan_id"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPendingChanId($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->pending_chan_id = $var;
 
         return $this;
     }

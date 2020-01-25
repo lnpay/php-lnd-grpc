@@ -18,19 +18,19 @@ class HopHint extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string node_id = 1[json_name = "node_id"];</code>
      */
-    protected $node_id = '';
+    private $node_id = '';
     /**
      *&#47; The unique identifier of the channel.
      *
      * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      *&#47; The base fee of the channel denominated in millisatoshis.
      *
      * Generated from protobuf field <code>uint32 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
      */
-    protected $fee_base_msat = 0;
+    private $fee_base_msat = 0;
     /**
      **
      *The fee rate of the channel for sending one satoshi across it denominated in
@@ -38,13 +38,13 @@ class HopHint extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4[json_name = "fee_proportional_millionths"];</code>
      */
-    protected $fee_proportional_millionths = 0;
+    private $fee_proportional_millionths = 0;
     /**
      *&#47; The time-lock delta of the channel.
      *
      * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5[json_name = "cltv_expiry_delta"];</code>
      */
-    protected $cltv_expiry_delta = 0;
+    private $cltv_expiry_delta = 0;
 
     /**
      * Constructor.

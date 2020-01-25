@@ -18,7 +18,7 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      */
-    protected $type = 0;
+    private $type = 0;
 
     /**
      * Constructor.

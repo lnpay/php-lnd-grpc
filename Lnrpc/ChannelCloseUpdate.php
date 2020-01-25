@@ -16,11 +16,11 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
      */
-    protected $closing_txid = '';
+    private $closing_txid = '';
     /**
      * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
      */
-    protected $success = false;
+    private $success = false;
 
     /**
      * Constructor.

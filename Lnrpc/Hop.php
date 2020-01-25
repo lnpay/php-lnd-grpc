@@ -21,31 +21,31 @@ class Hop extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
      */
-    protected $chan_capacity = 0;
+    private $chan_capacity = 0;
     /**
      * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
      */
-    protected $amt_to_forward = 0;
+    private $amt_to_forward = 0;
     /**
      * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
      */
-    protected $fee = 0;
+    private $fee = 0;
     /**
      * Generated from protobuf field <code>uint32 expiry = 5[json_name = "expiry"];</code>
      */
-    protected $expiry = 0;
+    private $expiry = 0;
     /**
      * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
      */
-    protected $amt_to_forward_msat = 0;
+    private $amt_to_forward_msat = 0;
     /**
      * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
      */
-    protected $fee_msat = 0;
+    private $fee_msat = 0;
     /**
      **
      *An optional public key of the hop. If the public key is given, the payment
@@ -53,7 +53,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 8[json_name = "pub_key"];</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      ** 
      *If set to true, then this hop will be encoded using the new variable length
@@ -62,7 +62,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
      */
-    protected $tlv_payload = false;
+    private $tlv_payload = false;
     /**
      **
      *An optional TLV record tha singals the use of an MPP payment. If present,
@@ -72,7 +72,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
      */
-    protected $mpp_record = null;
+    private $mpp_record = null;
     /**
      **
      *An optional set of key-value TLV records. This is useful within the context

@@ -18,7 +18,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
      */
-    protected $output_index = 0;
+    private $output_index = 0;
     protected $funding_txid;
 
     /**

@@ -18,7 +18,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      **
      *The amount to send expressed in satoshis.
@@ -26,7 +26,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
-    protected $amt = 0;
+    private $amt = 0;
     /**
      **
      *The amount to send expressed in millisatoshis.
@@ -34,7 +34,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_msat = 12;</code>
      */
-    protected $amt_msat = 0;
+    private $amt_msat = 0;
     /**
      **
      *An optional CLTV delta from the current height that should be used for the
@@ -45,7 +45,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      */
-    protected $final_cltv_delta = 0;
+    private $final_cltv_delta = 0;
     /**
      **
      *The maximum number of satoshis that will be paid as a fee of the payment.
@@ -55,7 +55,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
      */
-    protected $fee_limit = null;
+    private $fee_limit = null;
     /**
      **
      *A list of nodes to ignore during path finding. When using REST, these fields
@@ -78,7 +78,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string source_pub_key = 8;</code>
      */
-    protected $source_pub_key = '';
+    private $source_pub_key = '';
     /**
      **
      *If set to true, edge probabilities from mission control will be used to get
@@ -86,7 +86,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool use_mission_control = 9;</code>
      */
-    protected $use_mission_control = false;
+    private $use_mission_control = false;
     /**
      **
      *A list of directed node pairs that will be ignored during path finding.
@@ -102,7 +102,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
      */
-    protected $cltv_limit = 0;
+    private $cltv_limit = 0;
     /**
      ** 
      *An optional field that can be used to pass an arbitrary set of TLV records
@@ -115,6 +115,39 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>map<uint64, bytes> dest_custom_records = 13;</code>
      */
     private $dest_custom_records;
+    /**
+     **
+     *The channel id of the channel that must be taken to the first hop. If zero,
+     *any channel may be used.
+     *
+     * Generated from protobuf field <code>uint64 outgoing_chan_id = 14 [jstype = JS_STRING];</code>
+     */
+    private $outgoing_chan_id = 0;
+    /**
+     **
+     *The pubkey of the last hop of the route. If empty, any hop may be used.
+     *
+     * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
+     */
+    private $last_hop_pubkey = '';
+    /**
+     **
+     *Optional route hints to reach the destination through private channels.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 16;</code>
+     */
+    private $route_hints;
+    /**
+     **
+     *Features assumed to be supported by the final node. All transitive feature
+     *depdencies must also be set properly. For a given feature bit pair, either
+     *optional or remote may be set, but not both. If this field is nil or empty,
+     *the router will try to load destination features from the graph as a
+     *fallback.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 17;</code>
+     */
+    private $dest_features;
 
     /**
      * Constructor.
@@ -176,6 +209,23 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *          does not support the specified recrods, and error will be returned.
      *          Record types are required to be in the custom range >= 65536. When using
      *          REST, the values must be encoded as base64.
+     *     @type int|string $outgoing_chan_id
+     *          *
+     *          The channel id of the channel that must be taken to the first hop. If zero,
+     *          any channel may be used.
+     *     @type string $last_hop_pubkey
+     *          *
+     *          The pubkey of the last hop of the route. If empty, any hop may be used.
+     *     @type \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $route_hints
+     *          *
+     *          Optional route hints to reach the destination through private channels.
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $dest_features
+     *          *
+     *          Features assumed to be supported by the final node. All transitive feature
+     *          depdencies must also be set properly. For a given feature bit pair, either
+     *          optional or remote may be set, but not both. If this field is nil or empty,
+     *          the router will try to load destination features from the graph as a
+     *          fallback.
      * }
      */
     public function __construct($data = NULL) {
@@ -551,6 +601,128 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->dest_custom_records = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The channel id of the channel that must be taken to the first hop. If zero,
+     *any channel may be used.
+     *
+     * Generated from protobuf field <code>uint64 outgoing_chan_id = 14 [jstype = JS_STRING];</code>
+     * @return int|string
+     */
+    public function getOutgoingChanId()
+    {
+        return $this->outgoing_chan_id;
+    }
+
+    /**
+     **
+     *The channel id of the channel that must be taken to the first hop. If zero,
+     *any channel may be used.
+     *
+     * Generated from protobuf field <code>uint64 outgoing_chan_id = 14 [jstype = JS_STRING];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setOutgoingChanId($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->outgoing_chan_id = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The pubkey of the last hop of the route. If empty, any hop may be used.
+     *
+     * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
+     * @return string
+     */
+    public function getLastHopPubkey()
+    {
+        return $this->last_hop_pubkey;
+    }
+
+    /**
+     **
+     *The pubkey of the last hop of the route. If empty, any hop may be used.
+     *
+     * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLastHopPubkey($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->last_hop_pubkey = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Optional route hints to reach the destination through private channels.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 16;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getRouteHints()
+    {
+        return $this->route_hints;
+    }
+
+    /**
+     **
+     *Optional route hints to reach the destination through private channels.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 16;</code>
+     * @param \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setRouteHints($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\RouteHint::class);
+        $this->route_hints = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Features assumed to be supported by the final node. All transitive feature
+     *depdencies must also be set properly. For a given feature bit pair, either
+     *optional or remote may be set, but not both. If this field is nil or empty,
+     *the router will try to load destination features from the graph as a
+     *fallback.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 17;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getDestFeatures()
+    {
+        return $this->dest_features;
+    }
+
+    /**
+     **
+     *Features assumed to be supported by the final node. All transitive feature
+     *depdencies must also be set properly. For a given feature bit pair, either
+     *optional or remote may be set, but not both. If this field is nil or empty,
+     *the router will try to load destination features from the graph as a
+     *fallback.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 17;</code>
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setDestFeatures($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Lnrpc\FeatureBit::class);
+        $this->dest_features = $arr;
 
         return $this;
     }

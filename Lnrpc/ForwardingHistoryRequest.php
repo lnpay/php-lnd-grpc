@@ -18,25 +18,25 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 start_time = 1[json_name = "start_time"];</code>
      */
-    protected $start_time = 0;
+    private $start_time = 0;
     /**
      *&#47; End time is the end point of the forwarding history request. The response will carry at most 50k records between the start time and the end time. The index offset can be used to implement pagination.
      *
      * Generated from protobuf field <code>uint64 end_time = 2[json_name = "end_time"];</code>
      */
-    protected $end_time = 0;
+    private $end_time = 0;
     /**
      *&#47; Index offset is the offset in the time series to start at. As each response can only contain 50k records, callers can use this to skip around within a packed time series.
      *
      * Generated from protobuf field <code>uint32 index_offset = 3[json_name = "index_offset"];</code>
      */
-    protected $index_offset = 0;
+    private $index_offset = 0;
     /**
      *&#47; The max number of events to return in the response to this query.
      *
      * Generated from protobuf field <code>uint32 num_max_events = 4[json_name = "num_max_events"];</code>
      */
-    protected $num_max_events = 0;
+    private $num_max_events = 0;
 
     /**
      * Constructor.

@@ -18,7 +18,7 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
      */
-    protected $address = '';
+    private $address = '';
 
     /**
      * Constructor.

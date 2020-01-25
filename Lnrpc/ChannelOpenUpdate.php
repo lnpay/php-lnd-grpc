@@ -16,7 +16,7 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
      */
-    protected $channel_point = null;
+    private $channel_point = null;
 
     /**
      * Constructor.

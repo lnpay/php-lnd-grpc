@@ -18,11 +18,11 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2[json_name = "type"];</code>
      */
-    protected $type = 0;
+    private $type = 0;
 
     /**
      * Constructor.

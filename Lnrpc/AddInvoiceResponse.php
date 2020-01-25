@@ -16,7 +16,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
      */
-    protected $r_hash = '';
+    private $r_hash = '';
     /**
      **
      *A bare-bones invoice for a payment within the Lightning Network. With the
@@ -25,7 +25,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      **
      *The "add" index of this invoice. Each newly created invoice will increment
@@ -35,7 +35,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
      */
-    protected $add_index = 0;
+    private $add_index = 0;
 
     /**
      * Constructor.

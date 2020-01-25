@@ -16,11 +16,11 @@ class NodeAddress extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string network = 1[json_name = "network"];</code>
      */
-    protected $network = '';
+    private $network = '';
     /**
      * Generated from protobuf field <code>string addr = 2[json_name = "addr"];</code>
      */
-    protected $addr = '';
+    private $addr = '';
 
     /**
      * Constructor.
