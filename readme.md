@@ -79,5 +79,3 @@ $ bash regenerate_rpc.sh
 ```
 
 `regenerate_rpc.sh` pulls in https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/rpc.proto and generates based on this.
-
-I am going to try and keep this up to date. As of Oct 15 2019 they are up to date. If not just run the above script and it should have the most recent changes to rpc. 
