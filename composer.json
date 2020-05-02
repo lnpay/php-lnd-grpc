@@ -10,6 +10,7 @@
         "psr-4": {
             "Lnrpc\\": "Lnrpc/",
             "Invoicesrpc\\": "Invoicesrpc/",
+            "Routerrpc\\": "Routerrpc/",
             "GPBMetadata\\Google\\": "grpc/third_party/protobuf/php/src/GPBMetadata/Google/Protobuf/",
             "GPBMetadata\\": "GPBMetadata/"
         }

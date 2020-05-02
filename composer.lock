@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bf1743c0bfe28e6127d38d8b5f46438",
+    "content-hash": "ce838f66d8b48deb0c14601e2ce1ad12",
     "packages": [
         {
             "name": "google/common-protos",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/common-protos-php.git",
-                "reference": "89dd797f0620b3399121b027794b18de91e1269f"
+                "reference": "e730d3567c8bfd94e06b538aa291270269ee3896"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/89dd797f0620b3399121b027794b18de91e1269f",
-                "reference": "89dd797f0620b3399121b027794b18de91e1269f",
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/e730d3567c8bfd94e06b538aa291270269ee3896",
+                "reference": "e730d3567c8bfd94e06b538aa291270269ee3896",
                 "shasum": ""
             },
             "require": {
@@ -43,20 +43,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2019-07-24T01:25:25+00:00"
+            "time": "2020-02-11T20:39:50+00:00"
         },
         {
             "name": "google/protobuf",
-            "version": "v3.10.0",
+            "version": "v3.11.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "5dffdd2c84112e6c91fd84f92e3df96649426881"
+                "reference": "a5001eb559dcaac0bf6d8c7edc52b3828c618185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5dffdd2c84112e6c91fd84f92e3df96649426881",
-                "reference": "5dffdd2c84112e6c91fd84f92e3df96649426881",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/a5001eb559dcaac0bf6d8c7edc52b3828c618185",
+                "reference": "a5001eb559dcaac0bf6d8c7edc52b3828c618185",
                 "shasum": ""
             },
             "require": {
@@ -84,20 +84,20 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2019-10-03T20:08:37+00:00"
+            "time": "2020-02-14T22:17:05+00:00"
         },
         {
             "name": "grpc/grpc",
-            "version": "1.22.0",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/grpc/grpc-php.git",
-                "reference": "88235e786ef9b55fcb049f00c5c5202f8086a299"
+                "reference": "a461cb1a975dde305c73168aa4494b90c3801c62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/88235e786ef9b55fcb049f00c5c5202f8086a299",
-                "reference": "88235e786ef9b55fcb049f00c5c5202f8086a299",
+                "url": "https://api.github.com/repos/grpc/grpc-php/zipball/a461cb1a975dde305c73168aa4494b90c3801c62",
+                "reference": "a461cb1a975dde305c73168aa4494b90c3801c62",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,7 @@
             "keywords": [
                 "rpc"
             ],
-            "time": "2019-07-03T19:57:39+00:00"
+            "time": "2020-01-23T19:27:18+00:00"
         }
     ],
     "packages-dev": [],
@@ -134,8 +134,7 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "ext-grpc": "*"
-    },
-    "platform-dev": []
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
