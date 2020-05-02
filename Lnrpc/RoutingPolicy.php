@@ -14,33 +14,33 @@ use Google\Protobuf\Internal\GPBUtil;
 class RoutingPolicy extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * Generated from protobuf field <code>uint32 time_lock_delta = 1;</code>
      */
-    private $time_lock_delta = 0;
+    protected $time_lock_delta = 0;
     /**
-     * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * Generated from protobuf field <code>int64 min_htlc = 2;</code>
      */
-    private $min_htlc = 0;
+    protected $min_htlc = 0;
     /**
-     * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_base_msat = 3;</code>
      */
-    private $fee_base_msat = 0;
+    protected $fee_base_msat = 0;
     /**
-     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4;</code>
      */
-    private $fee_rate_milli_msat = 0;
+    protected $fee_rate_milli_msat = 0;
     /**
-     * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
+     * Generated from protobuf field <code>bool disabled = 5;</code>
      */
-    private $disabled = false;
+    protected $disabled = false;
     /**
-     * Generated from protobuf field <code>uint64 max_htlc_msat = 6[json_name = "max_htlc_msat"];</code>
+     * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      */
-    private $max_htlc_msat = 0;
+    protected $max_htlc_msat = 0;
     /**
-     * Generated from protobuf field <code>uint32 last_update = 7[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 7;</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
 
     /**
      * Constructor.
@@ -63,7 +63,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * Generated from protobuf field <code>uint32 time_lock_delta = 1;</code>
      * @return int
      */
     public function getTimeLockDelta()
@@ -72,7 +72,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 time_lock_delta = 1[json_name = "time_lock_delta"];</code>
+     * Generated from protobuf field <code>uint32 time_lock_delta = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -85,7 +85,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * Generated from protobuf field <code>int64 min_htlc = 2;</code>
      * @return int|string
      */
     public function getMinHtlc()
@@ -94,7 +94,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 min_htlc = 2[json_name = "min_htlc"];</code>
+     * Generated from protobuf field <code>int64 min_htlc = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -107,7 +107,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_base_msat = 3;</code>
      * @return int|string
      */
     public function getFeeBaseMsat()
@@ -116,7 +116,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_base_msat = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -129,7 +129,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4;</code>
      * @return int|string
      */
     public function getFeeRateMilliMsat()
@@ -138,7 +138,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4[json_name = "fee_rate_milli_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_rate_milli_msat = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -151,7 +151,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
+     * Generated from protobuf field <code>bool disabled = 5;</code>
      * @return bool
      */
     public function getDisabled()
@@ -160,7 +160,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool disabled = 5[json_name = "disabled"];</code>
+     * Generated from protobuf field <code>bool disabled = 5;</code>
      * @param bool $var
      * @return $this
      */
@@ -173,7 +173,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint64 max_htlc_msat = 6[json_name = "max_htlc_msat"];</code>
+     * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      * @return int|string
      */
     public function getMaxHtlcMsat()
@@ -182,7 +182,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint64 max_htlc_msat = 6[json_name = "max_htlc_msat"];</code>
+     * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -195,7 +195,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 last_update = 7[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 7;</code>
      * @return int
      */
     public function getLastUpdate()
@@ -204,7 +204,7 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 last_update = 7[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 7;</code>
      * @param int $var
      * @return $this
      */

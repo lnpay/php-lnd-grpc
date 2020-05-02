@@ -18,17 +18,17 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *The set of new channels that have been added since the last channel backup
      *snapshot was requested.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1[json_name = "single_chan_backups"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1;</code>
      */
-    private $single_chan_backups = null;
+    protected $single_chan_backups = null;
     /**
      **
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *
-     * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2;</code>
      */
-    private $multi_chan_backup = null;
+    protected $multi_chan_backup = null;
 
     /**
      * Constructor.
@@ -56,7 +56,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *The set of new channels that have been added since the last channel backup
      *snapshot was requested.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1[json_name = "single_chan_backups"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1;</code>
      * @return \Lnrpc\ChannelBackups
      */
     public function getSingleChanBackups()
@@ -69,7 +69,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *The set of new channels that have been added since the last channel backup
      *snapshot was requested.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1[json_name = "single_chan_backups"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1;</code>
      * @param \Lnrpc\ChannelBackups $var
      * @return $this
      */
@@ -86,7 +86,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *
-     * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2;</code>
      * @return \Lnrpc\MultiChanBackup
      */
     public function getMultiChanBackup()
@@ -99,7 +99,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *
-     * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2;</code>
      * @param \Lnrpc\MultiChanBackup $var
      * @return $this
      */

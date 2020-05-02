@@ -16,29 +16,35 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The status of the HTLC.
      *
-     * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1[json_name = "status"];</code>
+     * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      */
-    private $status = 0;
+    protected $status = 0;
     /**
      *&#47; The route taken by this HTLC.
      *
-     * Generated from protobuf field <code>.lnrpc.Route route = 2[json_name = "route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      */
-    private $route = null;
+    protected $route = null;
     /**
      *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
-     * Generated from protobuf field <code>int64 attempt_time_ns = 3[json_name = "attempt_time_ns"];</code>
+     * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      */
-    private $attempt_time_ns = 0;
+    protected $attempt_time_ns = 0;
     /**
      **
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
-     * Generated from protobuf field <code>int64 resolve_time_ns = 4[json_name = "resolve_time_ns"];</code>
+     * Generated from protobuf field <code>int64 resolve_time_ns = 4;</code>
      */
-    private $resolve_time_ns = 0;
+    protected $resolve_time_ns = 0;
+    /**
+     * Detailed htlc failure info.
+     *
+     * Generated from protobuf field <code>.lnrpc.Failure failure = 5;</code>
+     */
+    protected $failure = null;
 
     /**
      * Constructor.
@@ -56,6 +62,8 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      *          *
      *          The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *          This value will not be set if the HTLC is still IN_FLIGHT.
+     *     @type \Lnrpc\Failure $failure
+     *           Detailed htlc failure info.
      * }
      */
     public function __construct($data = NULL) {
@@ -66,7 +74,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The status of the HTLC.
      *
-     * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1[json_name = "status"];</code>
+     * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      * @return int
      */
     public function getStatus()
@@ -77,7 +85,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The status of the HTLC.
      *
-     * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1[json_name = "status"];</code>
+     * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -92,7 +100,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The route taken by this HTLC.
      *
-     * Generated from protobuf field <code>.lnrpc.Route route = 2[json_name = "route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      * @return \Lnrpc\Route
      */
     public function getRoute()
@@ -103,7 +111,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The route taken by this HTLC.
      *
-     * Generated from protobuf field <code>.lnrpc.Route route = 2[json_name = "route"];</code>
+     * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      * @param \Lnrpc\Route $var
      * @return $this
      */
@@ -118,7 +126,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
-     * Generated from protobuf field <code>int64 attempt_time_ns = 3[json_name = "attempt_time_ns"];</code>
+     * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      * @return int|string
      */
     public function getAttemptTimeNs()
@@ -129,7 +137,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
-     * Generated from protobuf field <code>int64 attempt_time_ns = 3[json_name = "attempt_time_ns"];</code>
+     * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -146,7 +154,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
-     * Generated from protobuf field <code>int64 resolve_time_ns = 4[json_name = "resolve_time_ns"];</code>
+     * Generated from protobuf field <code>int64 resolve_time_ns = 4;</code>
      * @return int|string
      */
     public function getResolveTimeNs()
@@ -159,7 +167,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
-     * Generated from protobuf field <code>int64 resolve_time_ns = 4[json_name = "resolve_time_ns"];</code>
+     * Generated from protobuf field <code>int64 resolve_time_ns = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -167,6 +175,32 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->resolve_time_ns = $var;
+
+        return $this;
+    }
+
+    /**
+     * Detailed htlc failure info.
+     *
+     * Generated from protobuf field <code>.lnrpc.Failure failure = 5;</code>
+     * @return \Lnrpc\Failure
+     */
+    public function getFailure()
+    {
+        return $this->failure;
+    }
+
+    /**
+     * Detailed htlc failure info.
+     *
+     * Generated from protobuf field <code>.lnrpc.Failure failure = 5;</code>
+     * @param \Lnrpc\Failure $var
+     * @return $this
+     */
+    public function setFailure($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Failure::class);
+        $this->failure = $var;
 
         return $this;
     }

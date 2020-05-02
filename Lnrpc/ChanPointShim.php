@@ -20,25 +20,25 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt = 1;</code>
      */
-    private $amt = 0;
+    protected $amt = 0;
     /**
      *&#47; The target channel point to refrence in created commitment transactions.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 2;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
     /**
      *&#47; Our local key to use when creating the multi-sig output.
      *
      * Generated from protobuf field <code>.lnrpc.KeyDescriptor local_key = 3;</code>
      */
-    private $local_key = null;
+    protected $local_key = null;
     /**
      *&#47; The key of the remote party to use when creating the multi-sig output.
      *
      * Generated from protobuf field <code>bytes remote_key = 4;</code>
      */
-    private $remote_key = '';
+    protected $remote_key = '';
     /**
      **
      *If non-zero, then this will be used as the pending channel ID on the wire
@@ -48,7 +48,17 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 5;</code>
      */
-    private $pending_chan_id = '';
+    protected $pending_chan_id = '';
+    /**
+     **
+     *This uint32 indicates if this channel is to be considered 'frozen'. A
+     *frozen channel does not allow a cooperative channel close by the
+     *initiator. The thaw_height is the height that this restriction stops
+     *applying to the channel.
+     *
+     * Generated from protobuf field <code>uint32 thaw_height = 6;</code>
+     */
+    protected $thaw_height = 0;
 
     /**
      * Constructor.
@@ -72,6 +82,12 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      *          protocol to initate the funding request. This is an optional field, and
      *          should only be set if the responder is already expecting a specific pending
      *          channel ID.
+     *     @type int $thaw_height
+     *          *
+     *          This uint32 indicates if this channel is to be considered 'frozen'. A
+     *          frozen channel does not allow a cooperative channel close by the
+     *          initiator. The thaw_height is the height that this restriction stops
+     *          applying to the channel.
      * }
      */
     public function __construct($data = NULL) {
@@ -217,6 +233,40 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->pending_chan_id = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *This uint32 indicates if this channel is to be considered 'frozen'. A
+     *frozen channel does not allow a cooperative channel close by the
+     *initiator. The thaw_height is the height that this restriction stops
+     *applying to the channel.
+     *
+     * Generated from protobuf field <code>uint32 thaw_height = 6;</code>
+     * @return int
+     */
+    public function getThawHeight()
+    {
+        return $this->thaw_height;
+    }
+
+    /**
+     **
+     *This uint32 indicates if this channel is to be considered 'frozen'. A
+     *frozen channel does not allow a cooperative channel close by the
+     *initiator. The thaw_height is the height that this restriction stops
+     *applying to the channel.
+     *
+     * Generated from protobuf field <code>uint32 thaw_height = 6;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setThawHeight($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->thaw_height = $var;
 
         return $this;
     }

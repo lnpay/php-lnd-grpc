@@ -16,9 +16,9 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The newly generated wallet address
      *
-     * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 1;</code>
      */
-    private $address = '';
+    protected $address = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The newly generated wallet address
      *
-     * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 1;</code>
      * @return string
      */
     public function getAddress()
@@ -49,7 +49,7 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The newly generated wallet address
      *
-     * Generated from protobuf field <code>string address = 1[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 1;</code>
      * @param string $var
      * @return $this
      */

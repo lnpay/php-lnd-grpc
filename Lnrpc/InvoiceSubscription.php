@@ -20,9 +20,9 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *value. This allows callers to catch up on any events they missed while they
      *weren't connected to the streaming RPC.
      *
-     * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
+     * Generated from protobuf field <code>uint64 add_index = 1;</code>
      */
-    private $add_index = 0;
+    protected $add_index = 0;
     /**
      **
      *If specified (non-zero), then we'll first start by sending out
@@ -30,9 +30,9 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *this value. This allows callers to catch up on any events they missed while
      *they weren't connected to the streaming RPC.
      *
-     * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
+     * Generated from protobuf field <code>uint64 settle_index = 2;</code>
      */
-    private $settle_index = 0;
+    protected $settle_index = 0;
 
     /**
      * Constructor.
@@ -66,7 +66,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *value. This allows callers to catch up on any events they missed while they
      *weren't connected to the streaming RPC.
      *
-     * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
+     * Generated from protobuf field <code>uint64 add_index = 1;</code>
      * @return int|string
      */
     public function getAddIndex()
@@ -81,7 +81,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *value. This allows callers to catch up on any events they missed while they
      *weren't connected to the streaming RPC.
      *
-     * Generated from protobuf field <code>uint64 add_index = 1[json_name = "add_index"];</code>
+     * Generated from protobuf field <code>uint64 add_index = 1;</code>
      * @param int|string $var
      * @return $this
      */
@@ -100,7 +100,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *this value. This allows callers to catch up on any events they missed while
      *they weren't connected to the streaming RPC.
      *
-     * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
+     * Generated from protobuf field <code>uint64 settle_index = 2;</code>
      * @return int|string
      */
     public function getSettleIndex()
@@ -115,7 +115,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *this value. This allows callers to catch up on any events they missed while
      *they weren't connected to the streaming RPC.
      *
-     * Generated from protobuf field <code>uint64 settle_index = 2[json_name = "settle_index"];</code>
+     * Generated from protobuf field <code>uint64 settle_index = 2;</code>
      * @param int|string $var
      * @return $this
      */

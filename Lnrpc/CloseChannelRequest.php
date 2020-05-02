@@ -21,34 +21,37 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    private $channel_point = null;
+    protected $channel_point = null;
     /**
-     *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *&#47; If true, then the channel will be closed forcibly. This means the
+     * / current commitment transaction will be signed and broadcast.
      *
      * Generated from protobuf field <code>bool force = 2;</code>
      */
-    private $force = false;
+    protected $force = false;
     /**
-     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *&#47; The target number of blocks that the closure transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    private $target_conf = 0;
+    protected $target_conf = 0;
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / closure transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
      */
-    private $sat_per_byte = 0;
+    protected $sat_per_byte = 0;
     /**
      *An optional address to send funds to in the case of a cooperative close.
      *If the channel was opened with an upfront shutdown script and this field
      *is set, the request to close will fail because the channel must pay out
      *to the upfront shutdown addresss.
      *
-     * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
+     * Generated from protobuf field <code>string delivery_address = 5;</code>
      */
-    private $delivery_address = '';
+    protected $delivery_address = '';
 
     /**
      * Constructor.
@@ -62,11 +65,14 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *          will be able to generate a signature for Alice's version of the commitment
      *          transaction.
      *     @type bool $force
-     *          &#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *          &#47; If true, then the channel will be closed forcibly. This means the
+     *          / current commitment transaction will be signed and broadcast.
      *     @type int $target_conf
-     *          &#47; The target number of blocks that the closure transaction should be confirmed by.
+     *          &#47; The target number of blocks that the closure transaction should be
+     *          / confirmed by.
      *     @type int|string $sat_per_byte
-     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the
+     *          / closure transaction.
      *     @type string $delivery_address
      *          An optional address to send funds to in the case of a cooperative close.
      *          If the channel was opened with an upfront shutdown script and this field
@@ -112,7 +118,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *&#47; If true, then the channel will be closed forcibly. This means the
+     * / current commitment transaction will be signed and broadcast.
      *
      * Generated from protobuf field <code>bool force = 2;</code>
      * @return bool
@@ -123,7 +130,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; If true, then the channel will be closed forcibly. This means the current commitment transaction will be signed and broadcast.
+     *&#47; If true, then the channel will be closed forcibly. This means the
+     * / current commitment transaction will be signed and broadcast.
      *
      * Generated from protobuf field <code>bool force = 2;</code>
      * @param bool $var
@@ -138,7 +146,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *&#47; The target number of blocks that the closure transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      * @return int
@@ -149,7 +158,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that the closure transaction should be confirmed by.
+     *&#47; The target number of blocks that the closure transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      * @param int $var
@@ -164,7 +174,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / closure transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
      * @return int|string
@@ -175,7 +186,8 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the closure transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / closure transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
      * @param int|string $var
@@ -195,7 +207,7 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *is set, the request to close will fail because the channel must pay out
      *to the upfront shutdown addresss.
      *
-     * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
+     * Generated from protobuf field <code>string delivery_address = 5;</code>
      * @return string
      */
     public function getDeliveryAddress()
@@ -209,7 +221,7 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *is set, the request to close will fail because the channel must pay out
      *to the upfront shutdown addresss.
      *
-     * Generated from protobuf field <code>string delivery_address = 5[json_name = "delivery_address"];</code>
+     * Generated from protobuf field <code>string delivery_address = 5;</code>
      * @param string $var
      * @return $this
      */

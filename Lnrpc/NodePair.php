@@ -20,7 +20,7 @@ class NodePair extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes from = 1;</code>
      */
-    private $from = '';
+    protected $from = '';
     /**
      **
      *The receiving node of the pair. When using REST, this field must be encoded
@@ -28,7 +28,7 @@ class NodePair extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes to = 2;</code>
      */
-    private $to = '';
+    protected $to = '';
 
     /**
      * Constructor.

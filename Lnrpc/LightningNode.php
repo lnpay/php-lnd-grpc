@@ -20,27 +20,27 @@ use Google\Protobuf\Internal\GPBUtil;
 class LightningNode extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 1;</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
     /**
-     * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 2;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
-     * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
+     * Generated from protobuf field <code>string alias = 3;</code>
      */
-    private $alias = '';
+    protected $alias = '';
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4;</code>
      */
     private $addresses;
     /**
-     * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
+     * Generated from protobuf field <code>string color = 5;</code>
      */
-    private $color = '';
+    protected $color = '';
     /**
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
      */
     private $features;
 
@@ -64,7 +64,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 1;</code>
      * @return int
      */
     public function getLastUpdate()
@@ -73,7 +73,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 last_update = 1[json_name = "last_update"];</code>
+     * Generated from protobuf field <code>uint32 last_update = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -86,7 +86,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 2;</code>
      * @return string
      */
     public function getPubKey()
@@ -95,7 +95,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string pub_key = 2[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -108,7 +108,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
+     * Generated from protobuf field <code>string alias = 3;</code>
      * @return string
      */
     public function getAlias()
@@ -117,7 +117,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string alias = 3[json_name = "alias"];</code>
+     * Generated from protobuf field <code>string alias = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -130,7 +130,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAddresses()
@@ -139,7 +139,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4[json_name = "addresses"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4;</code>
      * @param \Lnrpc\NodeAddress[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -152,7 +152,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
+     * Generated from protobuf field <code>string color = 5;</code>
      * @return string
      */
     public function getColor()
@@ -161,7 +161,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string color = 5[json_name = "color"];</code>
+     * Generated from protobuf field <code>string color = 5;</code>
      * @param string $var
      * @return $this
      */
@@ -174,7 +174,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getFeatures()
@@ -183,7 +183,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */

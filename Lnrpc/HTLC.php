@@ -14,21 +14,21 @@ use Google\Protobuf\Internal\GPBUtil;
 class HTLC extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>bool incoming = 1[json_name = "incoming"];</code>
+     * Generated from protobuf field <code>bool incoming = 1;</code>
      */
-    private $incoming = false;
+    protected $incoming = false;
     /**
-     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    private $amount = 0;
+    protected $amount = 0;
     /**
-     * Generated from protobuf field <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * Generated from protobuf field <code>bytes hash_lock = 3;</code>
      */
-    private $hash_lock = '';
+    protected $hash_lock = '';
     /**
-     * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * Generated from protobuf field <code>uint32 expiration_height = 4;</code>
      */
-    private $expiration_height = 0;
+    protected $expiration_height = 0;
 
     /**
      * Constructor.
@@ -48,7 +48,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool incoming = 1[json_name = "incoming"];</code>
+     * Generated from protobuf field <code>bool incoming = 1;</code>
      * @return bool
      */
     public function getIncoming()
@@ -57,7 +57,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool incoming = 1[json_name = "incoming"];</code>
+     * Generated from protobuf field <code>bool incoming = 1;</code>
      * @param bool $var
      * @return $this
      */
@@ -70,7 +70,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      * @return int|string
      */
     public function getAmount()
@@ -79,7 +79,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -92,7 +92,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * Generated from protobuf field <code>bytes hash_lock = 3;</code>
      * @return string
      */
     public function getHashLock()
@@ -101,7 +101,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes hash_lock = 3[json_name = "hash_lock"];</code>
+     * Generated from protobuf field <code>bytes hash_lock = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -114,7 +114,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * Generated from protobuf field <code>uint32 expiration_height = 4;</code>
      * @return int
      */
     public function getExpirationHeight()
@@ -123,7 +123,7 @@ class HTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 expiration_height = 4[json_name = "expiration_height"];</code>
+     * Generated from protobuf field <code>uint32 expiration_height = 4;</code>
      * @param int $var
      * @return $this
      */

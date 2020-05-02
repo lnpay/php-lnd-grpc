@@ -20,13 +20,13 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *field of the encoded payment request if the description_hash field is not
      *being used.
      *
-     * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
+     * Generated from protobuf field <code>string memo = 1;</code>
      */
     protected $memo = '';
     /**
      *&#47; The hash of the preimage
      *
-     * Generated from protobuf field <code>bytes hash = 2[json_name = "hash"];</code>
+     * Generated from protobuf field <code>bytes hash = 2;</code>
      */
     protected $hash = '';
     /**
@@ -34,7 +34,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *The value of this invoice in satoshis
      *The fields value and value_msat are mutually exclusive.
      *
-     * Generated from protobuf field <code>int64 value = 3[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 3;</code>
      */
     protected $value = 0;
     /**
@@ -42,7 +42,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *The value of this invoice in millisatoshis
      *The fields value and value_msat are mutually exclusive.
      *
-     * Generated from protobuf field <code>int64 value_msat = 10[json_name = "value_msat"];</code>
+     * Generated from protobuf field <code>int64 value_msat = 10;</code>
      */
     protected $value_msat = 0;
     /**
@@ -51,25 +51,25 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *payment (memo) is too long to naturally fit within the description field
      *of an encoded payment request.
      *
-     * Generated from protobuf field <code>bytes description_hash = 4[json_name = "description_hash"];</code>
+     * Generated from protobuf field <code>bytes description_hash = 4;</code>
      */
     protected $description_hash = '';
     /**
      *&#47; Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
-     * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>int64 expiry = 5;</code>
      */
     protected $expiry = 0;
     /**
      *&#47; Fallback on-chain address.
      *
-     * Generated from protobuf field <code>string fallback_addr = 6[json_name = "fallback_addr"];</code>
+     * Generated from protobuf field <code>string fallback_addr = 6;</code>
      */
     protected $fallback_addr = '';
     /**
      *&#47; Delta to use for the time-lock of the CLTV extended to the final hop.
      *
-     * Generated from protobuf field <code>uint64 cltv_expiry = 7[json_name = "cltv_expiry"];</code>
+     * Generated from protobuf field <code>uint64 cltv_expiry = 7;</code>
      */
     protected $cltv_expiry = 0;
     /**
@@ -77,13 +77,13 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *Route hints that can each be individually used to assist in reaching the
      *invoice's destination.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 8[json_name = "route_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 8;</code>
      */
     private $route_hints;
     /**
      *&#47; Whether this invoice should include routing hints for private channels.
      *
-     * Generated from protobuf field <code>bool private = 9[json_name = "private"];</code>
+     * Generated from protobuf field <code>bool private = 9;</code>
      */
     protected $private = false;
 
@@ -140,7 +140,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *field of the encoded payment request if the description_hash field is not
      *being used.
      *
-     * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
+     * Generated from protobuf field <code>string memo = 1;</code>
      * @return string
      */
     public function getMemo()
@@ -155,7 +155,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *field of the encoded payment request if the description_hash field is not
      *being used.
      *
-     * Generated from protobuf field <code>string memo = 1[json_name = "memo"];</code>
+     * Generated from protobuf field <code>string memo = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -170,7 +170,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hash of the preimage
      *
-     * Generated from protobuf field <code>bytes hash = 2[json_name = "hash"];</code>
+     * Generated from protobuf field <code>bytes hash = 2;</code>
      * @return string
      */
     public function getHash()
@@ -181,7 +181,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hash of the preimage
      *
-     * Generated from protobuf field <code>bytes hash = 2[json_name = "hash"];</code>
+     * Generated from protobuf field <code>bytes hash = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -198,7 +198,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *The value of this invoice in satoshis
      *The fields value and value_msat are mutually exclusive.
      *
-     * Generated from protobuf field <code>int64 value = 3[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 3;</code>
      * @return int|string
      */
     public function getValue()
@@ -211,7 +211,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *The value of this invoice in satoshis
      *The fields value and value_msat are mutually exclusive.
      *
-     * Generated from protobuf field <code>int64 value = 3[json_name = "value"];</code>
+     * Generated from protobuf field <code>int64 value = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -228,7 +228,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *The value of this invoice in millisatoshis
      *The fields value and value_msat are mutually exclusive.
      *
-     * Generated from protobuf field <code>int64 value_msat = 10[json_name = "value_msat"];</code>
+     * Generated from protobuf field <code>int64 value_msat = 10;</code>
      * @return int|string
      */
     public function getValueMsat()
@@ -241,7 +241,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *The value of this invoice in millisatoshis
      *The fields value and value_msat are mutually exclusive.
      *
-     * Generated from protobuf field <code>int64 value_msat = 10[json_name = "value_msat"];</code>
+     * Generated from protobuf field <code>int64 value_msat = 10;</code>
      * @param int|string $var
      * @return $this
      */
@@ -259,7 +259,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *payment (memo) is too long to naturally fit within the description field
      *of an encoded payment request.
      *
-     * Generated from protobuf field <code>bytes description_hash = 4[json_name = "description_hash"];</code>
+     * Generated from protobuf field <code>bytes description_hash = 4;</code>
      * @return string
      */
     public function getDescriptionHash()
@@ -273,7 +273,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *payment (memo) is too long to naturally fit within the description field
      *of an encoded payment request.
      *
-     * Generated from protobuf field <code>bytes description_hash = 4[json_name = "description_hash"];</code>
+     * Generated from protobuf field <code>bytes description_hash = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -288,7 +288,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
-     * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>int64 expiry = 5;</code>
      * @return int|string
      */
     public function getExpiry()
@@ -299,7 +299,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
-     * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>int64 expiry = 5;</code>
      * @param int|string $var
      * @return $this
      */
@@ -314,7 +314,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Fallback on-chain address.
      *
-     * Generated from protobuf field <code>string fallback_addr = 6[json_name = "fallback_addr"];</code>
+     * Generated from protobuf field <code>string fallback_addr = 6;</code>
      * @return string
      */
     public function getFallbackAddr()
@@ -325,7 +325,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Fallback on-chain address.
      *
-     * Generated from protobuf field <code>string fallback_addr = 6[json_name = "fallback_addr"];</code>
+     * Generated from protobuf field <code>string fallback_addr = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -340,7 +340,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Delta to use for the time-lock of the CLTV extended to the final hop.
      *
-     * Generated from protobuf field <code>uint64 cltv_expiry = 7[json_name = "cltv_expiry"];</code>
+     * Generated from protobuf field <code>uint64 cltv_expiry = 7;</code>
      * @return int|string
      */
     public function getCltvExpiry()
@@ -351,7 +351,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Delta to use for the time-lock of the CLTV extended to the final hop.
      *
-     * Generated from protobuf field <code>uint64 cltv_expiry = 7[json_name = "cltv_expiry"];</code>
+     * Generated from protobuf field <code>uint64 cltv_expiry = 7;</code>
      * @param int|string $var
      * @return $this
      */
@@ -368,7 +368,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *Route hints that can each be individually used to assist in reaching the
      *invoice's destination.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 8[json_name = "route_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 8;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRouteHints()
@@ -381,7 +381,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *Route hints that can each be individually used to assist in reaching the
      *invoice's destination.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 8[json_name = "route_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 8;</code>
      * @param \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -396,7 +396,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Whether this invoice should include routing hints for private channels.
      *
-     * Generated from protobuf field <code>bool private = 9[json_name = "private"];</code>
+     * Generated from protobuf field <code>bool private = 9;</code>
      * @return bool
      */
     public function getPrivate()
@@ -407,7 +407,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Whether this invoice should include routing hints for private channels.
      *
-     * Generated from protobuf field <code>bool private = 9[json_name = "private"];</code>
+     * Generated from protobuf field <code>bool private = 9;</code>
      * @param bool $var
      * @return $this
      */

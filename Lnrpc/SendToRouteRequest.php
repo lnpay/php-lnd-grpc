@@ -20,7 +20,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      **
      *An optional hex-encoded payment hash to be used for the HTLC. Deprecated now
@@ -28,13 +28,13 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_hash_string = 2 [deprecated = true];</code>
      */
-    private $payment_hash_string = '';
+    protected $payment_hash_string = '';
     /**
      *&#47; Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 4;</code>
      */
-    private $route = null;
+    protected $route = null;
 
     /**
      * Constructor.

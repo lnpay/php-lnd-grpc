@@ -16,7 +16,7 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of currently connected peers
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1;</code>
      */
     private $peers;
 
@@ -38,7 +38,7 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of currently connected peers
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPeers()
@@ -49,7 +49,7 @@ class ListPeersResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of currently connected peers
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1[json_name = "peers"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Peer peers = 1;</code>
      * @param \Lnrpc\Peer[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

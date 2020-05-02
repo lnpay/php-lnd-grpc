@@ -18,7 +18,7 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      */
-    private $channel_id = 0;
+    protected $channel_id = 0;
     /**
      **
      *The direction of this edge. If direction_reverse is false, the direction
@@ -28,7 +28,7 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool direction_reverse = 2;</code>
      */
-    private $direction_reverse = false;
+    protected $direction_reverse = false;
 
     /**
      * Constructor.

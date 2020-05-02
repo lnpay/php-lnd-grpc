@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class Feature extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string name = 2[json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 2;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
-     * Generated from protobuf field <code>bool is_required = 3[json_name = "is_required"];</code>
+     * Generated from protobuf field <code>bool is_required = 3;</code>
      */
-    private $is_required = false;
+    protected $is_required = false;
     /**
-     * Generated from protobuf field <code>bool is_known = 4[json_name = "is_known"];</code>
+     * Generated from protobuf field <code>bool is_known = 4;</code>
      */
-    private $is_known = false;
+    protected $is_known = false;
 
     /**
      * Constructor.
@@ -43,7 +43,7 @@ class Feature extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string name = 2[json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 2;</code>
      * @return string
      */
     public function getName()
@@ -52,7 +52,7 @@ class Feature extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string name = 2[json_name = "name"];</code>
+     * Generated from protobuf field <code>string name = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -65,7 +65,7 @@ class Feature extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool is_required = 3[json_name = "is_required"];</code>
+     * Generated from protobuf field <code>bool is_required = 3;</code>
      * @return bool
      */
     public function getIsRequired()
@@ -74,7 +74,7 @@ class Feature extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool is_required = 3[json_name = "is_required"];</code>
+     * Generated from protobuf field <code>bool is_required = 3;</code>
      * @param bool $var
      * @return $this
      */
@@ -87,7 +87,7 @@ class Feature extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool is_known = 4[json_name = "is_known"];</code>
+     * Generated from protobuf field <code>bool is_known = 4;</code>
      * @return bool
      */
     public function getIsKnown()
@@ -96,7 +96,7 @@ class Feature extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool is_known = 4[json_name = "is_known"];</code>
+     * Generated from protobuf field <code>bool is_known = 4;</code>
      * @param bool $var
      * @return $this
      */

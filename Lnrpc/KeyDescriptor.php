@@ -15,18 +15,18 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
      **
-     *The raw bytes of the key being identified. 
+     *The raw bytes of the key being identified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      */
-    private $raw_key_bytes = '';
+    protected $raw_key_bytes = '';
     /**
-     ** 
-     *The key locator that identifies which key to use for signing. 
+     **
+     *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>
      */
-    private $key_loc = null;
+    protected $key_loc = null;
 
     /**
      * Constructor.
@@ -36,10 +36,10 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
      *
      *     @type string $raw_key_bytes
      *          *
-     *          The raw bytes of the key being identified. 
+     *          The raw bytes of the key being identified.
      *     @type \Lnrpc\KeyLocator $key_loc
-     *          * 
-     *          The key locator that identifies which key to use for signing. 
+     *          *
+     *          The key locator that identifies which key to use for signing.
      * }
      */
     public function __construct($data = NULL) {
@@ -49,7 +49,7 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The raw bytes of the key being identified. 
+     *The raw bytes of the key being identified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      * @return string
@@ -61,7 +61,7 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The raw bytes of the key being identified. 
+     *The raw bytes of the key being identified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      * @param string $var
@@ -76,8 +76,8 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
-     *The key locator that identifies which key to use for signing. 
+     **
+     *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>
      * @return \Lnrpc\KeyLocator
@@ -88,8 +88,8 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
-     *The key locator that identifies which key to use for signing. 
+     **
+     *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>
      * @param \Lnrpc\KeyLocator $var

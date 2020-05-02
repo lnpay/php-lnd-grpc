@@ -14,29 +14,33 @@ use Google\Protobuf\Internal\GPBUtil;
 class FeeReportResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; An array of channel fee reports which describes the current fee schedule for each channel.
+     *&#47; An array of channel fee reports which describes the current fee schedule
+     * / for each channel.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelFeeReport channel_fees = 1[json_name = "channel_fees"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelFeeReport channel_fees = 1;</code>
      */
     private $channel_fees;
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 24 hrs.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 24 hrs.
      *
-     * Generated from protobuf field <code>uint64 day_fee_sum = 2[json_name = "day_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 day_fee_sum = 2;</code>
      */
-    private $day_fee_sum = 0;
+    protected $day_fee_sum = 0;
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 week.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 1 week.
      *
-     * Generated from protobuf field <code>uint64 week_fee_sum = 3[json_name = "week_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 week_fee_sum = 3;</code>
      */
-    private $week_fee_sum = 0;
+    protected $week_fee_sum = 0;
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 month.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 1 month.
      *
-     * Generated from protobuf field <code>uint64 month_fee_sum = 4[json_name = "month_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 month_fee_sum = 4;</code>
      */
-    private $month_fee_sum = 0;
+    protected $month_fee_sum = 0;
 
     /**
      * Constructor.
@@ -45,13 +49,17 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelFeeReport[]|\Google\Protobuf\Internal\RepeatedField $channel_fees
-     *          &#47; An array of channel fee reports which describes the current fee schedule for each channel.
+     *          &#47; An array of channel fee reports which describes the current fee schedule
+     *          / for each channel.
      *     @type int|string $day_fee_sum
-     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 24 hrs.
+     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected
+     *          / over the past 24 hrs.
      *     @type int|string $week_fee_sum
-     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 week.
+     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected
+     *          / over the past 1 week.
      *     @type int|string $month_fee_sum
-     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 month.
+     *          &#47; The total amount of fee revenue (in satoshis) the switch has collected
+     *          / over the past 1 month.
      * }
      */
     public function __construct($data = NULL) {
@@ -60,9 +68,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; An array of channel fee reports which describes the current fee schedule for each channel.
+     *&#47; An array of channel fee reports which describes the current fee schedule
+     * / for each channel.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelFeeReport channel_fees = 1[json_name = "channel_fees"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelFeeReport channel_fees = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChannelFees()
@@ -71,9 +80,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; An array of channel fee reports which describes the current fee schedule for each channel.
+     *&#47; An array of channel fee reports which describes the current fee schedule
+     * / for each channel.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelFeeReport channel_fees = 1[json_name = "channel_fees"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelFeeReport channel_fees = 1;</code>
      * @param \Lnrpc\ChannelFeeReport[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -86,9 +96,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 24 hrs.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 24 hrs.
      *
-     * Generated from protobuf field <code>uint64 day_fee_sum = 2[json_name = "day_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 day_fee_sum = 2;</code>
      * @return int|string
      */
     public function getDayFeeSum()
@@ -97,9 +108,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 24 hrs.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 24 hrs.
      *
-     * Generated from protobuf field <code>uint64 day_fee_sum = 2[json_name = "day_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 day_fee_sum = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -112,9 +124,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 week.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 1 week.
      *
-     * Generated from protobuf field <code>uint64 week_fee_sum = 3[json_name = "week_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 week_fee_sum = 3;</code>
      * @return int|string
      */
     public function getWeekFeeSum()
@@ -123,9 +136,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 week.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 1 week.
      *
-     * Generated from protobuf field <code>uint64 week_fee_sum = 3[json_name = "week_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 week_fee_sum = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -138,9 +152,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 month.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 1 month.
      *
-     * Generated from protobuf field <code>uint64 month_fee_sum = 4[json_name = "month_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 month_fee_sum = 4;</code>
      * @return int|string
      */
     public function getMonthFeeSum()
@@ -149,9 +164,10 @@ class FeeReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of fee revenue (in satoshis) the switch has collected over the past 1 month.
+     *&#47; The total amount of fee revenue (in satoshis) the switch has collected
+     * / over the past 1 month.
      *
-     * Generated from protobuf field <code>uint64 month_fee_sum = 4[json_name = "month_fee_sum"];</code>
+     * Generated from protobuf field <code>uint64 month_fee_sum = 4;</code>
      * @param int|string $var
      * @return $this
      */

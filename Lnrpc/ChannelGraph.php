@@ -18,13 +18,13 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of `LightningNode`s in this channel graph
      *
-     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1;</code>
      */
     private $nodes;
     /**
      *&#47; The list of `ChannelEdge`s in this channel graph
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2;</code>
      */
     private $edges;
 
@@ -48,7 +48,7 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of `LightningNode`s in this channel graph
      *
-     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNodes()
@@ -59,7 +59,7 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of `LightningNode`s in this channel graph
      *
-     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1[json_name = "nodes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.LightningNode nodes = 1;</code>
      * @param \Lnrpc\LightningNode[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -74,7 +74,7 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of `ChannelEdge`s in this channel graph
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getEdges()
@@ -85,7 +85,7 @@ class ChannelGraph extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of `ChannelEdge`s in this channel graph
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2[json_name = "edges"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge edges = 2;</code>
      * @param \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

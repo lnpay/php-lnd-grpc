@@ -39,7 +39,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
      **
      *The channels to restore as a list of channel/backup pairs.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1[json_name = "chan_backups"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1;</code>
      * @return \Lnrpc\ChannelBackups
      */
     public function getChanBackups()
@@ -51,7 +51,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
      **
      *The channels to restore as a list of channel/backup pairs.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1[json_name = "chan_backups"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1;</code>
      * @param \Lnrpc\ChannelBackups $var
      * @return $this
      */
@@ -68,7 +68,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
      *The channels to restore in the packed multi backup format. When using
      *REST, this field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>bytes multi_chan_backup = 2;</code>
      * @return string
      */
     public function getMultiChanBackup()
@@ -81,7 +81,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
      *The channels to restore in the packed multi backup format. When using
      *REST, this field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>bytes multi_chan_backup = 2;</code>
      * @param string $var
      * @return $this
      */

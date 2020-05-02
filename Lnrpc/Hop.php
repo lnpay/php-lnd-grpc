@@ -19,67 +19,67 @@ class Hop extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
-     * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
      */
-    private $chan_capacity = 0;
+    protected $chan_capacity = 0;
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3 [deprecated = true];</code>
      */
-    private $amt_to_forward = 0;
+    protected $amt_to_forward = 0;
     /**
-     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 fee = 4 [deprecated = true];</code>
      */
-    private $fee = 0;
+    protected $fee = 0;
     /**
-     * Generated from protobuf field <code>uint32 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>uint32 expiry = 5;</code>
      */
-    private $expiry = 0;
+    protected $expiry = 0;
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6;</code>
      */
-    private $amt_to_forward_msat = 0;
+    protected $amt_to_forward_msat = 0;
     /**
-     * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_msat = 7;</code>
      */
-    private $fee_msat = 0;
+    protected $fee_msat = 0;
     /**
      **
      *An optional public key of the hop. If the public key is given, the payment
      *can be executed without relying on a copy of the channel graph.
      *
-     * Generated from protobuf field <code>string pub_key = 8[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 8;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
-     ** 
+     **
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format. Note that if any custom tlv_records below are specified, then
      *this field MUST be set to true for them to be encoded properly.
      *
-     * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
+     * Generated from protobuf field <code>bool tlv_payload = 9;</code>
      */
-    private $tlv_payload = false;
+    protected $tlv_payload = false;
     /**
      **
-     *An optional TLV record tha singals the use of an MPP payment. If present,
+     *An optional TLV record that signals the use of an MPP payment. If present,
      *the receiver will enforce that that the same mpp_record is included in the
      *final hop payload of all non-zero payments in the HTLC set. If empty, a
      *regular single-shot payment is or was attempted.
      *
-     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
+     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      */
-    private $mpp_record = null;
+    protected $mpp_record = null;
     /**
      **
      *An optional set of key-value TLV records. This is useful within the context
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *to drop off at each hop within the onion.
      *
-     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11[json_name = "custom_records"];</code>
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11;</code>
      */
     private $custom_records;
 
@@ -105,13 +105,13 @@ class Hop extends \Google\Protobuf\Internal\Message
      *          An optional public key of the hop. If the public key is given, the payment
      *          can be executed without relying on a copy of the channel graph.
      *     @type bool $tlv_payload
-     *          * 
+     *          *
      *          If set to true, then this hop will be encoded using the new variable length
      *          TLV format. Note that if any custom tlv_records below are specified, then
      *          this field MUST be set to true for them to be encoded properly.
      *     @type \Lnrpc\MPPRecord $mpp_record
      *          *
-     *          An optional TLV record tha singals the use of an MPP payment. If present,
+     *          An optional TLV record that signals the use of an MPP payment. If present,
      *          the receiver will enforce that that the same mpp_record is included in the
      *          final hop payload of all non-zero payments in the HTLC set. If empty, a
      *          regular single-shot payment is or was attempted.
@@ -133,7 +133,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -147,7 +147,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 1[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -160,7 +160,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
      * @return int|string
      */
     public function getChanCapacity()
@@ -169,7 +169,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 chan_capacity = 2[json_name = "chan_capacity"];</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -182,7 +182,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3 [deprecated = true];</code>
      * @return int|string
      */
     public function getAmtToForward()
@@ -191,7 +191,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward = 3[json_name = "amt_to_forward", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward = 3 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -204,7 +204,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 fee = 4 [deprecated = true];</code>
      * @return int|string
      */
     public function getFee()
@@ -213,7 +213,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee = 4[json_name = "fee", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 fee = 4 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -226,7 +226,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>uint32 expiry = 5;</code>
      * @return int
      */
     public function getExpiry()
@@ -235,7 +235,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>uint32 expiry = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -248,7 +248,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6;</code>
      * @return int|string
      */
     public function getAmtToForwardMsat()
@@ -257,7 +257,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6[json_name = "amt_to_forward_msat"];</code>
+     * Generated from protobuf field <code>int64 amt_to_forward_msat = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -270,7 +270,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_msat = 7;</code>
      * @return int|string
      */
     public function getFeeMsat()
@@ -279,7 +279,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 fee_msat = 7[json_name = "fee_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_msat = 7;</code>
      * @param int|string $var
      * @return $this
      */
@@ -296,7 +296,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *An optional public key of the hop. If the public key is given, the payment
      *can be executed without relying on a copy of the channel graph.
      *
-     * Generated from protobuf field <code>string pub_key = 8[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 8;</code>
      * @return string
      */
     public function getPubKey()
@@ -309,7 +309,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *An optional public key of the hop. If the public key is given, the payment
      *can be executed without relying on a copy of the channel graph.
      *
-     * Generated from protobuf field <code>string pub_key = 8[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 8;</code>
      * @param string $var
      * @return $this
      */
@@ -322,12 +322,12 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
+     **
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format. Note that if any custom tlv_records below are specified, then
      *this field MUST be set to true for them to be encoded properly.
      *
-     * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
+     * Generated from protobuf field <code>bool tlv_payload = 9;</code>
      * @return bool
      */
     public function getTlvPayload()
@@ -336,12 +336,12 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
+     **
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format. Note that if any custom tlv_records below are specified, then
      *this field MUST be set to true for them to be encoded properly.
      *
-     * Generated from protobuf field <code>bool tlv_payload = 9[json_name = "tlv_payload"];</code>
+     * Generated from protobuf field <code>bool tlv_payload = 9;</code>
      * @param bool $var
      * @return $this
      */
@@ -355,12 +355,12 @@ class Hop extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *An optional TLV record tha singals the use of an MPP payment. If present,
+     *An optional TLV record that signals the use of an MPP payment. If present,
      *the receiver will enforce that that the same mpp_record is included in the
      *final hop payload of all non-zero payments in the HTLC set. If empty, a
      *regular single-shot payment is or was attempted.
      *
-     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
+     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      * @return \Lnrpc\MPPRecord
      */
     public function getMppRecord()
@@ -370,12 +370,12 @@ class Hop extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *An optional TLV record tha singals the use of an MPP payment. If present,
+     *An optional TLV record that signals the use of an MPP payment. If present,
      *the receiver will enforce that that the same mpp_record is included in the
      *final hop payload of all non-zero payments in the HTLC set. If empty, a
      *regular single-shot payment is or was attempted.
      *
-     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10[json_name = "mpp_record"];</code>
+     * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      * @param \Lnrpc\MPPRecord $var
      * @return $this
      */
@@ -393,7 +393,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *to drop off at each hop within the onion.
      *
-     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11[json_name = "custom_records"];</code>
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getCustomRecords()
@@ -407,7 +407,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *to drop off at each hop within the onion.
      *
-     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11[json_name = "custom_records"];</code>
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 11;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */

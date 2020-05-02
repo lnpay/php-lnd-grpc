@@ -37,7 +37,7 @@ class InvoicesClient extends \Grpc\BaseStub {
 
     /**
      * *
-     * CancelInvoice cancels a currently open invoice. If the invoice is already 
+     * CancelInvoice cancels a currently open invoice. If the invoice is already
      * canceled, this call will succeed. If the invoice is already settled, it will
      * fail.
      * @param \Invoicesrpc\CancelInvoiceMsg $argument input argument

@@ -23,11 +23,22 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
      *
      *     @type \Lnrpc\FundingShim $shim_register
      *          *
-     *          The funding shim to regsiter. This should be used before any
+     *          The funding shim to register. This should be used before any
      *          channel funding has began by the remote party, as it is intended as a
-     *          prepatory step for the full channel funding.
+     *          preparatory step for the full channel funding.
      *     @type \Lnrpc\FundingShimCancel $shim_cancel
      *          &#47; Used to cancel an existing registered funding shim.
+     *     @type \Lnrpc\FundingPsbtVerify $psbt_verify
+     *          *
+     *          Used to continue a funding flow that was initiated to be executed
+     *          through a PSBT. This step verifies that the PSBT contains the correct
+     *          outputs to fund the channel.
+     *     @type \Lnrpc\FundingPsbtFinalize $psbt_finalize
+     *          *
+     *          Used to continue a funding flow that was initiated to be executed
+     *          through a PSBT. This step finalizes the funded and signed PSBT, finishes
+     *          negotiation with the peer and finally publishes the resulting funding
+     *          transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -37,9 +48,9 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The funding shim to regsiter. This should be used before any
+     *The funding shim to register. This should be used before any
      *channel funding has began by the remote party, as it is intended as a
-     *prepatory step for the full channel funding.
+     *preparatory step for the full channel funding.
      *
      * Generated from protobuf field <code>.lnrpc.FundingShim shim_register = 1;</code>
      * @return \Lnrpc\FundingShim
@@ -51,9 +62,9 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
 
     /**
      **
-     *The funding shim to regsiter. This should be used before any
+     *The funding shim to register. This should be used before any
      *channel funding has began by the remote party, as it is intended as a
-     *prepatory step for the full channel funding.
+     *preparatory step for the full channel funding.
      *
      * Generated from protobuf field <code>.lnrpc.FundingShim shim_register = 1;</code>
      * @param \Lnrpc\FundingShim $var
@@ -89,6 +100,72 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\FundingShimCancel::class);
         $this->writeOneof(2, $var);
+
+        return $this;
+    }
+
+    /**
+     **
+     *Used to continue a funding flow that was initiated to be executed
+     *through a PSBT. This step verifies that the PSBT contains the correct
+     *outputs to fund the channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.FundingPsbtVerify psbt_verify = 3;</code>
+     * @return \Lnrpc\FundingPsbtVerify
+     */
+    public function getPsbtVerify()
+    {
+        return $this->readOneof(3);
+    }
+
+    /**
+     **
+     *Used to continue a funding flow that was initiated to be executed
+     *through a PSBT. This step verifies that the PSBT contains the correct
+     *outputs to fund the channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.FundingPsbtVerify psbt_verify = 3;</code>
+     * @param \Lnrpc\FundingPsbtVerify $var
+     * @return $this
+     */
+    public function setPsbtVerify($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\FundingPsbtVerify::class);
+        $this->writeOneof(3, $var);
+
+        return $this;
+    }
+
+    /**
+     **
+     *Used to continue a funding flow that was initiated to be executed
+     *through a PSBT. This step finalizes the funded and signed PSBT, finishes
+     *negotiation with the peer and finally publishes the resulting funding
+     *transaction.
+     *
+     * Generated from protobuf field <code>.lnrpc.FundingPsbtFinalize psbt_finalize = 4;</code>
+     * @return \Lnrpc\FundingPsbtFinalize
+     */
+    public function getPsbtFinalize()
+    {
+        return $this->readOneof(4);
+    }
+
+    /**
+     **
+     *Used to continue a funding flow that was initiated to be executed
+     *through a PSBT. This step finalizes the funded and signed PSBT, finishes
+     *negotiation with the peer and finally publishes the resulting funding
+     *transaction.
+     *
+     * Generated from protobuf field <code>.lnrpc.FundingPsbtFinalize psbt_finalize = 4;</code>
+     * @param \Lnrpc\FundingPsbtFinalize $var
+     * @return $this
+     */
+    public function setPsbtFinalize($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\FundingPsbtFinalize::class);
+        $this->writeOneof(4, $var);
 
         return $this;
     }

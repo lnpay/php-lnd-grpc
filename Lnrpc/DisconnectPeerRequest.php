@@ -16,9 +16,9 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pubkey of the node to disconnect from
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pubkey of the node to disconnect from
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
      */
     public function getPubKey()
@@ -49,7 +49,7 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pubkey of the node to disconnect from
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
      * @return $this
      */

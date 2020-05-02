@@ -18,71 +18,79 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * Generated from protobuf field <code>bytes node_pubkey = 2;</code>
      */
-    private $node_pubkey = '';
+    protected $node_pubkey = '';
     /**
      **
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string", deprecated = true];</code>
+     * Generated from protobuf field <code>string node_pubkey_string = 3 [deprecated = true];</code>
      */
-    private $node_pubkey_string = '';
+    protected $node_pubkey_string = '';
     /**
      *&#47; The number of satoshis the wallet should commit to the channel
      *
-     * Generated from protobuf field <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      */
-    private $local_funding_amount = 0;
+    protected $local_funding_amount = 0;
     /**
-     *&#47; The number of satoshis to push to the remote side as part of the initial commitment state
+     *&#47; The number of satoshis to push to the remote side as part of the initial
+     * / commitment state
      *
-     * Generated from protobuf field <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * Generated from protobuf field <code>int64 push_sat = 5;</code>
      */
-    private $push_sat = 0;
+    protected $push_sat = 0;
     /**
-     *&#47; The target number of blocks that the funding transaction should be confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      */
-    private $target_conf = 0;
+    protected $target_conf = 0;
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      */
-    private $sat_per_byte = 0;
+    protected $sat_per_byte = 0;
     /**
-     *&#47; Whether this channel should be private, not announced to the greater network.
+     *&#47; Whether this channel should be private, not announced to the greater
+     * / network.
      *
-     * Generated from protobuf field <code>bool private = 8[json_name = "private"];</code>
+     * Generated from protobuf field <code>bool private = 8;</code>
      */
-    private $private = false;
+    protected $private = false;
     /**
-     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on the channel.
+     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     * / the channel.
      *
-     * Generated from protobuf field <code>int64 min_htlc_msat = 9[json_name = "min_htlc_msat"];</code>
+     * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      */
-    private $min_htlc_msat = 0;
+    protected $min_htlc_msat = 0;
     /**
-     *&#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *&#47; The delay we require on the remote's commitment transaction. If this is
+     * / not set, it will be scaled automatically with the channel size.
      *
-     * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
+     * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      */
-    private $remote_csv_delay = 0;
+    protected $remote_csv_delay = 0;
     /**
-     *&#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *&#47; The minimum number of confirmations each one of your outputs used for
+     * / the funding transaction must satisfy.
      *
-     * Generated from protobuf field <code>int32 min_confs = 11[json_name = "min_confs"];</code>
+     * Generated from protobuf field <code>int32 min_confs = 11;</code>
      */
-    private $min_confs = 0;
+    protected $min_confs = 0;
     /**
-     *&#47; Whether unconfirmed outputs should be used as inputs for the funding transaction.
+     *&#47; Whether unconfirmed outputs should be used as inputs for the funding
+     * / transaction.
      *
-     * Generated from protobuf field <code>bool spend_unconfirmed = 12[json_name = "spend_unconfirmed"];</code>
+     * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      */
-    private $spend_unconfirmed = false;
+    protected $spend_unconfirmed = false;
     /**
      *Close address is an optional address which specifies the address to which
      *funds should be paid out to upon cooperative close. This field may only be
@@ -92,9 +100,9 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *Note: If this value is set on channel creation, you will *not* be able to
      *cooperatively close out to a different address.
      *
-     * Generated from protobuf field <code>string close_address = 13[json_name = "close_address"];</code>
+     * Generated from protobuf field <code>string close_address = 13;</code>
      */
-    private $close_address = '';
+    protected $close_address = '';
     /**
      **
      *Funding shims are an optional argument that allow the caller to intercept
@@ -103,9 +111,9 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *that is generated by the wallet as normal, or signal that signing will be
      *carried out in an interactive manner (PSBT based).
      *
-     * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14[json_name = "funding_shim"];</code>
+     * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14;</code>
      */
-    private $funding_shim = null;
+    protected $funding_shim = null;
 
     /**
      * Constructor.
@@ -124,21 +132,29 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *     @type int|string $local_funding_amount
      *          &#47; The number of satoshis the wallet should commit to the channel
      *     @type int|string $push_sat
-     *          &#47; The number of satoshis to push to the remote side as part of the initial commitment state
+     *          &#47; The number of satoshis to push to the remote side as part of the initial
+     *          / commitment state
      *     @type int $target_conf
-     *          &#47; The target number of blocks that the funding transaction should be confirmed by.
+     *          &#47; The target number of blocks that the funding transaction should be
+     *          / confirmed by.
      *     @type int|string $sat_per_byte
-     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the
+     *          / funding transaction.
      *     @type bool $private
-     *          &#47; Whether this channel should be private, not announced to the greater network.
+     *          &#47; Whether this channel should be private, not announced to the greater
+     *          / network.
      *     @type int|string $min_htlc_msat
-     *          &#47; The minimum value in millisatoshi we will require for incoming HTLCs on the channel.
+     *          &#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     *          / the channel.
      *     @type int $remote_csv_delay
-     *          &#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *          &#47; The delay we require on the remote's commitment transaction. If this is
+     *          / not set, it will be scaled automatically with the channel size.
      *     @type int $min_confs
-     *          &#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *          &#47; The minimum number of confirmations each one of your outputs used for
+     *          / the funding transaction must satisfy.
      *     @type bool $spend_unconfirmed
-     *          &#47; Whether unconfirmed outputs should be used as inputs for the funding transaction.
+     *          &#47; Whether unconfirmed outputs should be used as inputs for the funding
+     *          / transaction.
      *     @type string $close_address
      *          Close address is an optional address which specifies the address to which
      *          funds should be paid out to upon cooperative close. This field may only be
@@ -166,7 +182,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * Generated from protobuf field <code>bytes node_pubkey = 2;</code>
      * @return string
      */
     public function getNodePubkey()
@@ -179,7 +195,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes node_pubkey = 2[json_name = "node_pubkey"];</code>
+     * Generated from protobuf field <code>bytes node_pubkey = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -196,7 +212,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string", deprecated = true];</code>
+     * Generated from protobuf field <code>string node_pubkey_string = 3 [deprecated = true];</code>
      * @return string
      */
     public function getNodePubkeyString()
@@ -209,7 +225,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
-     * Generated from protobuf field <code>string node_pubkey_string = 3[json_name = "node_pubkey_string", deprecated = true];</code>
+     * Generated from protobuf field <code>string node_pubkey_string = 3 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -224,7 +240,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The number of satoshis the wallet should commit to the channel
      *
-     * Generated from protobuf field <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      * @return int|string
      */
     public function getLocalFundingAmount()
@@ -235,7 +251,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The number of satoshis the wallet should commit to the channel
      *
-     * Generated from protobuf field <code>int64 local_funding_amount = 4[json_name = "local_funding_amount"];</code>
+     * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -248,9 +264,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The number of satoshis to push to the remote side as part of the initial commitment state
+     *&#47; The number of satoshis to push to the remote side as part of the initial
+     * / commitment state
      *
-     * Generated from protobuf field <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * Generated from protobuf field <code>int64 push_sat = 5;</code>
      * @return int|string
      */
     public function getPushSat()
@@ -259,9 +276,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The number of satoshis to push to the remote side as part of the initial commitment state
+     *&#47; The number of satoshis to push to the remote side as part of the initial
+     * / commitment state
      *
-     * Generated from protobuf field <code>int64 push_sat = 5[json_name = "push_sat"];</code>
+     * Generated from protobuf field <code>int64 push_sat = 5;</code>
      * @param int|string $var
      * @return $this
      */
@@ -274,7 +292,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that the funding transaction should be confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      * @return int
@@ -285,7 +304,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that the funding transaction should be confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      * @param int $var
@@ -300,7 +320,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      * @return int|string
@@ -311,7 +332,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the funding transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      * @param int|string $var
@@ -326,9 +348,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether this channel should be private, not announced to the greater network.
+     *&#47; Whether this channel should be private, not announced to the greater
+     * / network.
      *
-     * Generated from protobuf field <code>bool private = 8[json_name = "private"];</code>
+     * Generated from protobuf field <code>bool private = 8;</code>
      * @return bool
      */
     public function getPrivate()
@@ -337,9 +360,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether this channel should be private, not announced to the greater network.
+     *&#47; Whether this channel should be private, not announced to the greater
+     * / network.
      *
-     * Generated from protobuf field <code>bool private = 8[json_name = "private"];</code>
+     * Generated from protobuf field <code>bool private = 8;</code>
      * @param bool $var
      * @return $this
      */
@@ -352,9 +376,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on the channel.
+     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     * / the channel.
      *
-     * Generated from protobuf field <code>int64 min_htlc_msat = 9[json_name = "min_htlc_msat"];</code>
+     * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      * @return int|string
      */
     public function getMinHtlcMsat()
@@ -363,9 +388,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on the channel.
+     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     * / the channel.
      *
-     * Generated from protobuf field <code>int64 min_htlc_msat = 9[json_name = "min_htlc_msat"];</code>
+     * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      * @param int|string $var
      * @return $this
      */
@@ -378,9 +404,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *&#47; The delay we require on the remote's commitment transaction. If this is
+     * / not set, it will be scaled automatically with the channel size.
      *
-     * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
+     * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      * @return int
      */
     public function getRemoteCsvDelay()
@@ -389,9 +416,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The delay we require on the remote's commitment transaction. If this is not set, it will be scaled automatically with the channel size.
+     *&#47; The delay we require on the remote's commitment transaction. If this is
+     * / not set, it will be scaled automatically with the channel size.
      *
-     * Generated from protobuf field <code>uint32 remote_csv_delay = 10[json_name = "remote_csv_delay"];</code>
+     * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -404,9 +432,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *&#47; The minimum number of confirmations each one of your outputs used for
+     * / the funding transaction must satisfy.
      *
-     * Generated from protobuf field <code>int32 min_confs = 11[json_name = "min_confs"];</code>
+     * Generated from protobuf field <code>int32 min_confs = 11;</code>
      * @return int
      */
     public function getMinConfs()
@@ -415,9 +444,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum number of confirmations each one of your outputs used for the funding transaction must satisfy.
+     *&#47; The minimum number of confirmations each one of your outputs used for
+     * / the funding transaction must satisfy.
      *
-     * Generated from protobuf field <code>int32 min_confs = 11[json_name = "min_confs"];</code>
+     * Generated from protobuf field <code>int32 min_confs = 11;</code>
      * @param int $var
      * @return $this
      */
@@ -430,9 +460,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether unconfirmed outputs should be used as inputs for the funding transaction.
+     *&#47; Whether unconfirmed outputs should be used as inputs for the funding
+     * / transaction.
      *
-     * Generated from protobuf field <code>bool spend_unconfirmed = 12[json_name = "spend_unconfirmed"];</code>
+     * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      * @return bool
      */
     public function getSpendUnconfirmed()
@@ -441,9 +472,10 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether unconfirmed outputs should be used as inputs for the funding transaction.
+     *&#47; Whether unconfirmed outputs should be used as inputs for the funding
+     * / transaction.
      *
-     * Generated from protobuf field <code>bool spend_unconfirmed = 12[json_name = "spend_unconfirmed"];</code>
+     * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      * @param bool $var
      * @return $this
      */
@@ -464,7 +496,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *Note: If this value is set on channel creation, you will *not* be able to
      *cooperatively close out to a different address.
      *
-     * Generated from protobuf field <code>string close_address = 13[json_name = "close_address"];</code>
+     * Generated from protobuf field <code>string close_address = 13;</code>
      * @return string
      */
     public function getCloseAddress()
@@ -481,7 +513,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *Note: If this value is set on channel creation, you will *not* be able to
      *cooperatively close out to a different address.
      *
-     * Generated from protobuf field <code>string close_address = 13[json_name = "close_address"];</code>
+     * Generated from protobuf field <code>string close_address = 13;</code>
      * @param string $var
      * @return $this
      */
@@ -501,7 +533,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *that is generated by the wallet as normal, or signal that signing will be
      *carried out in an interactive manner (PSBT based).
      *
-     * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14[json_name = "funding_shim"];</code>
+     * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14;</code>
      * @return \Lnrpc\FundingShim
      */
     public function getFundingShim()
@@ -517,7 +549,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *that is generated by the wallet as normal, or signal that signing will be
      *carried out in an interactive manner (PSBT based).
      *
-     * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14[json_name = "funding_shim"];</code>
+     * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14;</code>
      * @param \Lnrpc\FundingShim $var
      * @return $this
      */

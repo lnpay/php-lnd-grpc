@@ -18,13 +18,13 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 min_confs = 1;</code>
      */
-    private $min_confs = 0;
+    protected $min_confs = 0;
     /**
      *&#47; The maximum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 max_confs = 2;</code>
      */
-    private $max_confs = 0;
+    protected $max_confs = 0;
 
     /**
      * Constructor.

@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    private $channel_point = null;
+    protected $channel_point = null;
 
     /**
      * Constructor.
@@ -33,7 +33,7 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      * @return \Lnrpc\ChannelPoint
      */
     public function getChannelPoint()
@@ -42,7 +42,7 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      * @param \Lnrpc\ChannelPoint $var
      * @return $this
      */

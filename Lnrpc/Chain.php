@@ -16,15 +16,15 @@ class Chain extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The blockchain the node is on (eg bitcoin, litecoin)
      *
-     * Generated from protobuf field <code>string chain = 1[json_name = "chain"];</code>
+     * Generated from protobuf field <code>string chain = 1;</code>
      */
-    private $chain = '';
+    protected $chain = '';
     /**
      *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
-     * Generated from protobuf field <code>string network = 2[json_name = "network"];</code>
+     * Generated from protobuf field <code>string network = 2;</code>
      */
-    private $network = '';
+    protected $network = '';
 
     /**
      * Constructor.
@@ -46,7 +46,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The blockchain the node is on (eg bitcoin, litecoin)
      *
-     * Generated from protobuf field <code>string chain = 1[json_name = "chain"];</code>
+     * Generated from protobuf field <code>string chain = 1;</code>
      * @return string
      */
     public function getChain()
@@ -57,7 +57,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The blockchain the node is on (eg bitcoin, litecoin)
      *
-     * Generated from protobuf field <code>string chain = 1[json_name = "chain"];</code>
+     * Generated from protobuf field <code>string chain = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -72,7 +72,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
-     * Generated from protobuf field <code>string network = 2[json_name = "network"];</code>
+     * Generated from protobuf field <code>string network = 2;</code>
      * @return string
      */
     public function getNetwork()
@@ -83,7 +83,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
-     * Generated from protobuf field <code>string network = 2[json_name = "network"];</code>
+     * Generated from protobuf field <code>string network = 2;</code>
      * @param string $var
      * @return $this
      */

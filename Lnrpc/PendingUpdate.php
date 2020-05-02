@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class PendingUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>bytes txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>bytes txid = 1;</code>
      */
-    private $txid = '';
+    protected $txid = '';
     /**
-     * Generated from protobuf field <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 2;</code>
      */
-    private $output_index = 0;
+    protected $output_index = 0;
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>bytes txid = 1;</code>
      * @return string
      */
     public function getTxid()
@@ -47,7 +47,7 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>bytes txid = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -60,7 +60,7 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 2;</code>
      * @return int
      */
     public function getOutputIndex()
@@ -69,7 +69,7 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 output_index = 2[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 2;</code>
      * @param int $var
      * @return $this
      */

@@ -20,25 +20,25 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      *the graph is directed, a node will also have an incoming edge attached to
      *it for each outgoing edge.
      *
-     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1;</code>
      */
-    private $node = null;
+    protected $node = null;
     /**
      *&#47; The total number of channels for the node.
      *
-     * Generated from protobuf field <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      */
-    private $num_channels = 0;
+    protected $num_channels = 0;
     /**
      *&#47; The sum of all channels capacity for the node, denominated in satoshis.
      *
-     * Generated from protobuf field <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      */
-    private $total_capacity = 0;
+    protected $total_capacity = 0;
     /**
      *&#47; A list of all public channels for the node.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4;</code>
      */
     private $channels;
 
@@ -74,7 +74,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      *the graph is directed, a node will also have an incoming edge attached to
      *it for each outgoing edge.
      *
-     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1;</code>
      * @return \Lnrpc\LightningNode
      */
     public function getNode()
@@ -89,7 +89,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      *the graph is directed, a node will also have an incoming edge attached to
      *it for each outgoing edge.
      *
-     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1[json_name = "node"];</code>
+     * Generated from protobuf field <code>.lnrpc.LightningNode node = 1;</code>
      * @param \Lnrpc\LightningNode $var
      * @return $this
      */
@@ -104,7 +104,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The total number of channels for the node.
      *
-     * Generated from protobuf field <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      * @return int
      */
     public function getNumChannels()
@@ -115,7 +115,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The total number of channels for the node.
      *
-     * Generated from protobuf field <code>uint32 num_channels = 2[json_name = "num_channels"];</code>
+     * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -130,7 +130,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The sum of all channels capacity for the node, denominated in satoshis.
      *
-     * Generated from protobuf field <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      * @return int|string
      */
     public function getTotalCapacity()
@@ -141,7 +141,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The sum of all channels capacity for the node, denominated in satoshis.
      *
-     * Generated from protobuf field <code>int64 total_capacity = 3[json_name = "total_capacity"];</code>
+     * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -156,7 +156,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A list of all public channels for the node.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChannels()
@@ -167,7 +167,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A list of all public channels for the node.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4;</code>
      * @param \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

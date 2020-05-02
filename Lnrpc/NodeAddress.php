@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeAddress extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string network = 1[json_name = "network"];</code>
+     * Generated from protobuf field <code>string network = 1;</code>
      */
-    private $network = '';
+    protected $network = '';
     /**
-     * Generated from protobuf field <code>string addr = 2[json_name = "addr"];</code>
+     * Generated from protobuf field <code>string addr = 2;</code>
      */
-    private $addr = '';
+    protected $addr = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class NodeAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string network = 1[json_name = "network"];</code>
+     * Generated from protobuf field <code>string network = 1;</code>
      * @return string
      */
     public function getNetwork()
@@ -47,7 +47,7 @@ class NodeAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string network = 1[json_name = "network"];</code>
+     * Generated from protobuf field <code>string network = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -60,7 +60,7 @@ class NodeAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string addr = 2[json_name = "addr"];</code>
+     * Generated from protobuf field <code>string addr = 2;</code>
      * @return string
      */
     public function getAddr()
@@ -69,7 +69,7 @@ class NodeAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string addr = 2[json_name = "addr"];</code>
+     * Generated from protobuf field <code>string addr = 2;</code>
      * @param string $var
      * @return $this
      */

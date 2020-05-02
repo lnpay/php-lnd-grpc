@@ -16,7 +16,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Hash corresponding to the (hold) invoice to subscribe to.
      *
-     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2;</code>
      */
     protected $r_hash = '';
 
@@ -38,7 +38,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Hash corresponding to the (hold) invoice to subscribe to.
      *
-     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @return string
      */
     public function getRHash()
@@ -49,7 +49,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Hash corresponding to the (hold) invoice to subscribe to.
      *
-     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @param string $var
      * @return $this
      */

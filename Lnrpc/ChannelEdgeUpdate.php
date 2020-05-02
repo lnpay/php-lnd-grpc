@@ -21,27 +21,27 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 2;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
     /**
      * Generated from protobuf field <code>int64 capacity = 3;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy routing_policy = 4;</code>
      */
-    private $routing_policy = null;
+    protected $routing_policy = null;
     /**
      * Generated from protobuf field <code>string advertising_node = 5;</code>
      */
-    private $advertising_node = '';
+    protected $advertising_node = '';
     /**
      * Generated from protobuf field <code>string connecting_node = 6;</code>
      */
-    private $connecting_node = '';
+    protected $connecting_node = '';
 
     /**
      * Constructor.

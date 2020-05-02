@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class DebugLevelResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * Generated from protobuf field <code>string sub_systems = 1;</code>
      */
-    private $sub_systems = '';
+    protected $sub_systems = '';
 
     /**
      * Constructor.
@@ -33,7 +33,7 @@ class DebugLevelResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * Generated from protobuf field <code>string sub_systems = 1;</code>
      * @return string
      */
     public function getSubSystems()
@@ -42,7 +42,7 @@ class DebugLevelResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string sub_systems = 1[json_name = "sub_systems"];</code>
+     * Generated from protobuf field <code>string sub_systems = 1;</code>
      * @param string $var
      * @return $this
      */

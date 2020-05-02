@@ -13,6 +13,14 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class ListPeersRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     *If true, only the last error that our peer sent us will be returned with
+     *the peer's information, rather than the full set of historic errors we have
+     *stored.
+     *
+     * Generated from protobuf field <code>bool latest_error = 1;</code>
+     */
+    protected $latest_error = false;
 
     /**
      * Constructor.
@@ -20,11 +28,45 @@ class ListPeersRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type bool $latest_error
+     *          If true, only the last error that our peer sent us will be returned with
+     *          the peer's information, rather than the full set of historic errors we have
+     *          stored.
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     *If true, only the last error that our peer sent us will be returned with
+     *the peer's information, rather than the full set of historic errors we have
+     *stored.
+     *
+     * Generated from protobuf field <code>bool latest_error = 1;</code>
+     * @return bool
+     */
+    public function getLatestError()
+    {
+        return $this->latest_error;
+    }
+
+    /**
+     *If true, only the last error that our peer sent us will be returned with
+     *the peer's information, rather than the full set of historic errors we have
+     *stored.
+     *
+     * Generated from protobuf field <code>bool latest_error = 1;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setLatestError($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->latest_error = $var;
+
+        return $this;
     }
 
 }

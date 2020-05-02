@@ -16,11 +16,11 @@ class DebugLevelRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool show = 1;</code>
      */
-    private $show = false;
+    protected $show = false;
     /**
      * Generated from protobuf field <code>string level_spec = 2;</code>
      */
-    private $level_spec = '';
+    protected $level_spec = '';
 
     /**
      * Constructor.

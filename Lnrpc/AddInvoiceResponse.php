@@ -14,18 +14,18 @@ use Google\Protobuf\Internal\GPBUtil;
 class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 1;</code>
      */
-    private $r_hash = '';
+    protected $r_hash = '';
     /**
      **
      *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
-     * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 2;</code>
      */
-    private $payment_request = '';
+    protected $payment_request = '';
     /**
      **
      *The "add" index of this invoice. Each newly created invoice will increment
@@ -33,9 +33,9 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *SubscribeInvoices call can use this to instantly get notified of all added
      *invoices with an add_index greater than this one.
      *
-     * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
+     * Generated from protobuf field <code>uint64 add_index = 16;</code>
      */
-    private $add_index = 0;
+    protected $add_index = 0;
 
     /**
      * Constructor.
@@ -63,7 +63,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 1;</code>
      * @return string
      */
     public function getRHash()
@@ -72,7 +72,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes r_hash = 1[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -90,7 +90,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
-     * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 2;</code>
      * @return string
      */
     public function getPaymentRequest()
@@ -104,7 +104,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
-     * Generated from protobuf field <code>string payment_request = 2[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -123,7 +123,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *SubscribeInvoices call can use this to instantly get notified of all added
      *invoices with an add_index greater than this one.
      *
-     * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
+     * Generated from protobuf field <code>uint64 add_index = 16;</code>
      * @return int|string
      */
     public function getAddIndex()
@@ -138,7 +138,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *SubscribeInvoices call can use this to instantly get notified of all added
      *invoices with an add_index greater than this one.
      *
-     * Generated from protobuf field <code>uint64 add_index = 16[json_name = "add_index"];</code>
+     * Generated from protobuf field <code>uint64 add_index = 16;</code>
      * @param int|string $var
      * @return $this
      */

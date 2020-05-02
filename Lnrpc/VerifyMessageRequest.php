@@ -18,15 +18,15 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
      *The message over which the signature is to be verified. When using REST,
      *this field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
+     * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    private $msg = '';
+    protected $msg = '';
     /**
      *&#47; The signature to be verified over the given message
      *
-     * Generated from protobuf field <code>string signature = 2[json_name = "signature"];</code>
+     * Generated from protobuf field <code>string signature = 2;</code>
      */
-    private $signature = '';
+    protected $signature = '';
 
     /**
      * Constructor.
@@ -52,7 +52,7 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
      *The message over which the signature is to be verified. When using REST,
      *this field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
+     * Generated from protobuf field <code>bytes msg = 1;</code>
      * @return string
      */
     public function getMsg()
@@ -65,7 +65,7 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
      *The message over which the signature is to be verified. When using REST,
      *this field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
+     * Generated from protobuf field <code>bytes msg = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -80,7 +80,7 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The signature to be verified over the given message
      *
-     * Generated from protobuf field <code>string signature = 2[json_name = "signature"];</code>
+     * Generated from protobuf field <code>string signature = 2;</code>
      * @return string
      */
     public function getSignature()
@@ -91,7 +91,7 @@ class VerifyMessageRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The signature to be verified over the given message
      *
-     * Generated from protobuf field <code>string signature = 2[json_name = "signature"];</code>
+     * Generated from protobuf field <code>string signature = 2;</code>
      * @param string $var
      * @return $this
      */

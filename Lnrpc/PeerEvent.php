@@ -16,13 +16,13 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the peer.
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
-     * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2[json_name = "type"];</code>
+     * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2;</code>
      */
-    private $type = 0;
+    protected $type = 0;
 
     /**
      * Constructor.
@@ -43,7 +43,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the peer.
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
      */
     public function getPubKey()
@@ -54,7 +54,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the peer.
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -67,7 +67,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2[json_name = "type"];</code>
+     * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2;</code>
      * @return int
      */
     public function getType()
@@ -76,7 +76,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2[json_name = "type"];</code>
+     * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2;</code>
      * @param int $var
      * @return $this
      */

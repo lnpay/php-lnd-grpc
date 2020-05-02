@@ -16,9 +16,9 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction ID of the transaction
      *
-     * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>string txid = 1;</code>
      */
-    private $txid = '';
+    protected $txid = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction ID of the transaction
      *
-     * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>string txid = 1;</code>
      * @return string
      */
     public function getTxid()
@@ -49,7 +49,7 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction ID of the transaction
      *
-     * Generated from protobuf field <code>string txid = 1[json_name = "txid"];</code>
+     * Generated from protobuf field <code>string txid = 1;</code>
      * @param string $var
      * @return $this
      */
