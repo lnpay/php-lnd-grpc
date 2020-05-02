@@ -20,7 +20,7 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes current_password = 1;</code>
      */
-    private $current_password = '';
+    protected $current_password = '';
     /**
      **
      *new_password should be the new passphrase that will be needed to unlock the
@@ -28,7 +28,7 @@ class ChangePasswordRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes new_password = 2;</code>
      */
-    private $new_password = '';
+    protected $new_password = '';
 
     /**
      * Constructor.

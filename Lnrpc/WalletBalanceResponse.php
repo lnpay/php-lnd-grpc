@@ -16,21 +16,21 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance of the wallet
      *
-     * Generated from protobuf field <code>int64 total_balance = 1[json_name = "total_balance"];</code>
+     * Generated from protobuf field <code>int64 total_balance = 1;</code>
      */
-    private $total_balance = 0;
+    protected $total_balance = 0;
     /**
      *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
      *
-     * Generated from protobuf field <code>int64 confirmed_balance = 2[json_name = "confirmed_balance"];</code>
+     * Generated from protobuf field <code>int64 confirmed_balance = 2;</code>
      */
-    private $confirmed_balance = 0;
+    protected $confirmed_balance = 0;
     /**
      *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
      *
-     * Generated from protobuf field <code>int64 unconfirmed_balance = 3[json_name = "unconfirmed_balance"];</code>
+     * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      */
-    private $unconfirmed_balance = 0;
+    protected $unconfirmed_balance = 0;
 
     /**
      * Constructor.
@@ -54,7 +54,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance of the wallet
      *
-     * Generated from protobuf field <code>int64 total_balance = 1[json_name = "total_balance"];</code>
+     * Generated from protobuf field <code>int64 total_balance = 1;</code>
      * @return int|string
      */
     public function getTotalBalance()
@@ -65,7 +65,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance of the wallet
      *
-     * Generated from protobuf field <code>int64 total_balance = 1[json_name = "total_balance"];</code>
+     * Generated from protobuf field <code>int64 total_balance = 1;</code>
      * @param int|string $var
      * @return $this
      */
@@ -80,7 +80,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
      *
-     * Generated from protobuf field <code>int64 confirmed_balance = 2[json_name = "confirmed_balance"];</code>
+     * Generated from protobuf field <code>int64 confirmed_balance = 2;</code>
      * @return int|string
      */
     public function getConfirmedBalance()
@@ -91,7 +91,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
      *
-     * Generated from protobuf field <code>int64 confirmed_balance = 2[json_name = "confirmed_balance"];</code>
+     * Generated from protobuf field <code>int64 confirmed_balance = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -106,7 +106,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
      *
-     * Generated from protobuf field <code>int64 unconfirmed_balance = 3[json_name = "unconfirmed_balance"];</code>
+     * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      * @return int|string
      */
     public function getUnconfirmedBalance()
@@ -117,7 +117,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
      *
-     * Generated from protobuf field <code>int64 unconfirmed_balance = 3[json_name = "unconfirmed_balance"];</code>
+     * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      * @param int|string $var
      * @return $this
      */

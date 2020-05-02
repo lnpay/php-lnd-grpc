@@ -20,11 +20,12 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
      */
     private $AddrToAmount;
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *&#47; The target number of blocks that this transaction should be confirmed
+     * / by.
      *
      * Generated from protobuf field <code>int32 target_conf = 2;</code>
      */
-    private $target_conf = 0;
+    protected $target_conf = 0;
 
     /**
      * Constructor.
@@ -35,7 +36,8 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
      *     @type array|\Google\Protobuf\Internal\MapField $AddrToAmount
      *          &#47; The map from addresses to amounts for the transaction.
      *     @type int $target_conf
-     *          &#47; The target number of blocks that this transaction should be confirmed by.
+     *          &#47; The target number of blocks that this transaction should be confirmed
+     *          / by.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,7 +72,8 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *&#47; The target number of blocks that this transaction should be confirmed
+     * / by.
      *
      * Generated from protobuf field <code>int32 target_conf = 2;</code>
      * @return int
@@ -81,7 +84,8 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *&#47; The target number of blocks that this transaction should be confirmed
+     * / by.
      *
      * Generated from protobuf field <code>int32 target_conf = 2;</code>
      * @param int $var

@@ -19,9 +19,9 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
      *unannounced channels are included. Unannounced channels are both private
      *channels, and public channels that are not yet announced to the network.
      *
-     * Generated from protobuf field <code>bool include_unannounced = 1[json_name = "include_unannounced"];</code>
+     * Generated from protobuf field <code>bool include_unannounced = 1;</code>
      */
-    private $include_unannounced = false;
+    protected $include_unannounced = false;
 
     /**
      * Constructor.
@@ -47,7 +47,7 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
      *unannounced channels are included. Unannounced channels are both private
      *channels, and public channels that are not yet announced to the network.
      *
-     * Generated from protobuf field <code>bool include_unannounced = 1[json_name = "include_unannounced"];</code>
+     * Generated from protobuf field <code>bool include_unannounced = 1;</code>
      * @return bool
      */
     public function getIncludeUnannounced()
@@ -61,7 +61,7 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
      *unannounced channels are included. Unannounced channels are both private
      *channels, and public channels that are not yet announced to the network.
      *
-     * Generated from protobuf field <code>bool include_unannounced = 1[json_name = "include_unannounced"];</code>
+     * Generated from protobuf field <code>bool include_unannounced = 1;</code>
      * @param bool $var
      * @return $this
      */

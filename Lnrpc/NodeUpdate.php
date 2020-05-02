@@ -20,19 +20,19 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string identity_key = 2;</code>
      */
-    private $identity_key = '';
+    protected $identity_key = '';
     /**
      * Generated from protobuf field <code>bytes global_features = 3;</code>
      */
-    private $global_features = '';
+    protected $global_features = '';
     /**
      * Generated from protobuf field <code>string alias = 4;</code>
      */
-    private $alias = '';
+    protected $alias = '';
     /**
      * Generated from protobuf field <code>string color = 5;</code>
      */
-    private $color = '';
+    protected $color = '';
 
     /**
      * Constructor.

@@ -18,7 +18,7 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *The route that results from the path finding operation. This is still a
      *repeated field to retain backwards compatibility.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1;</code>
      */
     private $routes;
     /**
@@ -26,9 +26,9 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *The success probability of the returned route based on the current mission
      *control state. [EXPERIMENTAL]
      *
-     * Generated from protobuf field <code>double success_prob = 2[json_name = "success_prob"];</code>
+     * Generated from protobuf field <code>double success_prob = 2;</code>
      */
-    private $success_prob = 0.0;
+    protected $success_prob = 0.0;
 
     /**
      * Constructor.
@@ -56,7 +56,7 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *The route that results from the path finding operation. This is still a
      *repeated field to retain backwards compatibility.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRoutes()
@@ -69,7 +69,7 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *The route that results from the path finding operation. This is still a
      *repeated field to retain backwards compatibility.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1[json_name = "routes"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Route routes = 1;</code>
      * @param \Lnrpc\Route[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -86,7 +86,7 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *The success probability of the returned route based on the current mission
      *control state. [EXPERIMENTAL]
      *
-     * Generated from protobuf field <code>double success_prob = 2[json_name = "success_prob"];</code>
+     * Generated from protobuf field <code>double success_prob = 2;</code>
      * @return float
      */
     public function getSuccessProb()
@@ -99,7 +99,7 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *The success probability of the returned route based on the current mission
      *control state. [EXPERIMENTAL]
      *
-     * Generated from protobuf field <code>double success_prob = 2[json_name = "success_prob"];</code>
+     * Generated from protobuf field <code>double success_prob = 2;</code>
      * @param float $var
      * @return $this
      */

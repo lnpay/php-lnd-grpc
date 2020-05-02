@@ -17,11 +17,38 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      **
      *If true, then return payments that have not yet fully completed. This means
      *that pending payments, as well as failed payments will show up if this
-     *field is set to True.
+     *field is set to true. This flag doesn't change the meaning of the indices,
+     *which are tied to individual payments.
      *
      * Generated from protobuf field <code>bool include_incomplete = 1;</code>
      */
-    private $include_incomplete = false;
+    protected $include_incomplete = false;
+    /**
+     **
+     *The index of a payment that will be used as either the start or end of a
+     *query to determine which payments should be returned in the response. The
+     *index_offset is exclusive. In the case of a zero index_offset, the query
+     *will start with the oldest payment when paginating forwards, or will end
+     *with the most recent payment when paginating backwards.
+     *
+     * Generated from protobuf field <code>uint64 index_offset = 2;</code>
+     */
+    protected $index_offset = 0;
+    /**
+     *&#47; The maximal number of payments returned in the response to this query.
+     *
+     * Generated from protobuf field <code>uint64 max_payments = 3;</code>
+     */
+    protected $max_payments = 0;
+    /**
+     **
+     *If set, the payments returned will result from seeking backwards from the
+     *specified index offset. This can be used to paginate backwards. The order
+     *of the returned payments is always oldest first (ascending index order).
+     *
+     * Generated from protobuf field <code>bool reversed = 4;</code>
+     */
+    protected $reversed = false;
 
     /**
      * Constructor.
@@ -33,7 +60,22 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *          *
      *          If true, then return payments that have not yet fully completed. This means
      *          that pending payments, as well as failed payments will show up if this
-     *          field is set to True.
+     *          field is set to true. This flag doesn't change the meaning of the indices,
+     *          which are tied to individual payments.
+     *     @type int|string $index_offset
+     *          *
+     *          The index of a payment that will be used as either the start or end of a
+     *          query to determine which payments should be returned in the response. The
+     *          index_offset is exclusive. In the case of a zero index_offset, the query
+     *          will start with the oldest payment when paginating forwards, or will end
+     *          with the most recent payment when paginating backwards.
+     *     @type int|string $max_payments
+     *          &#47; The maximal number of payments returned in the response to this query.
+     *     @type bool $reversed
+     *          *
+     *          If set, the payments returned will result from seeking backwards from the
+     *          specified index offset. This can be used to paginate backwards. The order
+     *          of the returned payments is always oldest first (ascending index order).
      * }
      */
     public function __construct($data = NULL) {
@@ -45,7 +87,8 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      **
      *If true, then return payments that have not yet fully completed. This means
      *that pending payments, as well as failed payments will show up if this
-     *field is set to True.
+     *field is set to true. This flag doesn't change the meaning of the indices,
+     *which are tied to individual payments.
      *
      * Generated from protobuf field <code>bool include_incomplete = 1;</code>
      * @return bool
@@ -59,7 +102,8 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      **
      *If true, then return payments that have not yet fully completed. This means
      *that pending payments, as well as failed payments will show up if this
-     *field is set to True.
+     *field is set to true. This flag doesn't change the meaning of the indices,
+     *which are tied to individual payments.
      *
      * Generated from protobuf field <code>bool include_incomplete = 1;</code>
      * @param bool $var
@@ -69,6 +113,100 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->include_incomplete = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The index of a payment that will be used as either the start or end of a
+     *query to determine which payments should be returned in the response. The
+     *index_offset is exclusive. In the case of a zero index_offset, the query
+     *will start with the oldest payment when paginating forwards, or will end
+     *with the most recent payment when paginating backwards.
+     *
+     * Generated from protobuf field <code>uint64 index_offset = 2;</code>
+     * @return int|string
+     */
+    public function getIndexOffset()
+    {
+        return $this->index_offset;
+    }
+
+    /**
+     **
+     *The index of a payment that will be used as either the start or end of a
+     *query to determine which payments should be returned in the response. The
+     *index_offset is exclusive. In the case of a zero index_offset, the query
+     *will start with the oldest payment when paginating forwards, or will end
+     *with the most recent payment when paginating backwards.
+     *
+     * Generated from protobuf field <code>uint64 index_offset = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setIndexOffset($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->index_offset = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The maximal number of payments returned in the response to this query.
+     *
+     * Generated from protobuf field <code>uint64 max_payments = 3;</code>
+     * @return int|string
+     */
+    public function getMaxPayments()
+    {
+        return $this->max_payments;
+    }
+
+    /**
+     *&#47; The maximal number of payments returned in the response to this query.
+     *
+     * Generated from protobuf field <code>uint64 max_payments = 3;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setMaxPayments($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->max_payments = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *If set, the payments returned will result from seeking backwards from the
+     *specified index offset. This can be used to paginate backwards. The order
+     *of the returned payments is always oldest first (ascending index order).
+     *
+     * Generated from protobuf field <code>bool reversed = 4;</code>
+     * @return bool
+     */
+    public function getReversed()
+    {
+        return $this->reversed;
+    }
+
+    /**
+     **
+     *If set, the payments returned will result from seeking backwards from the
+     *specified index offset. This can be used to paginate backwards. The order
+     *of the returned payments is always oldest first (ascending index order).
+     *
+     * Generated from protobuf field <code>bool reversed = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setReversed($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->reversed = $var;
 
         return $this;
     }

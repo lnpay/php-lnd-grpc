@@ -16,15 +16,15 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The entity a permission grants access to.
      *
-     * Generated from protobuf field <code>string entity = 1[json_name = "entity"];</code>
+     * Generated from protobuf field <code>string entity = 1;</code>
      */
-    private $entity = '';
+    protected $entity = '';
     /**
      *&#47; The action that is granted.
      *
-     * Generated from protobuf field <code>string action = 2[json_name = "action"];</code>
+     * Generated from protobuf field <code>string action = 2;</code>
      */
-    private $action = '';
+    protected $action = '';
 
     /**
      * Constructor.
@@ -46,7 +46,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The entity a permission grants access to.
      *
-     * Generated from protobuf field <code>string entity = 1[json_name = "entity"];</code>
+     * Generated from protobuf field <code>string entity = 1;</code>
      * @return string
      */
     public function getEntity()
@@ -57,7 +57,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The entity a permission grants access to.
      *
-     * Generated from protobuf field <code>string entity = 1[json_name = "entity"];</code>
+     * Generated from protobuf field <code>string entity = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -72,7 +72,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The action that is granted.
      *
-     * Generated from protobuf field <code>string action = 2[json_name = "action"];</code>
+     * Generated from protobuf field <code>string action = 2;</code>
      * @return string
      */
     public function getAction()
@@ -83,7 +83,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The action that is granted.
      *
-     * Generated from protobuf field <code>string action = 2[json_name = "action"];</code>
+     * Generated from protobuf field <code>string action = 2;</code>
      * @param string $var
      * @return $this
      */

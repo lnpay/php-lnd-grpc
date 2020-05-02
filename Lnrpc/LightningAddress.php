@@ -16,15 +16,16 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the Lightning node
      *
-     * Generated from protobuf field <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 1;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
     /**
-     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or `localhost:10011`
+     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     * / `localhost:10011`
      *
-     * Generated from protobuf field <code>string host = 2[json_name = "host"];</code>
+     * Generated from protobuf field <code>string host = 2;</code>
      */
-    private $host = '';
+    protected $host = '';
 
     /**
      * Constructor.
@@ -35,7 +36,8 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
      *     @type string $pubkey
      *          &#47; The identity pubkey of the Lightning node
      *     @type string $host
-     *          &#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or `localhost:10011`
+     *          &#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     *          / `localhost:10011`
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +48,7 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the Lightning node
      *
-     * Generated from protobuf field <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 1;</code>
      * @return string
      */
     public function getPubkey()
@@ -57,7 +59,7 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the Lightning node
      *
-     * Generated from protobuf field <code>string pubkey = 1[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -70,9 +72,10 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or `localhost:10011`
+     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     * / `localhost:10011`
      *
-     * Generated from protobuf field <code>string host = 2[json_name = "host"];</code>
+     * Generated from protobuf field <code>string host = 2;</code>
      * @return string
      */
     public function getHost()
@@ -81,9 +84,10 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or `localhost:10011`
+     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     * / `localhost:10011`
      *
-     * Generated from protobuf field <code>string host = 2[json_name = "host"];</code>
+     * Generated from protobuf field <code>string host = 2;</code>
      * @param string $var
      * @return $this
      */

@@ -14,39 +14,52 @@ use Google\Protobuf\Internal\GPBUtil;
 class PendingChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * Generated from protobuf field <code>string remote_node_pub = 1;</code>
      */
-    private $remote_node_pub = '';
+    protected $remote_node_pub = '';
     /**
-     * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 2;</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
-     * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 3;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
-     * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 4;</code>
      */
-    private $local_balance = 0;
+    protected $local_balance = 0;
     /**
-     * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 5;</code>
      */
-    private $remote_balance = 0;
+    protected $remote_balance = 0;
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its balance.
+     *&#47; The minimum satoshis this node is required to reserve in its
+     * / balance.
      *
-     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6[json_name = "local_chan_reserve_sat"];</code>
+     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6;</code>
      */
-    private $local_chan_reserve_sat = 0;
+    protected $local_chan_reserve_sat = 0;
     /**
      **
      *The minimum satoshis the other node is required to reserve in its
      *balance.
      *
-     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7[json_name = "remote_chan_reserve_sat"];</code>
+     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7;</code>
      */
-    private $remote_chan_reserve_sat = 0;
+    protected $remote_chan_reserve_sat = 0;
+    /**
+     * The party that initiated opening the channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator initiator = 8;</code>
+     */
+    protected $initiator = 0;
+    /**
+     *&#47; The commitment type used by this channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 9;</code>
+     */
+    protected $commitment_type = 0;
 
     /**
      * Constructor.
@@ -60,11 +73,16 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
      *     @type int|string $local_balance
      *     @type int|string $remote_balance
      *     @type int|string $local_chan_reserve_sat
-     *          &#47; The minimum satoshis this node is required to reserve in its balance.
+     *          &#47; The minimum satoshis this node is required to reserve in its
+     *          / balance.
      *     @type int|string $remote_chan_reserve_sat
      *          *
      *          The minimum satoshis the other node is required to reserve in its
      *          balance.
+     *     @type int $initiator
+     *           The party that initiated opening the channel.
+     *     @type int $commitment_type
+     *          &#47; The commitment type used by this channel.
      * }
      */
     public function __construct($data = NULL) {
@@ -73,7 +91,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * Generated from protobuf field <code>string remote_node_pub = 1;</code>
      * @return string
      */
     public function getRemoteNodePub()
@@ -82,7 +100,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string remote_node_pub = 1[json_name = "remote_node_pub"];</code>
+     * Generated from protobuf field <code>string remote_node_pub = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -95,7 +113,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 2;</code>
      * @return string
      */
     public function getChannelPoint()
@@ -104,7 +122,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string channel_point = 2[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -117,7 +135,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 3;</code>
      * @return int|string
      */
     public function getCapacity()
@@ -126,7 +144,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 capacity = 3[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -139,7 +157,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 4;</code>
      * @return int|string
      */
     public function getLocalBalance()
@@ -148,7 +166,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 local_balance = 4[json_name = "local_balance"];</code>
+     * Generated from protobuf field <code>int64 local_balance = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -161,7 +179,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 5;</code>
      * @return int|string
      */
     public function getRemoteBalance()
@@ -170,7 +188,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 remote_balance = 5[json_name = "remote_balance"];</code>
+     * Generated from protobuf field <code>int64 remote_balance = 5;</code>
      * @param int|string $var
      * @return $this
      */
@@ -183,9 +201,10 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its balance.
+     *&#47; The minimum satoshis this node is required to reserve in its
+     * / balance.
      *
-     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6[json_name = "local_chan_reserve_sat"];</code>
+     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6;</code>
      * @return int|string
      */
     public function getLocalChanReserveSat()
@@ -194,9 +213,10 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its balance.
+     *&#47; The minimum satoshis this node is required to reserve in its
+     * / balance.
      *
-     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6[json_name = "local_chan_reserve_sat"];</code>
+     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -213,7 +233,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
      *The minimum satoshis the other node is required to reserve in its
      *balance.
      *
-     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7[json_name = "remote_chan_reserve_sat"];</code>
+     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7;</code>
      * @return int|string
      */
     public function getRemoteChanReserveSat()
@@ -226,7 +246,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
      *The minimum satoshis the other node is required to reserve in its
      *balance.
      *
-     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7[json_name = "remote_chan_reserve_sat"];</code>
+     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7;</code>
      * @param int|string $var
      * @return $this
      */
@@ -234,6 +254,58 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->remote_chan_reserve_sat = $var;
+
+        return $this;
+    }
+
+    /**
+     * The party that initiated opening the channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator initiator = 8;</code>
+     * @return int
+     */
+    public function getInitiator()
+    {
+        return $this->initiator;
+    }
+
+    /**
+     * The party that initiated opening the channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator initiator = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInitiator($var)
+    {
+        GPBUtil::checkEnum($var, \Lnrpc\Initiator::class);
+        $this->initiator = $var;
+
+        return $this;
+    }
+
+    /**
+     *&#47; The commitment type used by this channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 9;</code>
+     * @return int
+     */
+    public function getCommitmentType()
+    {
+        return $this->commitment_type;
+    }
+
+    /**
+     *&#47; The commitment type used by this channel.
+     *
+     * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCommitmentType($var)
+    {
+        GPBUtil::checkEnum($var, \Lnrpc\CommitmentType::class);
+        $this->commitment_type = $var;
 
         return $this;
     }

@@ -31,7 +31,7 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingUpdate close_pending = 1[json_name = "close_pending"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate close_pending = 1;</code>
      * @return \Lnrpc\PendingUpdate
      */
     public function getClosePending()
@@ -40,7 +40,7 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingUpdate close_pending = 1[json_name = "close_pending"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate close_pending = 1;</code>
      * @param \Lnrpc\PendingUpdate $var
      * @return $this
      */
@@ -53,7 +53,7 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseUpdate chan_close = 3[json_name = "chan_close"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseUpdate chan_close = 3;</code>
      * @return \Lnrpc\ChannelCloseUpdate
      */
     public function getChanClose()
@@ -62,7 +62,7 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseUpdate chan_close = 3[json_name = "chan_close"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseUpdate chan_close = 3;</code>
      * @param \Lnrpc\ChannelCloseUpdate $var
      * @return $this
      */

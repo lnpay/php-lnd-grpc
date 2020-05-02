@@ -16,63 +16,73 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the peer
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
-     * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 3;</code>
      */
-    private $address = '';
+    protected $address = '';
     /**
      *&#47; Bytes of data transmitted to this peer
      *
-     * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      */
-    private $bytes_sent = 0;
+    protected $bytes_sent = 0;
     /**
      *&#47; Bytes of data transmitted from this peer
      *
-     * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      */
-    private $bytes_recv = 0;
+    protected $bytes_recv = 0;
     /**
      *&#47; Satoshis sent to this peer
      *
-     * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      */
-    private $sat_sent = 0;
+    protected $sat_sent = 0;
     /**
      *&#47; Satoshis received from this peer
      *
-     * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      */
-    private $sat_recv = 0;
+    protected $sat_recv = 0;
     /**
      *&#47; A channel is inbound if the counterparty initiated the channel
      *
-     * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
+     * Generated from protobuf field <code>bool inbound = 8;</code>
      */
-    private $inbound = false;
+    protected $inbound = false;
     /**
      *&#47; Ping time to this peer
      *
-     * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * Generated from protobuf field <code>int64 ping_time = 9;</code>
      */
-    private $ping_time = 0;
+    protected $ping_time = 0;
     /**
      * The type of sync we are currently performing with this peer.
      *
-     * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10[json_name = "sync_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10;</code>
      */
-    private $sync_type = 0;
+    protected $sync_type = 0;
     /**
      *&#47; Features advertised by the remote peer in their init message.
      *
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11;</code>
      */
     private $features;
+    /**
+     *The latest errors received from our peer with timestamps, limited to the 10
+     *most recent errors. These errors are tracked across peer connections, but
+     *are not persisted across lnd restarts. Note that these errors are only
+     *stored for peers that we have channels open with, to prevent peers from
+     *spamming us with errors at no cost.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.TimestampedError errors = 12;</code>
+     */
+    private $errors;
 
     /**
      * Constructor.
@@ -100,6 +110,12 @@ class Peer extends \Google\Protobuf\Internal\Message
      *           The type of sync we are currently performing with this peer.
      *     @type array|\Google\Protobuf\Internal\MapField $features
      *          &#47; Features advertised by the remote peer in their init message.
+     *     @type \Lnrpc\TimestampedError[]|\Google\Protobuf\Internal\RepeatedField $errors
+     *          The latest errors received from our peer with timestamps, limited to the 10
+     *          most recent errors. These errors are tracked across peer connections, but
+     *          are not persisted across lnd restarts. Note that these errors are only
+     *          stored for peers that we have channels open with, to prevent peers from
+     *          spamming us with errors at no cost.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +126,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the peer
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
      */
     public function getPubKey()
@@ -121,7 +137,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The identity pubkey of the peer
      *
-     * Generated from protobuf field <code>string pub_key = 1[json_name = "pub_key"];</code>
+     * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -136,7 +152,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
-     * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 3;</code>
      * @return string
      */
     public function getAddress()
@@ -147,7 +163,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
-     * Generated from protobuf field <code>string address = 3[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -162,7 +178,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Bytes of data transmitted to this peer
      *
-     * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      * @return int|string
      */
     public function getBytesSent()
@@ -173,7 +189,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Bytes of data transmitted to this peer
      *
-     * Generated from protobuf field <code>uint64 bytes_sent = 4[json_name = "bytes_sent"];</code>
+     * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -188,7 +204,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Bytes of data transmitted from this peer
      *
-     * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      * @return int|string
      */
     public function getBytesRecv()
@@ -199,7 +215,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Bytes of data transmitted from this peer
      *
-     * Generated from protobuf field <code>uint64 bytes_recv = 5[json_name = "bytes_recv"];</code>
+     * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      * @param int|string $var
      * @return $this
      */
@@ -214,7 +230,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Satoshis sent to this peer
      *
-     * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      * @return int|string
      */
     public function getSatSent()
@@ -225,7 +241,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Satoshis sent to this peer
      *
-     * Generated from protobuf field <code>int64 sat_sent = 6[json_name = "sat_sent"];</code>
+     * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -240,7 +256,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Satoshis received from this peer
      *
-     * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      * @return int|string
      */
     public function getSatRecv()
@@ -251,7 +267,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Satoshis received from this peer
      *
-     * Generated from protobuf field <code>int64 sat_recv = 7[json_name = "sat_recv"];</code>
+     * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      * @param int|string $var
      * @return $this
      */
@@ -266,7 +282,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A channel is inbound if the counterparty initiated the channel
      *
-     * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
+     * Generated from protobuf field <code>bool inbound = 8;</code>
      * @return bool
      */
     public function getInbound()
@@ -277,7 +293,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A channel is inbound if the counterparty initiated the channel
      *
-     * Generated from protobuf field <code>bool inbound = 8[json_name = "inbound"];</code>
+     * Generated from protobuf field <code>bool inbound = 8;</code>
      * @param bool $var
      * @return $this
      */
@@ -292,7 +308,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Ping time to this peer
      *
-     * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * Generated from protobuf field <code>int64 ping_time = 9;</code>
      * @return int|string
      */
     public function getPingTime()
@@ -303,7 +319,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Ping time to this peer
      *
-     * Generated from protobuf field <code>int64 ping_time = 9[json_name = "ping_time"];</code>
+     * Generated from protobuf field <code>int64 ping_time = 9;</code>
      * @param int|string $var
      * @return $this
      */
@@ -318,7 +334,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      * The type of sync we are currently performing with this peer.
      *
-     * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10[json_name = "sync_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10;</code>
      * @return int
      */
     public function getSyncType()
@@ -329,7 +345,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      * The type of sync we are currently performing with this peer.
      *
-     * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10[json_name = "sync_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -344,7 +360,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Features advertised by the remote peer in their init message.
      *
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getFeatures()
@@ -355,7 +371,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Features advertised by the remote peer in their init message.
      *
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
@@ -363,6 +379,40 @@ class Peer extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
         $this->features = $arr;
+
+        return $this;
+    }
+
+    /**
+     *The latest errors received from our peer with timestamps, limited to the 10
+     *most recent errors. These errors are tracked across peer connections, but
+     *are not persisted across lnd restarts. Note that these errors are only
+     *stored for peers that we have channels open with, to prevent peers from
+     *spamming us with errors at no cost.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.TimestampedError errors = 12;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
+
+    /**
+     *The latest errors received from our peer with timestamps, limited to the 10
+     *most recent errors. These errors are tracked across peer connections, but
+     *are not persisted across lnd restarts. Note that these errors are only
+     *stored for peers that we have channels open with, to prevent peers from
+     *spamming us with errors at no cost.
+     *
+     * Generated from protobuf field <code>repeated .lnrpc.TimestampedError errors = 12;</code>
+     * @param \Lnrpc\TimestampedError[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setErrors($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\TimestampedError::class);
+        $this->errors = $arr;
 
         return $this;
     }

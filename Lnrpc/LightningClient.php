@@ -473,10 +473,11 @@ class LightningClient extends \Grpc\BaseStub {
 
     /**
      * * lncli: `sendpayment`
-     * SendPayment dispatches a bi-directional streaming RPC for sending payments
-     * through the Lightning Network. A single RPC invocation creates a persistent
-     * bi-directional stream allowing clients to rapidly send payments through the
-     * Lightning Network with a single persistent connection.
+     * Deprecated, use routerrpc.SendPayment. SendPayment dispatches a
+     * bi-directional streaming RPC for sending payments through the Lightning
+     * Network. A single RPC invocation creates a persistent bi-directional
+     * stream allowing clients to rapidly send payments through the Lightning
+     * Network with a single persistent connection.
      * @param array $metadata metadata
      * @param array $options call options
      */
@@ -677,6 +678,22 @@ class LightningClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/lnrpc.Lightning/DescribeGraph',
         $argument,
         ['\Lnrpc\ChannelGraph', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * * lncli: `getnodemetrics`
+     * GetNodeMetrics returns node metrics calculated from the graph. Currently
+     * the only supported metric is betweenness centrality of individual nodes.
+     * @param \Lnrpc\NodeMetricsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetNodeMetrics(\Lnrpc\NodeMetricsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/GetNodeMetrics',
+        $argument,
+        ['\Lnrpc\NodeMetricsResponse', 'decode'],
         $metadata, $options);
     }
 

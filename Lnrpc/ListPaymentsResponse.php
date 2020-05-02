@@ -16,9 +16,25 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of payments
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1;</code>
      */
     private $payments;
+    /**
+     **
+     *The index of the first item in the set of returned payments. This can be
+     *used as the index_offset to continue seeking backwards in the next request.
+     *
+     * Generated from protobuf field <code>uint64 first_index_offset = 2;</code>
+     */
+    protected $first_index_offset = 0;
+    /**
+     **
+     *The index of the last item in the set of returned payments. This can be used
+     *as the index_offset to continue seeking forwards in the next request.
+     *
+     * Generated from protobuf field <code>uint64 last_index_offset = 3;</code>
+     */
+    protected $last_index_offset = 0;
 
     /**
      * Constructor.
@@ -28,6 +44,14 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $payments
      *          &#47; The list of payments
+     *     @type int|string $first_index_offset
+     *          *
+     *          The index of the first item in the set of returned payments. This can be
+     *          used as the index_offset to continue seeking backwards in the next request.
+     *     @type int|string $last_index_offset
+     *          *
+     *          The index of the last item in the set of returned payments. This can be used
+     *          as the index_offset to continue seeking forwards in the next request.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +62,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of payments
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPayments()
@@ -49,7 +73,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of payments
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1[json_name = "payments"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1;</code>
      * @param \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -57,6 +81,66 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Payment::class);
         $this->payments = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The index of the first item in the set of returned payments. This can be
+     *used as the index_offset to continue seeking backwards in the next request.
+     *
+     * Generated from protobuf field <code>uint64 first_index_offset = 2;</code>
+     * @return int|string
+     */
+    public function getFirstIndexOffset()
+    {
+        return $this->first_index_offset;
+    }
+
+    /**
+     **
+     *The index of the first item in the set of returned payments. This can be
+     *used as the index_offset to continue seeking backwards in the next request.
+     *
+     * Generated from protobuf field <code>uint64 first_index_offset = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setFirstIndexOffset($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->first_index_offset = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The index of the last item in the set of returned payments. This can be used
+     *as the index_offset to continue seeking forwards in the next request.
+     *
+     * Generated from protobuf field <code>uint64 last_index_offset = 3;</code>
+     * @return int|string
+     */
+    public function getLastIndexOffset()
+    {
+        return $this->last_index_offset;
+    }
+
+    /**
+     **
+     *The index of the last item in the set of returned payments. This can be used
+     *as the index_offset to continue seeking forwards in the next request.
+     *
+     * Generated from protobuf field <code>uint64 last_index_offset = 3;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setLastIndexOffset($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->last_index_offset = $var;
 
         return $this;
     }

@@ -16,15 +16,15 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Whether the signature was valid over the given message
      *
-     * Generated from protobuf field <code>bool valid = 1[json_name = "valid"];</code>
+     * Generated from protobuf field <code>bool valid = 1;</code>
      */
-    private $valid = false;
+    protected $valid = false;
     /**
      *&#47; The pubkey recovered from the signature
      *
-     * Generated from protobuf field <code>string pubkey = 2[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 2;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
 
     /**
      * Constructor.
@@ -46,7 +46,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Whether the signature was valid over the given message
      *
-     * Generated from protobuf field <code>bool valid = 1[json_name = "valid"];</code>
+     * Generated from protobuf field <code>bool valid = 1;</code>
      * @return bool
      */
     public function getValid()
@@ -57,7 +57,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Whether the signature was valid over the given message
      *
-     * Generated from protobuf field <code>bool valid = 1[json_name = "valid"];</code>
+     * Generated from protobuf field <code>bool valid = 1;</code>
      * @param bool $var
      * @return $this
      */
@@ -72,7 +72,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pubkey recovered from the signature
      *
-     * Generated from protobuf field <code>string pubkey = 2[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 2;</code>
      * @return string
      */
     public function getPubkey()
@@ -83,7 +83,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pubkey recovered from the signature
      *
-     * Generated from protobuf field <code>string pubkey = 2[json_name = "pubkey"];</code>
+     * Generated from protobuf field <code>string pubkey = 2;</code>
      * @param string $var
      * @return $this
      */

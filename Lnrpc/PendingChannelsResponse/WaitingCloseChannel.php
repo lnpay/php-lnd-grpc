@@ -18,13 +18,21 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    private $channel = null;
+    protected $channel = null;
     /**
      *&#47; The balance in satoshis encumbered in this channel
      *
-     * Generated from protobuf field <code>int64 limbo_balance = 2[json_name = "limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 limbo_balance = 2;</code>
      */
-    private $limbo_balance = 0;
+    protected $limbo_balance = 0;
+    /**
+     **
+     *A list of valid commitment transactions. Any of these can confirm at
+     *this point.
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.Commitments commitments = 3;</code>
+     */
+    protected $commitments = null;
 
     /**
      * Constructor.
@@ -36,6 +44,10 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
      *          &#47; The pending channel waiting for closing tx to confirm
      *     @type int|string $limbo_balance
      *          &#47; The balance in satoshis encumbered in this channel
+     *     @type \Lnrpc\PendingChannelsResponse\Commitments $commitments
+     *          *
+     *          A list of valid commitment transactions. Any of these can confirm at
+     *          this point.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +84,7 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance in satoshis encumbered in this channel
      *
-     * Generated from protobuf field <code>int64 limbo_balance = 2[json_name = "limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 limbo_balance = 2;</code>
      * @return int|string
      */
     public function getLimboBalance()
@@ -83,7 +95,7 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance in satoshis encumbered in this channel
      *
-     * Generated from protobuf field <code>int64 limbo_balance = 2[json_name = "limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 limbo_balance = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -91,6 +103,36 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->limbo_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *A list of valid commitment transactions. Any of these can confirm at
+     *this point.
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.Commitments commitments = 3;</code>
+     * @return \Lnrpc\PendingChannelsResponse\Commitments
+     */
+    public function getCommitments()
+    {
+        return $this->commitments;
+    }
+
+    /**
+     **
+     *A list of valid commitment transactions. Any of these can confirm at
+     *this point.
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.Commitments commitments = 3;</code>
+     * @param \Lnrpc\PendingChannelsResponse\Commitments $var
+     * @return $this
+     */
+    public function setCommitments($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse_Commitments::class);
+        $this->commitments = $var;
 
         return $this;
     }

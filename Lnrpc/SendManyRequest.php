@@ -20,17 +20,19 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
      */
     private $AddrToAmount;
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *&#47; The target number of blocks that this transaction should be confirmed
+     * / by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    private $target_conf = 0;
+    protected $target_conf = 0;
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      */
-    private $sat_per_byte = 0;
+    protected $sat_per_byte = 0;
 
     /**
      * Constructor.
@@ -41,9 +43,11 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
      *     @type array|\Google\Protobuf\Internal\MapField $AddrToAmount
      *          &#47; The map from addresses to amounts
      *     @type int $target_conf
-     *          &#47; The target number of blocks that this transaction should be confirmed by.
+     *          &#47; The target number of blocks that this transaction should be confirmed
+     *          / by.
      *     @type int|string $sat_per_byte
-     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the
+     *          / transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -78,7 +82,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *&#47; The target number of blocks that this transaction should be confirmed
+     * / by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      * @return int
@@ -89,7 +94,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed by.
+     *&#47; The target number of blocks that this transaction should be confirmed
+     * / by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      * @param int $var
@@ -104,7 +110,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      * @return int|string
@@ -115,7 +122,8 @@ class SendManyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      * @param int|string $var

@@ -18,9 +18,9 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
      *The pending channel ID of the created channel. This value may be used to
      *further the funding flow manually via the FundingStateStep method.
      *
-     * Generated from protobuf field <code>bytes pending_chan_id = 4[json_name = "pending_chan_id"];</code>
+     * Generated from protobuf field <code>bytes pending_chan_id = 4;</code>
      */
-    private $pending_chan_id = '';
+    protected $pending_chan_id = '';
     protected $update;
 
     /**
@@ -30,7 +30,17 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\PendingUpdate $chan_pending
+     *          *
+     *          Signals that the channel is now fully negotiated and the funding
+     *          transaction published.
      *     @type \Lnrpc\ChannelOpenUpdate $chan_open
+     *          *
+     *          Signals that the channel's funding transaction has now reached the
+     *          required number of confirmations on chain and can be used.
+     *     @type \Lnrpc\ReadyForPsbtFunding $psbt_fund
+     *          *
+     *          Signals that the funding process has been suspended and the construction
+     *          of a PSBT that funds the channel PK script is now required.
      *     @type string $pending_chan_id
      *          *
      *          The pending channel ID of the created channel. This value may be used to
@@ -43,7 +53,11 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingUpdate chan_pending = 1[json_name = "chan_pending"];</code>
+     **
+     *Signals that the channel is now fully negotiated and the funding
+     *transaction published.
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate chan_pending = 1;</code>
      * @return \Lnrpc\PendingUpdate
      */
     public function getChanPending()
@@ -52,7 +66,11 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingUpdate chan_pending = 1[json_name = "chan_pending"];</code>
+     **
+     *Signals that the channel is now fully negotiated and the funding
+     *transaction published.
+     *
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate chan_pending = 1;</code>
      * @param \Lnrpc\PendingUpdate $var
      * @return $this
      */
@@ -65,7 +83,11 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelOpenUpdate chan_open = 3[json_name = "chan_open"];</code>
+     **
+     *Signals that the channel's funding transaction has now reached the
+     *required number of confirmations on chain and can be used.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelOpenUpdate chan_open = 3;</code>
      * @return \Lnrpc\ChannelOpenUpdate
      */
     public function getChanOpen()
@@ -74,7 +96,11 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelOpenUpdate chan_open = 3[json_name = "chan_open"];</code>
+     **
+     *Signals that the channel's funding transaction has now reached the
+     *required number of confirmations on chain and can be used.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelOpenUpdate chan_open = 3;</code>
      * @param \Lnrpc\ChannelOpenUpdate $var
      * @return $this
      */
@@ -88,10 +114,40 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
 
     /**
      **
+     *Signals that the funding process has been suspended and the construction
+     *of a PSBT that funds the channel PK script is now required.
+     *
+     * Generated from protobuf field <code>.lnrpc.ReadyForPsbtFunding psbt_fund = 5;</code>
+     * @return \Lnrpc\ReadyForPsbtFunding
+     */
+    public function getPsbtFund()
+    {
+        return $this->readOneof(5);
+    }
+
+    /**
+     **
+     *Signals that the funding process has been suspended and the construction
+     *of a PSBT that funds the channel PK script is now required.
+     *
+     * Generated from protobuf field <code>.lnrpc.ReadyForPsbtFunding psbt_fund = 5;</code>
+     * @param \Lnrpc\ReadyForPsbtFunding $var
+     * @return $this
+     */
+    public function setPsbtFund($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\ReadyForPsbtFunding::class);
+        $this->writeOneof(5, $var);
+
+        return $this;
+    }
+
+    /**
+     **
      *The pending channel ID of the created channel. This value may be used to
      *further the funding flow manually via the FundingStateStep method.
      *
-     * Generated from protobuf field <code>bytes pending_chan_id = 4[json_name = "pending_chan_id"];</code>
+     * Generated from protobuf field <code>bytes pending_chan_id = 4;</code>
      * @return string
      */
     public function getPendingChanId()
@@ -104,7 +160,7 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
      *The pending channel ID of the created channel. This value may be used to
      *further the funding flow manually via the FundingStateStep method.
      *
-     * Generated from protobuf field <code>bytes pending_chan_id = 4[json_name = "pending_chan_id"];</code>
+     * Generated from protobuf field <code>bytes pending_chan_id = 4;</code>
      * @param string $var
      * @return $this
      */

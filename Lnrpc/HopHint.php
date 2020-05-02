@@ -16,35 +16,35 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The public key of the node at the start of the channel.
      *
-     * Generated from protobuf field <code>string node_id = 1[json_name = "node_id"];</code>
+     * Generated from protobuf field <code>string node_id = 1;</code>
      */
-    private $node_id = '';
+    protected $node_id = '';
     /**
      *&#47; The unique identifier of the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      *&#47; The base fee of the channel denominated in millisatoshis.
      *
-     * Generated from protobuf field <code>uint32 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>uint32 fee_base_msat = 3;</code>
      */
-    private $fee_base_msat = 0;
+    protected $fee_base_msat = 0;
     /**
      **
      *The fee rate of the channel for sending one satoshi across it denominated in
      *millionths of a satoshi.
      *
-     * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4[json_name = "fee_proportional_millionths"];</code>
+     * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4;</code>
      */
-    private $fee_proportional_millionths = 0;
+    protected $fee_proportional_millionths = 0;
     /**
      *&#47; The time-lock delta of the channel.
      *
-     * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5[json_name = "cltv_expiry_delta"];</code>
+     * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5;</code>
      */
-    private $cltv_expiry_delta = 0;
+    protected $cltv_expiry_delta = 0;
 
     /**
      * Constructor.
@@ -74,7 +74,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The public key of the node at the start of the channel.
      *
-     * Generated from protobuf field <code>string node_id = 1[json_name = "node_id"];</code>
+     * Generated from protobuf field <code>string node_id = 1;</code>
      * @return string
      */
     public function getNodeId()
@@ -85,7 +85,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The public key of the node at the start of the channel.
      *
-     * Generated from protobuf field <code>string node_id = 1[json_name = "node_id"];</code>
+     * Generated from protobuf field <code>string node_id = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -100,7 +100,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The unique identifier of the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -111,7 +111,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The unique identifier of the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -126,7 +126,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The base fee of the channel denominated in millisatoshis.
      *
-     * Generated from protobuf field <code>uint32 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>uint32 fee_base_msat = 3;</code>
      * @return int
      */
     public function getFeeBaseMsat()
@@ -137,7 +137,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The base fee of the channel denominated in millisatoshis.
      *
-     * Generated from protobuf field <code>uint32 fee_base_msat = 3[json_name = "fee_base_msat"];</code>
+     * Generated from protobuf field <code>uint32 fee_base_msat = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -154,7 +154,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
      *The fee rate of the channel for sending one satoshi across it denominated in
      *millionths of a satoshi.
      *
-     * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4[json_name = "fee_proportional_millionths"];</code>
+     * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4;</code>
      * @return int
      */
     public function getFeeProportionalMillionths()
@@ -167,7 +167,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
      *The fee rate of the channel for sending one satoshi across it denominated in
      *millionths of a satoshi.
      *
-     * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4[json_name = "fee_proportional_millionths"];</code>
+     * Generated from protobuf field <code>uint32 fee_proportional_millionths = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -182,7 +182,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The time-lock delta of the channel.
      *
-     * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5[json_name = "cltv_expiry_delta"];</code>
+     * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5;</code>
      * @return int
      */
     public function getCltvExpiryDelta()
@@ -193,7 +193,7 @@ class HopHint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The time-lock delta of the channel.
      *
-     * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5[json_name = "cltv_expiry_delta"];</code>
+     * Generated from protobuf field <code>uint32 cltv_expiry_delta = 5;</code>
      * @param int $var
      * @return $this
      */

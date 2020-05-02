@@ -18,7 +18,7 @@ class RouteHint extends \Google\Protobuf\Internal\Message
      *A list of hop hints that when chained together can assist in reaching a
      *specific destination.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.HopHint hop_hints = 1[json_name = "hop_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HopHint hop_hints = 1;</code>
      */
     private $hop_hints;
 
@@ -44,7 +44,7 @@ class RouteHint extends \Google\Protobuf\Internal\Message
      *A list of hop hints that when chained together can assist in reaching a
      *specific destination.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.HopHint hop_hints = 1[json_name = "hop_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HopHint hop_hints = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHopHints()
@@ -57,7 +57,7 @@ class RouteHint extends \Google\Protobuf\Internal\Message
      *A list of hop hints that when chained together can assist in reaching a
      *specific destination.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.HopHint hop_hints = 1[json_name = "hop_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HopHint hop_hints = 1;</code>
      * @param \Lnrpc\HopHint[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

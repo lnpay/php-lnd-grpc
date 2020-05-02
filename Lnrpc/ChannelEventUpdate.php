@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5[json_name = "type"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     protected $channel;
 
     /**
@@ -39,7 +39,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.Channel open_channel = 1[json_name = "open_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.Channel open_channel = 1;</code>
      * @return \Lnrpc\Channel
      */
     public function getOpenChannel()
@@ -48,7 +48,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.Channel open_channel = 1[json_name = "open_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.Channel open_channel = 1;</code>
      * @param \Lnrpc\Channel $var
      * @return $this
      */
@@ -61,7 +61,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary closed_channel = 2[json_name = "closed_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary closed_channel = 2;</code>
      * @return \Lnrpc\ChannelCloseSummary
      */
     public function getClosedChannel()
@@ -70,7 +70,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary closed_channel = 2[json_name = "closed_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary closed_channel = 2;</code>
      * @param \Lnrpc\ChannelCloseSummary $var
      * @return $this
      */
@@ -83,7 +83,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint active_channel = 3[json_name = "active_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint active_channel = 3;</code>
      * @return \Lnrpc\ChannelPoint
      */
     public function getActiveChannel()
@@ -92,7 +92,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint active_channel = 3[json_name = "active_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint active_channel = 3;</code>
      * @param \Lnrpc\ChannelPoint $var
      * @return $this
      */
@@ -105,7 +105,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint inactive_channel = 4[json_name = "inactive_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint inactive_channel = 4;</code>
      * @return \Lnrpc\ChannelPoint
      */
     public function getInactiveChannel()
@@ -114,7 +114,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint inactive_channel = 4[json_name = "inactive_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint inactive_channel = 4;</code>
      * @param \Lnrpc\ChannelPoint $var
      * @return $this
      */
@@ -127,7 +127,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingUpdate pending_open_channel = 6[json_name = "pending_open_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate pending_open_channel = 6;</code>
      * @return \Lnrpc\PendingUpdate
      */
     public function getPendingOpenChannel()
@@ -136,7 +136,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.PendingUpdate pending_open_channel = 6[json_name = "pending_open_channel"];</code>
+     * Generated from protobuf field <code>.lnrpc.PendingUpdate pending_open_channel = 6;</code>
      * @param \Lnrpc\PendingUpdate $var
      * @return $this
      */
@@ -149,7 +149,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5[json_name = "type"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5;</code>
      * @return int
      */
     public function getType()
@@ -158,7 +158,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5[json_name = "type"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5;</code>
      * @param int $var
      * @return $this
      */

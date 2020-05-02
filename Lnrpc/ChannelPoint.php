@@ -16,9 +16,9 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The index of the output of the funding transaction
      *
-     * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 3;</code>
      */
-    private $output_index = 0;
+    protected $output_index = 0;
     protected $funding_txid;
 
     /**
@@ -49,7 +49,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *Txid of the funding transaction. When using REST, this field must be
      *encoded as base64.
      *
-     * Generated from protobuf field <code>bytes funding_txid_bytes = 1[json_name = "funding_txid_bytes"];</code>
+     * Generated from protobuf field <code>bytes funding_txid_bytes = 1;</code>
      * @return string
      */
     public function getFundingTxidBytes()
@@ -62,7 +62,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *Txid of the funding transaction. When using REST, this field must be
      *encoded as base64.
      *
-     * Generated from protobuf field <code>bytes funding_txid_bytes = 1[json_name = "funding_txid_bytes"];</code>
+     * Generated from protobuf field <code>bytes funding_txid_bytes = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -79,7 +79,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *Hex-encoded string representing the byte-reversed hash of the funding
      *transaction.
      *
-     * Generated from protobuf field <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * Generated from protobuf field <code>string funding_txid_str = 2;</code>
      * @return string
      */
     public function getFundingTxidStr()
@@ -92,7 +92,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *Hex-encoded string representing the byte-reversed hash of the funding
      *transaction.
      *
-     * Generated from protobuf field <code>string funding_txid_str = 2[json_name = "funding_txid_str"];</code>
+     * Generated from protobuf field <code>string funding_txid_str = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -107,7 +107,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The index of the output of the funding transaction
      *
-     * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 3;</code>
      * @return int
      */
     public function getOutputIndex()
@@ -118,7 +118,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The index of the output of the funding transaction
      *
-     * Generated from protobuf field <code>uint32 output_index = 3[json_name = "output_index"];</code>
+     * Generated from protobuf field <code>uint32 output_index = 3;</code>
      * @param int $var
      * @return $this
      */

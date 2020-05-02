@@ -21,7 +21,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes wallet_password = 1;</code>
      */
-    private $wallet_password = '';
+    protected $wallet_password = '';
     /**
      **
      *recovery_window is an optional argument specifying the address lookahead
@@ -32,7 +32,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 recovery_window = 2;</code>
      */
-    private $recovery_window = 0;
+    protected $recovery_window = 0;
     /**
      **
      *channel_backups is an optional argument that allows clients to recover the
@@ -44,7 +44,7 @@ class UnlockWalletRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChanBackupSnapshot channel_backups = 3;</code>
      */
-    private $channel_backups = null;
+    protected $channel_backups = null;
 
     /**
      * Constructor.

@@ -16,7 +16,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A list of utxos
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1[json_name = "utxos"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
      */
     private $utxos;
 
@@ -38,7 +38,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A list of utxos
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1[json_name = "utxos"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUtxos()
@@ -49,7 +49,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; A list of utxos
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1[json_name = "utxos"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
      * @param \Lnrpc\Utxo[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

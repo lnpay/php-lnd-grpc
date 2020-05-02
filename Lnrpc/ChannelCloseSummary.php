@@ -14,65 +14,85 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The outpoint (txid:index) of the funding transaction. 
+     *&#47; The outpoint (txid:index) of the funding transaction.
      *
-     * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 1;</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
-     *&#47;  The unique channel ID for the channel. 
+     *&#47;  The unique channel ID for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      *&#47; The hash of the genesis block that this channel resides within.
      *
-     * Generated from protobuf field <code>string chain_hash = 3[json_name = "chain_hash"];</code>
+     * Generated from protobuf field <code>string chain_hash = 3;</code>
      */
-    private $chain_hash = '';
+    protected $chain_hash = '';
     /**
      *&#47; The txid of the transaction which ultimately closed this channel.
      *
-     * Generated from protobuf field <code>string closing_tx_hash = 4[json_name = "closing_tx_hash"];</code>
+     * Generated from protobuf field <code>string closing_tx_hash = 4;</code>
      */
-    private $closing_tx_hash = '';
+    protected $closing_tx_hash = '';
     /**
      *&#47; Public key of the remote peer that we formerly had a channel with.
      *
-     * Generated from protobuf field <code>string remote_pubkey = 5[json_name = "remote_pubkey"];</code>
+     * Generated from protobuf field <code>string remote_pubkey = 5;</code>
      */
-    private $remote_pubkey = '';
+    protected $remote_pubkey = '';
     /**
      *&#47; Total capacity of the channel.
      *
-     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      *&#47; Height at which the funding transaction was spent.
      *
-     * Generated from protobuf field <code>uint32 close_height = 7[json_name = "close_height"];</code>
+     * Generated from protobuf field <code>uint32 close_height = 7;</code>
      */
-    private $close_height = 0;
+    protected $close_height = 0;
     /**
      *&#47; Settled balance at the time of channel closure
      *
-     * Generated from protobuf field <code>int64 settled_balance = 8[json_name = "settled_balance"];</code>
+     * Generated from protobuf field <code>int64 settled_balance = 8;</code>
      */
-    private $settled_balance = 0;
+    protected $settled_balance = 0;
     /**
      *&#47; The sum of all the time-locked outputs at the time of channel closure
      *
-     * Generated from protobuf field <code>int64 time_locked_balance = 9[json_name = "time_locked_balance"];</code>
+     * Generated from protobuf field <code>int64 time_locked_balance = 9;</code>
      */
-    private $time_locked_balance = 0;
+    protected $time_locked_balance = 0;
     /**
      *&#47; Details on how the channel was closed.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10[json_name = "close_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10;</code>
      */
-    private $close_type = 0;
+    protected $close_type = 0;
+    /**
+     **
+     *Open initiator is the party that initiated opening the channel. Note that
+     *this value may be unknown if the channel was closed before we migrated to
+     *store open channel information after close.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator open_initiator = 11;</code>
+     */
+    protected $open_initiator = 0;
+    /**
+     **
+     *Close initiator indicates which party initiated the close. This value will
+     *be unknown for channels that were cooperatively closed before we started
+     *tracking cooperative close initiators. Note that this indicates which party
+     *initiated a close, and it is possible for both to initiate cooperative or
+     *force closes, although only one party's close will be confirmed on chain.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator close_initiator = 12;</code>
+     */
+    protected $close_initiator = 0;
 
     /**
      * Constructor.
@@ -81,9 +101,9 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $channel_point
-     *          &#47; The outpoint (txid:index) of the funding transaction. 
+     *          &#47; The outpoint (txid:index) of the funding transaction.
      *     @type int|string $chan_id
-     *          &#47;  The unique channel ID for the channel. 
+     *          &#47;  The unique channel ID for the channel.
      *     @type string $chain_hash
      *          &#47; The hash of the genesis block that this channel resides within.
      *     @type string $closing_tx_hash
@@ -100,6 +120,18 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *          &#47; The sum of all the time-locked outputs at the time of channel closure
      *     @type int $close_type
      *          &#47; Details on how the channel was closed.
+     *     @type int $open_initiator
+     *          *
+     *          Open initiator is the party that initiated opening the channel. Note that
+     *          this value may be unknown if the channel was closed before we migrated to
+     *          store open channel information after close.
+     *     @type int $close_initiator
+     *          *
+     *          Close initiator indicates which party initiated the close. This value will
+     *          be unknown for channels that were cooperatively closed before we started
+     *          tracking cooperative close initiators. Note that this indicates which party
+     *          initiated a close, and it is possible for both to initiate cooperative or
+     *          force closes, although only one party's close will be confirmed on chain.
      * }
      */
     public function __construct($data = NULL) {
@@ -108,9 +140,9 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The outpoint (txid:index) of the funding transaction. 
+     *&#47; The outpoint (txid:index) of the funding transaction.
      *
-     * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 1;</code>
      * @return string
      */
     public function getChannelPoint()
@@ -119,9 +151,9 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The outpoint (txid:index) of the funding transaction. 
+     *&#47; The outpoint (txid:index) of the funding transaction.
      *
-     * Generated from protobuf field <code>string channel_point = 1[json_name = "channel_point"];</code>
+     * Generated from protobuf field <code>string channel_point = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -134,9 +166,9 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47;  The unique channel ID for the channel. 
+     *&#47;  The unique channel ID for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChanId()
@@ -145,9 +177,9 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47;  The unique channel ID for the channel. 
+     *&#47;  The unique channel ID for the channel.
      *
-     * Generated from protobuf field <code>uint64 chan_id = 2[json_name = "chan_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -162,7 +194,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hash of the genesis block that this channel resides within.
      *
-     * Generated from protobuf field <code>string chain_hash = 3[json_name = "chain_hash"];</code>
+     * Generated from protobuf field <code>string chain_hash = 3;</code>
      * @return string
      */
     public function getChainHash()
@@ -173,7 +205,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hash of the genesis block that this channel resides within.
      *
-     * Generated from protobuf field <code>string chain_hash = 3[json_name = "chain_hash"];</code>
+     * Generated from protobuf field <code>string chain_hash = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -188,7 +220,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The txid of the transaction which ultimately closed this channel.
      *
-     * Generated from protobuf field <code>string closing_tx_hash = 4[json_name = "closing_tx_hash"];</code>
+     * Generated from protobuf field <code>string closing_tx_hash = 4;</code>
      * @return string
      */
     public function getClosingTxHash()
@@ -199,7 +231,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The txid of the transaction which ultimately closed this channel.
      *
-     * Generated from protobuf field <code>string closing_tx_hash = 4[json_name = "closing_tx_hash"];</code>
+     * Generated from protobuf field <code>string closing_tx_hash = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -214,7 +246,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Public key of the remote peer that we formerly had a channel with.
      *
-     * Generated from protobuf field <code>string remote_pubkey = 5[json_name = "remote_pubkey"];</code>
+     * Generated from protobuf field <code>string remote_pubkey = 5;</code>
      * @return string
      */
     public function getRemotePubkey()
@@ -225,7 +257,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Public key of the remote peer that we formerly had a channel with.
      *
-     * Generated from protobuf field <code>string remote_pubkey = 5[json_name = "remote_pubkey"];</code>
+     * Generated from protobuf field <code>string remote_pubkey = 5;</code>
      * @param string $var
      * @return $this
      */
@@ -240,7 +272,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Total capacity of the channel.
      *
-     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6;</code>
      * @return int|string
      */
     public function getCapacity()
@@ -251,7 +283,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Total capacity of the channel.
      *
-     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -266,7 +298,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Height at which the funding transaction was spent.
      *
-     * Generated from protobuf field <code>uint32 close_height = 7[json_name = "close_height"];</code>
+     * Generated from protobuf field <code>uint32 close_height = 7;</code>
      * @return int
      */
     public function getCloseHeight()
@@ -277,7 +309,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Height at which the funding transaction was spent.
      *
-     * Generated from protobuf field <code>uint32 close_height = 7[json_name = "close_height"];</code>
+     * Generated from protobuf field <code>uint32 close_height = 7;</code>
      * @param int $var
      * @return $this
      */
@@ -292,7 +324,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Settled balance at the time of channel closure
      *
-     * Generated from protobuf field <code>int64 settled_balance = 8[json_name = "settled_balance"];</code>
+     * Generated from protobuf field <code>int64 settled_balance = 8;</code>
      * @return int|string
      */
     public function getSettledBalance()
@@ -303,7 +335,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Settled balance at the time of channel closure
      *
-     * Generated from protobuf field <code>int64 settled_balance = 8[json_name = "settled_balance"];</code>
+     * Generated from protobuf field <code>int64 settled_balance = 8;</code>
      * @param int|string $var
      * @return $this
      */
@@ -318,7 +350,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The sum of all the time-locked outputs at the time of channel closure
      *
-     * Generated from protobuf field <code>int64 time_locked_balance = 9[json_name = "time_locked_balance"];</code>
+     * Generated from protobuf field <code>int64 time_locked_balance = 9;</code>
      * @return int|string
      */
     public function getTimeLockedBalance()
@@ -329,7 +361,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The sum of all the time-locked outputs at the time of channel closure
      *
-     * Generated from protobuf field <code>int64 time_locked_balance = 9[json_name = "time_locked_balance"];</code>
+     * Generated from protobuf field <code>int64 time_locked_balance = 9;</code>
      * @param int|string $var
      * @return $this
      */
@@ -344,7 +376,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Details on how the channel was closed.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10[json_name = "close_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10;</code>
      * @return int
      */
     public function getCloseType()
@@ -355,7 +387,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Details on how the channel was closed.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10[json_name = "close_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -363,6 +395,74 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Lnrpc\ChannelCloseSummary_ClosureType::class);
         $this->close_type = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Open initiator is the party that initiated opening the channel. Note that
+     *this value may be unknown if the channel was closed before we migrated to
+     *store open channel information after close.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator open_initiator = 11;</code>
+     * @return int
+     */
+    public function getOpenInitiator()
+    {
+        return $this->open_initiator;
+    }
+
+    /**
+     **
+     *Open initiator is the party that initiated opening the channel. Note that
+     *this value may be unknown if the channel was closed before we migrated to
+     *store open channel information after close.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator open_initiator = 11;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOpenInitiator($var)
+    {
+        GPBUtil::checkEnum($var, \Lnrpc\Initiator::class);
+        $this->open_initiator = $var;
+
+        return $this;
+    }
+
+    /**
+     **
+     *Close initiator indicates which party initiated the close. This value will
+     *be unknown for channels that were cooperatively closed before we started
+     *tracking cooperative close initiators. Note that this indicates which party
+     *initiated a close, and it is possible for both to initiate cooperative or
+     *force closes, although only one party's close will be confirmed on chain.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator close_initiator = 12;</code>
+     * @return int
+     */
+    public function getCloseInitiator()
+    {
+        return $this->close_initiator;
+    }
+
+    /**
+     **
+     *Close initiator indicates which party initiated the close. This value will
+     *be unknown for channels that were cooperatively closed before we started
+     *tracking cooperative close initiators. Note that this indicates which party
+     *initiated a close, and it is possible for both to initiate cooperative or
+     *force closes, although only one party's close will be confirmed on chain.
+     *
+     * Generated from protobuf field <code>.lnrpc.Initiator close_initiator = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCloseInitiator($var)
+    {
+        GPBUtil::checkEnum($var, \Lnrpc\Initiator::class);
+        $this->close_initiator = $var;
 
         return $this;
     }

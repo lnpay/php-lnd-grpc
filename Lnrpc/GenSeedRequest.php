@@ -21,7 +21,7 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes aezeed_passphrase = 1;</code>
      */
-    private $aezeed_passphrase = '';
+    protected $aezeed_passphrase = '';
     /**
      **
      *seed_entropy is an optional 16-bytes generated via CSPRNG. If not
@@ -30,7 +30,7 @@ class GenSeedRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes seed_entropy = 2;</code>
      */
-    private $seed_entropy = '';
+    protected $seed_entropy = '';
 
     /**
      * Constructor.

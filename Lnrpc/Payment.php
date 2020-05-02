@@ -16,87 +16,94 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The payment hash
      *
-     * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 1;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      *&#47; Deprecated, use value_sat or value_msat.
      *
-     * Generated from protobuf field <code>int64 value = 2[json_name = "value", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 value = 2 [deprecated = true];</code>
      */
-    private $value = 0;
+    protected $value = 0;
     /**
      *&#47; Deprecated, use creation_time_ns
      *
-     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3 [deprecated = true];</code>
      */
-    private $creation_date = 0;
-    /**
-     *&#47; The path this payment took.
-     *
-     * Generated from protobuf field <code>repeated string path = 4[json_name = "path", deprecated = true];</code>
-     */
-    private $path;
+    protected $creation_date = 0;
     /**
      *&#47; Deprecated, use fee_sat or fee_msat.
      *
-     * Generated from protobuf field <code>int64 fee = 5[json_name = "fee", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 fee = 5 [deprecated = true];</code>
      */
-    private $fee = 0;
+    protected $fee = 0;
     /**
      *&#47; The payment preimage
      *
-     * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>string payment_preimage = 6;</code>
      */
-    private $payment_preimage = '';
+    protected $payment_preimage = '';
     /**
      *&#47; The value of the payment in satoshis
      *
-     * Generated from protobuf field <code>int64 value_sat = 7[json_name = "value_sat"];</code>
+     * Generated from protobuf field <code>int64 value_sat = 7;</code>
      */
-    private $value_sat = 0;
+    protected $value_sat = 0;
     /**
      *&#47; The value of the payment in milli-satoshis
      *
-     * Generated from protobuf field <code>int64 value_msat = 8[json_name = "value_msat"];</code>
+     * Generated from protobuf field <code>int64 value_msat = 8;</code>
      */
-    private $value_msat = 0;
+    protected $value_msat = 0;
     /**
      *&#47; The optional payment request being fulfilled.
      *
-     * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 9;</code>
      */
-    private $payment_request = '';
+    protected $payment_request = '';
     /**
      * The status of the payment.
      *
-     * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10[json_name = "status"];</code>
+     * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10;</code>
      */
-    private $status = 0;
+    protected $status = 0;
     /**
      *&#47;  The fee paid for this payment in satoshis
      *
-     * Generated from protobuf field <code>int64 fee_sat = 11[json_name = "fee_sat"];</code>
+     * Generated from protobuf field <code>int64 fee_sat = 11;</code>
      */
-    private $fee_sat = 0;
+    protected $fee_sat = 0;
     /**
      *&#47;  The fee paid for this payment in milli-satoshis
      *
-     * Generated from protobuf field <code>int64 fee_msat = 12[json_name = "fee_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_msat = 12;</code>
      */
-    private $fee_msat = 0;
+    protected $fee_msat = 0;
     /**
      *&#47; The time in UNIX nanoseconds at which the payment was created.
      *
-     * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
+     * Generated from protobuf field <code>int64 creation_time_ns = 13;</code>
      */
-    private $creation_time_ns = 0;
+    protected $creation_time_ns = 0;
     /**
-     *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *&#47; The HTLCs made in attempt to settle the payment.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14[json_name = "htlcs"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14;</code>
      */
     private $htlcs;
+    /**
+     **
+     *The creation index of this payment. Each payment can be uniquely identified
+     *by this index, which may not strictly increment by 1 for payments made in
+     *older versions of lnd.
+     *
+     * Generated from protobuf field <code>uint64 payment_index = 15;</code>
+     */
+    protected $payment_index = 0;
+    /**
+     * Generated from protobuf field <code>.lnrpc.PaymentFailureReason failure_reason = 16;</code>
+     */
+    protected $failure_reason = 0;
 
     /**
      * Constructor.
@@ -110,8 +117,6 @@ class Payment extends \Google\Protobuf\Internal\Message
      *          &#47; Deprecated, use value_sat or value_msat.
      *     @type int|string $creation_date
      *          &#47; Deprecated, use creation_time_ns
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $path
-     *          &#47; The path this payment took.
      *     @type int|string $fee
      *          &#47; Deprecated, use fee_sat or fee_msat.
      *     @type string $payment_preimage
@@ -131,7 +136,13 @@ class Payment extends \Google\Protobuf\Internal\Message
      *     @type int|string $creation_time_ns
      *          &#47; The time in UNIX nanoseconds at which the payment was created.
      *     @type \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $htlcs
-     *          &#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *          &#47; The HTLCs made in attempt to settle the payment.
+     *     @type int|string $payment_index
+     *          *
+     *          The creation index of this payment. Each payment can be uniquely identified
+     *          by this index, which may not strictly increment by 1 for payments made in
+     *          older versions of lnd.
+     *     @type int $failure_reason
      * }
      */
     public function __construct($data = NULL) {
@@ -142,7 +153,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The payment hash
      *
-     * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 1;</code>
      * @return string
      */
     public function getPaymentHash()
@@ -153,7 +164,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The payment hash
      *
-     * Generated from protobuf field <code>string payment_hash = 1[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -168,7 +179,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Deprecated, use value_sat or value_msat.
      *
-     * Generated from protobuf field <code>int64 value = 2[json_name = "value", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 value = 2 [deprecated = true];</code>
      * @return int|string
      */
     public function getValue()
@@ -179,7 +190,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Deprecated, use value_sat or value_msat.
      *
-     * Generated from protobuf field <code>int64 value = 2[json_name = "value", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 value = 2 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -194,7 +205,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Deprecated, use creation_time_ns
      *
-     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3 [deprecated = true];</code>
      * @return int|string
      */
     public function getCreationDate()
@@ -205,7 +216,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Deprecated, use creation_time_ns
      *
-     * Generated from protobuf field <code>int64 creation_date = 3[json_name = "creation_date", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 creation_date = 3 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -218,35 +229,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The path this payment took.
-     *
-     * Generated from protobuf field <code>repeated string path = 4[json_name = "path", deprecated = true];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
-     */
-    public function getPath()
-    {
-        return $this->path;
-    }
-
-    /**
-     *&#47; The path this payment took.
-     *
-     * Generated from protobuf field <code>repeated string path = 4[json_name = "path", deprecated = true];</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
-     * @return $this
-     */
-    public function setPath($var)
-    {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->path = $arr;
-
-        return $this;
-    }
-
-    /**
      *&#47; Deprecated, use fee_sat or fee_msat.
      *
-     * Generated from protobuf field <code>int64 fee = 5[json_name = "fee", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 fee = 5 [deprecated = true];</code>
      * @return int|string
      */
     public function getFee()
@@ -257,7 +242,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Deprecated, use fee_sat or fee_msat.
      *
-     * Generated from protobuf field <code>int64 fee = 5[json_name = "fee", deprecated = true];</code>
+     * Generated from protobuf field <code>int64 fee = 5 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -272,7 +257,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The payment preimage
      *
-     * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>string payment_preimage = 6;</code>
      * @return string
      */
     public function getPaymentPreimage()
@@ -283,7 +268,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The payment preimage
      *
-     * Generated from protobuf field <code>string payment_preimage = 6[json_name = "payment_preimage"];</code>
+     * Generated from protobuf field <code>string payment_preimage = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -298,7 +283,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The value of the payment in satoshis
      *
-     * Generated from protobuf field <code>int64 value_sat = 7[json_name = "value_sat"];</code>
+     * Generated from protobuf field <code>int64 value_sat = 7;</code>
      * @return int|string
      */
     public function getValueSat()
@@ -309,7 +294,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The value of the payment in satoshis
      *
-     * Generated from protobuf field <code>int64 value_sat = 7[json_name = "value_sat"];</code>
+     * Generated from protobuf field <code>int64 value_sat = 7;</code>
      * @param int|string $var
      * @return $this
      */
@@ -324,7 +309,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The value of the payment in milli-satoshis
      *
-     * Generated from protobuf field <code>int64 value_msat = 8[json_name = "value_msat"];</code>
+     * Generated from protobuf field <code>int64 value_msat = 8;</code>
      * @return int|string
      */
     public function getValueMsat()
@@ -335,7 +320,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The value of the payment in milli-satoshis
      *
-     * Generated from protobuf field <code>int64 value_msat = 8[json_name = "value_msat"];</code>
+     * Generated from protobuf field <code>int64 value_msat = 8;</code>
      * @param int|string $var
      * @return $this
      */
@@ -350,7 +335,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The optional payment request being fulfilled.
      *
-     * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 9;</code>
      * @return string
      */
     public function getPaymentRequest()
@@ -361,7 +346,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The optional payment request being fulfilled.
      *
-     * Generated from protobuf field <code>string payment_request = 9[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 9;</code>
      * @param string $var
      * @return $this
      */
@@ -376,7 +361,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      * The status of the payment.
      *
-     * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10[json_name = "status"];</code>
+     * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10;</code>
      * @return int
      */
     public function getStatus()
@@ -387,7 +372,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      * The status of the payment.
      *
-     * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10[json_name = "status"];</code>
+     * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -402,7 +387,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47;  The fee paid for this payment in satoshis
      *
-     * Generated from protobuf field <code>int64 fee_sat = 11[json_name = "fee_sat"];</code>
+     * Generated from protobuf field <code>int64 fee_sat = 11;</code>
      * @return int|string
      */
     public function getFeeSat()
@@ -413,7 +398,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47;  The fee paid for this payment in satoshis
      *
-     * Generated from protobuf field <code>int64 fee_sat = 11[json_name = "fee_sat"];</code>
+     * Generated from protobuf field <code>int64 fee_sat = 11;</code>
      * @param int|string $var
      * @return $this
      */
@@ -428,7 +413,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47;  The fee paid for this payment in milli-satoshis
      *
-     * Generated from protobuf field <code>int64 fee_msat = 12[json_name = "fee_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_msat = 12;</code>
      * @return int|string
      */
     public function getFeeMsat()
@@ -439,7 +424,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47;  The fee paid for this payment in milli-satoshis
      *
-     * Generated from protobuf field <code>int64 fee_msat = 12[json_name = "fee_msat"];</code>
+     * Generated from protobuf field <code>int64 fee_msat = 12;</code>
      * @param int|string $var
      * @return $this
      */
@@ -454,7 +439,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The time in UNIX nanoseconds at which the payment was created.
      *
-     * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
+     * Generated from protobuf field <code>int64 creation_time_ns = 13;</code>
      * @return int|string
      */
     public function getCreationTimeNs()
@@ -465,7 +450,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The time in UNIX nanoseconds at which the payment was created.
      *
-     * Generated from protobuf field <code>int64 creation_time_ns = 13[json_name = "creation_time_ns"];</code>
+     * Generated from protobuf field <code>int64 creation_time_ns = 13;</code>
      * @param int|string $var
      * @return $this
      */
@@ -478,9 +463,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *&#47; The HTLCs made in attempt to settle the payment.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14[json_name = "htlcs"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getHtlcs()
@@ -489,9 +474,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
+     *&#47; The HTLCs made in attempt to settle the payment.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14[json_name = "htlcs"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 14;</code>
      * @param \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -499,6 +484,60 @@ class Payment extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\HTLCAttempt::class);
         $this->htlcs = $arr;
+
+        return $this;
+    }
+
+    /**
+     **
+     *The creation index of this payment. Each payment can be uniquely identified
+     *by this index, which may not strictly increment by 1 for payments made in
+     *older versions of lnd.
+     *
+     * Generated from protobuf field <code>uint64 payment_index = 15;</code>
+     * @return int|string
+     */
+    public function getPaymentIndex()
+    {
+        return $this->payment_index;
+    }
+
+    /**
+     **
+     *The creation index of this payment. Each payment can be uniquely identified
+     *by this index, which may not strictly increment by 1 for payments made in
+     *older versions of lnd.
+     *
+     * Generated from protobuf field <code>uint64 payment_index = 15;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setPaymentIndex($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->payment_index = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.lnrpc.PaymentFailureReason failure_reason = 16;</code>
+     * @return int
+     */
+    public function getFailureReason()
+    {
+        return $this->failure_reason;
+    }
+
+    /**
+     * Generated from protobuf field <code>.lnrpc.PaymentFailureReason failure_reason = 16;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFailureReason($var)
+    {
+        GPBUtil::checkEnum($var, \Lnrpc\PaymentFailureReason::class);
+        $this->failure_reason = $var;
 
         return $this;
     }

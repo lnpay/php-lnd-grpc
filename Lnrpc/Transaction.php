@@ -16,57 +16,57 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction hash
      *
-     * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
+     * Generated from protobuf field <code>string tx_hash = 1;</code>
      */
-    private $tx_hash = '';
+    protected $tx_hash = '';
     /**
      *&#47; The transaction amount, denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    private $amount = 0;
+    protected $amount = 0;
     /**
      *&#47; The number of confirmations
      *
-     * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
+     * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      */
-    private $num_confirmations = 0;
+    protected $num_confirmations = 0;
     /**
      *&#47; The hash of the block this transaction was included in
      *
-     * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
+     * Generated from protobuf field <code>string block_hash = 4;</code>
      */
-    private $block_hash = '';
+    protected $block_hash = '';
     /**
      *&#47; The height of the block this transaction was included in
      *
-     * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
+     * Generated from protobuf field <code>int32 block_height = 5;</code>
      */
-    private $block_height = 0;
+    protected $block_height = 0;
     /**
-     *&#47; Timestamp of this transaction 
+     *&#47; Timestamp of this transaction
      *
-     * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
+     * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      */
-    private $time_stamp = 0;
+    protected $time_stamp = 0;
     /**
      *&#47; Fees paid for this transaction
      *
-     * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 7;</code>
      */
-    private $total_fees = 0;
+    protected $total_fees = 0;
     /**
      *&#47; Addresses that received funds for this transaction
      *
-     * Generated from protobuf field <code>repeated string dest_addresses = 8[json_name = "dest_addresses"];</code>
+     * Generated from protobuf field <code>repeated string dest_addresses = 8;</code>
      */
     private $dest_addresses;
     /**
      *&#47; The raw transaction hex.
      *
-     * Generated from protobuf field <code>string raw_tx_hex = 9[json_name = "raw_tx_hex"];</code>
+     * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      */
-    private $raw_tx_hex = '';
+    protected $raw_tx_hex = '';
 
     /**
      * Constructor.
@@ -85,7 +85,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type int $block_height
      *          &#47; The height of the block this transaction was included in
      *     @type int|string $time_stamp
-     *          &#47; Timestamp of this transaction 
+     *          &#47; Timestamp of this transaction
      *     @type int|string $total_fees
      *          &#47; Fees paid for this transaction
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $dest_addresses
@@ -102,7 +102,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction hash
      *
-     * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
+     * Generated from protobuf field <code>string tx_hash = 1;</code>
      * @return string
      */
     public function getTxHash()
@@ -113,7 +113,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction hash
      *
-     * Generated from protobuf field <code>string tx_hash = 1[json_name = "tx_hash"];</code>
+     * Generated from protobuf field <code>string tx_hash = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -128,7 +128,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction amount, denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      * @return int|string
      */
     public function getAmount()
@@ -139,7 +139,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The transaction amount, denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 amount = 2[json_name = "amount"];</code>
+     * Generated from protobuf field <code>int64 amount = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -154,7 +154,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The number of confirmations
      *
-     * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
+     * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      * @return int
      */
     public function getNumConfirmations()
@@ -165,7 +165,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The number of confirmations
      *
-     * Generated from protobuf field <code>int32 num_confirmations = 3[json_name = "num_confirmations"];</code>
+     * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -180,7 +180,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hash of the block this transaction was included in
      *
-     * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
+     * Generated from protobuf field <code>string block_hash = 4;</code>
      * @return string
      */
     public function getBlockHash()
@@ -191,7 +191,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hash of the block this transaction was included in
      *
-     * Generated from protobuf field <code>string block_hash = 4[json_name = "block_hash"];</code>
+     * Generated from protobuf field <code>string block_hash = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -206,7 +206,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The height of the block this transaction was included in
      *
-     * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
+     * Generated from protobuf field <code>int32 block_height = 5;</code>
      * @return int
      */
     public function getBlockHeight()
@@ -217,7 +217,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The height of the block this transaction was included in
      *
-     * Generated from protobuf field <code>int32 block_height = 5[json_name = "block_height"];</code>
+     * Generated from protobuf field <code>int32 block_height = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -230,9 +230,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of this transaction 
+     *&#47; Timestamp of this transaction
      *
-     * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
+     * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      * @return int|string
      */
     public function getTimeStamp()
@@ -241,9 +241,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of this transaction 
+     *&#47; Timestamp of this transaction
      *
-     * Generated from protobuf field <code>int64 time_stamp = 6[json_name = "time_stamp"];</code>
+     * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -258,7 +258,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Fees paid for this transaction
      *
-     * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 7;</code>
      * @return int|string
      */
     public function getTotalFees()
@@ -269,7 +269,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Fees paid for this transaction
      *
-     * Generated from protobuf field <code>int64 total_fees = 7[json_name = "total_fees"];</code>
+     * Generated from protobuf field <code>int64 total_fees = 7;</code>
      * @param int|string $var
      * @return $this
      */
@@ -284,7 +284,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Addresses that received funds for this transaction
      *
-     * Generated from protobuf field <code>repeated string dest_addresses = 8[json_name = "dest_addresses"];</code>
+     * Generated from protobuf field <code>repeated string dest_addresses = 8;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDestAddresses()
@@ -295,7 +295,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Addresses that received funds for this transaction
      *
-     * Generated from protobuf field <code>repeated string dest_addresses = 8[json_name = "dest_addresses"];</code>
+     * Generated from protobuf field <code>repeated string dest_addresses = 8;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -310,7 +310,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The raw transaction hex.
      *
-     * Generated from protobuf field <code>string raw_tx_hex = 9[json_name = "raw_tx_hex"];</code>
+     * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      * @return string
      */
     public function getRawTxHex()
@@ -321,7 +321,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The raw transaction hex.
      *
-     * Generated from protobuf field <code>string raw_tx_hex = 9[json_name = "raw_tx_hex"];</code>
+     * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      * @param string $var
      * @return $this
      */

@@ -20,17 +20,17 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *Deprecated now that the REST gateway supports base64 encoding of bytes
      *fields.
      *
-     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1 [deprecated = true];</code>
      */
-    private $r_hash_str = '';
+    protected $r_hash_str = '';
     /**
      **
      *The payment hash of the invoice to be looked up. When using REST, this field
      *must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2;</code>
      */
-    private $r_hash = '';
+    protected $r_hash = '';
 
     /**
      * Constructor.
@@ -62,7 +62,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *Deprecated now that the REST gateway supports base64 encoding of bytes
      *fields.
      *
-     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1 [deprecated = true];</code>
      * @return string
      */
     public function getRHashStr()
@@ -77,7 +77,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *Deprecated now that the REST gateway supports base64 encoding of bytes
      *fields.
      *
-     * Generated from protobuf field <code>string r_hash_str = 1[json_name = "r_hash_str", deprecated = true];</code>
+     * Generated from protobuf field <code>string r_hash_str = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -94,7 +94,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *The payment hash of the invoice to be looked up. When using REST, this field
      *must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @return string
      */
     public function getRHash()
@@ -107,7 +107,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *The payment hash of the invoice to be looked up. When using REST, this field
      *must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes r_hash = 2[json_name = "r_hash"];</code>
+     * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @param string $var
      * @return $this
      */

@@ -18,7 +18,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *A list of invoices from the time slice of the time series specified in the
      *request.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1;</code>
      */
     private $invoices;
     /**
@@ -26,17 +26,17 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *The index of the last item in the set of returned invoices. This can be used
      *to seek further, pagination style.
      *
-     * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
+     * Generated from protobuf field <code>uint64 last_index_offset = 2;</code>
      */
-    private $last_index_offset = 0;
+    protected $last_index_offset = 0;
     /**
      **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek backwards, pagination style.
      *
-     * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
+     * Generated from protobuf field <code>uint64 first_index_offset = 3;</code>
      */
-    private $first_index_offset = 0;
+    protected $first_index_offset = 0;
 
     /**
      * Constructor.
@@ -68,7 +68,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *A list of invoices from the time slice of the time series specified in the
      *request.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getInvoices()
@@ -81,7 +81,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *A list of invoices from the time slice of the time series specified in the
      *request.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1[json_name = "invoices"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Invoice invoices = 1;</code>
      * @param \Lnrpc\Invoice[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -98,7 +98,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *The index of the last item in the set of returned invoices. This can be used
      *to seek further, pagination style.
      *
-     * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
+     * Generated from protobuf field <code>uint64 last_index_offset = 2;</code>
      * @return int|string
      */
     public function getLastIndexOffset()
@@ -111,7 +111,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *The index of the last item in the set of returned invoices. This can be used
      *to seek further, pagination style.
      *
-     * Generated from protobuf field <code>uint64 last_index_offset = 2[json_name = "last_index_offset"];</code>
+     * Generated from protobuf field <code>uint64 last_index_offset = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -128,7 +128,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *The index of the last item in the set of returned invoices. This can be used
      *to seek backwards, pagination style.
      *
-     * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
+     * Generated from protobuf field <code>uint64 first_index_offset = 3;</code>
      * @return int|string
      */
     public function getFirstIndexOffset()
@@ -141,7 +141,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *The index of the last item in the set of returned invoices. This can be used
      *to seek backwards, pagination style.
      *
-     * Generated from protobuf field <code>uint64 first_index_offset = 3[json_name = "first_index_offset"];</code>
+     * Generated from protobuf field <code>uint64 first_index_offset = 3;</code>
      * @param int|string $var
      * @return $this
      */

@@ -16,7 +16,7 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of transactions relevant to the wallet.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1;</code>
      */
     private $transactions;
 
@@ -38,7 +38,7 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of transactions relevant to the wallet.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTransactions()
@@ -49,7 +49,7 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of transactions relevant to the wallet.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1[json_name = "transactions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1;</code>
      * @param \Lnrpc\Transaction[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

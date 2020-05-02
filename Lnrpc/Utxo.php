@@ -16,39 +16,39 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The type of address
      *
-     * Generated from protobuf field <code>.lnrpc.AddressType type = 1[json_name = "address_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      */
-    private $type = 0;
+    protected $address_type = 0;
     /**
      *&#47; The address
      *
-     * Generated from protobuf field <code>string address = 2[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 2;</code>
      */
-    private $address = '';
+    protected $address = '';
     /**
      *&#47; The value of the unspent coin in satoshis
      *
-     * Generated from protobuf field <code>int64 amount_sat = 3[json_name = "amount_sat"];</code>
+     * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      */
-    private $amount_sat = 0;
+    protected $amount_sat = 0;
     /**
      *&#47; The pkscript in hex
      *
-     * Generated from protobuf field <code>string pk_script = 4[json_name = "pk_script"];</code>
+     * Generated from protobuf field <code>string pk_script = 4;</code>
      */
-    private $pk_script = '';
+    protected $pk_script = '';
     /**
      *&#47; The outpoint in format txid:n
      *
-     * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5[json_name = "outpoint"];</code>
+     * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      *&#47; The number of confirmations for the Utxo
      *
-     * Generated from protobuf field <code>int64 confirmations = 6[json_name = "confirmations"];</code>
+     * Generated from protobuf field <code>int64 confirmations = 6;</code>
      */
-    private $confirmations = 0;
+    protected $confirmations = 0;
 
     /**
      * Constructor.
@@ -56,7 +56,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $type
+     *     @type int $address_type
      *          &#47; The type of address
      *     @type string $address
      *          &#47; The address
@@ -78,25 +78,25 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The type of address
      *
-     * Generated from protobuf field <code>.lnrpc.AddressType type = 1[json_name = "address_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      * @return int
      */
-    public function getType()
+    public function getAddressType()
     {
-        return $this->type;
+        return $this->address_type;
     }
 
     /**
      *&#47; The type of address
      *
-     * Generated from protobuf field <code>.lnrpc.AddressType type = 1[json_name = "address_type"];</code>
+     * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      * @param int $var
      * @return $this
      */
-    public function setType($var)
+    public function setAddressType($var)
     {
         GPBUtil::checkEnum($var, \Lnrpc\AddressType::class);
-        $this->type = $var;
+        $this->address_type = $var;
 
         return $this;
     }
@@ -104,7 +104,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The address
      *
-     * Generated from protobuf field <code>string address = 2[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 2;</code>
      * @return string
      */
     public function getAddress()
@@ -115,7 +115,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The address
      *
-     * Generated from protobuf field <code>string address = 2[json_name = "address"];</code>
+     * Generated from protobuf field <code>string address = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -130,7 +130,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The value of the unspent coin in satoshis
      *
-     * Generated from protobuf field <code>int64 amount_sat = 3[json_name = "amount_sat"];</code>
+     * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      * @return int|string
      */
     public function getAmountSat()
@@ -141,7 +141,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The value of the unspent coin in satoshis
      *
-     * Generated from protobuf field <code>int64 amount_sat = 3[json_name = "amount_sat"];</code>
+     * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -156,7 +156,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pkscript in hex
      *
-     * Generated from protobuf field <code>string pk_script = 4[json_name = "pk_script"];</code>
+     * Generated from protobuf field <code>string pk_script = 4;</code>
      * @return string
      */
     public function getPkScript()
@@ -167,7 +167,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The pkscript in hex
      *
-     * Generated from protobuf field <code>string pk_script = 4[json_name = "pk_script"];</code>
+     * Generated from protobuf field <code>string pk_script = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -182,7 +182,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The outpoint in format txid:n
      *
-     * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5[json_name = "outpoint"];</code>
+     * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      * @return \Lnrpc\OutPoint
      */
     public function getOutpoint()
@@ -193,7 +193,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The outpoint in format txid:n
      *
-     * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5[json_name = "outpoint"];</code>
+     * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      * @param \Lnrpc\OutPoint $var
      * @return $this
      */
@@ -208,7 +208,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The number of confirmations for the Utxo
      *
-     * Generated from protobuf field <code>int64 confirmations = 6[json_name = "confirmations"];</code>
+     * Generated from protobuf field <code>int64 confirmations = 6;</code>
      * @return int|string
      */
     public function getConfirmations()
@@ -219,7 +219,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The number of confirmations for the Utxo
      *
-     * Generated from protobuf field <code>int64 confirmations = 6[json_name = "confirmations"];</code>
+     * Generated from protobuf field <code>int64 confirmations = 6;</code>
      * @param int|string $var
      * @return $this
      */

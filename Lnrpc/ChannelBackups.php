@@ -17,7 +17,7 @@ class ChannelBackups extends \Google\Protobuf\Internal\Message
      **
      *A set of single-chan static channel backups.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1[json_name = "chan_backups"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1;</code>
      */
     private $chan_backups;
 
@@ -41,7 +41,7 @@ class ChannelBackups extends \Google\Protobuf\Internal\Message
      **
      *A set of single-chan static channel backups.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1[json_name = "chan_backups"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChanBackups()
@@ -53,7 +53,7 @@ class ChannelBackups extends \Google\Protobuf\Internal\Message
      **
      *A set of single-chan static channel backups.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1[json_name = "chan_backups"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1;</code>
      * @param \Lnrpc\ChannelBackup[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

@@ -16,9 +16,9 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hex encoded macaroon, serialized in binary format.
      *
-     * Generated from protobuf field <code>string macaroon = 1[json_name = "macaroon"];</code>
+     * Generated from protobuf field <code>string macaroon = 1;</code>
      */
-    private $macaroon = '';
+    protected $macaroon = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hex encoded macaroon, serialized in binary format.
      *
-     * Generated from protobuf field <code>string macaroon = 1[json_name = "macaroon"];</code>
+     * Generated from protobuf field <code>string macaroon = 1;</code>
      * @return string
      */
     public function getMacaroon()
@@ -49,7 +49,7 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The hex encoded macaroon, serialized in binary format.
      *
-     * Generated from protobuf field <code>string macaroon = 1[json_name = "macaroon"];</code>
+     * Generated from protobuf field <code>string macaroon = 1;</code>
      * @param string $var
      * @return $this
      */

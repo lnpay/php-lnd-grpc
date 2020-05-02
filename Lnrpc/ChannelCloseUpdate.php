@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>bytes closing_txid = 1;</code>
      */
-    private $closing_txid = '';
+    protected $closing_txid = '';
     /**
-     * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
+     * Generated from protobuf field <code>bool success = 2;</code>
      */
-    private $success = false;
+    protected $success = false;
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>bytes closing_txid = 1;</code>
      * @return string
      */
     public function getClosingTxid()
@@ -47,7 +47,7 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes closing_txid = 1[json_name = "closing_txid"];</code>
+     * Generated from protobuf field <code>bytes closing_txid = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -60,7 +60,7 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
+     * Generated from protobuf field <code>bool success = 2;</code>
      * @return bool
      */
     public function getSuccess()
@@ -69,7 +69,7 @@ class ChannelCloseUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool success = 2[json_name = "success"];</code>
+     * Generated from protobuf field <code>bool success = 2;</code>
      * @param bool $var
      * @return $this
      */

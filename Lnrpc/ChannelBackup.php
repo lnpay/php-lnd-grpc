@@ -17,9 +17,9 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      **
      *Identifies the channel that this backup belongs to.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
     /**
      **
      *Is an encrypted single-chan backup. this can be passed to
@@ -27,9 +27,9 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *order to trigger the recovery protocol. When using REST, this field must be
      *encoded as base64.
      *
-     * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
+     * Generated from protobuf field <code>bytes chan_backup = 2;</code>
      */
-    private $chan_backup = '';
+    protected $chan_backup = '';
 
     /**
      * Constructor.
@@ -57,7 +57,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      **
      *Identifies the channel that this backup belongs to.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      * @return \Lnrpc\ChannelPoint
      */
     public function getChanPoint()
@@ -69,7 +69,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      **
      *Identifies the channel that this backup belongs to.
      *
-     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      * @param \Lnrpc\ChannelPoint $var
      * @return $this
      */
@@ -88,7 +88,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *order to trigger the recovery protocol. When using REST, this field must be
      *encoded as base64.
      *
-     * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
+     * Generated from protobuf field <code>bytes chan_backup = 2;</code>
      * @return string
      */
     public function getChanBackup()
@@ -103,7 +103,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *order to trigger the recovery protocol. When using REST, this field must be
      *encoded as base64.
      *
-     * Generated from protobuf field <code>bytes chan_backup = 2[json_name = "chan_backup"];</code>
+     * Generated from protobuf field <code>bytes chan_backup = 2;</code>
      * @param string $var
      * @return $this
      */

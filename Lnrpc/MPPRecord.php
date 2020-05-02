@@ -20,9 +20,9 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *subpayments, and match the payment_addr provided in the receiver's invoice.
      *The same payment_addr must be used on all subpayments.
      *
-     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      */
-    private $payment_addr = '';
+    protected $payment_addr = '';
     /**
      **
      *The total amount in milli-satoshis being sent as part of a larger multi-path
@@ -30,9 +30,9 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *and payment_hash sum exactly to total_amt_msat. The same
      *total_amt_msat must be used on all subpayments.
      *
-     * Generated from protobuf field <code>int64 total_amt_msat = 10[json_name = "total_amt_msat"];</code>
+     * Generated from protobuf field <code>int64 total_amt_msat = 10;</code>
      */
-    private $total_amt_msat = 0;
+    protected $total_amt_msat = 0;
 
     /**
      * Constructor.
@@ -66,7 +66,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *subpayments, and match the payment_addr provided in the receiver's invoice.
      *The same payment_addr must be used on all subpayments.
      *
-     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      * @return string
      */
     public function getPaymentAddr()
@@ -81,7 +81,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *subpayments, and match the payment_addr provided in the receiver's invoice.
      *The same payment_addr must be used on all subpayments.
      *
-     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      * @param string $var
      * @return $this
      */
@@ -100,7 +100,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *and payment_hash sum exactly to total_amt_msat. The same
      *total_amt_msat must be used on all subpayments.
      *
-     * Generated from protobuf field <code>int64 total_amt_msat = 10[json_name = "total_amt_msat"];</code>
+     * Generated from protobuf field <code>int64 total_amt_msat = 10;</code>
      * @return int|string
      */
     public function getTotalAmtMsat()
@@ -115,7 +115,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *and payment_hash sum exactly to total_amt_msat. The same
      *total_amt_msat must be used on all subpayments.
      *
-     * Generated from protobuf field <code>int64 total_amt_msat = 10[json_name = "total_amt_msat"];</code>
+     * Generated from protobuf field <code>int64 total_amt_msat = 10;</code>
      * @param int|string $var
      * @return $this
      */

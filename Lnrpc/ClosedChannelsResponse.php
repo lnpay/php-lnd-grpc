@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ClosedChannelsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelCloseSummary channels = 1[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelCloseSummary channels = 1;</code>
      */
     private $channels;
 
@@ -33,7 +33,7 @@ class ClosedChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelCloseSummary channels = 1[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelCloseSummary channels = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChannels()
@@ -42,7 +42,7 @@ class ClosedChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelCloseSummary channels = 1[json_name = "channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelCloseSummary channels = 1;</code>
      * @param \Lnrpc\ChannelCloseSummary[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

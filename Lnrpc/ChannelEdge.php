@@ -26,37 +26,37 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      */
-    private $channel_id = 0;
+    protected $channel_id = 0;
     /**
-     * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>string chan_point = 2;</code>
      */
-    private $chan_point = '';
+    protected $chan_point = '';
     /**
-     * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update", deprecated = true];</code>
+     * Generated from protobuf field <code>uint32 last_update = 3 [deprecated = true];</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
     /**
-     * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * Generated from protobuf field <code>string node1_pub = 4;</code>
      */
-    private $node1_pub = '';
+    protected $node1_pub = '';
     /**
-     * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * Generated from protobuf field <code>string node2_pub = 5;</code>
      */
-    private $node2_pub = '';
+    protected $node2_pub = '';
     /**
-     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
-     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7;</code>
      */
-    private $node1_policy = null;
+    protected $node1_policy = null;
     /**
-     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8;</code>
      */
-    private $node2_policy = null;
+    protected $node2_policy = null;
 
     /**
      * Constructor.
@@ -89,7 +89,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      * @return int|string
      */
     public function getChannelId()
@@ -103,7 +103,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
-     * Generated from protobuf field <code>uint64 channel_id = 1[json_name = "channel_id", jstype = JS_STRING];</code>
+     * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      * @param int|string $var
      * @return $this
      */
@@ -116,7 +116,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>string chan_point = 2;</code>
      * @return string
      */
     public function getChanPoint()
@@ -125,7 +125,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string chan_point = 2[json_name = "chan_point"];</code>
+     * Generated from protobuf field <code>string chan_point = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -138,7 +138,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update", deprecated = true];</code>
+     * Generated from protobuf field <code>uint32 last_update = 3 [deprecated = true];</code>
      * @return int
      */
     public function getLastUpdate()
@@ -147,7 +147,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 last_update = 3[json_name = "last_update", deprecated = true];</code>
+     * Generated from protobuf field <code>uint32 last_update = 3 [deprecated = true];</code>
      * @param int $var
      * @return $this
      */
@@ -160,7 +160,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * Generated from protobuf field <code>string node1_pub = 4;</code>
      * @return string
      */
     public function getNode1Pub()
@@ -169,7 +169,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string node1_pub = 4[json_name = "node1_pub"];</code>
+     * Generated from protobuf field <code>string node1_pub = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -182,7 +182,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * Generated from protobuf field <code>string node2_pub = 5;</code>
      * @return string
      */
     public function getNode2Pub()
@@ -191,7 +191,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string node2_pub = 5[json_name = "node2_pub"];</code>
+     * Generated from protobuf field <code>string node2_pub = 5;</code>
      * @param string $var
      * @return $this
      */
@@ -204,7 +204,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6;</code>
      * @return int|string
      */
     public function getCapacity()
@@ -213,7 +213,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 capacity = 6[json_name = "capacity"];</code>
+     * Generated from protobuf field <code>int64 capacity = 6;</code>
      * @param int|string $var
      * @return $this
      */
@@ -226,7 +226,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7;</code>
      * @return \Lnrpc\RoutingPolicy
      */
     public function getNode1Policy()
@@ -235,7 +235,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7[json_name = "node1_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7;</code>
      * @param \Lnrpc\RoutingPolicy $var
      * @return $this
      */
@@ -248,7 +248,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8;</code>
      * @return \Lnrpc\RoutingPolicy
      */
     public function getNode2Policy()
@@ -257,7 +257,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8[json_name = "node2_policy"];</code>
+     * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8;</code>
      * @param \Lnrpc\RoutingPolicy $var
      * @return $this
      */

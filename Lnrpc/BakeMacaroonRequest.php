@@ -16,7 +16,7 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of permissions the new macaroon should grant.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1[json_name = "permissions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      */
     private $permissions;
 
@@ -38,7 +38,7 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of permissions the new macaroon should grant.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1[json_name = "permissions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPermissions()
@@ -49,7 +49,7 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The list of permissions the new macaroon should grant.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1[json_name = "permissions"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      * @param \Lnrpc\MacaroonPermission[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

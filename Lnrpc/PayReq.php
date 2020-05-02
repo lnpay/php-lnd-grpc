@@ -14,55 +14,55 @@ use Google\Protobuf\Internal\GPBUtil;
 class PayReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
+     * Generated from protobuf field <code>string destination = 1;</code>
      */
-    private $destination = '';
+    protected $destination = '';
     /**
-     * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 2;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
-     * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * Generated from protobuf field <code>int64 num_satoshis = 3;</code>
      */
-    private $num_satoshis = 0;
+    protected $num_satoshis = 0;
     /**
-     * Generated from protobuf field <code>int64 timestamp = 4[json_name = "timestamp"];</code>
+     * Generated from protobuf field <code>int64 timestamp = 4;</code>
      */
-    private $timestamp = 0;
+    protected $timestamp = 0;
     /**
-     * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>int64 expiry = 5;</code>
      */
-    private $expiry = 0;
+    protected $expiry = 0;
     /**
-     * Generated from protobuf field <code>string description = 6[json_name = "description"];</code>
+     * Generated from protobuf field <code>string description = 6;</code>
      */
-    private $description = '';
+    protected $description = '';
     /**
-     * Generated from protobuf field <code>string description_hash = 7[json_name = "description_hash"];</code>
+     * Generated from protobuf field <code>string description_hash = 7;</code>
      */
-    private $description_hash = '';
+    protected $description_hash = '';
     /**
-     * Generated from protobuf field <code>string fallback_addr = 8[json_name = "fallback_addr"];</code>
+     * Generated from protobuf field <code>string fallback_addr = 8;</code>
      */
-    private $fallback_addr = '';
+    protected $fallback_addr = '';
     /**
-     * Generated from protobuf field <code>int64 cltv_expiry = 9[json_name = "cltv_expiry"];</code>
+     * Generated from protobuf field <code>int64 cltv_expiry = 9;</code>
      */
-    private $cltv_expiry = 0;
+    protected $cltv_expiry = 0;
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
      */
     private $route_hints;
     /**
-     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      */
-    private $payment_addr = '';
+    protected $payment_addr = '';
     /**
-     * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
+     * Generated from protobuf field <code>int64 num_msat = 12;</code>
      */
-    private $num_msat = 0;
+    protected $num_msat = 0;
     /**
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13;</code>
      */
     private $features;
 
@@ -93,7 +93,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
+     * Generated from protobuf field <code>string destination = 1;</code>
      * @return string
      */
     public function getDestination()
@@ -102,7 +102,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string destination = 1[json_name = "destination"];</code>
+     * Generated from protobuf field <code>string destination = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -115,7 +115,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 2;</code>
      * @return string
      */
     public function getPaymentHash()
@@ -124,7 +124,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string payment_hash = 2[json_name = "payment_hash"];</code>
+     * Generated from protobuf field <code>string payment_hash = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -137,7 +137,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * Generated from protobuf field <code>int64 num_satoshis = 3;</code>
      * @return int|string
      */
     public function getNumSatoshis()
@@ -146,7 +146,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 num_satoshis = 3[json_name = "num_satoshis"];</code>
+     * Generated from protobuf field <code>int64 num_satoshis = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -159,7 +159,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 timestamp = 4[json_name = "timestamp"];</code>
+     * Generated from protobuf field <code>int64 timestamp = 4;</code>
      * @return int|string
      */
     public function getTimestamp()
@@ -168,7 +168,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 timestamp = 4[json_name = "timestamp"];</code>
+     * Generated from protobuf field <code>int64 timestamp = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -181,7 +181,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>int64 expiry = 5;</code>
      * @return int|string
      */
     public function getExpiry()
@@ -190,7 +190,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 expiry = 5[json_name = "expiry"];</code>
+     * Generated from protobuf field <code>int64 expiry = 5;</code>
      * @param int|string $var
      * @return $this
      */
@@ -203,7 +203,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string description = 6[json_name = "description"];</code>
+     * Generated from protobuf field <code>string description = 6;</code>
      * @return string
      */
     public function getDescription()
@@ -212,7 +212,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string description = 6[json_name = "description"];</code>
+     * Generated from protobuf field <code>string description = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -225,7 +225,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string description_hash = 7[json_name = "description_hash"];</code>
+     * Generated from protobuf field <code>string description_hash = 7;</code>
      * @return string
      */
     public function getDescriptionHash()
@@ -234,7 +234,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string description_hash = 7[json_name = "description_hash"];</code>
+     * Generated from protobuf field <code>string description_hash = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -247,7 +247,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string fallback_addr = 8[json_name = "fallback_addr"];</code>
+     * Generated from protobuf field <code>string fallback_addr = 8;</code>
      * @return string
      */
     public function getFallbackAddr()
@@ -256,7 +256,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string fallback_addr = 8[json_name = "fallback_addr"];</code>
+     * Generated from protobuf field <code>string fallback_addr = 8;</code>
      * @param string $var
      * @return $this
      */
@@ -269,7 +269,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 cltv_expiry = 9[json_name = "cltv_expiry"];</code>
+     * Generated from protobuf field <code>int64 cltv_expiry = 9;</code>
      * @return int|string
      */
     public function getCltvExpiry()
@@ -278,7 +278,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 cltv_expiry = 9[json_name = "cltv_expiry"];</code>
+     * Generated from protobuf field <code>int64 cltv_expiry = 9;</code>
      * @param int|string $var
      * @return $this
      */
@@ -291,7 +291,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRouteHints()
@@ -300,7 +300,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10[json_name = "route_hints"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
      * @param \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -313,7 +313,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      * @return string
      */
     public function getPaymentAddr()
@@ -322,7 +322,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes payment_addr = 11[json_name = "payment_addr"];</code>
+     * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      * @param string $var
      * @return $this
      */
@@ -335,7 +335,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
+     * Generated from protobuf field <code>int64 num_msat = 12;</code>
      * @return int|string
      */
     public function getNumMsat()
@@ -344,7 +344,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 num_msat = 12[json_name = "num_msat"];</code>
+     * Generated from protobuf field <code>int64 num_msat = 12;</code>
      * @param int|string $var
      * @return $this
      */
@@ -357,7 +357,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getFeatures()
@@ -366,7 +366,7 @@ class PayReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13[json_name = "features"];</code>
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */

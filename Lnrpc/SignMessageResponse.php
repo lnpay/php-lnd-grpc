@@ -16,9 +16,9 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The signature for the given message
      *
-     * Generated from protobuf field <code>string signature = 1[json_name = "signature"];</code>
+     * Generated from protobuf field <code>string signature = 1;</code>
      */
-    private $signature = '';
+    protected $signature = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The signature for the given message
      *
-     * Generated from protobuf field <code>string signature = 1[json_name = "signature"];</code>
+     * Generated from protobuf field <code>string signature = 1;</code>
      * @return string
      */
     public function getSignature()
@@ -49,7 +49,7 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The signature for the given message
      *
-     * Generated from protobuf field <code>string signature = 1[json_name = "signature"];</code>
+     * Generated from protobuf field <code>string signature = 1;</code>
      * @param string $var
      * @return $this
      */

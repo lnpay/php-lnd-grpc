@@ -18,7 +18,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      **
      *The amount to send expressed in satoshis.
@@ -26,7 +26,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
-    private $amt = 0;
+    protected $amt = 0;
     /**
      **
      *The amount to send expressed in millisatoshis.
@@ -34,7 +34,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_msat = 12;</code>
      */
-    private $amt_msat = 0;
+    protected $amt_msat = 0;
     /**
      **
      *An optional CLTV delta from the current height that should be used for the
@@ -45,7 +45,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      */
-    private $final_cltv_delta = 0;
+    protected $final_cltv_delta = 0;
     /**
      **
      *The maximum number of satoshis that will be paid as a fee of the payment.
@@ -55,7 +55,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
      */
-    private $fee_limit = null;
+    protected $fee_limit = null;
     /**
      **
      *A list of nodes to ignore during path finding. When using REST, these fields
@@ -78,7 +78,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string source_pub_key = 8;</code>
      */
-    private $source_pub_key = '';
+    protected $source_pub_key = '';
     /**
      **
      *If set to true, edge probabilities from mission control will be used to get
@@ -86,7 +86,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool use_mission_control = 9;</code>
      */
-    private $use_mission_control = false;
+    protected $use_mission_control = false;
     /**
      **
      *A list of directed node pairs that will be ignored during path finding.
@@ -95,16 +95,16 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      */
     private $ignored_pairs;
     /**
-     ** 
+     **
      *An optional maximum total time lock for the route. If the source is empty or
      *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *zero, then the value of `--max-cltv-expiry` is used as the limit.
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
      */
-    private $cltv_limit = 0;
+    protected $cltv_limit = 0;
     /**
-     ** 
+     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. If the destination
@@ -122,14 +122,14 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 14 [jstype = JS_STRING];</code>
      */
-    private $outgoing_chan_id = 0;
+    protected $outgoing_chan_id = 0;
     /**
      **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
      */
-    private $last_hop_pubkey = '';
+    protected $last_hop_pubkey = '';
     /**
      **
      *Optional route hints to reach the destination through private channels.
@@ -140,7 +140,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *Features assumed to be supported by the final node. All transitive feature
-     *depdencies must also be set properly. For a given feature bit pair, either
+     *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
      *the router will try to load destination features from the graph as a
      *fallback.
@@ -197,12 +197,12 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *          *
      *          A list of directed node pairs that will be ignored during path finding.
      *     @type int $cltv_limit
-     *          * 
+     *          *
      *          An optional maximum total time lock for the route. If the source is empty or
      *          ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *          zero, then the value of `--max-cltv-expiry` is used as the limit.
      *     @type array|\Google\Protobuf\Internal\MapField $dest_custom_records
-     *          * 
+     *          *
      *          An optional field that can be used to pass an arbitrary set of TLV records
      *          to a peer which understands the new records. This can be used to pass
      *          application specific data during the payment attempt. If the destination
@@ -222,7 +222,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $dest_features
      *          *
      *          Features assumed to be supported by the final node. All transitive feature
-     *          depdencies must also be set properly. For a given feature bit pair, either
+     *          dependencies must also be set properly. For a given feature bit pair, either
      *          optional or remote may be set, but not both. If this field is nil or empty,
      *          the router will try to load destination features from the graph as a
      *          fallback.
@@ -536,7 +536,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
+     **
      *An optional maximum total time lock for the route. If the source is empty or
      *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *zero, then the value of `--max-cltv-expiry` is used as the limit.
@@ -550,7 +550,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
+     **
      *An optional maximum total time lock for the route. If the source is empty or
      *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *zero, then the value of `--max-cltv-expiry` is used as the limit.
@@ -568,7 +568,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
+     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. If the destination
@@ -585,7 +585,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ** 
+     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. If the destination
@@ -694,7 +694,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *Features assumed to be supported by the final node. All transitive feature
-     *depdencies must also be set properly. For a given feature bit pair, either
+     *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
      *the router will try to load destination features from the graph as a
      *fallback.
@@ -710,7 +710,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     /**
      **
      *Features assumed to be supported by the final node. All transitive feature
-     *depdencies must also be set properly. For a given feature bit pair, either
+     *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
      *the router will try to load destination features from the graph as a
      *fallback.

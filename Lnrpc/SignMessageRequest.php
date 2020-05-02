@@ -18,9 +18,9 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
      *The message to be signed. When using REST, this field must be encoded as
      *base64.
      *
-     * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
+     * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    private $msg = '';
+    protected $msg = '';
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
      *The message to be signed. When using REST, this field must be encoded as
      *base64.
      *
-     * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
+     * Generated from protobuf field <code>bytes msg = 1;</code>
      * @return string
      */
     public function getMsg()
@@ -57,7 +57,7 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
      *The message to be signed. When using REST, this field must be encoded as
      *base64.
      *
-     * Generated from protobuf field <code>bytes msg = 1[json_name = "msg"];</code>
+     * Generated from protobuf field <code>bytes msg = 1;</code>
      * @param string $var
      * @return $this
      */

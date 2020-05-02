@@ -19,7 +19,7 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
-     * Generated from protobuf field <code>string payment_request = 1[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 1;</code>
      */
     protected $payment_request = '';
 
@@ -47,7 +47,7 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
-     * Generated from protobuf field <code>string payment_request = 1[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 1;</code>
      * @return string
      */
     public function getPaymentRequest()
@@ -61,7 +61,7 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
-     * Generated from protobuf field <code>string payment_request = 1[json_name = "payment_request"];</code>
+     * Generated from protobuf field <code>string payment_request = 1;</code>
      * @param string $var
      * @return $this
      */

@@ -16,31 +16,33 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance in satoshis encumbered in pending channels
      *
-     * Generated from protobuf field <code>int64 total_limbo_balance = 1[json_name = "total_limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      */
-    private $total_limbo_balance = 0;
+    protected $total_limbo_balance = 0;
     /**
      *&#47; Channels pending opening
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2[json_name = "pending_open_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2;</code>
      */
     private $pending_open_channels;
     /**
-     *&#47; Channels pending closing
+     *Deprecated: Channels pending closing previously contained cooperatively
+     *closed channels with a single confirmation. These channels are now
+     *considered closed from the time we see them on chain.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3[json_name = "pending_closing_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3 [deprecated = true];</code>
      */
     private $pending_closing_channels;
     /**
      *&#47; Channels pending force closing
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4[json_name = "pending_force_closing_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4;</code>
      */
     private $pending_force_closing_channels;
     /**
      *&#47; Channels waiting for closing tx to confirm
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5[json_name = "waiting_close_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5;</code>
      */
     private $waiting_close_channels;
 
@@ -55,7 +57,9 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      *     @type \Lnrpc\PendingChannelsResponse\PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_open_channels
      *          &#47; Channels pending opening
      *     @type \Lnrpc\PendingChannelsResponse\ClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_closing_channels
-     *          &#47; Channels pending closing
+     *          Deprecated: Channels pending closing previously contained cooperatively
+     *          closed channels with a single confirmation. These channels are now
+     *          considered closed from the time we see them on chain.
      *     @type \Lnrpc\PendingChannelsResponse\ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_force_closing_channels
      *          &#47; Channels pending force closing
      *     @type \Lnrpc\PendingChannelsResponse\WaitingCloseChannel[]|\Google\Protobuf\Internal\RepeatedField $waiting_close_channels
@@ -70,7 +74,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance in satoshis encumbered in pending channels
      *
-     * Generated from protobuf field <code>int64 total_limbo_balance = 1[json_name = "total_limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      * @return int|string
      */
     public function getTotalLimboBalance()
@@ -81,7 +85,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; The balance in satoshis encumbered in pending channels
      *
-     * Generated from protobuf field <code>int64 total_limbo_balance = 1[json_name = "total_limbo_balance"];</code>
+     * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      * @param int|string $var
      * @return $this
      */
@@ -96,7 +100,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Channels pending opening
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2[json_name = "pending_open_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPendingOpenChannels()
@@ -107,7 +111,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Channels pending opening
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2[json_name = "pending_open_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2;</code>
      * @param \Lnrpc\PendingChannelsResponse\PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -120,9 +124,11 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Channels pending closing
+     *Deprecated: Channels pending closing previously contained cooperatively
+     *closed channels with a single confirmation. These channels are now
+     *considered closed from the time we see them on chain.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3[json_name = "pending_closing_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3 [deprecated = true];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPendingClosingChannels()
@@ -131,9 +137,11 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Channels pending closing
+     *Deprecated: Channels pending closing previously contained cooperatively
+     *closed channels with a single confirmation. These channels are now
+     *considered closed from the time we see them on chain.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3[json_name = "pending_closing_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ClosedChannel pending_closing_channels = 3 [deprecated = true];</code>
      * @param \Lnrpc\PendingChannelsResponse\ClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -148,7 +156,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Channels pending force closing
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4[json_name = "pending_force_closing_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getPendingForceClosingChannels()
@@ -159,7 +167,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Channels pending force closing
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4[json_name = "pending_force_closing_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4;</code>
      * @param \Lnrpc\PendingChannelsResponse\ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -174,7 +182,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Channels waiting for closing tx to confirm
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5[json_name = "waiting_close_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getWaitingCloseChannels()
@@ -185,7 +193,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     /**
      *&#47; Channels waiting for closing tx to confirm
      *
-     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5[json_name = "waiting_close_channels"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5;</code>
      * @param \Lnrpc\PendingChannelsResponse\WaitingCloseChannel[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

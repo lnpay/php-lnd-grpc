@@ -17,7 +17,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      **
      *Is the set of all channels that are included in this multi-channel backup.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1[json_name = "chan_points"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1;</code>
      */
     private $chan_points;
     /**
@@ -27,9 +27,9 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *safely be replaced with any prior/future versions. When using REST, this
      *field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>bytes multi_chan_backup = 2;</code>
      */
-    private $multi_chan_backup = '';
+    protected $multi_chan_backup = '';
 
     /**
      * Constructor.
@@ -57,7 +57,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      **
      *Is the set of all channels that are included in this multi-channel backup.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1[json_name = "chan_points"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getChanPoints()
@@ -69,7 +69,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      **
      *Is the set of all channels that are included in this multi-channel backup.
      *
-     * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1[json_name = "chan_points"];</code>
+     * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1;</code>
      * @param \Lnrpc\ChannelPoint[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -88,7 +88,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *safely be replaced with any prior/future versions. When using REST, this
      *field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>bytes multi_chan_backup = 2;</code>
      * @return string
      */
     public function getMultiChanBackup()
@@ -103,7 +103,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *safely be replaced with any prior/future versions. When using REST, this
      *field must be encoded as base64.
      *
-     * Generated from protobuf field <code>bytes multi_chan_backup = 2[json_name = "multi_chan_backup"];</code>
+     * Generated from protobuf field <code>bytes multi_chan_backup = 2;</code>
      * @param string $var
      * @return $this
      */
