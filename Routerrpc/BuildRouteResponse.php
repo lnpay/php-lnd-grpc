@@ -14,12 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class BuildRouteResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *Fully specified route that can be used to execute the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 1;</code>
      */
-    protected $route = null;
+    private $route = null;
 
     /**
      * Constructor.
@@ -28,7 +27,6 @@ class BuildRouteResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\Route $route
-     *          *
      *          Fully specified route that can be used to execute the payment.
      * }
      */
@@ -38,7 +36,6 @@ class BuildRouteResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Fully specified route that can be used to execute the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 1;</code>
@@ -50,7 +47,6 @@ class BuildRouteResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Fully specified route that can be used to execute the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 1;</code>

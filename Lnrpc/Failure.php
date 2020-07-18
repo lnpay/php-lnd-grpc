@@ -14,55 +14,54 @@ use Google\Protobuf\Internal\GPBUtil;
 class Failure extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Failure code as defined in the Lightning spec
+     * Failure code as defined in the Lightning spec
      *
      * Generated from protobuf field <code>.lnrpc.Failure.FailureCode code = 1;</code>
      */
-    protected $code = 0;
+    private $code = 0;
     /**
-     *&#47; An optional channel update message.
+     * An optional channel update message.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelUpdate channel_update = 3;</code>
      */
-    protected $channel_update = null;
+    private $channel_update = null;
     /**
-     *&#47; A failure type-dependent htlc value.
+     * A failure type-dependent htlc value.
      *
      * Generated from protobuf field <code>uint64 htlc_msat = 4;</code>
      */
-    protected $htlc_msat = 0;
+    private $htlc_msat = 0;
     /**
-     *&#47; The sha256 sum of the onion payload.
+     * The sha256 sum of the onion payload.
      *
      * Generated from protobuf field <code>bytes onion_sha_256 = 5;</code>
      */
-    protected $onion_sha_256 = '';
+    private $onion_sha_256 = '';
     /**
-     *&#47; A failure type-dependent cltv expiry value.
+     * A failure type-dependent cltv expiry value.
      *
      * Generated from protobuf field <code>uint32 cltv_expiry = 6;</code>
      */
-    protected $cltv_expiry = 0;
+    private $cltv_expiry = 0;
     /**
-     *&#47; A failure type-dependent flags value.
+     * A failure type-dependent flags value.
      *
      * Generated from protobuf field <code>uint32 flags = 7;</code>
      */
-    protected $flags = 0;
+    private $flags = 0;
     /**
-     **
      *The position in the path of the intermediate or final node that generated
      *the failure message. Position zero is the sender node.
      *
      * Generated from protobuf field <code>uint32 failure_source_index = 8;</code>
      */
-    protected $failure_source_index = 0;
+    private $failure_source_index = 0;
     /**
-     *&#47; A failure type-dependent block height.
+     * A failure type-dependent block height.
      *
      * Generated from protobuf field <code>uint32 height = 9;</code>
      */
-    protected $height = 0;
+    private $height = 0;
 
     /**
      * Constructor.
@@ -71,23 +70,22 @@ class Failure extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $code
-     *          &#47; Failure code as defined in the Lightning spec
+     *           Failure code as defined in the Lightning spec
      *     @type \Lnrpc\ChannelUpdate $channel_update
-     *          &#47; An optional channel update message.
+     *           An optional channel update message.
      *     @type int|string $htlc_msat
-     *          &#47; A failure type-dependent htlc value.
+     *           A failure type-dependent htlc value.
      *     @type string $onion_sha_256
-     *          &#47; The sha256 sum of the onion payload.
+     *           The sha256 sum of the onion payload.
      *     @type int $cltv_expiry
-     *          &#47; A failure type-dependent cltv expiry value.
+     *           A failure type-dependent cltv expiry value.
      *     @type int $flags
-     *          &#47; A failure type-dependent flags value.
+     *           A failure type-dependent flags value.
      *     @type int $failure_source_index
-     *          *
      *          The position in the path of the intermediate or final node that generated
      *          the failure message. Position zero is the sender node.
      *     @type int $height
-     *          &#47; A failure type-dependent block height.
+     *           A failure type-dependent block height.
      * }
      */
     public function __construct($data = NULL) {
@@ -96,7 +94,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Failure code as defined in the Lightning spec
+     * Failure code as defined in the Lightning spec
      *
      * Generated from protobuf field <code>.lnrpc.Failure.FailureCode code = 1;</code>
      * @return int
@@ -107,7 +105,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Failure code as defined in the Lightning spec
+     * Failure code as defined in the Lightning spec
      *
      * Generated from protobuf field <code>.lnrpc.Failure.FailureCode code = 1;</code>
      * @param int $var
@@ -122,7 +120,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; An optional channel update message.
+     * An optional channel update message.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelUpdate channel_update = 3;</code>
      * @return \Lnrpc\ChannelUpdate
@@ -133,7 +131,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; An optional channel update message.
+     * An optional channel update message.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelUpdate channel_update = 3;</code>
      * @param \Lnrpc\ChannelUpdate $var
@@ -148,7 +146,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent htlc value.
+     * A failure type-dependent htlc value.
      *
      * Generated from protobuf field <code>uint64 htlc_msat = 4;</code>
      * @return int|string
@@ -159,7 +157,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent htlc value.
+     * A failure type-dependent htlc value.
      *
      * Generated from protobuf field <code>uint64 htlc_msat = 4;</code>
      * @param int|string $var
@@ -174,7 +172,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The sha256 sum of the onion payload.
+     * The sha256 sum of the onion payload.
      *
      * Generated from protobuf field <code>bytes onion_sha_256 = 5;</code>
      * @return string
@@ -185,7 +183,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The sha256 sum of the onion payload.
+     * The sha256 sum of the onion payload.
      *
      * Generated from protobuf field <code>bytes onion_sha_256 = 5;</code>
      * @param string $var
@@ -200,7 +198,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent cltv expiry value.
+     * A failure type-dependent cltv expiry value.
      *
      * Generated from protobuf field <code>uint32 cltv_expiry = 6;</code>
      * @return int
@@ -211,7 +209,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent cltv expiry value.
+     * A failure type-dependent cltv expiry value.
      *
      * Generated from protobuf field <code>uint32 cltv_expiry = 6;</code>
      * @param int $var
@@ -226,7 +224,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent flags value.
+     * A failure type-dependent flags value.
      *
      * Generated from protobuf field <code>uint32 flags = 7;</code>
      * @return int
@@ -237,7 +235,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent flags value.
+     * A failure type-dependent flags value.
      *
      * Generated from protobuf field <code>uint32 flags = 7;</code>
      * @param int $var
@@ -252,7 +250,6 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The position in the path of the intermediate or final node that generated
      *the failure message. Position zero is the sender node.
      *
@@ -265,7 +262,6 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The position in the path of the intermediate or final node that generated
      *the failure message. Position zero is the sender node.
      *
@@ -282,7 +278,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent block height.
+     * A failure type-dependent block height.
      *
      * Generated from protobuf field <code>uint32 height = 9;</code>
      * @return int
@@ -293,7 +289,7 @@ class Failure extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A failure type-dependent block height.
+     * A failure type-dependent block height.
      *
      * Generated from protobuf field <code>uint32 height = 9;</code>
      * @param int $var

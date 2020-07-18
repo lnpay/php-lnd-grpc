@@ -16,19 +16,19 @@ class HTLC extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool incoming = 1;</code>
      */
-    protected $incoming = false;
+    private $incoming = false;
     /**
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    protected $amount = 0;
+    private $amount = 0;
     /**
      * Generated from protobuf field <code>bytes hash_lock = 3;</code>
      */
-    protected $hash_lock = '';
+    private $hash_lock = '';
     /**
      * Generated from protobuf field <code>uint32 expiration_height = 4;</code>
      */
-    protected $expiration_height = 0;
+    private $expiration_height = 0;
 
     /**
      * Constructor.

@@ -18,28 +18,27 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.HtlcInfo info = 1;</code>
      */
-    protected $info = null;
+    private $info = null;
     /**
      * FailureCode is the BOLT error code for the failure.
      *
      * Generated from protobuf field <code>.lnrpc.Failure.FailureCode wire_failure = 2;</code>
      */
-    protected $wire_failure = 0;
+    private $wire_failure = 0;
     /**
-     **
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
      *and may be 'no detail' if the wire message requires no additional metadata.
      *
      * Generated from protobuf field <code>.routerrpc.FailureDetail failure_detail = 3;</code>
      */
-    protected $failure_detail = 0;
+    private $failure_detail = 0;
     /**
      * A string representation of the link failure.
      *
      * Generated from protobuf field <code>string failure_string = 4;</code>
      */
-    protected $failure_string = '';
+    private $failure_string = '';
 
     /**
      * Constructor.
@@ -52,7 +51,6 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      *     @type int $wire_failure
      *           FailureCode is the BOLT error code for the failure.
      *     @type int $failure_detail
-     *          *
      *          FailureDetail provides additional information about the reason for the
      *          failure. This detail enriches the information provided by the wire message
      *          and may be 'no detail' if the wire message requires no additional metadata.
@@ -118,7 +116,6 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
      *and may be 'no detail' if the wire message requires no additional metadata.
@@ -132,7 +129,6 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
      *and may be 'no detail' if the wire message requires no additional metadata.

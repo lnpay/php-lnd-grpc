@@ -14,13 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignMessageRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The message to be signed. When using REST, this field must be encoded as
      *base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    protected $msg = '';
+    private $msg = '';
 
     /**
      * Constructor.
@@ -29,7 +28,6 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $msg
-     *          *
      *          The message to be signed. When using REST, this field must be encoded as
      *          base64.
      * }
@@ -40,7 +38,6 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The message to be signed. When using REST, this field must be encoded as
      *base64.
      *
@@ -53,7 +50,6 @@ class SignMessageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The message to be signed. When using REST, this field must be encoded as
      *base64.
      *

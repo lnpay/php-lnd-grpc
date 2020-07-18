@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
  *A fully authenticated channel along with all its unique attributes.
  *Once an authenticated channel announcement has been processed on the network,
  *then an instance of ChannelEdgeInfo encapsulating the channels attributes is
@@ -21,42 +20,41 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelEdge extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
      * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $channel_id = 0;
+    private $channel_id = 0;
     /**
      * Generated from protobuf field <code>string chan_point = 2;</code>
      */
-    protected $chan_point = '';
+    private $chan_point = '';
     /**
      * Generated from protobuf field <code>uint32 last_update = 3 [deprecated = true];</code>
      */
-    protected $last_update = 0;
+    private $last_update = 0;
     /**
      * Generated from protobuf field <code>string node1_pub = 4;</code>
      */
-    protected $node1_pub = '';
+    private $node1_pub = '';
     /**
      * Generated from protobuf field <code>string node2_pub = 5;</code>
      */
-    protected $node2_pub = '';
+    private $node2_pub = '';
     /**
      * Generated from protobuf field <code>int64 capacity = 6;</code>
      */
-    protected $capacity = 0;
+    private $capacity = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7;</code>
      */
-    protected $node1_policy = null;
+    private $node1_policy = null;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8;</code>
      */
-    protected $node2_policy = null;
+    private $node2_policy = null;
 
     /**
      * Constructor.
@@ -65,7 +63,6 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $channel_id
-     *          *
      *          The unique channel ID for the channel. The first 3 bytes are the block
      *          height, the next 3 the index within the block, and the last 2 bytes are the
      *          output index for the channel.
@@ -84,7 +81,6 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -98,7 +94,6 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.

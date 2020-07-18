@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Sum of channels balances denominated in satoshis
+     * Sum of channels balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 balance = 1;</code>
      */
-    protected $balance = 0;
+    private $balance = 0;
     /**
-     *&#47; Sum of channels pending balances denominated in satoshis
+     * Sum of channels pending balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 pending_open_balance = 2;</code>
      */
-    protected $pending_open_balance = 0;
+    private $pending_open_balance = 0;
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $balance
-     *          &#47; Sum of channels balances denominated in satoshis
+     *           Sum of channels balances denominated in satoshis
      *     @type int|string $pending_open_balance
-     *          &#47; Sum of channels pending balances denominated in satoshis
+     *           Sum of channels pending balances denominated in satoshis
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Sum of channels balances denominated in satoshis
+     * Sum of channels balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 balance = 1;</code>
      * @return int|string
@@ -55,7 +55,7 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Sum of channels balances denominated in satoshis
+     * Sum of channels balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 balance = 1;</code>
      * @param int|string $var
@@ -70,7 +70,7 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Sum of channels pending balances denominated in satoshis
+     * Sum of channels pending balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 pending_open_balance = 2;</code>
      * @return int|string
@@ -81,7 +81,7 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Sum of channels pending balances denominated in satoshis
+     * Sum of channels pending balances denominated in satoshis
      *
      * Generated from protobuf field <code>int64 pending_open_balance = 2;</code>
      * @param int|string $var

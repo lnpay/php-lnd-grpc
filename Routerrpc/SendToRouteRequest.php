@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendToRouteRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The payment hash to use for the HTLC.
+     * The payment hash to use for the HTLC.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
-     *&#47; Route that should be used to attempt to complete the payment.
+     * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      */
-    protected $route = null;
+    private $route = null;
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payment_hash
-     *          &#47; The payment hash to use for the HTLC.
+     *           The payment hash to use for the HTLC.
      *     @type \Lnrpc\Route $route
-     *          &#47; Route that should be used to attempt to complete the payment.
+     *           Route that should be used to attempt to complete the payment.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The payment hash to use for the HTLC.
+     * The payment hash to use for the HTLC.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The payment hash to use for the HTLC.
+     * The payment hash to use for the HTLC.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Route that should be used to attempt to complete the payment.
+     * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      * @return \Lnrpc\Route
@@ -81,7 +81,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Route that should be used to attempt to complete the payment.
+     * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      * @param \Lnrpc\Route $var

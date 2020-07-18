@@ -14,21 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodePair extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The sending node of the pair. When using REST, this field must be encoded as
      *base64.
      *
      * Generated from protobuf field <code>bytes from = 1;</code>
      */
-    protected $from = '';
+    private $from = '';
     /**
-     **
      *The receiving node of the pair. When using REST, this field must be encoded
      *as base64.
      *
      * Generated from protobuf field <code>bytes to = 2;</code>
      */
-    protected $to = '';
+    private $to = '';
 
     /**
      * Constructor.
@@ -37,11 +35,9 @@ class NodePair extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $from
-     *          *
      *          The sending node of the pair. When using REST, this field must be encoded as
      *          base64.
      *     @type string $to
-     *          *
      *          The receiving node of the pair. When using REST, this field must be encoded
      *          as base64.
      * }
@@ -52,7 +48,6 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The sending node of the pair. When using REST, this field must be encoded as
      *base64.
      *
@@ -65,7 +60,6 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The sending node of the pair. When using REST, this field must be encoded as
      *base64.
      *
@@ -82,7 +76,6 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The receiving node of the pair. When using REST, this field must be encoded
      *as base64.
      *
@@ -95,7 +88,6 @@ class NodePair extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The receiving node of the pair. When using REST, this field must be encoded
      *as base64.
      *

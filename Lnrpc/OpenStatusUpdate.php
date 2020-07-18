@@ -14,13 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The pending channel ID of the created channel. This value may be used to
      *further the funding flow manually via the FundingStateStep method.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 4;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     protected $update;
 
     /**
@@ -30,19 +29,15 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\PendingUpdate $chan_pending
-     *          *
      *          Signals that the channel is now fully negotiated and the funding
      *          transaction published.
      *     @type \Lnrpc\ChannelOpenUpdate $chan_open
-     *          *
      *          Signals that the channel's funding transaction has now reached the
      *          required number of confirmations on chain and can be used.
      *     @type \Lnrpc\ReadyForPsbtFunding $psbt_fund
-     *          *
      *          Signals that the funding process has been suspended and the construction
      *          of a PSBT that funds the channel PK script is now required.
      *     @type string $pending_chan_id
-     *          *
      *          The pending channel ID of the created channel. This value may be used to
      *          further the funding flow manually via the FundingStateStep method.
      * }
@@ -53,7 +48,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Signals that the channel is now fully negotiated and the funding
      *transaction published.
      *
@@ -66,7 +60,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Signals that the channel is now fully negotiated and the funding
      *transaction published.
      *
@@ -83,7 +76,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Signals that the channel's funding transaction has now reached the
      *required number of confirmations on chain and can be used.
      *
@@ -96,7 +88,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Signals that the channel's funding transaction has now reached the
      *required number of confirmations on chain and can be used.
      *
@@ -113,7 +104,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Signals that the funding process has been suspended and the construction
      *of a PSBT that funds the channel PK script is now required.
      *
@@ -126,7 +116,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Signals that the funding process has been suspended and the construction
      *of a PSBT that funds the channel PK script is now required.
      *
@@ -143,7 +132,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The pending channel ID of the created channel. This value may be used to
      *further the funding flow manually via the FundingStateStep method.
      *
@@ -156,7 +144,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The pending channel ID of the created channel. This value may be used to
      *further the funding flow manually via the FundingStateStep method.
      *

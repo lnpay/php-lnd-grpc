@@ -22,19 +22,16 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\FundingShim $shim_register
-     *          *
      *          The funding shim to register. This should be used before any
      *          channel funding has began by the remote party, as it is intended as a
      *          preparatory step for the full channel funding.
      *     @type \Lnrpc\FundingShimCancel $shim_cancel
-     *          &#47; Used to cancel an existing registered funding shim.
+     *           Used to cancel an existing registered funding shim.
      *     @type \Lnrpc\FundingPsbtVerify $psbt_verify
-     *          *
      *          Used to continue a funding flow that was initiated to be executed
      *          through a PSBT. This step verifies that the PSBT contains the correct
      *          outputs to fund the channel.
      *     @type \Lnrpc\FundingPsbtFinalize $psbt_finalize
-     *          *
      *          Used to continue a funding flow that was initiated to be executed
      *          through a PSBT. This step finalizes the funded and signed PSBT, finishes
      *          negotiation with the peer and finally publishes the resulting funding
@@ -47,7 +44,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The funding shim to register. This should be used before any
      *channel funding has began by the remote party, as it is intended as a
      *preparatory step for the full channel funding.
@@ -61,7 +57,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The funding shim to register. This should be used before any
      *channel funding has began by the remote party, as it is intended as a
      *preparatory step for the full channel funding.
@@ -79,7 +74,7 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Used to cancel an existing registered funding shim.
+     * Used to cancel an existing registered funding shim.
      *
      * Generated from protobuf field <code>.lnrpc.FundingShimCancel shim_cancel = 2;</code>
      * @return \Lnrpc\FundingShimCancel
@@ -90,7 +85,7 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Used to cancel an existing registered funding shim.
+     * Used to cancel an existing registered funding shim.
      *
      * Generated from protobuf field <code>.lnrpc.FundingShimCancel shim_cancel = 2;</code>
      * @param \Lnrpc\FundingShimCancel $var
@@ -105,7 +100,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Used to continue a funding flow that was initiated to be executed
      *through a PSBT. This step verifies that the PSBT contains the correct
      *outputs to fund the channel.
@@ -119,7 +113,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Used to continue a funding flow that was initiated to be executed
      *through a PSBT. This step verifies that the PSBT contains the correct
      *outputs to fund the channel.
@@ -137,7 +130,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Used to continue a funding flow that was initiated to be executed
      *through a PSBT. This step finalizes the funded and signed PSBT, finishes
      *negotiation with the peer and finally publishes the resulting funding
@@ -152,7 +144,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Used to continue a funding flow that was initiated to be executed
      *through a PSBT. This step finalizes the funded and signed PSBT, finishes
      *negotiation with the peer and finally publishes the resulting funding

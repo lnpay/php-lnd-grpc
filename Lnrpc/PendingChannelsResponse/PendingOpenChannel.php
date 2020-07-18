@@ -14,19 +14,18 @@ use Google\Protobuf\Internal\GPBUtil;
 class PendingOpenChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The pending channel
+     * The pending channel
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    protected $channel = null;
+    private $channel = null;
     /**
-     *&#47; The height at which this channel will be confirmed
+     * The height at which this channel will be confirmed
      *
      * Generated from protobuf field <code>uint32 confirmation_height = 2;</code>
      */
-    protected $confirmation_height = 0;
+    private $confirmation_height = 0;
     /**
-     **
      *The amount calculated to be paid in fees for the current set of
      *commitment transactions. The fee amount is persisted with the channel
      *in order to allow the fee amount to be removed and recalculated with
@@ -35,22 +34,21 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 commit_fee = 4;</code>
      */
-    protected $commit_fee = 0;
+    private $commit_fee = 0;
     /**
-     *&#47; The weight of the commitment transaction
+     * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 5;</code>
      */
-    protected $commit_weight = 0;
+    private $commit_weight = 0;
     /**
-     **
      *The required number of satoshis per kilo-weight that the requester will
      *pay at all times, for both the funding transaction and commitment
      *transaction. This value can later be updated once the channel is open.
      *
      * Generated from protobuf field <code>int64 fee_per_kw = 6;</code>
      */
-    protected $fee_per_kw = 0;
+    private $fee_per_kw = 0;
 
     /**
      * Constructor.
@@ -59,20 +57,18 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\PendingChannelsResponse\PendingChannel $channel
-     *          &#47; The pending channel
+     *           The pending channel
      *     @type int $confirmation_height
-     *          &#47; The height at which this channel will be confirmed
+     *           The height at which this channel will be confirmed
      *     @type int|string $commit_fee
-     *          *
      *          The amount calculated to be paid in fees for the current set of
      *          commitment transactions. The fee amount is persisted with the channel
      *          in order to allow the fee amount to be removed and recalculated with
      *          each channel state update, including updates that happen after a system
      *          restart.
      *     @type int|string $commit_weight
-     *          &#47; The weight of the commitment transaction
+     *           The weight of the commitment transaction
      *     @type int|string $fee_per_kw
-     *          *
      *          The required number of satoshis per kilo-weight that the requester will
      *          pay at all times, for both the funding transaction and commitment
      *          transaction. This value can later be updated once the channel is open.
@@ -84,7 +80,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel
+     * The pending channel
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @return \Lnrpc\PendingChannelsResponse\PendingChannel
@@ -95,7 +91,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel
+     * The pending channel
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @param \Lnrpc\PendingChannelsResponse\PendingChannel $var
@@ -110,7 +106,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The height at which this channel will be confirmed
+     * The height at which this channel will be confirmed
      *
      * Generated from protobuf field <code>uint32 confirmation_height = 2;</code>
      * @return int
@@ -121,7 +117,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The height at which this channel will be confirmed
+     * The height at which this channel will be confirmed
      *
      * Generated from protobuf field <code>uint32 confirmation_height = 2;</code>
      * @param int $var
@@ -136,7 +132,6 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount calculated to be paid in fees for the current set of
      *commitment transactions. The fee amount is persisted with the channel
      *in order to allow the fee amount to be removed and recalculated with
@@ -152,7 +147,6 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount calculated to be paid in fees for the current set of
      *commitment transactions. The fee amount is persisted with the channel
      *in order to allow the fee amount to be removed and recalculated with
@@ -172,7 +166,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The weight of the commitment transaction
+     * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 5;</code>
      * @return int|string
@@ -183,7 +177,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The weight of the commitment transaction
+     * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 5;</code>
      * @param int|string $var
@@ -198,7 +192,6 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The required number of satoshis per kilo-weight that the requester will
      *pay at all times, for both the funding transaction and commitment
      *transaction. This value can later be updated once the channel is open.
@@ -212,7 +205,6 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The required number of satoshis per kilo-weight that the requester will
      *pay at all times, for both the funding transaction and commitment
      *transaction. This value can later be updated once the channel is open.

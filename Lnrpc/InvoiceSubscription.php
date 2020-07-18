@@ -14,7 +14,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class InvoiceSubscription extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all added indexes with an add_index greater than this
      *value. This allows callers to catch up on any events they missed while they
@@ -22,9 +21,8 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 1;</code>
      */
-    protected $add_index = 0;
+    private $add_index = 0;
     /**
-     **
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all settled indexes with an settle_index greater than
      *this value. This allows callers to catch up on any events they missed while
@@ -32,7 +30,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 settle_index = 2;</code>
      */
-    protected $settle_index = 0;
+    private $settle_index = 0;
 
     /**
      * Constructor.
@@ -41,13 +39,11 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $add_index
-     *          *
      *          If specified (non-zero), then we'll first start by sending out
      *          notifications for all added indexes with an add_index greater than this
      *          value. This allows callers to catch up on any events they missed while they
      *          weren't connected to the streaming RPC.
      *     @type int|string $settle_index
-     *          *
      *          If specified (non-zero), then we'll first start by sending out
      *          notifications for all settled indexes with an settle_index greater than
      *          this value. This allows callers to catch up on any events they missed while
@@ -60,7 +56,6 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all added indexes with an add_index greater than this
      *value. This allows callers to catch up on any events they missed while they
@@ -75,7 +70,6 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all added indexes with an add_index greater than this
      *value. This allows callers to catch up on any events they missed while they
@@ -94,7 +88,6 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all settled indexes with an settle_index greater than
      *this value. This allows callers to catch up on any events they missed while
@@ -109,7 +102,6 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all settled indexes with an settle_index greater than
      *this value. This allows callers to catch up on any events they missed while

@@ -14,19 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; A list of forwarding events from the time slice of the time series
-     * / specified in the request.
+     * A list of forwarding events from the time slice of the time series
+     * specified in the request.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ForwardingEvent forwarding_events = 1;</code>
      */
     private $forwarding_events;
     /**
-     *&#47; The index of the last time in the set of returned forwarding events. Can
-     * / be used to seek further, pagination style.
+     * The index of the last time in the set of returned forwarding events. Can
+     * be used to seek further, pagination style.
      *
      * Generated from protobuf field <code>uint32 last_offset_index = 2;</code>
      */
-    protected $last_offset_index = 0;
+    private $last_offset_index = 0;
 
     /**
      * Constructor.
@@ -35,11 +35,11 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ForwardingEvent[]|\Google\Protobuf\Internal\RepeatedField $forwarding_events
-     *          &#47; A list of forwarding events from the time slice of the time series
-     *          / specified in the request.
+     *           A list of forwarding events from the time slice of the time series
+     *           specified in the request.
      *     @type int $last_offset_index
-     *          &#47; The index of the last time in the set of returned forwarding events. Can
-     *          / be used to seek further, pagination style.
+     *           The index of the last time in the set of returned forwarding events. Can
+     *           be used to seek further, pagination style.
      * }
      */
     public function __construct($data = NULL) {
@@ -48,8 +48,8 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A list of forwarding events from the time slice of the time series
-     * / specified in the request.
+     * A list of forwarding events from the time slice of the time series
+     * specified in the request.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ForwardingEvent forwarding_events = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -60,8 +60,8 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A list of forwarding events from the time slice of the time series
-     * / specified in the request.
+     * A list of forwarding events from the time slice of the time series
+     * specified in the request.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ForwardingEvent forwarding_events = 1;</code>
      * @param \Lnrpc\ForwardingEvent[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -76,8 +76,8 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The index of the last time in the set of returned forwarding events. Can
-     * / be used to seek further, pagination style.
+     * The index of the last time in the set of returned forwarding events. Can
+     * be used to seek further, pagination style.
      *
      * Generated from protobuf field <code>uint32 last_offset_index = 2;</code>
      * @return int
@@ -88,8 +88,8 @@ class ForwardingHistoryResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The index of the last time in the set of returned forwarding events. Can
-     * / be used to seek further, pagination style.
+     * The index of the last time in the set of returned forwarding events. Can
+     * be used to seek further, pagination style.
      *
      * Generated from protobuf field <code>uint32 last_offset_index = 2;</code>
      * @param int $var

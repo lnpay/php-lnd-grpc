@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Whether the signature was valid over the given message
+     * Whether the signature was valid over the given message
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      */
-    protected $valid = false;
+    private $valid = false;
     /**
-     *&#47; The pubkey recovered from the signature
+     * The pubkey recovered from the signature
      *
      * Generated from protobuf field <code>string pubkey = 2;</code>
      */
-    protected $pubkey = '';
+    private $pubkey = '';
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $valid
-     *          &#47; Whether the signature was valid over the given message
+     *           Whether the signature was valid over the given message
      *     @type string $pubkey
-     *          &#47; The pubkey recovered from the signature
+     *           The pubkey recovered from the signature
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether the signature was valid over the given message
+     * Whether the signature was valid over the given message
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      * @return bool
@@ -55,7 +55,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether the signature was valid over the given message
+     * Whether the signature was valid over the given message
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      * @param bool $var
@@ -70,7 +70,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pubkey recovered from the signature
+     * The pubkey recovered from the signature
      *
      * Generated from protobuf field <code>string pubkey = 2;</code>
      * @return string
@@ -81,7 +81,7 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pubkey recovered from the signature
+     * The pubkey recovered from the signature
      *
      * Generated from protobuf field <code>string pubkey = 2;</code>
      * @param string $var

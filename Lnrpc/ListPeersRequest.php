@@ -20,7 +20,7 @@ class ListPeersRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool latest_error = 1;</code>
      */
-    protected $latest_error = false;
+    private $latest_error = false;
 
     /**
      * Constructor.

@@ -16,11 +16,11 @@ class PendingUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes txid = 1;</code>
      */
-    protected $txid = '';
+    private $txid = '';
     /**
      * Generated from protobuf field <code>uint32 output_index = 2;</code>
      */
-    protected $output_index = 0;
+    private $output_index = 0;
 
     /**
      * Constructor.

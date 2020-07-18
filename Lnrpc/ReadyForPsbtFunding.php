@@ -14,23 +14,20 @@ use Google\Protobuf\Internal\GPBUtil;
 class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The P2WSH address of the channel funding multisig address that the below
      *specified amount in satoshis needs to be sent to.
      *
      * Generated from protobuf field <code>string funding_address = 1;</code>
      */
-    protected $funding_address = '';
+    private $funding_address = '';
     /**
-     **
      *The exact amount in satoshis that needs to be sent to the above address to
      *fund the pending channel.
      *
      * Generated from protobuf field <code>int64 funding_amount = 2;</code>
      */
-    protected $funding_amount = 0;
+    private $funding_amount = 0;
     /**
-     **
      *A raw PSBT that contains the pending channel output. If a base PSBT was
      *provided in the PsbtShim, this is the base PSBT with one additional output.
      *If no base PSBT was specified, this is an otherwise empty PSBT with exactly
@@ -38,7 +35,7 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes psbt = 3;</code>
      */
-    protected $psbt = '';
+    private $psbt = '';
 
     /**
      * Constructor.
@@ -47,15 +44,12 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $funding_address
-     *          *
      *          The P2WSH address of the channel funding multisig address that the below
      *          specified amount in satoshis needs to be sent to.
      *     @type int|string $funding_amount
-     *          *
      *          The exact amount in satoshis that needs to be sent to the above address to
      *          fund the pending channel.
      *     @type string $psbt
-     *          *
      *          A raw PSBT that contains the pending channel output. If a base PSBT was
      *          provided in the PsbtShim, this is the base PSBT with one additional output.
      *          If no base PSBT was specified, this is an otherwise empty PSBT with exactly
@@ -68,7 +62,6 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The P2WSH address of the channel funding multisig address that the below
      *specified amount in satoshis needs to be sent to.
      *
@@ -81,7 +74,6 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The P2WSH address of the channel funding multisig address that the below
      *specified amount in satoshis needs to be sent to.
      *
@@ -98,7 +90,6 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The exact amount in satoshis that needs to be sent to the above address to
      *fund the pending channel.
      *
@@ -111,7 +102,6 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The exact amount in satoshis that needs to be sent to the above address to
      *fund the pending channel.
      *
@@ -128,7 +118,6 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A raw PSBT that contains the pending channel output. If a base PSBT was
      *provided in the PsbtShim, this is the base PSBT with one additional output.
      *If no base PSBT was specified, this is an otherwise empty PSBT with exactly
@@ -143,7 +132,6 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A raw PSBT that contains the pending channel output. If a base PSBT was
      *provided in the PsbtShim, this is the base PSBT with one additional output.
      *If no base PSBT was specified, this is an otherwise empty PSBT with exactly

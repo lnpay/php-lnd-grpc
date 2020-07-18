@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelPoint extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The index of the output of the funding transaction
+     * The index of the output of the funding transaction
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      */
-    protected $output_index = 0;
+    private $output_index = 0;
     protected $funding_txid;
 
     /**
@@ -28,15 +28,13 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $funding_txid_bytes
-     *          *
      *          Txid of the funding transaction. When using REST, this field must be
      *          encoded as base64.
      *     @type string $funding_txid_str
-     *          *
      *          Hex-encoded string representing the byte-reversed hash of the funding
      *          transaction.
      *     @type int $output_index
-     *          &#47; The index of the output of the funding transaction
+     *           The index of the output of the funding transaction
      * }
      */
     public function __construct($data = NULL) {
@@ -45,7 +43,6 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Txid of the funding transaction. When using REST, this field must be
      *encoded as base64.
      *
@@ -58,7 +55,6 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Txid of the funding transaction. When using REST, this field must be
      *encoded as base64.
      *
@@ -75,7 +71,6 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Hex-encoded string representing the byte-reversed hash of the funding
      *transaction.
      *
@@ -88,7 +83,6 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Hex-encoded string representing the byte-reversed hash of the funding
      *transaction.
      *
@@ -105,7 +99,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The index of the output of the funding transaction
+     * The index of the output of the funding transaction
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      * @return int
@@ -116,7 +110,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The index of the output of the funding transaction
+     * The index of the output of the funding transaction
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      * @param int $var

@@ -14,105 +14,104 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetInfoResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The version of the LND software that the node is running.
+     * The version of the LND software that the node is running.
      *
      * Generated from protobuf field <code>string version = 14;</code>
      */
-    protected $version = '';
+    private $version = '';
     /**
-     *&#47; The SHA1 commit hash that the daemon is compiled with.
+     * The SHA1 commit hash that the daemon is compiled with.
      *
      * Generated from protobuf field <code>string commit_hash = 20;</code>
      */
-    protected $commit_hash = '';
+    private $commit_hash = '';
     /**
-     *&#47; The identity pubkey of the current node.
+     * The identity pubkey of the current node.
      *
      * Generated from protobuf field <code>string identity_pubkey = 1;</code>
      */
-    protected $identity_pubkey = '';
+    private $identity_pubkey = '';
     /**
-     *&#47; If applicable, the alias of the current node, e.g. "bob"
+     * If applicable, the alias of the current node, e.g. "bob"
      *
      * Generated from protobuf field <code>string alias = 2;</code>
      */
-    protected $alias = '';
+    private $alias = '';
     /**
-     *&#47; The color of the current node in hex code format
+     * The color of the current node in hex code format
      *
      * Generated from protobuf field <code>string color = 17;</code>
      */
-    protected $color = '';
+    private $color = '';
     /**
-     *&#47; Number of pending channels
+     * Number of pending channels
      *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3;</code>
      */
-    protected $num_pending_channels = 0;
+    private $num_pending_channels = 0;
     /**
-     *&#47; Number of active channels
+     * Number of active channels
      *
      * Generated from protobuf field <code>uint32 num_active_channels = 4;</code>
      */
-    protected $num_active_channels = 0;
+    private $num_active_channels = 0;
     /**
-     *&#47; Number of inactive channels
+     * Number of inactive channels
      *
      * Generated from protobuf field <code>uint32 num_inactive_channels = 15;</code>
      */
-    protected $num_inactive_channels = 0;
+    private $num_inactive_channels = 0;
     /**
-     *&#47; Number of peers
+     * Number of peers
      *
      * Generated from protobuf field <code>uint32 num_peers = 5;</code>
      */
-    protected $num_peers = 0;
+    private $num_peers = 0;
     /**
-     *&#47; The node's current view of the height of the best block
+     * The node's current view of the height of the best block
      *
      * Generated from protobuf field <code>uint32 block_height = 6;</code>
      */
-    protected $block_height = 0;
+    private $block_height = 0;
     /**
-     *&#47; The node's current view of the hash of the best block
+     * The node's current view of the hash of the best block
      *
      * Generated from protobuf field <code>string block_hash = 8;</code>
      */
-    protected $block_hash = '';
+    private $block_hash = '';
     /**
-     *&#47; Timestamp of the block best known to the wallet
+     * Timestamp of the block best known to the wallet
      *
      * Generated from protobuf field <code>int64 best_header_timestamp = 13;</code>
      */
-    protected $best_header_timestamp = 0;
+    private $best_header_timestamp = 0;
     /**
-     *&#47; Whether the wallet's view is synced to the main chain
+     * Whether the wallet's view is synced to the main chain
      *
      * Generated from protobuf field <code>bool synced_to_chain = 9;</code>
      */
-    protected $synced_to_chain = false;
+    private $synced_to_chain = false;
     /**
      * Whether we consider ourselves synced with the public channel graph.
      *
      * Generated from protobuf field <code>bool synced_to_graph = 18;</code>
      */
-    protected $synced_to_graph = false;
+    private $synced_to_graph = false;
     /**
-     **
      *Whether the current node is connected to testnet. This field is
      *deprecated and the network field should be used instead
      *
      * Generated from protobuf field <code>bool testnet = 10 [deprecated = true];</code>
      */
-    protected $testnet = false;
+    private $testnet = false;
     /**
-     *&#47; A list of active chains the node is connected to
+     * A list of active chains the node is connected to
      *
      * Generated from protobuf field <code>repeated .lnrpc.Chain chains = 16;</code>
      */
     private $chains;
     /**
-     *&#47; The URIs of the current node.
+     * The URIs of the current node.
      *
      * Generated from protobuf field <code>repeated string uris = 12;</code>
      */
@@ -132,41 +131,40 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $version
-     *          &#47; The version of the LND software that the node is running.
+     *           The version of the LND software that the node is running.
      *     @type string $commit_hash
-     *          &#47; The SHA1 commit hash that the daemon is compiled with.
+     *           The SHA1 commit hash that the daemon is compiled with.
      *     @type string $identity_pubkey
-     *          &#47; The identity pubkey of the current node.
+     *           The identity pubkey of the current node.
      *     @type string $alias
-     *          &#47; If applicable, the alias of the current node, e.g. "bob"
+     *           If applicable, the alias of the current node, e.g. "bob"
      *     @type string $color
-     *          &#47; The color of the current node in hex code format
+     *           The color of the current node in hex code format
      *     @type int $num_pending_channels
-     *          &#47; Number of pending channels
+     *           Number of pending channels
      *     @type int $num_active_channels
-     *          &#47; Number of active channels
+     *           Number of active channels
      *     @type int $num_inactive_channels
-     *          &#47; Number of inactive channels
+     *           Number of inactive channels
      *     @type int $num_peers
-     *          &#47; Number of peers
+     *           Number of peers
      *     @type int $block_height
-     *          &#47; The node's current view of the height of the best block
+     *           The node's current view of the height of the best block
      *     @type string $block_hash
-     *          &#47; The node's current view of the hash of the best block
+     *           The node's current view of the hash of the best block
      *     @type int|string $best_header_timestamp
-     *          &#47; Timestamp of the block best known to the wallet
+     *           Timestamp of the block best known to the wallet
      *     @type bool $synced_to_chain
-     *          &#47; Whether the wallet's view is synced to the main chain
+     *           Whether the wallet's view is synced to the main chain
      *     @type bool $synced_to_graph
      *           Whether we consider ourselves synced with the public channel graph.
      *     @type bool $testnet
-     *          *
      *          Whether the current node is connected to testnet. This field is
      *          deprecated and the network field should be used instead
      *     @type \Lnrpc\Chain[]|\Google\Protobuf\Internal\RepeatedField $chains
-     *          &#47; A list of active chains the node is connected to
+     *           A list of active chains the node is connected to
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $uris
-     *          &#47; The URIs of the current node.
+     *           The URIs of the current node.
      *     @type array|\Google\Protobuf\Internal\MapField $features
      *          Features that our node has advertised in our init message, node
      *          announcements and invoices.
@@ -178,7 +176,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The version of the LND software that the node is running.
+     * The version of the LND software that the node is running.
      *
      * Generated from protobuf field <code>string version = 14;</code>
      * @return string
@@ -189,7 +187,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The version of the LND software that the node is running.
+     * The version of the LND software that the node is running.
      *
      * Generated from protobuf field <code>string version = 14;</code>
      * @param string $var
@@ -204,7 +202,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The SHA1 commit hash that the daemon is compiled with.
+     * The SHA1 commit hash that the daemon is compiled with.
      *
      * Generated from protobuf field <code>string commit_hash = 20;</code>
      * @return string
@@ -215,7 +213,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The SHA1 commit hash that the daemon is compiled with.
+     * The SHA1 commit hash that the daemon is compiled with.
      *
      * Generated from protobuf field <code>string commit_hash = 20;</code>
      * @param string $var
@@ -230,7 +228,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the current node.
+     * The identity pubkey of the current node.
      *
      * Generated from protobuf field <code>string identity_pubkey = 1;</code>
      * @return string
@@ -241,7 +239,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the current node.
+     * The identity pubkey of the current node.
      *
      * Generated from protobuf field <code>string identity_pubkey = 1;</code>
      * @param string $var
@@ -256,7 +254,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; If applicable, the alias of the current node, e.g. "bob"
+     * If applicable, the alias of the current node, e.g. "bob"
      *
      * Generated from protobuf field <code>string alias = 2;</code>
      * @return string
@@ -267,7 +265,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; If applicable, the alias of the current node, e.g. "bob"
+     * If applicable, the alias of the current node, e.g. "bob"
      *
      * Generated from protobuf field <code>string alias = 2;</code>
      * @param string $var
@@ -282,7 +280,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The color of the current node in hex code format
+     * The color of the current node in hex code format
      *
      * Generated from protobuf field <code>string color = 17;</code>
      * @return string
@@ -293,7 +291,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The color of the current node in hex code format
+     * The color of the current node in hex code format
      *
      * Generated from protobuf field <code>string color = 17;</code>
      * @param string $var
@@ -308,7 +306,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of pending channels
+     * Number of pending channels
      *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3;</code>
      * @return int
@@ -319,7 +317,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of pending channels
+     * Number of pending channels
      *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3;</code>
      * @param int $var
@@ -334,7 +332,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of active channels
+     * Number of active channels
      *
      * Generated from protobuf field <code>uint32 num_active_channels = 4;</code>
      * @return int
@@ -345,7 +343,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of active channels
+     * Number of active channels
      *
      * Generated from protobuf field <code>uint32 num_active_channels = 4;</code>
      * @param int $var
@@ -360,7 +358,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of inactive channels
+     * Number of inactive channels
      *
      * Generated from protobuf field <code>uint32 num_inactive_channels = 15;</code>
      * @return int
@@ -371,7 +369,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of inactive channels
+     * Number of inactive channels
      *
      * Generated from protobuf field <code>uint32 num_inactive_channels = 15;</code>
      * @param int $var
@@ -386,7 +384,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of peers
+     * Number of peers
      *
      * Generated from protobuf field <code>uint32 num_peers = 5;</code>
      * @return int
@@ -397,7 +395,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Number of peers
+     * Number of peers
      *
      * Generated from protobuf field <code>uint32 num_peers = 5;</code>
      * @param int $var
@@ -412,7 +410,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The node's current view of the height of the best block
+     * The node's current view of the height of the best block
      *
      * Generated from protobuf field <code>uint32 block_height = 6;</code>
      * @return int
@@ -423,7 +421,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The node's current view of the height of the best block
+     * The node's current view of the height of the best block
      *
      * Generated from protobuf field <code>uint32 block_height = 6;</code>
      * @param int $var
@@ -438,7 +436,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The node's current view of the hash of the best block
+     * The node's current view of the hash of the best block
      *
      * Generated from protobuf field <code>string block_hash = 8;</code>
      * @return string
@@ -449,7 +447,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The node's current view of the hash of the best block
+     * The node's current view of the hash of the best block
      *
      * Generated from protobuf field <code>string block_hash = 8;</code>
      * @param string $var
@@ -464,7 +462,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of the block best known to the wallet
+     * Timestamp of the block best known to the wallet
      *
      * Generated from protobuf field <code>int64 best_header_timestamp = 13;</code>
      * @return int|string
@@ -475,7 +473,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of the block best known to the wallet
+     * Timestamp of the block best known to the wallet
      *
      * Generated from protobuf field <code>int64 best_header_timestamp = 13;</code>
      * @param int|string $var
@@ -490,7 +488,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether the wallet's view is synced to the main chain
+     * Whether the wallet's view is synced to the main chain
      *
      * Generated from protobuf field <code>bool synced_to_chain = 9;</code>
      * @return bool
@@ -501,7 +499,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether the wallet's view is synced to the main chain
+     * Whether the wallet's view is synced to the main chain
      *
      * Generated from protobuf field <code>bool synced_to_chain = 9;</code>
      * @param bool $var
@@ -542,7 +540,6 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Whether the current node is connected to testnet. This field is
      *deprecated and the network field should be used instead
      *
@@ -555,7 +552,6 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Whether the current node is connected to testnet. This field is
      *deprecated and the network field should be used instead
      *
@@ -572,7 +568,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A list of active chains the node is connected to
+     * A list of active chains the node is connected to
      *
      * Generated from protobuf field <code>repeated .lnrpc.Chain chains = 16;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -583,7 +579,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A list of active chains the node is connected to
+     * A list of active chains the node is connected to
      *
      * Generated from protobuf field <code>repeated .lnrpc.Chain chains = 16;</code>
      * @param \Lnrpc\Chain[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -598,7 +594,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The URIs of the current node.
+     * The URIs of the current node.
      *
      * Generated from protobuf field <code>repeated string uris = 12;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -609,7 +605,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The URIs of the current node.
+     * The URIs of the current node.
      *
      * Generated from protobuf field <code>repeated string uris = 12;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
