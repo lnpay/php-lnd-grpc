@@ -14,22 +14,20 @@ use Google\Protobuf\Internal\GPBUtil;
 class PsbtShim extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     /**
-     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
      * Generated from protobuf field <code>bytes base_psbt = 2;</code>
      */
-    protected $base_psbt = '';
+    private $base_psbt = '';
 
     /**
      * Constructor.
@@ -38,12 +36,10 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pending_chan_id
-     *          *
      *          A unique identifier of 32 random bytes that will be used as the pending
      *          channel ID to identify the PSBT state machine when interacting with it and
      *          on the wire protocol to initiate the funding request.
      *     @type string $base_psbt
-     *          *
      *          An optional base PSBT the new channel output will be added to. If this is
      *          non-empty, it must be a binary serialized PSBT.
      * }
@@ -54,7 +50,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -68,7 +63,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -86,7 +80,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
@@ -99,7 +92,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *

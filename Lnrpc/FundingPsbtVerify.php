@@ -14,20 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The funded but not yet signed PSBT that sends the exact channel capacity
      *amount to the PK script returned in the open channel message in a previous
      *step.
      *
      * Generated from protobuf field <code>bytes funded_psbt = 1;</code>
      */
-    protected $funded_psbt = '';
+    private $funded_psbt = '';
     /**
-     *&#47; The pending channel ID of the channel to get the PSBT for.
+     * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
 
     /**
      * Constructor.
@@ -36,12 +35,11 @@ class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $funded_psbt
-     *          *
      *          The funded but not yet signed PSBT that sends the exact channel capacity
      *          amount to the PK script returned in the open channel message in a previous
      *          step.
      *     @type string $pending_chan_id
-     *          &#47; The pending channel ID of the channel to get the PSBT for.
+     *           The pending channel ID of the channel to get the PSBT for.
      * }
      */
     public function __construct($data = NULL) {
@@ -50,7 +48,6 @@ class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The funded but not yet signed PSBT that sends the exact channel capacity
      *amount to the PK script returned in the open channel message in a previous
      *step.
@@ -64,7 +61,6 @@ class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The funded but not yet signed PSBT that sends the exact channel capacity
      *amount to the PK script returned in the open channel message in a previous
      *step.
@@ -82,7 +78,7 @@ class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel ID of the channel to get the PSBT for.
+     * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      * @return string
@@ -93,7 +89,7 @@ class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel ID of the channel to get the PSBT for.
+     * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      * @param string $var

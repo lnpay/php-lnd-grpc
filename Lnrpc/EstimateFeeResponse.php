@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The total fee in satoshis.
+     * The total fee in satoshis.
      *
      * Generated from protobuf field <code>int64 fee_sat = 1;</code>
      */
-    protected $fee_sat = 0;
+    private $fee_sat = 0;
     /**
-     *&#47; The fee rate in satoshi/byte.
+     * The fee rate in satoshi/byte.
      *
      * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2;</code>
      */
-    protected $feerate_sat_per_byte = 0;
+    private $feerate_sat_per_byte = 0;
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $fee_sat
-     *          &#47; The total fee in satoshis.
+     *           The total fee in satoshis.
      *     @type int|string $feerate_sat_per_byte
-     *          &#47; The fee rate in satoshi/byte.
+     *           The fee rate in satoshi/byte.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total fee in satoshis.
+     * The total fee in satoshis.
      *
      * Generated from protobuf field <code>int64 fee_sat = 1;</code>
      * @return int|string
@@ -55,7 +55,7 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total fee in satoshis.
+     * The total fee in satoshis.
      *
      * Generated from protobuf field <code>int64 fee_sat = 1;</code>
      * @param int|string $var
@@ -70,7 +70,7 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The fee rate in satoshi/byte.
+     * The fee rate in satoshi/byte.
      *
      * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2;</code>
      * @return int|string
@@ -81,7 +81,7 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The fee rate in satoshi/byte.
+     * The fee rate in satoshi/byte.
      *
      * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2;</code>
      * @param int|string $var

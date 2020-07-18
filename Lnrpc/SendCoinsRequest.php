@@ -14,40 +14,45 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendCoinsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The address to send coins to
+     * The address to send coins to
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      */
-    protected $addr = '';
+    private $addr = '';
     /**
-     *&#47; The amount in satoshis to send
+     * The amount in satoshis to send
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    protected $amount = 0;
+    private $amount = 0;
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed
-     * / by.
+     * The target number of blocks that this transaction should be confirmed
+     * by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
-     * / transaction.
+     * A manual fee rate set in sat/byte that should be used when crafting the
+     * transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
     /**
-     **
      *If set, then the amount field will be ignored, and lnd will attempt to
      *send all the coins under control of the internal wallet to the specified
      *address.
      *
      * Generated from protobuf field <code>bool send_all = 6;</code>
      */
-    protected $send_all = false;
+    private $send_all = false;
+    /**
+     * An optional label for the transaction, limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 7;</code>
+     */
+    private $label = '';
 
     /**
      * Constructor.
@@ -56,20 +61,21 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $addr
-     *          &#47; The address to send coins to
+     *           The address to send coins to
      *     @type int|string $amount
-     *          &#47; The amount in satoshis to send
+     *           The amount in satoshis to send
      *     @type int $target_conf
-     *          &#47; The target number of blocks that this transaction should be confirmed
-     *          / by.
+     *           The target number of blocks that this transaction should be confirmed
+     *           by.
      *     @type int|string $sat_per_byte
-     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the
-     *          / transaction.
+     *           A manual fee rate set in sat/byte that should be used when crafting the
+     *           transaction.
      *     @type bool $send_all
-     *          *
      *          If set, then the amount field will be ignored, and lnd will attempt to
      *          send all the coins under control of the internal wallet to the specified
      *          address.
+     *     @type string $label
+     *           An optional label for the transaction, limited to 500 characters.
      * }
      */
     public function __construct($data = NULL) {
@@ -78,7 +84,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The address to send coins to
+     * The address to send coins to
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      * @return string
@@ -89,7 +95,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The address to send coins to
+     * The address to send coins to
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      * @param string $var
@@ -104,7 +110,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The amount in satoshis to send
+     * The amount in satoshis to send
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      * @return int|string
@@ -115,7 +121,7 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The amount in satoshis to send
+     * The amount in satoshis to send
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      * @param int|string $var
@@ -130,8 +136,8 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed
-     * / by.
+     * The target number of blocks that this transaction should be confirmed
+     * by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      * @return int
@@ -142,8 +148,8 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target number of blocks that this transaction should be confirmed
-     * / by.
+     * The target number of blocks that this transaction should be confirmed
+     * by.
      *
      * Generated from protobuf field <code>int32 target_conf = 3;</code>
      * @param int $var
@@ -158,8 +164,8 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
-     * / transaction.
+     * A manual fee rate set in sat/byte that should be used when crafting the
+     * transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      * @return int|string
@@ -170,8 +176,8 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
-     * / transaction.
+     * A manual fee rate set in sat/byte that should be used when crafting the
+     * transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
      * @param int|string $var
@@ -186,7 +192,6 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set, then the amount field will be ignored, and lnd will attempt to
      *send all the coins under control of the internal wallet to the specified
      *address.
@@ -200,7 +205,6 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set, then the amount field will be ignored, and lnd will attempt to
      *send all the coins under control of the internal wallet to the specified
      *address.
@@ -213,6 +217,32 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->send_all = $var;
+
+        return $this;
+    }
+
+    /**
+     * An optional label for the transaction, limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 7;</code>
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * An optional label for the transaction, limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLabel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->label = $var;
 
         return $this;
     }

@@ -18,7 +18,7 @@ class ForwardEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.HtlcInfo info = 1;</code>
      */
-    protected $info = null;
+    private $info = null;
 
     /**
      * Constructor.

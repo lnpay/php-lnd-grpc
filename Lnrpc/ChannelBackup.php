@@ -14,14 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelBackup extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *Identifies the channel that this backup belongs to.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      */
-    protected $chan_point = null;
+    private $chan_point = null;
     /**
-     **
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
      *order to trigger the recovery protocol. When using REST, this field must be
@@ -29,7 +27,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes chan_backup = 2;</code>
      */
-    protected $chan_backup = '';
+    private $chan_backup = '';
 
     /**
      * Constructor.
@@ -38,10 +36,8 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelPoint $chan_point
-     *          *
      *          Identifies the channel that this backup belongs to.
      *     @type string $chan_backup
-     *          *
      *          Is an encrypted single-chan backup. this can be passed to
      *          RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
      *          order to trigger the recovery protocol. When using REST, this field must be
@@ -54,7 +50,6 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Identifies the channel that this backup belongs to.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
@@ -66,7 +61,6 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Identifies the channel that this backup belongs to.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
@@ -82,7 +76,6 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
      *order to trigger the recovery protocol. When using REST, this field must be
@@ -97,7 +90,6 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
      *order to trigger the recovery protocol. When using REST, this field must be

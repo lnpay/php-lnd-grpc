@@ -14,19 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class KeyDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The raw bytes of the key being identified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      */
-    protected $raw_key_bytes = '';
+    private $raw_key_bytes = '';
     /**
-     **
      *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>
      */
-    protected $key_loc = null;
+    private $key_loc = null;
 
     /**
      * Constructor.
@@ -35,10 +33,8 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $raw_key_bytes
-     *          *
      *          The raw bytes of the key being identified.
      *     @type \Lnrpc\KeyLocator $key_loc
-     *          *
      *          The key locator that identifies which key to use for signing.
      * }
      */
@@ -48,7 +44,6 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The raw bytes of the key being identified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
@@ -60,7 +55,6 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The raw bytes of the key being identified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
@@ -76,7 +70,6 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>
@@ -88,7 +81,6 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>

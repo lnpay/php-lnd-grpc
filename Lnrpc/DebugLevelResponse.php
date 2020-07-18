@@ -16,7 +16,7 @@ class DebugLevelResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string sub_systems = 1;</code>
      */
-    protected $sub_systems = '';
+    private $sub_systems = '';
 
     /**
      * Constructor.

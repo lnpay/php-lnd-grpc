@@ -14,29 +14,29 @@ use Google\Protobuf\Internal\GPBUtil;
 class ForceClosedChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The pending channel to be force closed
+     * The pending channel to be force closed
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    protected $channel = null;
+    private $channel = null;
     /**
-     *&#47; The transaction id of the closing transaction
+     * The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      */
-    protected $closing_txid = '';
+    private $closing_txid = '';
     /**
-     *&#47; The balance in satoshis encumbered in this pending channel
+     * The balance in satoshis encumbered in this pending channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 3;</code>
      */
-    protected $limbo_balance = 0;
+    private $limbo_balance = 0;
     /**
-     *&#47; The height at which funds can be swept into the wallet
+     * The height at which funds can be swept into the wallet
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      */
-    protected $maturity_height = 0;
+    private $maturity_height = 0;
     /**
      *Remaining # of blocks until the commitment output can be swept.
      *Negative values indicate how many blocks have passed since becoming
@@ -44,13 +44,13 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 blocks_til_maturity = 5;</code>
      */
-    protected $blocks_til_maturity = 0;
+    private $blocks_til_maturity = 0;
     /**
-     *&#47; The total value of funds successfully recovered from this channel
+     * The total value of funds successfully recovered from this channel
      *
      * Generated from protobuf field <code>int64 recovered_balance = 6;</code>
      */
-    protected $recovered_balance = 0;
+    private $recovered_balance = 0;
     /**
      * Generated from protobuf field <code>repeated .lnrpc.PendingHTLC pending_htlcs = 8;</code>
      */
@@ -58,7 +58,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.ForceClosedChannel.AnchorState anchor = 9;</code>
      */
-    protected $anchor = 0;
+    private $anchor = 0;
 
     /**
      * Constructor.
@@ -67,19 +67,19 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\PendingChannelsResponse\PendingChannel $channel
-     *          &#47; The pending channel to be force closed
+     *           The pending channel to be force closed
      *     @type string $closing_txid
-     *          &#47; The transaction id of the closing transaction
+     *           The transaction id of the closing transaction
      *     @type int|string $limbo_balance
-     *          &#47; The balance in satoshis encumbered in this pending channel
+     *           The balance in satoshis encumbered in this pending channel
      *     @type int $maturity_height
-     *          &#47; The height at which funds can be swept into the wallet
+     *           The height at which funds can be swept into the wallet
      *     @type int $blocks_til_maturity
      *          Remaining # of blocks until the commitment output can be swept.
      *          Negative values indicate how many blocks have passed since becoming
      *          mature.
      *     @type int|string $recovered_balance
-     *          &#47; The total value of funds successfully recovered from this channel
+     *           The total value of funds successfully recovered from this channel
      *     @type \Lnrpc\PendingHTLC[]|\Google\Protobuf\Internal\RepeatedField $pending_htlcs
      *     @type int $anchor
      * }
@@ -90,7 +90,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel to be force closed
+     * The pending channel to be force closed
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @return \Lnrpc\PendingChannelsResponse\PendingChannel
@@ -101,7 +101,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel to be force closed
+     * The pending channel to be force closed
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @param \Lnrpc\PendingChannelsResponse\PendingChannel $var
@@ -116,7 +116,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The transaction id of the closing transaction
+     * The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      * @return string
@@ -127,7 +127,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The transaction id of the closing transaction
+     * The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      * @param string $var
@@ -142,7 +142,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The balance in satoshis encumbered in this pending channel
+     * The balance in satoshis encumbered in this pending channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 3;</code>
      * @return int|string
@@ -153,7 +153,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The balance in satoshis encumbered in this pending channel
+     * The balance in satoshis encumbered in this pending channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 3;</code>
      * @param int|string $var
@@ -168,7 +168,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The height at which funds can be swept into the wallet
+     * The height at which funds can be swept into the wallet
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      * @return int
@@ -179,7 +179,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The height at which funds can be swept into the wallet
+     * The height at which funds can be swept into the wallet
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      * @param int $var
@@ -224,7 +224,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total value of funds successfully recovered from this channel
+     * The total value of funds successfully recovered from this channel
      *
      * Generated from protobuf field <code>int64 recovered_balance = 6;</code>
      * @return int|string
@@ -235,7 +235,7 @@ class ForceClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total value of funds successfully recovered from this channel
+     * The total value of funds successfully recovered from this channel
      *
      * Generated from protobuf field <code>int64 recovered_balance = 6;</code>
      * @param int|string $var

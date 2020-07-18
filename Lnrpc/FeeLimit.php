@@ -22,15 +22,13 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $fixed
-     *          *
      *          The fee limit expressed as a fixed amount of satoshis.
      *          The fields fixed and fixed_msat are mutually exclusive.
      *     @type int|string $fixed_msat
-     *          *
      *          The fee limit expressed as a fixed amount of millisatoshis.
      *          The fields fixed and fixed_msat are mutually exclusive.
      *     @type int|string $percent
-     *          &#47; The fee limit expressed as a percentage of the payment amount.
+     *           The fee limit expressed as a percentage of the payment amount.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,7 +37,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fee limit expressed as a fixed amount of satoshis.
      *The fields fixed and fixed_msat are mutually exclusive.
      *
@@ -52,7 +49,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fee limit expressed as a fixed amount of satoshis.
      *The fields fixed and fixed_msat are mutually exclusive.
      *
@@ -69,7 +65,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fee limit expressed as a fixed amount of millisatoshis.
      *The fields fixed and fixed_msat are mutually exclusive.
      *
@@ -82,7 +77,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fee limit expressed as a fixed amount of millisatoshis.
      *The fields fixed and fixed_msat are mutually exclusive.
      *
@@ -99,7 +93,7 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The fee limit expressed as a percentage of the payment amount.
+     * The fee limit expressed as a percentage of the payment amount.
      *
      * Generated from protobuf field <code>int64 percent = 2;</code>
      * @return int|string
@@ -110,7 +104,7 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The fee limit expressed as a percentage of the payment amount.
+     * The fee limit expressed as a percentage of the payment amount.
      *
      * Generated from protobuf field <code>int64 percent = 2;</code>
      * @param int|string $var

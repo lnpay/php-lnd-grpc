@@ -14,25 +14,24 @@ use Google\Protobuf\Internal\GPBUtil;
 class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The pending channel waiting for closing tx to confirm
+     * The pending channel waiting for closing tx to confirm
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    protected $channel = null;
+    private $channel = null;
     /**
-     *&#47; The balance in satoshis encumbered in this channel
+     * The balance in satoshis encumbered in this channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 2;</code>
      */
-    protected $limbo_balance = 0;
+    private $limbo_balance = 0;
     /**
-     **
      *A list of valid commitment transactions. Any of these can confirm at
      *this point.
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.Commitments commitments = 3;</code>
      */
-    protected $commitments = null;
+    private $commitments = null;
 
     /**
      * Constructor.
@@ -41,11 +40,10 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\PendingChannelsResponse\PendingChannel $channel
-     *          &#47; The pending channel waiting for closing tx to confirm
+     *           The pending channel waiting for closing tx to confirm
      *     @type int|string $limbo_balance
-     *          &#47; The balance in satoshis encumbered in this channel
+     *           The balance in satoshis encumbered in this channel
      *     @type \Lnrpc\PendingChannelsResponse\Commitments $commitments
-     *          *
      *          A list of valid commitment transactions. Any of these can confirm at
      *          this point.
      * }
@@ -56,7 +54,7 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel waiting for closing tx to confirm
+     * The pending channel waiting for closing tx to confirm
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @return \Lnrpc\PendingChannelsResponse\PendingChannel
@@ -67,7 +65,7 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel waiting for closing tx to confirm
+     * The pending channel waiting for closing tx to confirm
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @param \Lnrpc\PendingChannelsResponse\PendingChannel $var
@@ -82,7 +80,7 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The balance in satoshis encumbered in this channel
+     * The balance in satoshis encumbered in this channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 2;</code>
      * @return int|string
@@ -93,7 +91,7 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The balance in satoshis encumbered in this channel
+     * The balance in satoshis encumbered in this channel
      *
      * Generated from protobuf field <code>int64 limbo_balance = 2;</code>
      * @param int|string $var
@@ -108,7 +106,6 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of valid commitment transactions. Any of these can confirm at
      *this point.
      *
@@ -121,7 +118,6 @@ class WaitingCloseChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of valid commitment transactions. Any of these can confirm at
      *this point.
      *

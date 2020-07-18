@@ -29,7 +29,7 @@ cd ..
         --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_php_plugin \
         -Igrpc/third_party/protobuf/src \
         -I./ \
-        invoices.prot
+        invoices.proto
 
 ./grpc/bins/opt/protobuf/protoc \
         --proto_path=googleapis/ \

@@ -9,28 +9,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *&#47; PairHistory contains the mission control state for a particular node pair.
+ * PairHistory contains the mission control state for a particular node pair.
  *
  * Generated from protobuf message <code>routerrpc.PairHistory</code>
  */
 class PairHistory extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The source node pubkey of the pair.
+     * The source node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_from = 1;</code>
      */
-    protected $node_from = '';
+    private $node_from = '';
     /**
-     *&#47; The destination node pubkey of the pair.
+     * The destination node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_to = 2;</code>
      */
-    protected $node_to = '';
+    private $node_to = '';
     /**
      * Generated from protobuf field <code>.routerrpc.PairData history = 7;</code>
      */
-    protected $history = null;
+    private $history = null;
 
     /**
      * Constructor.
@@ -39,9 +39,9 @@ class PairHistory extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $node_from
-     *          &#47; The source node pubkey of the pair.
+     *           The source node pubkey of the pair.
      *     @type string $node_to
-     *          &#47; The destination node pubkey of the pair.
+     *           The destination node pubkey of the pair.
      *     @type \Routerrpc\PairData $history
      * }
      */
@@ -51,7 +51,7 @@ class PairHistory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The source node pubkey of the pair.
+     * The source node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_from = 1;</code>
      * @return string
@@ -62,7 +62,7 @@ class PairHistory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The source node pubkey of the pair.
+     * The source node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_from = 1;</code>
      * @param string $var
@@ -77,7 +77,7 @@ class PairHistory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The destination node pubkey of the pair.
+     * The destination node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_to = 2;</code>
      * @return string
@@ -88,7 +88,7 @@ class PairHistory extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The destination node pubkey of the pair.
+     * The destination node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_to = 2;</code>
      * @param string $var

@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Whether or not the client accepts the channel.
+     * Whether or not the client accepts the channel.
      *
      * Generated from protobuf field <code>bool accept = 1;</code>
      */
-    protected $accept = false;
+    private $accept = false;
     /**
-     *&#47; The pending channel id to which this response applies.
+     * The pending channel id to which this response applies.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $accept
-     *          &#47; Whether or not the client accepts the channel.
+     *           Whether or not the client accepts the channel.
      *     @type string $pending_chan_id
-     *          &#47; The pending channel id to which this response applies.
+     *           The pending channel id to which this response applies.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether or not the client accepts the channel.
+     * Whether or not the client accepts the channel.
      *
      * Generated from protobuf field <code>bool accept = 1;</code>
      * @return bool
@@ -55,7 +55,7 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether or not the client accepts the channel.
+     * Whether or not the client accepts the channel.
      *
      * Generated from protobuf field <code>bool accept = 1;</code>
      * @param bool $var
@@ -70,7 +70,7 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel id to which this response applies.
+     * The pending channel id to which this response applies.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      * @return string
@@ -81,7 +81,7 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel id to which this response applies.
+     * The pending channel id to which this response applies.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      * @param string $var

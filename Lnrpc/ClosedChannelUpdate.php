@@ -14,26 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * Generated from protobuf field <code>int64 capacity = 2;</code>
      */
-    protected $capacity = 0;
+    private $capacity = 0;
     /**
      * Generated from protobuf field <code>uint32 closed_height = 3;</code>
      */
-    protected $closed_height = 0;
+    private $closed_height = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 4;</code>
      */
-    protected $chan_point = null;
+    private $chan_point = null;
 
     /**
      * Constructor.
@@ -42,7 +41,6 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $chan_id
-     *          *
      *          The unique channel ID for the channel. The first 3 bytes are the block
      *          height, the next 3 the index within the block, and the last 2 bytes are the
      *          output index for the channel.
@@ -57,7 +55,6 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -71,7 +68,6 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.

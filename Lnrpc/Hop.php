@@ -14,57 +14,53 @@ use Google\Protobuf\Internal\GPBUtil;
 class Hop extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
      */
-    protected $chan_capacity = 0;
+    private $chan_capacity = 0;
     /**
      * Generated from protobuf field <code>int64 amt_to_forward = 3 [deprecated = true];</code>
      */
-    protected $amt_to_forward = 0;
+    private $amt_to_forward = 0;
     /**
      * Generated from protobuf field <code>int64 fee = 4 [deprecated = true];</code>
      */
-    protected $fee = 0;
+    private $fee = 0;
     /**
      * Generated from protobuf field <code>uint32 expiry = 5;</code>
      */
-    protected $expiry = 0;
+    private $expiry = 0;
     /**
      * Generated from protobuf field <code>int64 amt_to_forward_msat = 6;</code>
      */
-    protected $amt_to_forward_msat = 0;
+    private $amt_to_forward_msat = 0;
     /**
      * Generated from protobuf field <code>int64 fee_msat = 7;</code>
      */
-    protected $fee_msat = 0;
+    private $fee_msat = 0;
     /**
-     **
      *An optional public key of the hop. If the public key is given, the payment
      *can be executed without relying on a copy of the channel graph.
      *
      * Generated from protobuf field <code>string pub_key = 8;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
-     **
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format. Note that if any custom tlv_records below are specified, then
      *this field MUST be set to true for them to be encoded properly.
      *
      * Generated from protobuf field <code>bool tlv_payload = 9;</code>
      */
-    protected $tlv_payload = false;
+    private $tlv_payload = false;
     /**
-     **
      *An optional TLV record that signals the use of an MPP payment. If present,
      *the receiver will enforce that that the same mpp_record is included in the
      *final hop payload of all non-zero payments in the HTLC set. If empty, a
@@ -72,9 +68,8 @@ class Hop extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      */
-    protected $mpp_record = null;
+    private $mpp_record = null;
     /**
-     **
      *An optional set of key-value TLV records. This is useful within the context
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *to drop off at each hop within the onion.
@@ -90,7 +85,6 @@ class Hop extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $chan_id
-     *          *
      *          The unique channel ID for the channel. The first 3 bytes are the block
      *          height, the next 3 the index within the block, and the last 2 bytes are the
      *          output index for the channel.
@@ -101,22 +95,18 @@ class Hop extends \Google\Protobuf\Internal\Message
      *     @type int|string $amt_to_forward_msat
      *     @type int|string $fee_msat
      *     @type string $pub_key
-     *          *
      *          An optional public key of the hop. If the public key is given, the payment
      *          can be executed without relying on a copy of the channel graph.
      *     @type bool $tlv_payload
-     *          *
      *          If set to true, then this hop will be encoded using the new variable length
      *          TLV format. Note that if any custom tlv_records below are specified, then
      *          this field MUST be set to true for them to be encoded properly.
      *     @type \Lnrpc\MPPRecord $mpp_record
-     *          *
      *          An optional TLV record that signals the use of an MPP payment. If present,
      *          the receiver will enforce that that the same mpp_record is included in the
      *          final hop payload of all non-zero payments in the HTLC set. If empty, a
      *          regular single-shot payment is or was attempted.
      *     @type array|\Google\Protobuf\Internal\MapField $custom_records
-     *          *
      *          An optional set of key-value TLV records. This is useful within the context
      *          of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *          to drop off at each hop within the onion.
@@ -128,7 +118,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -142,7 +131,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -292,7 +280,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional public key of the hop. If the public key is given, the payment
      *can be executed without relying on a copy of the channel graph.
      *
@@ -305,7 +292,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional public key of the hop. If the public key is given, the payment
      *can be executed without relying on a copy of the channel graph.
      *
@@ -322,7 +308,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format. Note that if any custom tlv_records below are specified, then
      *this field MUST be set to true for them to be encoded properly.
@@ -336,7 +321,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set to true, then this hop will be encoded using the new variable length
      *TLV format. Note that if any custom tlv_records below are specified, then
      *this field MUST be set to true for them to be encoded properly.
@@ -354,7 +338,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional TLV record that signals the use of an MPP payment. If present,
      *the receiver will enforce that that the same mpp_record is included in the
      *final hop payload of all non-zero payments in the HTLC set. If empty, a
@@ -369,7 +352,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional TLV record that signals the use of an MPP payment. If present,
      *the receiver will enforce that that the same mpp_record is included in the
      *final hop payload of all non-zero payments in the HTLC set. If empty, a
@@ -388,7 +370,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional set of key-value TLV records. This is useful within the context
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *to drop off at each hop within the onion.
@@ -402,7 +383,6 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional set of key-value TLV records. This is useful within the context
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
      *to drop off at each hop within the onion.

@@ -14,14 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
      *
      * Generated from protobuf field <code>string payment_request = 1;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
 
     /**
      * Constructor.
@@ -30,7 +29,6 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payment_request
-     *          *
      *          A bare-bones invoice for a payment within the Lightning Network.  With the
      *          details of the invoice, the sender has all the data necessary to send a
      *          payment to the recipient.
@@ -42,7 +40,6 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
@@ -56,7 +53,6 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
