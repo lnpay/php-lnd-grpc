@@ -1,5 +1,5 @@
 {
-    "name": "tkijewski/php-lnrpc",
+    "name": "lnpay/php-lnd-grpc",
     "description": "PHP LND RPC Implementation",
     "require": {
         "grpc/grpc": "^1.22.0",
