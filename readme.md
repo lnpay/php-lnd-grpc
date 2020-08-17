@@ -15,7 +15,7 @@ Installation
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/):
 
 ```
-composer require tkijewski/php-lnrpc
+composer require lnpay/php-lnrpc
 ```
 
 Basic Usage
@@ -73,9 +73,14 @@ final class LndGrpcClient
 ## Updating the RPC definitions
 
 ```
-$ cd grpc
-$ make grpc_php_plugin
-$ bash regenerate_rpc.sh
+$ bash regenerate_rpc.sh v0.10.4-beta
 ```
 
-`regenerate_rpc.sh` pulls in https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/rpc.proto and generates based on this.
+`regenerate_rpc.sh` pulls in https://raw.githubusercontent.com/lightningnetwork/lnd/master/v0.10.4-beta/XXX.proto and generates based on this.
+
+Currently generated: rpc.proto
+invoices.proto
+router.proto
+walletkit.proto
+chainnotifier.proto
+signer.proto 

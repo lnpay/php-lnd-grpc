@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The balance in satoshis encumbered in pending channels
+     *&#47; The balance in satoshis encumbered in pending channels
      *
      * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      */
     private $total_limbo_balance = 0;
     /**
-     * Channels pending opening
+     *&#47; Channels pending opening
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2;</code>
      */
@@ -34,13 +34,13 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      */
     private $pending_closing_channels;
     /**
-     * Channels pending force closing
+     *&#47; Channels pending force closing
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4;</code>
      */
     private $pending_force_closing_channels;
     /**
-     * Channels waiting for closing tx to confirm
+     *&#47; Channels waiting for closing tx to confirm
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5;</code>
      */
@@ -53,17 +53,17 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $total_limbo_balance
-     *           The balance in satoshis encumbered in pending channels
+     *          &#47; The balance in satoshis encumbered in pending channels
      *     @type \Lnrpc\PendingChannelsResponse\PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_open_channels
-     *           Channels pending opening
+     *          &#47; Channels pending opening
      *     @type \Lnrpc\PendingChannelsResponse\ClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_closing_channels
      *          Deprecated: Channels pending closing previously contained cooperatively
      *          closed channels with a single confirmation. These channels are now
      *          considered closed from the time we see them on chain.
      *     @type \Lnrpc\PendingChannelsResponse\ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $pending_force_closing_channels
-     *           Channels pending force closing
+     *          &#47; Channels pending force closing
      *     @type \Lnrpc\PendingChannelsResponse\WaitingCloseChannel[]|\Google\Protobuf\Internal\RepeatedField $waiting_close_channels
-     *           Channels waiting for closing tx to confirm
+     *          &#47; Channels waiting for closing tx to confirm
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The balance in satoshis encumbered in pending channels
+     *&#47; The balance in satoshis encumbered in pending channels
      *
      * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      * @return int|string
@@ -83,7 +83,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The balance in satoshis encumbered in pending channels
+     *&#47; The balance in satoshis encumbered in pending channels
      *
      * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      * @param int|string $var
@@ -98,7 +98,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Channels pending opening
+     *&#47; Channels pending opening
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -109,7 +109,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Channels pending opening
+     *&#47; Channels pending opening
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.PendingOpenChannel pending_open_channels = 2;</code>
      * @param \Lnrpc\PendingChannelsResponse\PendingOpenChannel[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -154,7 +154,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Channels pending force closing
+     *&#47; Channels pending force closing
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -165,7 +165,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Channels pending force closing
+     *&#47; Channels pending force closing
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.ForceClosedChannel pending_force_closing_channels = 4;</code>
      * @param \Lnrpc\PendingChannelsResponse\ForceClosedChannel[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -180,7 +180,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Channels waiting for closing tx to confirm
+     *&#47; Channels waiting for closing tx to confirm
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -191,7 +191,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Channels waiting for closing tx to confirm
+     *&#47; Channels waiting for closing tx to confirm
      *
      * Generated from protobuf field <code>repeated .lnrpc.PendingChannelsResponse.WaitingCloseChannel waiting_close_channels = 5;</code>
      * @param \Lnrpc\PendingChannelsResponse\WaitingCloseChannel[]|\Google\Protobuf\Internal\RepeatedField $var

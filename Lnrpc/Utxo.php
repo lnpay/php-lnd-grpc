@@ -14,37 +14,37 @@ use Google\Protobuf\Internal\GPBUtil;
 class Utxo extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The type of address
+     *&#47; The type of address
      *
      * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      */
     private $address_type = 0;
     /**
-     * The address
+     *&#47; The address
      *
      * Generated from protobuf field <code>string address = 2;</code>
      */
     private $address = '';
     /**
-     * The value of the unspent coin in satoshis
+     *&#47; The value of the unspent coin in satoshis
      *
      * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      */
     private $amount_sat = 0;
     /**
-     * The pkscript in hex
+     *&#47; The pkscript in hex
      *
      * Generated from protobuf field <code>string pk_script = 4;</code>
      */
     private $pk_script = '';
     /**
-     * The outpoint in format txid:n
+     *&#47; The outpoint in format txid:n
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      */
     private $outpoint = null;
     /**
-     * The number of confirmations for the Utxo
+     *&#47; The number of confirmations for the Utxo
      *
      * Generated from protobuf field <code>int64 confirmations = 6;</code>
      */
@@ -57,17 +57,17 @@ class Utxo extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $address_type
-     *           The type of address
+     *          &#47; The type of address
      *     @type string $address
-     *           The address
+     *          &#47; The address
      *     @type int|string $amount_sat
-     *           The value of the unspent coin in satoshis
+     *          &#47; The value of the unspent coin in satoshis
      *     @type string $pk_script
-     *           The pkscript in hex
+     *          &#47; The pkscript in hex
      *     @type \Lnrpc\OutPoint $outpoint
-     *           The outpoint in format txid:n
+     *          &#47; The outpoint in format txid:n
      *     @type int|string $confirmations
-     *           The number of confirmations for the Utxo
+     *          &#47; The number of confirmations for the Utxo
      * }
      */
     public function __construct($data = NULL) {
@@ -76,7 +76,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The type of address
+     *&#47; The type of address
      *
      * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      * @return int
@@ -87,7 +87,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The type of address
+     *&#47; The type of address
      *
      * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      * @param int $var
@@ -102,7 +102,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The address
+     *&#47; The address
      *
      * Generated from protobuf field <code>string address = 2;</code>
      * @return string
@@ -113,7 +113,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The address
+     *&#47; The address
      *
      * Generated from protobuf field <code>string address = 2;</code>
      * @param string $var
@@ -128,7 +128,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The value of the unspent coin in satoshis
+     *&#47; The value of the unspent coin in satoshis
      *
      * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      * @return int|string
@@ -139,7 +139,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The value of the unspent coin in satoshis
+     *&#47; The value of the unspent coin in satoshis
      *
      * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      * @param int|string $var
@@ -154,7 +154,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The pkscript in hex
+     *&#47; The pkscript in hex
      *
      * Generated from protobuf field <code>string pk_script = 4;</code>
      * @return string
@@ -165,7 +165,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The pkscript in hex
+     *&#47; The pkscript in hex
      *
      * Generated from protobuf field <code>string pk_script = 4;</code>
      * @param string $var
@@ -180,7 +180,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The outpoint in format txid:n
+     *&#47; The outpoint in format txid:n
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      * @return \Lnrpc\OutPoint
@@ -191,7 +191,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The outpoint in format txid:n
+     *&#47; The outpoint in format txid:n
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      * @param \Lnrpc\OutPoint $var
@@ -206,7 +206,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The number of confirmations for the Utxo
+     *&#47; The number of confirmations for the Utxo
      *
      * Generated from protobuf field <code>int64 confirmations = 6;</code>
      * @return int|string
@@ -217,7 +217,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The number of confirmations for the Utxo
+     *&#47; The number of confirmations for the Utxo
      *
      * Generated from protobuf field <code>int64 confirmations = 6;</code>
      * @param int|string $var

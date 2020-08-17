@@ -4,24 +4,6 @@
 namespace Lnrpc;
 
 /**
- *
- * Comments in this file will be directly parsed into the API
- * Documentation as descriptions of the associated method, message, or field.
- * These descriptions should go right above the definition of the object, and
- * can be in either block or // comment format.
- *
- * An RPC method can be matched to an lncli command by placing a line in the
- * beginning of the description in exactly the following format:
- * lncli: `methodname`
- *
- * Failure to specify the exact name of the command will cause documentation
- * generation to fail.
- *
- * More information on how exactly the gRPC documentation is generated from
- * this proto file can be found here:
- * https://github.com/lightninglabs/lightning-api
- *
- * Lightning is the main RPC server of the daemon.
  */
 class LightningClient extends \Grpc\BaseStub {
 
@@ -35,7 +17,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `walletbalance`
+     * * lncli: `walletbalance`
      * WalletBalance returns total unspent outputs(confirmed and unconfirmed), all
      * confirmed unspent outputs and all unconfirmed unspent outputs under control
      * of the wallet.
@@ -52,7 +34,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `channelbalance`
+     * * lncli: `channelbalance`
      * ChannelBalance returns the total funds available across all open channels
      * in satoshis.
      * @param \Lnrpc\ChannelBalanceRequest $argument input argument
@@ -68,7 +50,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `listchaintxns`
+     * * lncli: `listchaintxns`
      * GetTransactions returns a list describing all the known transactions
      * relevant to the wallet.
      * @param \Lnrpc\GetTransactionsRequest $argument input argument
@@ -84,14 +66,9 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `estimatefee`
+     * * lncli: `estimatefee`
      * EstimateFee asks the chain backend to estimate the fee rate and total fees
      * for a transaction that pays to multiple specified outputs.
-     *
-     * When using REST, the `AddrToAmount` map type can be set by appending
-     * `&AddrToAmount[<address>]=<amount_to_send>` to the URL. Unfortunately this
-     * map type doesn't appear in the REST API documentation because of a bug in
-     * the grpc-gateway library.
      * @param \Lnrpc\EstimateFeeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -105,7 +82,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `sendcoins`
+     * * lncli: `sendcoins`
      * SendCoins executes a request to send coins to a particular address. Unlike
      * SendMany, this RPC call only allows creating a single output at a time. If
      * neither target_conf, or sat_per_byte are set, then the internal wallet will
@@ -124,9 +101,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `listunspent`
-     * Deprecated, use walletrpc.ListUnspent instead.
-     *
+     * * lncli: `listunspent`
      * ListUnspent returns a list of all utxos spendable by the wallet with a
      * number of confirmations between the specified minimum and maximum.
      * @param \Lnrpc\ListUnspentRequest $argument input argument
@@ -142,7 +117,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeTransactions creates a uni-directional stream from the server to
      * the client in which any newly discovered transactions relevant to the
      * wallet are sent over.
@@ -159,7 +134,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `sendmany`
+     * * lncli: `sendmany`
      * SendMany handles a request for a transaction that creates multiple specified
      * outputs in parallel. If neither target_conf, or sat_per_byte are set, then
      * the internal wallet will consult its fee model to determine a fee for the
@@ -177,7 +152,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `newaddress`
+     * * lncli: `newaddress`
      * NewAddress creates a new address under control of the local wallet.
      * @param \Lnrpc\NewAddressRequest $argument input argument
      * @param array $metadata metadata
@@ -192,7 +167,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `signmessage`
+     * * lncli: `signmessage`
      * SignMessage signs a message with this node's private key. The returned
      * signature string is `zbase32` encoded and pubkey recoverable, meaning that
      * only the message digest and signature are needed for verification.
@@ -209,7 +184,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `verifymessage`
+     * * lncli: `verifymessage`
      * VerifyMessage verifies a signature over a msg. The signature must be
      * zbase32 encoded and signed by an active node in the resident node's
      * channel database. In addition to returning the validity of the signature,
@@ -227,7 +202,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `connect`
+     * * lncli: `connect`
      * ConnectPeer attempts to establish a connection to a remote peer. This is at
      * the networking level, and is used for communication between nodes. This is
      * distinct from establishing a channel with a peer.
@@ -244,7 +219,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `disconnect`
+     * * lncli: `disconnect`
      * DisconnectPeer attempts to disconnect one peer from another identified by a
      * given pubKey. In the case that we currently have a pending or active channel
      * with the target peer, then this action will be not be allowed.
@@ -261,7 +236,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `listpeers`
+     * * lncli: `listpeers`
      * ListPeers returns a verbose listing of all currently active peers.
      * @param \Lnrpc\ListPeersRequest $argument input argument
      * @param array $metadata metadata
@@ -276,7 +251,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribePeerEvents creates a uni-directional stream from the server to
      * the client in which any events relevant to the state of peers are sent
      * over. Events include peers going online and offline.
@@ -293,7 +268,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `getinfo`
+     * * lncli: `getinfo`
      * GetInfo returns general information concerning the lightning node including
      * it's identity pubkey, alias, the chains it is connected to, and information
      * concerning the number of open+pending channels.
@@ -310,26 +285,9 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * * lncli: `getrecoveryinfo`
-     * GetRecoveryInfo returns information concerning the recovery mode including
-     * whether it's in a recovery mode, whether the recovery is finished, and the
-     * progress made so far.
-     * @param \Lnrpc\GetRecoveryInfoRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     */
-    public function GetRecoveryInfo(\Lnrpc\GetRecoveryInfoRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/lnrpc.Lightning/GetRecoveryInfo',
-        $argument,
-        ['\Lnrpc\GetRecoveryInfoResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * TODO(roasbeef): merge with below with bool?
      *
-     * lncli: `pendingchannels`
+     * * lncli: `pendingchannels`
      * PendingChannels returns a list of all the channels that are currently
      * considered "pending". A channel is pending if it has finished the funding
      * workflow and is waiting for confirmations for the funding txn, or is in the
@@ -347,7 +305,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `listchannels`
+     * * lncli: `listchannels`
      * ListChannels returns a description of all the open channels that this node
      * is a participant in.
      * @param \Lnrpc\ListChannelsRequest $argument input argument
@@ -363,7 +321,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeChannelEvents creates a uni-directional stream from the server to
      * the client in which any updates relevant to the state of the channels are
      * sent over. Events include new active channels, inactive channels, and closed
@@ -381,7 +339,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `closedchannels`
+     * * lncli: `closedchannels`
      * ClosedChannels returns a description of all the closed channels that
      * this node was a participant in.
      * @param \Lnrpc\ClosedChannelsRequest $argument input argument
@@ -397,7 +355,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * OpenChannelSync is a synchronous version of the OpenChannel RPC call. This
      * call is meant to be consumed by clients to the REST proxy. As with all
      * other sync calls, all byte slices are intended to be populated as hex
@@ -415,7 +373,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `openchannel`
+     * * lncli: `openchannel`
      * OpenChannel attempts to open a singly funded channel specified in the
      * request to a remote peer. Users are able to specify a target number of
      * blocks that the funding transaction should be confirmed in, or a manual fee
@@ -437,7 +395,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * FundingStateStep is an advanced funding related call that allows the caller
      * to either execute some preparatory steps for a funding workflow, or
      * manually progress a funding workflow. The primary way a funding flow is
@@ -459,7 +417,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * ChannelAcceptor dispatches a bi-directional streaming RPC in which
      * OpenChannel requests are sent to the client and the client responds with
      * a boolean that tells LND whether or not to accept the channel. This allows
@@ -475,7 +433,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `closechannel`
+     * * lncli: `closechannel`
      * CloseChannel attempts to close an active channel identified by its channel
      * outpoint (ChannelPoint). The actions of this method can additionally be
      * augmented to attempt a force close after a timeout period in the case of an
@@ -496,7 +454,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `abandonchannel`
+     * * lncli: `abandonchannel`
      * AbandonChannel removes all channel state from the database except for a
      * close summary. This method can be used to get rid of permanently unusable
      * channels due to bugs fixed in newer versions of lnd. Only available
@@ -514,8 +472,8 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `sendpayment`
-     * Deprecated, use routerrpc.SendPaymentV2. SendPayment dispatches a
+     * * lncli: `sendpayment`
+     * Deprecated, use routerrpc.SendPayment. SendPayment dispatches a
      * bi-directional streaming RPC for sending payments through the Lightning
      * Network. A single RPC invocation creates a persistent bi-directional
      * stream allowing clients to rapidly send payments through the Lightning
@@ -530,7 +488,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SendPaymentSync is the synchronous non-streaming version of SendPayment.
      * This RPC is intended to be consumed by clients of the REST proxy.
      * Additionally, this RPC expects the destination's public key and the payment
@@ -548,12 +506,11 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `sendtoroute`
-     * Deprecated, use routerrpc.SendToRouteV2. SendToRoute is a bi-directional
-     * streaming RPC for sending payment through the Lightning Network. This
-     * method differs from SendPayment in that it allows users to specify a full
-     * route manually. This can be used for things like rebalancing, and atomic
-     * swaps.
+     * * lncli: `sendtoroute`
+     * SendToRoute is a bi-directional streaming RPC for sending payment through
+     * the Lightning Network. This method differs from SendPayment in that it
+     * allows users to specify a full route manually. This can be used for things
+     * like rebalancing, and atomic swaps.
      * @param array $metadata metadata
      * @param array $options call options
      */
@@ -564,7 +521,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SendToRouteSync is a synchronous version of SendToRoute. It Will block
      * until the payment either fails or succeeds.
      * @param \Lnrpc\SendToRouteRequest $argument input argument
@@ -580,7 +537,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `addinvoice`
+     * * lncli: `addinvoice`
      * AddInvoice attempts to add a new invoice to the invoice database. Any
      * duplicated invoices are rejected, therefore all invoices *must* have a
      * unique payment preimage.
@@ -597,7 +554,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `listinvoices`
+     * * lncli: `listinvoices`
      * ListInvoices returns a list of all the invoices currently stored within the
      * database. Any active debug invoices are ignored. It has full support for
      * paginated responses, allowing users to query for specific invoices through
@@ -618,7 +575,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `lookupinvoice`
+     * * lncli: `lookupinvoice`
      * LookupInvoice attempts to look up an invoice according to its payment hash.
      * The passed payment hash *must* be exactly 32 bytes, if not, an error is
      * returned.
@@ -635,7 +592,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeInvoices returns a uni-directional stream (server -> client) for
      * notifying the client of newly added/settled invoices. The caller can
      * optionally specify the add_index and/or the settle_index. If the add_index
@@ -658,7 +615,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `decodepayreq`
+     * * lncli: `decodepayreq`
      * DecodePayReq takes an encoded payment request string and attempts to decode
      * it, returning a full description of the conditions encoded within the
      * payment request.
@@ -675,7 +632,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `listpayments`
+     * * lncli: `listpayments`
      * ListPayments returns a list of all outgoing payments.
      * @param \Lnrpc\ListPaymentsRequest $argument input argument
      * @param array $metadata metadata
@@ -690,7 +647,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * DeleteAllPayments deletes all outgoing payments from DB.
      * @param \Lnrpc\DeleteAllPaymentsRequest $argument input argument
      * @param array $metadata metadata
@@ -705,7 +662,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `describegraph`
+     * * lncli: `describegraph`
      * DescribeGraph returns a description of the latest graph state from the
      * point of view of the node. The graph information is partitioned into two
      * components: all the nodes/vertexes, and all the edges that connect the
@@ -725,7 +682,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `getnodemetrics`
+     * * lncli: `getnodemetrics`
      * GetNodeMetrics returns node metrics calculated from the graph. Currently
      * the only supported metric is betweenness centrality of individual nodes.
      * @param \Lnrpc\NodeMetricsRequest $argument input argument
@@ -741,7 +698,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `getchaninfo`
+     * * lncli: `getchaninfo`
      * GetChanInfo returns the latest authenticated network announcement for the
      * given channel identified by its channel ID: an 8-byte integer which
      * uniquely identifies the location of transaction's funding output within the
@@ -759,7 +716,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `getnodeinfo`
+     * * lncli: `getnodeinfo`
      * GetNodeInfo returns the latest advertised, aggregated, and authenticated
      * channel information for the specified node identified by its public key.
      * @param \Lnrpc\NodeInfoRequest $argument input argument
@@ -775,17 +732,12 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `queryroutes`
+     * * lncli: `queryroutes`
      * QueryRoutes attempts to query the daemon's Channel Router for a possible
      * route to a target destination capable of carrying a specific amount of
      * satoshis. The returned route contains the full details required to craft and
      * send an HTLC, also including the necessary information that should be
      * present within the Sphinx packet encapsulated within the HTLC.
-     *
-     * When using REST, the `dest_custom_records` map type can be set by appending
-     * `&dest_custom_records[<record_number>]=<record_data_base64_url_encoded>`
-     * to the URL. Unfortunately this map type doesn't appear in the REST API
-     * documentation because of a bug in the grpc-gateway library.
      * @param \Lnrpc\QueryRoutesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -799,7 +751,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `getnetworkinfo`
+     * * lncli: `getnetworkinfo`
      * GetNetworkInfo returns some basic stats about the known channel graph from
      * the point of view of the node.
      * @param \Lnrpc\NetworkInfoRequest $argument input argument
@@ -815,7 +767,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `stop`
+     * * lncli: `stop`
      * StopDaemon will send a shutdown request to the interrupt handler, triggering
      * a graceful shutdown of the daemon.
      * @param \Lnrpc\StopRequest $argument input argument
@@ -831,7 +783,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeChannelGraph launches a streaming RPC that allows the caller to
      * receive notifications upon any changes to the channel graph topology from
      * the point of view of the responding node. Events notified include: new
@@ -851,7 +803,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `debuglevel`
+     * * lncli: `debuglevel`
      * DebugLevel allows a caller to programmatically set the logging verbosity of
      * lnd. The logging can be targeted according to a coarse daemon-wide logging
      * level, or in a granular fashion to specify the logging for a target
@@ -869,7 +821,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `feereport`
+     * * lncli: `feereport`
      * FeeReport allows the caller to obtain a report detailing the current fee
      * schedule enforced by the node globally for each channel.
      * @param \Lnrpc\FeeReportRequest $argument input argument
@@ -885,7 +837,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `updatechanpolicy`
+     * * lncli: `updatechanpolicy`
      * UpdateChannelPolicy allows the caller to update the fee schedule and
      * channel policies for all channels globally, or a particular channel.
      * @param \Lnrpc\PolicyUpdateRequest $argument input argument
@@ -901,7 +853,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `fwdinghistory`
+     * * lncli: `fwdinghistory`
      * ForwardingHistory allows the caller to query the htlcswitch for a record of
      * all HTLCs forwarded within the target time range, and integer offset
      * within that time range. If no time-range is specified, then the first chunk
@@ -925,7 +877,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `exportchanbackup`
+     * * lncli: `exportchanbackup`
      * ExportChannelBackup attempts to return an encrypted static channel backup
      * for the target channel identified by it channel point. The backup is
      * encrypted with a key generated from the aezeed seed of the user. The
@@ -945,7 +897,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * ExportAllChannelBackups returns static channel backups for all existing
      * channels known to lnd. A set of regular singular static channel backups for
      * each channel are returned. Additionally, a multi-channel backup is returned
@@ -964,7 +916,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * VerifyChanBackup allows a caller to verify the integrity of a channel backup
      * snapshot. This method will accept either a packed Single or a packed Multi.
      * Specifying both will result in an error.
@@ -981,7 +933,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `restorechanbackup`
+     * * lncli: `restorechanbackup`
      * RestoreChannelBackups accepts a set of singular channel backups, or a
      * single encrypted multi-chan backup and attempts to recover any funds
      * remaining within the channel. If we are able to unpack the backup, then the
@@ -999,7 +951,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeChannelBackups allows a client to sub-subscribe to the most up to
      * date information concerning the state of all channel backups. Each time a
      * new channel is added, we return the new set of channels, along with a
@@ -1020,7 +972,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
-     * lncli: `bakemacaroon`
+     * * lncli: `bakemacaroon`
      * BakeMacaroon allows the creation of a new macaroon with custom read and
      * write permissions. No first-party caveats are added since this can be done
      * offline.

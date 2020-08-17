@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendToRouteResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The preimage obtained by making the payment.
+     *&#47; The preimage obtained by making the payment.
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      */
     private $preimage = '';
     /**
-     * The failure message in case the payment failed.
+     *&#47; The failure message in case the payment failed.
      *
      * Generated from protobuf field <code>.lnrpc.Failure failure = 2;</code>
      */
@@ -33,9 +33,9 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $preimage
-     *           The preimage obtained by making the payment.
+     *          &#47; The preimage obtained by making the payment.
      *     @type \Lnrpc\Failure $failure
-     *           The failure message in case the payment failed.
+     *          &#47; The failure message in case the payment failed.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The preimage obtained by making the payment.
+     *&#47; The preimage obtained by making the payment.
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The preimage obtained by making the payment.
+     *&#47; The preimage obtained by making the payment.
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The failure message in case the payment failed.
+     *&#47; The failure message in case the payment failed.
      *
      * Generated from protobuf field <code>.lnrpc.Failure failure = 2;</code>
      * @return \Lnrpc\Failure
@@ -81,7 +81,7 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The failure message in case the payment failed.
+     *&#47; The failure message in case the payment failed.
      *
      * Generated from protobuf field <code>.lnrpc.Failure failure = 2;</code>
      * @param \Lnrpc\Failure $var

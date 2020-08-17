@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeInfoRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The 33-byte hex-encoded compressed public of the target node
+     *&#47; The 33-byte hex-encoded compressed public of the target node
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
     private $pub_key = '';
     /**
-     * If true, will include all known channels associated with the node.
+     *&#47; If true, will include all known channels associated with the node.
      *
      * Generated from protobuf field <code>bool include_channels = 2;</code>
      */
@@ -33,9 +33,9 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *           The 33-byte hex-encoded compressed public of the target node
+     *          &#47; The 33-byte hex-encoded compressed public of the target node
      *     @type bool $include_channels
-     *           If true, will include all known channels associated with the node.
+     *          &#47; If true, will include all known channels associated with the node.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The 33-byte hex-encoded compressed public of the target node
+     *&#47; The 33-byte hex-encoded compressed public of the target node
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The 33-byte hex-encoded compressed public of the target node
+     *&#47; The 33-byte hex-encoded compressed public of the target node
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, will include all known channels associated with the node.
+     *&#47; If true, will include all known channels associated with the node.
      *
      * Generated from protobuf field <code>bool include_channels = 2;</code>
      * @return bool
@@ -81,7 +81,7 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, will include all known channels associated with the node.
+     *&#47; If true, will include all known channels associated with the node.
      *
      * Generated from protobuf field <code>bool include_channels = 2;</code>
      * @param bool $var

@@ -9,6 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
  *A path through the channel graph which runs over one or more channels in
  *succession. This struct carries all the information required to craft the
  *Sphinx onion packet, and send the payment along the first hop in the path. A
@@ -20,6 +21,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Route extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *The cumulative (final) time lock across the entire route. This is the CLTV
      *value that should be extended to the first hop in the route. All other hops
      *will decrement the time-lock as advertised, leaving enough time for all
@@ -29,6 +31,7 @@ class Route extends \Google\Protobuf\Internal\Message
      */
     private $total_time_lock = 0;
     /**
+     **
      *The sum of the fees paid at each hop within the final route. In the case
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *to ourselves.
@@ -37,6 +40,7 @@ class Route extends \Google\Protobuf\Internal\Message
      */
     private $total_fees = 0;
     /**
+     **
      *The total amount of funds required to complete a payment over this route.
      *This value includes the cumulative fees at each hop. As a result, the HTLC
      *extended to the first-hop in the route will need to have at least this many
@@ -47,18 +51,21 @@ class Route extends \Google\Protobuf\Internal\Message
      */
     private $total_amt = 0;
     /**
+     **
      *Contains details concerning the specific forwarding details at each hop.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4;</code>
      */
     private $hops;
     /**
+     **
      *The total fees in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_fees_msat = 5;</code>
      */
     private $total_fees_msat = 0;
     /**
+     **
      *The total amount in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_amt_msat = 6;</code>
@@ -72,25 +79,31 @@ class Route extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $total_time_lock
+     *          *
      *          The cumulative (final) time lock across the entire route. This is the CLTV
      *          value that should be extended to the first hop in the route. All other hops
      *          will decrement the time-lock as advertised, leaving enough time for all
      *          hops to wait for or present the payment preimage to complete the payment.
      *     @type int|string $total_fees
+     *          *
      *          The sum of the fees paid at each hop within the final route. In the case
      *          of a one-hop payment, this value will be zero as we don't need to pay a fee
      *          to ourselves.
      *     @type int|string $total_amt
+     *          *
      *          The total amount of funds required to complete a payment over this route.
      *          This value includes the cumulative fees at each hop. As a result, the HTLC
      *          extended to the first-hop in the route will need to have at least this many
      *          satoshis, otherwise the route will fail at an intermediate node due to an
      *          insufficient amount of fees.
      *     @type \Lnrpc\Hop[]|\Google\Protobuf\Internal\RepeatedField $hops
+     *          *
      *          Contains details concerning the specific forwarding details at each hop.
      *     @type int|string $total_fees_msat
+     *          *
      *          The total fees in millisatoshis.
      *     @type int|string $total_amt_msat
+     *          *
      *          The total amount in millisatoshis.
      * }
      */
@@ -100,6 +113,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The cumulative (final) time lock across the entire route. This is the CLTV
      *value that should be extended to the first hop in the route. All other hops
      *will decrement the time-lock as advertised, leaving enough time for all
@@ -114,6 +128,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The cumulative (final) time lock across the entire route. This is the CLTV
      *value that should be extended to the first hop in the route. All other hops
      *will decrement the time-lock as advertised, leaving enough time for all
@@ -132,6 +147,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The sum of the fees paid at each hop within the final route. In the case
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *to ourselves.
@@ -145,6 +161,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The sum of the fees paid at each hop within the final route. In the case
      *of a one-hop payment, this value will be zero as we don't need to pay a fee
      *to ourselves.
@@ -162,6 +179,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total amount of funds required to complete a payment over this route.
      *This value includes the cumulative fees at each hop. As a result, the HTLC
      *extended to the first-hop in the route will need to have at least this many
@@ -177,6 +195,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total amount of funds required to complete a payment over this route.
      *This value includes the cumulative fees at each hop. As a result, the HTLC
      *extended to the first-hop in the route will need to have at least this many
@@ -196,6 +215,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Contains details concerning the specific forwarding details at each hop.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4;</code>
@@ -207,6 +227,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Contains details concerning the specific forwarding details at each hop.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Hop hops = 4;</code>
@@ -222,6 +243,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total fees in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_fees_msat = 5;</code>
@@ -233,6 +255,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total fees in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_fees_msat = 5;</code>
@@ -248,6 +271,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total amount in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_amt_msat = 6;</code>
@@ -259,6 +283,7 @@ class Route extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total amount in millisatoshis.
      *
      * Generated from protobuf field <code>int64 total_amt_msat = 6;</code>

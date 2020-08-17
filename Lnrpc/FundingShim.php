@@ -22,9 +22,11 @@ class FundingShim extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChanPointShim $chan_point_shim
+     *          *
      *          A channel shim where the channel point was fully constructed outside
      *          of lnd's wallet and the transaction might already be published.
      *     @type \Lnrpc\PsbtShim $psbt_shim
+     *          *
      *          A channel shim that uses a PSBT to fund and sign the channel funding
      *          transaction.
      * }
@@ -35,6 +37,7 @@ class FundingShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A channel shim where the channel point was fully constructed outside
      *of lnd's wallet and the transaction might already be published.
      *
@@ -47,6 +50,7 @@ class FundingShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A channel shim where the channel point was fully constructed outside
      *of lnd's wallet and the transaction might already be published.
      *
@@ -63,6 +67,7 @@ class FundingShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A channel shim that uses a PSBT to fund and sign the channel funding
      *transaction.
      *
@@ -75,6 +80,7 @@ class FundingShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A channel shim that uses a PSBT to fund and sign the channel funding
      *transaction.
      *

@@ -19,7 +19,7 @@ class InvoicesClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeSingleInvoice returns a uni-directional stream (server -> client)
      * to notify the client of state transitions of the specified invoice.
      * Initially the current invoice state is always sent out.
@@ -36,7 +36,7 @@ class InvoicesClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * CancelInvoice cancels a currently open invoice. If the invoice is already
      * canceled, this call will succeed. If the invoice is already settled, it will
      * fail.
@@ -53,7 +53,7 @@ class InvoicesClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * AddHoldInvoice creates a hold invoice. It ties the invoice to the hash
      * supplied in the request.
      * @param \Invoicesrpc\AddHoldInvoiceRequest $argument input argument
@@ -69,7 +69,7 @@ class InvoicesClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SettleInvoice settles an accepted invoice. If the invoice is already
      * settled, this call will succeed.
      * @param \Invoicesrpc\SettleInvoiceMsg $argument input argument

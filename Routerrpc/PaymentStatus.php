@@ -14,18 +14,20 @@ use Google\Protobuf\Internal\GPBUtil;
 class PaymentStatus extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Current state the payment is in.
+     *&#47; Current state the payment is in.
      *
      * Generated from protobuf field <code>.routerrpc.PaymentState state = 1;</code>
      */
     private $state = 0;
     /**
+     **
      *The pre-image of the payment when state is SUCCEEDED.
      *
      * Generated from protobuf field <code>bytes preimage = 2;</code>
      */
     private $preimage = '';
     /**
+     **
      *The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 4;</code>
@@ -39,10 +41,12 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $state
-     *           Current state the payment is in.
+     *          &#47; Current state the payment is in.
      *     @type string $preimage
+     *          *
      *          The pre-image of the payment when state is SUCCEEDED.
      *     @type \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $htlcs
+     *          *
      *          The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      * }
      */
@@ -52,7 +56,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Current state the payment is in.
+     *&#47; Current state the payment is in.
      *
      * Generated from protobuf field <code>.routerrpc.PaymentState state = 1;</code>
      * @return int
@@ -63,7 +67,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Current state the payment is in.
+     *&#47; Current state the payment is in.
      *
      * Generated from protobuf field <code>.routerrpc.PaymentState state = 1;</code>
      * @param int $var
@@ -78,6 +82,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The pre-image of the payment when state is SUCCEEDED.
      *
      * Generated from protobuf field <code>bytes preimage = 2;</code>
@@ -89,6 +94,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The pre-image of the payment when state is SUCCEEDED.
      *
      * Generated from protobuf field <code>bytes preimage = 2;</code>
@@ -104,6 +110,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 4;</code>
@@ -115,6 +122,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 4;</code>

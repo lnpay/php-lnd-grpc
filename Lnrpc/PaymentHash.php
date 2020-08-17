@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PaymentHash extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *The hex-encoded payment hash of the invoice to be looked up. The passed
      *payment hash must be exactly 32 bytes, otherwise an error is returned.
      *Deprecated now that the REST gateway supports base64 encoding of bytes
@@ -23,6 +24,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      */
     private $r_hash_str = '';
     /**
+     **
      *The payment hash of the invoice to be looked up. When using REST, this field
      *must be encoded as base64.
      *
@@ -37,11 +39,13 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $r_hash_str
+     *          *
      *          The hex-encoded payment hash of the invoice to be looked up. The passed
      *          payment hash must be exactly 32 bytes, otherwise an error is returned.
      *          Deprecated now that the REST gateway supports base64 encoding of bytes
      *          fields.
      *     @type string $r_hash
+     *          *
      *          The payment hash of the invoice to be looked up. When using REST, this field
      *          must be encoded as base64.
      * }
@@ -52,6 +56,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The hex-encoded payment hash of the invoice to be looked up. The passed
      *payment hash must be exactly 32 bytes, otherwise an error is returned.
      *Deprecated now that the REST gateway supports base64 encoding of bytes
@@ -66,6 +71,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The hex-encoded payment hash of the invoice to be looked up. The passed
      *payment hash must be exactly 32 bytes, otherwise an error is returned.
      *Deprecated now that the REST gateway supports base64 encoding of bytes
@@ -84,6 +90,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The payment hash of the invoice to be looked up. When using REST, this field
      *must be encoded as base64.
      *
@@ -96,6 +103,7 @@ class PaymentHash extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The payment hash of the invoice to be looked up. When using REST, this field
      *must be encoded as base64.
      *

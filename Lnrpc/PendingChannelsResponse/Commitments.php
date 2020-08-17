@@ -14,19 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class Commitments extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Hash of the local version of the commitment tx.
+     *&#47; Hash of the local version of the commitment tx.
      *
      * Generated from protobuf field <code>string local_txid = 1;</code>
      */
     private $local_txid = '';
     /**
-     * Hash of the remote version of the commitment tx.
+     *&#47; Hash of the remote version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_txid = 2;</code>
      */
     private $remote_txid = '';
     /**
-     * Hash of the remote pending version of the commitment tx.
+     *&#47; Hash of the remote pending version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_pending_txid = 3;</code>
      */
@@ -60,11 +60,11 @@ class Commitments extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $local_txid
-     *           Hash of the local version of the commitment tx.
+     *          &#47; Hash of the local version of the commitment tx.
      *     @type string $remote_txid
-     *           Hash of the remote version of the commitment tx.
+     *          &#47; Hash of the remote version of the commitment tx.
      *     @type string $remote_pending_txid
-     *           Hash of the remote pending version of the commitment tx.
+     *          &#47; Hash of the remote pending version of the commitment tx.
      *     @type int|string $local_commit_fee_sat
      *          The amount in satoshis calculated to be paid in fees for the local
      *          commitment.
@@ -82,7 +82,7 @@ class Commitments extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash of the local version of the commitment tx.
+     *&#47; Hash of the local version of the commitment tx.
      *
      * Generated from protobuf field <code>string local_txid = 1;</code>
      * @return string
@@ -93,7 +93,7 @@ class Commitments extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash of the local version of the commitment tx.
+     *&#47; Hash of the local version of the commitment tx.
      *
      * Generated from protobuf field <code>string local_txid = 1;</code>
      * @param string $var
@@ -108,7 +108,7 @@ class Commitments extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash of the remote version of the commitment tx.
+     *&#47; Hash of the remote version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_txid = 2;</code>
      * @return string
@@ -119,7 +119,7 @@ class Commitments extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash of the remote version of the commitment tx.
+     *&#47; Hash of the remote version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_txid = 2;</code>
      * @param string $var
@@ -134,7 +134,7 @@ class Commitments extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash of the remote pending version of the commitment tx.
+     *&#47; Hash of the remote pending version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_pending_txid = 3;</code>
      * @return string
@@ -145,7 +145,7 @@ class Commitments extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash of the remote pending version of the commitment tx.
+     *&#47; Hash of the remote pending version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_pending_txid = 3;</code>
      * @param string $var

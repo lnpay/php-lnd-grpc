@@ -18,6 +18,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      */
     private $r_hash = '';
     /**
+     **
      *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
@@ -26,6 +27,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      */
     private $payment_request = '';
     /**
+     **
      *The "add" index of this invoice. Each newly created invoice will increment
      *this index making it monotonically increasing. Callers to the
      *SubscribeInvoices call can use this to instantly get notified of all added
@@ -43,10 +45,12 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $r_hash
      *     @type string $payment_request
+     *          *
      *          A bare-bones invoice for a payment within the Lightning Network. With the
      *          details of the invoice, the sender has all the data necessary to send a
      *          payment to the recipient.
      *     @type int|string $add_index
+     *          *
      *          The "add" index of this invoice. Each newly created invoice will increment
      *          this index making it monotonically increasing. Callers to the
      *          SubscribeInvoices call can use this to instantly get notified of all added
@@ -81,6 +85,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
@@ -94,6 +99,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient.
@@ -111,6 +117,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The "add" index of this invoice. Each newly created invoice will increment
      *this index making it monotonically increasing. Callers to the
      *SubscribeInvoices call can use this to instantly get notified of all added
@@ -125,6 +132,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The "add" index of this invoice. Each newly created invoice will increment
      *this index making it monotonically increasing. Callers to the
      *SubscribeInvoices call can use this to instantly get notified of all added

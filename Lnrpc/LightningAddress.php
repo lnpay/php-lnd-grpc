@@ -14,14 +14,14 @@ use Google\Protobuf\Internal\GPBUtil;
 class LightningAddress extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The identity pubkey of the Lightning node
+     *&#47; The identity pubkey of the Lightning node
      *
      * Generated from protobuf field <code>string pubkey = 1;</code>
      */
     private $pubkey = '';
     /**
-     * The network location of the lightning node, e.g. `69.69.69.69:1337` or
-     * `localhost:10011`
+     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     * / `localhost:10011`
      *
      * Generated from protobuf field <code>string host = 2;</code>
      */
@@ -34,10 +34,10 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pubkey
-     *           The identity pubkey of the Lightning node
+     *          &#47; The identity pubkey of the Lightning node
      *     @type string $host
-     *           The network location of the lightning node, e.g. `69.69.69.69:1337` or
-     *           `localhost:10011`
+     *          &#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     *          / `localhost:10011`
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the Lightning node
+     *&#47; The identity pubkey of the Lightning node
      *
      * Generated from protobuf field <code>string pubkey = 1;</code>
      * @return string
@@ -57,7 +57,7 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the Lightning node
+     *&#47; The identity pubkey of the Lightning node
      *
      * Generated from protobuf field <code>string pubkey = 1;</code>
      * @param string $var
@@ -72,8 +72,8 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The network location of the lightning node, e.g. `69.69.69.69:1337` or
-     * `localhost:10011`
+     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     * / `localhost:10011`
      *
      * Generated from protobuf field <code>string host = 2;</code>
      * @return string
@@ -84,8 +84,8 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The network location of the lightning node, e.g. `69.69.69.69:1337` or
-     * `localhost:10011`
+     *&#47; The network location of the lightning node, e.g. `69.69.69.69:1337` or
+     * / `localhost:10011`
      *
      * Generated from protobuf field <code>string host = 2;</code>
      * @param string $var

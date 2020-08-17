@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeMetricsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The requested node metrics.
+     *&#47; The requested node metrics.
      *
      * Generated from protobuf field <code>repeated .lnrpc.NodeMetricType types = 1;</code>
      */
@@ -27,7 +27,7 @@ class NodeMetricsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $types
-     *           The requested node metrics.
+     *          &#47; The requested node metrics.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class NodeMetricsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The requested node metrics.
+     *&#47; The requested node metrics.
      *
      * Generated from protobuf field <code>repeated .lnrpc.NodeMetricType types = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class NodeMetricsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The requested node metrics.
+     *&#47; The requested node metrics.
      *
      * Generated from protobuf field <code>repeated .lnrpc.NodeMetricType types = 1;</code>
      * @param int[]|\Google\Protobuf\Internal\RepeatedField $var

@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *A list of invoices from the time slice of the time series specified in the
      *request.
      *
@@ -21,6 +22,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      */
     private $invoices;
     /**
+     **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek further, pagination style.
      *
@@ -28,6 +30,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      */
     private $last_index_offset = 0;
     /**
+     **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek backwards, pagination style.
      *
@@ -42,12 +45,15 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\Invoice[]|\Google\Protobuf\Internal\RepeatedField $invoices
+     *          *
      *          A list of invoices from the time slice of the time series specified in the
      *          request.
      *     @type int|string $last_index_offset
+     *          *
      *          The index of the last item in the set of returned invoices. This can be used
      *          to seek further, pagination style.
      *     @type int|string $first_index_offset
+     *          *
      *          The index of the last item in the set of returned invoices. This can be used
      *          to seek backwards, pagination style.
      * }
@@ -58,6 +64,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A list of invoices from the time slice of the time series specified in the
      *request.
      *
@@ -70,6 +77,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A list of invoices from the time slice of the time series specified in the
      *request.
      *
@@ -86,6 +94,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek further, pagination style.
      *
@@ -98,6 +107,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek further, pagination style.
      *
@@ -114,6 +124,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek backwards, pagination style.
      *
@@ -126,6 +137,7 @@ class ListInvoiceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the last item in the set of returned invoices. This can be used
      *to seek backwards, pagination style.
      *

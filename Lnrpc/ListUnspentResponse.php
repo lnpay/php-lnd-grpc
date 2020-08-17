@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListUnspentResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * A list of utxos
+     *&#47; A list of utxos
      *
      * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
      */
@@ -27,7 +27,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\Utxo[]|\Google\Protobuf\Internal\RepeatedField $utxos
-     *           A list of utxos
+     *          &#47; A list of utxos
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of utxos
+     *&#47; A list of utxos
      *
      * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of utxos
+     *&#47; A list of utxos
      *
      * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
      * @param \Lnrpc\Utxo[]|\Google\Protobuf\Internal\RepeatedField $var

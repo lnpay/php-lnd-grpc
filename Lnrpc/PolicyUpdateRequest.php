@@ -14,40 +14,40 @@ use Google\Protobuf\Internal\GPBUtil;
 class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The base fee charged regardless of the number of milli-satoshis sent.
+     *&#47; The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 3;</code>
      */
     private $base_fee_msat = 0;
     /**
-     * The effective fee rate in milli-satoshis. The precision of this value
-     * goes up to 6 decimal places, so 1e-6.
+     *&#47; The effective fee rate in milli-satoshis. The precision of this value
+     * / goes up to 6 decimal places, so 1e-6.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      */
     private $fee_rate = 0.0;
     /**
-     * The required timelock delta for HTLCs forwarded over the channel.
+     *&#47; The required timelock delta for HTLCs forwarded over the channel.
      *
      * Generated from protobuf field <code>uint32 time_lock_delta = 5;</code>
      */
     private $time_lock_delta = 0;
     /**
-     * If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
-     * HTLC will be unchanged.
+     *&#47; If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
+     * / HTLC will be unchanged.
      *
      * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      */
     private $max_htlc_msat = 0;
     /**
-     * The minimum HTLC size in milli-satoshis. Only applied if
-     * min_htlc_msat_specified is true.
+     *&#47; The minimum HTLC size in milli-satoshis. Only applied if
+     * / min_htlc_msat_specified is true.
      *
      * Generated from protobuf field <code>uint64 min_htlc_msat = 7;</code>
      */
     private $min_htlc_msat = 0;
     /**
-     * If true, min_htlc_msat is applied.
+     *&#47; If true, min_htlc_msat is applied.
      *
      * Generated from protobuf field <code>bool min_htlc_msat_specified = 8;</code>
      */
@@ -61,24 +61,24 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $global
-     *           If set, then this update applies to all currently active channels.
+     *          &#47; If set, then this update applies to all currently active channels.
      *     @type \Lnrpc\ChannelPoint $chan_point
-     *           If set, this update will target a specific channel.
+     *          &#47; If set, this update will target a specific channel.
      *     @type int|string $base_fee_msat
-     *           The base fee charged regardless of the number of milli-satoshis sent.
+     *          &#47; The base fee charged regardless of the number of milli-satoshis sent.
      *     @type float $fee_rate
-     *           The effective fee rate in milli-satoshis. The precision of this value
-     *           goes up to 6 decimal places, so 1e-6.
+     *          &#47; The effective fee rate in milli-satoshis. The precision of this value
+     *          / goes up to 6 decimal places, so 1e-6.
      *     @type int $time_lock_delta
-     *           The required timelock delta for HTLCs forwarded over the channel.
+     *          &#47; The required timelock delta for HTLCs forwarded over the channel.
      *     @type int|string $max_htlc_msat
-     *           If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
-     *           HTLC will be unchanged.
+     *          &#47; If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
+     *          / HTLC will be unchanged.
      *     @type int|string $min_htlc_msat
-     *           The minimum HTLC size in milli-satoshis. Only applied if
-     *           min_htlc_msat_specified is true.
+     *          &#47; The minimum HTLC size in milli-satoshis. Only applied if
+     *          / min_htlc_msat_specified is true.
      *     @type bool $min_htlc_msat_specified
-     *           If true, min_htlc_msat is applied.
+     *          &#47; If true, min_htlc_msat is applied.
      * }
      */
     public function __construct($data = NULL) {
@@ -87,7 +87,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, then this update applies to all currently active channels.
+     *&#47; If set, then this update applies to all currently active channels.
      *
      * Generated from protobuf field <code>bool global = 1;</code>
      * @return bool
@@ -98,7 +98,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, then this update applies to all currently active channels.
+     *&#47; If set, then this update applies to all currently active channels.
      *
      * Generated from protobuf field <code>bool global = 1;</code>
      * @param bool $var
@@ -113,7 +113,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, this update will target a specific channel.
+     *&#47; If set, this update will target a specific channel.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 2;</code>
      * @return \Lnrpc\ChannelPoint
@@ -124,7 +124,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, this update will target a specific channel.
+     *&#47; If set, this update will target a specific channel.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 2;</code>
      * @param \Lnrpc\ChannelPoint $var
@@ -139,7 +139,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The base fee charged regardless of the number of milli-satoshis sent.
+     *&#47; The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 3;</code>
      * @return int|string
@@ -150,7 +150,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The base fee charged regardless of the number of milli-satoshis sent.
+     *&#47; The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 3;</code>
      * @param int|string $var
@@ -165,8 +165,8 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The effective fee rate in milli-satoshis. The precision of this value
-     * goes up to 6 decimal places, so 1e-6.
+     *&#47; The effective fee rate in milli-satoshis. The precision of this value
+     * / goes up to 6 decimal places, so 1e-6.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      * @return float
@@ -177,8 +177,8 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The effective fee rate in milli-satoshis. The precision of this value
-     * goes up to 6 decimal places, so 1e-6.
+     *&#47; The effective fee rate in milli-satoshis. The precision of this value
+     * / goes up to 6 decimal places, so 1e-6.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      * @param float $var
@@ -193,7 +193,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The required timelock delta for HTLCs forwarded over the channel.
+     *&#47; The required timelock delta for HTLCs forwarded over the channel.
      *
      * Generated from protobuf field <code>uint32 time_lock_delta = 5;</code>
      * @return int
@@ -204,7 +204,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The required timelock delta for HTLCs forwarded over the channel.
+     *&#47; The required timelock delta for HTLCs forwarded over the channel.
      *
      * Generated from protobuf field <code>uint32 time_lock_delta = 5;</code>
      * @param int $var
@@ -219,8 +219,8 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
-     * HTLC will be unchanged.
+     *&#47; If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
+     * / HTLC will be unchanged.
      *
      * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      * @return int|string
@@ -231,8 +231,8 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
-     * HTLC will be unchanged.
+     *&#47; If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
+     * / HTLC will be unchanged.
      *
      * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      * @param int|string $var
@@ -247,8 +247,8 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum HTLC size in milli-satoshis. Only applied if
-     * min_htlc_msat_specified is true.
+     *&#47; The minimum HTLC size in milli-satoshis. Only applied if
+     * / min_htlc_msat_specified is true.
      *
      * Generated from protobuf field <code>uint64 min_htlc_msat = 7;</code>
      * @return int|string
@@ -259,8 +259,8 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum HTLC size in milli-satoshis. Only applied if
-     * min_htlc_msat_specified is true.
+     *&#47; The minimum HTLC size in milli-satoshis. Only applied if
+     * / min_htlc_msat_specified is true.
      *
      * Generated from protobuf field <code>uint64 min_htlc_msat = 7;</code>
      * @param int|string $var
@@ -275,7 +275,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, min_htlc_msat is applied.
+     *&#47; If true, min_htlc_msat is applied.
      *
      * Generated from protobuf field <code>bool min_htlc_msat_specified = 8;</code>
      * @return bool
@@ -286,7 +286,7 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, min_htlc_msat is applied.
+     *&#47; If true, min_htlc_msat is applied.
      *
      * Generated from protobuf field <code>bool min_htlc_msat_specified = 8;</code>
      * @param bool $var

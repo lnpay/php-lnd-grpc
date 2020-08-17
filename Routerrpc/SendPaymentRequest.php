@@ -14,12 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendPaymentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The identity pubkey of the payment recipient
+     *&#47; The identity pubkey of the payment recipient
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
     private $dest = '';
     /**
+     **
      *Number of satoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -27,6 +28,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $amt = 0;
     /**
+     **
      *Number of millisatoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -34,12 +36,13 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $amt_msat = 0;
     /**
-     * The hash to use within the payment's HTLC
+     *&#47; The hash to use within the payment's HTLC
      *
      * Generated from protobuf field <code>bytes payment_hash = 3;</code>
      */
     private $payment_hash = '';
     /**
+     **
      *The CLTV delta from the current height that should be used to set the
      *timelock for the final hop.
      *
@@ -47,6 +50,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $final_cltv_delta = 0;
     /**
+     **
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient. The amount in the payment request may be zero. In
@@ -57,6 +61,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $payment_request = '';
     /**
+     **
      *An upper limit on the amount of time we should spend when attempting to
      *fulfill the payment. This is expressed in seconds. If we cannot make a
      *successful payment within this time frame, an error will be returned.
@@ -66,6 +71,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $timeout_seconds = 0;
     /**
+     **
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *If this field is left to the default value of 0, only zero-fee routes will
      *be considered. This usually means single hop routes connecting directly to
@@ -76,6 +82,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $fee_limit_sat = 0;
     /**
+     **
      *The maximum number of millisatoshis that will be paid as a fee of the
      *payment. If this field is left to the default value of 0, only zero-fee
      *routes will be considered. This usually means single hop routes connecting
@@ -102,12 +109,14 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $outgoing_chan_ids;
     /**
+     **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 14;</code>
      */
     private $last_hop_pubkey = '';
     /**
+     **
      *An optional maximum total time lock for the route. This should not exceed
      *lnd's `--max-cltv-expiry` setting. If zero, then the value of
      *`--max-cltv-expiry` is enforced.
@@ -116,12 +125,14 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $cltv_limit = 0;
     /**
+     **
      *Optional route hints to reach the destination through private channels.
      *
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
      */
     private $route_hints;
     /**
+     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. Record types are
@@ -132,12 +143,13 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $dest_custom_records;
     /**
-     * If set, circular payments to self are permitted.
+     *&#47; If set, circular payments to self are permitted.
      *
      * Generated from protobuf field <code>bool allow_self_payment = 15;</code>
      */
     private $allow_self_payment = false;
     /**
+     **
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
@@ -148,6 +160,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $dest_features;
     /**
+     **
      *The maximum number of partial payments that may be use to complete the full
      *amount.
      *
@@ -155,6 +168,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      */
     private $max_parts = 0;
     /**
+     **
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *
@@ -169,36 +183,43 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $dest
-     *           The identity pubkey of the payment recipient
+     *          &#47; The identity pubkey of the payment recipient
      *     @type int|string $amt
+     *          *
      *          Number of satoshis to send.
      *          The fields amt and amt_msat are mutually exclusive.
      *     @type int|string $amt_msat
+     *          *
      *          Number of millisatoshis to send.
      *          The fields amt and amt_msat are mutually exclusive.
      *     @type string $payment_hash
-     *           The hash to use within the payment's HTLC
+     *          &#47; The hash to use within the payment's HTLC
      *     @type int $final_cltv_delta
+     *          *
      *          The CLTV delta from the current height that should be used to set the
      *          timelock for the final hop.
      *     @type string $payment_request
+     *          *
      *          A bare-bones invoice for a payment within the Lightning Network.  With the
      *          details of the invoice, the sender has all the data necessary to send a
      *          payment to the recipient. The amount in the payment request may be zero. In
      *          that case it is required to set the amt field as well. If no payment request
      *          is specified, the following fields are required: dest, amt and payment_hash.
      *     @type int $timeout_seconds
+     *          *
      *          An upper limit on the amount of time we should spend when attempting to
      *          fulfill the payment. This is expressed in seconds. If we cannot make a
      *          successful payment within this time frame, an error will be returned.
      *          This field must be non-zero.
      *     @type int|string $fee_limit_sat
+     *          *
      *          The maximum number of satoshis that will be paid as a fee of the payment.
      *          If this field is left to the default value of 0, only zero-fee routes will
      *          be considered. This usually means single hop routes connecting directly to
      *          the destination. To send the payment without a fee limit, use max int here.
      *          The fields fee_limit_sat and fee_limit_msat are mutually exclusive.
      *     @type int|string $fee_limit_msat
+     *          *
      *          The maximum number of millisatoshis that will be paid as a fee of the
      *          payment. If this field is left to the default value of 0, only zero-fee
      *          routes will be considered. This usually means single hop routes connecting
@@ -213,31 +234,38 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *          The channel ids of the channels are allowed for the first hop. If empty,
      *          any channel may be used.
      *     @type string $last_hop_pubkey
+     *          *
      *          The pubkey of the last hop of the route. If empty, any hop may be used.
      *     @type int $cltv_limit
+     *          *
      *          An optional maximum total time lock for the route. This should not exceed
      *          lnd's `--max-cltv-expiry` setting. If zero, then the value of
      *          `--max-cltv-expiry` is enforced.
      *     @type \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $route_hints
+     *          *
      *          Optional route hints to reach the destination through private channels.
      *     @type array|\Google\Protobuf\Internal\MapField $dest_custom_records
+     *          *
      *          An optional field that can be used to pass an arbitrary set of TLV records
      *          to a peer which understands the new records. This can be used to pass
      *          application specific data during the payment attempt. Record types are
      *          required to be in the custom range >= 65536. When using REST, the values
      *          must be encoded as base64.
      *     @type bool $allow_self_payment
-     *           If set, circular payments to self are permitted.
+     *          &#47; If set, circular payments to self are permitted.
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $dest_features
+     *          *
      *          Features assumed to be supported by the final node. All transitive feature
      *          dependencies must also be set properly. For a given feature bit pair, either
      *          optional or remote may be set, but not both. If this field is nil or empty,
      *          the router will try to load destination features from the graph as a
      *          fallback.
      *     @type int $max_parts
+     *          *
      *          The maximum number of partial payments that may be use to complete the full
      *          amount.
      *     @type bool $no_inflight_updates
+     *          *
      *          If set, only the final payment update is streamed back. Intermediate updates
      *          that show which htlcs are still in flight are suppressed.
      * }
@@ -248,7 +276,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the payment recipient
+     *&#47; The identity pubkey of the payment recipient
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      * @return string
@@ -259,7 +287,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the payment recipient
+     *&#47; The identity pubkey of the payment recipient
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      * @param string $var
@@ -274,6 +302,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Number of satoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -286,6 +315,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Number of satoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -302,6 +332,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Number of millisatoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -314,6 +345,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Number of millisatoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -330,7 +362,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The hash to use within the payment's HTLC
+     *&#47; The hash to use within the payment's HTLC
      *
      * Generated from protobuf field <code>bytes payment_hash = 3;</code>
      * @return string
@@ -341,7 +373,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The hash to use within the payment's HTLC
+     *&#47; The hash to use within the payment's HTLC
      *
      * Generated from protobuf field <code>bytes payment_hash = 3;</code>
      * @param string $var
@@ -356,6 +388,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The CLTV delta from the current height that should be used to set the
      *timelock for the final hop.
      *
@@ -368,6 +401,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The CLTV delta from the current height that should be used to set the
      *timelock for the final hop.
      *
@@ -384,6 +418,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient. The amount in the payment request may be zero. In
@@ -399,6 +434,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
      *payment to the recipient. The amount in the payment request may be zero. In
@@ -418,6 +454,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An upper limit on the amount of time we should spend when attempting to
      *fulfill the payment. This is expressed in seconds. If we cannot make a
      *successful payment within this time frame, an error will be returned.
@@ -432,6 +469,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An upper limit on the amount of time we should spend when attempting to
      *fulfill the payment. This is expressed in seconds. If we cannot make a
      *successful payment within this time frame, an error will be returned.
@@ -450,6 +488,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *If this field is left to the default value of 0, only zero-fee routes will
      *be considered. This usually means single hop routes connecting directly to
@@ -465,6 +504,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *If this field is left to the default value of 0, only zero-fee routes will
      *be considered. This usually means single hop routes connecting directly to
@@ -484,6 +524,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The maximum number of millisatoshis that will be paid as a fee of the
      *payment. If this field is left to the default value of 0, only zero-fee
      *routes will be considered. This usually means single hop routes connecting
@@ -500,6 +541,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The maximum number of millisatoshis that will be paid as a fee of the
      *payment. If this field is left to the default value of 0, only zero-fee
      *routes will be considered. This usually means single hop routes connecting
@@ -578,6 +620,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 14;</code>
@@ -589,6 +632,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 14;</code>
@@ -604,6 +648,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An optional maximum total time lock for the route. This should not exceed
      *lnd's `--max-cltv-expiry` setting. If zero, then the value of
      *`--max-cltv-expiry` is enforced.
@@ -617,6 +662,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An optional maximum total time lock for the route. This should not exceed
      *lnd's `--max-cltv-expiry` setting. If zero, then the value of
      *`--max-cltv-expiry` is enforced.
@@ -634,6 +680,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Optional route hints to reach the destination through private channels.
      *
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
@@ -645,6 +692,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Optional route hints to reach the destination through private channels.
      *
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
@@ -660,6 +708,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. Record types are
@@ -675,6 +724,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. Record types are
@@ -694,7 +744,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, circular payments to self are permitted.
+     *&#47; If set, circular payments to self are permitted.
      *
      * Generated from protobuf field <code>bool allow_self_payment = 15;</code>
      * @return bool
@@ -705,7 +755,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If set, circular payments to self are permitted.
+     *&#47; If set, circular payments to self are permitted.
      *
      * Generated from protobuf field <code>bool allow_self_payment = 15;</code>
      * @param bool $var
@@ -720,6 +770,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
@@ -735,6 +786,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
@@ -754,6 +806,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The maximum number of partial payments that may be use to complete the full
      *amount.
      *
@@ -766,6 +819,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The maximum number of partial payments that may be use to complete the full
      *amount.
      *
@@ -782,6 +836,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *
@@ -794,6 +849,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *

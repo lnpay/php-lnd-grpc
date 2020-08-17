@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeMetricsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *Betweenness centrality is the sum of the ratio of shortest paths that pass
      *through the node for each pair of nodes in the graph (not counting paths
      *starting or ending at this node).
@@ -31,6 +32,7 @@ class NodeMetricsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array|\Google\Protobuf\Internal\MapField $betweenness_centrality
+     *          *
      *          Betweenness centrality is the sum of the ratio of shortest paths that pass
      *          through the node for each pair of nodes in the graph (not counting paths
      *          starting or ending at this node).
@@ -44,6 +46,7 @@ class NodeMetricsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Betweenness centrality is the sum of the ratio of shortest paths that pass
      *through the node for each pair of nodes in the graph (not counting paths
      *starting or ending at this node).
@@ -59,6 +62,7 @@ class NodeMetricsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Betweenness centrality is the sum of the ratio of shortest paths that pass
      *through the node for each pair of nodes in the graph (not counting paths
      *starting or ending at this node).

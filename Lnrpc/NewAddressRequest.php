@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class NewAddressRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The address type
+     *&#47; The address type
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      */
@@ -27,7 +27,7 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $type
-     *           The address type
+     *          &#47; The address type
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The address type
+     *&#47; The address type
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      * @return int
@@ -47,7 +47,7 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The address type
+     *&#47; The address type
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      * @param int $var

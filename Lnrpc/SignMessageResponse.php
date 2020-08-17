@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignMessageResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The signature for the given message
+     *&#47; The signature for the given message
      *
      * Generated from protobuf field <code>string signature = 1;</code>
      */
@@ -27,7 +27,7 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $signature
-     *           The signature for the given message
+     *          &#47; The signature for the given message
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The signature for the given message
+     *&#47; The signature for the given message
      *
      * Generated from protobuf field <code>string signature = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class SignMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The signature for the given message
+     *&#47; The signature for the given message
      *
      * Generated from protobuf field <code>string signature = 1;</code>
      * @param string $var

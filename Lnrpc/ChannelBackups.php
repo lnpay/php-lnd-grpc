@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelBackups extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *A set of single-chan static channel backups.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1;</code>
@@ -27,6 +28,7 @@ class ChannelBackups extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelBackup[]|\Google\Protobuf\Internal\RepeatedField $chan_backups
+     *          *
      *          A set of single-chan static channel backups.
      * }
      */
@@ -36,6 +38,7 @@ class ChannelBackups extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A set of single-chan static channel backups.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1;</code>
@@ -47,6 +50,7 @@ class ChannelBackups extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A set of single-chan static channel backups.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelBackup chan_backups = 1;</code>

@@ -4,8 +4,6 @@
 namespace Routerrpc;
 
 /**
- * Router is a service that offers advanced interaction with the router
- * subsystem of the daemon.
  */
 class RouterClient extends \Grpc\BaseStub {
 
@@ -19,7 +17,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SendPaymentV2 attempts to route a payment described by the passed
      * PaymentRequest to the final destination. The call returns a stream of
      * payment updates.
@@ -36,7 +34,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * TrackPaymentV2 returns an update stream for the payment identified by the
      * payment hash.
      * @param \Routerrpc\TrackPaymentRequest $argument input argument
@@ -52,7 +50,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * EstimateRouteFee allows callers to obtain a lower bound w.r.t how much it
      * may cost to send an HTLC to the target end destination.
      * @param \Routerrpc\RouteFeeRequest $argument input argument
@@ -68,12 +66,10 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
-     * Deprecated, use SendToRouteV2. SendToRoute attempts to make a payment via
-     * the specified route. This method differs from SendPayment in that it
-     * allows users to specify a full route manually. This can be used for
-     * things like rebalancing, and atomic swaps. It differs from the newer
-     * SendToRouteV2 in that it doesn't return the full HTLC information.
+     * *
+     * SendToRoute attempts to make a payment via the specified route. This method
+     * differs from SendPayment in that it allows users to specify a full route
+     * manually. This can be used for things like rebalancing, and atomic swaps.
      * @param \Routerrpc\SendToRouteRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -87,25 +83,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
-     * SendToRouteV2 attempts to make a payment via the specified route. This
-     * method differs from SendPayment in that it allows users to specify a full
-     * route manually. This can be used for things like rebalancing, and atomic
-     * swaps.
-     * @param \Routerrpc\SendToRouteRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     */
-    public function SendToRouteV2(\Routerrpc\SendToRouteRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/routerrpc.Router/SendToRouteV2',
-        $argument,
-        ['\Lnrpc\HTLCAttempt', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     *
+     * *
      * ResetMissionControl clears all mission control state and starts with a clean
      * slate.
      * @param \Routerrpc\ResetMissionControlRequest $argument input argument
@@ -121,7 +99,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * QueryMissionControl exposes the internal mission control state to callers.
      * It is a development feature.
      * @param \Routerrpc\QueryMissionControlRequest $argument input argument
@@ -137,7 +115,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * QueryProbability returns the current success probability estimate for a
      * given node pair and amount.
      * @param \Routerrpc\QueryProbabilityRequest $argument input argument
@@ -153,7 +131,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * BuildRoute builds a fully specified route based on a list of hop public
      * keys. It retrieves the relevant channel policies from the graph in order to
      * calculate the correct fees and time locks.
@@ -170,7 +148,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * SubscribeHtlcEvents creates a uni-directional stream from the server to
      * the client which delivers a stream of htlc events.
      * @param \Routerrpc\SubscribeHtlcEventsRequest $argument input argument
@@ -186,8 +164,8 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
-     * Deprecated, use SendPaymentV2. SendPayment attempts to route a payment
+     * *
+     * Deprecated, use SendPaymentV2. SendPayment attempts to route a payment 
      * described by the passed PaymentRequest to the final destination. The call
      * returns a stream of payment status updates.
      * @param \Routerrpc\SendPaymentRequest $argument input argument
@@ -203,7 +181,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
-     *
+     * *
      * Deprecated, use TrackPaymentV2. TrackPayment returns an update stream for
      * the payment identified by the payment hash.
      * @param \Routerrpc\TrackPaymentRequest $argument input argument
@@ -215,22 +193,6 @@ class RouterClient extends \Grpc\BaseStub {
         return $this->_serverStreamRequest('/routerrpc.Router/TrackPayment',
         $argument,
         ['\Routerrpc\PaymentStatus', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * *
-     * HtlcInterceptor dispatches a bi-directional streaming RPC in which
-     * Forwarded HTLC requests are sent to the client and the client responds with
-     * a boolean that tells LND if this htlc should be intercepted.
-     * In case of interception, the htlc can be either settled, cancelled or
-     * resumed later by using the ResolveHoldForward endpoint.
-     * @param array $metadata metadata
-     * @param array $options call options
-     */
-    public function HtlcInterceptor($metadata = [], $options = []) {
-        return $this->_bidiRequest('/routerrpc.Router/HtlcInterceptor',
-        ['\Routerrpc\ForwardHtlcInterceptRequest','decode'],
         $metadata, $options);
     }
 

@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class CancelInvoiceMsg extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Hash corresponding to the (hold) invoice to cancel.
+     *&#47; Hash corresponding to the (hold) invoice to cancel.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
@@ -27,7 +27,7 @@ class CancelInvoiceMsg extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payment_hash
-     *           Hash corresponding to the (hold) invoice to cancel.
+     *          &#47; Hash corresponding to the (hold) invoice to cancel.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class CancelInvoiceMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash corresponding to the (hold) invoice to cancel.
+     *&#47; Hash corresponding to the (hold) invoice to cancel.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class CancelInvoiceMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash corresponding to the (hold) invoice to cancel.
+     *&#47; Hash corresponding to the (hold) invoice to cancel.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      * @param string $var

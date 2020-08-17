@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *The set of new channels that have been added since the last channel backup
      *snapshot was requested.
      *
@@ -21,6 +22,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      */
     private $single_chan_backups = null;
     /**
+     **
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *
@@ -35,9 +37,11 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelBackups $single_chan_backups
+     *          *
      *          The set of new channels that have been added since the last channel backup
      *          snapshot was requested.
      *     @type \Lnrpc\MultiChanBackup $multi_chan_backup
+     *          *
      *          A multi-channel backup that covers all open channels currently known to
      *          lnd.
      * }
@@ -48,6 +52,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The set of new channels that have been added since the last channel backup
      *snapshot was requested.
      *
@@ -60,6 +65,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The set of new channels that have been added since the last channel backup
      *snapshot was requested.
      *
@@ -76,6 +82,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *
@@ -88,6 +95,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *

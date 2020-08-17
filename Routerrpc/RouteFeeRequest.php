@@ -14,12 +14,14 @@ use Google\Protobuf\Internal\GPBUtil;
 class RouteFeeRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *The destination once wishes to obtain a routing fee quote to.
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
     private $dest = '';
     /**
+     **
      *The amount one wishes to send to the target destination.
      *
      * Generated from protobuf field <code>int64 amt_sat = 2;</code>
@@ -33,8 +35,10 @@ class RouteFeeRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $dest
+     *          *
      *          The destination once wishes to obtain a routing fee quote to.
      *     @type int|string $amt_sat
+     *          *
      *          The amount one wishes to send to the target destination.
      * }
      */
@@ -44,6 +48,7 @@ class RouteFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The destination once wishes to obtain a routing fee quote to.
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
@@ -55,6 +60,7 @@ class RouteFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The destination once wishes to obtain a routing fee quote to.
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
@@ -70,6 +76,7 @@ class RouteFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The amount one wishes to send to the target destination.
      *
      * Generated from protobuf field <code>int64 amt_sat = 2;</code>
@@ -81,6 +88,7 @@ class RouteFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The amount one wishes to send to the target destination.
      *
      * Generated from protobuf field <code>int64 amt_sat = 2;</code>

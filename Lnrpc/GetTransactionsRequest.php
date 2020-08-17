@@ -13,23 +13,6 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
 {
-    /**
-     *The height from which to list transactions, inclusive. If this value is
-     *greater than end_height, transactions will be read in reverse.
-     *
-     * Generated from protobuf field <code>int32 start_height = 1;</code>
-     */
-    private $start_height = 0;
-    /**
-     *The height until which to list transactions, inclusive. To include
-     *unconfirmed transactions, this value should be set to -1, which will
-     *return transactions from start_height until the current chain tip and
-     *unconfirmed transactions. If no end_height is provided, the call will
-     *default to this option.
-     *
-     * Generated from protobuf field <code>int32 end_height = 2;</code>
-     */
-    private $end_height = 0;
 
     /**
      * Constructor.
@@ -37,82 +20,11 @@ class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $start_height
-     *          The height from which to list transactions, inclusive. If this value is
-     *          greater than end_height, transactions will be read in reverse.
-     *     @type int $end_height
-     *          The height until which to list transactions, inclusive. To include
-     *          unconfirmed transactions, this value should be set to -1, which will
-     *          return transactions from start_height until the current chain tip and
-     *          unconfirmed transactions. If no end_height is provided, the call will
-     *          default to this option.
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
         parent::__construct($data);
-    }
-
-    /**
-     *The height from which to list transactions, inclusive. If this value is
-     *greater than end_height, transactions will be read in reverse.
-     *
-     * Generated from protobuf field <code>int32 start_height = 1;</code>
-     * @return int
-     */
-    public function getStartHeight()
-    {
-        return $this->start_height;
-    }
-
-    /**
-     *The height from which to list transactions, inclusive. If this value is
-     *greater than end_height, transactions will be read in reverse.
-     *
-     * Generated from protobuf field <code>int32 start_height = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setStartHeight($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->start_height = $var;
-
-        return $this;
-    }
-
-    /**
-     *The height until which to list transactions, inclusive. To include
-     *unconfirmed transactions, this value should be set to -1, which will
-     *return transactions from start_height until the current chain tip and
-     *unconfirmed transactions. If no end_height is provided, the call will
-     *default to this option.
-     *
-     * Generated from protobuf field <code>int32 end_height = 2;</code>
-     * @return int
-     */
-    public function getEndHeight()
-    {
-        return $this->end_height;
-    }
-
-    /**
-     *The height until which to list transactions, inclusive. To include
-     *unconfirmed transactions, this value should be set to -1, which will
-     *return transactions from start_height until the current chain tip and
-     *unconfirmed transactions. If no end_height is provided, the call will
-     *default to this option.
-     *
-     * Generated from protobuf field <code>int32 end_height = 2;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setEndHeight($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->end_height = $var;
-
-        return $this;
     }
 
 }

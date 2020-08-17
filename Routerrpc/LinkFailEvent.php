@@ -26,6 +26,7 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      */
     private $wire_failure = 0;
     /**
+     **
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
      *and may be 'no detail' if the wire message requires no additional metadata.
@@ -51,6 +52,7 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      *     @type int $wire_failure
      *           FailureCode is the BOLT error code for the failure.
      *     @type int $failure_detail
+     *          *
      *          FailureDetail provides additional information about the reason for the
      *          failure. This detail enriches the information provided by the wire message
      *          and may be 'no detail' if the wire message requires no additional metadata.
@@ -116,6 +118,7 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
      *and may be 'no detail' if the wire message requires no additional metadata.
@@ -129,6 +132,7 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
      *and may be 'no detail' if the wire message requires no additional metadata.
