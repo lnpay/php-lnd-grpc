@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Hash corresponding to the (hold) invoice to subscribe to.
+     *&#47; Hash corresponding to the (hold) invoice to subscribe to.
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      */
@@ -27,7 +27,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $r_hash
-     *           Hash corresponding to the (hold) invoice to subscribe to.
+     *          &#47; Hash corresponding to the (hold) invoice to subscribe to.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash corresponding to the (hold) invoice to subscribe to.
+     *&#47; Hash corresponding to the (hold) invoice to subscribe to.
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @return string
@@ -47,7 +47,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash corresponding to the (hold) invoice to subscribe to.
+     *&#47; Hash corresponding to the (hold) invoice to subscribe to.
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @param string $var

@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeInfo extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *An individual vertex/node within the channel graph. A node is
      *connected to other nodes by one or more channel edges emanating from it. As
      *the graph is directed, a node will also have an incoming edge attached to
@@ -23,19 +24,19 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      */
     private $node = null;
     /**
-     * The total number of channels for the node.
+     *&#47; The total number of channels for the node.
      *
      * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      */
     private $num_channels = 0;
     /**
-     * The sum of all channels capacity for the node, denominated in satoshis.
+     *&#47; The sum of all channels capacity for the node, denominated in satoshis.
      *
      * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      */
     private $total_capacity = 0;
     /**
-     * A list of all public channels for the node.
+     *&#47; A list of all public channels for the node.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4;</code>
      */
@@ -48,16 +49,17 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\LightningNode $node
+     *          *
      *          An individual vertex/node within the channel graph. A node is
      *          connected to other nodes by one or more channel edges emanating from it. As
      *          the graph is directed, a node will also have an incoming edge attached to
      *          it for each outgoing edge.
      *     @type int $num_channels
-     *           The total number of channels for the node.
+     *          &#47; The total number of channels for the node.
      *     @type int|string $total_capacity
-     *           The sum of all channels capacity for the node, denominated in satoshis.
+     *          &#47; The sum of all channels capacity for the node, denominated in satoshis.
      *     @type \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $channels
-     *           A list of all public channels for the node.
+     *          &#47; A list of all public channels for the node.
      * }
      */
     public function __construct($data = NULL) {
@@ -66,6 +68,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An individual vertex/node within the channel graph. A node is
      *connected to other nodes by one or more channel edges emanating from it. As
      *the graph is directed, a node will also have an incoming edge attached to
@@ -80,6 +83,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An individual vertex/node within the channel graph. A node is
      *connected to other nodes by one or more channel edges emanating from it. As
      *the graph is directed, a node will also have an incoming edge attached to
@@ -98,7 +102,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The total number of channels for the node.
+     *&#47; The total number of channels for the node.
      *
      * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      * @return int
@@ -109,7 +113,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The total number of channels for the node.
+     *&#47; The total number of channels for the node.
      *
      * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      * @param int $var
@@ -124,7 +128,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The sum of all channels capacity for the node, denominated in satoshis.
+     *&#47; The sum of all channels capacity for the node, denominated in satoshis.
      *
      * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      * @return int|string
@@ -135,7 +139,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The sum of all channels capacity for the node, denominated in satoshis.
+     *&#47; The sum of all channels capacity for the node, denominated in satoshis.
      *
      * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      * @param int|string $var
@@ -150,7 +154,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of all public channels for the node.
+     *&#47; A list of all public channels for the node.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -161,7 +165,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of all public channels for the node.
+     *&#47; A list of all public channels for the node.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelEdge channels = 4;</code>
      * @param \Lnrpc\ChannelEdge[]|\Google\Protobuf\Internal\RepeatedField $var

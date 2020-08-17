@@ -9,6 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
  *An individual vertex/node within the channel graph. A node is
  *connected to other nodes by one or more channel edges emanating from it. As the
  *graph is directed, a node will also have an incoming edge attached to it for

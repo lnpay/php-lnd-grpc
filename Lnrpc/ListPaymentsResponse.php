@@ -14,12 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The list of payments
+     *&#47; The list of payments
      *
      * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1;</code>
      */
     private $payments;
     /**
+     **
      *The index of the first item in the set of returned payments. This can be
      *used as the index_offset to continue seeking backwards in the next request.
      *
@@ -27,6 +28,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
      */
     private $first_index_offset = 0;
     /**
+     **
      *The index of the last item in the set of returned payments. This can be used
      *as the index_offset to continue seeking forwards in the next request.
      *
@@ -41,11 +43,13 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $payments
-     *           The list of payments
+     *          &#47; The list of payments
      *     @type int|string $first_index_offset
+     *          *
      *          The index of the first item in the set of returned payments. This can be
      *          used as the index_offset to continue seeking backwards in the next request.
      *     @type int|string $last_index_offset
+     *          *
      *          The index of the last item in the set of returned payments. This can be used
      *          as the index_offset to continue seeking forwards in the next request.
      * }
@@ -56,7 +60,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of payments
+     *&#47; The list of payments
      *
      * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -67,7 +71,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of payments
+     *&#47; The list of payments
      *
      * Generated from protobuf field <code>repeated .lnrpc.Payment payments = 1;</code>
      * @param \Lnrpc\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -82,6 +86,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the first item in the set of returned payments. This can be
      *used as the index_offset to continue seeking backwards in the next request.
      *
@@ -94,6 +99,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the first item in the set of returned payments. This can be
      *used as the index_offset to continue seeking backwards in the next request.
      *
@@ -110,6 +116,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the last item in the set of returned payments. This can be used
      *as the index_offset to continue seeking forwards in the next request.
      *
@@ -122,6 +129,7 @@ class ListPaymentsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of the last item in the set of returned payments. This can be used
      *as the index_offset to continue seeking forwards in the next request.
      *

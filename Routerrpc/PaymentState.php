@@ -12,24 +12,28 @@ use UnexpectedValueException;
 class PaymentState
 {
     /**
+     **
      *Payment is still in flight.
      *
      * Generated from protobuf enum <code>IN_FLIGHT = 0;</code>
      */
     const IN_FLIGHT = 0;
     /**
+     **
      *Payment completed successfully.
      *
      * Generated from protobuf enum <code>SUCCEEDED = 1;</code>
      */
     const SUCCEEDED = 1;
     /**
+     **
      *There are more routes to try, but the payment timeout was exceeded.
      *
      * Generated from protobuf enum <code>FAILED_TIMEOUT = 2;</code>
      */
     const FAILED_TIMEOUT = 2;
     /**
+     **
      *All possible routes were tried and failed permanently. Or were no
      *routes to the destination at all.
      *
@@ -37,12 +41,14 @@ class PaymentState
      */
     const FAILED_NO_ROUTE = 3;
     /**
+     **
      *A non-recoverable error has occured.
      *
      * Generated from protobuf enum <code>FAILED_ERROR = 4;</code>
      */
     const FAILED_ERROR = 4;
     /**
+     **
      *Payment details incorrect (unknown hash, invalid amt or
      *invalid final cltv delta)
      *
@@ -50,6 +56,7 @@ class PaymentState
      */
     const FAILED_INCORRECT_PAYMENT_DETAILS = 5;
     /**
+     **
      *Insufficient local balance.
      *
      * Generated from protobuf enum <code>FAILED_INSUFFICIENT_BALANCE = 6;</code>

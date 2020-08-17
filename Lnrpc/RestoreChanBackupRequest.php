@@ -22,8 +22,10 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelBackups $chan_backups
+     *          *
      *          The channels to restore as a list of channel/backup pairs.
      *     @type string $multi_chan_backup
+     *          *
      *          The channels to restore in the packed multi backup format. When using
      *          REST, this field must be encoded as base64.
      * }
@@ -34,6 +36,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The channels to restore as a list of channel/backup pairs.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1;</code>
@@ -45,6 +48,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The channels to restore as a list of channel/backup pairs.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelBackups chan_backups = 1;</code>
@@ -60,6 +64,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The channels to restore in the packed multi backup format. When using
      *REST, this field must be encoded as base64.
      *
@@ -72,6 +77,7 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The channels to restore in the packed multi backup format. When using
      *REST, this field must be encoded as base64.
      *

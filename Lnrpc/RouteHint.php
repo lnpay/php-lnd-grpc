@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class RouteHint extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *A list of hop hints that when chained together can assist in reaching a
      *specific destination.
      *
@@ -28,6 +29,7 @@ class RouteHint extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\HopHint[]|\Google\Protobuf\Internal\RepeatedField $hop_hints
+     *          *
      *          A list of hop hints that when chained together can assist in reaching a
      *          specific destination.
      * }
@@ -38,6 +40,7 @@ class RouteHint extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A list of hop hints that when chained together can assist in reaching a
      *specific destination.
      *
@@ -50,6 +53,7 @@ class RouteHint extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A list of hop hints that when chained together can assist in reaching a
      *specific destination.
      *

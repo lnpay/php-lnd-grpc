@@ -14,12 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class PairData extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Time of last failure.
+     *&#47; Time of last failure.
      *
      * Generated from protobuf field <code>int64 fail_time = 1;</code>
      */
     private $fail_time = 0;
     /**
+     **
      *Lowest amount that failed to forward rounded to whole sats. This may be
      *set to zero if the failure is independent of amount.
      *
@@ -27,6 +28,7 @@ class PairData extends \Google\Protobuf\Internal\Message
      */
     private $fail_amt_sat = 0;
     /**
+     **
      *Lowest amount that failed to forward in millisats. This may be
      *set to zero if the failure is independent of amount.
      *
@@ -34,19 +36,19 @@ class PairData extends \Google\Protobuf\Internal\Message
      */
     private $fail_amt_msat = 0;
     /**
-     * Time of last success.
+     *&#47; Time of last success.
      *
      * Generated from protobuf field <code>int64 success_time = 5;</code>
      */
     private $success_time = 0;
     /**
-     * Highest amount that we could successfully forward rounded to whole sats.
+     *&#47; Highest amount that we could successfully forward rounded to whole sats.
      *
      * Generated from protobuf field <code>int64 success_amt_sat = 6;</code>
      */
     private $success_amt_sat = 0;
     /**
-     * Highest amount that we could successfully forward in millisats.
+     *&#47; Highest amount that we could successfully forward in millisats.
      *
      * Generated from protobuf field <code>int64 success_amt_msat = 7;</code>
      */
@@ -59,19 +61,21 @@ class PairData extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $fail_time
-     *           Time of last failure.
+     *          &#47; Time of last failure.
      *     @type int|string $fail_amt_sat
+     *          *
      *          Lowest amount that failed to forward rounded to whole sats. This may be
      *          set to zero if the failure is independent of amount.
      *     @type int|string $fail_amt_msat
+     *          *
      *          Lowest amount that failed to forward in millisats. This may be
      *          set to zero if the failure is independent of amount.
      *     @type int|string $success_time
-     *           Time of last success.
+     *          &#47; Time of last success.
      *     @type int|string $success_amt_sat
-     *           Highest amount that we could successfully forward rounded to whole sats.
+     *          &#47; Highest amount that we could successfully forward rounded to whole sats.
      *     @type int|string $success_amt_msat
-     *           Highest amount that we could successfully forward in millisats.
+     *          &#47; Highest amount that we could successfully forward in millisats.
      * }
      */
     public function __construct($data = NULL) {
@@ -80,7 +84,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time of last failure.
+     *&#47; Time of last failure.
      *
      * Generated from protobuf field <code>int64 fail_time = 1;</code>
      * @return int|string
@@ -91,7 +95,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time of last failure.
+     *&#47; Time of last failure.
      *
      * Generated from protobuf field <code>int64 fail_time = 1;</code>
      * @param int|string $var
@@ -106,6 +110,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Lowest amount that failed to forward rounded to whole sats. This may be
      *set to zero if the failure is independent of amount.
      *
@@ -118,6 +123,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Lowest amount that failed to forward rounded to whole sats. This may be
      *set to zero if the failure is independent of amount.
      *
@@ -134,6 +140,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Lowest amount that failed to forward in millisats. This may be
      *set to zero if the failure is independent of amount.
      *
@@ -146,6 +153,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Lowest amount that failed to forward in millisats. This may be
      *set to zero if the failure is independent of amount.
      *
@@ -162,7 +170,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time of last success.
+     *&#47; Time of last success.
      *
      * Generated from protobuf field <code>int64 success_time = 5;</code>
      * @return int|string
@@ -173,7 +181,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time of last success.
+     *&#47; Time of last success.
      *
      * Generated from protobuf field <code>int64 success_time = 5;</code>
      * @param int|string $var
@@ -188,7 +196,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Highest amount that we could successfully forward rounded to whole sats.
+     *&#47; Highest amount that we could successfully forward rounded to whole sats.
      *
      * Generated from protobuf field <code>int64 success_amt_sat = 6;</code>
      * @return int|string
@@ -199,7 +207,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Highest amount that we could successfully forward rounded to whole sats.
+     *&#47; Highest amount that we could successfully forward rounded to whole sats.
      *
      * Generated from protobuf field <code>int64 success_amt_sat = 6;</code>
      * @param int|string $var
@@ -214,7 +222,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Highest amount that we could successfully forward in millisats.
+     *&#47; Highest amount that we could successfully forward in millisats.
      *
      * Generated from protobuf field <code>int64 success_amt_msat = 7;</code>
      * @return int|string
@@ -225,7 +233,7 @@ class PairData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Highest amount that we could successfully forward in millisats.
+     *&#47; Highest amount that we could successfully forward in millisats.
      *
      * Generated from protobuf field <code>int64 success_amt_msat = 7;</code>
      * @param int|string $var

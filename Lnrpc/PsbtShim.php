@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PsbtShim extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -22,6 +23,7 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
      */
     private $pending_chan_id = '';
     /**
+     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
@@ -36,10 +38,12 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pending_chan_id
+     *          *
      *          A unique identifier of 32 random bytes that will be used as the pending
      *          channel ID to identify the PSBT state machine when interacting with it and
      *          on the wire protocol to initiate the funding request.
      *     @type string $base_psbt
+     *          *
      *          An optional base PSBT the new channel output will be added to. If this is
      *          non-empty, it must be a binary serialized PSBT.
      * }
@@ -50,6 +54,7 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -63,6 +68,7 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -80,6 +86,7 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
@@ -92,6 +99,7 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *

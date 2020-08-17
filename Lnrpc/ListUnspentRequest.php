@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListUnspentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The minimum number of confirmations to be included.
+     *&#47; The minimum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 min_confs = 1;</code>
      */
     private $min_confs = 0;
     /**
-     * The maximum number of confirmations to be included.
+     *&#47; The maximum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 max_confs = 2;</code>
      */
@@ -33,9 +33,9 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $min_confs
-     *           The minimum number of confirmations to be included.
+     *          &#47; The minimum number of confirmations to be included.
      *     @type int $max_confs
-     *           The maximum number of confirmations to be included.
+     *          &#47; The maximum number of confirmations to be included.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum number of confirmations to be included.
+     *&#47; The minimum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 min_confs = 1;</code>
      * @return int
@@ -55,7 +55,7 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum number of confirmations to be included.
+     *&#47; The minimum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 min_confs = 1;</code>
      * @param int $var
@@ -70,7 +70,7 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The maximum number of confirmations to be included.
+     *&#47; The maximum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 max_confs = 2;</code>
      * @return int
@@ -81,7 +81,7 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The maximum number of confirmations to be included.
+     *&#47; The maximum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 max_confs = 2;</code>
      * @param int $var

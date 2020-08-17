@@ -12,6 +12,7 @@ use UnexpectedValueException;
 class CommitmentType
 {
     /**
+     **
      *A channel using the legacy commitment format having tweaked to_remote
      *keys.
      *
@@ -19,6 +20,7 @@ class CommitmentType
      */
     const LEGACY = 0;
     /**
+     **
      *A channel that uses the modern commitment format where the key in the
      *output of the remote party does not change each state. This makes back
      *up and recovery easier as when the channel is closed, the funds go
@@ -28,6 +30,7 @@ class CommitmentType
      */
     const STATIC_REMOTE_KEY = 1;
     /**
+     **
      *A channel that uses a commitment format that has anchor outputs on the
      *commitments, allowing fee bumping after a force close transaction has
      *been broadcast.
@@ -36,6 +39,7 @@ class CommitmentType
      */
     const ANCHORS = 2;
     /**
+     **
      *Returned when the commitment type isn't known or unavailable.
      *
      * Generated from protobuf enum <code>UNKNOWN_COMMITMENT_TYPE = 999;</code>

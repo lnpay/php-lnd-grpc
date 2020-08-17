@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class Chain extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The blockchain the node is on (eg bitcoin, litecoin)
+     *&#47; The blockchain the node is on (eg bitcoin, litecoin)
      *
      * Generated from protobuf field <code>string chain = 1;</code>
      */
     private $chain = '';
     /**
-     * The network the node is on (eg regtest, testnet, mainnet)
+     *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
      * Generated from protobuf field <code>string network = 2;</code>
      */
@@ -33,9 +33,9 @@ class Chain extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $chain
-     *           The blockchain the node is on (eg bitcoin, litecoin)
+     *          &#47; The blockchain the node is on (eg bitcoin, litecoin)
      *     @type string $network
-     *           The network the node is on (eg regtest, testnet, mainnet)
+     *          &#47; The network the node is on (eg regtest, testnet, mainnet)
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The blockchain the node is on (eg bitcoin, litecoin)
+     *&#47; The blockchain the node is on (eg bitcoin, litecoin)
      *
      * Generated from protobuf field <code>string chain = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The blockchain the node is on (eg bitcoin, litecoin)
+     *&#47; The blockchain the node is on (eg bitcoin, litecoin)
      *
      * Generated from protobuf field <code>string chain = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The network the node is on (eg regtest, testnet, mainnet)
+     *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
      * Generated from protobuf field <code>string network = 2;</code>
      * @return string
@@ -81,7 +81,7 @@ class Chain extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The network the node is on (eg regtest, testnet, mainnet)
+     *&#47; The network the node is on (eg regtest, testnet, mainnet)
      *
      * Generated from protobuf field <code>string network = 2;</code>
      * @param string $var

@@ -11,6 +11,9 @@
             "Lnrpc\\": "Lnrpc/",
             "Invoicesrpc\\": "Invoicesrpc/",
             "Routerrpc\\": "Routerrpc/",
+            "Walletrpc\\": "Walletrpc/",
+            "Chainrpc\\": "Chainrpc/",
+            "Signrpc\\": "Signrpc/",
             "GPBMetadata\\Google\\": "grpc/third_party/protobuf/php/src/GPBMetadata/Google/Protobuf/",
             "GPBMetadata\\": "GPBMetadata/"
         }

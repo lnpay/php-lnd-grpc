@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The hex encoded macaroon, serialized in binary format.
+     *&#47; The hex encoded macaroon, serialized in binary format.
      *
      * Generated from protobuf field <code>string macaroon = 1;</code>
      */
@@ -27,7 +27,7 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $macaroon
-     *           The hex encoded macaroon, serialized in binary format.
+     *          &#47; The hex encoded macaroon, serialized in binary format.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The hex encoded macaroon, serialized in binary format.
+     *&#47; The hex encoded macaroon, serialized in binary format.
      *
      * Generated from protobuf field <code>string macaroon = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The hex encoded macaroon, serialized in binary format.
+     *&#47; The hex encoded macaroon, serialized in binary format.
      *
      * Generated from protobuf field <code>string macaroon = 1;</code>
      * @param string $var

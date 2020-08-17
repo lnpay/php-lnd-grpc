@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *If set, only invoices that are not settled and not canceled will be returned
      *in the response.
      *
@@ -21,6 +22,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      */
     private $pending_only = false;
     /**
+     **
      *The index of an invoice that will be used as either the start or end of a
      *query to determine which invoices should be returned in the response.
      *
@@ -28,12 +30,13 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      */
     private $index_offset = 0;
     /**
-     * The max number of invoices to return in the response to this query.
+     *&#47; The max number of invoices to return in the response to this query.
      *
      * Generated from protobuf field <code>uint64 num_max_invoices = 5;</code>
      */
     private $num_max_invoices = 0;
     /**
+     **
      *If set, the invoices returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards.
      *
@@ -48,14 +51,17 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $pending_only
+     *          *
      *          If set, only invoices that are not settled and not canceled will be returned
      *          in the response.
      *     @type int|string $index_offset
+     *          *
      *          The index of an invoice that will be used as either the start or end of a
      *          query to determine which invoices should be returned in the response.
      *     @type int|string $num_max_invoices
-     *           The max number of invoices to return in the response to this query.
+     *          &#47; The max number of invoices to return in the response to this query.
      *     @type bool $reversed
+     *          *
      *          If set, the invoices returned will result from seeking backwards from the
      *          specified index offset. This can be used to paginate backwards.
      * }
@@ -66,6 +72,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, only invoices that are not settled and not canceled will be returned
      *in the response.
      *
@@ -78,6 +85,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, only invoices that are not settled and not canceled will be returned
      *in the response.
      *
@@ -94,6 +102,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of an invoice that will be used as either the start or end of a
      *query to determine which invoices should be returned in the response.
      *
@@ -106,6 +115,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The index of an invoice that will be used as either the start or end of a
      *query to determine which invoices should be returned in the response.
      *
@@ -122,7 +132,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The max number of invoices to return in the response to this query.
+     *&#47; The max number of invoices to return in the response to this query.
      *
      * Generated from protobuf field <code>uint64 num_max_invoices = 5;</code>
      * @return int|string
@@ -133,7 +143,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The max number of invoices to return in the response to this query.
+     *&#47; The max number of invoices to return in the response to this query.
      *
      * Generated from protobuf field <code>uint64 num_max_invoices = 5;</code>
      * @param int|string $var
@@ -148,6 +158,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, the invoices returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards.
      *
@@ -160,6 +171,7 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, the invoices returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards.
      *

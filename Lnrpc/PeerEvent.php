@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PeerEvent extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The identity pubkey of the peer.
+     *&#47; The identity pubkey of the peer.
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
@@ -31,7 +31,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *           The identity pubkey of the peer.
+     *          &#47; The identity pubkey of the peer.
      *     @type int $type
      * }
      */
@@ -41,7 +41,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the peer.
+     *&#47; The identity pubkey of the peer.
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -52,7 +52,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the peer.
+     *&#47; The identity pubkey of the peer.
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var

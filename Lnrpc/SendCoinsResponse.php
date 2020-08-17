@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendCoinsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The transaction ID of the transaction
+     *&#47; The transaction ID of the transaction
      *
      * Generated from protobuf field <code>string txid = 1;</code>
      */
@@ -27,7 +27,7 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $txid
-     *           The transaction ID of the transaction
+     *          &#47; The transaction ID of the transaction
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The transaction ID of the transaction
+     *&#47; The transaction ID of the transaction
      *
      * Generated from protobuf field <code>string txid = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class SendCoinsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The transaction ID of the transaction
+     *&#47; The transaction ID of the transaction
      *
      * Generated from protobuf field <code>string txid = 1;</code>
      * @param string $var

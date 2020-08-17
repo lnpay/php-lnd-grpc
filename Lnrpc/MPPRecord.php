@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class MPPRecord extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *A unique, random identifier used to authenticate the sender as the intended
      *payer of a multi-path payment. The payment_addr must be the same for all
      *subpayments, and match the payment_addr provided in the receiver's invoice.
@@ -23,6 +24,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      */
     private $payment_addr = '';
     /**
+     **
      *The total amount in milli-satoshis being sent as part of a larger multi-path
      *payment. The caller is responsible for ensuring subpayments to the same node
      *and payment_hash sum exactly to total_amt_msat. The same
@@ -39,11 +41,13 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payment_addr
+     *          *
      *          A unique, random identifier used to authenticate the sender as the intended
      *          payer of a multi-path payment. The payment_addr must be the same for all
      *          subpayments, and match the payment_addr provided in the receiver's invoice.
      *          The same payment_addr must be used on all subpayments.
      *     @type int|string $total_amt_msat
+     *          *
      *          The total amount in milli-satoshis being sent as part of a larger multi-path
      *          payment. The caller is responsible for ensuring subpayments to the same node
      *          and payment_hash sum exactly to total_amt_msat. The same
@@ -56,6 +60,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A unique, random identifier used to authenticate the sender as the intended
      *payer of a multi-path payment. The payment_addr must be the same for all
      *subpayments, and match the payment_addr provided in the receiver's invoice.
@@ -70,6 +75,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A unique, random identifier used to authenticate the sender as the intended
      *payer of a multi-path payment. The payment_addr must be the same for all
      *subpayments, and match the payment_addr provided in the receiver's invoice.
@@ -88,6 +94,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total amount in milli-satoshis being sent as part of a larger multi-path
      *payment. The caller is responsible for ensuring subpayments to the same node
      *and payment_hash sum exactly to total_amt_msat. The same
@@ -102,6 +109,7 @@ class MPPRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The total amount in milli-satoshis being sent as part of a larger multi-path
      *payment. The caller is responsible for ensuring subpayments to the same node
      *and payment_hash sum exactly to total_amt_msat. The same

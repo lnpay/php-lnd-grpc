@@ -14,12 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The hash of the payment to look up.
+     *&#47; The hash of the payment to look up.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
     private $payment_hash = '';
     /**
+     **
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *
@@ -34,8 +35,9 @@ class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payment_hash
-     *           The hash of the payment to look up.
+     *          &#47; The hash of the payment to look up.
      *     @type bool $no_inflight_updates
+     *          *
      *          If set, only the final payment update is streamed back. Intermediate updates
      *          that show which htlcs are still in flight are suppressed.
      * }
@@ -46,7 +48,7 @@ class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The hash of the payment to look up.
+     *&#47; The hash of the payment to look up.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      * @return string
@@ -57,7 +59,7 @@ class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The hash of the payment to look up.
+     *&#47; The hash of the payment to look up.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      * @param string $var
@@ -72,6 +74,7 @@ class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *
@@ -84,6 +87,7 @@ class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *

@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * QueryMissionControlResponse contains mission control state.
+ *&#47; QueryMissionControlResponse contains mission control state.
  *
  * Generated from protobuf message <code>routerrpc.QueryMissionControlResponse</code>
  */
 class QueryMissionControlResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Node pair-level mission control state.
+     *&#47; Node pair-level mission control state.
      *
      * Generated from protobuf field <code>repeated .routerrpc.PairHistory pairs = 2;</code>
      */
@@ -29,7 +29,7 @@ class QueryMissionControlResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Routerrpc\PairHistory[]|\Google\Protobuf\Internal\RepeatedField $pairs
-     *           Node pair-level mission control state.
+     *          &#47; Node pair-level mission control state.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class QueryMissionControlResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Node pair-level mission control state.
+     *&#47; Node pair-level mission control state.
      *
      * Generated from protobuf field <code>repeated .routerrpc.PairHistory pairs = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class QueryMissionControlResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Node pair-level mission control state.
+     *&#47; Node pair-level mission control state.
      *
      * Generated from protobuf field <code>repeated .routerrpc.PairHistory pairs = 2;</code>
      * @param \Routerrpc\PairHistory[]|\Google\Protobuf\Internal\RepeatedField $var

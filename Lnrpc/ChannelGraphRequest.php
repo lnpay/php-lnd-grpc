@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *Whether unannounced channels are included in the response or not. If set,
      *unannounced channels are included. Unannounced channels are both private
      *channels, and public channels that are not yet announced to the network.
@@ -29,6 +30,7 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $include_unannounced
+     *          *
      *          Whether unannounced channels are included in the response or not. If set,
      *          unannounced channels are included. Unannounced channels are both private
      *          channels, and public channels that are not yet announced to the network.
@@ -40,6 +42,7 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Whether unannounced channels are included in the response or not. If set,
      *unannounced channels are included. Unannounced channels are both private
      *channels, and public channels that are not yet announced to the network.
@@ -53,6 +56,7 @@ class ChannelGraphRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Whether unannounced channels are included in the response or not. If set,
      *unannounced channels are included. Unannounced channels are both private
      *channels, and public channels that are not yet announced to the network.

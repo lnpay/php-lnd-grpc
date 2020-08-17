@@ -12,18 +12,21 @@ use UnexpectedValueException;
 class SyncType
 {
     /**
+     **
      *Denotes that we cannot determine the peer's current sync type.
      *
      * Generated from protobuf enum <code>UNKNOWN_SYNC = 0;</code>
      */
     const UNKNOWN_SYNC = 0;
     /**
+     **
      *Denotes that we are actively receiving new graph updates from the peer.
      *
      * Generated from protobuf enum <code>ACTIVE_SYNC = 1;</code>
      */
     const ACTIVE_SYNC = 1;
     /**
+     **
      *Denotes that we are not receiving new graph updates from the peer.
      *
      * Generated from protobuf enum <code>PASSIVE_SYNC = 2;</code>

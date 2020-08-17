@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OpenChannelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
@@ -21,6 +22,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $node_pubkey = '';
     /**
+     **
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
@@ -28,63 +30,63 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $node_pubkey_string = '';
     /**
-     * The number of satoshis the wallet should commit to the channel
+     *&#47; The number of satoshis the wallet should commit to the channel
      *
      * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      */
     private $local_funding_amount = 0;
     /**
-     * The number of satoshis to push to the remote side as part of the initial
-     * commitment state
+     *&#47; The number of satoshis to push to the remote side as part of the initial
+     * / commitment state
      *
      * Generated from protobuf field <code>int64 push_sat = 5;</code>
      */
     private $push_sat = 0;
     /**
-     * The target number of blocks that the funding transaction should be
-     * confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      */
     private $target_conf = 0;
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
-     * funding transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      */
     private $sat_per_byte = 0;
     /**
-     * Whether this channel should be private, not announced to the greater
-     * network.
+     *&#47; Whether this channel should be private, not announced to the greater
+     * / network.
      *
      * Generated from protobuf field <code>bool private = 8;</code>
      */
     private $private = false;
     /**
-     * The minimum value in millisatoshi we will require for incoming HTLCs on
-     * the channel.
+     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     * / the channel.
      *
      * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      */
     private $min_htlc_msat = 0;
     /**
-     * The delay we require on the remote's commitment transaction. If this is
-     * not set, it will be scaled automatically with the channel size.
+     *&#47; The delay we require on the remote's commitment transaction. If this is
+     * / not set, it will be scaled automatically with the channel size.
      *
      * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      */
     private $remote_csv_delay = 0;
     /**
-     * The minimum number of confirmations each one of your outputs used for
-     * the funding transaction must satisfy.
+     *&#47; The minimum number of confirmations each one of your outputs used for
+     * / the funding transaction must satisfy.
      *
      * Generated from protobuf field <code>int32 min_confs = 11;</code>
      */
     private $min_confs = 0;
     /**
-     * Whether unconfirmed outputs should be used as inputs for the funding
-     * transaction.
+     *&#47; Whether unconfirmed outputs should be used as inputs for the funding
+     * / transaction.
      *
      * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      */
@@ -102,6 +104,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $close_address = '';
     /**
+     **
      *Funding shims are an optional argument that allow the caller to intercept
      *certain funding functionality. For example, a shim can be provided to use a
      *particular key for the commitment key (ideally cold) rather than use one
@@ -111,13 +114,6 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14;</code>
      */
     private $funding_shim = null;
-    /**
-     *The maximum amount of coins in millisatoshi that can be pending within
-     *the channel. It only applies to the remote party.
-     *
-     * Generated from protobuf field <code>uint64 remote_max_value_in_flight_msat = 15;</code>
-     */
-    private $remote_max_value_in_flight_msat = 0;
 
     /**
      * Constructor.
@@ -126,37 +122,39 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $node_pubkey
+     *          *
      *          The pubkey of the node to open a channel with. When using REST, this field
      *          must be encoded as base64.
      *     @type string $node_pubkey_string
+     *          *
      *          The hex encoded pubkey of the node to open a channel with. Deprecated now
      *          that the REST gateway supports base64 encoding of bytes fields.
      *     @type int|string $local_funding_amount
-     *           The number of satoshis the wallet should commit to the channel
+     *          &#47; The number of satoshis the wallet should commit to the channel
      *     @type int|string $push_sat
-     *           The number of satoshis to push to the remote side as part of the initial
-     *           commitment state
+     *          &#47; The number of satoshis to push to the remote side as part of the initial
+     *          / commitment state
      *     @type int $target_conf
-     *           The target number of blocks that the funding transaction should be
-     *           confirmed by.
+     *          &#47; The target number of blocks that the funding transaction should be
+     *          / confirmed by.
      *     @type int|string $sat_per_byte
-     *           A manual fee rate set in sat/byte that should be used when crafting the
-     *           funding transaction.
+     *          &#47; A manual fee rate set in sat/byte that should be used when crafting the
+     *          / funding transaction.
      *     @type bool $private
-     *           Whether this channel should be private, not announced to the greater
-     *           network.
+     *          &#47; Whether this channel should be private, not announced to the greater
+     *          / network.
      *     @type int|string $min_htlc_msat
-     *           The minimum value in millisatoshi we will require for incoming HTLCs on
-     *           the channel.
+     *          &#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     *          / the channel.
      *     @type int $remote_csv_delay
-     *           The delay we require on the remote's commitment transaction. If this is
-     *           not set, it will be scaled automatically with the channel size.
+     *          &#47; The delay we require on the remote's commitment transaction. If this is
+     *          / not set, it will be scaled automatically with the channel size.
      *     @type int $min_confs
-     *           The minimum number of confirmations each one of your outputs used for
-     *           the funding transaction must satisfy.
+     *          &#47; The minimum number of confirmations each one of your outputs used for
+     *          / the funding transaction must satisfy.
      *     @type bool $spend_unconfirmed
-     *           Whether unconfirmed outputs should be used as inputs for the funding
-     *           transaction.
+     *          &#47; Whether unconfirmed outputs should be used as inputs for the funding
+     *          / transaction.
      *     @type string $close_address
      *          Close address is an optional address which specifies the address to which
      *          funds should be paid out to upon cooperative close. This field may only be
@@ -166,14 +164,12 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *          Note: If this value is set on channel creation, you will *not* be able to
      *          cooperatively close out to a different address.
      *     @type \Lnrpc\FundingShim $funding_shim
+     *          *
      *          Funding shims are an optional argument that allow the caller to intercept
      *          certain funding functionality. For example, a shim can be provided to use a
      *          particular key for the commitment key (ideally cold) rather than use one
      *          that is generated by the wallet as normal, or signal that signing will be
      *          carried out in an interactive manner (PSBT based).
-     *     @type int|string $remote_max_value_in_flight_msat
-     *          The maximum amount of coins in millisatoshi that can be pending within
-     *          the channel. It only applies to the remote party.
      * }
      */
     public function __construct($data = NULL) {
@@ -182,6 +178,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
@@ -194,6 +191,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
@@ -210,6 +208,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
@@ -222,6 +221,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
@@ -238,7 +238,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The number of satoshis the wallet should commit to the channel
+     *&#47; The number of satoshis the wallet should commit to the channel
      *
      * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      * @return int|string
@@ -249,7 +249,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The number of satoshis the wallet should commit to the channel
+     *&#47; The number of satoshis the wallet should commit to the channel
      *
      * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      * @param int|string $var
@@ -264,8 +264,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The number of satoshis to push to the remote side as part of the initial
-     * commitment state
+     *&#47; The number of satoshis to push to the remote side as part of the initial
+     * / commitment state
      *
      * Generated from protobuf field <code>int64 push_sat = 5;</code>
      * @return int|string
@@ -276,8 +276,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The number of satoshis to push to the remote side as part of the initial
-     * commitment state
+     *&#47; The number of satoshis to push to the remote side as part of the initial
+     * / commitment state
      *
      * Generated from protobuf field <code>int64 push_sat = 5;</code>
      * @param int|string $var
@@ -292,8 +292,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The target number of blocks that the funding transaction should be
-     * confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      * @return int
@@ -304,8 +304,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The target number of blocks that the funding transaction should be
-     * confirmed by.
+     *&#47; The target number of blocks that the funding transaction should be
+     * / confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      * @param int $var
@@ -320,8 +320,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
-     * funding transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      * @return int|string
@@ -332,8 +332,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
-     * funding transaction.
+     *&#47; A manual fee rate set in sat/byte that should be used when crafting the
+     * / funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      * @param int|string $var
@@ -348,8 +348,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Whether this channel should be private, not announced to the greater
-     * network.
+     *&#47; Whether this channel should be private, not announced to the greater
+     * / network.
      *
      * Generated from protobuf field <code>bool private = 8;</code>
      * @return bool
@@ -360,8 +360,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Whether this channel should be private, not announced to the greater
-     * network.
+     *&#47; Whether this channel should be private, not announced to the greater
+     * / network.
      *
      * Generated from protobuf field <code>bool private = 8;</code>
      * @param bool $var
@@ -376,8 +376,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum value in millisatoshi we will require for incoming HTLCs on
-     * the channel.
+     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     * / the channel.
      *
      * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      * @return int|string
@@ -388,8 +388,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum value in millisatoshi we will require for incoming HTLCs on
-     * the channel.
+     *&#47; The minimum value in millisatoshi we will require for incoming HTLCs on
+     * / the channel.
      *
      * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      * @param int|string $var
@@ -404,8 +404,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The delay we require on the remote's commitment transaction. If this is
-     * not set, it will be scaled automatically with the channel size.
+     *&#47; The delay we require on the remote's commitment transaction. If this is
+     * / not set, it will be scaled automatically with the channel size.
      *
      * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      * @return int
@@ -416,8 +416,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The delay we require on the remote's commitment transaction. If this is
-     * not set, it will be scaled automatically with the channel size.
+     *&#47; The delay we require on the remote's commitment transaction. If this is
+     * / not set, it will be scaled automatically with the channel size.
      *
      * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      * @param int $var
@@ -432,8 +432,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum number of confirmations each one of your outputs used for
-     * the funding transaction must satisfy.
+     *&#47; The minimum number of confirmations each one of your outputs used for
+     * / the funding transaction must satisfy.
      *
      * Generated from protobuf field <code>int32 min_confs = 11;</code>
      * @return int
@@ -444,8 +444,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The minimum number of confirmations each one of your outputs used for
-     * the funding transaction must satisfy.
+     *&#47; The minimum number of confirmations each one of your outputs used for
+     * / the funding transaction must satisfy.
      *
      * Generated from protobuf field <code>int32 min_confs = 11;</code>
      * @param int $var
@@ -460,8 +460,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Whether unconfirmed outputs should be used as inputs for the funding
-     * transaction.
+     *&#47; Whether unconfirmed outputs should be used as inputs for the funding
+     * / transaction.
      *
      * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      * @return bool
@@ -472,8 +472,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Whether unconfirmed outputs should be used as inputs for the funding
-     * transaction.
+     *&#47; Whether unconfirmed outputs should be used as inputs for the funding
+     * / transaction.
      *
      * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      * @param bool $var
@@ -526,6 +526,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Funding shims are an optional argument that allow the caller to intercept
      *certain funding functionality. For example, a shim can be provided to use a
      *particular key for the commitment key (ideally cold) rather than use one
@@ -541,6 +542,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *Funding shims are an optional argument that allow the caller to intercept
      *certain funding functionality. For example, a shim can be provided to use a
      *particular key for the commitment key (ideally cold) rather than use one
@@ -555,34 +557,6 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\FundingShim::class);
         $this->funding_shim = $var;
-
-        return $this;
-    }
-
-    /**
-     *The maximum amount of coins in millisatoshi that can be pending within
-     *the channel. It only applies to the remote party.
-     *
-     * Generated from protobuf field <code>uint64 remote_max_value_in_flight_msat = 15;</code>
-     * @return int|string
-     */
-    public function getRemoteMaxValueInFlightMsat()
-    {
-        return $this->remote_max_value_in_flight_msat;
-    }
-
-    /**
-     *The maximum amount of coins in millisatoshi that can be pending within
-     *the channel. It only applies to the remote party.
-     *
-     * Generated from protobuf field <code>uint64 remote_max_value_in_flight_msat = 15;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setRemoteMaxValueInFlightMsat($var)
-    {
-        GPBUtil::checkUint64($var);
-        $this->remote_max_value_in_flight_msat = $var;
 
         return $this;
     }

@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class KeyLocator extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The family of key being identified.
+     *&#47; The family of key being identified.
      *
      * Generated from protobuf field <code>int32 key_family = 1;</code>
      */
     private $key_family = 0;
     /**
-     * The precise index of the key being identified.
+     *&#47; The precise index of the key being identified.
      *
      * Generated from protobuf field <code>int32 key_index = 2;</code>
      */
@@ -33,9 +33,9 @@ class KeyLocator extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $key_family
-     *           The family of key being identified.
+     *          &#47; The family of key being identified.
      *     @type int $key_index
-     *           The precise index of the key being identified.
+     *          &#47; The precise index of the key being identified.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class KeyLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The family of key being identified.
+     *&#47; The family of key being identified.
      *
      * Generated from protobuf field <code>int32 key_family = 1;</code>
      * @return int
@@ -55,7 +55,7 @@ class KeyLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The family of key being identified.
+     *&#47; The family of key being identified.
      *
      * Generated from protobuf field <code>int32 key_family = 1;</code>
      * @param int $var
@@ -70,7 +70,7 @@ class KeyLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The precise index of the key being identified.
+     *&#47; The precise index of the key being identified.
      *
      * Generated from protobuf field <code>int32 key_index = 2;</code>
      * @return int
@@ -81,7 +81,7 @@ class KeyLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The precise index of the key being identified.
+     *&#47; The precise index of the key being identified.
      *
      * Generated from protobuf field <code>int32 key_index = 2;</code>
      * @param int $var

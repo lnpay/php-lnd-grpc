@@ -14,49 +14,49 @@ use Google\Protobuf\Internal\GPBUtil;
 class Peer extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The identity pubkey of the peer
+     *&#47; The identity pubkey of the peer
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
     private $pub_key = '';
     /**
-     * Network address of the peer; eg `127.0.0.1:10011`
+     *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
      * Generated from protobuf field <code>string address = 3;</code>
      */
     private $address = '';
     /**
-     * Bytes of data transmitted to this peer
+     *&#47; Bytes of data transmitted to this peer
      *
      * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      */
     private $bytes_sent = 0;
     /**
-     * Bytes of data transmitted from this peer
+     *&#47; Bytes of data transmitted from this peer
      *
      * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      */
     private $bytes_recv = 0;
     /**
-     * Satoshis sent to this peer
+     *&#47; Satoshis sent to this peer
      *
      * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      */
     private $sat_sent = 0;
     /**
-     * Satoshis received from this peer
+     *&#47; Satoshis received from this peer
      *
      * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      */
     private $sat_recv = 0;
     /**
-     * A channel is inbound if the counterparty initiated the channel
+     *&#47; A channel is inbound if the counterparty initiated the channel
      *
      * Generated from protobuf field <code>bool inbound = 8;</code>
      */
     private $inbound = false;
     /**
-     * Ping time to this peer
+     *&#47; Ping time to this peer
      *
      * Generated from protobuf field <code>int64 ping_time = 9;</code>
      */
@@ -68,7 +68,7 @@ class Peer extends \Google\Protobuf\Internal\Message
      */
     private $sync_type = 0;
     /**
-     * Features advertised by the remote peer in their init message.
+     *&#47; Features advertised by the remote peer in their init message.
      *
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11;</code>
      */
@@ -91,25 +91,25 @@ class Peer extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *           The identity pubkey of the peer
+     *          &#47; The identity pubkey of the peer
      *     @type string $address
-     *           Network address of the peer; eg `127.0.0.1:10011`
+     *          &#47; Network address of the peer; eg `127.0.0.1:10011`
      *     @type int|string $bytes_sent
-     *           Bytes of data transmitted to this peer
+     *          &#47; Bytes of data transmitted to this peer
      *     @type int|string $bytes_recv
-     *           Bytes of data transmitted from this peer
+     *          &#47; Bytes of data transmitted from this peer
      *     @type int|string $sat_sent
-     *           Satoshis sent to this peer
+     *          &#47; Satoshis sent to this peer
      *     @type int|string $sat_recv
-     *           Satoshis received from this peer
+     *          &#47; Satoshis received from this peer
      *     @type bool $inbound
-     *           A channel is inbound if the counterparty initiated the channel
+     *          &#47; A channel is inbound if the counterparty initiated the channel
      *     @type int|string $ping_time
-     *           Ping time to this peer
+     *          &#47; Ping time to this peer
      *     @type int $sync_type
      *           The type of sync we are currently performing with this peer.
      *     @type array|\Google\Protobuf\Internal\MapField $features
-     *           Features advertised by the remote peer in their init message.
+     *          &#47; Features advertised by the remote peer in their init message.
      *     @type \Lnrpc\TimestampedError[]|\Google\Protobuf\Internal\RepeatedField $errors
      *          The latest errors received from our peer with timestamps, limited to the 10
      *          most recent errors. These errors are tracked across peer connections, but
@@ -124,7 +124,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the peer
+     *&#47; The identity pubkey of the peer
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -135,7 +135,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The identity pubkey of the peer
+     *&#47; The identity pubkey of the peer
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
@@ -150,7 +150,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Network address of the peer; eg `127.0.0.1:10011`
+     *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
      * Generated from protobuf field <code>string address = 3;</code>
      * @return string
@@ -161,7 +161,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Network address of the peer; eg `127.0.0.1:10011`
+     *&#47; Network address of the peer; eg `127.0.0.1:10011`
      *
      * Generated from protobuf field <code>string address = 3;</code>
      * @param string $var
@@ -176,7 +176,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Bytes of data transmitted to this peer
+     *&#47; Bytes of data transmitted to this peer
      *
      * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      * @return int|string
@@ -187,7 +187,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Bytes of data transmitted to this peer
+     *&#47; Bytes of data transmitted to this peer
      *
      * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      * @param int|string $var
@@ -202,7 +202,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Bytes of data transmitted from this peer
+     *&#47; Bytes of data transmitted from this peer
      *
      * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      * @return int|string
@@ -213,7 +213,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Bytes of data transmitted from this peer
+     *&#47; Bytes of data transmitted from this peer
      *
      * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      * @param int|string $var
@@ -228,7 +228,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Satoshis sent to this peer
+     *&#47; Satoshis sent to this peer
      *
      * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      * @return int|string
@@ -239,7 +239,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Satoshis sent to this peer
+     *&#47; Satoshis sent to this peer
      *
      * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      * @param int|string $var
@@ -254,7 +254,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Satoshis received from this peer
+     *&#47; Satoshis received from this peer
      *
      * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      * @return int|string
@@ -265,7 +265,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Satoshis received from this peer
+     *&#47; Satoshis received from this peer
      *
      * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      * @param int|string $var
@@ -280,7 +280,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A channel is inbound if the counterparty initiated the channel
+     *&#47; A channel is inbound if the counterparty initiated the channel
      *
      * Generated from protobuf field <code>bool inbound = 8;</code>
      * @return bool
@@ -291,7 +291,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A channel is inbound if the counterparty initiated the channel
+     *&#47; A channel is inbound if the counterparty initiated the channel
      *
      * Generated from protobuf field <code>bool inbound = 8;</code>
      * @param bool $var
@@ -306,7 +306,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ping time to this peer
+     *&#47; Ping time to this peer
      *
      * Generated from protobuf field <code>int64 ping_time = 9;</code>
      * @return int|string
@@ -317,7 +317,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ping time to this peer
+     *&#47; Ping time to this peer
      *
      * Generated from protobuf field <code>int64 ping_time = 9;</code>
      * @param int|string $var
@@ -358,7 +358,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Features advertised by the remote peer in their init message.
+     *&#47; Features advertised by the remote peer in their init message.
      *
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11;</code>
      * @return \Google\Protobuf\Internal\MapField
@@ -369,7 +369,7 @@ class Peer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Features advertised by the remote peer in their init message.
+     *&#47; Features advertised by the remote peer in their init message.
      *
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 11;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var

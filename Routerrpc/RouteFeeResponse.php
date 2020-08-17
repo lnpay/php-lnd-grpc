@@ -14,6 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class RouteFeeResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     **
      *A lower bound of the estimated fee to the target destination within the
      *network, expressed in milli-satoshis.
      *
@@ -21,6 +22,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
      */
     private $routing_fee_msat = 0;
     /**
+     **
      *An estimate of the worst case time delay that can occur. Note that callers
      *will still need to factor in the final CLTV delta of the last hop into this
      *value.
@@ -36,9 +38,11 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $routing_fee_msat
+     *          *
      *          A lower bound of the estimated fee to the target destination within the
      *          network, expressed in milli-satoshis.
      *     @type int|string $time_lock_delay
+     *          *
      *          An estimate of the worst case time delay that can occur. Note that callers
      *          will still need to factor in the final CLTV delta of the last hop into this
      *          value.
@@ -50,6 +54,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A lower bound of the estimated fee to the target destination within the
      *network, expressed in milli-satoshis.
      *
@@ -62,6 +67,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *A lower bound of the estimated fee to the target destination within the
      *network, expressed in milli-satoshis.
      *
@@ -78,6 +84,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An estimate of the worst case time delay that can occur. Note that callers
      *will still need to factor in the final CLTV delta of the last hop into this
      *value.
@@ -91,6 +98,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *An estimate of the worst case time delay that can occur. Note that callers
      *will still need to factor in the final CLTV delta of the last hop into this
      *value.

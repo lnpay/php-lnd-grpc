@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The success probability for the requested pair.
+     *&#47; The success probability for the requested pair.
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      */
     private $probability = 0.0;
     /**
-     * The historical data for the requested pair.
+     *&#47; The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      */
@@ -33,9 +33,9 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type float $probability
-     *           The success probability for the requested pair.
+     *          &#47; The success probability for the requested pair.
      *     @type \Routerrpc\PairData $history
-     *           The historical data for the requested pair.
+     *          &#47; The historical data for the requested pair.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The success probability for the requested pair.
+     *&#47; The success probability for the requested pair.
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      * @return float
@@ -55,7 +55,7 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The success probability for the requested pair.
+     *&#47; The success probability for the requested pair.
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      * @param float $var
@@ -70,7 +70,7 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The historical data for the requested pair.
+     *&#47; The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      * @return \Routerrpc\PairData
@@ -81,7 +81,7 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The historical data for the requested pair.
+     *&#47; The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      * @param \Routerrpc\PairData $var

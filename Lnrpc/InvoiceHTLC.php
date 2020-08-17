@@ -9,68 +9,68 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Details of an HTLC that paid to an invoice
+ *&#47; Details of an HTLC that paid to an invoice
  *
  * Generated from protobuf message <code>lnrpc.InvoiceHTLC</code>
  */
 class InvoiceHTLC extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Short channel id over which the htlc was received.
+     *&#47; Short channel id over which the htlc was received.
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
     private $chan_id = 0;
     /**
-     * Index identifying the htlc on the channel.
+     *&#47; Index identifying the htlc on the channel.
      *
      * Generated from protobuf field <code>uint64 htlc_index = 2;</code>
      */
     private $htlc_index = 0;
     /**
-     * The amount of the htlc in msat.
+     *&#47; The amount of the htlc in msat.
      *
      * Generated from protobuf field <code>uint64 amt_msat = 3;</code>
      */
     private $amt_msat = 0;
     /**
-     * Block height at which this htlc was accepted.
+     *&#47; Block height at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int32 accept_height = 4;</code>
      */
     private $accept_height = 0;
     /**
-     * Time at which this htlc was accepted.
+     *&#47; Time at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int64 accept_time = 5;</code>
      */
     private $accept_time = 0;
     /**
-     * Time at which this htlc was settled or canceled.
+     *&#47; Time at which this htlc was settled or canceled.
      *
      * Generated from protobuf field <code>int64 resolve_time = 6;</code>
      */
     private $resolve_time = 0;
     /**
-     * Block height at which this htlc expires.
+     *&#47; Block height at which this htlc expires.
      *
      * Generated from protobuf field <code>int32 expiry_height = 7;</code>
      */
     private $expiry_height = 0;
     /**
-     * Current state the htlc is in.
+     *&#47; Current state the htlc is in.
      *
      * Generated from protobuf field <code>.lnrpc.InvoiceHTLCState state = 8;</code>
      */
     private $state = 0;
     /**
-     * Custom tlv records.
+     *&#47; Custom tlv records.
      *
      * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9;</code>
      */
     private $custom_records;
     /**
-     * The total amount of the mpp payment in msat.
+     *&#47; The total amount of the mpp payment in msat.
      *
      * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10;</code>
      */
@@ -83,25 +83,25 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $chan_id
-     *           Short channel id over which the htlc was received.
+     *          &#47; Short channel id over which the htlc was received.
      *     @type int|string $htlc_index
-     *           Index identifying the htlc on the channel.
+     *          &#47; Index identifying the htlc on the channel.
      *     @type int|string $amt_msat
-     *           The amount of the htlc in msat.
+     *          &#47; The amount of the htlc in msat.
      *     @type int $accept_height
-     *           Block height at which this htlc was accepted.
+     *          &#47; Block height at which this htlc was accepted.
      *     @type int|string $accept_time
-     *           Time at which this htlc was accepted.
+     *          &#47; Time at which this htlc was accepted.
      *     @type int|string $resolve_time
-     *           Time at which this htlc was settled or canceled.
+     *          &#47; Time at which this htlc was settled or canceled.
      *     @type int $expiry_height
-     *           Block height at which this htlc expires.
+     *          &#47; Block height at which this htlc expires.
      *     @type int $state
-     *           Current state the htlc is in.
+     *          &#47; Current state the htlc is in.
      *     @type array|\Google\Protobuf\Internal\MapField $custom_records
-     *           Custom tlv records.
+     *          &#47; Custom tlv records.
      *     @type int|string $mpp_total_amt_msat
-     *           The total amount of the mpp payment in msat.
+     *          &#47; The total amount of the mpp payment in msat.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +110,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Short channel id over which the htlc was received.
+     *&#47; Short channel id over which the htlc was received.
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      * @return int|string
@@ -121,7 +121,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Short channel id over which the htlc was received.
+     *&#47; Short channel id over which the htlc was received.
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      * @param int|string $var
@@ -136,7 +136,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Index identifying the htlc on the channel.
+     *&#47; Index identifying the htlc on the channel.
      *
      * Generated from protobuf field <code>uint64 htlc_index = 2;</code>
      * @return int|string
@@ -147,7 +147,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Index identifying the htlc on the channel.
+     *&#47; Index identifying the htlc on the channel.
      *
      * Generated from protobuf field <code>uint64 htlc_index = 2;</code>
      * @param int|string $var
@@ -162,7 +162,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The amount of the htlc in msat.
+     *&#47; The amount of the htlc in msat.
      *
      * Generated from protobuf field <code>uint64 amt_msat = 3;</code>
      * @return int|string
@@ -173,7 +173,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The amount of the htlc in msat.
+     *&#47; The amount of the htlc in msat.
      *
      * Generated from protobuf field <code>uint64 amt_msat = 3;</code>
      * @param int|string $var
@@ -188,7 +188,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Block height at which this htlc was accepted.
+     *&#47; Block height at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int32 accept_height = 4;</code>
      * @return int
@@ -199,7 +199,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Block height at which this htlc was accepted.
+     *&#47; Block height at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int32 accept_height = 4;</code>
      * @param int $var
@@ -214,7 +214,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time at which this htlc was accepted.
+     *&#47; Time at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int64 accept_time = 5;</code>
      * @return int|string
@@ -225,7 +225,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time at which this htlc was accepted.
+     *&#47; Time at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int64 accept_time = 5;</code>
      * @param int|string $var
@@ -240,7 +240,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time at which this htlc was settled or canceled.
+     *&#47; Time at which this htlc was settled or canceled.
      *
      * Generated from protobuf field <code>int64 resolve_time = 6;</code>
      * @return int|string
@@ -251,7 +251,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Time at which this htlc was settled or canceled.
+     *&#47; Time at which this htlc was settled or canceled.
      *
      * Generated from protobuf field <code>int64 resolve_time = 6;</code>
      * @param int|string $var
@@ -266,7 +266,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Block height at which this htlc expires.
+     *&#47; Block height at which this htlc expires.
      *
      * Generated from protobuf field <code>int32 expiry_height = 7;</code>
      * @return int
@@ -277,7 +277,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Block height at which this htlc expires.
+     *&#47; Block height at which this htlc expires.
      *
      * Generated from protobuf field <code>int32 expiry_height = 7;</code>
      * @param int $var
@@ -292,7 +292,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Current state the htlc is in.
+     *&#47; Current state the htlc is in.
      *
      * Generated from protobuf field <code>.lnrpc.InvoiceHTLCState state = 8;</code>
      * @return int
@@ -303,7 +303,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Current state the htlc is in.
+     *&#47; Current state the htlc is in.
      *
      * Generated from protobuf field <code>.lnrpc.InvoiceHTLCState state = 8;</code>
      * @param int $var
@@ -318,7 +318,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Custom tlv records.
+     *&#47; Custom tlv records.
      *
      * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9;</code>
      * @return \Google\Protobuf\Internal\MapField
@@ -329,7 +329,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Custom tlv records.
+     *&#47; Custom tlv records.
      *
      * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
@@ -344,7 +344,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The total amount of the mpp payment in msat.
+     *&#47; The total amount of the mpp payment in msat.
      *
      * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10;</code>
      * @return int|string
@@ -355,7 +355,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The total amount of the mpp payment in msat.
+     *&#47; The total amount of the mpp payment in msat.
      *
      * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10;</code>
      * @param int|string $var

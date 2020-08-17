@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ClosedChannel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The pending channel to be closed
+     *&#47; The pending channel to be closed
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
     private $channel = null;
     /**
-     * The transaction id of the closing transaction
+     *&#47; The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      */
@@ -33,9 +33,9 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\PendingChannelsResponse\PendingChannel $channel
-     *           The pending channel to be closed
+     *          &#47; The pending channel to be closed
      *     @type string $closing_txid
-     *           The transaction id of the closing transaction
+     *          &#47; The transaction id of the closing transaction
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The pending channel to be closed
+     *&#47; The pending channel to be closed
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @return \Lnrpc\PendingChannelsResponse\PendingChannel
@@ -55,7 +55,7 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The pending channel to be closed
+     *&#47; The pending channel to be closed
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      * @param \Lnrpc\PendingChannelsResponse\PendingChannel $var
@@ -70,7 +70,7 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The transaction id of the closing transaction
+     *&#47; The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      * @return string
@@ -81,7 +81,7 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The transaction id of the closing transaction
+     *&#47; The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      * @param string $var

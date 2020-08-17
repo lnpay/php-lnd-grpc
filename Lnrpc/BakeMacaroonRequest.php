@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The list of permissions the new macaroon should grant.
+     *&#47; The list of permissions the new macaroon should grant.
      *
      * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      */
@@ -27,7 +27,7 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\MacaroonPermission[]|\Google\Protobuf\Internal\RepeatedField $permissions
-     *           The list of permissions the new macaroon should grant.
+     *          &#47; The list of permissions the new macaroon should grant.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of permissions the new macaroon should grant.
+     *&#47; The list of permissions the new macaroon should grant.
      *
      * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of permissions the new macaroon should grant.
+     *&#47; The list of permissions the new macaroon should grant.
      *
      * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      * @param \Lnrpc\MacaroonPermission[]|\Google\Protobuf\Internal\RepeatedField $var

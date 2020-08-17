@@ -14,24 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class HTLCAttempt extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The status of the HTLC.
+     *&#47; The status of the HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      */
     private $status = 0;
     /**
-     * The route taken by this HTLC.
+     *&#47; The route taken by this HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      */
     private $route = null;
     /**
-     * The time in UNIX nanoseconds at which this HTLC was sent.
+     *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
      * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      */
     private $attempt_time_ns = 0;
     /**
+     **
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
@@ -44,12 +45,6 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.lnrpc.Failure failure = 5;</code>
      */
     private $failure = null;
-    /**
-     * The preimage that was used to settle the HTLC.
-     *
-     * Generated from protobuf field <code>bytes preimage = 6;</code>
-     */
-    private $preimage = '';
 
     /**
      * Constructor.
@@ -58,18 +53,17 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $status
-     *           The status of the HTLC.
+     *          &#47; The status of the HTLC.
      *     @type \Lnrpc\Route $route
-     *           The route taken by this HTLC.
+     *          &#47; The route taken by this HTLC.
      *     @type int|string $attempt_time_ns
-     *           The time in UNIX nanoseconds at which this HTLC was sent.
+     *          &#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *     @type int|string $resolve_time_ns
+     *          *
      *          The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *          This value will not be set if the HTLC is still IN_FLIGHT.
      *     @type \Lnrpc\Failure $failure
      *           Detailed htlc failure info.
-     *     @type string $preimage
-     *           The preimage that was used to settle the HTLC.
      * }
      */
     public function __construct($data = NULL) {
@@ -78,7 +72,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The status of the HTLC.
+     *&#47; The status of the HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      * @return int
@@ -89,7 +83,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The status of the HTLC.
+     *&#47; The status of the HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      * @param int $var
@@ -104,7 +98,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The route taken by this HTLC.
+     *&#47; The route taken by this HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      * @return \Lnrpc\Route
@@ -115,7 +109,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The route taken by this HTLC.
+     *&#47; The route taken by this HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      * @param \Lnrpc\Route $var
@@ -130,7 +124,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The time in UNIX nanoseconds at which this HTLC was sent.
+     *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
      * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      * @return int|string
@@ -141,7 +135,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The time in UNIX nanoseconds at which this HTLC was sent.
+     *&#47; The time in UNIX nanoseconds at which this HTLC was sent.
      *
      * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      * @param int|string $var
@@ -156,6 +150,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
@@ -168,6 +163,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     **
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
@@ -205,32 +201,6 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\Failure::class);
         $this->failure = $var;
-
-        return $this;
-    }
-
-    /**
-     * The preimage that was used to settle the HTLC.
-     *
-     * Generated from protobuf field <code>bytes preimage = 6;</code>
-     * @return string
-     */
-    public function getPreimage()
-    {
-        return $this->preimage;
-    }
-
-    /**
-     * The preimage that was used to settle the HTLC.
-     *
-     * Generated from protobuf field <code>bytes preimage = 6;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setPreimage($var)
-    {
-        GPBUtil::checkString($var, False);
-        $this->preimage = $var;
 
         return $this;
     }

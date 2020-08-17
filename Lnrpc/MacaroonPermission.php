@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class MacaroonPermission extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The entity a permission grants access to.
+     *&#47; The entity a permission grants access to.
      *
      * Generated from protobuf field <code>string entity = 1;</code>
      */
     private $entity = '';
     /**
-     * The action that is granted.
+     *&#47; The action that is granted.
      *
      * Generated from protobuf field <code>string action = 2;</code>
      */
@@ -33,9 +33,9 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $entity
-     *           The entity a permission grants access to.
+     *          &#47; The entity a permission grants access to.
      *     @type string $action
-     *           The action that is granted.
+     *          &#47; The action that is granted.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The entity a permission grants access to.
+     *&#47; The entity a permission grants access to.
      *
      * Generated from protobuf field <code>string entity = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The entity a permission grants access to.
+     *&#47; The entity a permission grants access to.
      *
      * Generated from protobuf field <code>string entity = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The action that is granted.
+     *&#47; The action that is granted.
      *
      * Generated from protobuf field <code>string action = 2;</code>
      * @return string
@@ -81,7 +81,7 @@ class MacaroonPermission extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The action that is granted.
+     *&#47; The action that is granted.
      *
      * Generated from protobuf field <code>string action = 2;</code>
      * @param string $var

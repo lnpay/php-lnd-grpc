@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class TransactionDetails extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The list of transactions relevant to the wallet.
+     *&#47; The list of transactions relevant to the wallet.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1;</code>
      */
@@ -27,7 +27,7 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\Transaction[]|\Google\Protobuf\Internal\RepeatedField $transactions
-     *           The list of transactions relevant to the wallet.
+     *          &#47; The list of transactions relevant to the wallet.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of transactions relevant to the wallet.
+     *&#47; The list of transactions relevant to the wallet.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class TransactionDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of transactions relevant to the wallet.
+     *&#47; The list of transactions relevant to the wallet.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Transaction transactions = 1;</code>
      * @param \Lnrpc\Transaction[]|\Google\Protobuf\Internal\RepeatedField $var
