@@ -14,35 +14,35 @@ use Google\Protobuf\Internal\GPBUtil;
 class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Start time is the starting point of the forwarding history request. All
-     * / records beyond this point will be included, respecting the end time, and
-     * / the index offset.
+     * Start time is the starting point of the forwarding history request. All
+     * records beyond this point will be included, respecting the end time, and
+     * the index offset.
      *
      * Generated from protobuf field <code>uint64 start_time = 1;</code>
      */
-    private $start_time = 0;
+    protected $start_time = 0;
     /**
-     *&#47; End time is the end point of the forwarding history request. The
-     * / response will carry at most 50k records between the start time and the
-     * / end time. The index offset can be used to implement pagination.
+     * End time is the end point of the forwarding history request. The
+     * response will carry at most 50k records between the start time and the
+     * end time. The index offset can be used to implement pagination.
      *
      * Generated from protobuf field <code>uint64 end_time = 2;</code>
      */
-    private $end_time = 0;
+    protected $end_time = 0;
     /**
-     *&#47; Index offset is the offset in the time series to start at. As each
-     * / response can only contain 50k records, callers can use this to skip
-     * / around within a packed time series.
+     * Index offset is the offset in the time series to start at. As each
+     * response can only contain 50k records, callers can use this to skip
+     * around within a packed time series.
      *
      * Generated from protobuf field <code>uint32 index_offset = 3;</code>
      */
-    private $index_offset = 0;
+    protected $index_offset = 0;
     /**
-     *&#47; The max number of events to return in the response to this query.
+     * The max number of events to return in the response to this query.
      *
      * Generated from protobuf field <code>uint32 num_max_events = 4;</code>
      */
-    private $num_max_events = 0;
+    protected $num_max_events = 0;
 
     /**
      * Constructor.
@@ -51,19 +51,19 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $start_time
-     *          &#47; Start time is the starting point of the forwarding history request. All
-     *          / records beyond this point will be included, respecting the end time, and
-     *          / the index offset.
+     *           Start time is the starting point of the forwarding history request. All
+     *           records beyond this point will be included, respecting the end time, and
+     *           the index offset.
      *     @type int|string $end_time
-     *          &#47; End time is the end point of the forwarding history request. The
-     *          / response will carry at most 50k records between the start time and the
-     *          / end time. The index offset can be used to implement pagination.
+     *           End time is the end point of the forwarding history request. The
+     *           response will carry at most 50k records between the start time and the
+     *           end time. The index offset can be used to implement pagination.
      *     @type int $index_offset
-     *          &#47; Index offset is the offset in the time series to start at. As each
-     *          / response can only contain 50k records, callers can use this to skip
-     *          / around within a packed time series.
+     *           Index offset is the offset in the time series to start at. As each
+     *           response can only contain 50k records, callers can use this to skip
+     *           around within a packed time series.
      *     @type int $num_max_events
-     *          &#47; The max number of events to return in the response to this query.
+     *           The max number of events to return in the response to this query.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,9 +72,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Start time is the starting point of the forwarding history request. All
-     * / records beyond this point will be included, respecting the end time, and
-     * / the index offset.
+     * Start time is the starting point of the forwarding history request. All
+     * records beyond this point will be included, respecting the end time, and
+     * the index offset.
      *
      * Generated from protobuf field <code>uint64 start_time = 1;</code>
      * @return int|string
@@ -85,9 +85,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Start time is the starting point of the forwarding history request. All
-     * / records beyond this point will be included, respecting the end time, and
-     * / the index offset.
+     * Start time is the starting point of the forwarding history request. All
+     * records beyond this point will be included, respecting the end time, and
+     * the index offset.
      *
      * Generated from protobuf field <code>uint64 start_time = 1;</code>
      * @param int|string $var
@@ -102,9 +102,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; End time is the end point of the forwarding history request. The
-     * / response will carry at most 50k records between the start time and the
-     * / end time. The index offset can be used to implement pagination.
+     * End time is the end point of the forwarding history request. The
+     * response will carry at most 50k records between the start time and the
+     * end time. The index offset can be used to implement pagination.
      *
      * Generated from protobuf field <code>uint64 end_time = 2;</code>
      * @return int|string
@@ -115,9 +115,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; End time is the end point of the forwarding history request. The
-     * / response will carry at most 50k records between the start time and the
-     * / end time. The index offset can be used to implement pagination.
+     * End time is the end point of the forwarding history request. The
+     * response will carry at most 50k records between the start time and the
+     * end time. The index offset can be used to implement pagination.
      *
      * Generated from protobuf field <code>uint64 end_time = 2;</code>
      * @param int|string $var
@@ -132,9 +132,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Index offset is the offset in the time series to start at. As each
-     * / response can only contain 50k records, callers can use this to skip
-     * / around within a packed time series.
+     * Index offset is the offset in the time series to start at. As each
+     * response can only contain 50k records, callers can use this to skip
+     * around within a packed time series.
      *
      * Generated from protobuf field <code>uint32 index_offset = 3;</code>
      * @return int
@@ -145,9 +145,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Index offset is the offset in the time series to start at. As each
-     * / response can only contain 50k records, callers can use this to skip
-     * / around within a packed time series.
+     * Index offset is the offset in the time series to start at. As each
+     * response can only contain 50k records, callers can use this to skip
+     * around within a packed time series.
      *
      * Generated from protobuf field <code>uint32 index_offset = 3;</code>
      * @param int $var
@@ -162,7 +162,7 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The max number of events to return in the response to this query.
+     * The max number of events to return in the response to this query.
      *
      * Generated from protobuf field <code>uint32 num_max_events = 4;</code>
      * @return int
@@ -173,7 +173,7 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The max number of events to return in the response to this query.
+     * The max number of events to return in the response to this query.
      *
      * Generated from protobuf field <code>uint32 num_max_events = 4;</code>
      * @param int $var

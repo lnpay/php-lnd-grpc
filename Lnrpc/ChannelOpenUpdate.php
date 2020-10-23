@@ -16,7 +16,7 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    private $channel_point = null;
+    protected $channel_point = null;
 
     /**
      * Constructor.
@@ -38,7 +38,17 @@ class ChannelOpenUpdate extends \Google\Protobuf\Internal\Message
      */
     public function getChannelPoint()
     {
-        return $this->channel_point;
+        return isset($this->channel_point) ? $this->channel_point : null;
+    }
+
+    public function hasChannelPoint()
+    {
+        return isset($this->channel_point);
+    }
+
+    public function clearChannelPoint()
+    {
+        unset($this->channel_point);
     }
 
     /**

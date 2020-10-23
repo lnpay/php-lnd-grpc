@@ -14,31 +14,27 @@ use Google\Protobuf\Internal\GPBUtil;
 class BuildRouteRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The amount to send expressed in msat. If set to zero, the minimum routable
      *amount is used.
      *
      * Generated from protobuf field <code>int64 amt_msat = 1;</code>
      */
-    private $amt_msat = 0;
+    protected $amt_msat = 0;
     /**
-     **
      *CLTV delta from the current height that should be used for the timelock
      *of the final hop
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 2;</code>
      */
-    private $final_cltv_delta = 0;
+    protected $final_cltv_delta = 0;
     /**
-     **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 3 [jstype = JS_STRING];</code>
      */
-    private $outgoing_chan_id = 0;
+    protected $outgoing_chan_id = 0;
     /**
-     **
      *A list of hops that defines the route. This does not include the source hop
      *pubkey.
      *
@@ -53,19 +49,15 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $amt_msat
-     *          *
      *          The amount to send expressed in msat. If set to zero, the minimum routable
      *          amount is used.
      *     @type int $final_cltv_delta
-     *          *
      *          CLTV delta from the current height that should be used for the timelock
      *          of the final hop
      *     @type int|string $outgoing_chan_id
-     *          *
      *          The channel id of the channel that must be taken to the first hop. If zero,
      *          any channel may be used.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $hop_pubkeys
-     *          *
      *          A list of hops that defines the route. This does not include the source hop
      *          pubkey.
      * }
@@ -76,7 +68,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount to send expressed in msat. If set to zero, the minimum routable
      *amount is used.
      *
@@ -89,7 +80,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount to send expressed in msat. If set to zero, the minimum routable
      *amount is used.
      *
@@ -106,7 +96,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *CLTV delta from the current height that should be used for the timelock
      *of the final hop
      *
@@ -119,7 +108,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *CLTV delta from the current height that should be used for the timelock
      *of the final hop
      *
@@ -136,7 +124,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
@@ -149,7 +136,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
@@ -166,7 +152,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of hops that defines the route. This does not include the source hop
      *pubkey.
      *
@@ -179,7 +164,6 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of hops that defines the route. This does not include the source hop
      *pubkey.
      *

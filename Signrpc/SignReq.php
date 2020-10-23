@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The raw bytes of the transaction to be signed.
+     * The raw bytes of the transaction to be signed.
      *
      * Generated from protobuf field <code>bytes raw_tx_bytes = 1;</code>
      */
-    private $raw_tx_bytes = '';
+    protected $raw_tx_bytes = '';
     /**
-     *&#47; A set of sign descriptors, for each input to be signed.
+     * A set of sign descriptors, for each input to be signed.
      *
      * Generated from protobuf field <code>repeated .signrpc.SignDescriptor sign_descs = 2;</code>
      */
@@ -33,9 +33,9 @@ class SignReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $raw_tx_bytes
-     *          &#47; The raw bytes of the transaction to be signed.
+     *           The raw bytes of the transaction to be signed.
      *     @type \Signrpc\SignDescriptor[]|\Google\Protobuf\Internal\RepeatedField $sign_descs
-     *          &#47; A set of sign descriptors, for each input to be signed.
+     *           A set of sign descriptors, for each input to be signed.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class SignReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The raw bytes of the transaction to be signed.
+     * The raw bytes of the transaction to be signed.
      *
      * Generated from protobuf field <code>bytes raw_tx_bytes = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class SignReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The raw bytes of the transaction to be signed.
+     * The raw bytes of the transaction to be signed.
      *
      * Generated from protobuf field <code>bytes raw_tx_bytes = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class SignReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A set of sign descriptors, for each input to be signed.
+     * A set of sign descriptors, for each input to be signed.
      *
      * Generated from protobuf field <code>repeated .signrpc.SignDescriptor sign_descs = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -81,7 +81,7 @@ class SignReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A set of sign descriptors, for each input to be signed.
+     * A set of sign descriptors, for each input to be signed.
      *
      * Generated from protobuf field <code>repeated .signrpc.SignDescriptor sign_descs = 2;</code>
      * @param \Signrpc\SignDescriptor[]|\Google\Protobuf\Internal\RepeatedField $var

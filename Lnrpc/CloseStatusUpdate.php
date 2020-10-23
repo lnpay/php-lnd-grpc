@@ -39,6 +39,11 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
+    public function hasClosePending()
+    {
+        return $this->hasOneof(1);
+    }
+
     /**
      * Generated from protobuf field <code>.lnrpc.PendingUpdate close_pending = 1;</code>
      * @param \Lnrpc\PendingUpdate $var
@@ -59,6 +64,11 @@ class CloseStatusUpdate extends \Google\Protobuf\Internal\Message
     public function getChanClose()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasChanClose()
+    {
+        return $this->hasOneof(3);
     }
 
     /**

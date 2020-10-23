@@ -14,65 +14,65 @@ use Google\Protobuf\Internal\GPBUtil;
 class ForwardingEvent extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Timestamp is the time (unix epoch offset) that this circuit was
-     * / completed.
+     * Timestamp is the time (unix epoch offset) that this circuit was
+     * completed.
      *
      * Generated from protobuf field <code>uint64 timestamp = 1;</code>
      */
-    private $timestamp = 0;
+    protected $timestamp = 0;
     /**
-     *&#47; The incoming channel ID that carried the HTLC that created the circuit.
+     * The incoming channel ID that carried the HTLC that created the circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_in = 2 [jstype = JS_STRING];</code>
      */
-    private $chan_id_in = 0;
+    protected $chan_id_in = 0;
     /**
-     *&#47; The outgoing channel ID that carried the preimage that completed the
-     * / circuit.
+     * The outgoing channel ID that carried the preimage that completed the
+     * circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_out = 4 [jstype = JS_STRING];</code>
      */
-    private $chan_id_out = 0;
+    protected $chan_id_out = 0;
     /**
-     *&#47; The total amount (in satoshis) of the incoming HTLC that created half
-     * / the circuit.
+     * The total amount (in satoshis) of the incoming HTLC that created half
+     * the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in = 5;</code>
      */
-    private $amt_in = 0;
+    protected $amt_in = 0;
     /**
-     *&#47; The total amount (in satoshis) of the outgoing HTLC that created the
-     * / second half of the circuit.
+     * The total amount (in satoshis) of the outgoing HTLC that created the
+     * second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out = 6;</code>
      */
-    private $amt_out = 0;
+    protected $amt_out = 0;
     /**
-     *&#47; The total fee (in satoshis) that this payment circuit carried.
+     * The total fee (in satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee = 7;</code>
      */
-    private $fee = 0;
+    protected $fee = 0;
     /**
-     *&#47; The total fee (in milli-satoshis) that this payment circuit carried.
+     * The total fee (in milli-satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee_msat = 8;</code>
      */
-    private $fee_msat = 0;
+    protected $fee_msat = 0;
     /**
-     *&#47; The total amount (in milli-satoshis) of the incoming HTLC that created
-     * / half the circuit.
+     * The total amount (in milli-satoshis) of the incoming HTLC that created
+     * half the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in_msat = 9;</code>
      */
-    private $amt_in_msat = 0;
+    protected $amt_in_msat = 0;
     /**
-     *&#47; The total amount (in milli-satoshis) of the outgoing HTLC that created
-     * / the second half of the circuit.
+     * The total amount (in milli-satoshis) of the outgoing HTLC that created
+     * the second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out_msat = 10;</code>
      */
-    private $amt_out_msat = 0;
+    protected $amt_out_msat = 0;
 
     /**
      * Constructor.
@@ -81,29 +81,29 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $timestamp
-     *          &#47; Timestamp is the time (unix epoch offset) that this circuit was
-     *          / completed.
+     *           Timestamp is the time (unix epoch offset) that this circuit was
+     *           completed.
      *     @type int|string $chan_id_in
-     *          &#47; The incoming channel ID that carried the HTLC that created the circuit.
+     *           The incoming channel ID that carried the HTLC that created the circuit.
      *     @type int|string $chan_id_out
-     *          &#47; The outgoing channel ID that carried the preimage that completed the
-     *          / circuit.
+     *           The outgoing channel ID that carried the preimage that completed the
+     *           circuit.
      *     @type int|string $amt_in
-     *          &#47; The total amount (in satoshis) of the incoming HTLC that created half
-     *          / the circuit.
+     *           The total amount (in satoshis) of the incoming HTLC that created half
+     *           the circuit.
      *     @type int|string $amt_out
-     *          &#47; The total amount (in satoshis) of the outgoing HTLC that created the
-     *          / second half of the circuit.
+     *           The total amount (in satoshis) of the outgoing HTLC that created the
+     *           second half of the circuit.
      *     @type int|string $fee
-     *          &#47; The total fee (in satoshis) that this payment circuit carried.
+     *           The total fee (in satoshis) that this payment circuit carried.
      *     @type int|string $fee_msat
-     *          &#47; The total fee (in milli-satoshis) that this payment circuit carried.
+     *           The total fee (in milli-satoshis) that this payment circuit carried.
      *     @type int|string $amt_in_msat
-     *          &#47; The total amount (in milli-satoshis) of the incoming HTLC that created
-     *          / half the circuit.
+     *           The total amount (in milli-satoshis) of the incoming HTLC that created
+     *           half the circuit.
      *     @type int|string $amt_out_msat
-     *          &#47; The total amount (in milli-satoshis) of the outgoing HTLC that created
-     *          / the second half of the circuit.
+     *           The total amount (in milli-satoshis) of the outgoing HTLC that created
+     *           the second half of the circuit.
      * }
      */
     public function __construct($data = NULL) {
@@ -112,8 +112,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp is the time (unix epoch offset) that this circuit was
-     * / completed.
+     * Timestamp is the time (unix epoch offset) that this circuit was
+     * completed.
      *
      * Generated from protobuf field <code>uint64 timestamp = 1;</code>
      * @return int|string
@@ -124,8 +124,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp is the time (unix epoch offset) that this circuit was
-     * / completed.
+     * Timestamp is the time (unix epoch offset) that this circuit was
+     * completed.
      *
      * Generated from protobuf field <code>uint64 timestamp = 1;</code>
      * @param int|string $var
@@ -140,7 +140,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The incoming channel ID that carried the HTLC that created the circuit.
+     * The incoming channel ID that carried the HTLC that created the circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_in = 2 [jstype = JS_STRING];</code>
      * @return int|string
@@ -151,7 +151,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The incoming channel ID that carried the HTLC that created the circuit.
+     * The incoming channel ID that carried the HTLC that created the circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_in = 2 [jstype = JS_STRING];</code>
      * @param int|string $var
@@ -166,8 +166,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The outgoing channel ID that carried the preimage that completed the
-     * / circuit.
+     * The outgoing channel ID that carried the preimage that completed the
+     * circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_out = 4 [jstype = JS_STRING];</code>
      * @return int|string
@@ -178,8 +178,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The outgoing channel ID that carried the preimage that completed the
-     * / circuit.
+     * The outgoing channel ID that carried the preimage that completed the
+     * circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_out = 4 [jstype = JS_STRING];</code>
      * @param int|string $var
@@ -194,8 +194,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in satoshis) of the incoming HTLC that created half
-     * / the circuit.
+     * The total amount (in satoshis) of the incoming HTLC that created half
+     * the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in = 5;</code>
      * @return int|string
@@ -206,8 +206,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in satoshis) of the incoming HTLC that created half
-     * / the circuit.
+     * The total amount (in satoshis) of the incoming HTLC that created half
+     * the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in = 5;</code>
      * @param int|string $var
@@ -222,8 +222,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in satoshis) of the outgoing HTLC that created the
-     * / second half of the circuit.
+     * The total amount (in satoshis) of the outgoing HTLC that created the
+     * second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out = 6;</code>
      * @return int|string
@@ -234,8 +234,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in satoshis) of the outgoing HTLC that created the
-     * / second half of the circuit.
+     * The total amount (in satoshis) of the outgoing HTLC that created the
+     * second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out = 6;</code>
      * @param int|string $var
@@ -250,7 +250,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total fee (in satoshis) that this payment circuit carried.
+     * The total fee (in satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee = 7;</code>
      * @return int|string
@@ -261,7 +261,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total fee (in satoshis) that this payment circuit carried.
+     * The total fee (in satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee = 7;</code>
      * @param int|string $var
@@ -276,7 +276,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total fee (in milli-satoshis) that this payment circuit carried.
+     * The total fee (in milli-satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee_msat = 8;</code>
      * @return int|string
@@ -287,7 +287,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total fee (in milli-satoshis) that this payment circuit carried.
+     * The total fee (in milli-satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee_msat = 8;</code>
      * @param int|string $var
@@ -302,8 +302,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in milli-satoshis) of the incoming HTLC that created
-     * / half the circuit.
+     * The total amount (in milli-satoshis) of the incoming HTLC that created
+     * half the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in_msat = 9;</code>
      * @return int|string
@@ -314,8 +314,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in milli-satoshis) of the incoming HTLC that created
-     * / half the circuit.
+     * The total amount (in milli-satoshis) of the incoming HTLC that created
+     * half the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in_msat = 9;</code>
      * @param int|string $var
@@ -330,8 +330,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in milli-satoshis) of the outgoing HTLC that created
-     * / the second half of the circuit.
+     * The total amount (in milli-satoshis) of the outgoing HTLC that created
+     * the second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out_msat = 10;</code>
      * @return int|string
@@ -342,8 +342,8 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount (in milli-satoshis) of the outgoing HTLC that created
-     * / the second half of the circuit.
+     * The total amount (in milli-satoshis) of the outgoing HTLC that created
+     * the second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out_msat = 10;</code>
      * @param int|string $var

@@ -46,6 +46,11 @@ class SpendEvent extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
+    public function hasSpend()
+    {
+        return $this->hasOneof(1);
+    }
+
     /**
      *An event that includes the details of the spending transaction of the
      *request (outpoint/output script).
@@ -72,6 +77,11 @@ class SpendEvent extends \Google\Protobuf\Internal\Message
     public function getReorg()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasReorg()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

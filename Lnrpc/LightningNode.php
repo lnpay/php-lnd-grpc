@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
  *An individual vertex/node within the channel graph. A node is
  *connected to other nodes by one or more channel edges emanating from it. As the
  *graph is directed, a node will also have an incoming edge attached to it for
@@ -22,15 +21,15 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>uint32 last_update = 1;</code>
      */
-    private $last_update = 0;
+    protected $last_update = 0;
     /**
      * Generated from protobuf field <code>string pub_key = 2;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      * Generated from protobuf field <code>string alias = 3;</code>
      */
-    private $alias = '';
+    protected $alias = '';
     /**
      * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4;</code>
      */
@@ -38,7 +37,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string color = 5;</code>
      */
-    private $color = '';
+    protected $color = '';
     /**
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
      */

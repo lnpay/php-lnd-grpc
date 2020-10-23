@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
  *HtlcEvent contains the htlc event that was processed. These are served on a
  *best-effort basis; events are not persisted, delivery is not guaranteed
  *(in the event of a crash in the switch, forward events may be lost) and
@@ -22,52 +21,46 @@ use Google\Protobuf\Internal\GPBUtil;
 class HtlcEvent extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The short channel id that the incoming htlc arrived at our node on. This
      *value is zero for sends.
      *
      * Generated from protobuf field <code>uint64 incoming_channel_id = 1;</code>
      */
-    private $incoming_channel_id = 0;
+    protected $incoming_channel_id = 0;
     /**
-     **
      *The short channel id that the outgoing htlc left our node on. This value
      *is zero for receives.
      *
      * Generated from protobuf field <code>uint64 outgoing_channel_id = 2;</code>
      */
-    private $outgoing_channel_id = 0;
+    protected $outgoing_channel_id = 0;
     /**
-     **
      *Incoming id is the index of the incoming htlc in the incoming channel.
      *This value is zero for sends.
      *
      * Generated from protobuf field <code>uint64 incoming_htlc_id = 3;</code>
      */
-    private $incoming_htlc_id = 0;
+    protected $incoming_htlc_id = 0;
     /**
-     **
      *Outgoing id is the index of the outgoing htlc in the outgoing channel.
      *This value is zero for receives.
      *
      * Generated from protobuf field <code>uint64 outgoing_htlc_id = 4;</code>
      */
-    private $outgoing_htlc_id = 0;
+    protected $outgoing_htlc_id = 0;
     /**
-     **
      *The time in unix nanoseconds that the event occurred.
      *
      * Generated from protobuf field <code>uint64 timestamp_ns = 5;</code>
      */
-    private $timestamp_ns = 0;
+    protected $timestamp_ns = 0;
     /**
-     **
      *The event type indicates whether the htlc was part of a send, receive or
      *forward.
      *
      * Generated from protobuf field <code>.routerrpc.HtlcEvent.EventType event_type = 6;</code>
      */
-    private $event_type = 0;
+    protected $event_type = 0;
     protected $event;
 
     /**
@@ -77,26 +70,20 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $incoming_channel_id
-     *          *
      *          The short channel id that the incoming htlc arrived at our node on. This
      *          value is zero for sends.
      *     @type int|string $outgoing_channel_id
-     *          *
      *          The short channel id that the outgoing htlc left our node on. This value
      *          is zero for receives.
      *     @type int|string $incoming_htlc_id
-     *          *
      *          Incoming id is the index of the incoming htlc in the incoming channel.
      *          This value is zero for sends.
      *     @type int|string $outgoing_htlc_id
-     *          *
      *          Outgoing id is the index of the outgoing htlc in the outgoing channel.
      *          This value is zero for receives.
      *     @type int|string $timestamp_ns
-     *          *
      *          The time in unix nanoseconds that the event occurred.
      *     @type int $event_type
-     *          *
      *          The event type indicates whether the htlc was part of a send, receive or
      *          forward.
      *     @type \Routerrpc\ForwardEvent $forward_event
@@ -111,7 +98,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The short channel id that the incoming htlc arrived at our node on. This
      *value is zero for sends.
      *
@@ -124,7 +110,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The short channel id that the incoming htlc arrived at our node on. This
      *value is zero for sends.
      *
@@ -141,7 +126,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The short channel id that the outgoing htlc left our node on. This value
      *is zero for receives.
      *
@@ -154,7 +138,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The short channel id that the outgoing htlc left our node on. This value
      *is zero for receives.
      *
@@ -171,7 +154,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Incoming id is the index of the incoming htlc in the incoming channel.
      *This value is zero for sends.
      *
@@ -184,7 +166,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Incoming id is the index of the incoming htlc in the incoming channel.
      *This value is zero for sends.
      *
@@ -201,7 +182,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Outgoing id is the index of the outgoing htlc in the outgoing channel.
      *This value is zero for receives.
      *
@@ -214,7 +194,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Outgoing id is the index of the outgoing htlc in the outgoing channel.
      *This value is zero for receives.
      *
@@ -231,7 +210,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The time in unix nanoseconds that the event occurred.
      *
      * Generated from protobuf field <code>uint64 timestamp_ns = 5;</code>
@@ -243,7 +221,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The time in unix nanoseconds that the event occurred.
      *
      * Generated from protobuf field <code>uint64 timestamp_ns = 5;</code>
@@ -259,7 +236,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The event type indicates whether the htlc was part of a send, receive or
      *forward.
      *
@@ -272,7 +248,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The event type indicates whether the htlc was part of a send, receive or
      *forward.
      *
@@ -282,7 +257,7 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
      */
     public function setEventType($var)
     {
-        GPBUtil::checkEnum($var, \Routerrpc\HtlcEvent_EventType::class);
+        GPBUtil::checkEnum($var, \Routerrpc\HtlcEvent\EventType::class);
         $this->event_type = $var;
 
         return $this;
@@ -295,6 +270,11 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     public function getForwardEvent()
     {
         return $this->readOneof(7);
+    }
+
+    public function hasForwardEvent()
+    {
+        return $this->hasOneof(7);
     }
 
     /**
@@ -319,6 +299,11 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
         return $this->readOneof(8);
     }
 
+    public function hasForwardFailEvent()
+    {
+        return $this->hasOneof(8);
+    }
+
     /**
      * Generated from protobuf field <code>.routerrpc.ForwardFailEvent forward_fail_event = 8;</code>
      * @param \Routerrpc\ForwardFailEvent $var
@@ -341,6 +326,11 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
         return $this->readOneof(9);
     }
 
+    public function hasSettleEvent()
+    {
+        return $this->hasOneof(9);
+    }
+
     /**
      * Generated from protobuf field <code>.routerrpc.SettleEvent settle_event = 9;</code>
      * @param \Routerrpc\SettleEvent $var
@@ -361,6 +351,11 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     public function getLinkFailEvent()
     {
         return $this->readOneof(10);
+    }
+
+    public function hasLinkFailEvent()
+    {
+        return $this->hasOneof(10);
     }
 
     /**

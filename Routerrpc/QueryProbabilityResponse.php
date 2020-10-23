@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The success probability for the requested pair.
+     * The success probability for the requested pair.
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      */
-    private $probability = 0.0;
+    protected $probability = 0.0;
     /**
-     *&#47; The historical data for the requested pair.
+     * The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      */
-    private $history = null;
+    protected $history = null;
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type float $probability
-     *          &#47; The success probability for the requested pair.
+     *           The success probability for the requested pair.
      *     @type \Routerrpc\PairData $history
-     *          &#47; The historical data for the requested pair.
+     *           The historical data for the requested pair.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The success probability for the requested pair.
+     * The success probability for the requested pair.
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      * @return float
@@ -55,7 +55,7 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The success probability for the requested pair.
+     * The success probability for the requested pair.
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      * @param float $var
@@ -70,18 +70,28 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The historical data for the requested pair.
+     * The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      * @return \Routerrpc\PairData
      */
     public function getHistory()
     {
-        return $this->history;
+        return isset($this->history) ? $this->history : null;
+    }
+
+    public function hasHistory()
+    {
+        return isset($this->history);
+    }
+
+    public function clearHistory()
+    {
+        unset($this->history);
     }
 
     /**
-     *&#47; The historical data for the requested pair.
+     * The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      * @param \Routerrpc\PairData $var

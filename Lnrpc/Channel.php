@@ -14,55 +14,52 @@ use Google\Protobuf\Internal\GPBUtil;
 class Channel extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Whether this channel is active or not
+     * Whether this channel is active or not
      *
      * Generated from protobuf field <code>bool active = 1;</code>
      */
-    private $active = false;
+    protected $active = false;
     /**
-     *&#47; The identity pubkey of the remote node
+     * The identity pubkey of the remote node
      *
      * Generated from protobuf field <code>string remote_pubkey = 2;</code>
      */
-    private $remote_pubkey = '';
+    protected $remote_pubkey = '';
     /**
-     **
      *The outpoint (txid:index) of the funding transaction. With this value, Bob
      *will be able to generate a signature for Alice's version of the commitment
      *transaction.
      *
      * Generated from protobuf field <code>string channel_point = 3;</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
      * Generated from protobuf field <code>uint64 chan_id = 4 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
-     *&#47; The total amount of funds held in this channel
+     * The total amount of funds held in this channel
      *
      * Generated from protobuf field <code>int64 capacity = 5;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
-     *&#47; This node's current balance in this channel
+     * This node's current balance in this channel
      *
      * Generated from protobuf field <code>int64 local_balance = 6;</code>
      */
-    private $local_balance = 0;
+    protected $local_balance = 0;
     /**
-     *&#47; The counterparty's current balance in this channel
+     * The counterparty's current balance in this channel
      *
      * Generated from protobuf field <code>int64 remote_balance = 7;</code>
      */
-    private $remote_balance = 0;
+    protected $remote_balance = 0;
     /**
-     **
      *The amount calculated to be paid in fees for the current set of commitment
      *transactions. The fee amount is persisted with the channel in order to
      *allow the fee amount to be removed and recalculated with each channel state
@@ -70,127 +67,120 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 commit_fee = 8;</code>
      */
-    private $commit_fee = 0;
+    protected $commit_fee = 0;
     /**
-     *&#47; The weight of the commitment transaction
+     * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 9;</code>
      */
-    private $commit_weight = 0;
+    protected $commit_weight = 0;
     /**
-     **
      *The required number of satoshis per kilo-weight that the requester will pay
      *at all times, for both the funding transaction and commitment transaction.
      *This value can later be updated once the channel is open.
      *
      * Generated from protobuf field <code>int64 fee_per_kw = 10;</code>
      */
-    private $fee_per_kw = 0;
+    protected $fee_per_kw = 0;
     /**
-     *&#47; The unsettled balance in this channel
+     * The unsettled balance in this channel
      *
      * Generated from protobuf field <code>int64 unsettled_balance = 11;</code>
      */
-    private $unsettled_balance = 0;
+    protected $unsettled_balance = 0;
     /**
-     **
      *The total number of satoshis we've sent within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_sent = 12;</code>
      */
-    private $total_satoshis_sent = 0;
+    protected $total_satoshis_sent = 0;
     /**
-     **
      *The total number of satoshis we've received within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_received = 13;</code>
      */
-    private $total_satoshis_received = 0;
+    protected $total_satoshis_received = 0;
     /**
-     **
      *The total number of updates conducted within this channel.
      *
      * Generated from protobuf field <code>uint64 num_updates = 14;</code>
      */
-    private $num_updates = 0;
+    protected $num_updates = 0;
     /**
-     **
      *The list of active, uncleared HTLCs currently pending within the channel.
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 15;</code>
      */
     private $pending_htlcs;
     /**
-     **
-     *The CSV delay expressed in relative blocks. If the channel is force closed,
-     *we will need to wait for this many blocks before we can regain our funds.
+     *Deprecated. The CSV delay expressed in relative blocks. If the channel is
+     *force closed, we will need to wait for this many blocks before we can regain
+     *our funds.
      *
-     * Generated from protobuf field <code>uint32 csv_delay = 16;</code>
+     * Generated from protobuf field <code>uint32 csv_delay = 16 [deprecated = true];</code>
      */
-    private $csv_delay = 0;
+    protected $csv_delay = 0;
     /**
-     *&#47; Whether this channel is advertised to the network or not.
+     * Whether this channel is advertised to the network or not.
      *
      * Generated from protobuf field <code>bool private = 17;</code>
      */
-    private $private = false;
+    protected $private = false;
     /**
-     *&#47; True if we were the ones that created the channel.
+     * True if we were the ones that created the channel.
      *
      * Generated from protobuf field <code>bool initiator = 18;</code>
      */
-    private $initiator = false;
+    protected $initiator = false;
     /**
-     *&#47; A set of flags showing the current state of the channel.
+     * A set of flags showing the current state of the channel.
      *
      * Generated from protobuf field <code>string chan_status_flags = 19;</code>
      */
-    private $chan_status_flags = '';
+    protected $chan_status_flags = '';
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its balance.
+     * Deprecated. The minimum satoshis this node is required to reserve in its
+     * balance.
      *
-     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20;</code>
+     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20 [deprecated = true];</code>
      */
-    private $local_chan_reserve_sat = 0;
+    protected $local_chan_reserve_sat = 0;
     /**
-     **
-     *The minimum satoshis the other node is required to reserve in its balance.
+     *Deprecated. The minimum satoshis the other node is required to reserve in
+     *its balance.
      *
-     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21;</code>
+     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21 [deprecated = true];</code>
      */
-    private $remote_chan_reserve_sat = 0;
+    protected $remote_chan_reserve_sat = 0;
     /**
-     *&#47; Deprecated. Use commitment_type.
+     * Deprecated. Use commitment_type.
      *
      * Generated from protobuf field <code>bool static_remote_key = 22 [deprecated = true];</code>
      */
-    private $static_remote_key = false;
+    protected $static_remote_key = false;
     /**
-     *&#47; The commitment type used by this channel.
+     * The commitment type used by this channel.
      *
      * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 26;</code>
      */
-    private $commitment_type = 0;
+    protected $commitment_type = 0;
     /**
-     **
      *The number of seconds that the channel has been monitored by the channel
      *scoring system. Scores are currently not persisted, so this value may be
      *less than the lifetime of the channel [EXPERIMENTAL].
      *
      * Generated from protobuf field <code>int64 lifetime = 23;</code>
      */
-    private $lifetime = 0;
+    protected $lifetime = 0;
     /**
-     **
      *The number of seconds that the remote peer has been observed as being online
      *by the channel scoring system over the lifetime of the channel
      *[EXPERIMENTAL].
      *
      * Generated from protobuf field <code>int64 uptime = 24;</code>
      */
-    private $uptime = 0;
+    protected $uptime = 0;
     /**
-     **
      *Close address is the address that we will enforce payout to on cooperative
      *close if the channel was opened utilizing option upfront shutdown. This
      *value can be set on channel open by setting close_address in an open channel
@@ -199,7 +189,7 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string close_address = 25;</code>
      */
-    private $close_address = '';
+    protected $close_address = '';
     /**
      *The amount that the initiator of the channel optionally pushed to the remote
      *party on channel open. This amount will be zero if the channel initiator did
@@ -209,18 +199,31 @@ class Channel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 push_amount_sat = 27;</code>
      */
-    private $push_amount_sat = 0;
+    protected $push_amount_sat = 0;
     /**
-     **
      *This uint32 indicates if this channel is to be considered 'frozen'. A
      *frozen channel doest not allow a cooperative channel close by the
      *initiator. The thaw_height is the height that this restriction stops
      *applying to the channel. This field is optional, not setting it or using a
-     *value of zero will mean the channel has no additional restrictions.
+     *value of zero will mean the channel has no additional restrictions. The
+     *height can be interpreted in two ways: as a relative height if the value is
+     *less than 500,000, or as an absolute height otherwise.
      *
      * Generated from protobuf field <code>uint32 thaw_height = 28;</code>
      */
-    private $thaw_height = 0;
+    protected $thaw_height = 0;
+    /**
+     * List constraints for the local node.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelConstraints local_constraints = 29;</code>
+     */
+    protected $local_constraints = null;
+    /**
+     * List constraints for the remote node.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelConstraints remote_constraints = 30;</code>
+     */
+    protected $remote_constraints = null;
 
     /**
      * Constructor.
@@ -229,83 +232,73 @@ class Channel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $active
-     *          &#47; Whether this channel is active or not
+     *           Whether this channel is active or not
      *     @type string $remote_pubkey
-     *          &#47; The identity pubkey of the remote node
+     *           The identity pubkey of the remote node
      *     @type string $channel_point
-     *          *
      *          The outpoint (txid:index) of the funding transaction. With this value, Bob
      *          will be able to generate a signature for Alice's version of the commitment
      *          transaction.
      *     @type int|string $chan_id
-     *          *
      *          The unique channel ID for the channel. The first 3 bytes are the block
      *          height, the next 3 the index within the block, and the last 2 bytes are the
      *          output index for the channel.
      *     @type int|string $capacity
-     *          &#47; The total amount of funds held in this channel
+     *           The total amount of funds held in this channel
      *     @type int|string $local_balance
-     *          &#47; This node's current balance in this channel
+     *           This node's current balance in this channel
      *     @type int|string $remote_balance
-     *          &#47; The counterparty's current balance in this channel
+     *           The counterparty's current balance in this channel
      *     @type int|string $commit_fee
-     *          *
      *          The amount calculated to be paid in fees for the current set of commitment
      *          transactions. The fee amount is persisted with the channel in order to
      *          allow the fee amount to be removed and recalculated with each channel state
      *          update, including updates that happen after a system restart.
      *     @type int|string $commit_weight
-     *          &#47; The weight of the commitment transaction
+     *           The weight of the commitment transaction
      *     @type int|string $fee_per_kw
-     *          *
      *          The required number of satoshis per kilo-weight that the requester will pay
      *          at all times, for both the funding transaction and commitment transaction.
      *          This value can later be updated once the channel is open.
      *     @type int|string $unsettled_balance
-     *          &#47; The unsettled balance in this channel
+     *           The unsettled balance in this channel
      *     @type int|string $total_satoshis_sent
-     *          *
      *          The total number of satoshis we've sent within this channel.
      *     @type int|string $total_satoshis_received
-     *          *
      *          The total number of satoshis we've received within this channel.
      *     @type int|string $num_updates
-     *          *
      *          The total number of updates conducted within this channel.
      *     @type \Lnrpc\HTLC[]|\Google\Protobuf\Internal\RepeatedField $pending_htlcs
-     *          *
      *          The list of active, uncleared HTLCs currently pending within the channel.
      *     @type int $csv_delay
-     *          *
-     *          The CSV delay expressed in relative blocks. If the channel is force closed,
-     *          we will need to wait for this many blocks before we can regain our funds.
+     *          Deprecated. The CSV delay expressed in relative blocks. If the channel is
+     *          force closed, we will need to wait for this many blocks before we can regain
+     *          our funds.
      *     @type bool $private
-     *          &#47; Whether this channel is advertised to the network or not.
+     *           Whether this channel is advertised to the network or not.
      *     @type bool $initiator
-     *          &#47; True if we were the ones that created the channel.
+     *           True if we were the ones that created the channel.
      *     @type string $chan_status_flags
-     *          &#47; A set of flags showing the current state of the channel.
+     *           A set of flags showing the current state of the channel.
      *     @type int|string $local_chan_reserve_sat
-     *          &#47; The minimum satoshis this node is required to reserve in its balance.
+     *           Deprecated. The minimum satoshis this node is required to reserve in its
+     *           balance.
      *     @type int|string $remote_chan_reserve_sat
-     *          *
-     *          The minimum satoshis the other node is required to reserve in its balance.
+     *          Deprecated. The minimum satoshis the other node is required to reserve in
+     *          its balance.
      *     @type bool $static_remote_key
-     *          &#47; Deprecated. Use commitment_type.
+     *           Deprecated. Use commitment_type.
      *     @type int $commitment_type
-     *          &#47; The commitment type used by this channel.
+     *           The commitment type used by this channel.
      *     @type int|string $lifetime
-     *          *
      *          The number of seconds that the channel has been monitored by the channel
      *          scoring system. Scores are currently not persisted, so this value may be
      *          less than the lifetime of the channel [EXPERIMENTAL].
      *     @type int|string $uptime
-     *          *
      *          The number of seconds that the remote peer has been observed as being online
      *          by the channel scoring system over the lifetime of the channel
      *          [EXPERIMENTAL].
      *     @type string $close_address
-     *          *
      *          Close address is the address that we will enforce payout to on cooperative
      *          close if the channel was opened utilizing option upfront shutdown. This
      *          value can be set on channel open by setting close_address in an open channel
@@ -318,12 +311,17 @@ class Channel extends \Google\Protobuf\Internal\Message
      *          pushed this amount to our peer, if it is false, the remote peer pushed this
      *          amount to us.
      *     @type int $thaw_height
-     *          *
      *          This uint32 indicates if this channel is to be considered 'frozen'. A
      *          frozen channel doest not allow a cooperative channel close by the
      *          initiator. The thaw_height is the height that this restriction stops
      *          applying to the channel. This field is optional, not setting it or using a
-     *          value of zero will mean the channel has no additional restrictions.
+     *          value of zero will mean the channel has no additional restrictions. The
+     *          height can be interpreted in two ways: as a relative height if the value is
+     *          less than 500,000, or as an absolute height otherwise.
+     *     @type \Lnrpc\ChannelConstraints $local_constraints
+     *           List constraints for the local node.
+     *     @type \Lnrpc\ChannelConstraints $remote_constraints
+     *           List constraints for the remote node.
      * }
      */
     public function __construct($data = NULL) {
@@ -332,7 +330,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether this channel is active or not
+     * Whether this channel is active or not
      *
      * Generated from protobuf field <code>bool active = 1;</code>
      * @return bool
@@ -343,7 +341,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether this channel is active or not
+     * Whether this channel is active or not
      *
      * Generated from protobuf field <code>bool active = 1;</code>
      * @param bool $var
@@ -358,7 +356,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the remote node
+     * The identity pubkey of the remote node
      *
      * Generated from protobuf field <code>string remote_pubkey = 2;</code>
      * @return string
@@ -369,7 +367,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the remote node
+     * The identity pubkey of the remote node
      *
      * Generated from protobuf field <code>string remote_pubkey = 2;</code>
      * @param string $var
@@ -384,7 +382,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The outpoint (txid:index) of the funding transaction. With this value, Bob
      *will be able to generate a signature for Alice's version of the commitment
      *transaction.
@@ -398,7 +395,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The outpoint (txid:index) of the funding transaction. With this value, Bob
      *will be able to generate a signature for Alice's version of the commitment
      *transaction.
@@ -416,7 +412,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -430,7 +425,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -448,7 +442,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of funds held in this channel
+     * The total amount of funds held in this channel
      *
      * Generated from protobuf field <code>int64 capacity = 5;</code>
      * @return int|string
@@ -459,7 +453,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total amount of funds held in this channel
+     * The total amount of funds held in this channel
      *
      * Generated from protobuf field <code>int64 capacity = 5;</code>
      * @param int|string $var
@@ -474,7 +468,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; This node's current balance in this channel
+     * This node's current balance in this channel
      *
      * Generated from protobuf field <code>int64 local_balance = 6;</code>
      * @return int|string
@@ -485,7 +479,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; This node's current balance in this channel
+     * This node's current balance in this channel
      *
      * Generated from protobuf field <code>int64 local_balance = 6;</code>
      * @param int|string $var
@@ -500,7 +494,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The counterparty's current balance in this channel
+     * The counterparty's current balance in this channel
      *
      * Generated from protobuf field <code>int64 remote_balance = 7;</code>
      * @return int|string
@@ -511,7 +505,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The counterparty's current balance in this channel
+     * The counterparty's current balance in this channel
      *
      * Generated from protobuf field <code>int64 remote_balance = 7;</code>
      * @param int|string $var
@@ -526,7 +520,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount calculated to be paid in fees for the current set of commitment
      *transactions. The fee amount is persisted with the channel in order to
      *allow the fee amount to be removed and recalculated with each channel state
@@ -541,7 +534,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount calculated to be paid in fees for the current set of commitment
      *transactions. The fee amount is persisted with the channel in order to
      *allow the fee amount to be removed and recalculated with each channel state
@@ -560,7 +552,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The weight of the commitment transaction
+     * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 9;</code>
      * @return int|string
@@ -571,7 +563,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The weight of the commitment transaction
+     * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 9;</code>
      * @param int|string $var
@@ -586,7 +578,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The required number of satoshis per kilo-weight that the requester will pay
      *at all times, for both the funding transaction and commitment transaction.
      *This value can later be updated once the channel is open.
@@ -600,7 +591,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The required number of satoshis per kilo-weight that the requester will pay
      *at all times, for both the funding transaction and commitment transaction.
      *This value can later be updated once the channel is open.
@@ -618,7 +608,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The unsettled balance in this channel
+     * The unsettled balance in this channel
      *
      * Generated from protobuf field <code>int64 unsettled_balance = 11;</code>
      * @return int|string
@@ -629,7 +619,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The unsettled balance in this channel
+     * The unsettled balance in this channel
      *
      * Generated from protobuf field <code>int64 unsettled_balance = 11;</code>
      * @param int|string $var
@@ -644,7 +634,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The total number of satoshis we've sent within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_sent = 12;</code>
@@ -656,7 +645,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The total number of satoshis we've sent within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_sent = 12;</code>
@@ -672,7 +660,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The total number of satoshis we've received within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_received = 13;</code>
@@ -684,7 +671,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The total number of satoshis we've received within this channel.
      *
      * Generated from protobuf field <code>int64 total_satoshis_received = 13;</code>
@@ -700,7 +686,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The total number of updates conducted within this channel.
      *
      * Generated from protobuf field <code>uint64 num_updates = 14;</code>
@@ -712,7 +697,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The total number of updates conducted within this channel.
      *
      * Generated from protobuf field <code>uint64 num_updates = 14;</code>
@@ -728,7 +712,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The list of active, uncleared HTLCs currently pending within the channel.
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 15;</code>
@@ -740,7 +723,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The list of active, uncleared HTLCs currently pending within the channel.
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLC pending_htlcs = 15;</code>
@@ -756,11 +738,11 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *The CSV delay expressed in relative blocks. If the channel is force closed,
-     *we will need to wait for this many blocks before we can regain our funds.
+     *Deprecated. The CSV delay expressed in relative blocks. If the channel is
+     *force closed, we will need to wait for this many blocks before we can regain
+     *our funds.
      *
-     * Generated from protobuf field <code>uint32 csv_delay = 16;</code>
+     * Generated from protobuf field <code>uint32 csv_delay = 16 [deprecated = true];</code>
      * @return int
      */
     public function getCsvDelay()
@@ -769,11 +751,11 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *The CSV delay expressed in relative blocks. If the channel is force closed,
-     *we will need to wait for this many blocks before we can regain our funds.
+     *Deprecated. The CSV delay expressed in relative blocks. If the channel is
+     *force closed, we will need to wait for this many blocks before we can regain
+     *our funds.
      *
-     * Generated from protobuf field <code>uint32 csv_delay = 16;</code>
+     * Generated from protobuf field <code>uint32 csv_delay = 16 [deprecated = true];</code>
      * @param int $var
      * @return $this
      */
@@ -786,7 +768,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether this channel is advertised to the network or not.
+     * Whether this channel is advertised to the network or not.
      *
      * Generated from protobuf field <code>bool private = 17;</code>
      * @return bool
@@ -797,7 +779,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether this channel is advertised to the network or not.
+     * Whether this channel is advertised to the network or not.
      *
      * Generated from protobuf field <code>bool private = 17;</code>
      * @param bool $var
@@ -812,7 +794,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; True if we were the ones that created the channel.
+     * True if we were the ones that created the channel.
      *
      * Generated from protobuf field <code>bool initiator = 18;</code>
      * @return bool
@@ -823,7 +805,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; True if we were the ones that created the channel.
+     * True if we were the ones that created the channel.
      *
      * Generated from protobuf field <code>bool initiator = 18;</code>
      * @param bool $var
@@ -838,7 +820,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A set of flags showing the current state of the channel.
+     * A set of flags showing the current state of the channel.
      *
      * Generated from protobuf field <code>string chan_status_flags = 19;</code>
      * @return string
@@ -849,7 +831,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A set of flags showing the current state of the channel.
+     * A set of flags showing the current state of the channel.
      *
      * Generated from protobuf field <code>string chan_status_flags = 19;</code>
      * @param string $var
@@ -864,9 +846,10 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its balance.
+     * Deprecated. The minimum satoshis this node is required to reserve in its
+     * balance.
      *
-     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20;</code>
+     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20 [deprecated = true];</code>
      * @return int|string
      */
     public function getLocalChanReserveSat()
@@ -875,9 +858,10 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its balance.
+     * Deprecated. The minimum satoshis this node is required to reserve in its
+     * balance.
      *
-     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20;</code>
+     * Generated from protobuf field <code>int64 local_chan_reserve_sat = 20 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -890,10 +874,10 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *The minimum satoshis the other node is required to reserve in its balance.
+     *Deprecated. The minimum satoshis the other node is required to reserve in
+     *its balance.
      *
-     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21;</code>
+     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21 [deprecated = true];</code>
      * @return int|string
      */
     public function getRemoteChanReserveSat()
@@ -902,10 +886,10 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
-     *The minimum satoshis the other node is required to reserve in its balance.
+     *Deprecated. The minimum satoshis the other node is required to reserve in
+     *its balance.
      *
-     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21;</code>
+     * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 21 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -918,7 +902,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Deprecated. Use commitment_type.
+     * Deprecated. Use commitment_type.
      *
      * Generated from protobuf field <code>bool static_remote_key = 22 [deprecated = true];</code>
      * @return bool
@@ -929,7 +913,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Deprecated. Use commitment_type.
+     * Deprecated. Use commitment_type.
      *
      * Generated from protobuf field <code>bool static_remote_key = 22 [deprecated = true];</code>
      * @param bool $var
@@ -944,7 +928,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The commitment type used by this channel.
+     * The commitment type used by this channel.
      *
      * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 26;</code>
      * @return int
@@ -955,7 +939,7 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The commitment type used by this channel.
+     * The commitment type used by this channel.
      *
      * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 26;</code>
      * @param int $var
@@ -970,7 +954,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of seconds that the channel has been monitored by the channel
      *scoring system. Scores are currently not persisted, so this value may be
      *less than the lifetime of the channel [EXPERIMENTAL].
@@ -984,7 +967,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of seconds that the channel has been monitored by the channel
      *scoring system. Scores are currently not persisted, so this value may be
      *less than the lifetime of the channel [EXPERIMENTAL].
@@ -1002,7 +984,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of seconds that the remote peer has been observed as being online
      *by the channel scoring system over the lifetime of the channel
      *[EXPERIMENTAL].
@@ -1016,7 +997,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of seconds that the remote peer has been observed as being online
      *by the channel scoring system over the lifetime of the channel
      *[EXPERIMENTAL].
@@ -1034,7 +1014,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Close address is the address that we will enforce payout to on cooperative
      *close if the channel was opened utilizing option upfront shutdown. This
      *value can be set on channel open by setting close_address in an open channel
@@ -1050,7 +1029,6 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Close address is the address that we will enforce payout to on cooperative
      *close if the channel was opened utilizing option upfront shutdown. This
      *value can be set on channel open by setting close_address in an open channel
@@ -1104,12 +1082,13 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *This uint32 indicates if this channel is to be considered 'frozen'. A
      *frozen channel doest not allow a cooperative channel close by the
      *initiator. The thaw_height is the height that this restriction stops
      *applying to the channel. This field is optional, not setting it or using a
-     *value of zero will mean the channel has no additional restrictions.
+     *value of zero will mean the channel has no additional restrictions. The
+     *height can be interpreted in two ways: as a relative height if the value is
+     *less than 500,000, or as an absolute height otherwise.
      *
      * Generated from protobuf field <code>uint32 thaw_height = 28;</code>
      * @return int
@@ -1120,12 +1099,13 @@ class Channel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *This uint32 indicates if this channel is to be considered 'frozen'. A
      *frozen channel doest not allow a cooperative channel close by the
      *initiator. The thaw_height is the height that this restriction stops
      *applying to the channel. This field is optional, not setting it or using a
-     *value of zero will mean the channel has no additional restrictions.
+     *value of zero will mean the channel has no additional restrictions. The
+     *height can be interpreted in two ways: as a relative height if the value is
+     *less than 500,000, or as an absolute height otherwise.
      *
      * Generated from protobuf field <code>uint32 thaw_height = 28;</code>
      * @param int $var
@@ -1135,6 +1115,78 @@ class Channel extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->thaw_height = $var;
+
+        return $this;
+    }
+
+    /**
+     * List constraints for the local node.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelConstraints local_constraints = 29;</code>
+     * @return \Lnrpc\ChannelConstraints
+     */
+    public function getLocalConstraints()
+    {
+        return isset($this->local_constraints) ? $this->local_constraints : null;
+    }
+
+    public function hasLocalConstraints()
+    {
+        return isset($this->local_constraints);
+    }
+
+    public function clearLocalConstraints()
+    {
+        unset($this->local_constraints);
+    }
+
+    /**
+     * List constraints for the local node.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelConstraints local_constraints = 29;</code>
+     * @param \Lnrpc\ChannelConstraints $var
+     * @return $this
+     */
+    public function setLocalConstraints($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\ChannelConstraints::class);
+        $this->local_constraints = $var;
+
+        return $this;
+    }
+
+    /**
+     * List constraints for the remote node.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelConstraints remote_constraints = 30;</code>
+     * @return \Lnrpc\ChannelConstraints
+     */
+    public function getRemoteConstraints()
+    {
+        return isset($this->remote_constraints) ? $this->remote_constraints : null;
+    }
+
+    public function hasRemoteConstraints()
+    {
+        return isset($this->remote_constraints);
+    }
+
+    public function clearRemoteConstraints()
+    {
+        unset($this->remote_constraints);
+    }
+
+    /**
+     * List constraints for the remote node.
+     *
+     * Generated from protobuf field <code>.lnrpc.ChannelConstraints remote_constraints = 30;</code>
+     * @param \Lnrpc\ChannelConstraints $var
+     * @return $this
+     */
+    public function setRemoteConstraints($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\ChannelConstraints::class);
+        $this->remote_constraints = $var;
 
         return $this;
     }

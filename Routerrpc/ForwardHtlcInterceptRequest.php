@@ -19,26 +19,26 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.CircuitKey incoming_circuit_key = 1;</code>
      */
-    private $incoming_circuit_key = null;
+    protected $incoming_circuit_key = null;
     /**
      * The incoming htlc amount.
      *
      * Generated from protobuf field <code>uint64 incoming_amount_msat = 5;</code>
      */
-    private $incoming_amount_msat = 0;
+    protected $incoming_amount_msat = 0;
     /**
      * The incoming htlc expiry.
      *
      * Generated from protobuf field <code>uint32 incoming_expiry = 6;</code>
      */
-    private $incoming_expiry = 0;
+    protected $incoming_expiry = 0;
     /**
      *The htlc payment hash. This value is not guaranteed to be unique per
      *request.
      *
      * Generated from protobuf field <code>bytes payment_hash = 2;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      * The requested outgoing channel id for this forwarded htlc. Because of
      * non-strict forwarding, this isn't necessarily the channel over which the
@@ -47,19 +47,19 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 outgoing_requested_chan_id = 7;</code>
      */
-    private $outgoing_requested_chan_id = 0;
+    protected $outgoing_requested_chan_id = 0;
     /**
      * The outgoing htlc amount.
      *
      * Generated from protobuf field <code>uint64 outgoing_amount_msat = 3;</code>
      */
-    private $outgoing_amount_msat = 0;
+    protected $outgoing_amount_msat = 0;
     /**
      * The outgoing htlc expiry.
      *
      * Generated from protobuf field <code>uint32 outgoing_expiry = 4;</code>
      */
-    private $outgoing_expiry = 0;
+    protected $outgoing_expiry = 0;
     /**
      * Any custom records that were present in the payload.
      *
@@ -110,7 +110,17 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      */
     public function getIncomingCircuitKey()
     {
-        return $this->incoming_circuit_key;
+        return isset($this->incoming_circuit_key) ? $this->incoming_circuit_key : null;
+    }
+
+    public function hasIncomingCircuitKey()
+    {
+        return isset($this->incoming_circuit_key);
+    }
+
+    public function clearIncomingCircuitKey()
+    {
+        unset($this->incoming_circuit_key);
     }
 
     /**

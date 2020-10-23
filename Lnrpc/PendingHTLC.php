@@ -14,44 +14,43 @@ use Google\Protobuf\Internal\GPBUtil;
 class PendingHTLC extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The direction within the channel that the htlc was sent
+     * The direction within the channel that the htlc was sent
      *
      * Generated from protobuf field <code>bool incoming = 1;</code>
      */
-    private $incoming = false;
+    protected $incoming = false;
     /**
-     *&#47; The total value of the htlc
+     * The total value of the htlc
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    private $amount = 0;
+    protected $amount = 0;
     /**
-     *&#47; The final output to be swept back to the user's wallet
+     * The final output to be swept back to the user's wallet
      *
      * Generated from protobuf field <code>string outpoint = 3;</code>
      */
-    private $outpoint = '';
+    protected $outpoint = '';
     /**
-     *&#47; The next block height at which we can spend the current stage
+     * The next block height at which we can spend the current stage
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      */
-    private $maturity_height = 0;
+    protected $maturity_height = 0;
     /**
-     **
      *The number of blocks remaining until the current stage can be swept.
      *Negative values indicate how many blocks have passed since becoming
      *mature.
      *
      * Generated from protobuf field <code>int32 blocks_til_maturity = 5;</code>
      */
-    private $blocks_til_maturity = 0;
+    protected $blocks_til_maturity = 0;
     /**
-     *&#47; Indicates whether the htlc is in its first or second stage of recovery
+     * Indicates whether the htlc is in its first or second stage of recovery
      *
      * Generated from protobuf field <code>uint32 stage = 6;</code>
      */
-    private $stage = 0;
+    protected $stage = 0;
 
     /**
      * Constructor.
@@ -60,20 +59,19 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $incoming
-     *          &#47; The direction within the channel that the htlc was sent
+     *           The direction within the channel that the htlc was sent
      *     @type int|string $amount
-     *          &#47; The total value of the htlc
+     *           The total value of the htlc
      *     @type string $outpoint
-     *          &#47; The final output to be swept back to the user's wallet
+     *           The final output to be swept back to the user's wallet
      *     @type int $maturity_height
-     *          &#47; The next block height at which we can spend the current stage
+     *           The next block height at which we can spend the current stage
      *     @type int $blocks_til_maturity
-     *          *
      *          The number of blocks remaining until the current stage can be swept.
      *          Negative values indicate how many blocks have passed since becoming
      *          mature.
      *     @type int $stage
-     *          &#47; Indicates whether the htlc is in its first or second stage of recovery
+     *           Indicates whether the htlc is in its first or second stage of recovery
      * }
      */
     public function __construct($data = NULL) {
@@ -82,7 +80,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The direction within the channel that the htlc was sent
+     * The direction within the channel that the htlc was sent
      *
      * Generated from protobuf field <code>bool incoming = 1;</code>
      * @return bool
@@ -93,7 +91,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The direction within the channel that the htlc was sent
+     * The direction within the channel that the htlc was sent
      *
      * Generated from protobuf field <code>bool incoming = 1;</code>
      * @param bool $var
@@ -108,7 +106,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total value of the htlc
+     * The total value of the htlc
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      * @return int|string
@@ -119,7 +117,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total value of the htlc
+     * The total value of the htlc
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      * @param int|string $var
@@ -134,7 +132,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The final output to be swept back to the user's wallet
+     * The final output to be swept back to the user's wallet
      *
      * Generated from protobuf field <code>string outpoint = 3;</code>
      * @return string
@@ -145,7 +143,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The final output to be swept back to the user's wallet
+     * The final output to be swept back to the user's wallet
      *
      * Generated from protobuf field <code>string outpoint = 3;</code>
      * @param string $var
@@ -160,7 +158,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The next block height at which we can spend the current stage
+     * The next block height at which we can spend the current stage
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      * @return int
@@ -171,7 +169,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The next block height at which we can spend the current stage
+     * The next block height at which we can spend the current stage
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      * @param int $var
@@ -186,7 +184,6 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of blocks remaining until the current stage can be swept.
      *Negative values indicate how many blocks have passed since becoming
      *mature.
@@ -200,7 +197,6 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of blocks remaining until the current stage can be swept.
      *Negative values indicate how many blocks have passed since becoming
      *mature.
@@ -218,7 +214,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Indicates whether the htlc is in its first or second stage of recovery
+     * Indicates whether the htlc is in its first or second stage of recovery
      *
      * Generated from protobuf field <code>uint32 stage = 6;</code>
      * @return int
@@ -229,7 +225,7 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Indicates whether the htlc is in its first or second stage of recovery
+     * Indicates whether the htlc is in its first or second stage of recovery
      *
      * Generated from protobuf field <code>uint32 stage = 6;</code>
      * @param int $var

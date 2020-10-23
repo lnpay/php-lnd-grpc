@@ -18,15 +18,14 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes ephemeral_pubkey = 1;</code>
      */
-    private $ephemeral_pubkey = '';
+    protected $ephemeral_pubkey = '';
     /**
-     **
      *The optional key locator of the local key that should be used. If this
      *parameter is not set then the node's identity private key will be used.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      */
-    private $key_loc = null;
+    protected $key_loc = null;
 
     /**
      * Constructor.
@@ -37,7 +36,6 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *     @type string $ephemeral_pubkey
      *           The ephemeral public key to use for the DH key derivation.
      *     @type \Signrpc\KeyLocator $key_loc
-     *          *
      *          The optional key locator of the local key that should be used. If this
      *          parameter is not set then the node's identity private key will be used.
      * }
@@ -74,7 +72,6 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The optional key locator of the local key that should be used. If this
      *parameter is not set then the node's identity private key will be used.
      *
@@ -83,11 +80,20 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      */
     public function getKeyLoc()
     {
-        return $this->key_loc;
+        return isset($this->key_loc) ? $this->key_loc : null;
+    }
+
+    public function hasKeyLoc()
+    {
+        return isset($this->key_loc);
+    }
+
+    public function clearKeyLoc()
+    {
+        unset($this->key_loc);
     }
 
     /**
-     **
      *The optional key locator of the local key that should be used. If this
      *parameter is not set then the node's identity private key will be used.
      *

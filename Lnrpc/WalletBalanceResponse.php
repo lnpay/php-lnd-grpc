@@ -14,23 +14,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The balance of the wallet
+     * The balance of the wallet
      *
      * Generated from protobuf field <code>int64 total_balance = 1;</code>
      */
-    private $total_balance = 0;
+    protected $total_balance = 0;
     /**
-     *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
+     * The confirmed balance of a wallet(with >= 1 confirmations)
      *
      * Generated from protobuf field <code>int64 confirmed_balance = 2;</code>
      */
-    private $confirmed_balance = 0;
+    protected $confirmed_balance = 0;
     /**
-     *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
+     * The unconfirmed balance of a wallet(with 0 confirmations)
      *
      * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      */
-    private $unconfirmed_balance = 0;
+    protected $unconfirmed_balance = 0;
 
     /**
      * Constructor.
@@ -39,11 +39,11 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $total_balance
-     *          &#47; The balance of the wallet
+     *           The balance of the wallet
      *     @type int|string $confirmed_balance
-     *          &#47; The confirmed balance of a wallet(with >= 1 confirmations)
+     *           The confirmed balance of a wallet(with >= 1 confirmations)
      *     @type int|string $unconfirmed_balance
-     *          &#47; The unconfirmed balance of a wallet(with 0 confirmations)
+     *           The unconfirmed balance of a wallet(with 0 confirmations)
      * }
      */
     public function __construct($data = NULL) {
@@ -52,7 +52,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The balance of the wallet
+     * The balance of the wallet
      *
      * Generated from protobuf field <code>int64 total_balance = 1;</code>
      * @return int|string
@@ -63,7 +63,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The balance of the wallet
+     * The balance of the wallet
      *
      * Generated from protobuf field <code>int64 total_balance = 1;</code>
      * @param int|string $var
@@ -78,7 +78,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
+     * The confirmed balance of a wallet(with >= 1 confirmations)
      *
      * Generated from protobuf field <code>int64 confirmed_balance = 2;</code>
      * @return int|string
@@ -89,7 +89,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The confirmed balance of a wallet(with >= 1 confirmations)
+     * The confirmed balance of a wallet(with >= 1 confirmations)
      *
      * Generated from protobuf field <code>int64 confirmed_balance = 2;</code>
      * @param int|string $var
@@ -104,7 +104,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
+     * The unconfirmed balance of a wallet(with 0 confirmations)
      *
      * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      * @return int|string
@@ -115,7 +115,7 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The unconfirmed balance of a wallet(with 0 confirmations)
+     * The unconfirmed balance of a wallet(with 0 confirmations)
      *
      * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      * @param int|string $var

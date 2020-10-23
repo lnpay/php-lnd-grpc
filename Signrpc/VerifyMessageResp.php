@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class VerifyMessageResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Whether the signature was valid over the given message.
+     * Whether the signature was valid over the given message.
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      */
-    private $valid = false;
+    protected $valid = false;
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class VerifyMessageResp extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $valid
-     *          &#47; Whether the signature was valid over the given message.
+     *           Whether the signature was valid over the given message.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class VerifyMessageResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether the signature was valid over the given message.
+     * Whether the signature was valid over the given message.
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      * @return bool
@@ -47,7 +47,7 @@ class VerifyMessageResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Whether the signature was valid over the given message.
+     * Whether the signature was valid over the given message.
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      * @param bool $var

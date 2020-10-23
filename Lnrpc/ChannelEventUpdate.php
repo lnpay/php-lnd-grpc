@@ -16,7 +16,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelEventUpdate.UpdateType type = 5;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     protected $channel;
 
     /**
@@ -47,6 +47,11 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
+    public function hasOpenChannel()
+    {
+        return $this->hasOneof(1);
+    }
+
     /**
      * Generated from protobuf field <code>.lnrpc.Channel open_channel = 1;</code>
      * @param \Lnrpc\Channel $var
@@ -67,6 +72,11 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     public function getClosedChannel()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasClosedChannel()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -91,6 +101,11 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
         return $this->readOneof(3);
     }
 
+    public function hasActiveChannel()
+    {
+        return $this->hasOneof(3);
+    }
+
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint active_channel = 3;</code>
      * @param \Lnrpc\ChannelPoint $var
@@ -113,6 +128,11 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
         return $this->readOneof(4);
     }
 
+    public function hasInactiveChannel()
+    {
+        return $this->hasOneof(4);
+    }
+
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint inactive_channel = 4;</code>
      * @param \Lnrpc\ChannelPoint $var
@@ -133,6 +153,11 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
     public function getPendingOpenChannel()
     {
         return $this->readOneof(6);
+    }
+
+    public function hasPendingOpenChannel()
+    {
+        return $this->hasOneof(6);
     }
 
     /**
@@ -164,7 +189,7 @@ class ChannelEventUpdate extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\ChannelEventUpdate_UpdateType::class);
+        GPBUtil::checkEnum($var, \Lnrpc\ChannelEventUpdate\UpdateType::class);
         $this->type = $var;
 
         return $this;

@@ -14,7 +14,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *If true, then return payments that have not yet fully completed. This means
      *that pending payments, as well as failed payments will show up if this
      *field is set to true. This flag doesn't change the meaning of the indices,
@@ -22,9 +21,8 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool include_incomplete = 1;</code>
      */
-    private $include_incomplete = false;
+    protected $include_incomplete = false;
     /**
-     **
      *The index of a payment that will be used as either the start or end of a
      *query to determine which payments should be returned in the response. The
      *index_offset is exclusive. In the case of a zero index_offset, the query
@@ -33,22 +31,21 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 index_offset = 2;</code>
      */
-    private $index_offset = 0;
+    protected $index_offset = 0;
     /**
-     *&#47; The maximal number of payments returned in the response to this query.
+     * The maximal number of payments returned in the response to this query.
      *
      * Generated from protobuf field <code>uint64 max_payments = 3;</code>
      */
-    private $max_payments = 0;
+    protected $max_payments = 0;
     /**
-     **
      *If set, the payments returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards. The order
      *of the returned payments is always oldest first (ascending index order).
      *
      * Generated from protobuf field <code>bool reversed = 4;</code>
      */
-    private $reversed = false;
+    protected $reversed = false;
 
     /**
      * Constructor.
@@ -57,22 +54,19 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $include_incomplete
-     *          *
      *          If true, then return payments that have not yet fully completed. This means
      *          that pending payments, as well as failed payments will show up if this
      *          field is set to true. This flag doesn't change the meaning of the indices,
      *          which are tied to individual payments.
      *     @type int|string $index_offset
-     *          *
      *          The index of a payment that will be used as either the start or end of a
      *          query to determine which payments should be returned in the response. The
      *          index_offset is exclusive. In the case of a zero index_offset, the query
      *          will start with the oldest payment when paginating forwards, or will end
      *          with the most recent payment when paginating backwards.
      *     @type int|string $max_payments
-     *          &#47; The maximal number of payments returned in the response to this query.
+     *           The maximal number of payments returned in the response to this query.
      *     @type bool $reversed
-     *          *
      *          If set, the payments returned will result from seeking backwards from the
      *          specified index offset. This can be used to paginate backwards. The order
      *          of the returned payments is always oldest first (ascending index order).
@@ -84,7 +78,6 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If true, then return payments that have not yet fully completed. This means
      *that pending payments, as well as failed payments will show up if this
      *field is set to true. This flag doesn't change the meaning of the indices,
@@ -99,7 +92,6 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If true, then return payments that have not yet fully completed. This means
      *that pending payments, as well as failed payments will show up if this
      *field is set to true. This flag doesn't change the meaning of the indices,
@@ -118,7 +110,6 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The index of a payment that will be used as either the start or end of a
      *query to determine which payments should be returned in the response. The
      *index_offset is exclusive. In the case of a zero index_offset, the query
@@ -134,7 +125,6 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The index of a payment that will be used as either the start or end of a
      *query to determine which payments should be returned in the response. The
      *index_offset is exclusive. In the case of a zero index_offset, the query
@@ -154,7 +144,7 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The maximal number of payments returned in the response to this query.
+     * The maximal number of payments returned in the response to this query.
      *
      * Generated from protobuf field <code>uint64 max_payments = 3;</code>
      * @return int|string
@@ -165,7 +155,7 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The maximal number of payments returned in the response to this query.
+     * The maximal number of payments returned in the response to this query.
      *
      * Generated from protobuf field <code>uint64 max_payments = 3;</code>
      * @param int|string $var
@@ -180,7 +170,6 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set, the payments returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards. The order
      *of the returned payments is always oldest first (ascending index order).
@@ -194,7 +183,6 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set, the payments returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards. The order
      *of the returned payments is always oldest first (ascending index order).

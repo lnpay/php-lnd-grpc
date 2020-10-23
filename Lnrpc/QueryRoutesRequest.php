@@ -14,29 +14,26 @@ use Google\Protobuf\Internal\GPBUtil;
 class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The 33-byte hex-encoded public key for the payment destination
+     * The 33-byte hex-encoded public key for the payment destination
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
-     **
      *The amount to send expressed in satoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
-    private $amt = 0;
+    protected $amt = 0;
     /**
-     **
      *The amount to send expressed in millisatoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt_msat = 12;</code>
      */
-    private $amt_msat = 0;
+    protected $amt_msat = 0;
     /**
-     **
      *An optional CLTV delta from the current height that should be used for the
      *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
      *not add any additional block padding on top of final_ctlv_delta. This
@@ -45,9 +42,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      */
-    private $final_cltv_delta = 0;
+    protected $final_cltv_delta = 0;
     /**
-     **
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *This value can be represented either as a percentage of the amount being
      *sent, or as a fixed amount of the maximum fee the user is willing the pay to
@@ -55,9 +51,8 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
      */
-    private $fee_limit = null;
+    protected $fee_limit = null;
     /**
-     **
      *A list of nodes to ignore during path finding. When using REST, these fields
      *must be encoded as base64.
      *
@@ -65,46 +60,40 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      */
     private $ignored_nodes;
     /**
-     **
      *Deprecated. A list of edges to ignore during path finding.
      *
      * Generated from protobuf field <code>repeated .lnrpc.EdgeLocator ignored_edges = 7 [deprecated = true];</code>
      */
     private $ignored_edges;
     /**
-     **
      *The source node where the request route should originated from. If empty,
      *self is assumed.
      *
      * Generated from protobuf field <code>string source_pub_key = 8;</code>
      */
-    private $source_pub_key = '';
+    protected $source_pub_key = '';
     /**
-     **
      *If set to true, edge probabilities from mission control will be used to get
      *the optimal route.
      *
      * Generated from protobuf field <code>bool use_mission_control = 9;</code>
      */
-    private $use_mission_control = false;
+    protected $use_mission_control = false;
     /**
-     **
      *A list of directed node pairs that will be ignored during path finding.
      *
      * Generated from protobuf field <code>repeated .lnrpc.NodePair ignored_pairs = 10;</code>
      */
     private $ignored_pairs;
     /**
-     **
      *An optional maximum total time lock for the route. If the source is empty or
      *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *zero, then the value of `--max-cltv-expiry` is used as the limit.
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
      */
-    private $cltv_limit = 0;
+    protected $cltv_limit = 0;
     /**
-     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. If the destination
@@ -116,29 +105,25 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      */
     private $dest_custom_records;
     /**
-     **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 14 [jstype = JS_STRING];</code>
      */
-    private $outgoing_chan_id = 0;
+    protected $outgoing_chan_id = 0;
     /**
-     **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
      */
-    private $last_hop_pubkey = '';
+    protected $last_hop_pubkey = '';
     /**
-     **
      *Optional route hints to reach the destination through private channels.
      *
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 16;</code>
      */
     private $route_hints;
     /**
-     **
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
@@ -156,53 +141,42 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *          &#47; The 33-byte hex-encoded public key for the payment destination
+     *           The 33-byte hex-encoded public key for the payment destination
      *     @type int|string $amt
-     *          *
      *          The amount to send expressed in satoshis.
      *          The fields amt and amt_msat are mutually exclusive.
      *     @type int|string $amt_msat
-     *          *
      *          The amount to send expressed in millisatoshis.
      *          The fields amt and amt_msat are mutually exclusive.
      *     @type int $final_cltv_delta
-     *          *
      *          An optional CLTV delta from the current height that should be used for the
      *          timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
      *          not add any additional block padding on top of final_ctlv_delta. This
      *          padding of a few blocks needs to be added manually or otherwise failures may
      *          happen when a block comes in while the payment is in flight.
      *     @type \Lnrpc\FeeLimit $fee_limit
-     *          *
      *          The maximum number of satoshis that will be paid as a fee of the payment.
      *          This value can be represented either as a percentage of the amount being
      *          sent, or as a fixed amount of the maximum fee the user is willing the pay to
      *          send the payment.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ignored_nodes
-     *          *
      *          A list of nodes to ignore during path finding. When using REST, these fields
      *          must be encoded as base64.
      *     @type \Lnrpc\EdgeLocator[]|\Google\Protobuf\Internal\RepeatedField $ignored_edges
-     *          *
      *          Deprecated. A list of edges to ignore during path finding.
      *     @type string $source_pub_key
-     *          *
      *          The source node where the request route should originated from. If empty,
      *          self is assumed.
      *     @type bool $use_mission_control
-     *          *
      *          If set to true, edge probabilities from mission control will be used to get
      *          the optimal route.
      *     @type \Lnrpc\NodePair[]|\Google\Protobuf\Internal\RepeatedField $ignored_pairs
-     *          *
      *          A list of directed node pairs that will be ignored during path finding.
      *     @type int $cltv_limit
-     *          *
      *          An optional maximum total time lock for the route. If the source is empty or
      *          ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *          zero, then the value of `--max-cltv-expiry` is used as the limit.
      *     @type array|\Google\Protobuf\Internal\MapField $dest_custom_records
-     *          *
      *          An optional field that can be used to pass an arbitrary set of TLV records
      *          to a peer which understands the new records. This can be used to pass
      *          application specific data during the payment attempt. If the destination
@@ -210,17 +184,13 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *          Record types are required to be in the custom range >= 65536. When using
      *          REST, the values must be encoded as base64.
      *     @type int|string $outgoing_chan_id
-     *          *
      *          The channel id of the channel that must be taken to the first hop. If zero,
      *          any channel may be used.
      *     @type string $last_hop_pubkey
-     *          *
      *          The pubkey of the last hop of the route. If empty, any hop may be used.
      *     @type \Lnrpc\RouteHint[]|\Google\Protobuf\Internal\RepeatedField $route_hints
-     *          *
      *          Optional route hints to reach the destination through private channels.
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $dest_features
-     *          *
      *          Features assumed to be supported by the final node. All transitive feature
      *          dependencies must also be set properly. For a given feature bit pair, either
      *          optional or remote may be set, but not both. If this field is nil or empty,
@@ -234,7 +204,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The 33-byte hex-encoded public key for the payment destination
+     * The 33-byte hex-encoded public key for the payment destination
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -245,7 +215,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The 33-byte hex-encoded public key for the payment destination
+     * The 33-byte hex-encoded public key for the payment destination
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
@@ -260,7 +230,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount to send expressed in satoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -273,7 +242,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount to send expressed in satoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -290,7 +258,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount to send expressed in millisatoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -303,7 +270,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount to send expressed in millisatoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
@@ -320,7 +286,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional CLTV delta from the current height that should be used for the
      *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
      *not add any additional block padding on top of final_ctlv_delta. This
@@ -336,7 +301,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional CLTV delta from the current height that should be used for the
      *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
      *not add any additional block padding on top of final_ctlv_delta. This
@@ -356,7 +320,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *This value can be represented either as a percentage of the amount being
      *sent, or as a fixed amount of the maximum fee the user is willing the pay to
@@ -367,11 +330,20 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFeeLimit()
     {
-        return $this->fee_limit;
+        return isset($this->fee_limit) ? $this->fee_limit : null;
+    }
+
+    public function hasFeeLimit()
+    {
+        return isset($this->fee_limit);
+    }
+
+    public function clearFeeLimit()
+    {
+        unset($this->fee_limit);
     }
 
     /**
-     **
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *This value can be represented either as a percentage of the amount being
      *sent, or as a fixed amount of the maximum fee the user is willing the pay to
@@ -390,7 +362,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of nodes to ignore during path finding. When using REST, these fields
      *must be encoded as base64.
      *
@@ -403,7 +374,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of nodes to ignore during path finding. When using REST, these fields
      *must be encoded as base64.
      *
@@ -420,7 +390,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Deprecated. A list of edges to ignore during path finding.
      *
      * Generated from protobuf field <code>repeated .lnrpc.EdgeLocator ignored_edges = 7 [deprecated = true];</code>
@@ -432,7 +401,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Deprecated. A list of edges to ignore during path finding.
      *
      * Generated from protobuf field <code>repeated .lnrpc.EdgeLocator ignored_edges = 7 [deprecated = true];</code>
@@ -448,7 +416,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The source node where the request route should originated from. If empty,
      *self is assumed.
      *
@@ -461,7 +428,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The source node where the request route should originated from. If empty,
      *self is assumed.
      *
@@ -478,7 +444,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set to true, edge probabilities from mission control will be used to get
      *the optimal route.
      *
@@ -491,7 +456,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If set to true, edge probabilities from mission control will be used to get
      *the optimal route.
      *
@@ -508,7 +472,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of directed node pairs that will be ignored during path finding.
      *
      * Generated from protobuf field <code>repeated .lnrpc.NodePair ignored_pairs = 10;</code>
@@ -520,7 +483,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A list of directed node pairs that will be ignored during path finding.
      *
      * Generated from protobuf field <code>repeated .lnrpc.NodePair ignored_pairs = 10;</code>
@@ -536,7 +498,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional maximum total time lock for the route. If the source is empty or
      *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *zero, then the value of `--max-cltv-expiry` is used as the limit.
@@ -550,7 +511,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional maximum total time lock for the route. If the source is empty or
      *ourselves, this should not exceed lnd's `--max-cltv-expiry` setting. If
      *zero, then the value of `--max-cltv-expiry` is used as the limit.
@@ -568,7 +528,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. If the destination
@@ -585,7 +544,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
      *application specific data during the payment attempt. If the destination
@@ -606,7 +564,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
@@ -619,7 +576,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
@@ -636,7 +592,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
@@ -648,7 +603,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
@@ -664,7 +618,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Optional route hints to reach the destination through private channels.
      *
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 16;</code>
@@ -676,7 +629,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Optional route hints to reach the destination through private channels.
      *
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 16;</code>
@@ -692,7 +644,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,
@@ -708,7 +659,6 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
      *optional or remote may be set, but not both. If this field is nil or empty,

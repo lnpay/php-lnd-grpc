@@ -4,6 +4,8 @@
 namespace Chainrpc;
 
 /**
+ * ChainNotifier is a service that can be used to get information about the
+ * chain backend by registering notifiers for chain events.
  */
 class ChainNotifierClient extends \Grpc\BaseStub {
 

@@ -14,23 +14,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class OutPoint extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Raw bytes representing the transaction id.
+     * Raw bytes representing the transaction id.
      *
      * Generated from protobuf field <code>bytes txid_bytes = 1;</code>
      */
-    private $txid_bytes = '';
+    protected $txid_bytes = '';
     /**
-     *&#47; Reversed, hex-encoded string representing the transaction id.
+     * Reversed, hex-encoded string representing the transaction id.
      *
      * Generated from protobuf field <code>string txid_str = 2;</code>
      */
-    private $txid_str = '';
+    protected $txid_str = '';
     /**
-     *&#47; The index of the output on the transaction.
+     * The index of the output on the transaction.
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      */
-    private $output_index = 0;
+    protected $output_index = 0;
 
     /**
      * Constructor.
@@ -39,11 +39,11 @@ class OutPoint extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $txid_bytes
-     *          &#47; Raw bytes representing the transaction id.
+     *           Raw bytes representing the transaction id.
      *     @type string $txid_str
-     *          &#47; Reversed, hex-encoded string representing the transaction id.
+     *           Reversed, hex-encoded string representing the transaction id.
      *     @type int $output_index
-     *          &#47; The index of the output on the transaction.
+     *           The index of the output on the transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -52,7 +52,7 @@ class OutPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Raw bytes representing the transaction id.
+     * Raw bytes representing the transaction id.
      *
      * Generated from protobuf field <code>bytes txid_bytes = 1;</code>
      * @return string
@@ -63,7 +63,7 @@ class OutPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Raw bytes representing the transaction id.
+     * Raw bytes representing the transaction id.
      *
      * Generated from protobuf field <code>bytes txid_bytes = 1;</code>
      * @param string $var
@@ -78,7 +78,7 @@ class OutPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Reversed, hex-encoded string representing the transaction id.
+     * Reversed, hex-encoded string representing the transaction id.
      *
      * Generated from protobuf field <code>string txid_str = 2;</code>
      * @return string
@@ -89,7 +89,7 @@ class OutPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Reversed, hex-encoded string representing the transaction id.
+     * Reversed, hex-encoded string representing the transaction id.
      *
      * Generated from protobuf field <code>string txid_str = 2;</code>
      * @param string $var
@@ -104,7 +104,7 @@ class OutPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The index of the output on the transaction.
+     * The index of the output on the transaction.
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      * @return int
@@ -115,7 +115,7 @@ class OutPoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The index of the output on the transaction.
+     * The index of the output on the transaction.
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      * @param int $var

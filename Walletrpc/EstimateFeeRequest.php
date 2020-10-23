@@ -14,12 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The number of confirmations to shoot for when estimating the fee.
      *
      * Generated from protobuf field <code>int32 conf_target = 1;</code>
      */
-    private $conf_target = 0;
+    protected $conf_target = 0;
 
     /**
      * Constructor.
@@ -28,7 +27,6 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $conf_target
-     *          *
      *          The number of confirmations to shoot for when estimating the fee.
      * }
      */
@@ -38,7 +36,6 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of confirmations to shoot for when estimating the fee.
      *
      * Generated from protobuf field <code>int32 conf_target = 1;</code>
@@ -50,7 +47,6 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of confirmations to shoot for when estimating the fee.
      *
      * Generated from protobuf field <code>int32 conf_target = 1;</code>

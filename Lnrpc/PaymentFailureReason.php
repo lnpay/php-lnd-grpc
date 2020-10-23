@@ -12,21 +12,18 @@ use UnexpectedValueException;
 class PaymentFailureReason
 {
     /**
-     **
      *Payment isn't failed (yet).
      *
      * Generated from protobuf enum <code>FAILURE_REASON_NONE = 0;</code>
      */
     const FAILURE_REASON_NONE = 0;
     /**
-     **
      *There are more routes to try, but the payment timeout was exceeded.
      *
      * Generated from protobuf enum <code>FAILURE_REASON_TIMEOUT = 1;</code>
      */
     const FAILURE_REASON_TIMEOUT = 1;
     /**
-     **
      *All possible routes were tried and failed permanently. Or were no
      *routes to the destination at all.
      *
@@ -34,14 +31,12 @@ class PaymentFailureReason
      */
     const FAILURE_REASON_NO_ROUTE = 2;
     /**
-     **
      *A non-recoverable error has occured.
      *
      * Generated from protobuf enum <code>FAILURE_REASON_ERROR = 3;</code>
      */
     const FAILURE_REASON_ERROR = 3;
     /**
-     **
      *Payment details incorrect (unknown hash, invalid amt or
      *invalid final cltv delta)
      *
@@ -49,7 +44,6 @@ class PaymentFailureReason
      */
     const FAILURE_REASON_INCORRECT_PAYMENT_DETAILS = 4;
     /**
-     **
      *Insufficient local balance.
      *
      * Generated from protobuf enum <code>FAILURE_REASON_INSUFFICIENT_BALANCE = 5;</code>

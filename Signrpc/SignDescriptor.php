@@ -14,16 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *A descriptor that precisely describes *which* key to use for signing. This
      *may provide the raw public key directly, or require the Signer to re-derive
      *the key according to the populated derivation path.
+     *Note that if the key descriptor was obtained through walletrpc.DeriveKey,
+     *then the key locator MUST always be provided, since the derived keys are not
+     *persisted unlike with DeriveNextKey.
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 1;</code>
      */
-    private $key_desc = null;
+    protected $key_desc = null;
     /**
-     **
      *A scalar value that will be added to the private key corresponding to the
      *above public key to obtain the private key to be used to sign this input.
      *This value is typically derived via the following computation:
@@ -31,9 +32,8 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes single_tweak = 2;</code>
      */
-    private $single_tweak = '';
+    protected $single_tweak = '';
     /**
-     **
      *A private key that will be used in combination with its corresponding
      *private key to derive the private key that is to be used to sign the target
      *input. Within the Lightning protocol, this value is typically the
@@ -45,38 +45,34 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes double_tweak = 3;</code>
      */
-    private $double_tweak = '';
+    protected $double_tweak = '';
     /**
-     **
      *The full script required to properly redeem the output.  This field will
      *only be populated if a p2wsh or a p2sh output is being signed.
      *
      * Generated from protobuf field <code>bytes witness_script = 4;</code>
      */
-    private $witness_script = '';
+    protected $witness_script = '';
     /**
-     **
      *A description of the output being spent. The value and script MUST be
      *provided.
      *
      * Generated from protobuf field <code>.signrpc.TxOut output = 5;</code>
      */
-    private $output = null;
+    protected $output = null;
     /**
-     **
      *The target sighash type that should be used when generating the final
      *sighash, and signature.
      *
      * Generated from protobuf field <code>uint32 sighash = 7;</code>
      */
-    private $sighash = 0;
+    protected $sighash = 0;
     /**
-     **
      *The target input within the transaction that should be signed.
      *
      * Generated from protobuf field <code>int32 input_index = 8;</code>
      */
-    private $input_index = 0;
+    protected $input_index = 0;
 
     /**
      * Constructor.
@@ -85,18 +81,18 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Signrpc\KeyDescriptor $key_desc
-     *          *
      *          A descriptor that precisely describes *which* key to use for signing. This
      *          may provide the raw public key directly, or require the Signer to re-derive
      *          the key according to the populated derivation path.
+     *          Note that if the key descriptor was obtained through walletrpc.DeriveKey,
+     *          then the key locator MUST always be provided, since the derived keys are not
+     *          persisted unlike with DeriveNextKey.
      *     @type string $single_tweak
-     *          *
      *          A scalar value that will be added to the private key corresponding to the
      *          above public key to obtain the private key to be used to sign this input.
      *          This value is typically derived via the following computation:
      *           derivedKey = privkey + sha256(perCommitmentPoint || pubKey) mod N
      *     @type string $double_tweak
-     *          *
      *          A private key that will be used in combination with its corresponding
      *          private key to derive the private key that is to be used to sign the target
      *          input. Within the Lightning protocol, this value is typically the
@@ -106,19 +102,15 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *           k = (privKey*sha256(pubKey || tweakPub) +
      *          tweakPriv*sha256(tweakPub || pubKey)) mod N
      *     @type string $witness_script
-     *          *
      *          The full script required to properly redeem the output.  This field will
      *          only be populated if a p2wsh or a p2sh output is being signed.
      *     @type \Signrpc\TxOut $output
-     *          *
      *          A description of the output being spent. The value and script MUST be
      *          provided.
      *     @type int $sighash
-     *          *
      *          The target sighash type that should be used when generating the final
      *          sighash, and signature.
      *     @type int $input_index
-     *          *
      *          The target input within the transaction that should be signed.
      * }
      */
@@ -128,24 +120,38 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A descriptor that precisely describes *which* key to use for signing. This
      *may provide the raw public key directly, or require the Signer to re-derive
      *the key according to the populated derivation path.
+     *Note that if the key descriptor was obtained through walletrpc.DeriveKey,
+     *then the key locator MUST always be provided, since the derived keys are not
+     *persisted unlike with DeriveNextKey.
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 1;</code>
      * @return \Signrpc\KeyDescriptor
      */
     public function getKeyDesc()
     {
-        return $this->key_desc;
+        return isset($this->key_desc) ? $this->key_desc : null;
+    }
+
+    public function hasKeyDesc()
+    {
+        return isset($this->key_desc);
+    }
+
+    public function clearKeyDesc()
+    {
+        unset($this->key_desc);
     }
 
     /**
-     **
      *A descriptor that precisely describes *which* key to use for signing. This
      *may provide the raw public key directly, or require the Signer to re-derive
      *the key according to the populated derivation path.
+     *Note that if the key descriptor was obtained through walletrpc.DeriveKey,
+     *then the key locator MUST always be provided, since the derived keys are not
+     *persisted unlike with DeriveNextKey.
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 1;</code>
      * @param \Signrpc\KeyDescriptor $var
@@ -160,7 +166,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A scalar value that will be added to the private key corresponding to the
      *above public key to obtain the private key to be used to sign this input.
      *This value is typically derived via the following computation:
@@ -175,7 +180,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A scalar value that will be added to the private key corresponding to the
      *above public key to obtain the private key to be used to sign this input.
      *This value is typically derived via the following computation:
@@ -194,7 +198,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A private key that will be used in combination with its corresponding
      *private key to derive the private key that is to be used to sign the target
      *input. Within the Lightning protocol, this value is typically the
@@ -213,7 +216,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A private key that will be used in combination with its corresponding
      *private key to derive the private key that is to be used to sign the target
      *input. Within the Lightning protocol, this value is typically the
@@ -236,7 +238,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The full script required to properly redeem the output.  This field will
      *only be populated if a p2wsh or a p2sh output is being signed.
      *
@@ -249,7 +250,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The full script required to properly redeem the output.  This field will
      *only be populated if a p2wsh or a p2sh output is being signed.
      *
@@ -266,7 +266,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A description of the output being spent. The value and script MUST be
      *provided.
      *
@@ -275,11 +274,20 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      */
     public function getOutput()
     {
-        return $this->output;
+        return isset($this->output) ? $this->output : null;
+    }
+
+    public function hasOutput()
+    {
+        return isset($this->output);
+    }
+
+    public function clearOutput()
+    {
+        unset($this->output);
     }
 
     /**
-     **
      *A description of the output being spent. The value and script MUST be
      *provided.
      *
@@ -296,7 +304,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target sighash type that should be used when generating the final
      *sighash, and signature.
      *
@@ -309,7 +316,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target sighash type that should be used when generating the final
      *sighash, and signature.
      *
@@ -326,7 +332,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target input within the transaction that should be signed.
      *
      * Generated from protobuf field <code>int32 input_index = 8;</code>
@@ -338,7 +343,6 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target input within the transaction that should be signed.
      *
      * Generated from protobuf field <code>int32 input_index = 8;</code>

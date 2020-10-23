@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignMessageReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The message to be signed.
+     * The message to be signed.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    private $msg = '';
+    protected $msg = '';
     /**
-     *&#47; The key locator that identifies which key to use for signing.
+     * The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      */
-    private $key_loc = null;
+    protected $key_loc = null;
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $msg
-     *          &#47; The message to be signed.
+     *           The message to be signed.
      *     @type \Signrpc\KeyLocator $key_loc
-     *          &#47; The key locator that identifies which key to use for signing.
+     *           The key locator that identifies which key to use for signing.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The message to be signed.
+     * The message to be signed.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The message to be signed.
+     * The message to be signed.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @param string $var
@@ -70,18 +70,28 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The key locator that identifies which key to use for signing.
+     * The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      * @return \Signrpc\KeyLocator
      */
     public function getKeyLoc()
     {
-        return $this->key_loc;
+        return isset($this->key_loc) ? $this->key_loc : null;
+    }
+
+    public function hasKeyLoc()
+    {
+        return isset($this->key_loc);
+    }
+
+    public function clearKeyLoc()
+    {
+        unset($this->key_loc);
     }
 
     /**
-     *&#47; The key locator that identifies which key to use for signing.
+     * The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      * @param \Signrpc\KeyLocator $var

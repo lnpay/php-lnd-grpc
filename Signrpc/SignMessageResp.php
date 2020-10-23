@@ -14,12 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignMessageResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The signature for the given message in the fixed-size LN wire format.
      *
      * Generated from protobuf field <code>bytes signature = 1;</code>
      */
-    private $signature = '';
+    protected $signature = '';
 
     /**
      * Constructor.
@@ -28,7 +27,6 @@ class SignMessageResp extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $signature
-     *          *
      *          The signature for the given message in the fixed-size LN wire format.
      * }
      */
@@ -38,7 +36,6 @@ class SignMessageResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The signature for the given message in the fixed-size LN wire format.
      *
      * Generated from protobuf field <code>bytes signature = 1;</code>
@@ -50,7 +47,6 @@ class SignMessageResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The signature for the given message in the fixed-size LN wire format.
      *
      * Generated from protobuf field <code>bytes signature = 1;</code>

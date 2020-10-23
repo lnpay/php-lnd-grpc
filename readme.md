@@ -73,10 +73,10 @@ final class LndGrpcClient
 ## Updating the RPC definitions
 
 ```
-$ bash regenerate_rpc.sh v0.10.4-beta
+$ bash regenerate_rpc.sh v0.11.1-beta
 ```
 
-`regenerate_rpc.sh` pulls in https://raw.githubusercontent.com/lightningnetwork/lnd/master/v0.10.4-beta/XXX.proto and generates based on this.
+`regenerate_rpc.sh` pulls in https://raw.githubusercontent.com/lightningnetwork/lnd/master/v0.11.1-beta/XXX.proto and generates based on this.
 
 Currently generated: rpc.proto
 invoices.proto

@@ -14,12 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class Transaction extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The raw serialized transaction.
      *
      * Generated from protobuf field <code>bytes tx_hex = 1;</code>
      */
-    private $tx_hex = '';
+    protected $tx_hex = '';
+    /**
+     *An optional label to save with the transaction. Limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 2;</code>
+     */
+    protected $label = '';
 
     /**
      * Constructor.
@@ -28,8 +33,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tx_hex
-     *          *
      *          The raw serialized transaction.
+     *     @type string $label
+     *          An optional label to save with the transaction. Limited to 500 characters.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +44,6 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The raw serialized transaction.
      *
      * Generated from protobuf field <code>bytes tx_hex = 1;</code>
@@ -50,7 +55,6 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The raw serialized transaction.
      *
      * Generated from protobuf field <code>bytes tx_hex = 1;</code>
@@ -61,6 +65,32 @@ class Transaction extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->tx_hex = $var;
+
+        return $this;
+    }
+
+    /**
+     *An optional label to save with the transaction. Limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 2;</code>
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     *An optional label to save with the transaction. Limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLabel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->label = $var;
 
         return $this;
     }

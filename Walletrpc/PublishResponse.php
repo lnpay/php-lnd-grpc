@@ -14,7 +14,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class PublishResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *If blank, then no error occurred and the transaction was successfully
      *published. If not the empty string, then a string representation of the
      *broadcast error.
@@ -22,7 +21,7 @@ class PublishResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string publish_error = 1;</code>
      */
-    private $publish_error = '';
+    protected $publish_error = '';
 
     /**
      * Constructor.
@@ -31,7 +30,6 @@ class PublishResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $publish_error
-     *          *
      *          If blank, then no error occurred and the transaction was successfully
      *          published. If not the empty string, then a string representation of the
      *          broadcast error.
@@ -44,7 +42,6 @@ class PublishResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If blank, then no error occurred and the transaction was successfully
      *published. If not the empty string, then a string representation of the
      *broadcast error.
@@ -59,7 +56,6 @@ class PublishResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *If blank, then no error occurred and the transaction was successfully
      *published. If not the empty string, then a string representation of the
      *broadcast error.

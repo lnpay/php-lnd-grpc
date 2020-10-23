@@ -16,15 +16,15 @@ class Feature extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string name = 2;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      * Generated from protobuf field <code>bool is_required = 3;</code>
      */
-    private $is_required = false;
+    protected $is_required = false;
     /**
      * Generated from protobuf field <code>bool is_known = 4;</code>
      */
-    private $is_known = false;
+    protected $is_known = false;
 
     /**
      * Constructor.

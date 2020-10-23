@@ -18,13 +18,13 @@ class CircuitKey extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 1;</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      *&#47; The index of the incoming htlc in the incoming channel.
      *
      * Generated from protobuf field <code>uint64 htlc_id = 2;</code>
      */
-    private $htlc_id = 0;
+    protected $htlc_id = 0;
 
     /**
      * Constructor.
