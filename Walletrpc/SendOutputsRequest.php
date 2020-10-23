@@ -14,20 +14,24 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendOutputsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The number of satoshis per kilo weight that should be used when crafting
      *this transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_kw = 1;</code>
      */
-    private $sat_per_kw = 0;
+    protected $sat_per_kw = 0;
     /**
-     **
      *A slice of the outputs that should be created in the transaction produced.
      *
      * Generated from protobuf field <code>repeated .signrpc.TxOut outputs = 2;</code>
      */
     private $outputs;
+    /**
+     * An optional label for the transaction, limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 3;</code>
+     */
+    protected $label = '';
 
     /**
      * Constructor.
@@ -36,12 +40,12 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $sat_per_kw
-     *          *
      *          The number of satoshis per kilo weight that should be used when crafting
      *          this transaction.
      *     @type \Signrpc\TxOut[]|\Google\Protobuf\Internal\RepeatedField $outputs
-     *          *
      *          A slice of the outputs that should be created in the transaction produced.
+     *     @type string $label
+     *           An optional label for the transaction, limited to 500 characters.
      * }
      */
     public function __construct($data = NULL) {
@@ -50,7 +54,6 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of satoshis per kilo weight that should be used when crafting
      *this transaction.
      *
@@ -63,7 +66,6 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of satoshis per kilo weight that should be used when crafting
      *this transaction.
      *
@@ -80,7 +82,6 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A slice of the outputs that should be created in the transaction produced.
      *
      * Generated from protobuf field <code>repeated .signrpc.TxOut outputs = 2;</code>
@@ -92,7 +93,6 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A slice of the outputs that should be created in the transaction produced.
      *
      * Generated from protobuf field <code>repeated .signrpc.TxOut outputs = 2;</code>
@@ -103,6 +103,32 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Signrpc\TxOut::class);
         $this->outputs = $arr;
+
+        return $this;
+    }
+
+    /**
+     * An optional label for the transaction, limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 3;</code>
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * An optional label for the transaction, limited to 500 characters.
+     *
+     * Generated from protobuf field <code>string label = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLabel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->label = $var;
 
         return $this;
     }

@@ -14,20 +14,27 @@ use Google\Protobuf\Internal\GPBUtil;
 class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The funded PSBT that contains all witness data to send the exact channel
      *capacity amount to the PK script returned in the open channel message in a
-     *previous step.
+     *previous step. Cannot be set at the same time as final_raw_tx.
      *
      * Generated from protobuf field <code>bytes signed_psbt = 1;</code>
      */
-    private $signed_psbt = '';
+    protected $signed_psbt = '';
     /**
-     *&#47; The pending channel ID of the channel to get the PSBT for.
+     * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    private $pending_chan_id = '';
+    protected $pending_chan_id = '';
+    /**
+     *As an alternative to the signed PSBT with all witness data, the final raw
+     *wire format transaction can also be specified directly. Cannot be set at the
+     *same time as signed_psbt.
+     *
+     * Generated from protobuf field <code>bytes final_raw_tx = 3;</code>
+     */
+    protected $final_raw_tx = '';
 
     /**
      * Constructor.
@@ -36,12 +43,15 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $signed_psbt
-     *          *
      *          The funded PSBT that contains all witness data to send the exact channel
      *          capacity amount to the PK script returned in the open channel message in a
-     *          previous step.
+     *          previous step. Cannot be set at the same time as final_raw_tx.
      *     @type string $pending_chan_id
-     *          &#47; The pending channel ID of the channel to get the PSBT for.
+     *           The pending channel ID of the channel to get the PSBT for.
+     *     @type string $final_raw_tx
+     *          As an alternative to the signed PSBT with all witness data, the final raw
+     *          wire format transaction can also be specified directly. Cannot be set at the
+     *          same time as signed_psbt.
      * }
      */
     public function __construct($data = NULL) {
@@ -50,10 +60,9 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The funded PSBT that contains all witness data to send the exact channel
      *capacity amount to the PK script returned in the open channel message in a
-     *previous step.
+     *previous step. Cannot be set at the same time as final_raw_tx.
      *
      * Generated from protobuf field <code>bytes signed_psbt = 1;</code>
      * @return string
@@ -64,10 +73,9 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The funded PSBT that contains all witness data to send the exact channel
      *capacity amount to the PK script returned in the open channel message in a
-     *previous step.
+     *previous step. Cannot be set at the same time as final_raw_tx.
      *
      * Generated from protobuf field <code>bytes signed_psbt = 1;</code>
      * @param string $var
@@ -82,7 +90,7 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel ID of the channel to get the PSBT for.
+     * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      * @return string
@@ -93,7 +101,7 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel ID of the channel to get the PSBT for.
+     * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      * @param string $var
@@ -103,6 +111,36 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->pending_chan_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *As an alternative to the signed PSBT with all witness data, the final raw
+     *wire format transaction can also be specified directly. Cannot be set at the
+     *same time as signed_psbt.
+     *
+     * Generated from protobuf field <code>bytes final_raw_tx = 3;</code>
+     * @return string
+     */
+    public function getFinalRawTx()
+    {
+        return $this->final_raw_tx;
+    }
+
+    /**
+     *As an alternative to the signed PSBT with all witness data, the final raw
+     *wire format transaction can also be specified directly. Cannot be set at the
+     *same time as signed_psbt.
+     *
+     * Generated from protobuf field <code>bytes final_raw_tx = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFinalRawTx($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->final_raw_tx = $var;
 
         return $this;
     }

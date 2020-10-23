@@ -27,19 +27,19 @@ class ForwardHtlcInterceptResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.CircuitKey incoming_circuit_key = 1;</code>
      */
-    private $incoming_circuit_key = null;
+    protected $incoming_circuit_key = null;
     /**
      * The resolve action for this intercepted htlc.
      *
      * Generated from protobuf field <code>.routerrpc.ResolveHoldForwardAction action = 2;</code>
      */
-    private $action = 0;
+    protected $action = 0;
     /**
      * The preimage in case the resolve action is Settle.
      *
      * Generated from protobuf field <code>bytes preimage = 3;</code>
      */
-    private $preimage = '';
+    protected $preimage = '';
 
     /**
      * Constructor.
@@ -72,7 +72,17 @@ class ForwardHtlcInterceptResponse extends \Google\Protobuf\Internal\Message
      */
     public function getIncomingCircuitKey()
     {
-        return $this->incoming_circuit_key;
+        return isset($this->incoming_circuit_key) ? $this->incoming_circuit_key : null;
+    }
+
+    public function hasIncomingCircuitKey()
+    {
+        return isset($this->incoming_circuit_key);
+    }
+
+    public function clearIncomingCircuitKey()
+    {
+        unset($this->incoming_circuit_key);
     }
 
     /**

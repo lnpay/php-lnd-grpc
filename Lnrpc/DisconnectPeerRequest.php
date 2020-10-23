@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The pubkey of the node to disconnect from
+     * The pubkey of the node to disconnect from
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *          &#47; The pubkey of the node to disconnect from
+     *           The pubkey of the node to disconnect from
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pubkey of the node to disconnect from
+     * The pubkey of the node to disconnect from
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class DisconnectPeerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pubkey of the node to disconnect from
+     * The pubkey of the node to disconnect from
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var

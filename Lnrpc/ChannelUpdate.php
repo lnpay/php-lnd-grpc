@@ -14,15 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The signature that validates the announced data and proves the ownership
      *of node id.
      *
      * Generated from protobuf field <code>bytes signature = 1;</code>
      */
-    private $signature = '';
+    protected $signature = '';
     /**
-     **
      *The target chain that this channel was opened within. This value
      *should be the genesis hash of the target chain. Along with the short
      *channel ID, this uniquely identifies the channel globally in a
@@ -30,34 +28,30 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes chain_hash = 2;</code>
      */
-    private $chain_hash = '';
+    protected $chain_hash = '';
     /**
-     **
      *The unique description of the funding transaction.
      *
      * Generated from protobuf field <code>uint64 chan_id = 3 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
-     **
      *A timestamp that allows ordering in the case of multiple announcements.
      *We should ignore the message if timestamp is not greater than the
      *last-received.
      *
      * Generated from protobuf field <code>uint32 timestamp = 4;</code>
      */
-    private $timestamp = 0;
+    protected $timestamp = 0;
     /**
-     **
      *The bitfield that describes whether optional fields are present in this
      *update. Currently, the least-significant bit must be set to 1 if the
      *optional field MaxHtlc is present.
      *
      * Generated from protobuf field <code>uint32 message_flags = 10;</code>
      */
-    private $message_flags = 0;
+    protected $message_flags = 0;
     /**
-     **
      *The bitfield that describes additional meta-data concerning how the
      *update is to be interpreted. Currently, the least-significant bit must be
      *set to 0 if the creating node corresponds to the first node in the
@@ -66,9 +60,8 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 channel_flags = 5;</code>
      */
-    private $channel_flags = 0;
+    protected $channel_flags = 0;
     /**
-     **
      *The minimum number of blocks this node requires to be added to the expiry
      *of HTLCs. This is a security parameter determined by the node operator.
      *This value represents the required gap between the time locks of the
@@ -76,39 +69,34 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 time_lock_delta = 6;</code>
      */
-    private $time_lock_delta = 0;
+    protected $time_lock_delta = 0;
     /**
-     **
      *The minimum HTLC value which will be accepted.
      *
      * Generated from protobuf field <code>uint64 htlc_minimum_msat = 7;</code>
      */
-    private $htlc_minimum_msat = 0;
+    protected $htlc_minimum_msat = 0;
     /**
-     **
      *The base fee that must be used for incoming HTLC's to this particular
      *channel. This value will be tacked onto the required for a payment
      *independent of the size of the payment.
      *
      * Generated from protobuf field <code>uint32 base_fee = 8;</code>
      */
-    private $base_fee = 0;
+    protected $base_fee = 0;
     /**
-     **
      *The fee rate that will be charged per millionth of a satoshi.
      *
      * Generated from protobuf field <code>uint32 fee_rate = 9;</code>
      */
-    private $fee_rate = 0;
+    protected $fee_rate = 0;
     /**
-     **
      *The maximum HTLC value which will be accepted.
      *
      * Generated from protobuf field <code>uint64 htlc_maximum_msat = 11;</code>
      */
-    private $htlc_maximum_msat = 0;
+    protected $htlc_maximum_msat = 0;
     /**
-     **
      *The set of data that was appended to this message, some of which we may
      *not actually know how to iterate or parse. By holding onto this data, we
      *ensure that we're able to properly validate the set of signatures that
@@ -117,7 +105,7 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes extra_opaque_data = 12;</code>
      */
-    private $extra_opaque_data = '';
+    protected $extra_opaque_data = '';
 
     /**
      * Constructor.
@@ -126,57 +114,45 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $signature
-     *          *
      *          The signature that validates the announced data and proves the ownership
      *          of node id.
      *     @type string $chain_hash
-     *          *
      *          The target chain that this channel was opened within. This value
      *          should be the genesis hash of the target chain. Along with the short
      *          channel ID, this uniquely identifies the channel globally in a
      *          blockchain.
      *     @type int|string $chan_id
-     *          *
      *          The unique description of the funding transaction.
      *     @type int $timestamp
-     *          *
      *          A timestamp that allows ordering in the case of multiple announcements.
      *          We should ignore the message if timestamp is not greater than the
      *          last-received.
      *     @type int $message_flags
-     *          *
      *          The bitfield that describes whether optional fields are present in this
      *          update. Currently, the least-significant bit must be set to 1 if the
      *          optional field MaxHtlc is present.
      *     @type int $channel_flags
-     *          *
      *          The bitfield that describes additional meta-data concerning how the
      *          update is to be interpreted. Currently, the least-significant bit must be
      *          set to 0 if the creating node corresponds to the first node in the
      *          previously sent channel announcement and 1 otherwise. If the second bit
      *          is set, then the channel is set to be disabled.
      *     @type int $time_lock_delta
-     *          *
      *          The minimum number of blocks this node requires to be added to the expiry
      *          of HTLCs. This is a security parameter determined by the node operator.
      *          This value represents the required gap between the time locks of the
      *          incoming and outgoing HTLC's set to this node.
      *     @type int|string $htlc_minimum_msat
-     *          *
      *          The minimum HTLC value which will be accepted.
      *     @type int $base_fee
-     *          *
      *          The base fee that must be used for incoming HTLC's to this particular
      *          channel. This value will be tacked onto the required for a payment
      *          independent of the size of the payment.
      *     @type int $fee_rate
-     *          *
      *          The fee rate that will be charged per millionth of a satoshi.
      *     @type int|string $htlc_maximum_msat
-     *          *
      *          The maximum HTLC value which will be accepted.
      *     @type string $extra_opaque_data
-     *          *
      *          The set of data that was appended to this message, some of which we may
      *          not actually know how to iterate or parse. By holding onto this data, we
      *          ensure that we're able to properly validate the set of signatures that
@@ -190,7 +166,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The signature that validates the announced data and proves the ownership
      *of node id.
      *
@@ -203,7 +178,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The signature that validates the announced data and proves the ownership
      *of node id.
      *
@@ -220,7 +194,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target chain that this channel was opened within. This value
      *should be the genesis hash of the target chain. Along with the short
      *channel ID, this uniquely identifies the channel globally in a
@@ -235,7 +208,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target chain that this channel was opened within. This value
      *should be the genesis hash of the target chain. Along with the short
      *channel ID, this uniquely identifies the channel globally in a
@@ -254,7 +226,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique description of the funding transaction.
      *
      * Generated from protobuf field <code>uint64 chan_id = 3 [jstype = JS_STRING];</code>
@@ -266,7 +237,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique description of the funding transaction.
      *
      * Generated from protobuf field <code>uint64 chan_id = 3 [jstype = JS_STRING];</code>
@@ -282,7 +252,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A timestamp that allows ordering in the case of multiple announcements.
      *We should ignore the message if timestamp is not greater than the
      *last-received.
@@ -296,7 +265,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A timestamp that allows ordering in the case of multiple announcements.
      *We should ignore the message if timestamp is not greater than the
      *last-received.
@@ -314,7 +282,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The bitfield that describes whether optional fields are present in this
      *update. Currently, the least-significant bit must be set to 1 if the
      *optional field MaxHtlc is present.
@@ -328,7 +295,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The bitfield that describes whether optional fields are present in this
      *update. Currently, the least-significant bit must be set to 1 if the
      *optional field MaxHtlc is present.
@@ -346,7 +312,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The bitfield that describes additional meta-data concerning how the
      *update is to be interpreted. Currently, the least-significant bit must be
      *set to 0 if the creating node corresponds to the first node in the
@@ -362,7 +327,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The bitfield that describes additional meta-data concerning how the
      *update is to be interpreted. Currently, the least-significant bit must be
      *set to 0 if the creating node corresponds to the first node in the
@@ -382,7 +346,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The minimum number of blocks this node requires to be added to the expiry
      *of HTLCs. This is a security parameter determined by the node operator.
      *This value represents the required gap between the time locks of the
@@ -397,7 +360,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The minimum number of blocks this node requires to be added to the expiry
      *of HTLCs. This is a security parameter determined by the node operator.
      *This value represents the required gap between the time locks of the
@@ -416,7 +378,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The minimum HTLC value which will be accepted.
      *
      * Generated from protobuf field <code>uint64 htlc_minimum_msat = 7;</code>
@@ -428,7 +389,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The minimum HTLC value which will be accepted.
      *
      * Generated from protobuf field <code>uint64 htlc_minimum_msat = 7;</code>
@@ -444,7 +404,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The base fee that must be used for incoming HTLC's to this particular
      *channel. This value will be tacked onto the required for a payment
      *independent of the size of the payment.
@@ -458,7 +417,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The base fee that must be used for incoming HTLC's to this particular
      *channel. This value will be tacked onto the required for a payment
      *independent of the size of the payment.
@@ -476,7 +434,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fee rate that will be charged per millionth of a satoshi.
      *
      * Generated from protobuf field <code>uint32 fee_rate = 9;</code>
@@ -488,7 +445,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fee rate that will be charged per millionth of a satoshi.
      *
      * Generated from protobuf field <code>uint32 fee_rate = 9;</code>
@@ -504,7 +460,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The maximum HTLC value which will be accepted.
      *
      * Generated from protobuf field <code>uint64 htlc_maximum_msat = 11;</code>
@@ -516,7 +471,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The maximum HTLC value which will be accepted.
      *
      * Generated from protobuf field <code>uint64 htlc_maximum_msat = 11;</code>
@@ -532,7 +486,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The set of data that was appended to this message, some of which we may
      *not actually know how to iterate or parse. By holding onto this data, we
      *ensure that we're able to properly validate the set of signatures that
@@ -548,7 +501,6 @@ class ChannelUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The set of data that was appended to this message, some of which we may
      *not actually know how to iterate or parse. By holding onto this data, we
      *ensure that we're able to properly validate the set of signatures that

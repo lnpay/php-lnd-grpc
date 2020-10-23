@@ -16,7 +16,11 @@ class AbandonChannelRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint channel_point = 1;</code>
      */
-    private $channel_point = null;
+    protected $channel_point = null;
+    /**
+     * Generated from protobuf field <code>bool pending_funding_shim_only = 2;</code>
+     */
+    protected $pending_funding_shim_only = false;
 
     /**
      * Constructor.
@@ -25,6 +29,7 @@ class AbandonChannelRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelPoint $channel_point
+     *     @type bool $pending_funding_shim_only
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +43,17 @@ class AbandonChannelRequest extends \Google\Protobuf\Internal\Message
      */
     public function getChannelPoint()
     {
-        return $this->channel_point;
+        return isset($this->channel_point) ? $this->channel_point : null;
+    }
+
+    public function hasChannelPoint()
+    {
+        return isset($this->channel_point);
+    }
+
+    public function clearChannelPoint()
+    {
+        unset($this->channel_point);
     }
 
     /**
@@ -50,6 +65,28 @@ class AbandonChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\ChannelPoint::class);
         $this->channel_point = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool pending_funding_shim_only = 2;</code>
+     * @return bool
+     */
+    public function getPendingFundingShimOnly()
+    {
+        return $this->pending_funding_shim_only;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool pending_funding_shim_only = 2;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPendingFundingShimOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->pending_funding_shim_only = $var;
 
         return $this;
     }

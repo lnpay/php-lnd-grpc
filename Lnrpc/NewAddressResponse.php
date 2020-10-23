@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class NewAddressResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The newly generated wallet address
+     * The newly generated wallet address
      *
      * Generated from protobuf field <code>string address = 1;</code>
      */
-    private $address = '';
+    protected $address = '';
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $address
-     *          &#47; The newly generated wallet address
+     *           The newly generated wallet address
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The newly generated wallet address
+     * The newly generated wallet address
      *
      * Generated from protobuf field <code>string address = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class NewAddressResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The newly generated wallet address
+     * The newly generated wallet address
      *
      * Generated from protobuf field <code>string address = 1;</code>
      * @param string $var

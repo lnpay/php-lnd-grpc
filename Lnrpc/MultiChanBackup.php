@@ -14,14 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class MultiChanBackup extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *Is the set of all channels that are included in this multi-channel backup.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1;</code>
      */
     private $chan_points;
     /**
-     **
      *A single encrypted blob containing all the static channel backups of the
      *channel listed above. This can be stored as a single file or blob, and
      *safely be replaced with any prior/future versions. When using REST, this
@@ -29,7 +27,7 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes multi_chan_backup = 2;</code>
      */
-    private $multi_chan_backup = '';
+    protected $multi_chan_backup = '';
 
     /**
      * Constructor.
@@ -38,10 +36,8 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelPoint[]|\Google\Protobuf\Internal\RepeatedField $chan_points
-     *          *
      *          Is the set of all channels that are included in this multi-channel backup.
      *     @type string $multi_chan_backup
-     *          *
      *          A single encrypted blob containing all the static channel backups of the
      *          channel listed above. This can be stored as a single file or blob, and
      *          safely be replaced with any prior/future versions. When using REST, this
@@ -54,7 +50,6 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Is the set of all channels that are included in this multi-channel backup.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1;</code>
@@ -66,7 +61,6 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Is the set of all channels that are included in this multi-channel backup.
      *
      * Generated from protobuf field <code>repeated .lnrpc.ChannelPoint chan_points = 1;</code>
@@ -82,7 +76,6 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A single encrypted blob containing all the static channel backups of the
      *channel listed above. This can be stored as a single file or blob, and
      *safely be replaced with any prior/future versions. When using REST, this
@@ -97,7 +90,6 @@ class MultiChanBackup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A single encrypted blob containing all the static channel backups of the
      *channel listed above. This can be stored as a single file or blob, and
      *safely be replaced with any prior/future versions. When using REST, this

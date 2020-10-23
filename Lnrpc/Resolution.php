@@ -18,32 +18,32 @@ class Resolution extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ResolutionType resolution_type = 1;</code>
      */
-    private $resolution_type = 0;
+    protected $resolution_type = 0;
     /**
      * The outcome of our on chain action that resolved the outpoint.
      *
      * Generated from protobuf field <code>.lnrpc.ResolutionOutcome outcome = 2;</code>
      */
-    private $outcome = 0;
+    protected $outcome = 0;
     /**
      * The outpoint that was spent by the resolution.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 3;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      * The amount that was claimed by the resolution.
      *
      * Generated from protobuf field <code>uint64 amount_sat = 4;</code>
      */
-    private $amount_sat = 0;
+    protected $amount_sat = 0;
     /**
      * The hex-encoded transaction ID of the sweep transaction that spent the
      * output.
      *
      * Generated from protobuf field <code>string sweep_txid = 5;</code>
      */
-    private $sweep_txid = '';
+    protected $sweep_txid = '';
 
     /**
      * Constructor.
@@ -129,7 +129,17 @@ class Resolution extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return $this->outpoint;
+        return isset($this->outpoint) ? $this->outpoint : null;
+    }
+
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
     }
 
     /**

@@ -18,28 +18,27 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 1;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      * The target number of blocks that the input should be spent within.
      *
      * Generated from protobuf field <code>uint32 target_conf = 2;</code>
      */
-    private $target_conf = 0;
+    protected $target_conf = 0;
     /**
      *The fee rate, expressed in sat/byte, that should be used to spend the input
      *with.
      *
      * Generated from protobuf field <code>uint32 sat_per_byte = 3;</code>
      */
-    private $sat_per_byte = 0;
+    protected $sat_per_byte = 0;
     /**
-     **
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
      *
      * Generated from protobuf field <code>bool force = 4;</code>
      */
-    private $force = false;
+    protected $force = false;
 
     /**
      * Constructor.
@@ -55,7 +54,6 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      *          The fee rate, expressed in sat/byte, that should be used to spend the input
      *          with.
      *     @type bool $force
-     *          *
      *          Whether this input must be force-swept. This means that it is swept even
      *          if it has a negative yield.
      * }
@@ -73,7 +71,17 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return $this->outpoint;
+        return isset($this->outpoint) ? $this->outpoint : null;
+    }
+
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
     }
 
     /**
@@ -146,7 +154,6 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
      *
@@ -159,7 +166,6 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
      *

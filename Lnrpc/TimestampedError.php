@@ -18,13 +18,13 @@ class TimestampedError extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 timestamp = 1;</code>
      */
-    private $timestamp = 0;
+    protected $timestamp = 0;
     /**
      * The string representation of the error sent by our peer.
      *
      * Generated from protobuf field <code>string error = 2;</code>
      */
-    private $error = '';
+    protected $error = '';
 
     /**
      * Constructor.

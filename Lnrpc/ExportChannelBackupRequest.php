@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class ExportChannelBackupRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The target channel point to obtain a back up for.
+     * The target channel point to obtain a back up for.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class ExportChannelBackupRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\ChannelPoint $chan_point
-     *          &#47; The target channel point to obtain a back up for.
+     *           The target channel point to obtain a back up for.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,18 +36,28 @@ class ExportChannelBackupRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The target channel point to obtain a back up for.
+     * The target channel point to obtain a back up for.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      * @return \Lnrpc\ChannelPoint
      */
     public function getChanPoint()
     {
-        return $this->chan_point;
+        return isset($this->chan_point) ? $this->chan_point : null;
+    }
+
+    public function hasChanPoint()
+    {
+        return isset($this->chan_point);
+    }
+
+    public function clearChanPoint()
+    {
+        unset($this->chan_point);
     }
 
     /**
-     *&#47; The target channel point to obtain a back up for.
+     * The target channel point to obtain a back up for.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      * @param \Lnrpc\ChannelPoint $var

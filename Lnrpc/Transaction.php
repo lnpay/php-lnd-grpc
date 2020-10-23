@@ -14,59 +14,65 @@ use Google\Protobuf\Internal\GPBUtil;
 class Transaction extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The transaction hash
+     * The transaction hash
      *
      * Generated from protobuf field <code>string tx_hash = 1;</code>
      */
-    private $tx_hash = '';
+    protected $tx_hash = '';
     /**
-     *&#47; The transaction amount, denominated in satoshis
+     * The transaction amount, denominated in satoshis
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    private $amount = 0;
+    protected $amount = 0;
     /**
-     *&#47; The number of confirmations
+     * The number of confirmations
      *
      * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      */
-    private $num_confirmations = 0;
+    protected $num_confirmations = 0;
     /**
-     *&#47; The hash of the block this transaction was included in
+     * The hash of the block this transaction was included in
      *
      * Generated from protobuf field <code>string block_hash = 4;</code>
      */
-    private $block_hash = '';
+    protected $block_hash = '';
     /**
-     *&#47; The height of the block this transaction was included in
+     * The height of the block this transaction was included in
      *
      * Generated from protobuf field <code>int32 block_height = 5;</code>
      */
-    private $block_height = 0;
+    protected $block_height = 0;
     /**
-     *&#47; Timestamp of this transaction
+     * Timestamp of this transaction
      *
      * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      */
-    private $time_stamp = 0;
+    protected $time_stamp = 0;
     /**
-     *&#47; Fees paid for this transaction
+     * Fees paid for this transaction
      *
      * Generated from protobuf field <code>int64 total_fees = 7;</code>
      */
-    private $total_fees = 0;
+    protected $total_fees = 0;
     /**
-     *&#47; Addresses that received funds for this transaction
+     * Addresses that received funds for this transaction
      *
      * Generated from protobuf field <code>repeated string dest_addresses = 8;</code>
      */
     private $dest_addresses;
     /**
-     *&#47; The raw transaction hex.
+     * The raw transaction hex.
      *
      * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      */
-    private $raw_tx_hex = '';
+    protected $raw_tx_hex = '';
+    /**
+     * A label that was optionally set on transaction broadcast.
+     *
+     * Generated from protobuf field <code>string label = 10;</code>
+     */
+    protected $label = '';
 
     /**
      * Constructor.
@@ -75,23 +81,25 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tx_hash
-     *          &#47; The transaction hash
+     *           The transaction hash
      *     @type int|string $amount
-     *          &#47; The transaction amount, denominated in satoshis
+     *           The transaction amount, denominated in satoshis
      *     @type int $num_confirmations
-     *          &#47; The number of confirmations
+     *           The number of confirmations
      *     @type string $block_hash
-     *          &#47; The hash of the block this transaction was included in
+     *           The hash of the block this transaction was included in
      *     @type int $block_height
-     *          &#47; The height of the block this transaction was included in
+     *           The height of the block this transaction was included in
      *     @type int|string $time_stamp
-     *          &#47; Timestamp of this transaction
+     *           Timestamp of this transaction
      *     @type int|string $total_fees
-     *          &#47; Fees paid for this transaction
+     *           Fees paid for this transaction
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $dest_addresses
-     *          &#47; Addresses that received funds for this transaction
+     *           Addresses that received funds for this transaction
      *     @type string $raw_tx_hex
-     *          &#47; The raw transaction hex.
+     *           The raw transaction hex.
+     *     @type string $label
+     *           A label that was optionally set on transaction broadcast.
      * }
      */
     public function __construct($data = NULL) {
@@ -100,7 +108,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The transaction hash
+     * The transaction hash
      *
      * Generated from protobuf field <code>string tx_hash = 1;</code>
      * @return string
@@ -111,7 +119,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The transaction hash
+     * The transaction hash
      *
      * Generated from protobuf field <code>string tx_hash = 1;</code>
      * @param string $var
@@ -126,7 +134,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The transaction amount, denominated in satoshis
+     * The transaction amount, denominated in satoshis
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      * @return int|string
@@ -137,7 +145,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The transaction amount, denominated in satoshis
+     * The transaction amount, denominated in satoshis
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      * @param int|string $var
@@ -152,7 +160,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The number of confirmations
+     * The number of confirmations
      *
      * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      * @return int
@@ -163,7 +171,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The number of confirmations
+     * The number of confirmations
      *
      * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      * @param int $var
@@ -178,7 +186,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash of the block this transaction was included in
+     * The hash of the block this transaction was included in
      *
      * Generated from protobuf field <code>string block_hash = 4;</code>
      * @return string
@@ -189,7 +197,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash of the block this transaction was included in
+     * The hash of the block this transaction was included in
      *
      * Generated from protobuf field <code>string block_hash = 4;</code>
      * @param string $var
@@ -204,7 +212,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The height of the block this transaction was included in
+     * The height of the block this transaction was included in
      *
      * Generated from protobuf field <code>int32 block_height = 5;</code>
      * @return int
@@ -215,7 +223,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The height of the block this transaction was included in
+     * The height of the block this transaction was included in
      *
      * Generated from protobuf field <code>int32 block_height = 5;</code>
      * @param int $var
@@ -230,7 +238,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of this transaction
+     * Timestamp of this transaction
      *
      * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      * @return int|string
@@ -241,7 +249,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Timestamp of this transaction
+     * Timestamp of this transaction
      *
      * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      * @param int|string $var
@@ -256,7 +264,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Fees paid for this transaction
+     * Fees paid for this transaction
      *
      * Generated from protobuf field <code>int64 total_fees = 7;</code>
      * @return int|string
@@ -267,7 +275,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Fees paid for this transaction
+     * Fees paid for this transaction
      *
      * Generated from protobuf field <code>int64 total_fees = 7;</code>
      * @param int|string $var
@@ -282,7 +290,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Addresses that received funds for this transaction
+     * Addresses that received funds for this transaction
      *
      * Generated from protobuf field <code>repeated string dest_addresses = 8;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -293,7 +301,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Addresses that received funds for this transaction
+     * Addresses that received funds for this transaction
      *
      * Generated from protobuf field <code>repeated string dest_addresses = 8;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -308,7 +316,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The raw transaction hex.
+     * The raw transaction hex.
      *
      * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      * @return string
@@ -319,7 +327,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The raw transaction hex.
+     * The raw transaction hex.
      *
      * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      * @param string $var
@@ -329,6 +337,32 @@ class Transaction extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->raw_tx_hex = $var;
+
+        return $this;
+    }
+
+    /**
+     * A label that was optionally set on transaction broadcast.
+     *
+     * Generated from protobuf field <code>string label = 10;</code>
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * A label that was optionally set on transaction broadcast.
+     *
+     * Generated from protobuf field <code>string label = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLabel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->label = $var;
 
         return $this;
     }

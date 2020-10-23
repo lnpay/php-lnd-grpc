@@ -16,39 +16,39 @@ class PayReq extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string destination = 1;</code>
      */
-    private $destination = '';
+    protected $destination = '';
     /**
      * Generated from protobuf field <code>string payment_hash = 2;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      * Generated from protobuf field <code>int64 num_satoshis = 3;</code>
      */
-    private $num_satoshis = 0;
+    protected $num_satoshis = 0;
     /**
      * Generated from protobuf field <code>int64 timestamp = 4;</code>
      */
-    private $timestamp = 0;
+    protected $timestamp = 0;
     /**
      * Generated from protobuf field <code>int64 expiry = 5;</code>
      */
-    private $expiry = 0;
+    protected $expiry = 0;
     /**
      * Generated from protobuf field <code>string description = 6;</code>
      */
-    private $description = '';
+    protected $description = '';
     /**
      * Generated from protobuf field <code>string description_hash = 7;</code>
      */
-    private $description_hash = '';
+    protected $description_hash = '';
     /**
      * Generated from protobuf field <code>string fallback_addr = 8;</code>
      */
-    private $fallback_addr = '';
+    protected $fallback_addr = '';
     /**
      * Generated from protobuf field <code>int64 cltv_expiry = 9;</code>
      */
-    private $cltv_expiry = 0;
+    protected $cltv_expiry = 0;
     /**
      * Generated from protobuf field <code>repeated .lnrpc.RouteHint route_hints = 10;</code>
      */
@@ -56,11 +56,11 @@ class PayReq extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes payment_addr = 11;</code>
      */
-    private $payment_addr = '';
+    protected $payment_addr = '';
     /**
      * Generated from protobuf field <code>int64 num_msat = 12;</code>
      */
-    private $num_msat = 0;
+    protected $num_msat = 0;
     /**
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 13;</code>
      */

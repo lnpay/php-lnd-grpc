@@ -16,27 +16,26 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool active_only = 1;</code>
      */
-    private $active_only = false;
+    protected $active_only = false;
     /**
      * Generated from protobuf field <code>bool inactive_only = 2;</code>
      */
-    private $inactive_only = false;
+    protected $inactive_only = false;
     /**
      * Generated from protobuf field <code>bool public_only = 3;</code>
      */
-    private $public_only = false;
+    protected $public_only = false;
     /**
      * Generated from protobuf field <code>bool private_only = 4;</code>
      */
-    private $private_only = false;
+    protected $private_only = false;
     /**
-     **
      *Filters the response for channels with a target peer's pubkey. If peer is
      *empty, all channels will be returned.
      *
      * Generated from protobuf field <code>bytes peer = 5;</code>
      */
-    private $peer = '';
+    protected $peer = '';
 
     /**
      * Constructor.
@@ -49,7 +48,6 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $public_only
      *     @type bool $private_only
      *     @type string $peer
-     *          *
      *          Filters the response for channels with a target peer's pubkey. If peer is
      *          empty, all channels will be returned.
      * }
@@ -148,7 +146,6 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Filters the response for channels with a target peer's pubkey. If peer is
      *empty, all channels will be returned.
      *
@@ -161,7 +158,6 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Filters the response for channels with a target peer's pubkey. If peer is
      *empty, all channels will be returned.
      *

@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class FundingShimCancel extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The pending channel ID of the channel to cancel the funding shim for.
+     * The pending channel ID of the channel to cancel the funding shim for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      */
-    private $pending_chan_id = '';
+    protected $pending_chan_id = '';
 
     /**
      * Constructor.
@@ -27,7 +27,7 @@ class FundingShimCancel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pending_chan_id
-     *          &#47; The pending channel ID of the channel to cancel the funding shim for.
+     *           The pending channel ID of the channel to cancel the funding shim for.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class FundingShimCancel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel ID of the channel to cancel the funding shim for.
+     * The pending channel ID of the channel to cancel the funding shim for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class FundingShimCancel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel ID of the channel to cancel the funding shim for.
+     * The pending channel ID of the channel to cancel the funding shim for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      * @param string $var

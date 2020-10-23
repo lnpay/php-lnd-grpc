@@ -16,50 +16,49 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string remote_node_pub = 1;</code>
      */
-    private $remote_node_pub = '';
+    protected $remote_node_pub = '';
     /**
      * Generated from protobuf field <code>string channel_point = 2;</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
      * Generated from protobuf field <code>int64 capacity = 3;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      * Generated from protobuf field <code>int64 local_balance = 4;</code>
      */
-    private $local_balance = 0;
+    protected $local_balance = 0;
     /**
      * Generated from protobuf field <code>int64 remote_balance = 5;</code>
      */
-    private $remote_balance = 0;
+    protected $remote_balance = 0;
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its
-     * / balance.
+     * The minimum satoshis this node is required to reserve in its
+     * balance.
      *
      * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6;</code>
      */
-    private $local_chan_reserve_sat = 0;
+    protected $local_chan_reserve_sat = 0;
     /**
-     **
      *The minimum satoshis the other node is required to reserve in its
      *balance.
      *
      * Generated from protobuf field <code>int64 remote_chan_reserve_sat = 7;</code>
      */
-    private $remote_chan_reserve_sat = 0;
+    protected $remote_chan_reserve_sat = 0;
     /**
      * The party that initiated opening the channel.
      *
      * Generated from protobuf field <code>.lnrpc.Initiator initiator = 8;</code>
      */
-    private $initiator = 0;
+    protected $initiator = 0;
     /**
-     *&#47; The commitment type used by this channel.
+     * The commitment type used by this channel.
      *
      * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 9;</code>
      */
-    private $commitment_type = 0;
+    protected $commitment_type = 0;
 
     /**
      * Constructor.
@@ -73,16 +72,15 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
      *     @type int|string $local_balance
      *     @type int|string $remote_balance
      *     @type int|string $local_chan_reserve_sat
-     *          &#47; The minimum satoshis this node is required to reserve in its
-     *          / balance.
+     *           The minimum satoshis this node is required to reserve in its
+     *           balance.
      *     @type int|string $remote_chan_reserve_sat
-     *          *
      *          The minimum satoshis the other node is required to reserve in its
      *          balance.
      *     @type int $initiator
      *           The party that initiated opening the channel.
      *     @type int $commitment_type
-     *          &#47; The commitment type used by this channel.
+     *           The commitment type used by this channel.
      * }
      */
     public function __construct($data = NULL) {
@@ -201,8 +199,8 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its
-     * / balance.
+     * The minimum satoshis this node is required to reserve in its
+     * balance.
      *
      * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6;</code>
      * @return int|string
@@ -213,8 +211,8 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum satoshis this node is required to reserve in its
-     * / balance.
+     * The minimum satoshis this node is required to reserve in its
+     * balance.
      *
      * Generated from protobuf field <code>int64 local_chan_reserve_sat = 6;</code>
      * @param int|string $var
@@ -229,7 +227,6 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The minimum satoshis the other node is required to reserve in its
      *balance.
      *
@@ -242,7 +239,6 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The minimum satoshis the other node is required to reserve in its
      *balance.
      *
@@ -285,7 +281,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The commitment type used by this channel.
+     * The commitment type used by this channel.
      *
      * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 9;</code>
      * @return int
@@ -296,7 +292,7 @@ class PendingChannel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The commitment type used by this channel.
+     * The commitment type used by this channel.
      *
      * Generated from protobuf field <code>.lnrpc.CommitmentType commitment_type = 9;</code>
      * @param int $var

@@ -14,12 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class SettleInvoiceMsg extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Externally discovered pre-image that should be used to settle the hold
-     * / invoice.
+     * Externally discovered pre-image that should be used to settle the hold
+     * invoice.
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      */
-    private $preimage = '';
+    protected $preimage = '';
 
     /**
      * Constructor.
@@ -28,8 +28,8 @@ class SettleInvoiceMsg extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $preimage
-     *          &#47; Externally discovered pre-image that should be used to settle the hold
-     *          / invoice.
+     *           Externally discovered pre-image that should be used to settle the hold
+     *           invoice.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,8 +38,8 @@ class SettleInvoiceMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Externally discovered pre-image that should be used to settle the hold
-     * / invoice.
+     * Externally discovered pre-image that should be used to settle the hold
+     * invoice.
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      * @return string
@@ -50,8 +50,8 @@ class SettleInvoiceMsg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Externally discovered pre-image that should be used to settle the hold
-     * / invoice.
+     * Externally discovered pre-image that should be used to settle the hold
+     * invoice.
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      * @param string $var

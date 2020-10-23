@@ -14,37 +14,37 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelFeeReport extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The short channel id that this fee report belongs to.
+     * The short channel id that this fee report belongs to.
      *
      * Generated from protobuf field <code>uint64 chan_id = 5 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
-     *&#47; The channel that this fee report belongs to.
+     * The channel that this fee report belongs to.
      *
      * Generated from protobuf field <code>string channel_point = 1;</code>
      */
-    private $channel_point = '';
+    protected $channel_point = '';
     /**
-     *&#47; The base fee charged regardless of the number of milli-satoshis sent.
+     * The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 2;</code>
      */
-    private $base_fee_msat = 0;
+    protected $base_fee_msat = 0;
     /**
-     *&#47; The amount charged per milli-satoshis transferred expressed in
-     * / millionths of a satoshi.
+     * The amount charged per milli-satoshis transferred expressed in
+     * millionths of a satoshi.
      *
      * Generated from protobuf field <code>int64 fee_per_mil = 3;</code>
      */
-    private $fee_per_mil = 0;
+    protected $fee_per_mil = 0;
     /**
-     *&#47; The effective fee rate in milli-satoshis. Computed by dividing the
-     * / fee_per_mil value by 1 million.
+     * The effective fee rate in milli-satoshis. Computed by dividing the
+     * fee_per_mil value by 1 million.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      */
-    private $fee_rate = 0.0;
+    protected $fee_rate = 0.0;
 
     /**
      * Constructor.
@@ -53,17 +53,17 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $chan_id
-     *          &#47; The short channel id that this fee report belongs to.
+     *           The short channel id that this fee report belongs to.
      *     @type string $channel_point
-     *          &#47; The channel that this fee report belongs to.
+     *           The channel that this fee report belongs to.
      *     @type int|string $base_fee_msat
-     *          &#47; The base fee charged regardless of the number of milli-satoshis sent.
+     *           The base fee charged regardless of the number of milli-satoshis sent.
      *     @type int|string $fee_per_mil
-     *          &#47; The amount charged per milli-satoshis transferred expressed in
-     *          / millionths of a satoshi.
+     *           The amount charged per milli-satoshis transferred expressed in
+     *           millionths of a satoshi.
      *     @type float $fee_rate
-     *          &#47; The effective fee rate in milli-satoshis. Computed by dividing the
-     *          / fee_per_mil value by 1 million.
+     *           The effective fee rate in milli-satoshis. Computed by dividing the
+     *           fee_per_mil value by 1 million.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The short channel id that this fee report belongs to.
+     * The short channel id that this fee report belongs to.
      *
      * Generated from protobuf field <code>uint64 chan_id = 5 [jstype = JS_STRING];</code>
      * @return int|string
@@ -83,7 +83,7 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The short channel id that this fee report belongs to.
+     * The short channel id that this fee report belongs to.
      *
      * Generated from protobuf field <code>uint64 chan_id = 5 [jstype = JS_STRING];</code>
      * @param int|string $var
@@ -98,7 +98,7 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The channel that this fee report belongs to.
+     * The channel that this fee report belongs to.
      *
      * Generated from protobuf field <code>string channel_point = 1;</code>
      * @return string
@@ -109,7 +109,7 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The channel that this fee report belongs to.
+     * The channel that this fee report belongs to.
      *
      * Generated from protobuf field <code>string channel_point = 1;</code>
      * @param string $var
@@ -124,7 +124,7 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The base fee charged regardless of the number of milli-satoshis sent.
+     * The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 2;</code>
      * @return int|string
@@ -135,7 +135,7 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The base fee charged regardless of the number of milli-satoshis sent.
+     * The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 2;</code>
      * @param int|string $var
@@ -150,8 +150,8 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The amount charged per milli-satoshis transferred expressed in
-     * / millionths of a satoshi.
+     * The amount charged per milli-satoshis transferred expressed in
+     * millionths of a satoshi.
      *
      * Generated from protobuf field <code>int64 fee_per_mil = 3;</code>
      * @return int|string
@@ -162,8 +162,8 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The amount charged per milli-satoshis transferred expressed in
-     * / millionths of a satoshi.
+     * The amount charged per milli-satoshis transferred expressed in
+     * millionths of a satoshi.
      *
      * Generated from protobuf field <code>int64 fee_per_mil = 3;</code>
      * @param int|string $var
@@ -178,8 +178,8 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The effective fee rate in milli-satoshis. Computed by dividing the
-     * / fee_per_mil value by 1 million.
+     * The effective fee rate in milli-satoshis. Computed by dividing the
+     * fee_per_mil value by 1 million.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      * @return float
@@ -190,8 +190,8 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The effective fee rate in milli-satoshis. Computed by dividing the
-     * / fee_per_mil value by 1 million.
+     * The effective fee rate in milli-satoshis. Computed by dividing the
+     * fee_per_mil value by 1 million.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      * @param float $var

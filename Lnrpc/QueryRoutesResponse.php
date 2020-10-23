@@ -14,7 +14,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The route that results from the path finding operation. This is still a
      *repeated field to retain backwards compatibility.
      *
@@ -22,13 +21,12 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      */
     private $routes;
     /**
-     **
      *The success probability of the returned route based on the current mission
      *control state. [EXPERIMENTAL]
      *
      * Generated from protobuf field <code>double success_prob = 2;</code>
      */
-    private $success_prob = 0.0;
+    protected $success_prob = 0.0;
 
     /**
      * Constructor.
@@ -37,11 +35,9 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Lnrpc\Route[]|\Google\Protobuf\Internal\RepeatedField $routes
-     *          *
      *          The route that results from the path finding operation. This is still a
      *          repeated field to retain backwards compatibility.
      *     @type float $success_prob
-     *          *
      *          The success probability of the returned route based on the current mission
      *          control state. [EXPERIMENTAL]
      * }
@@ -52,7 +48,6 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The route that results from the path finding operation. This is still a
      *repeated field to retain backwards compatibility.
      *
@@ -65,7 +60,6 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The route that results from the path finding operation. This is still a
      *repeated field to retain backwards compatibility.
      *
@@ -82,7 +76,6 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The success probability of the returned route based on the current mission
      *control state. [EXPERIMENTAL]
      *
@@ -95,7 +88,6 @@ class QueryRoutesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The success probability of the returned route based on the current mission
      *control state. [EXPERIMENTAL]
      *

@@ -14,13 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The amount of satoshis per kw that should be used in order to reach the
      *confirmation target in the request.
      *
      * Generated from protobuf field <code>int64 sat_per_kw = 1;</code>
      */
-    private $sat_per_kw = 0;
+    protected $sat_per_kw = 0;
 
     /**
      * Constructor.
@@ -29,7 +28,6 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $sat_per_kw
-     *          *
      *          The amount of satoshis per kw that should be used in order to reach the
      *          confirmation target in the request.
      * }
@@ -40,7 +38,6 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount of satoshis per kw that should be used in order to reach the
      *confirmation target in the request.
      *
@@ -53,7 +50,6 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The amount of satoshis per kw that should be used in order to reach the
      *confirmation target in the request.
      *

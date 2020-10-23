@@ -4,6 +4,8 @@
 namespace Signrpc;
 
 /**
+ * Signer is a service that gives access to the signing functionality of the
+ * daemon's wallet.
  */
 class SignerClient extends \Grpc\BaseStub {
 
@@ -17,7 +19,7 @@ class SignerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     *
      * SignOutputRaw is a method that can be used to generated a signature for a
      * set of inputs/outputs to a transaction. Each request specifies details
      * concerning how the outputs should be signed, which keys they should be
@@ -39,7 +41,7 @@ class SignerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     *
      * ComputeInputScript generates a complete InputIndex for the passed
      * transaction with the signature as defined within the passed SignDescriptor.
      * This method should be capable of generating the proper input script for
@@ -63,7 +65,7 @@ class SignerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     *
      * SignMessage signs a message with the key specified in the key locator. The
      * returned signature is fixed-size LN wire format encoded.
      *
@@ -82,7 +84,7 @@ class SignerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     *
      * VerifyMessage verifies a signature over a message using the public key
      * provided. The signature must be fixed-size LN wire format encoded.
      *

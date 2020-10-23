@@ -14,22 +14,31 @@ use Google\Protobuf\Internal\GPBUtil;
 class PsbtShim extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      */
-    private $pending_chan_id = '';
+    protected $pending_chan_id = '';
     /**
-     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
      * Generated from protobuf field <code>bytes base_psbt = 2;</code>
      */
-    private $base_psbt = '';
+    protected $base_psbt = '';
+    /**
+     *If a channel should be part of a batch (multiple channel openings in one
+     *transaction), it can be dangerous if the whole batch transaction is
+     *published too early before all channel opening negotiations are completed.
+     *This flag prevents this particular channel from broadcasting the transaction
+     *after the negotiation with the remote peer. In a batch of channel openings
+     *this flag should be set to true for every channel but the very last.
+     *
+     * Generated from protobuf field <code>bool no_publish = 3;</code>
+     */
+    protected $no_publish = false;
 
     /**
      * Constructor.
@@ -38,14 +47,19 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pending_chan_id
-     *          *
      *          A unique identifier of 32 random bytes that will be used as the pending
      *          channel ID to identify the PSBT state machine when interacting with it and
      *          on the wire protocol to initiate the funding request.
      *     @type string $base_psbt
-     *          *
      *          An optional base PSBT the new channel output will be added to. If this is
      *          non-empty, it must be a binary serialized PSBT.
+     *     @type bool $no_publish
+     *          If a channel should be part of a batch (multiple channel openings in one
+     *          transaction), it can be dangerous if the whole batch transaction is
+     *          published too early before all channel opening negotiations are completed.
+     *          This flag prevents this particular channel from broadcasting the transaction
+     *          after the negotiation with the remote peer. In a batch of channel openings
+     *          this flag should be set to true for every channel but the very last.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +68,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -68,7 +81,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *A unique identifier of 32 random bytes that will be used as the pending
      *channel ID to identify the PSBT state machine when interacting with it and
      *on the wire protocol to initiate the funding request.
@@ -86,7 +98,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
@@ -99,7 +110,6 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
@@ -111,6 +121,42 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->base_psbt = $var;
+
+        return $this;
+    }
+
+    /**
+     *If a channel should be part of a batch (multiple channel openings in one
+     *transaction), it can be dangerous if the whole batch transaction is
+     *published too early before all channel opening negotiations are completed.
+     *This flag prevents this particular channel from broadcasting the transaction
+     *after the negotiation with the remote peer. In a batch of channel openings
+     *this flag should be set to true for every channel but the very last.
+     *
+     * Generated from protobuf field <code>bool no_publish = 3;</code>
+     * @return bool
+     */
+    public function getNoPublish()
+    {
+        return $this->no_publish;
+    }
+
+    /**
+     *If a channel should be part of a batch (multiple channel openings in one
+     *transaction), it can be dangerous if the whole batch transaction is
+     *published too early before all channel opening negotiations are completed.
+     *This flag prevents this particular channel from broadcasting the transaction
+     *after the negotiation with the remote peer. In a batch of channel openings
+     *this flag should be set to true for every channel but the very last.
+     *
+     * Generated from protobuf field <code>bool no_publish = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setNoPublish($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->no_publish = $var;
 
         return $this;
     }

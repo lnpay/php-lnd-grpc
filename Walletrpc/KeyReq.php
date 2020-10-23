@@ -14,22 +14,20 @@ use Google\Protobuf\Internal\GPBUtil;
 class KeyReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *Is the key finger print of the root pubkey that this request is targeting.
      *This allows the WalletKit to possibly serve out keys for multiple HD chains
      *via public derivation.
      *
      * Generated from protobuf field <code>int32 key_finger_print = 1;</code>
      */
-    private $key_finger_print = 0;
+    protected $key_finger_print = 0;
     /**
-     **
      *The target key family to derive a key from. In other contexts, this is
      *known as the "account".
      *
      * Generated from protobuf field <code>int32 key_family = 2;</code>
      */
-    private $key_family = 0;
+    protected $key_family = 0;
 
     /**
      * Constructor.
@@ -38,12 +36,10 @@ class KeyReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $key_finger_print
-     *          *
      *          Is the key finger print of the root pubkey that this request is targeting.
      *          This allows the WalletKit to possibly serve out keys for multiple HD chains
      *          via public derivation.
      *     @type int $key_family
-     *          *
      *          The target key family to derive a key from. In other contexts, this is
      *          known as the "account".
      * }
@@ -54,7 +50,6 @@ class KeyReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Is the key finger print of the root pubkey that this request is targeting.
      *This allows the WalletKit to possibly serve out keys for multiple HD chains
      *via public derivation.
@@ -68,7 +63,6 @@ class KeyReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *Is the key finger print of the root pubkey that this request is targeting.
      *This allows the WalletKit to possibly serve out keys for multiple HD chains
      *via public derivation.
@@ -86,7 +80,6 @@ class KeyReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target key family to derive a key from. In other contexts, this is
      *known as the "account".
      *
@@ -99,7 +92,6 @@ class KeyReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The target key family to derive a key from. In other contexts, this is
      *known as the "account".
      *

@@ -14,27 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendToRouteRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The payment hash to use for the HTLC. When using REST, this field must be
      *encoded as base64.
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
-     **
      *An optional hex-encoded payment hash to be used for the HTLC. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
      * Generated from protobuf field <code>string payment_hash_string = 2 [deprecated = true];</code>
      */
-    private $payment_hash_string = '';
+    protected $payment_hash_string = '';
     /**
-     *&#47; Route that should be used to attempt to complete the payment.
+     * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 4;</code>
      */
-    private $route = null;
+    protected $route = null;
 
     /**
      * Constructor.
@@ -43,15 +41,13 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payment_hash
-     *          *
      *          The payment hash to use for the HTLC. When using REST, this field must be
      *          encoded as base64.
      *     @type string $payment_hash_string
-     *          *
      *          An optional hex-encoded payment hash to be used for the HTLC. Deprecated now
      *          that the REST gateway supports base64 encoding of bytes fields.
      *     @type \Lnrpc\Route $route
-     *          &#47; Route that should be used to attempt to complete the payment.
+     *           Route that should be used to attempt to complete the payment.
      * }
      */
     public function __construct($data = NULL) {
@@ -60,7 +56,6 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The payment hash to use for the HTLC. When using REST, this field must be
      *encoded as base64.
      *
@@ -73,7 +68,6 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The payment hash to use for the HTLC. When using REST, this field must be
      *encoded as base64.
      *
@@ -90,7 +84,6 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional hex-encoded payment hash to be used for the HTLC. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
@@ -103,7 +96,6 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *An optional hex-encoded payment hash to be used for the HTLC. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
@@ -120,18 +112,28 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Route that should be used to attempt to complete the payment.
+     * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 4;</code>
      * @return \Lnrpc\Route
      */
     public function getRoute()
     {
-        return $this->route;
+        return isset($this->route) ? $this->route : null;
+    }
+
+    public function hasRoute()
+    {
+        return isset($this->route);
+    }
+
+    public function clearRoute()
+    {
+        unset($this->route);
     }
 
     /**
-     *&#47; Route that should be used to attempt to complete the payment.
+     * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 4;</code>
      * @param \Lnrpc\Route $var

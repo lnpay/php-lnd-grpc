@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class FloatMetric extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; Arbitrary float value.
+     * Arbitrary float value.
      *
      * Generated from protobuf field <code>double value = 1;</code>
      */
-    private $value = 0.0;
+    protected $value = 0.0;
     /**
-     *&#47; The value normalized to [0,1] or [-1,1].
+     * The value normalized to [0,1] or [-1,1].
      *
      * Generated from protobuf field <code>double normalized_value = 2;</code>
      */
-    private $normalized_value = 0.0;
+    protected $normalized_value = 0.0;
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class FloatMetric extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type float $value
-     *          &#47; Arbitrary float value.
+     *           Arbitrary float value.
      *     @type float $normalized_value
-     *          &#47; The value normalized to [0,1] or [-1,1].
+     *           The value normalized to [0,1] or [-1,1].
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class FloatMetric extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Arbitrary float value.
+     * Arbitrary float value.
      *
      * Generated from protobuf field <code>double value = 1;</code>
      * @return float
@@ -55,7 +55,7 @@ class FloatMetric extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; Arbitrary float value.
+     * Arbitrary float value.
      *
      * Generated from protobuf field <code>double value = 1;</code>
      * @param float $var
@@ -70,7 +70,7 @@ class FloatMetric extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The value normalized to [0,1] or [-1,1].
+     * The value normalized to [0,1] or [-1,1].
      *
      * Generated from protobuf field <code>double normalized_value = 2;</code>
      * @return float
@@ -81,7 +81,7 @@ class FloatMetric extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The value normalized to [0,1] or [-1,1].
+     * The value normalized to [0,1] or [-1,1].
      *
      * Generated from protobuf field <code>double normalized_value = 2;</code>
      * @param float $var

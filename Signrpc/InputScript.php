@@ -14,19 +14,18 @@ use Google\Protobuf\Internal\GPBUtil;
 class InputScript extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The serializes witness stack for the specified input.
+     * The serializes witness stack for the specified input.
      *
      * Generated from protobuf field <code>repeated bytes witness = 1;</code>
      */
     private $witness;
     /**
-     ***
      *The optional sig script for the specified witness that will only be set if
      *the input specified is a nested p2sh witness program.
      *
      * Generated from protobuf field <code>bytes sig_script = 2;</code>
      */
-    private $sig_script = '';
+    protected $sig_script = '';
 
     /**
      * Constructor.
@@ -35,9 +34,8 @@ class InputScript extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $witness
-     *          &#47; The serializes witness stack for the specified input.
+     *           The serializes witness stack for the specified input.
      *     @type string $sig_script
-     *          **
      *          The optional sig script for the specified witness that will only be set if
      *          the input specified is a nested p2sh witness program.
      * }
@@ -48,7 +46,7 @@ class InputScript extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The serializes witness stack for the specified input.
+     * The serializes witness stack for the specified input.
      *
      * Generated from protobuf field <code>repeated bytes witness = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -59,7 +57,7 @@ class InputScript extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The serializes witness stack for the specified input.
+     * The serializes witness stack for the specified input.
      *
      * Generated from protobuf field <code>repeated bytes witness = 1;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -74,7 +72,6 @@ class InputScript extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ***
      *The optional sig script for the specified witness that will only be set if
      *the input specified is a nested p2sh witness program.
      *
@@ -87,7 +84,6 @@ class InputScript extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     ***
      *The optional sig script for the specified witness that will only be set if
      *the input specified is a nested p2sh witness program.
      *

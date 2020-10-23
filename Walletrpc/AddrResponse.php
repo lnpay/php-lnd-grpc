@@ -14,12 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class AddrResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The address encoded using a bech32 format.
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      */
-    private $addr = '';
+    protected $addr = '';
 
     /**
      * Constructor.
@@ -28,7 +27,6 @@ class AddrResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $addr
-     *          *
      *          The address encoded using a bech32 format.
      * }
      */
@@ -38,7 +36,6 @@ class AddrResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The address encoded using a bech32 format.
      *
      * Generated from protobuf field <code>string addr = 1;</code>
@@ -50,7 +47,6 @@ class AddrResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The address encoded using a bech32 format.
      *
      * Generated from protobuf field <code>string addr = 1;</code>

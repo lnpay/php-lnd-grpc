@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class TxOut extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The value of the output being spent.
+     * The value of the output being spent.
      *
      * Generated from protobuf field <code>int64 value = 1;</code>
      */
-    private $value = 0;
+    protected $value = 0;
     /**
-     *&#47; The script of the output being spent.
+     * The script of the output being spent.
      *
      * Generated from protobuf field <code>bytes pk_script = 2;</code>
      */
-    private $pk_script = '';
+    protected $pk_script = '';
 
     /**
      * Constructor.
@@ -33,9 +33,9 @@ class TxOut extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $value
-     *          &#47; The value of the output being spent.
+     *           The value of the output being spent.
      *     @type string $pk_script
-     *          &#47; The script of the output being spent.
+     *           The script of the output being spent.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class TxOut extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The value of the output being spent.
+     * The value of the output being spent.
      *
      * Generated from protobuf field <code>int64 value = 1;</code>
      * @return int|string
@@ -55,7 +55,7 @@ class TxOut extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The value of the output being spent.
+     * The value of the output being spent.
      *
      * Generated from protobuf field <code>int64 value = 1;</code>
      * @param int|string $var
@@ -70,7 +70,7 @@ class TxOut extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The script of the output being spent.
+     * The script of the output being spent.
      *
      * Generated from protobuf field <code>bytes pk_script = 2;</code>
      * @return string
@@ -81,7 +81,7 @@ class TxOut extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The script of the output being spent.
+     * The script of the output being spent.
      *
      * Generated from protobuf field <code>bytes pk_script = 2;</code>
      * @param string $var

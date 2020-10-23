@@ -14,15 +14,15 @@ use Google\Protobuf\Internal\GPBUtil;
 class PeerEvent extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The identity pubkey of the peer.
+     * The identity pubkey of the peer.
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    private $pub_key = '';
+    protected $pub_key = '';
     /**
      * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2;</code>
      */
-    private $type = 0;
+    protected $type = 0;
 
     /**
      * Constructor.
@@ -31,7 +31,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $pub_key
-     *          &#47; The identity pubkey of the peer.
+     *           The identity pubkey of the peer.
      *     @type int $type
      * }
      */
@@ -41,7 +41,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the peer.
+     * The identity pubkey of the peer.
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @return string
@@ -52,7 +52,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The identity pubkey of the peer.
+     * The identity pubkey of the peer.
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      * @param string $var
@@ -82,7 +82,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\PeerEvent_EventType::class);
+        GPBUtil::checkEnum($var, \Lnrpc\PeerEvent\EventType::class);
         $this->type = $var;
 
         return $this;

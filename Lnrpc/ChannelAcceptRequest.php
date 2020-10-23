@@ -14,90 +14,89 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The pubkey of the node that wishes to open an inbound channel.
+     * The pubkey of the node that wishes to open an inbound channel.
      *
      * Generated from protobuf field <code>bytes node_pubkey = 1;</code>
      */
-    private $node_pubkey = '';
+    protected $node_pubkey = '';
     /**
-     *&#47; The hash of the genesis block that the proposed channel resides in.
+     * The hash of the genesis block that the proposed channel resides in.
      *
      * Generated from protobuf field <code>bytes chain_hash = 2;</code>
      */
-    private $chain_hash = '';
+    protected $chain_hash = '';
     /**
-     *&#47; The pending channel id.
+     * The pending channel id.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 3;</code>
      */
-    private $pending_chan_id = '';
+    protected $pending_chan_id = '';
     /**
-     *&#47; The funding amount in satoshis that initiator wishes to use in the
-     * / channel.
+     * The funding amount in satoshis that initiator wishes to use in the
+     * channel.
      *
      * Generated from protobuf field <code>uint64 funding_amt = 4;</code>
      */
-    private $funding_amt = 0;
+    protected $funding_amt = 0;
     /**
-     *&#47; The push amount of the proposed channel in millisatoshis.
+     * The push amount of the proposed channel in millisatoshis.
      *
      * Generated from protobuf field <code>uint64 push_amt = 5;</code>
      */
-    private $push_amt = 0;
+    protected $push_amt = 0;
     /**
-     *&#47; The dust limit of the initiator's commitment tx.
+     * The dust limit of the initiator's commitment tx.
      *
      * Generated from protobuf field <code>uint64 dust_limit = 6;</code>
      */
-    private $dust_limit = 0;
+    protected $dust_limit = 0;
     /**
-     *&#47; The maximum amount of coins in millisatoshis that can be pending in this
-     * / channel.
+     * The maximum amount of coins in millisatoshis that can be pending in this
+     * channel.
      *
      * Generated from protobuf field <code>uint64 max_value_in_flight = 7;</code>
      */
-    private $max_value_in_flight = 0;
+    protected $max_value_in_flight = 0;
     /**
-     *&#47; The minimum amount of satoshis the initiator requires us to have at all
-     * / times.
+     * The minimum amount of satoshis the initiator requires us to have at all
+     * times.
      *
      * Generated from protobuf field <code>uint64 channel_reserve = 8;</code>
      */
-    private $channel_reserve = 0;
+    protected $channel_reserve = 0;
     /**
-     *&#47; The smallest HTLC in millisatoshis that the initiator will accept.
+     * The smallest HTLC in millisatoshis that the initiator will accept.
      *
      * Generated from protobuf field <code>uint64 min_htlc = 9;</code>
      */
-    private $min_htlc = 0;
+    protected $min_htlc = 0;
     /**
-     *&#47; The initial fee rate that the initiator suggests for both commitment
-     * / transactions.
+     * The initial fee rate that the initiator suggests for both commitment
+     * transactions.
      *
      * Generated from protobuf field <code>uint64 fee_per_kw = 10;</code>
      */
-    private $fee_per_kw = 0;
+    protected $fee_per_kw = 0;
     /**
-     **
      *The number of blocks to use for the relative time lock in the pay-to-self
      *output of both commitment transactions.
      *
      * Generated from protobuf field <code>uint32 csv_delay = 11;</code>
      */
-    private $csv_delay = 0;
+    protected $csv_delay = 0;
     /**
-     *&#47; The total number of incoming HTLC's that the initiator will accept.
+     * The total number of incoming HTLC's that the initiator will accept.
      *
      * Generated from protobuf field <code>uint32 max_accepted_htlcs = 12;</code>
      */
-    private $max_accepted_htlcs = 0;
+    protected $max_accepted_htlcs = 0;
     /**
-     *&#47; A bit-field which the initiator uses to specify proposed channel
-     * / behavior.
+     * A bit-field which the initiator uses to specify proposed channel
+     * behavior.
      *
      * Generated from protobuf field <code>uint32 channel_flags = 13;</code>
      */
-    private $channel_flags = 0;
+    protected $channel_flags = 0;
 
     /**
      * Constructor.
@@ -106,38 +105,37 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $node_pubkey
-     *          &#47; The pubkey of the node that wishes to open an inbound channel.
+     *           The pubkey of the node that wishes to open an inbound channel.
      *     @type string $chain_hash
-     *          &#47; The hash of the genesis block that the proposed channel resides in.
+     *           The hash of the genesis block that the proposed channel resides in.
      *     @type string $pending_chan_id
-     *          &#47; The pending channel id.
+     *           The pending channel id.
      *     @type int|string $funding_amt
-     *          &#47; The funding amount in satoshis that initiator wishes to use in the
-     *          / channel.
+     *           The funding amount in satoshis that initiator wishes to use in the
+     *           channel.
      *     @type int|string $push_amt
-     *          &#47; The push amount of the proposed channel in millisatoshis.
+     *           The push amount of the proposed channel in millisatoshis.
      *     @type int|string $dust_limit
-     *          &#47; The dust limit of the initiator's commitment tx.
+     *           The dust limit of the initiator's commitment tx.
      *     @type int|string $max_value_in_flight
-     *          &#47; The maximum amount of coins in millisatoshis that can be pending in this
-     *          / channel.
+     *           The maximum amount of coins in millisatoshis that can be pending in this
+     *           channel.
      *     @type int|string $channel_reserve
-     *          &#47; The minimum amount of satoshis the initiator requires us to have at all
-     *          / times.
+     *           The minimum amount of satoshis the initiator requires us to have at all
+     *           times.
      *     @type int|string $min_htlc
-     *          &#47; The smallest HTLC in millisatoshis that the initiator will accept.
+     *           The smallest HTLC in millisatoshis that the initiator will accept.
      *     @type int|string $fee_per_kw
-     *          &#47; The initial fee rate that the initiator suggests for both commitment
-     *          / transactions.
+     *           The initial fee rate that the initiator suggests for both commitment
+     *           transactions.
      *     @type int $csv_delay
-     *          *
      *          The number of blocks to use for the relative time lock in the pay-to-self
      *          output of both commitment transactions.
      *     @type int $max_accepted_htlcs
-     *          &#47; The total number of incoming HTLC's that the initiator will accept.
+     *           The total number of incoming HTLC's that the initiator will accept.
      *     @type int $channel_flags
-     *          &#47; A bit-field which the initiator uses to specify proposed channel
-     *          / behavior.
+     *           A bit-field which the initiator uses to specify proposed channel
+     *           behavior.
      * }
      */
     public function __construct($data = NULL) {
@@ -146,7 +144,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pubkey of the node that wishes to open an inbound channel.
+     * The pubkey of the node that wishes to open an inbound channel.
      *
      * Generated from protobuf field <code>bytes node_pubkey = 1;</code>
      * @return string
@@ -157,7 +155,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pubkey of the node that wishes to open an inbound channel.
+     * The pubkey of the node that wishes to open an inbound channel.
      *
      * Generated from protobuf field <code>bytes node_pubkey = 1;</code>
      * @param string $var
@@ -172,7 +170,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash of the genesis block that the proposed channel resides in.
+     * The hash of the genesis block that the proposed channel resides in.
      *
      * Generated from protobuf field <code>bytes chain_hash = 2;</code>
      * @return string
@@ -183,7 +181,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The hash of the genesis block that the proposed channel resides in.
+     * The hash of the genesis block that the proposed channel resides in.
      *
      * Generated from protobuf field <code>bytes chain_hash = 2;</code>
      * @param string $var
@@ -198,7 +196,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel id.
+     * The pending channel id.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 3;</code>
      * @return string
@@ -209,7 +207,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The pending channel id.
+     * The pending channel id.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 3;</code>
      * @param string $var
@@ -224,8 +222,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The funding amount in satoshis that initiator wishes to use in the
-     * / channel.
+     * The funding amount in satoshis that initiator wishes to use in the
+     * channel.
      *
      * Generated from protobuf field <code>uint64 funding_amt = 4;</code>
      * @return int|string
@@ -236,8 +234,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The funding amount in satoshis that initiator wishes to use in the
-     * / channel.
+     * The funding amount in satoshis that initiator wishes to use in the
+     * channel.
      *
      * Generated from protobuf field <code>uint64 funding_amt = 4;</code>
      * @param int|string $var
@@ -252,7 +250,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The push amount of the proposed channel in millisatoshis.
+     * The push amount of the proposed channel in millisatoshis.
      *
      * Generated from protobuf field <code>uint64 push_amt = 5;</code>
      * @return int|string
@@ -263,7 +261,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The push amount of the proposed channel in millisatoshis.
+     * The push amount of the proposed channel in millisatoshis.
      *
      * Generated from protobuf field <code>uint64 push_amt = 5;</code>
      * @param int|string $var
@@ -278,7 +276,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The dust limit of the initiator's commitment tx.
+     * The dust limit of the initiator's commitment tx.
      *
      * Generated from protobuf field <code>uint64 dust_limit = 6;</code>
      * @return int|string
@@ -289,7 +287,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The dust limit of the initiator's commitment tx.
+     * The dust limit of the initiator's commitment tx.
      *
      * Generated from protobuf field <code>uint64 dust_limit = 6;</code>
      * @param int|string $var
@@ -304,8 +302,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The maximum amount of coins in millisatoshis that can be pending in this
-     * / channel.
+     * The maximum amount of coins in millisatoshis that can be pending in this
+     * channel.
      *
      * Generated from protobuf field <code>uint64 max_value_in_flight = 7;</code>
      * @return int|string
@@ -316,8 +314,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The maximum amount of coins in millisatoshis that can be pending in this
-     * / channel.
+     * The maximum amount of coins in millisatoshis that can be pending in this
+     * channel.
      *
      * Generated from protobuf field <code>uint64 max_value_in_flight = 7;</code>
      * @param int|string $var
@@ -332,8 +330,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum amount of satoshis the initiator requires us to have at all
-     * / times.
+     * The minimum amount of satoshis the initiator requires us to have at all
+     * times.
      *
      * Generated from protobuf field <code>uint64 channel_reserve = 8;</code>
      * @return int|string
@@ -344,8 +342,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The minimum amount of satoshis the initiator requires us to have at all
-     * / times.
+     * The minimum amount of satoshis the initiator requires us to have at all
+     * times.
      *
      * Generated from protobuf field <code>uint64 channel_reserve = 8;</code>
      * @param int|string $var
@@ -360,7 +358,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The smallest HTLC in millisatoshis that the initiator will accept.
+     * The smallest HTLC in millisatoshis that the initiator will accept.
      *
      * Generated from protobuf field <code>uint64 min_htlc = 9;</code>
      * @return int|string
@@ -371,7 +369,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The smallest HTLC in millisatoshis that the initiator will accept.
+     * The smallest HTLC in millisatoshis that the initiator will accept.
      *
      * Generated from protobuf field <code>uint64 min_htlc = 9;</code>
      * @param int|string $var
@@ -386,8 +384,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The initial fee rate that the initiator suggests for both commitment
-     * / transactions.
+     * The initial fee rate that the initiator suggests for both commitment
+     * transactions.
      *
      * Generated from protobuf field <code>uint64 fee_per_kw = 10;</code>
      * @return int|string
@@ -398,8 +396,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The initial fee rate that the initiator suggests for both commitment
-     * / transactions.
+     * The initial fee rate that the initiator suggests for both commitment
+     * transactions.
      *
      * Generated from protobuf field <code>uint64 fee_per_kw = 10;</code>
      * @param int|string $var
@@ -414,7 +412,6 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of blocks to use for the relative time lock in the pay-to-self
      *output of both commitment transactions.
      *
@@ -427,7 +424,6 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The number of blocks to use for the relative time lock in the pay-to-self
      *output of both commitment transactions.
      *
@@ -444,7 +440,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total number of incoming HTLC's that the initiator will accept.
+     * The total number of incoming HTLC's that the initiator will accept.
      *
      * Generated from protobuf field <code>uint32 max_accepted_htlcs = 12;</code>
      * @return int
@@ -455,7 +451,7 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The total number of incoming HTLC's that the initiator will accept.
+     * The total number of incoming HTLC's that the initiator will accept.
      *
      * Generated from protobuf field <code>uint32 max_accepted_htlcs = 12;</code>
      * @param int $var
@@ -470,8 +466,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A bit-field which the initiator uses to specify proposed channel
-     * / behavior.
+     * A bit-field which the initiator uses to specify proposed channel
+     * behavior.
      *
      * Generated from protobuf field <code>uint32 channel_flags = 13;</code>
      * @return int
@@ -482,8 +478,8 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; A bit-field which the initiator uses to specify proposed channel
-     * / behavior.
+     * A bit-field which the initiator uses to specify proposed channel
+     * behavior.
      *
      * Generated from protobuf field <code>uint32 channel_flags = 13;</code>
      * @param int $var

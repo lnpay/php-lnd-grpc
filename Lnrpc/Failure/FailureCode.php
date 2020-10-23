@@ -12,7 +12,6 @@ use UnexpectedValueException;
 class FailureCode
 {
     /**
-     **
      *The numbers assigned in this enumeration match the failure codes as
      *defined in BOLT #4. Because protobuf 3 requires enums to start with 0,
      *a RESERVED value is added.
@@ -113,21 +112,18 @@ class FailureCode
      */
     const MPP_TIMEOUT = 23;
     /**
-     **
      *An internal error occurred.
      *
      * Generated from protobuf enum <code>INTERNAL_FAILURE = 997;</code>
      */
     const INTERNAL_FAILURE = 997;
     /**
-     **
      *The error source is known, but the failure itself couldn't be decoded.
      *
      * Generated from protobuf enum <code>UNKNOWN_FAILURE = 998;</code>
      */
     const UNKNOWN_FAILURE = 998;
     /**
-     **
      *An unreadable failure result is returned if the received failure message
      *cannot be decrypted. In that case the error source is unknown.
      *

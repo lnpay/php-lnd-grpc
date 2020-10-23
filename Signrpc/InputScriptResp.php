@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class InputScriptResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The set of fully valid input scripts requested.
+     * The set of fully valid input scripts requested.
      *
      * Generated from protobuf field <code>repeated .signrpc.InputScript input_scripts = 1;</code>
      */
@@ -27,7 +27,7 @@ class InputScriptResp extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Signrpc\InputScript[]|\Google\Protobuf\Internal\RepeatedField $input_scripts
-     *          &#47; The set of fully valid input scripts requested.
+     *           The set of fully valid input scripts requested.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class InputScriptResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The set of fully valid input scripts requested.
+     * The set of fully valid input scripts requested.
      *
      * Generated from protobuf field <code>repeated .signrpc.InputScript input_scripts = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class InputScriptResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The set of fully valid input scripts requested.
+     * The set of fully valid input scripts requested.
      *
      * Generated from protobuf field <code>repeated .signrpc.InputScript input_scripts = 1;</code>
      * @param \Signrpc\InputScript[]|\Google\Protobuf\Internal\RepeatedField $var

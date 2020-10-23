@@ -14,13 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class EdgeLocator extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The short channel id of this edge.
+     * The short channel id of this edge.
      *
      * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      */
-    private $channel_id = 0;
+    protected $channel_id = 0;
     /**
-     **
      *The direction of this edge. If direction_reverse is false, the direction
      *of this edge is from the channel endpoint with the lexicographically smaller
      *pub key to the endpoint with the larger pub key. If direction_reverse is
@@ -28,7 +27,7 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool direction_reverse = 2;</code>
      */
-    private $direction_reverse = false;
+    protected $direction_reverse = false;
 
     /**
      * Constructor.
@@ -37,9 +36,8 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $channel_id
-     *          &#47; The short channel id of this edge.
+     *           The short channel id of this edge.
      *     @type bool $direction_reverse
-     *          *
      *          The direction of this edge. If direction_reverse is false, the direction
      *          of this edge is from the channel endpoint with the lexicographically smaller
      *          pub key to the endpoint with the larger pub key. If direction_reverse is
@@ -52,7 +50,7 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The short channel id of this edge.
+     * The short channel id of this edge.
      *
      * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      * @return int|string
@@ -63,7 +61,7 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The short channel id of this edge.
+     * The short channel id of this edge.
      *
      * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      * @param int|string $var
@@ -78,7 +76,6 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The direction of this edge. If direction_reverse is false, the direction
      *of this edge is from the channel endpoint with the lexicographically smaller
      *pub key to the endpoint with the larger pub key. If direction_reverse is
@@ -93,7 +90,6 @@ class EdgeLocator extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The direction of this edge. If direction_reverse is false, the direction
      *of this edge is from the channel endpoint with the lexicographically smaller
      *pub key to the endpoint with the larger pub key. If direction_reverse is

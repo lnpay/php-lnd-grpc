@@ -14,12 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class SendOutputsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The serialized transaction sent out on the network.
      *
      * Generated from protobuf field <code>bytes raw_tx = 1;</code>
      */
-    private $raw_tx = '';
+    protected $raw_tx = '';
 
     /**
      * Constructor.
@@ -28,7 +27,6 @@ class SendOutputsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $raw_tx
-     *          *
      *          The serialized transaction sent out on the network.
      * }
      */
@@ -38,7 +36,6 @@ class SendOutputsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The serialized transaction sent out on the network.
      *
      * Generated from protobuf field <code>bytes raw_tx = 1;</code>
@@ -50,7 +47,6 @@ class SendOutputsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The serialized transaction sent out on the network.
      *
      * Generated from protobuf field <code>bytes raw_tx = 1;</code>

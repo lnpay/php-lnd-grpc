@@ -14,34 +14,33 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    private $chan_id = 0;
+    protected $chan_id = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 2;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
     /**
      * Generated from protobuf field <code>int64 capacity = 3;</code>
      */
-    private $capacity = 0;
+    protected $capacity = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy routing_policy = 4;</code>
      */
-    private $routing_policy = null;
+    protected $routing_policy = null;
     /**
      * Generated from protobuf field <code>string advertising_node = 5;</code>
      */
-    private $advertising_node = '';
+    protected $advertising_node = '';
     /**
      * Generated from protobuf field <code>string connecting_node = 6;</code>
      */
-    private $connecting_node = '';
+    protected $connecting_node = '';
 
     /**
      * Constructor.
@@ -50,7 +49,6 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $chan_id
-     *          *
      *          The unique channel ID for the channel. The first 3 bytes are the block
      *          height, the next 3 the index within the block, and the last 2 bytes are the
      *          output index for the channel.
@@ -67,7 +65,6 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -81,7 +78,6 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The unique channel ID for the channel. The first 3 bytes are the block
      *height, the next 3 the index within the block, and the last 2 bytes are the
      *output index for the channel.
@@ -104,7 +100,17 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
      */
     public function getChanPoint()
     {
-        return $this->chan_point;
+        return isset($this->chan_point) ? $this->chan_point : null;
+    }
+
+    public function hasChanPoint()
+    {
+        return isset($this->chan_point);
+    }
+
+    public function clearChanPoint()
+    {
+        unset($this->chan_point);
     }
 
     /**
@@ -148,7 +154,17 @@ class ChannelEdgeUpdate extends \Google\Protobuf\Internal\Message
      */
     public function getRoutingPolicy()
     {
-        return $this->routing_policy;
+        return isset($this->routing_policy) ? $this->routing_policy : null;
+    }
+
+    public function hasRoutingPolicy()
+    {
+        return isset($this->routing_policy);
+    }
+
+    public function clearRoutingPolicy()
+    {
+        unset($this->routing_policy);
     }
 
     /**

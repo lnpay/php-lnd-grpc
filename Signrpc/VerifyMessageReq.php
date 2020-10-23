@@ -14,25 +14,24 @@ use Google\Protobuf\Internal\GPBUtil;
 class VerifyMessageReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     *&#47; The message over which the signature is to be verified.
+     * The message over which the signature is to be verified.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    private $msg = '';
+    protected $msg = '';
     /**
-     **
      *The fixed-size LN wire encoded signature to be verified over the given
      *message.
      *
      * Generated from protobuf field <code>bytes signature = 2;</code>
      */
-    private $signature = '';
+    protected $signature = '';
     /**
-     *&#47; The public key the signature has to be valid for.
+     * The public key the signature has to be valid for.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
 
     /**
      * Constructor.
@@ -41,13 +40,12 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $msg
-     *          &#47; The message over which the signature is to be verified.
+     *           The message over which the signature is to be verified.
      *     @type string $signature
-     *          *
      *          The fixed-size LN wire encoded signature to be verified over the given
      *          message.
      *     @type string $pubkey
-     *          &#47; The public key the signature has to be valid for.
+     *           The public key the signature has to be valid for.
      * }
      */
     public function __construct($data = NULL) {
@@ -56,7 +54,7 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The message over which the signature is to be verified.
+     * The message over which the signature is to be verified.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @return string
@@ -67,7 +65,7 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The message over which the signature is to be verified.
+     * The message over which the signature is to be verified.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @param string $var
@@ -82,7 +80,6 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fixed-size LN wire encoded signature to be verified over the given
      *message.
      *
@@ -95,7 +92,6 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     **
      *The fixed-size LN wire encoded signature to be verified over the given
      *message.
      *
@@ -112,7 +108,7 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The public key the signature has to be valid for.
+     * The public key the signature has to be valid for.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      * @return string
@@ -123,7 +119,7 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *&#47; The public key the signature has to be valid for.
+     * The public key the signature has to be valid for.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      * @param string $var
