@@ -18,13 +18,13 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.PaymentState state = 1;</code>
      */
-    protected $state = 0;
+    private $state = 0;
     /**
      *The pre-image of the payment when state is SUCCEEDED.
      *
      * Generated from protobuf field <code>bytes preimage = 2;</code>
      */
-    protected $preimage = '';
+    private $preimage = '';
     /**
      *The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *

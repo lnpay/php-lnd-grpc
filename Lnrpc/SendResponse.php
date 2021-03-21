@@ -16,19 +16,19 @@ class SendResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string payment_error = 1;</code>
      */
-    protected $payment_error = '';
+    private $payment_error = '';
     /**
      * Generated from protobuf field <code>bytes payment_preimage = 2;</code>
      */
-    protected $payment_preimage = '';
+    private $payment_preimage = '';
     /**
      * Generated from protobuf field <code>.lnrpc.Route payment_route = 3;</code>
      */
-    protected $payment_route = null;
+    private $payment_route = null;
     /**
      * Generated from protobuf field <code>bytes payment_hash = 4;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
 
     /**
      * Constructor.
@@ -97,17 +97,7 @@ class SendResponse extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentRoute()
     {
-        return isset($this->payment_route) ? $this->payment_route : null;
-    }
-
-    public function hasPaymentRoute()
-    {
-        return isset($this->payment_route);
-    }
-
-    public function clearPaymentRoute()
-    {
-        unset($this->payment_route);
+        return $this->payment_route;
     }
 
     /**

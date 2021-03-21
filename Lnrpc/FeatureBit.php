@@ -79,6 +79,30 @@ class FeatureBit
      * Generated from protobuf enum <code>MPP_OPT = 17;</code>
      */
     const MPP_OPT = 17;
+    /**
+     * Generated from protobuf enum <code>WUMBO_CHANNELS_REQ = 18;</code>
+     */
+    const WUMBO_CHANNELS_REQ = 18;
+    /**
+     * Generated from protobuf enum <code>WUMBO_CHANNELS_OPT = 19;</code>
+     */
+    const WUMBO_CHANNELS_OPT = 19;
+    /**
+     * Generated from protobuf enum <code>ANCHORS_REQ = 20;</code>
+     */
+    const ANCHORS_REQ = 20;
+    /**
+     * Generated from protobuf enum <code>ANCHORS_OPT = 21;</code>
+     */
+    const ANCHORS_OPT = 21;
+    /**
+     * Generated from protobuf enum <code>ANCHORS_ZERO_FEE_HTLC_REQ = 22;</code>
+     */
+    const ANCHORS_ZERO_FEE_HTLC_REQ = 22;
+    /**
+     * Generated from protobuf enum <code>ANCHORS_ZERO_FEE_HTLC_OPT = 23;</code>
+     */
+    const ANCHORS_ZERO_FEE_HTLC_OPT = 23;
 
     private static $valueToName = [
         self::DATALOSS_PROTECT_REQ => 'DATALOSS_PROTECT_REQ',
@@ -98,6 +122,12 @@ class FeatureBit
         self::PAYMENT_ADDR_OPT => 'PAYMENT_ADDR_OPT',
         self::MPP_REQ => 'MPP_REQ',
         self::MPP_OPT => 'MPP_OPT',
+        self::WUMBO_CHANNELS_REQ => 'WUMBO_CHANNELS_REQ',
+        self::WUMBO_CHANNELS_OPT => 'WUMBO_CHANNELS_OPT',
+        self::ANCHORS_REQ => 'ANCHORS_REQ',
+        self::ANCHORS_OPT => 'ANCHORS_OPT',
+        self::ANCHORS_ZERO_FEE_HTLC_REQ => 'ANCHORS_ZERO_FEE_HTLC_REQ',
+        self::ANCHORS_ZERO_FEE_HTLC_OPT => 'ANCHORS_ZERO_FEE_HTLC_OPT',
     ];
 
     public static function name($value)

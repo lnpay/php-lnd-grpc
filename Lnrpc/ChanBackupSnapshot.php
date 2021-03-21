@@ -19,14 +19,14 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelBackups single_chan_backups = 1;</code>
      */
-    protected $single_chan_backups = null;
+    private $single_chan_backups = null;
     /**
      *A multi-channel backup that covers all open channels currently known to
      *lnd.
      *
      * Generated from protobuf field <code>.lnrpc.MultiChanBackup multi_chan_backup = 2;</code>
      */
-    protected $multi_chan_backup = null;
+    private $multi_chan_backup = null;
 
     /**
      * Constructor.
@@ -56,17 +56,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      */
     public function getSingleChanBackups()
     {
-        return isset($this->single_chan_backups) ? $this->single_chan_backups : null;
-    }
-
-    public function hasSingleChanBackups()
-    {
-        return isset($this->single_chan_backups);
-    }
-
-    public function clearSingleChanBackups()
-    {
-        unset($this->single_chan_backups);
+        return $this->single_chan_backups;
     }
 
     /**
@@ -94,17 +84,7 @@ class ChanBackupSnapshot extends \Google\Protobuf\Internal\Message
      */
     public function getMultiChanBackup()
     {
-        return isset($this->multi_chan_backup) ? $this->multi_chan_backup : null;
-    }
-
-    public function hasMultiChanBackup()
-    {
-        return isset($this->multi_chan_backup);
-    }
-
-    public function clearMultiChanBackup()
-    {
-        unset($this->multi_chan_backup);
+        return $this->multi_chan_backup;
     }
 
     /**

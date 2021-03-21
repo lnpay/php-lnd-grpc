@@ -18,33 +18,33 @@ class ChannelFeeReport extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 5 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * The channel that this fee report belongs to.
      *
      * Generated from protobuf field <code>string channel_point = 1;</code>
      */
-    protected $channel_point = '';
+    private $channel_point = '';
     /**
      * The base fee charged regardless of the number of milli-satoshis sent.
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 2;</code>
      */
-    protected $base_fee_msat = 0;
+    private $base_fee_msat = 0;
     /**
      * The amount charged per milli-satoshis transferred expressed in
      * millionths of a satoshi.
      *
      * Generated from protobuf field <code>int64 fee_per_mil = 3;</code>
      */
-    protected $fee_per_mil = 0;
+    private $fee_per_mil = 0;
     /**
      * The effective fee rate in milli-satoshis. Computed by dividing the
      * fee_per_mil value by 1 million.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      */
-    protected $fee_rate = 0.0;
+    private $fee_rate = 0.0;
 
     /**
      * Constructor.

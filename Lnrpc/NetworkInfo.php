@@ -16,49 +16,49 @@ class NetworkInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>uint32 graph_diameter = 1;</code>
      */
-    protected $graph_diameter = 0;
+    private $graph_diameter = 0;
     /**
      * Generated from protobuf field <code>double avg_out_degree = 2;</code>
      */
-    protected $avg_out_degree = 0.0;
+    private $avg_out_degree = 0.0;
     /**
      * Generated from protobuf field <code>uint32 max_out_degree = 3;</code>
      */
-    protected $max_out_degree = 0;
+    private $max_out_degree = 0;
     /**
      * Generated from protobuf field <code>uint32 num_nodes = 4;</code>
      */
-    protected $num_nodes = 0;
+    private $num_nodes = 0;
     /**
      * Generated from protobuf field <code>uint32 num_channels = 5;</code>
      */
-    protected $num_channels = 0;
+    private $num_channels = 0;
     /**
      * Generated from protobuf field <code>int64 total_network_capacity = 6;</code>
      */
-    protected $total_network_capacity = 0;
+    private $total_network_capacity = 0;
     /**
      * Generated from protobuf field <code>double avg_channel_size = 7;</code>
      */
-    protected $avg_channel_size = 0.0;
+    private $avg_channel_size = 0.0;
     /**
      * Generated from protobuf field <code>int64 min_channel_size = 8;</code>
      */
-    protected $min_channel_size = 0;
+    private $min_channel_size = 0;
     /**
      * Generated from protobuf field <code>int64 max_channel_size = 9;</code>
      */
-    protected $max_channel_size = 0;
+    private $max_channel_size = 0;
     /**
      * Generated from protobuf field <code>int64 median_channel_size_sat = 10;</code>
      */
-    protected $median_channel_size_sat = 0;
+    private $median_channel_size_sat = 0;
     /**
      * The number of edges marked as zombies.
      *
      * Generated from protobuf field <code>uint64 num_zombie_chans = 11;</code>
      */
-    protected $num_zombie_chans = 0;
+    private $num_zombie_chans = 0;
 
     /**
      * Constructor.

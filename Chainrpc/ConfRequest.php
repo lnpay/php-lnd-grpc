@@ -20,7 +20,7 @@ class ConfRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes txid = 1;</code>
      */
-    protected $txid = '';
+    private $txid = '';
     /**
      *An output script within a transaction with the hash above which will be used
      *by light clients to match block filters. If the transaction hash is set to a
@@ -29,14 +29,14 @@ class ConfRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes script = 2;</code>
      */
-    protected $script = '';
+    private $script = '';
     /**
      *The number of desired confirmations the transaction/output script should
      *reach before dispatching a confirmation notification.
      *
      * Generated from protobuf field <code>uint32 num_confs = 3;</code>
      */
-    protected $num_confs = 0;
+    private $num_confs = 0;
     /**
      *The earliest height in the chain for which the transaction/output script
      *could have been included in a block. This should in most cases be set to the
@@ -44,7 +44,7 @@ class ConfRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 height_hint = 4;</code>
      */
-    protected $height_hint = 0;
+    private $height_hint = 0;
 
     /**
      * Constructor.

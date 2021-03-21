@@ -18,14 +18,14 @@ class LightningAddress extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pubkey = 1;</code>
      */
-    protected $pubkey = '';
+    private $pubkey = '';
     /**
      * The network location of the lightning node, e.g. `69.69.69.69:1337` or
      * `localhost:10011`
      *
      * Generated from protobuf field <code>string host = 2;</code>
      */
-    protected $host = '';
+    private $host = '';
 
     /**
      * Constructor.

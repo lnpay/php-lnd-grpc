@@ -18,37 +18,37 @@ class Utxo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.AddressType address_type = 1;</code>
      */
-    protected $address_type = 0;
+    private $address_type = 0;
     /**
      * The address
      *
      * Generated from protobuf field <code>string address = 2;</code>
      */
-    protected $address = '';
+    private $address = '';
     /**
      * The value of the unspent coin in satoshis
      *
      * Generated from protobuf field <code>int64 amount_sat = 3;</code>
      */
-    protected $amount_sat = 0;
+    private $amount_sat = 0;
     /**
      * The pkscript in hex
      *
      * Generated from protobuf field <code>string pk_script = 4;</code>
      */
-    protected $pk_script = '';
+    private $pk_script = '';
     /**
      * The outpoint in format txid:n
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 5;</code>
      */
-    protected $outpoint = null;
+    private $outpoint = null;
     /**
      * The number of confirmations for the Utxo
      *
      * Generated from protobuf field <code>int64 confirmations = 6;</code>
      */
-    protected $confirmations = 0;
+    private $confirmations = 0;
 
     /**
      * Constructor.
@@ -187,17 +187,7 @@ class Utxo extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return isset($this->outpoint) ? $this->outpoint : null;
-    }
-
-    public function hasOutpoint()
-    {
-        return isset($this->outpoint);
-    }
-
-    public function clearOutpoint()
-    {
-        unset($this->outpoint);
+        return $this->outpoint;
     }
 
     /**

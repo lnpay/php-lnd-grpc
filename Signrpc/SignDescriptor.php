@@ -23,7 +23,7 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 1;</code>
      */
-    protected $key_desc = null;
+    private $key_desc = null;
     /**
      *A scalar value that will be added to the private key corresponding to the
      *above public key to obtain the private key to be used to sign this input.
@@ -32,7 +32,7 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes single_tweak = 2;</code>
      */
-    protected $single_tweak = '';
+    private $single_tweak = '';
     /**
      *A private key that will be used in combination with its corresponding
      *private key to derive the private key that is to be used to sign the target
@@ -45,34 +45,34 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes double_tweak = 3;</code>
      */
-    protected $double_tweak = '';
+    private $double_tweak = '';
     /**
      *The full script required to properly redeem the output.  This field will
      *only be populated if a p2wsh or a p2sh output is being signed.
      *
      * Generated from protobuf field <code>bytes witness_script = 4;</code>
      */
-    protected $witness_script = '';
+    private $witness_script = '';
     /**
      *A description of the output being spent. The value and script MUST be
      *provided.
      *
      * Generated from protobuf field <code>.signrpc.TxOut output = 5;</code>
      */
-    protected $output = null;
+    private $output = null;
     /**
      *The target sighash type that should be used when generating the final
      *sighash, and signature.
      *
      * Generated from protobuf field <code>uint32 sighash = 7;</code>
      */
-    protected $sighash = 0;
+    private $sighash = 0;
     /**
      *The target input within the transaction that should be signed.
      *
      * Generated from protobuf field <code>int32 input_index = 8;</code>
      */
-    protected $input_index = 0;
+    private $input_index = 0;
 
     /**
      * Constructor.
@@ -132,17 +132,7 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      */
     public function getKeyDesc()
     {
-        return isset($this->key_desc) ? $this->key_desc : null;
-    }
-
-    public function hasKeyDesc()
-    {
-        return isset($this->key_desc);
-    }
-
-    public function clearKeyDesc()
-    {
-        unset($this->key_desc);
+        return $this->key_desc;
     }
 
     /**
@@ -274,17 +264,7 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      */
     public function getOutput()
     {
-        return isset($this->output) ? $this->output : null;
-    }
-
-    public function hasOutput()
-    {
-        return isset($this->output);
-    }
-
-    public function clearOutput()
-    {
-        unset($this->output);
+        return $this->output;
     }
 
     /**

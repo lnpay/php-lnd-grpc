@@ -18,7 +18,7 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      */
-    protected $output_index = 0;
+    private $output_index = 0;
     protected $funding_txid;
 
     /**
@@ -54,11 +54,6 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasFundingTxidBytes()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      *Txid of the funding transaction. When using REST, this field must be
      *encoded as base64.
@@ -85,11 +80,6 @@ class ChannelPoint extends \Google\Protobuf\Internal\Message
     public function getFundingTxidStr()
     {
         return $this->readOneof(2);
-    }
-
-    public function hasFundingTxidStr()
-    {
-        return $this->hasOneof(2);
     }
 
     /**

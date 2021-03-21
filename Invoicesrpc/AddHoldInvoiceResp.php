@@ -20,7 +20,7 @@ class AddHoldInvoiceResp extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 1;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
 
     /**
      * Constructor.

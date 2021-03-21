@@ -18,7 +18,7 @@ class SendOutputsResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes raw_tx = 1;</code>
      */
-    protected $raw_tx = '';
+    private $raw_tx = '';
 
     /**
      * Constructor.

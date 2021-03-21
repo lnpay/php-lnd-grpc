@@ -20,14 +20,14 @@ class KeyReq extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 key_finger_print = 1;</code>
      */
-    protected $key_finger_print = 0;
+    private $key_finger_print = 0;
     /**
      *The target key family to derive a key from. In other contexts, this is
      *known as the "account".
      *
      * Generated from protobuf field <code>int32 key_family = 2;</code>
      */
-    protected $key_family = 0;
+    private $key_family = 0;
 
     /**
      * Constructor.

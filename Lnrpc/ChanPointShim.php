@@ -19,25 +19,25 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt = 1;</code>
      */
-    protected $amt = 0;
+    private $amt = 0;
     /**
      * The target channel point to refrence in created commitment transactions.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 2;</code>
      */
-    protected $chan_point = null;
+    private $chan_point = null;
     /**
      * Our local key to use when creating the multi-sig output.
      *
      * Generated from protobuf field <code>.lnrpc.KeyDescriptor local_key = 3;</code>
      */
-    protected $local_key = null;
+    private $local_key = null;
     /**
      * The key of the remote party to use when creating the multi-sig output.
      *
      * Generated from protobuf field <code>bytes remote_key = 4;</code>
      */
-    protected $remote_key = '';
+    private $remote_key = '';
     /**
      *If non-zero, then this will be used as the pending channel ID on the wire
      *protocol to initate the funding request. This is an optional field, and
@@ -46,7 +46,7 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 5;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     /**
      *This uint32 indicates if this channel is to be considered 'frozen'. A frozen
      *channel does not allow a cooperative channel close by the initiator. The
@@ -56,7 +56,7 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 thaw_height = 6;</code>
      */
-    protected $thaw_height = 0;
+    private $thaw_height = 0;
 
     /**
      * Constructor.
@@ -127,17 +127,7 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      */
     public function getChanPoint()
     {
-        return isset($this->chan_point) ? $this->chan_point : null;
-    }
-
-    public function hasChanPoint()
-    {
-        return isset($this->chan_point);
-    }
-
-    public function clearChanPoint()
-    {
-        unset($this->chan_point);
+        return $this->chan_point;
     }
 
     /**
@@ -163,17 +153,7 @@ class ChanPointShim extends \Google\Protobuf\Internal\Message
      */
     public function getLocalKey()
     {
-        return isset($this->local_key) ? $this->local_key : null;
-    }
-
-    public function hasLocalKey()
-    {
-        return isset($this->local_key);
-    }
-
-    public function clearLocalKey()
-    {
-        unset($this->local_key);
+        return $this->local_key;
     }
 
     /**

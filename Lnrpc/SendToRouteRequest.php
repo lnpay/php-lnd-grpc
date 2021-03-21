@@ -19,20 +19,20 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      *An optional hex-encoded payment hash to be used for the HTLC. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
      * Generated from protobuf field <code>string payment_hash_string = 2 [deprecated = true];</code>
      */
-    protected $payment_hash_string = '';
+    private $payment_hash_string = '';
     /**
      * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 4;</code>
      */
-    protected $route = null;
+    private $route = null;
 
     /**
      * Constructor.
@@ -119,17 +119,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      */
     public function getRoute()
     {
-        return isset($this->route) ? $this->route : null;
-    }
-
-    public function hasRoute()
-    {
-        return isset($this->route);
-    }
-
-    public function clearRoute()
-    {
-        unset($this->route);
+        return $this->route;
     }
 
     /**

@@ -18,7 +18,7 @@ class CancelInvoiceMsg extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
 
     /**
      * Constructor.

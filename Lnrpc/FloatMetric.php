@@ -18,13 +18,13 @@ class FloatMetric extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>double value = 1;</code>
      */
-    protected $value = 0.0;
+    private $value = 0.0;
     /**
      * The value normalized to [0,1] or [-1,1].
      *
      * Generated from protobuf field <code>double normalized_value = 2;</code>
      */
-    protected $normalized_value = 0.0;
+    private $normalized_value = 0.0;
 
     /**
      * Constructor.

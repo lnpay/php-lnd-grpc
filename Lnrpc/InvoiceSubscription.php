@@ -21,7 +21,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 1;</code>
      */
-    protected $add_index = 0;
+    private $add_index = 0;
     /**
      *If specified (non-zero), then we'll first start by sending out
      *notifications for all settled indexes with an settle_index greater than
@@ -30,7 +30,7 @@ class InvoiceSubscription extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 settle_index = 2;</code>
      */
-    protected $settle_index = 0;
+    private $settle_index = 0;
 
     /**
      * Constructor.

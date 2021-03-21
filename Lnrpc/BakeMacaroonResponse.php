@@ -18,7 +18,7 @@ class BakeMacaroonResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string macaroon = 1;</code>
      */
-    protected $macaroon = '';
+    private $macaroon = '';
 
     /**
      * Constructor.

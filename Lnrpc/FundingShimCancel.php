@@ -18,7 +18,7 @@ class FundingShimCancel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
 
     /**
      * Constructor.

@@ -18,85 +18,85 @@ class ChannelAcceptRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes node_pubkey = 1;</code>
      */
-    protected $node_pubkey = '';
+    private $node_pubkey = '';
     /**
      * The hash of the genesis block that the proposed channel resides in.
      *
      * Generated from protobuf field <code>bytes chain_hash = 2;</code>
      */
-    protected $chain_hash = '';
+    private $chain_hash = '';
     /**
      * The pending channel id.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 3;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     /**
      * The funding amount in satoshis that initiator wishes to use in the
      * channel.
      *
      * Generated from protobuf field <code>uint64 funding_amt = 4;</code>
      */
-    protected $funding_amt = 0;
+    private $funding_amt = 0;
     /**
      * The push amount of the proposed channel in millisatoshis.
      *
      * Generated from protobuf field <code>uint64 push_amt = 5;</code>
      */
-    protected $push_amt = 0;
+    private $push_amt = 0;
     /**
      * The dust limit of the initiator's commitment tx.
      *
      * Generated from protobuf field <code>uint64 dust_limit = 6;</code>
      */
-    protected $dust_limit = 0;
+    private $dust_limit = 0;
     /**
      * The maximum amount of coins in millisatoshis that can be pending in this
      * channel.
      *
      * Generated from protobuf field <code>uint64 max_value_in_flight = 7;</code>
      */
-    protected $max_value_in_flight = 0;
+    private $max_value_in_flight = 0;
     /**
      * The minimum amount of satoshis the initiator requires us to have at all
      * times.
      *
      * Generated from protobuf field <code>uint64 channel_reserve = 8;</code>
      */
-    protected $channel_reserve = 0;
+    private $channel_reserve = 0;
     /**
      * The smallest HTLC in millisatoshis that the initiator will accept.
      *
      * Generated from protobuf field <code>uint64 min_htlc = 9;</code>
      */
-    protected $min_htlc = 0;
+    private $min_htlc = 0;
     /**
      * The initial fee rate that the initiator suggests for both commitment
      * transactions.
      *
      * Generated from protobuf field <code>uint64 fee_per_kw = 10;</code>
      */
-    protected $fee_per_kw = 0;
+    private $fee_per_kw = 0;
     /**
      *The number of blocks to use for the relative time lock in the pay-to-self
      *output of both commitment transactions.
      *
      * Generated from protobuf field <code>uint32 csv_delay = 11;</code>
      */
-    protected $csv_delay = 0;
+    private $csv_delay = 0;
     /**
      * The total number of incoming HTLC's that the initiator will accept.
      *
      * Generated from protobuf field <code>uint32 max_accepted_htlcs = 12;</code>
      */
-    protected $max_accepted_htlcs = 0;
+    private $max_accepted_htlcs = 0;
     /**
      * A bit-field which the initiator uses to specify proposed channel
      * behavior.
      *
      * Generated from protobuf field <code>uint32 channel_flags = 13;</code>
      */
-    protected $channel_flags = 0;
+    private $channel_flags = 0;
 
     /**
      * Constructor.

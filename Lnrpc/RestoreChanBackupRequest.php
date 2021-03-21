@@ -44,11 +44,6 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasChanBackups()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      *The channels to restore as a list of channel/backup pairs.
      *
@@ -74,11 +69,6 @@ class RestoreChanBackupRequest extends \Google\Protobuf\Internal\Message
     public function getMultiChanBackup()
     {
         return $this->readOneof(2);
-    }
-
-    public function hasMultiChanBackup()
-    {
-        return $this->hasOneof(2);
     }
 
     /**

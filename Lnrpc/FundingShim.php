@@ -46,11 +46,6 @@ class FundingShim extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasChanPointShim()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      *A channel shim where the channel point was fully constructed outside
      *of lnd's wallet and the transaction might already be published.
@@ -77,11 +72,6 @@ class FundingShim extends \Google\Protobuf\Internal\Message
     public function getPsbtShim()
     {
         return $this->readOneof(2);
-    }
-
-    public function hasPsbtShim()
-    {
-        return $this->hasOneof(2);
     }
 
     /**

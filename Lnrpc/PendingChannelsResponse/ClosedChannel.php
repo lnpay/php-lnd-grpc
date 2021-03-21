@@ -18,13 +18,13 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    protected $channel = null;
+    private $channel = null;
     /**
      * The transaction id of the closing transaction
      *
      * Generated from protobuf field <code>string closing_txid = 2;</code>
      */
-    protected $closing_txid = '';
+    private $closing_txid = '';
 
     /**
      * Constructor.
@@ -51,17 +51,7 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
      */
     public function getChannel()
     {
-        return isset($this->channel) ? $this->channel : null;
-    }
-
-    public function hasChannel()
-    {
-        return isset($this->channel);
-    }
-
-    public function clearChannel()
-    {
-        unset($this->channel);
+        return $this->channel;
     }
 
     /**
@@ -73,7 +63,7 @@ class ClosedChannel extends \Google\Protobuf\Internal\Message
      */
     public function setChannel($var)
     {
-        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse\PendingChannel::class);
+        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse_PendingChannel::class);
         $this->channel = $var;
 
         return $this;

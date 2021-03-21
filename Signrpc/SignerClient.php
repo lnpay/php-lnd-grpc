@@ -106,8 +106,9 @@ class SignerClient extends \Grpc\BaseStub {
      *
      * DeriveSharedKey returns a shared secret key by performing Diffie-Hellman key
      * derivation between the ephemeral public key in the request and the node's
-     * key specified in the key_loc parameter (or the node's identity private key
-     * if no key locator is specified):
+     * key specified in the key_desc parameter. Either a key locator or a raw
+     * public key is expected in the key_desc, if neither is supplied, defaults to
+     * the node's identity private key:
      * P_shared = privKeyNode * ephemeralPubkey
      * The resulting shared public key is serialized in the compressed format and
      * hashed with sha256, resulting in the final key length of 256bit.

@@ -15,11 +15,12 @@ class ListSweepsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      *Retrieve the full sweep transaction details. If false, only the sweep txids
-     *will be returned.
+     *will be returned. Note that some sweeps that LND publishes will have been
+     *replaced-by-fee, so will not be included in this output.
      *
      * Generated from protobuf field <code>bool verbose = 1;</code>
      */
-    protected $verbose = false;
+    private $verbose = false;
 
     /**
      * Constructor.
@@ -29,7 +30,8 @@ class ListSweepsRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type bool $verbose
      *          Retrieve the full sweep transaction details. If false, only the sweep txids
-     *          will be returned.
+     *          will be returned. Note that some sweeps that LND publishes will have been
+     *          replaced-by-fee, so will not be included in this output.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,7 +41,8 @@ class ListSweepsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      *Retrieve the full sweep transaction details. If false, only the sweep txids
-     *will be returned.
+     *will be returned. Note that some sweeps that LND publishes will have been
+     *replaced-by-fee, so will not be included in this output.
      *
      * Generated from protobuf field <code>bool verbose = 1;</code>
      * @return bool
@@ -51,7 +54,8 @@ class ListSweepsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      *Retrieve the full sweep transaction details. If false, only the sweep txids
-     *will be returned.
+     *will be returned. Note that some sweeps that LND publishes will have been
+     *replaced-by-fee, so will not be included in this output.
      *
      * Generated from protobuf field <code>bool verbose = 1;</code>
      * @param bool $var

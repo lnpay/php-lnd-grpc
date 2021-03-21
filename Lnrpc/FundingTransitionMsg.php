@@ -56,11 +56,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasShimRegister()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      *The funding shim to register. This should be used before any
      *channel funding has began by the remote party, as it is intended as a
@@ -89,11 +84,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
         return $this->readOneof(2);
     }
 
-    public function hasShimCancel()
-    {
-        return $this->hasOneof(2);
-    }
-
     /**
      * Used to cancel an existing registered funding shim.
      *
@@ -120,11 +110,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     public function getPsbtVerify()
     {
         return $this->readOneof(3);
-    }
-
-    public function hasPsbtVerify()
-    {
-        return $this->hasOneof(3);
     }
 
     /**
@@ -156,11 +141,6 @@ class FundingTransitionMsg extends \Google\Protobuf\Internal\Message
     public function getPsbtFinalize()
     {
         return $this->readOneof(4);
-    }
-
-    public function hasPsbtFinalize()
-    {
-        return $this->hasOneof(4);
     }
 
     /**

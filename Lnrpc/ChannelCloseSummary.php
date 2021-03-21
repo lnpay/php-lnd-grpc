@@ -18,61 +18,61 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string channel_point = 1;</code>
      */
-    protected $channel_point = '';
+    private $channel_point = '';
     /**
      *  The unique channel ID for the channel.
      *
      * Generated from protobuf field <code>uint64 chan_id = 2 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * The hash of the genesis block that this channel resides within.
      *
      * Generated from protobuf field <code>string chain_hash = 3;</code>
      */
-    protected $chain_hash = '';
+    private $chain_hash = '';
     /**
      * The txid of the transaction which ultimately closed this channel.
      *
      * Generated from protobuf field <code>string closing_tx_hash = 4;</code>
      */
-    protected $closing_tx_hash = '';
+    private $closing_tx_hash = '';
     /**
      * Public key of the remote peer that we formerly had a channel with.
      *
      * Generated from protobuf field <code>string remote_pubkey = 5;</code>
      */
-    protected $remote_pubkey = '';
+    private $remote_pubkey = '';
     /**
      * Total capacity of the channel.
      *
      * Generated from protobuf field <code>int64 capacity = 6;</code>
      */
-    protected $capacity = 0;
+    private $capacity = 0;
     /**
      * Height at which the funding transaction was spent.
      *
      * Generated from protobuf field <code>uint32 close_height = 7;</code>
      */
-    protected $close_height = 0;
+    private $close_height = 0;
     /**
      * Settled balance at the time of channel closure
      *
      * Generated from protobuf field <code>int64 settled_balance = 8;</code>
      */
-    protected $settled_balance = 0;
+    private $settled_balance = 0;
     /**
      * The sum of all the time-locked outputs at the time of channel closure
      *
      * Generated from protobuf field <code>int64 time_locked_balance = 9;</code>
      */
-    protected $time_locked_balance = 0;
+    private $time_locked_balance = 0;
     /**
      * Details on how the channel was closed.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelCloseSummary.ClosureType close_type = 10;</code>
      */
-    protected $close_type = 0;
+    private $close_type = 0;
     /**
      *Open initiator is the party that initiated opening the channel. Note that
      *this value may be unknown if the channel was closed before we migrated to
@@ -80,7 +80,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.Initiator open_initiator = 11;</code>
      */
-    protected $open_initiator = 0;
+    private $open_initiator = 0;
     /**
      *Close initiator indicates which party initiated the close. This value will
      *be unknown for channels that were cooperatively closed before we started
@@ -90,7 +90,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.Initiator close_initiator = 12;</code>
      */
-    protected $close_initiator = 0;
+    private $close_initiator = 0;
     /**
      * Generated from protobuf field <code>repeated .lnrpc.Resolution resolutions = 13;</code>
      */
@@ -394,7 +394,7 @@ class ChannelCloseSummary extends \Google\Protobuf\Internal\Message
      */
     public function setCloseType($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\ChannelCloseSummary\ClosureType::class);
+        GPBUtil::checkEnum($var, \Lnrpc\ChannelCloseSummary_ClosureType::class);
         $this->close_type = $var;
 
         return $this;

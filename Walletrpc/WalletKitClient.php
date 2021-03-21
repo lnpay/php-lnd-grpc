@@ -266,4 +266,61 @@ class WalletKitClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     *
+     * FundPsbt creates a fully populated PSBT that contains enough inputs to fund
+     * the outputs specified in the template. There are two ways of specifying a
+     * template: Either by passing in a PSBT with at least one output declared or
+     * by passing in a raw TxTemplate message.
+     *
+     * If there are no inputs specified in the template, coin selection is
+     * performed automatically. If the template does contain any inputs, it is
+     * assumed that full coin selection happened externally and no additional
+     * inputs are added. If the specified inputs aren't enough to fund the outputs
+     * with the given fee rate, an error is returned.
+     *
+     * After either selecting or verifying the inputs, all input UTXOs are locked
+     * with an internal app ID.
+     *
+     * NOTE: If this method returns without an error, it is the caller's
+     * responsibility to either spend the locked UTXOs (by finalizing and then
+     * publishing the transaction) or to unlock/release the locked UTXOs in case of
+     * an error on the caller's side.
+     * @param \Walletrpc\FundPsbtRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function FundPsbt(\Walletrpc\FundPsbtRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/FundPsbt',
+        $argument,
+        ['\Walletrpc\FundPsbtResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * FinalizePsbt expects a partial transaction with all inputs and outputs fully
+     * declared and tries to sign all inputs that belong to the wallet. Lnd must be
+     * the last signer of the transaction. That means, if there are any unsigned
+     * non-witness inputs or inputs without UTXO information attached or inputs
+     * without witness data that do not belong to lnd's wallet, this method will
+     * fail. If no error is returned, the PSBT is ready to be extracted and the
+     * final TX within to be broadcast.
+     *
+     * NOTE: This method does NOT publish the transaction once finalized. It is the
+     * caller's responsibility to either publish the transaction on success or
+     * unlock/release any locked UTXOs in case of an error in this method.
+     * @param \Walletrpc\FinalizePsbtRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function FinalizePsbt(\Walletrpc\FinalizePsbtRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/FinalizePsbt',
+        $argument,
+        ['\Walletrpc\FinalizePsbtResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

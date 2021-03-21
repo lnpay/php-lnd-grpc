@@ -18,27 +18,27 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 1;</code>
      */
-    protected $outpoint = null;
+    private $outpoint = null;
     /**
      * The target number of blocks that the input should be spent within.
      *
      * Generated from protobuf field <code>uint32 target_conf = 2;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
     /**
      *The fee rate, expressed in sat/byte, that should be used to spend the input
      *with.
      *
      * Generated from protobuf field <code>uint32 sat_per_byte = 3;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
     /**
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
      *
      * Generated from protobuf field <code>bool force = 4;</code>
      */
-    protected $force = false;
+    private $force = false;
 
     /**
      * Constructor.
@@ -71,17 +71,7 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return isset($this->outpoint) ? $this->outpoint : null;
-    }
-
-    public function hasOutpoint()
-    {
-        return isset($this->outpoint);
-    }
-
-    public function clearOutpoint()
-    {
-        unset($this->outpoint);
+        return $this->outpoint;
     }
 
     /**

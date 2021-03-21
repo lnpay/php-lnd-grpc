@@ -26,41 +26,41 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 incoming_channel_id = 1;</code>
      */
-    protected $incoming_channel_id = 0;
+    private $incoming_channel_id = 0;
     /**
      *The short channel id that the outgoing htlc left our node on. This value
      *is zero for receives.
      *
      * Generated from protobuf field <code>uint64 outgoing_channel_id = 2;</code>
      */
-    protected $outgoing_channel_id = 0;
+    private $outgoing_channel_id = 0;
     /**
      *Incoming id is the index of the incoming htlc in the incoming channel.
      *This value is zero for sends.
      *
      * Generated from protobuf field <code>uint64 incoming_htlc_id = 3;</code>
      */
-    protected $incoming_htlc_id = 0;
+    private $incoming_htlc_id = 0;
     /**
      *Outgoing id is the index of the outgoing htlc in the outgoing channel.
      *This value is zero for receives.
      *
      * Generated from protobuf field <code>uint64 outgoing_htlc_id = 4;</code>
      */
-    protected $outgoing_htlc_id = 0;
+    private $outgoing_htlc_id = 0;
     /**
      *The time in unix nanoseconds that the event occurred.
      *
      * Generated from protobuf field <code>uint64 timestamp_ns = 5;</code>
      */
-    protected $timestamp_ns = 0;
+    private $timestamp_ns = 0;
     /**
      *The event type indicates whether the htlc was part of a send, receive or
      *forward.
      *
      * Generated from protobuf field <code>.routerrpc.HtlcEvent.EventType event_type = 6;</code>
      */
-    protected $event_type = 0;
+    private $event_type = 0;
     protected $event;
 
     /**
@@ -257,7 +257,7 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
      */
     public function setEventType($var)
     {
-        GPBUtil::checkEnum($var, \Routerrpc\HtlcEvent\EventType::class);
+        GPBUtil::checkEnum($var, \Routerrpc\HtlcEvent_EventType::class);
         $this->event_type = $var;
 
         return $this;
@@ -270,11 +270,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     public function getForwardEvent()
     {
         return $this->readOneof(7);
-    }
-
-    public function hasForwardEvent()
-    {
-        return $this->hasOneof(7);
     }
 
     /**
@@ -299,11 +294,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
         return $this->readOneof(8);
     }
 
-    public function hasForwardFailEvent()
-    {
-        return $this->hasOneof(8);
-    }
-
     /**
      * Generated from protobuf field <code>.routerrpc.ForwardFailEvent forward_fail_event = 8;</code>
      * @param \Routerrpc\ForwardFailEvent $var
@@ -326,11 +316,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
         return $this->readOneof(9);
     }
 
-    public function hasSettleEvent()
-    {
-        return $this->hasOneof(9);
-    }
-
     /**
      * Generated from protobuf field <code>.routerrpc.SettleEvent settle_event = 9;</code>
      * @param \Routerrpc\SettleEvent $var
@@ -351,11 +336,6 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     public function getLinkFailEvent()
     {
         return $this->readOneof(10);
-    }
-
-    public function hasLinkFailEvent()
-    {
-        return $this->hasOneof(10);
     }
 
     /**

@@ -26,35 +26,35 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 channel_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $channel_id = 0;
+    private $channel_id = 0;
     /**
      * Generated from protobuf field <code>string chan_point = 2;</code>
      */
-    protected $chan_point = '';
+    private $chan_point = '';
     /**
      * Generated from protobuf field <code>uint32 last_update = 3 [deprecated = true];</code>
      */
-    protected $last_update = 0;
+    private $last_update = 0;
     /**
      * Generated from protobuf field <code>string node1_pub = 4;</code>
      */
-    protected $node1_pub = '';
+    private $node1_pub = '';
     /**
      * Generated from protobuf field <code>string node2_pub = 5;</code>
      */
-    protected $node2_pub = '';
+    private $node2_pub = '';
     /**
      * Generated from protobuf field <code>int64 capacity = 6;</code>
      */
-    protected $capacity = 0;
+    private $capacity = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node1_policy = 7;</code>
      */
-    protected $node1_policy = null;
+    private $node1_policy = null;
     /**
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8;</code>
      */
-    protected $node2_policy = null;
+    private $node2_policy = null;
 
     /**
      * Constructor.
@@ -226,17 +226,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      */
     public function getNode1Policy()
     {
-        return isset($this->node1_policy) ? $this->node1_policy : null;
-    }
-
-    public function hasNode1Policy()
-    {
-        return isset($this->node1_policy);
-    }
-
-    public function clearNode1Policy()
-    {
-        unset($this->node1_policy);
+        return $this->node1_policy;
     }
 
     /**
@@ -258,17 +248,7 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      */
     public function getNode2Policy()
     {
-        return isset($this->node2_policy) ? $this->node2_policy : null;
-    }
-
-    public function hasNode2Policy()
-    {
-        return isset($this->node2_policy);
-    }
-
-    public function clearNode2Policy()
-    {
-        unset($this->node2_policy);
+        return $this->node2_policy;
     }
 
     /**

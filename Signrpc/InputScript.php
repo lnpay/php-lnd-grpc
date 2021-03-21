@@ -25,7 +25,7 @@ class InputScript extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes sig_script = 2;</code>
      */
-    protected $sig_script = '';
+    private $sig_script = '';
 
     /**
      * Constructor.

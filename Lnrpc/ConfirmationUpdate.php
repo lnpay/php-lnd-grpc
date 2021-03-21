@@ -16,15 +16,15 @@ class ConfirmationUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes block_sha = 1;</code>
      */
-    protected $block_sha = '';
+    private $block_sha = '';
     /**
      * Generated from protobuf field <code>int32 block_height = 2;</code>
      */
-    protected $block_height = 0;
+    private $block_height = 0;
     /**
      * Generated from protobuf field <code>uint32 num_confs_left = 3;</code>
      */
-    protected $num_confs_left = 0;
+    private $num_confs_left = 0;
 
     /**
      * Constructor.

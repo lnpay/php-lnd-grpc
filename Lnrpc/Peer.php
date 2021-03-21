@@ -18,55 +18,55 @@ class Peer extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      * Network address of the peer; eg `127.0.0.1:10011`
      *
      * Generated from protobuf field <code>string address = 3;</code>
      */
-    protected $address = '';
+    private $address = '';
     /**
      * Bytes of data transmitted to this peer
      *
      * Generated from protobuf field <code>uint64 bytes_sent = 4;</code>
      */
-    protected $bytes_sent = 0;
+    private $bytes_sent = 0;
     /**
      * Bytes of data transmitted from this peer
      *
      * Generated from protobuf field <code>uint64 bytes_recv = 5;</code>
      */
-    protected $bytes_recv = 0;
+    private $bytes_recv = 0;
     /**
      * Satoshis sent to this peer
      *
      * Generated from protobuf field <code>int64 sat_sent = 6;</code>
      */
-    protected $sat_sent = 0;
+    private $sat_sent = 0;
     /**
      * Satoshis received from this peer
      *
      * Generated from protobuf field <code>int64 sat_recv = 7;</code>
      */
-    protected $sat_recv = 0;
+    private $sat_recv = 0;
     /**
      * A channel is inbound if the counterparty initiated the channel
      *
      * Generated from protobuf field <code>bool inbound = 8;</code>
      */
-    protected $inbound = false;
+    private $inbound = false;
     /**
      * Ping time to this peer
      *
      * Generated from protobuf field <code>int64 ping_time = 9;</code>
      */
-    protected $ping_time = 0;
+    private $ping_time = 0;
     /**
      * The type of sync we are currently performing with this peer.
      *
      * Generated from protobuf field <code>.lnrpc.Peer.SyncType sync_type = 10;</code>
      */
-    protected $sync_type = 0;
+    private $sync_type = 0;
     /**
      * Features advertised by the remote peer in their init message.
      *
@@ -83,6 +83,22 @@ class Peer extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.TimestampedError errors = 12;</code>
      */
     private $errors;
+    /**
+     *The number of times we have recorded this peer going offline or coming
+     *online, recorded across restarts. Note that this value is decreased over
+     *time if the peer has not recently flapped, so that we can forgive peers
+     *with historically high flap counts.
+     *
+     * Generated from protobuf field <code>int32 flap_count = 13;</code>
+     */
+    private $flap_count = 0;
+    /**
+     *The timestamp of the last flap we observed for this peer. If this value is
+     *zero, we have not observed any flaps for this peer.
+     *
+     * Generated from protobuf field <code>int64 last_flap_ns = 14;</code>
+     */
+    private $last_flap_ns = 0;
 
     /**
      * Constructor.
@@ -116,6 +132,14 @@ class Peer extends \Google\Protobuf\Internal\Message
      *          are not persisted across lnd restarts. Note that these errors are only
      *          stored for peers that we have channels open with, to prevent peers from
      *          spamming us with errors at no cost.
+     *     @type int $flap_count
+     *          The number of times we have recorded this peer going offline or coming
+     *          online, recorded across restarts. Note that this value is decreased over
+     *          time if the peer has not recently flapped, so that we can forgive peers
+     *          with historically high flap counts.
+     *     @type int|string $last_flap_ns
+     *          The timestamp of the last flap we observed for this peer. If this value is
+     *          zero, we have not observed any flaps for this peer.
      * }
      */
     public function __construct($data = NULL) {
@@ -351,7 +375,7 @@ class Peer extends \Google\Protobuf\Internal\Message
      */
     public function setSyncType($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\Peer\SyncType::class);
+        GPBUtil::checkEnum($var, \Lnrpc\Peer_SyncType::class);
         $this->sync_type = $var;
 
         return $this;
@@ -413,6 +437,66 @@ class Peer extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\TimestampedError::class);
         $this->errors = $arr;
+
+        return $this;
+    }
+
+    /**
+     *The number of times we have recorded this peer going offline or coming
+     *online, recorded across restarts. Note that this value is decreased over
+     *time if the peer has not recently flapped, so that we can forgive peers
+     *with historically high flap counts.
+     *
+     * Generated from protobuf field <code>int32 flap_count = 13;</code>
+     * @return int
+     */
+    public function getFlapCount()
+    {
+        return $this->flap_count;
+    }
+
+    /**
+     *The number of times we have recorded this peer going offline or coming
+     *online, recorded across restarts. Note that this value is decreased over
+     *time if the peer has not recently flapped, so that we can forgive peers
+     *with historically high flap counts.
+     *
+     * Generated from protobuf field <code>int32 flap_count = 13;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFlapCount($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->flap_count = $var;
+
+        return $this;
+    }
+
+    /**
+     *The timestamp of the last flap we observed for this peer. If this value is
+     *zero, we have not observed any flaps for this peer.
+     *
+     * Generated from protobuf field <code>int64 last_flap_ns = 14;</code>
+     * @return int|string
+     */
+    public function getLastFlapNs()
+    {
+        return $this->last_flap_ns;
+    }
+
+    /**
+     *The timestamp of the last flap we observed for this peer. If this value is
+     *zero, we have not observed any flaps for this peer.
+     *
+     * Generated from protobuf field <code>int64 last_flap_ns = 14;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setLastFlapNs($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->last_flap_ns = $var;
 
         return $this;
     }

@@ -18,7 +18,7 @@ class SignMessageResp extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes signature = 1;</code>
      */
-    protected $signature = '';
+    private $signature = '';
 
     /**
      * Constructor.

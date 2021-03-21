@@ -18,14 +18,23 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes ephemeral_pubkey = 1;</code>
      */
-    protected $ephemeral_pubkey = '';
+    private $ephemeral_pubkey = '';
     /**
-     *The optional key locator of the local key that should be used. If this
-     *parameter is not set then the node's identity private key will be used.
+     *Deprecated. The optional key locator of the local key that should be used.
+     *If this parameter is not set then the node's identity private key will be
+     *used.
      *
-     * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
+     * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2 [deprecated = true];</code>
      */
-    protected $key_loc = null;
+    private $key_loc = null;
+    /**
+     *A key descriptor describes the key used for performing ECDH. Either a key
+     *locator or a raw public key is expected, if neither is supplied, defaults to
+     *the node's identity private key.
+     *
+     * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 3;</code>
+     */
+    private $key_desc = null;
 
     /**
      * Constructor.
@@ -36,8 +45,13 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *     @type string $ephemeral_pubkey
      *           The ephemeral public key to use for the DH key derivation.
      *     @type \Signrpc\KeyLocator $key_loc
-     *          The optional key locator of the local key that should be used. If this
-     *          parameter is not set then the node's identity private key will be used.
+     *          Deprecated. The optional key locator of the local key that should be used.
+     *          If this parameter is not set then the node's identity private key will be
+     *          used.
+     *     @type \Signrpc\KeyDescriptor $key_desc
+     *          A key descriptor describes the key used for performing ECDH. Either a key
+     *          locator or a raw public key is expected, if neither is supplied, defaults to
+     *          the node's identity private key.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,32 +86,24 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The optional key locator of the local key that should be used. If this
-     *parameter is not set then the node's identity private key will be used.
+     *Deprecated. The optional key locator of the local key that should be used.
+     *If this parameter is not set then the node's identity private key will be
+     *used.
      *
-     * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
+     * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2 [deprecated = true];</code>
      * @return \Signrpc\KeyLocator
      */
     public function getKeyLoc()
     {
-        return isset($this->key_loc) ? $this->key_loc : null;
-    }
-
-    public function hasKeyLoc()
-    {
-        return isset($this->key_loc);
-    }
-
-    public function clearKeyLoc()
-    {
-        unset($this->key_loc);
+        return $this->key_loc;
     }
 
     /**
-     *The optional key locator of the local key that should be used. If this
-     *parameter is not set then the node's identity private key will be used.
+     *Deprecated. The optional key locator of the local key that should be used.
+     *If this parameter is not set then the node's identity private key will be
+     *used.
      *
-     * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
+     * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2 [deprecated = true];</code>
      * @param \Signrpc\KeyLocator $var
      * @return $this
      */
@@ -105,6 +111,36 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Signrpc\KeyLocator::class);
         $this->key_loc = $var;
+
+        return $this;
+    }
+
+    /**
+     *A key descriptor describes the key used for performing ECDH. Either a key
+     *locator or a raw public key is expected, if neither is supplied, defaults to
+     *the node's identity private key.
+     *
+     * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 3;</code>
+     * @return \Signrpc\KeyDescriptor
+     */
+    public function getKeyDesc()
+    {
+        return $this->key_desc;
+    }
+
+    /**
+     *A key descriptor describes the key used for performing ECDH. Either a key
+     *locator or a raw public key is expected, if neither is supplied, defaults to
+     *the node's identity private key.
+     *
+     * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 3;</code>
+     * @param \Signrpc\KeyDescriptor $var
+     * @return $this
+     */
+    public function setKeyDesc($var)
+    {
+        GPBUtil::checkMessage($var, \Signrpc\KeyDescriptor::class);
+        $this->key_desc = $var;
 
         return $this;
     }

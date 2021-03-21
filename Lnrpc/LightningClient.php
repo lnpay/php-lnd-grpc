@@ -53,8 +53,9 @@ class LightningClient extends \Grpc\BaseStub {
 
     /**
      * lncli: `channelbalance`
-     * ChannelBalance returns the total funds available across all open channels
-     * in satoshis.
+     * ChannelBalance returns a report on the total funds across all open channels,
+     * categorized in local/remote, pending local/remote and unsettled local/remote
+     * balances.
      * @param \Lnrpc\ChannelBalanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -1035,6 +1036,37 @@ class LightningClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/lnrpc.Lightning/BakeMacaroon',
         $argument,
         ['\Lnrpc\BakeMacaroonResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * lncli: `listmacaroonids`
+     * ListMacaroonIDs returns all root key IDs that are in use.
+     * @param \Lnrpc\ListMacaroonIDsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ListMacaroonIDs(\Lnrpc\ListMacaroonIDsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/ListMacaroonIDs',
+        $argument,
+        ['\Lnrpc\ListMacaroonIDsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * lncli: `deletemacaroonid`
+     * DeleteMacaroonID deletes the specified macaroon ID and invalidates all
+     * macaroons derived from that ID.
+     * @param \Lnrpc\DeleteMacaroonIDRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function DeleteMacaroonID(\Lnrpc\DeleteMacaroonIDRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/DeleteMacaroonID',
+        $argument,
+        ['\Lnrpc\DeleteMacaroonIDResponse', 'decode'],
         $metadata, $options);
     }
 

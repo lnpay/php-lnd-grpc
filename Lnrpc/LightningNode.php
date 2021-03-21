@@ -21,15 +21,15 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>uint32 last_update = 1;</code>
      */
-    protected $last_update = 0;
+    private $last_update = 0;
     /**
      * Generated from protobuf field <code>string pub_key = 2;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      * Generated from protobuf field <code>string alias = 3;</code>
      */
-    protected $alias = '';
+    private $alias = '';
     /**
      * Generated from protobuf field <code>repeated .lnrpc.NodeAddress addresses = 4;</code>
      */
@@ -37,7 +37,7 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string color = 5;</code>
      */
-    protected $color = '';
+    private $color = '';
     /**
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
      */

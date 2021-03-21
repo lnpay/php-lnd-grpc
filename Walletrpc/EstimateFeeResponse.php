@@ -19,7 +19,7 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 sat_per_kw = 1;</code>
      */
-    protected $sat_per_kw = 0;
+    private $sat_per_kw = 0;
 
     /**
      * Constructor.

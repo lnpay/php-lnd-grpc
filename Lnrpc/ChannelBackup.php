@@ -18,7 +18,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      */
-    protected $chan_point = null;
+    private $chan_point = null;
     /**
      *Is an encrypted single-chan backup. this can be passed to
      *RestoreChannelBackups, or the WalletUnlocker Init and Unlock methods in
@@ -27,7 +27,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes chan_backup = 2;</code>
      */
-    protected $chan_backup = '';
+    private $chan_backup = '';
 
     /**
      * Constructor.
@@ -57,17 +57,7 @@ class ChannelBackup extends \Google\Protobuf\Internal\Message
      */
     public function getChanPoint()
     {
-        return isset($this->chan_point) ? $this->chan_point : null;
-    }
-
-    public function hasChanPoint()
-    {
-        return isset($this->chan_point);
-    }
-
-    public function clearChanPoint()
-    {
-        unset($this->chan_point);
+        return $this->chan_point;
     }
 
     /**

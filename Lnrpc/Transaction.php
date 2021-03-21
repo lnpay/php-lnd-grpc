@@ -18,43 +18,43 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string tx_hash = 1;</code>
      */
-    protected $tx_hash = '';
+    private $tx_hash = '';
     /**
      * The transaction amount, denominated in satoshis
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    protected $amount = 0;
+    private $amount = 0;
     /**
      * The number of confirmations
      *
      * Generated from protobuf field <code>int32 num_confirmations = 3;</code>
      */
-    protected $num_confirmations = 0;
+    private $num_confirmations = 0;
     /**
      * The hash of the block this transaction was included in
      *
      * Generated from protobuf field <code>string block_hash = 4;</code>
      */
-    protected $block_hash = '';
+    private $block_hash = '';
     /**
      * The height of the block this transaction was included in
      *
      * Generated from protobuf field <code>int32 block_height = 5;</code>
      */
-    protected $block_height = 0;
+    private $block_height = 0;
     /**
      * Timestamp of this transaction
      *
      * Generated from protobuf field <code>int64 time_stamp = 6;</code>
      */
-    protected $time_stamp = 0;
+    private $time_stamp = 0;
     /**
      * Fees paid for this transaction
      *
      * Generated from protobuf field <code>int64 total_fees = 7;</code>
      */
-    protected $total_fees = 0;
+    private $total_fees = 0;
     /**
      * Addresses that received funds for this transaction
      *
@@ -66,13 +66,13 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string raw_tx_hex = 9;</code>
      */
-    protected $raw_tx_hex = '';
+    private $raw_tx_hex = '';
     /**
      * A label that was optionally set on transaction broadcast.
      *
      * Generated from protobuf field <code>string label = 10;</code>
      */
-    protected $label = '';
+    private $label = '';
 
     /**
      * Constructor.

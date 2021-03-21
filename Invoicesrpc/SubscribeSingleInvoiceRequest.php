@@ -18,7 +18,7 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      */
-    protected $r_hash = '';
+    private $r_hash = '';
 
     /**
      * Constructor.

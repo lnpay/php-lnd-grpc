@@ -14,42 +14,48 @@ use Google\Protobuf\Internal\GPBUtil;
 class HTLCAttempt extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The unique ID that is used for this attempt.
+     *
+     * Generated from protobuf field <code>uint64 attempt_id = 7;</code>
+     */
+    private $attempt_id = 0;
+    /**
      * The status of the HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.HTLCAttempt.HTLCStatus status = 1;</code>
      */
-    protected $status = 0;
+    private $status = 0;
     /**
      * The route taken by this HTLC.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      */
-    protected $route = null;
+    private $route = null;
     /**
      * The time in UNIX nanoseconds at which this HTLC was sent.
      *
      * Generated from protobuf field <code>int64 attempt_time_ns = 3;</code>
      */
-    protected $attempt_time_ns = 0;
+    private $attempt_time_ns = 0;
     /**
      *The time in UNIX nanoseconds at which this HTLC was settled or failed.
      *This value will not be set if the HTLC is still IN_FLIGHT.
      *
      * Generated from protobuf field <code>int64 resolve_time_ns = 4;</code>
      */
-    protected $resolve_time_ns = 0;
+    private $resolve_time_ns = 0;
     /**
      * Detailed htlc failure info.
      *
      * Generated from protobuf field <code>.lnrpc.Failure failure = 5;</code>
      */
-    protected $failure = null;
+    private $failure = null;
     /**
      * The preimage that was used to settle the HTLC.
      *
      * Generated from protobuf field <code>bytes preimage = 6;</code>
      */
-    protected $preimage = '';
+    private $preimage = '';
 
     /**
      * Constructor.
@@ -57,6 +63,8 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int|string $attempt_id
+     *           The unique ID that is used for this attempt.
      *     @type int $status
      *           The status of the HTLC.
      *     @type \Lnrpc\Route $route
@@ -75,6 +83,32 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
     public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * The unique ID that is used for this attempt.
+     *
+     * Generated from protobuf field <code>uint64 attempt_id = 7;</code>
+     * @return int|string
+     */
+    public function getAttemptId()
+    {
+        return $this->attempt_id;
+    }
+
+    /**
+     * The unique ID that is used for this attempt.
+     *
+     * Generated from protobuf field <code>uint64 attempt_id = 7;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setAttemptId($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->attempt_id = $var;
+
+        return $this;
     }
 
     /**
@@ -97,7 +131,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\HTLCAttempt\HTLCStatus::class);
+        GPBUtil::checkEnum($var, \Lnrpc\HTLCAttempt_HTLCStatus::class);
         $this->status = $var;
 
         return $this;
@@ -111,17 +145,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      */
     public function getRoute()
     {
-        return isset($this->route) ? $this->route : null;
-    }
-
-    public function hasRoute()
-    {
-        return isset($this->route);
-    }
-
-    public function clearRoute()
-    {
-        unset($this->route);
+        return $this->route;
     }
 
     /**
@@ -201,17 +225,7 @@ class HTLCAttempt extends \Google\Protobuf\Internal\Message
      */
     public function getFailure()
     {
-        return isset($this->failure) ? $this->failure : null;
-    }
-
-    public function hasFailure()
-    {
-        return isset($this->failure);
-    }
-
-    public function clearFailure()
-    {
-        unset($this->failure);
+        return $this->failure;
     }
 
     /**

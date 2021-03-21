@@ -21,27 +21,27 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string memo = 1;</code>
      */
-    protected $memo = '';
+    private $memo = '';
     /**
      * The hash of the preimage
      *
      * Generated from protobuf field <code>bytes hash = 2;</code>
      */
-    protected $hash = '';
+    private $hash = '';
     /**
      *The value of this invoice in satoshis
      *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value = 3;</code>
      */
-    protected $value = 0;
+    private $value = 0;
     /**
      *The value of this invoice in millisatoshis
      *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value_msat = 10;</code>
      */
-    protected $value_msat = 0;
+    private $value_msat = 0;
     /**
      *Hash (SHA-256) of a description of the payment. Used if the description of
      *payment (memo) is too long to naturally fit within the description field
@@ -49,25 +49,25 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes description_hash = 4;</code>
      */
-    protected $description_hash = '';
+    private $description_hash = '';
     /**
      * Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
      * Generated from protobuf field <code>int64 expiry = 5;</code>
      */
-    protected $expiry = 0;
+    private $expiry = 0;
     /**
      * Fallback on-chain address.
      *
      * Generated from protobuf field <code>string fallback_addr = 6;</code>
      */
-    protected $fallback_addr = '';
+    private $fallback_addr = '';
     /**
      * Delta to use for the time-lock of the CLTV extended to the final hop.
      *
      * Generated from protobuf field <code>uint64 cltv_expiry = 7;</code>
      */
-    protected $cltv_expiry = 0;
+    private $cltv_expiry = 0;
     /**
      *Route hints that can each be individually used to assist in reaching the
      *invoice's destination.
@@ -80,7 +80,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool private = 9;</code>
      */
-    protected $private = false;
+    private $private = false;
 
     /**
      * Constructor.

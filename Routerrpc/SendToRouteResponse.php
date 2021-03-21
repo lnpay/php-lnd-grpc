@@ -18,13 +18,13 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      */
-    protected $preimage = '';
+    private $preimage = '';
     /**
      * The failure message in case the payment failed.
      *
      * Generated from protobuf field <code>.lnrpc.Failure failure = 2;</code>
      */
-    protected $failure = null;
+    private $failure = null;
 
     /**
      * Constructor.
@@ -77,17 +77,7 @@ class SendToRouteResponse extends \Google\Protobuf\Internal\Message
      */
     public function getFailure()
     {
-        return isset($this->failure) ? $this->failure : null;
-    }
-
-    public function hasFailure()
-    {
-        return isset($this->failure);
-    }
-
-    public function clearFailure()
-    {
-        unset($this->failure);
+        return $this->failure;
     }
 
     /**

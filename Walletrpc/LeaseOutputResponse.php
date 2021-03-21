@@ -18,7 +18,7 @@ class LeaseOutputResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 expiration = 1;</code>
      */
-    protected $expiration = 0;
+    private $expiration = 0;
 
     /**
      * Constructor.

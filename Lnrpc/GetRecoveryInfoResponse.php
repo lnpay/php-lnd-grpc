@@ -18,19 +18,19 @@ class GetRecoveryInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool recovery_mode = 1;</code>
      */
-    protected $recovery_mode = false;
+    private $recovery_mode = false;
     /**
      * Whether the wallet recovery progress is finished
      *
      * Generated from protobuf field <code>bool recovery_finished = 2;</code>
      */
-    protected $recovery_finished = false;
+    private $recovery_finished = false;
     /**
      * The recovery progress, ranging from 0 to 1.
      *
      * Generated from protobuf field <code>double progress = 3;</code>
      */
-    protected $progress = 0.0;
+    private $progress = 0.0;
 
     /**
      * Constructor.

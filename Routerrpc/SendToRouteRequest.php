@@ -18,13 +18,13 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      */
-    protected $route = null;
+    private $route = null;
 
     /**
      * Constructor.
@@ -77,17 +77,7 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      */
     public function getRoute()
     {
-        return isset($this->route) ? $this->route : null;
-    }
-
-    public function hasRoute()
-    {
-        return isset($this->route);
-    }
-
-    public function clearRoute()
-    {
-        unset($this->route);
+        return $this->route;
     }
 
     /**

@@ -19,14 +19,14 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string funding_address = 1;</code>
      */
-    protected $funding_address = '';
+    private $funding_address = '';
     /**
      *The exact amount in satoshis that needs to be sent to the above address to
      *fund the pending channel.
      *
      * Generated from protobuf field <code>int64 funding_amount = 2;</code>
      */
-    protected $funding_amount = 0;
+    private $funding_amount = 0;
     /**
      *A raw PSBT that contains the pending channel output. If a base PSBT was
      *provided in the PsbtShim, this is the base PSBT with one additional output.
@@ -35,7 +35,7 @@ class ReadyForPsbtFunding extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes psbt = 3;</code>
      */
-    protected $psbt = '';
+    private $psbt = '';
 
     /**
      * Constructor.

@@ -20,49 +20,49 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * Index identifying the htlc on the channel.
      *
      * Generated from protobuf field <code>uint64 htlc_index = 2;</code>
      */
-    protected $htlc_index = 0;
+    private $htlc_index = 0;
     /**
      * The amount of the htlc in msat.
      *
      * Generated from protobuf field <code>uint64 amt_msat = 3;</code>
      */
-    protected $amt_msat = 0;
+    private $amt_msat = 0;
     /**
      * Block height at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int32 accept_height = 4;</code>
      */
-    protected $accept_height = 0;
+    private $accept_height = 0;
     /**
      * Time at which this htlc was accepted.
      *
      * Generated from protobuf field <code>int64 accept_time = 5;</code>
      */
-    protected $accept_time = 0;
+    private $accept_time = 0;
     /**
      * Time at which this htlc was settled or canceled.
      *
      * Generated from protobuf field <code>int64 resolve_time = 6;</code>
      */
-    protected $resolve_time = 0;
+    private $resolve_time = 0;
     /**
      * Block height at which this htlc expires.
      *
      * Generated from protobuf field <code>int32 expiry_height = 7;</code>
      */
-    protected $expiry_height = 0;
+    private $expiry_height = 0;
     /**
      * Current state the htlc is in.
      *
      * Generated from protobuf field <code>.lnrpc.InvoiceHTLCState state = 8;</code>
      */
-    protected $state = 0;
+    private $state = 0;
     /**
      * Custom tlv records.
      *
@@ -74,7 +74,7 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10;</code>
      */
-    protected $mpp_total_amt_msat = 0;
+    private $mpp_total_amt_msat = 0;
 
     /**
      * Constructor.

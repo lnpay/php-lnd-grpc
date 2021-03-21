@@ -19,38 +19,38 @@ class ChannelConstraints extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 csv_delay = 1;</code>
      */
-    protected $csv_delay = 0;
+    private $csv_delay = 0;
     /**
      * The minimum satoshis this node is required to reserve in its balance.
      *
      * Generated from protobuf field <code>uint64 chan_reserve_sat = 2;</code>
      */
-    protected $chan_reserve_sat = 0;
+    private $chan_reserve_sat = 0;
     /**
      * The dust limit (in satoshis) of the initiator's commitment tx.
      *
      * Generated from protobuf field <code>uint64 dust_limit_sat = 3;</code>
      */
-    protected $dust_limit_sat = 0;
+    private $dust_limit_sat = 0;
     /**
      * The maximum amount of coins in millisatoshis that can be pending in this
      * channel.
      *
      * Generated from protobuf field <code>uint64 max_pending_amt_msat = 4;</code>
      */
-    protected $max_pending_amt_msat = 0;
+    private $max_pending_amt_msat = 0;
     /**
      * The smallest HTLC in millisatoshis that the initiator will accept.
      *
      * Generated from protobuf field <code>uint64 min_htlc_msat = 5;</code>
      */
-    protected $min_htlc_msat = 0;
+    private $min_htlc_msat = 0;
     /**
      * The total number of incoming HTLC's that the initiator will accept.
      *
      * Generated from protobuf field <code>uint32 max_accepted_htlcs = 6;</code>
      */
-    protected $max_accepted_htlcs = 0;
+    private $max_accepted_htlcs = 0;
 
     /**
      * Constructor.

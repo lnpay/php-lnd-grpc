@@ -18,25 +18,25 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool incoming = 1;</code>
      */
-    protected $incoming = false;
+    private $incoming = false;
     /**
      * The total value of the htlc
      *
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    protected $amount = 0;
+    private $amount = 0;
     /**
      * The final output to be swept back to the user's wallet
      *
      * Generated from protobuf field <code>string outpoint = 3;</code>
      */
-    protected $outpoint = '';
+    private $outpoint = '';
     /**
      * The next block height at which we can spend the current stage
      *
      * Generated from protobuf field <code>uint32 maturity_height = 4;</code>
      */
-    protected $maturity_height = 0;
+    private $maturity_height = 0;
     /**
      *The number of blocks remaining until the current stage can be swept.
      *Negative values indicate how many blocks have passed since becoming
@@ -44,13 +44,13 @@ class PendingHTLC extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 blocks_til_maturity = 5;</code>
      */
-    protected $blocks_til_maturity = 0;
+    private $blocks_til_maturity = 0;
     /**
      * Indicates whether the htlc is in its first or second stage of recovery
      *
      * Generated from protobuf field <code>uint32 stage = 6;</code>
      */
-    protected $stage = 0;
+    private $stage = 0;
 
     /**
      * Constructor.

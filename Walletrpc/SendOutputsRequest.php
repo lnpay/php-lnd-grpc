@@ -19,7 +19,7 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 sat_per_kw = 1;</code>
      */
-    protected $sat_per_kw = 0;
+    private $sat_per_kw = 0;
     /**
      *A slice of the outputs that should be created in the transaction produced.
      *
@@ -31,7 +31,20 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string label = 3;</code>
      */
-    protected $label = '';
+    private $label = '';
+    /**
+     * The minimum number of confirmations each one of your outputs used for
+     * the transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 4;</code>
+     */
+    private $min_confs = 0;
+    /**
+     * Whether unconfirmed outputs should be used as inputs for the transaction.
+     *
+     * Generated from protobuf field <code>bool spend_unconfirmed = 5;</code>
+     */
+    private $spend_unconfirmed = false;
 
     /**
      * Constructor.
@@ -46,6 +59,11 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *          A slice of the outputs that should be created in the transaction produced.
      *     @type string $label
      *           An optional label for the transaction, limited to 500 characters.
+     *     @type int $min_confs
+     *           The minimum number of confirmations each one of your outputs used for
+     *           the transaction must satisfy.
+     *     @type bool $spend_unconfirmed
+     *           Whether unconfirmed outputs should be used as inputs for the transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -129,6 +147,60 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->label = $var;
+
+        return $this;
+    }
+
+    /**
+     * The minimum number of confirmations each one of your outputs used for
+     * the transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 4;</code>
+     * @return int
+     */
+    public function getMinConfs()
+    {
+        return $this->min_confs;
+    }
+
+    /**
+     * The minimum number of confirmations each one of your outputs used for
+     * the transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMinConfs($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->min_confs = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether unconfirmed outputs should be used as inputs for the transaction.
+     *
+     * Generated from protobuf field <code>bool spend_unconfirmed = 5;</code>
+     * @return bool
+     */
+    public function getSpendUnconfirmed()
+    {
+        return $this->spend_unconfirmed;
+    }
+
+    /**
+     * Whether unconfirmed outputs should be used as inputs for the transaction.
+     *
+     * Generated from protobuf field <code>bool spend_unconfirmed = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSpendUnconfirmed($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->spend_unconfirmed = $var;
 
         return $this;
     }

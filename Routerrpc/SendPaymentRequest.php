@@ -18,34 +18,40 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
-    protected $dest = '';
+    private $dest = '';
     /**
      *Number of satoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
-    protected $amt = 0;
+    private $amt = 0;
     /**
      *Number of millisatoshis to send.
      *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt_msat = 12;</code>
      */
-    protected $amt_msat = 0;
+    private $amt_msat = 0;
     /**
      * The hash to use within the payment's HTLC
      *
      * Generated from protobuf field <code>bytes payment_hash = 3;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      *The CLTV delta from the current height that should be used to set the
      *timelock for the final hop.
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      */
-    protected $final_cltv_delta = 0;
+    private $final_cltv_delta = 0;
+    /**
+     * An optional payment addr to be included within the last hop of the route.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 20;</code>
+     */
+    private $payment_addr = '';
     /**
      *A bare-bones invoice for a payment within the Lightning Network.  With the
      *details of the invoice, the sender has all the data necessary to send a
@@ -55,7 +61,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 5;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      *An upper limit on the amount of time we should spend when attempting to
      *fulfill the payment. This is expressed in seconds. If we cannot make a
@@ -64,7 +70,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 timeout_seconds = 6;</code>
      */
-    protected $timeout_seconds = 0;
+    private $timeout_seconds = 0;
     /**
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *If this field is left to the default value of 0, only zero-fee routes will
@@ -74,7 +80,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee_limit_sat = 7;</code>
      */
-    protected $fee_limit_sat = 0;
+    private $fee_limit_sat = 0;
     /**
      *The maximum number of millisatoshis that will be paid as a fee of the
      *payment. If this field is left to the default value of 0, only zero-fee
@@ -85,7 +91,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee_limit_msat = 13;</code>
      */
-    protected $fee_limit_msat = 0;
+    private $fee_limit_msat = 0;
     /**
      *Deprecated, use outgoing_chan_ids. The channel id of the channel that must
      *be taken to the first hop. If zero, any channel may be used (unless
@@ -93,7 +99,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 8 [deprecated = true, jstype = JS_STRING];</code>
      */
-    protected $outgoing_chan_id = 0;
+    private $outgoing_chan_id = 0;
     /**
      *The channel ids of the channels are allowed for the first hop. If empty,
      *any channel may be used.
@@ -106,7 +112,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 14;</code>
      */
-    protected $last_hop_pubkey = '';
+    private $last_hop_pubkey = '';
     /**
      *An optional maximum total time lock for the route. This should not exceed
      *lnd's `--max-cltv-expiry` setting. If zero, then the value of
@@ -114,7 +120,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 cltv_limit = 9;</code>
      */
-    protected $cltv_limit = 0;
+    private $cltv_limit = 0;
     /**
      *Optional route hints to reach the destination through private channels.
      *
@@ -136,7 +142,7 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool allow_self_payment = 15;</code>
      */
-    protected $allow_self_payment = false;
+    private $allow_self_payment = false;
     /**
      *Features assumed to be supported by the final node. All transitive feature
      *dependencies must also be set properly. For a given feature bit pair, either
@@ -153,14 +159,23 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 max_parts = 17;</code>
      */
-    protected $max_parts = 0;
+    private $max_parts = 0;
     /**
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *
      * Generated from protobuf field <code>bool no_inflight_updates = 18;</code>
      */
-    protected $no_inflight_updates = false;
+    private $no_inflight_updates = false;
+    /**
+     *The largest payment split that should be attempted when making a payment if
+     *splitting is necessary. Setting this value will effectively cause lnd to
+     *split more aggressively, vs only when it thinks it needs to. Note that this
+     *value is in milli-satoshis.
+     *
+     * Generated from protobuf field <code>uint64 max_shard_size_msat = 21;</code>
+     */
+    private $max_shard_size_msat = 0;
 
     /**
      * Constructor.
@@ -181,6 +196,8 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *     @type int $final_cltv_delta
      *          The CLTV delta from the current height that should be used to set the
      *          timelock for the final hop.
+     *     @type string $payment_addr
+     *           An optional payment addr to be included within the last hop of the route.
      *     @type string $payment_request
      *          A bare-bones invoice for a payment within the Lightning Network.  With the
      *          details of the invoice, the sender has all the data necessary to send a
@@ -240,6 +257,11 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $no_inflight_updates
      *          If set, only the final payment update is streamed back. Intermediate updates
      *          that show which htlcs are still in flight are suppressed.
+     *     @type int|string $max_shard_size_msat
+     *          The largest payment split that should be attempted when making a payment if
+     *          splitting is necessary. Setting this value will effectively cause lnd to
+     *          split more aggressively, vs only when it thinks it needs to. Note that this
+     *          value is in milli-satoshis.
      * }
      */
     public function __construct($data = NULL) {
@@ -379,6 +401,32 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->final_cltv_delta = $var;
+
+        return $this;
+    }
+
+    /**
+     * An optional payment addr to be included within the last hop of the route.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 20;</code>
+     * @return string
+     */
+    public function getPaymentAddr()
+    {
+        return $this->payment_addr;
+    }
+
+    /**
+     * An optional payment addr to be included within the last hop of the route.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentAddr($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->payment_addr = $var;
 
         return $this;
     }
@@ -805,6 +853,38 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->no_inflight_updates = $var;
+
+        return $this;
+    }
+
+    /**
+     *The largest payment split that should be attempted when making a payment if
+     *splitting is necessary. Setting this value will effectively cause lnd to
+     *split more aggressively, vs only when it thinks it needs to. Note that this
+     *value is in milli-satoshis.
+     *
+     * Generated from protobuf field <code>uint64 max_shard_size_msat = 21;</code>
+     * @return int|string
+     */
+    public function getMaxShardSizeMsat()
+    {
+        return $this->max_shard_size_msat;
+    }
+
+    /**
+     *The largest payment split that should be attempted when making a payment if
+     *splitting is necessary. Setting this value will effectively cause lnd to
+     *split more aggressively, vs only when it thinks it needs to. Note that this
+     *value is in milli-satoshis.
+     *
+     * Generated from protobuf field <code>uint64 max_shard_size_msat = 21;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setMaxShardSizeMsat($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->max_shard_size_msat = $var;
 
         return $this;
     }

@@ -16,7 +16,7 @@ class Op extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string entity = 1;</code>
      */
-    protected $entity = '';
+    private $entity = '';
     /**
      * Generated from protobuf field <code>repeated string actions = 2;</code>
      */

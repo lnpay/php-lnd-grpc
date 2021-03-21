@@ -18,13 +18,13 @@ class ReleaseOutputRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes id = 1;</code>
      */
-    protected $id = '';
+    private $id = '';
     /**
      * The identifying outpoint of the output being released.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
      */
-    protected $outpoint = null;
+    private $outpoint = null;
 
     /**
      * Constructor.
@@ -77,17 +77,7 @@ class ReleaseOutputRequest extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return isset($this->outpoint) ? $this->outpoint : null;
-    }
-
-    public function hasOutpoint()
-    {
-        return isset($this->outpoint);
-    }
-
-    public function clearOutpoint()
-    {
-        unset($this->outpoint);
+        return $this->outpoint;
     }
 
     /**

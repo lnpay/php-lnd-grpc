@@ -18,13 +18,13 @@ class KeyLocator extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 key_family = 1;</code>
      */
-    protected $key_family = 0;
+    private $key_family = 0;
     /**
      * The precise index of the key being identified.
      *
      * Generated from protobuf field <code>int32 key_index = 2;</code>
      */
-    protected $key_index = 0;
+    private $key_index = 0;
 
     /**
      * Constructor.

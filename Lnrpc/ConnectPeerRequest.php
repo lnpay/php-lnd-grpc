@@ -18,14 +18,21 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.LightningAddress addr = 1;</code>
      */
-    protected $addr = null;
+    private $addr = null;
     /**
      * If set, the daemon will attempt to persistently connect to the target
      * peer. Otherwise, the call will be synchronous. 
      *
      * Generated from protobuf field <code>bool perm = 2;</code>
      */
-    protected $perm = false;
+    private $perm = false;
+    /**
+     *The connection timeout value (in seconds) for this request. It won't affect
+     *other requests.
+     *
+     * Generated from protobuf field <code>uint64 timeout = 3;</code>
+     */
+    private $timeout = 0;
 
     /**
      * Constructor.
@@ -38,6 +45,9 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $perm
      *           If set, the daemon will attempt to persistently connect to the target
      *           peer. Otherwise, the call will be synchronous. 
+     *     @type int|string $timeout
+     *          The connection timeout value (in seconds) for this request. It won't affect
+     *          other requests.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,17 +63,7 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
      */
     public function getAddr()
     {
-        return isset($this->addr) ? $this->addr : null;
-    }
-
-    public function hasAddr()
-    {
-        return isset($this->addr);
-    }
-
-    public function clearAddr()
-    {
-        unset($this->addr);
+        return $this->addr;
     }
 
     /**
@@ -105,6 +105,34 @@ class ConnectPeerRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->perm = $var;
+
+        return $this;
+    }
+
+    /**
+     *The connection timeout value (in seconds) for this request. It won't affect
+     *other requests.
+     *
+     * Generated from protobuf field <code>uint64 timeout = 3;</code>
+     * @return int|string
+     */
+    public function getTimeout()
+    {
+        return $this->timeout;
+    }
+
+    /**
+     *The connection timeout value (in seconds) for this request. It won't affect
+     *other requests.
+     *
+     * Generated from protobuf field <code>uint64 timeout = 3;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setTimeout($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->timeout = $var;
 
         return $this;
     }

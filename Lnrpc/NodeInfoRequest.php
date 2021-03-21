@@ -18,13 +18,13 @@ class NodeInfoRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      * If true, will include all known channels associated with the node.
      *
      * Generated from protobuf field <code>bool include_channels = 2;</code>
      */
-    protected $include_channels = false;
+    private $include_channels = false;
 
     /**
      * Constructor.

@@ -18,19 +18,19 @@ class LabelTransactionRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes txid = 1;</code>
      */
-    protected $txid = '';
+    private $txid = '';
     /**
      * The label to add to the transaction, limited to 500 characters.
      *
      * Generated from protobuf field <code>string label = 2;</code>
      */
-    protected $label = '';
+    private $label = '';
     /**
      * Whether to overwrite the existing label, if it is present.
      *
      * Generated from protobuf field <code>bool overwrite = 3;</code>
      */
-    protected $overwrite = false;
+    private $overwrite = false;
 
     /**
      * Constructor.

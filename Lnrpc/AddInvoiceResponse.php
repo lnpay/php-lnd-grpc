@@ -16,7 +16,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes r_hash = 1;</code>
      */
-    protected $r_hash = '';
+    private $r_hash = '';
     /**
      *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
@@ -24,7 +24,7 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 2;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      *The "add" index of this invoice. Each newly created invoice will increment
      *this index making it monotonically increasing. Callers to the
@@ -33,7 +33,15 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 16;</code>
      */
-    protected $add_index = 0;
+    private $add_index = 0;
+    /**
+     *The payment address of the generated invoice. This value should be used
+     *in all payments for this invoice as we require it for end to end
+     *security.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 17;</code>
+     */
+    private $payment_addr = '';
 
     /**
      * Constructor.
@@ -51,6 +59,10 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
      *          this index making it monotonically increasing. Callers to the
      *          SubscribeInvoices call can use this to instantly get notified of all added
      *          invoices with an add_index greater than this one.
+     *     @type string $payment_addr
+     *          The payment address of the generated invoice. This value should be used
+     *          in all payments for this invoice as we require it for end to end
+     *          security.
      * }
      */
     public function __construct($data = NULL) {
@@ -138,6 +150,36 @@ class AddInvoiceResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->add_index = $var;
+
+        return $this;
+    }
+
+    /**
+     *The payment address of the generated invoice. This value should be used
+     *in all payments for this invoice as we require it for end to end
+     *security.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 17;</code>
+     * @return string
+     */
+    public function getPaymentAddr()
+    {
+        return $this->payment_addr;
+    }
+
+    /**
+     *The payment address of the generated invoice. This value should be used
+     *in all payments for this invoice as we require it for end to end
+     *security.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 17;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentAddr($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->payment_addr = $var;
 
         return $this;
     }

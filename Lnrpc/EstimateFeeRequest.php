@@ -25,7 +25,7 @@ class EstimateFeeRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 target_conf = 2;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
 
     /**
      * Constructor.
