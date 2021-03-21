@@ -20,7 +20,7 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.chainrpc.Outpoint outpoint = 1;</code>
      */
-    protected $outpoint = null;
+    private $outpoint = null;
     /**
      *The output script for the outpoint above. This will be used by light clients
      *to match block filters. If the outpoint is set to a zero outpoint, then a
@@ -28,7 +28,7 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes script = 2;</code>
      */
-    protected $script = '';
+    private $script = '';
     /**
      *The earliest height in the chain for which the outpoint/output script could
      *have been spent. This should in most cases be set to the broadcast height of
@@ -36,7 +36,7 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 height_hint = 3;</code>
      */
-    protected $height_hint = 0;
+    private $height_hint = 0;
 
     /**
      * Constructor.
@@ -73,17 +73,7 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return isset($this->outpoint) ? $this->outpoint : null;
-    }
-
-    public function hasOutpoint()
-    {
-        return isset($this->outpoint);
-    }
-
-    public function clearOutpoint()
-    {
-        unset($this->outpoint);
+        return $this->outpoint;
     }
 
     /**

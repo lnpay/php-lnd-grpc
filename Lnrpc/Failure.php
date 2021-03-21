@@ -18,50 +18,50 @@ class Failure extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.Failure.FailureCode code = 1;</code>
      */
-    protected $code = 0;
+    private $code = 0;
     /**
      * An optional channel update message.
      *
      * Generated from protobuf field <code>.lnrpc.ChannelUpdate channel_update = 3;</code>
      */
-    protected $channel_update = null;
+    private $channel_update = null;
     /**
      * A failure type-dependent htlc value.
      *
      * Generated from protobuf field <code>uint64 htlc_msat = 4;</code>
      */
-    protected $htlc_msat = 0;
+    private $htlc_msat = 0;
     /**
      * The sha256 sum of the onion payload.
      *
      * Generated from protobuf field <code>bytes onion_sha_256 = 5;</code>
      */
-    protected $onion_sha_256 = '';
+    private $onion_sha_256 = '';
     /**
      * A failure type-dependent cltv expiry value.
      *
      * Generated from protobuf field <code>uint32 cltv_expiry = 6;</code>
      */
-    protected $cltv_expiry = 0;
+    private $cltv_expiry = 0;
     /**
      * A failure type-dependent flags value.
      *
      * Generated from protobuf field <code>uint32 flags = 7;</code>
      */
-    protected $flags = 0;
+    private $flags = 0;
     /**
      *The position in the path of the intermediate or final node that generated
      *the failure message. Position zero is the sender node.
      *
      * Generated from protobuf field <code>uint32 failure_source_index = 8;</code>
      */
-    protected $failure_source_index = 0;
+    private $failure_source_index = 0;
     /**
      * A failure type-dependent block height.
      *
      * Generated from protobuf field <code>uint32 height = 9;</code>
      */
-    protected $height = 0;
+    private $height = 0;
 
     /**
      * Constructor.
@@ -113,7 +113,7 @@ class Failure extends \Google\Protobuf\Internal\Message
      */
     public function setCode($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\Failure\FailureCode::class);
+        GPBUtil::checkEnum($var, \Lnrpc\Failure_FailureCode::class);
         $this->code = $var;
 
         return $this;
@@ -127,17 +127,7 @@ class Failure extends \Google\Protobuf\Internal\Message
      */
     public function getChannelUpdate()
     {
-        return isset($this->channel_update) ? $this->channel_update : null;
-    }
-
-    public function hasChannelUpdate()
-    {
-        return isset($this->channel_update);
-    }
-
-    public function clearChannelUpdate()
-    {
-        unset($this->channel_update);
+        return $this->channel_update;
     }
 
     /**

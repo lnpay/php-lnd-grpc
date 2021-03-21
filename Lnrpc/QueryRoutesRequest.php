@@ -18,21 +18,21 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      *The amount to send expressed in satoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt = 2;</code>
      */
-    protected $amt = 0;
+    private $amt = 0;
     /**
      *The amount to send expressed in millisatoshis.
      *The fields amt and amt_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 amt_msat = 12;</code>
      */
-    protected $amt_msat = 0;
+    private $amt_msat = 0;
     /**
      *An optional CLTV delta from the current height that should be used for the
      *timelock of the final hop. Note that unlike SendPayment, QueryRoutes does
@@ -42,7 +42,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 4;</code>
      */
-    protected $final_cltv_delta = 0;
+    private $final_cltv_delta = 0;
     /**
      *The maximum number of satoshis that will be paid as a fee of the payment.
      *This value can be represented either as a percentage of the amount being
@@ -51,7 +51,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FeeLimit fee_limit = 5;</code>
      */
-    protected $fee_limit = null;
+    private $fee_limit = null;
     /**
      *A list of nodes to ignore during path finding. When using REST, these fields
      *must be encoded as base64.
@@ -71,14 +71,14 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string source_pub_key = 8;</code>
      */
-    protected $source_pub_key = '';
+    private $source_pub_key = '';
     /**
      *If set to true, edge probabilities from mission control will be used to get
      *the optimal route.
      *
      * Generated from protobuf field <code>bool use_mission_control = 9;</code>
      */
-    protected $use_mission_control = false;
+    private $use_mission_control = false;
     /**
      *A list of directed node pairs that will be ignored during path finding.
      *
@@ -92,7 +92,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 cltv_limit = 11;</code>
      */
-    protected $cltv_limit = 0;
+    private $cltv_limit = 0;
     /**
      *An optional field that can be used to pass an arbitrary set of TLV records
      *to a peer which understands the new records. This can be used to pass
@@ -110,13 +110,13 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 14 [jstype = JS_STRING];</code>
      */
-    protected $outgoing_chan_id = 0;
+    private $outgoing_chan_id = 0;
     /**
      *The pubkey of the last hop of the route. If empty, any hop may be used.
      *
      * Generated from protobuf field <code>bytes last_hop_pubkey = 15;</code>
      */
-    protected $last_hop_pubkey = '';
+    private $last_hop_pubkey = '';
     /**
      *Optional route hints to reach the destination through private channels.
      *
@@ -330,17 +330,7 @@ class QueryRoutesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFeeLimit()
     {
-        return isset($this->fee_limit) ? $this->fee_limit : null;
-    }
-
-    public function hasFeeLimit()
-    {
-        return isset($this->fee_limit);
-    }
-
-    public function clearFeeLimit()
-    {
-        unset($this->fee_limit);
+        return $this->fee_limit;
     }
 
     /**

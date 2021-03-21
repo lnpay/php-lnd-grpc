@@ -18,7 +18,7 @@ class ForwardEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.HtlcInfo info = 1;</code>
      */
-    protected $info = null;
+    private $info = null;
 
     /**
      * Constructor.
@@ -43,17 +43,7 @@ class ForwardEvent extends \Google\Protobuf\Internal\Message
      */
     public function getInfo()
     {
-        return isset($this->info) ? $this->info : null;
-    }
-
-    public function hasInfo()
-    {
-        return isset($this->info);
-    }
-
-    public function clearInfo()
-    {
-        unset($this->info);
+        return $this->info;
     }
 
     /**

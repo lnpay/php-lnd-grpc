@@ -20,7 +20,7 @@ class ChanInfoRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
 
     /**
      * Constructor.

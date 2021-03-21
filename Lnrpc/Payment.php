@@ -18,73 +18,73 @@ class Payment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_hash = 1;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      * Deprecated, use value_sat or value_msat.
      *
      * Generated from protobuf field <code>int64 value = 2 [deprecated = true];</code>
      */
-    protected $value = 0;
+    private $value = 0;
     /**
      * Deprecated, use creation_time_ns
      *
      * Generated from protobuf field <code>int64 creation_date = 3 [deprecated = true];</code>
      */
-    protected $creation_date = 0;
+    private $creation_date = 0;
     /**
      * Deprecated, use fee_sat or fee_msat.
      *
      * Generated from protobuf field <code>int64 fee = 5 [deprecated = true];</code>
      */
-    protected $fee = 0;
+    private $fee = 0;
     /**
      * The payment preimage
      *
      * Generated from protobuf field <code>string payment_preimage = 6;</code>
      */
-    protected $payment_preimage = '';
+    private $payment_preimage = '';
     /**
      * The value of the payment in satoshis
      *
      * Generated from protobuf field <code>int64 value_sat = 7;</code>
      */
-    protected $value_sat = 0;
+    private $value_sat = 0;
     /**
      * The value of the payment in milli-satoshis
      *
      * Generated from protobuf field <code>int64 value_msat = 8;</code>
      */
-    protected $value_msat = 0;
+    private $value_msat = 0;
     /**
      * The optional payment request being fulfilled.
      *
      * Generated from protobuf field <code>string payment_request = 9;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      * The status of the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Payment.PaymentStatus status = 10;</code>
      */
-    protected $status = 0;
+    private $status = 0;
     /**
      *  The fee paid for this payment in satoshis
      *
      * Generated from protobuf field <code>int64 fee_sat = 11;</code>
      */
-    protected $fee_sat = 0;
+    private $fee_sat = 0;
     /**
      *  The fee paid for this payment in milli-satoshis
      *
      * Generated from protobuf field <code>int64 fee_msat = 12;</code>
      */
-    protected $fee_msat = 0;
+    private $fee_msat = 0;
     /**
      * The time in UNIX nanoseconds at which the payment was created.
      *
      * Generated from protobuf field <code>int64 creation_time_ns = 13;</code>
      */
-    protected $creation_time_ns = 0;
+    private $creation_time_ns = 0;
     /**
      * The HTLCs made in attempt to settle the payment.
      *
@@ -98,11 +98,11 @@ class Payment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 payment_index = 15;</code>
      */
-    protected $payment_index = 0;
+    private $payment_index = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.PaymentFailureReason failure_reason = 16;</code>
      */
-    protected $failure_reason = 0;
+    private $failure_reason = 0;
 
     /**
      * Constructor.
@@ -376,7 +376,7 @@ class Payment extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\Payment\PaymentStatus::class);
+        GPBUtil::checkEnum($var, \Lnrpc\Payment_PaymentStatus::class);
         $this->status = $var;
 
         return $this;

@@ -18,92 +18,92 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string version = 14;</code>
      */
-    protected $version = '';
+    private $version = '';
     /**
      * The SHA1 commit hash that the daemon is compiled with.
      *
      * Generated from protobuf field <code>string commit_hash = 20;</code>
      */
-    protected $commit_hash = '';
+    private $commit_hash = '';
     /**
      * The identity pubkey of the current node.
      *
      * Generated from protobuf field <code>string identity_pubkey = 1;</code>
      */
-    protected $identity_pubkey = '';
+    private $identity_pubkey = '';
     /**
      * If applicable, the alias of the current node, e.g. "bob"
      *
      * Generated from protobuf field <code>string alias = 2;</code>
      */
-    protected $alias = '';
+    private $alias = '';
     /**
      * The color of the current node in hex code format
      *
      * Generated from protobuf field <code>string color = 17;</code>
      */
-    protected $color = '';
+    private $color = '';
     /**
      * Number of pending channels
      *
      * Generated from protobuf field <code>uint32 num_pending_channels = 3;</code>
      */
-    protected $num_pending_channels = 0;
+    private $num_pending_channels = 0;
     /**
      * Number of active channels
      *
      * Generated from protobuf field <code>uint32 num_active_channels = 4;</code>
      */
-    protected $num_active_channels = 0;
+    private $num_active_channels = 0;
     /**
      * Number of inactive channels
      *
      * Generated from protobuf field <code>uint32 num_inactive_channels = 15;</code>
      */
-    protected $num_inactive_channels = 0;
+    private $num_inactive_channels = 0;
     /**
      * Number of peers
      *
      * Generated from protobuf field <code>uint32 num_peers = 5;</code>
      */
-    protected $num_peers = 0;
+    private $num_peers = 0;
     /**
      * The node's current view of the height of the best block
      *
      * Generated from protobuf field <code>uint32 block_height = 6;</code>
      */
-    protected $block_height = 0;
+    private $block_height = 0;
     /**
      * The node's current view of the hash of the best block
      *
      * Generated from protobuf field <code>string block_hash = 8;</code>
      */
-    protected $block_hash = '';
+    private $block_hash = '';
     /**
      * Timestamp of the block best known to the wallet
      *
      * Generated from protobuf field <code>int64 best_header_timestamp = 13;</code>
      */
-    protected $best_header_timestamp = 0;
+    private $best_header_timestamp = 0;
     /**
      * Whether the wallet's view is synced to the main chain
      *
      * Generated from protobuf field <code>bool synced_to_chain = 9;</code>
      */
-    protected $synced_to_chain = false;
+    private $synced_to_chain = false;
     /**
      * Whether we consider ourselves synced with the public channel graph.
      *
      * Generated from protobuf field <code>bool synced_to_graph = 18;</code>
      */
-    protected $synced_to_graph = false;
+    private $synced_to_graph = false;
     /**
      *Whether the current node is connected to testnet. This field is
      *deprecated and the network field should be used instead
      *
      * Generated from protobuf field <code>bool testnet = 10 [deprecated = true];</code>
      */
-    protected $testnet = false;
+    private $testnet = false;
     /**
      * A list of active chains the node is connected to
      *

@@ -21,7 +21,7 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool include_incomplete = 1;</code>
      */
-    protected $include_incomplete = false;
+    private $include_incomplete = false;
     /**
      *The index of a payment that will be used as either the start or end of a
      *query to determine which payments should be returned in the response. The
@@ -31,13 +31,13 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 index_offset = 2;</code>
      */
-    protected $index_offset = 0;
+    private $index_offset = 0;
     /**
      * The maximal number of payments returned in the response to this query.
      *
      * Generated from protobuf field <code>uint64 max_payments = 3;</code>
      */
-    protected $max_payments = 0;
+    private $max_payments = 0;
     /**
      *If set, the payments returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards. The order
@@ -45,7 +45,7 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool reversed = 4;</code>
      */
-    protected $reversed = false;
+    private $reversed = false;
 
     /**
      * Constructor.

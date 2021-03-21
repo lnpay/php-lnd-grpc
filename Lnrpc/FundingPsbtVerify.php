@@ -20,13 +20,13 @@ class FundingPsbtVerify extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes funded_psbt = 1;</code>
      */
-    protected $funded_psbt = '';
+    private $funded_psbt = '';
     /**
      * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
 
     /**
      * Constructor.

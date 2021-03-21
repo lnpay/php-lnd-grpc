@@ -21,19 +21,19 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.LightningNode node = 1;</code>
      */
-    protected $node = null;
+    private $node = null;
     /**
      * The total number of channels for the node.
      *
      * Generated from protobuf field <code>uint32 num_channels = 2;</code>
      */
-    protected $num_channels = 0;
+    private $num_channels = 0;
     /**
      * The sum of all channels capacity for the node, denominated in satoshis.
      *
      * Generated from protobuf field <code>int64 total_capacity = 3;</code>
      */
-    protected $total_capacity = 0;
+    private $total_capacity = 0;
     /**
      * A list of all public channels for the node.
      *
@@ -76,17 +76,7 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      */
     public function getNode()
     {
-        return isset($this->node) ? $this->node : null;
-    }
-
-    public function hasNode()
-    {
-        return isset($this->node);
-    }
-
-    public function clearNode()
-    {
-        unset($this->node);
+        return $this->node;
     }
 
     /**

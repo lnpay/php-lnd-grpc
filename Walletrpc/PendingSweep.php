@@ -18,19 +18,19 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 1;</code>
      */
-    protected $outpoint = null;
+    private $outpoint = null;
     /**
      * The witness type of the output we're attempting to sweep.
      *
      * Generated from protobuf field <code>.walletrpc.WitnessType witness_type = 2;</code>
      */
-    protected $witness_type = 0;
+    private $witness_type = 0;
     /**
      * The value of the output we're attempting to sweep.
      *
      * Generated from protobuf field <code>uint32 amount_sat = 3;</code>
      */
-    protected $amount_sat = 0;
+    private $amount_sat = 0;
     /**
      *The fee rate we'll use to sweep the output. The fee rate is only determined
      *once a sweeping transaction for the output is created, so it's possible for
@@ -38,39 +38,39 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 sat_per_byte = 4;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
     /**
      * The number of broadcast attempts we've made to sweep the output.
      *
      * Generated from protobuf field <code>uint32 broadcast_attempts = 5;</code>
      */
-    protected $broadcast_attempts = 0;
+    private $broadcast_attempts = 0;
     /**
      *The next height of the chain at which we'll attempt to broadcast the
      *sweep transaction of the output.
      *
      * Generated from protobuf field <code>uint32 next_broadcast_height = 6;</code>
      */
-    protected $next_broadcast_height = 0;
+    private $next_broadcast_height = 0;
     /**
      * The requested confirmation target for this output.
      *
      * Generated from protobuf field <code>uint32 requested_conf_target = 8;</code>
      */
-    protected $requested_conf_target = 0;
+    private $requested_conf_target = 0;
     /**
      * The requested fee rate, expressed in sat/byte, for this output.
      *
      * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9;</code>
      */
-    protected $requested_sat_per_byte = 0;
+    private $requested_sat_per_byte = 0;
     /**
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
      *
      * Generated from protobuf field <code>bool force = 7;</code>
      */
-    protected $force = false;
+    private $force = false;
 
     /**
      * Constructor.
@@ -115,17 +115,7 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      */
     public function getOutpoint()
     {
-        return isset($this->outpoint) ? $this->outpoint : null;
-    }
-
-    public function hasOutpoint()
-    {
-        return isset($this->outpoint);
-    }
-
-    public function clearOutpoint()
-    {
-        unset($this->outpoint);
+        return $this->outpoint;
     }
 
     /**

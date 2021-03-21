@@ -18,7 +18,7 @@ class VerifyMessageResp extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      */
-    protected $valid = false;
+    private $valid = false;
 
     /**
      * Constructor.

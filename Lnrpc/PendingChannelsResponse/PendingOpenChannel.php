@@ -18,13 +18,13 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.PendingChannelsResponse.PendingChannel channel = 1;</code>
      */
-    protected $channel = null;
+    private $channel = null;
     /**
      * The height at which this channel will be confirmed
      *
      * Generated from protobuf field <code>uint32 confirmation_height = 2;</code>
      */
-    protected $confirmation_height = 0;
+    private $confirmation_height = 0;
     /**
      *The amount calculated to be paid in fees for the current set of
      *commitment transactions. The fee amount is persisted with the channel
@@ -34,13 +34,13 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 commit_fee = 4;</code>
      */
-    protected $commit_fee = 0;
+    private $commit_fee = 0;
     /**
      * The weight of the commitment transaction
      *
      * Generated from protobuf field <code>int64 commit_weight = 5;</code>
      */
-    protected $commit_weight = 0;
+    private $commit_weight = 0;
     /**
      *The required number of satoshis per kilo-weight that the requester will
      *pay at all times, for both the funding transaction and commitment
@@ -48,7 +48,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fee_per_kw = 6;</code>
      */
-    protected $fee_per_kw = 0;
+    private $fee_per_kw = 0;
 
     /**
      * Constructor.
@@ -87,17 +87,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      */
     public function getChannel()
     {
-        return isset($this->channel) ? $this->channel : null;
-    }
-
-    public function hasChannel()
-    {
-        return isset($this->channel);
-    }
-
-    public function clearChannel()
-    {
-        unset($this->channel);
+        return $this->channel;
     }
 
     /**
@@ -109,7 +99,7 @@ class PendingOpenChannel extends \Google\Protobuf\Internal\Message
      */
     public function setChannel($var)
     {
-        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse\PendingChannel::class);
+        GPBUtil::checkMessage($var, \Lnrpc\PendingChannelsResponse_PendingChannel::class);
         $this->channel = $var;
 
         return $this;

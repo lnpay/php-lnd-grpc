@@ -20,19 +20,26 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string identity_key = 2;</code>
      */
-    protected $identity_key = '';
+    private $identity_key = '';
     /**
-     * Generated from protobuf field <code>bytes global_features = 3;</code>
+     * Generated from protobuf field <code>bytes global_features = 3 [deprecated = true];</code>
      */
-    protected $global_features = '';
+    private $global_features = '';
     /**
      * Generated from protobuf field <code>string alias = 4;</code>
      */
-    protected $alias = '';
+    private $alias = '';
     /**
      * Generated from protobuf field <code>string color = 5;</code>
      */
-    protected $color = '';
+    private $color = '';
+    /**
+     *Features that the node has advertised in the init message, node
+     *announcements and invoices.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
+     */
+    private $features;
 
     /**
      * Constructor.
@@ -45,6 +52,9 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
      *     @type string $global_features
      *     @type string $alias
      *     @type string $color
+     *     @type array|\Google\Protobuf\Internal\MapField $features
+     *          Features that the node has advertised in the init message, node
+     *          announcements and invoices.
      * }
      */
     public function __construct($data = NULL) {
@@ -97,7 +107,7 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes global_features = 3;</code>
+     * Generated from protobuf field <code>bytes global_features = 3 [deprecated = true];</code>
      * @return string
      */
     public function getGlobalFeatures()
@@ -106,7 +116,7 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes global_features = 3;</code>
+     * Generated from protobuf field <code>bytes global_features = 3 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -158,6 +168,34 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->color = $var;
+
+        return $this;
+    }
+
+    /**
+     *Features that the node has advertised in the init message, node
+     *announcements and invoices.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     *Features that the node has advertised in the init message, node
+     *announcements and invoices.
+     *
+     * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setFeatures($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
+        $this->features = $arr;
 
         return $this;
     }

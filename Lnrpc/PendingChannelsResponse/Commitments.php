@@ -18,40 +18,40 @@ class Commitments extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string local_txid = 1;</code>
      */
-    protected $local_txid = '';
+    private $local_txid = '';
     /**
      * Hash of the remote version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_txid = 2;</code>
      */
-    protected $remote_txid = '';
+    private $remote_txid = '';
     /**
      * Hash of the remote pending version of the commitment tx.
      *
      * Generated from protobuf field <code>string remote_pending_txid = 3;</code>
      */
-    protected $remote_pending_txid = '';
+    private $remote_pending_txid = '';
     /**
      *The amount in satoshis calculated to be paid in fees for the local
      *commitment.
      *
      * Generated from protobuf field <code>uint64 local_commit_fee_sat = 4;</code>
      */
-    protected $local_commit_fee_sat = 0;
+    private $local_commit_fee_sat = 0;
     /**
      *The amount in satoshis calculated to be paid in fees for the remote
      *commitment.
      *
      * Generated from protobuf field <code>uint64 remote_commit_fee_sat = 5;</code>
      */
-    protected $remote_commit_fee_sat = 0;
+    private $remote_commit_fee_sat = 0;
     /**
      *The amount in satoshis calculated to be paid in fees for the remote
      *pending commitment.
      *
      * Generated from protobuf field <code>uint64 remote_pending_commit_fee_sat = 6;</code>
      */
-    protected $remote_pending_commit_fee_sat = 0;
+    private $remote_pending_commit_fee_sat = 0;
 
     /**
      * Constructor.

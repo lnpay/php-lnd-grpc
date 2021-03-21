@@ -19,7 +19,7 @@ class SettleInvoiceMsg extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes preimage = 1;</code>
      */
-    protected $preimage = '';
+    private $preimage = '';
 
     /**
      * Constructor.

@@ -18,13 +18,13 @@ class TxOut extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 value = 1;</code>
      */
-    protected $value = 0;
+    private $value = 0;
     /**
      * The script of the output being spent.
      *
      * Generated from protobuf field <code>bytes pk_script = 2;</code>
      */
-    protected $pk_script = '';
+    private $pk_script = '';
 
     /**
      * Constructor.

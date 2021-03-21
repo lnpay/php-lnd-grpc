@@ -29,11 +29,18 @@ class SyncType
      * Generated from protobuf enum <code>PASSIVE_SYNC = 2;</code>
      */
     const PASSIVE_SYNC = 2;
+    /**
+     *Denotes that this peer is pinned into an active sync.
+     *
+     * Generated from protobuf enum <code>PINNED_SYNC = 3;</code>
+     */
+    const PINNED_SYNC = 3;
 
     private static $valueToName = [
         self::UNKNOWN_SYNC => 'UNKNOWN_SYNC',
         self::ACTIVE_SYNC => 'ACTIVE_SYNC',
         self::PASSIVE_SYNC => 'PASSIVE_SYNC',
+        self::PINNED_SYNC => 'PINNED_SYNC',
     ];
 
     public static function name($value)

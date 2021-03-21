@@ -19,6 +19,12 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.MacaroonPermission permissions = 1;</code>
      */
     private $permissions;
+    /**
+     * The root key ID used to create the macaroon, must be a positive integer.
+     *
+     * Generated from protobuf field <code>uint64 root_key_id = 2;</code>
+     */
+    private $root_key_id = 0;
 
     /**
      * Constructor.
@@ -28,6 +34,8 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type \Lnrpc\MacaroonPermission[]|\Google\Protobuf\Internal\RepeatedField $permissions
      *           The list of permissions the new macaroon should grant.
+     *     @type int|string $root_key_id
+     *           The root key ID used to create the macaroon, must be a positive integer.
      * }
      */
     public function __construct($data = NULL) {
@@ -57,6 +65,32 @@ class BakeMacaroonRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\MacaroonPermission::class);
         $this->permissions = $arr;
+
+        return $this;
+    }
+
+    /**
+     * The root key ID used to create the macaroon, must be a positive integer.
+     *
+     * Generated from protobuf field <code>uint64 root_key_id = 2;</code>
+     * @return int|string
+     */
+    public function getRootKeyId()
+    {
+        return $this->root_key_id;
+    }
+
+    /**
+     * The root key ID used to create the macaroon, must be a positive integer.
+     *
+     * Generated from protobuf field <code>uint64 root_key_id = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setRootKeyId($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->root_key_id = $var;
 
         return $this;
     }

@@ -18,20 +18,20 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    protected $msg = '';
+    private $msg = '';
     /**
      *The fixed-size LN wire encoded signature to be verified over the given
      *message.
      *
      * Generated from protobuf field <code>bytes signature = 2;</code>
      */
-    protected $signature = '';
+    private $signature = '';
     /**
      * The public key the signature has to be valid for.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      */
-    protected $pubkey = '';
+    private $pubkey = '';
 
     /**
      * Constructor.

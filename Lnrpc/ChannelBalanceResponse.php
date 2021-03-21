@@ -14,17 +14,53 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Sum of channels balances denominated in satoshis
+     * Deprecated. Sum of channels balances denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 balance = 1;</code>
+     * Generated from protobuf field <code>int64 balance = 1 [deprecated = true];</code>
      */
-    protected $balance = 0;
+    private $balance = 0;
     /**
-     * Sum of channels pending balances denominated in satoshis
+     * Deprecated. Sum of channels pending balances denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 pending_open_balance = 2;</code>
+     * Generated from protobuf field <code>int64 pending_open_balance = 2 [deprecated = true];</code>
      */
-    protected $pending_open_balance = 0;
+    private $pending_open_balance = 0;
+    /**
+     * Sum of channels local balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount local_balance = 3;</code>
+     */
+    private $local_balance = null;
+    /**
+     * Sum of channels remote balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount remote_balance = 4;</code>
+     */
+    private $remote_balance = null;
+    /**
+     * Sum of channels local unsettled balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount unsettled_local_balance = 5;</code>
+     */
+    private $unsettled_local_balance = null;
+    /**
+     * Sum of channels remote unsettled balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount unsettled_remote_balance = 6;</code>
+     */
+    private $unsettled_remote_balance = null;
+    /**
+     * Sum of channels pending local balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount pending_open_local_balance = 7;</code>
+     */
+    private $pending_open_local_balance = null;
+    /**
+     * Sum of channels pending remote balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount pending_open_remote_balance = 8;</code>
+     */
+    private $pending_open_remote_balance = null;
 
     /**
      * Constructor.
@@ -33,9 +69,21 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $balance
-     *           Sum of channels balances denominated in satoshis
+     *           Deprecated. Sum of channels balances denominated in satoshis
      *     @type int|string $pending_open_balance
-     *           Sum of channels pending balances denominated in satoshis
+     *           Deprecated. Sum of channels pending balances denominated in satoshis
+     *     @type \Lnrpc\Amount $local_balance
+     *           Sum of channels local balances.
+     *     @type \Lnrpc\Amount $remote_balance
+     *           Sum of channels remote balances.
+     *     @type \Lnrpc\Amount $unsettled_local_balance
+     *           Sum of channels local unsettled balances.
+     *     @type \Lnrpc\Amount $unsettled_remote_balance
+     *           Sum of channels remote unsettled balances.
+     *     @type \Lnrpc\Amount $pending_open_local_balance
+     *           Sum of channels pending local balances.
+     *     @type \Lnrpc\Amount $pending_open_remote_balance
+     *           Sum of channels pending remote balances.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,9 +92,9 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Sum of channels balances denominated in satoshis
+     * Deprecated. Sum of channels balances denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 balance = 1;</code>
+     * Generated from protobuf field <code>int64 balance = 1 [deprecated = true];</code>
      * @return int|string
      */
     public function getBalance()
@@ -55,9 +103,9 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Sum of channels balances denominated in satoshis
+     * Deprecated. Sum of channels balances denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 balance = 1;</code>
+     * Generated from protobuf field <code>int64 balance = 1 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -70,9 +118,9 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Sum of channels pending balances denominated in satoshis
+     * Deprecated. Sum of channels pending balances denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 pending_open_balance = 2;</code>
+     * Generated from protobuf field <code>int64 pending_open_balance = 2 [deprecated = true];</code>
      * @return int|string
      */
     public function getPendingOpenBalance()
@@ -81,9 +129,9 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Sum of channels pending balances denominated in satoshis
+     * Deprecated. Sum of channels pending balances denominated in satoshis
      *
-     * Generated from protobuf field <code>int64 pending_open_balance = 2;</code>
+     * Generated from protobuf field <code>int64 pending_open_balance = 2 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -91,6 +139,162 @@ class ChannelBalanceResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->pending_open_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sum of channels local balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount local_balance = 3;</code>
+     * @return \Lnrpc\Amount
+     */
+    public function getLocalBalance()
+    {
+        return $this->local_balance;
+    }
+
+    /**
+     * Sum of channels local balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount local_balance = 3;</code>
+     * @param \Lnrpc\Amount $var
+     * @return $this
+     */
+    public function setLocalBalance($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Amount::class);
+        $this->local_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sum of channels remote balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount remote_balance = 4;</code>
+     * @return \Lnrpc\Amount
+     */
+    public function getRemoteBalance()
+    {
+        return $this->remote_balance;
+    }
+
+    /**
+     * Sum of channels remote balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount remote_balance = 4;</code>
+     * @param \Lnrpc\Amount $var
+     * @return $this
+     */
+    public function setRemoteBalance($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Amount::class);
+        $this->remote_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sum of channels local unsettled balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount unsettled_local_balance = 5;</code>
+     * @return \Lnrpc\Amount
+     */
+    public function getUnsettledLocalBalance()
+    {
+        return $this->unsettled_local_balance;
+    }
+
+    /**
+     * Sum of channels local unsettled balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount unsettled_local_balance = 5;</code>
+     * @param \Lnrpc\Amount $var
+     * @return $this
+     */
+    public function setUnsettledLocalBalance($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Amount::class);
+        $this->unsettled_local_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sum of channels remote unsettled balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount unsettled_remote_balance = 6;</code>
+     * @return \Lnrpc\Amount
+     */
+    public function getUnsettledRemoteBalance()
+    {
+        return $this->unsettled_remote_balance;
+    }
+
+    /**
+     * Sum of channels remote unsettled balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount unsettled_remote_balance = 6;</code>
+     * @param \Lnrpc\Amount $var
+     * @return $this
+     */
+    public function setUnsettledRemoteBalance($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Amount::class);
+        $this->unsettled_remote_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sum of channels pending local balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount pending_open_local_balance = 7;</code>
+     * @return \Lnrpc\Amount
+     */
+    public function getPendingOpenLocalBalance()
+    {
+        return $this->pending_open_local_balance;
+    }
+
+    /**
+     * Sum of channels pending local balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount pending_open_local_balance = 7;</code>
+     * @param \Lnrpc\Amount $var
+     * @return $this
+     */
+    public function setPendingOpenLocalBalance($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Amount::class);
+        $this->pending_open_local_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sum of channels pending remote balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount pending_open_remote_balance = 8;</code>
+     * @return \Lnrpc\Amount
+     */
+    public function getPendingOpenRemoteBalance()
+    {
+        return $this->pending_open_remote_balance;
+    }
+
+    /**
+     * Sum of channels pending remote balances.
+     *
+     * Generated from protobuf field <code>.lnrpc.Amount pending_open_remote_balance = 8;</code>
+     * @param \Lnrpc\Amount $var
+     * @return $this
+     */
+    public function setPendingOpenRemoteBalance($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\Amount::class);
+        $this->pending_open_remote_balance = $var;
 
         return $this;
     }

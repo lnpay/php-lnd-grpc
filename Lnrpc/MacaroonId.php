@@ -16,11 +16,11 @@ class MacaroonId extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes nonce = 1;</code>
      */
-    protected $nonce = '';
+    private $nonce = '';
     /**
      * Generated from protobuf field <code>bytes storageId = 2;</code>
      */
-    protected $storageId = '';
+    private $storageId = '';
     /**
      * Generated from protobuf field <code>repeated .lnrpc.Op ops = 3;</code>
      */

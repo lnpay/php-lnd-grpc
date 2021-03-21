@@ -20,14 +20,14 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 1;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     /**
      *An optional base PSBT the new channel output will be added to. If this is
      *non-empty, it must be a binary serialized PSBT.
      *
      * Generated from protobuf field <code>bytes base_psbt = 2;</code>
      */
-    protected $base_psbt = '';
+    private $base_psbt = '';
     /**
      *If a channel should be part of a batch (multiple channel openings in one
      *transaction), it can be dangerous if the whole batch transaction is
@@ -38,7 +38,7 @@ class PsbtShim extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool no_publish = 3;</code>
      */
-    protected $no_publish = false;
+    private $no_publish = false;
 
     /**
      * Constructor.

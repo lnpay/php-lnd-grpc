@@ -48,11 +48,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasFixed()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      *The fee limit expressed as a fixed amount of satoshis.
      *The fields fixed and fixed_msat are mutually exclusive.
@@ -81,11 +76,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
         return $this->readOneof(3);
     }
 
-    public function hasFixedMsat()
-    {
-        return $this->hasOneof(3);
-    }
-
     /**
      *The fee limit expressed as a fixed amount of millisatoshis.
      *The fields fixed and fixed_msat are mutually exclusive.
@@ -111,11 +101,6 @@ class FeeLimit extends \Google\Protobuf\Internal\Message
     public function getPercent()
     {
         return $this->readOneof(2);
-    }
-
-    public function hasPercent()
-    {
-        return $this->hasOneof(2);
     }
 
     /**

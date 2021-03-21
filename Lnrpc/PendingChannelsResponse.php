@@ -18,7 +18,7 @@ class PendingChannelsResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 total_limbo_balance = 1;</code>
      */
-    protected $total_limbo_balance = 0;
+    private $total_limbo_balance = 0;
     /**
      * Channels pending opening
      *

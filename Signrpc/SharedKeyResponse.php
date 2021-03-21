@@ -18,7 +18,7 @@ class SharedKeyResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes shared_key = 1;</code>
      */
-    protected $shared_key = '';
+    private $shared_key = '';
 
     /**
      * Constructor.

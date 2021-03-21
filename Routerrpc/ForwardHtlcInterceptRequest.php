@@ -19,26 +19,26 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.CircuitKey incoming_circuit_key = 1;</code>
      */
-    protected $incoming_circuit_key = null;
+    private $incoming_circuit_key = null;
     /**
      * The incoming htlc amount.
      *
      * Generated from protobuf field <code>uint64 incoming_amount_msat = 5;</code>
      */
-    protected $incoming_amount_msat = 0;
+    private $incoming_amount_msat = 0;
     /**
      * The incoming htlc expiry.
      *
      * Generated from protobuf field <code>uint32 incoming_expiry = 6;</code>
      */
-    protected $incoming_expiry = 0;
+    private $incoming_expiry = 0;
     /**
      *The htlc payment hash. This value is not guaranteed to be unique per
      *request.
      *
      * Generated from protobuf field <code>bytes payment_hash = 2;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      * The requested outgoing channel id for this forwarded htlc. Because of
      * non-strict forwarding, this isn't necessarily the channel over which the
@@ -47,25 +47,31 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 outgoing_requested_chan_id = 7;</code>
      */
-    protected $outgoing_requested_chan_id = 0;
+    private $outgoing_requested_chan_id = 0;
     /**
      * The outgoing htlc amount.
      *
      * Generated from protobuf field <code>uint64 outgoing_amount_msat = 3;</code>
      */
-    protected $outgoing_amount_msat = 0;
+    private $outgoing_amount_msat = 0;
     /**
      * The outgoing htlc expiry.
      *
      * Generated from protobuf field <code>uint32 outgoing_expiry = 4;</code>
      */
-    protected $outgoing_expiry = 0;
+    private $outgoing_expiry = 0;
     /**
      * Any custom records that were present in the payload.
      *
      * Generated from protobuf field <code>map<uint64, bytes> custom_records = 8;</code>
      */
     private $custom_records;
+    /**
+     * The onion blob for the next hop
+     *
+     * Generated from protobuf field <code>bytes onion_blob = 9;</code>
+     */
+    private $onion_blob = '';
 
     /**
      * Constructor.
@@ -94,6 +100,8 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      *           The outgoing htlc expiry.
      *     @type array|\Google\Protobuf\Internal\MapField $custom_records
      *           Any custom records that were present in the payload.
+     *     @type string $onion_blob
+     *           The onion blob for the next hop
      * }
      */
     public function __construct($data = NULL) {
@@ -110,17 +118,7 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      */
     public function getIncomingCircuitKey()
     {
-        return isset($this->incoming_circuit_key) ? $this->incoming_circuit_key : null;
-    }
-
-    public function hasIncomingCircuitKey()
-    {
-        return isset($this->incoming_circuit_key);
-    }
-
-    public function clearIncomingCircuitKey()
-    {
-        unset($this->incoming_circuit_key);
+        return $this->incoming_circuit_key;
     }
 
     /**
@@ -325,6 +323,32 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
         $this->custom_records = $arr;
+
+        return $this;
+    }
+
+    /**
+     * The onion blob for the next hop
+     *
+     * Generated from protobuf field <code>bytes onion_blob = 9;</code>
+     * @return string
+     */
+    public function getOnionBlob()
+    {
+        return $this->onion_blob;
+    }
+
+    /**
+     * The onion blob for the next hop
+     *
+     * Generated from protobuf field <code>bytes onion_blob = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOnionBlob($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->onion_blob = $var;
 
         return $this;
     }

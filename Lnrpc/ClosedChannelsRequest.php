@@ -16,27 +16,27 @@ class ClosedChannelsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool cooperative = 1;</code>
      */
-    protected $cooperative = false;
+    private $cooperative = false;
     /**
      * Generated from protobuf field <code>bool local_force = 2;</code>
      */
-    protected $local_force = false;
+    private $local_force = false;
     /**
      * Generated from protobuf field <code>bool remote_force = 3;</code>
      */
-    protected $remote_force = false;
+    private $remote_force = false;
     /**
      * Generated from protobuf field <code>bool breach = 4;</code>
      */
-    protected $breach = false;
+    private $breach = false;
     /**
      * Generated from protobuf field <code>bool funding_canceled = 5;</code>
      */
-    protected $funding_canceled = false;
+    private $funding_canceled = false;
     /**
      * Generated from protobuf field <code>bool abandoned = 6;</code>
      */
-    protected $abandoned = false;
+    private $abandoned = false;
 
     /**
      * Constructor.

@@ -18,19 +18,19 @@ class OutPoint extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes txid_bytes = 1;</code>
      */
-    protected $txid_bytes = '';
+    private $txid_bytes = '';
     /**
      * Reversed, hex-encoded string representing the transaction id.
      *
      * Generated from protobuf field <code>string txid_str = 2;</code>
      */
-    protected $txid_str = '';
+    private $txid_str = '';
     /**
      * The index of the output on the transaction.
      *
      * Generated from protobuf field <code>uint32 output_index = 3;</code>
      */
-    protected $output_index = 0;
+    private $output_index = 0;
 
     /**
      * Constructor.

@@ -21,7 +21,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string memo = 1;</code>
      */
-    protected $memo = '';
+    private $memo = '';
     /**
      *The hex-encoded preimage (32 byte) which will allow settling an incoming
      *HTLC payable to this preimage. When using REST, this field must be encoded
@@ -29,46 +29,46 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes r_preimage = 3;</code>
      */
-    protected $r_preimage = '';
+    private $r_preimage = '';
     /**
      *The hash of the preimage. When using REST, this field must be encoded as
      *base64.
      *
      * Generated from protobuf field <code>bytes r_hash = 4;</code>
      */
-    protected $r_hash = '';
+    private $r_hash = '';
     /**
      *The value of this invoice in satoshis
      *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value = 5;</code>
      */
-    protected $value = 0;
+    private $value = 0;
     /**
      *The value of this invoice in millisatoshis
      *The fields value and value_msat are mutually exclusive.
      *
      * Generated from protobuf field <code>int64 value_msat = 23;</code>
      */
-    protected $value_msat = 0;
+    private $value_msat = 0;
     /**
      * Whether this invoice has been fulfilled
      *
      * Generated from protobuf field <code>bool settled = 6 [deprecated = true];</code>
      */
-    protected $settled = false;
+    private $settled = false;
     /**
      * When this invoice was created
      *
      * Generated from protobuf field <code>int64 creation_date = 7;</code>
      */
-    protected $creation_date = 0;
+    private $creation_date = 0;
     /**
      * When this invoice was settled
      *
      * Generated from protobuf field <code>int64 settle_date = 8;</code>
      */
-    protected $settle_date = 0;
+    private $settle_date = 0;
     /**
      *A bare-bones invoice for a payment within the Lightning Network. With the
      *details of the invoice, the sender has all the data necessary to send a
@@ -76,7 +76,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string payment_request = 9;</code>
      */
-    protected $payment_request = '';
+    private $payment_request = '';
     /**
      *Hash (SHA-256) of a description of the payment. Used if the description of
      *payment (memo) is too long to naturally fit within the description field
@@ -85,25 +85,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes description_hash = 10;</code>
      */
-    protected $description_hash = '';
+    private $description_hash = '';
     /**
      * Payment request expiry time in seconds. Default is 3600 (1 hour).
      *
      * Generated from protobuf field <code>int64 expiry = 11;</code>
      */
-    protected $expiry = 0;
+    private $expiry = 0;
     /**
      * Fallback on-chain address.
      *
      * Generated from protobuf field <code>string fallback_addr = 12;</code>
      */
-    protected $fallback_addr = '';
+    private $fallback_addr = '';
     /**
      * Delta to use for the time-lock of the CLTV extended to the final hop.
      *
      * Generated from protobuf field <code>uint64 cltv_expiry = 13;</code>
      */
-    protected $cltv_expiry = 0;
+    private $cltv_expiry = 0;
     /**
      *Route hints that can each be individually used to assist in reaching the
      *invoice's destination.
@@ -116,7 +116,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool private = 15;</code>
      */
-    protected $private = false;
+    private $private = false;
     /**
      *The "add" index of this invoice. Each newly created invoice will increment
      *this index making it monotonically increasing. Callers to the
@@ -125,7 +125,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 add_index = 16;</code>
      */
-    protected $add_index = 0;
+    private $add_index = 0;
     /**
      *The "settle" index of this invoice. Each newly settled invoice will
      *increment this index making it monotonically increasing. Callers to the
@@ -134,13 +134,13 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 settle_index = 17;</code>
      */
-    protected $settle_index = 0;
+    private $settle_index = 0;
     /**
      * Deprecated, use amt_paid_sat or amt_paid_msat.
      *
      * Generated from protobuf field <code>int64 amt_paid = 18 [deprecated = true];</code>
      */
-    protected $amt_paid = 0;
+    private $amt_paid = 0;
     /**
      *The amount that was accepted for this invoice, in satoshis. This will ONLY
      *be set if this invoice has been settled. We provide this field as if the
@@ -151,7 +151,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_paid_sat = 19;</code>
      */
-    protected $amt_paid_sat = 0;
+    private $amt_paid_sat = 0;
     /**
      *The amount that was accepted for this invoice, in millisatoshis. This will
      *ONLY be set if this invoice has been settled. We provide this field as if
@@ -162,13 +162,13 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_paid_msat = 20;</code>
      */
-    protected $amt_paid_msat = 0;
+    private $amt_paid_msat = 0;
     /**
      *The state the invoice is in.
      *
      * Generated from protobuf field <code>.lnrpc.Invoice.InvoiceState state = 21;</code>
      */
-    protected $state = 0;
+    private $state = 0;
     /**
      * List of HTLCs paying to this invoice [EXPERIMENTAL].
      *
@@ -187,7 +187,15 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool is_keysend = 25;</code>
      */
-    protected $is_keysend = false;
+    private $is_keysend = false;
+    /**
+     *The payment address of this invoice. This value will be used in MPP
+     *payments, and also for newer invoies that always require the MPP paylaod
+     *for added end-to-end security.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 26;</code>
+     */
+    private $payment_addr = '';
 
     /**
      * Constructor.
@@ -274,6 +282,10 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *     @type bool $is_keysend
      *          Indicates if this invoice was a spontaneous payment that arrived via keysend
      *          [EXPERIMENTAL].
+     *     @type string $payment_addr
+     *          The payment address of this invoice. This value will be used in MPP
+     *          payments, and also for newer invoies that always require the MPP paylaod
+     *          for added end-to-end security.
      * }
      */
     public function __construct($data = NULL) {
@@ -881,7 +893,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\Invoice\InvoiceState::class);
+        GPBUtil::checkEnum($var, \Lnrpc\Invoice_InvoiceState::class);
         $this->state = $var;
 
         return $this;
@@ -963,6 +975,36 @@ class Invoice extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_keysend = $var;
+
+        return $this;
+    }
+
+    /**
+     *The payment address of this invoice. This value will be used in MPP
+     *payments, and also for newer invoies that always require the MPP paylaod
+     *for added end-to-end security.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 26;</code>
+     * @return string
+     */
+    public function getPaymentAddr()
+    {
+        return $this->payment_addr;
+    }
+
+    /**
+     *The payment address of this invoice. This value will be used in MPP
+     *payments, and also for newer invoies that always require the MPP paylaod
+     *for added end-to-end security.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 26;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentAddr($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->payment_addr = $var;
 
         return $this;
     }

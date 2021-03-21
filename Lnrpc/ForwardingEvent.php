@@ -19,60 +19,60 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 timestamp = 1;</code>
      */
-    protected $timestamp = 0;
+    private $timestamp = 0;
     /**
      * The incoming channel ID that carried the HTLC that created the circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_in = 2 [jstype = JS_STRING];</code>
      */
-    protected $chan_id_in = 0;
+    private $chan_id_in = 0;
     /**
      * The outgoing channel ID that carried the preimage that completed the
      * circuit.
      *
      * Generated from protobuf field <code>uint64 chan_id_out = 4 [jstype = JS_STRING];</code>
      */
-    protected $chan_id_out = 0;
+    private $chan_id_out = 0;
     /**
      * The total amount (in satoshis) of the incoming HTLC that created half
      * the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in = 5;</code>
      */
-    protected $amt_in = 0;
+    private $amt_in = 0;
     /**
      * The total amount (in satoshis) of the outgoing HTLC that created the
      * second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out = 6;</code>
      */
-    protected $amt_out = 0;
+    private $amt_out = 0;
     /**
      * The total fee (in satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee = 7;</code>
      */
-    protected $fee = 0;
+    private $fee = 0;
     /**
      * The total fee (in milli-satoshis) that this payment circuit carried.
      *
      * Generated from protobuf field <code>uint64 fee_msat = 8;</code>
      */
-    protected $fee_msat = 0;
+    private $fee_msat = 0;
     /**
      * The total amount (in milli-satoshis) of the incoming HTLC that created
      * half the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_in_msat = 9;</code>
      */
-    protected $amt_in_msat = 0;
+    private $amt_in_msat = 0;
     /**
      * The total amount (in milli-satoshis) of the outgoing HTLC that created
      * the second half of the circuit.
      *
      * Generated from protobuf field <code>uint64 amt_out_msat = 10;</code>
      */
-    protected $amt_out_msat = 0;
+    private $amt_out_msat = 0;
 
     /**
      * Constructor.

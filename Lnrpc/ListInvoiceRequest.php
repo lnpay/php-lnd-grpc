@@ -19,27 +19,27 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool pending_only = 1;</code>
      */
-    protected $pending_only = false;
+    private $pending_only = false;
     /**
      *The index of an invoice that will be used as either the start or end of a
      *query to determine which invoices should be returned in the response.
      *
      * Generated from protobuf field <code>uint64 index_offset = 4;</code>
      */
-    protected $index_offset = 0;
+    private $index_offset = 0;
     /**
      * The max number of invoices to return in the response to this query.
      *
      * Generated from protobuf field <code>uint64 num_max_invoices = 5;</code>
      */
-    protected $num_max_invoices = 0;
+    private $num_max_invoices = 0;
     /**
      *If set, the invoices returned will result from seeking backwards from the
      *specified index offset. This can be used to paginate backwards.
      *
      * Generated from protobuf field <code>bool reversed = 6;</code>
      */
-    protected $reversed = false;
+    private $reversed = false;
 
     /**
      * Constructor.

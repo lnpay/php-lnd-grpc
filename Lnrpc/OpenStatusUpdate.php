@@ -19,7 +19,7 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 4;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     protected $update;
 
     /**
@@ -59,11 +59,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasChanPending()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      *Signals that the channel is now fully negotiated and the funding
      *transaction published.
@@ -92,11 +87,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
         return $this->readOneof(3);
     }
 
-    public function hasChanOpen()
-    {
-        return $this->hasOneof(3);
-    }
-
     /**
      *Signals that the channel's funding transaction has now reached the
      *required number of confirmations on chain and can be used.
@@ -123,11 +113,6 @@ class OpenStatusUpdate extends \Google\Protobuf\Internal\Message
     public function getPsbtFund()
     {
         return $this->readOneof(5);
-    }
-
-    public function hasPsbtFund()
-    {
-        return $this->hasOneof(5);
     }
 
     /**

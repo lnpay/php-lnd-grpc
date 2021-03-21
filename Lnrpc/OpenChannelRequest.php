@@ -19,76 +19,76 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes node_pubkey = 2;</code>
      */
-    protected $node_pubkey = '';
+    private $node_pubkey = '';
     /**
      *The hex encoded pubkey of the node to open a channel with. Deprecated now
      *that the REST gateway supports base64 encoding of bytes fields.
      *
      * Generated from protobuf field <code>string node_pubkey_string = 3 [deprecated = true];</code>
      */
-    protected $node_pubkey_string = '';
+    private $node_pubkey_string = '';
     /**
      * The number of satoshis the wallet should commit to the channel
      *
      * Generated from protobuf field <code>int64 local_funding_amount = 4;</code>
      */
-    protected $local_funding_amount = 0;
+    private $local_funding_amount = 0;
     /**
      * The number of satoshis to push to the remote side as part of the initial
      * commitment state
      *
      * Generated from protobuf field <code>int64 push_sat = 5;</code>
      */
-    protected $push_sat = 0;
+    private $push_sat = 0;
     /**
      * The target number of blocks that the funding transaction should be
      * confirmed by.
      *
      * Generated from protobuf field <code>int32 target_conf = 6;</code>
      */
-    protected $target_conf = 0;
+    private $target_conf = 0;
     /**
      * A manual fee rate set in sat/byte that should be used when crafting the
      * funding transaction.
      *
      * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
      */
-    protected $sat_per_byte = 0;
+    private $sat_per_byte = 0;
     /**
      * Whether this channel should be private, not announced to the greater
      * network.
      *
      * Generated from protobuf field <code>bool private = 8;</code>
      */
-    protected $private = false;
+    private $private = false;
     /**
      * The minimum value in millisatoshi we will require for incoming HTLCs on
      * the channel.
      *
      * Generated from protobuf field <code>int64 min_htlc_msat = 9;</code>
      */
-    protected $min_htlc_msat = 0;
+    private $min_htlc_msat = 0;
     /**
      * The delay we require on the remote's commitment transaction. If this is
      * not set, it will be scaled automatically with the channel size.
      *
      * Generated from protobuf field <code>uint32 remote_csv_delay = 10;</code>
      */
-    protected $remote_csv_delay = 0;
+    private $remote_csv_delay = 0;
     /**
      * The minimum number of confirmations each one of your outputs used for
      * the funding transaction must satisfy.
      *
      * Generated from protobuf field <code>int32 min_confs = 11;</code>
      */
-    protected $min_confs = 0;
+    private $min_confs = 0;
     /**
      * Whether unconfirmed outputs should be used as inputs for the funding
      * transaction.
      *
      * Generated from protobuf field <code>bool spend_unconfirmed = 12;</code>
      */
-    protected $spend_unconfirmed = false;
+    private $spend_unconfirmed = false;
     /**
      *Close address is an optional address which specifies the address to which
      *funds should be paid out to upon cooperative close. This field may only be
@@ -100,7 +100,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string close_address = 13;</code>
      */
-    protected $close_address = '';
+    private $close_address = '';
     /**
      *Funding shims are an optional argument that allow the caller to intercept
      *certain funding functionality. For example, a shim can be provided to use a
@@ -110,21 +110,28 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.FundingShim funding_shim = 14;</code>
      */
-    protected $funding_shim = null;
+    private $funding_shim = null;
     /**
      *The maximum amount of coins in millisatoshi that can be pending within
      *the channel. It only applies to the remote party.
      *
      * Generated from protobuf field <code>uint64 remote_max_value_in_flight_msat = 15;</code>
      */
-    protected $remote_max_value_in_flight_msat = 0;
+    private $remote_max_value_in_flight_msat = 0;
     /**
      *The maximum number of concurrent HTLCs we will allow the remote party to add
      *to the commitment transaction.
      *
      * Generated from protobuf field <code>uint32 remote_max_htlcs = 16;</code>
      */
-    protected $remote_max_htlcs = 0;
+    private $remote_max_htlcs = 0;
+    /**
+     *Max local csv is the maximum csv delay we will allow for our own commitment
+     *transaction.
+     *
+     * Generated from protobuf field <code>uint32 max_local_csv = 17;</code>
+     */
+    private $max_local_csv = 0;
 
     /**
      * Constructor.
@@ -184,6 +191,9 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *     @type int $remote_max_htlcs
      *          The maximum number of concurrent HTLCs we will allow the remote party to add
      *          to the commitment transaction.
+     *     @type int $max_local_csv
+     *          Max local csv is the maximum csv delay we will allow for our own commitment
+     *          transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -547,17 +557,7 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFundingShim()
     {
-        return isset($this->funding_shim) ? $this->funding_shim : null;
-    }
-
-    public function hasFundingShim()
-    {
-        return isset($this->funding_shim);
-    }
-
-    public function clearFundingShim()
-    {
-        unset($this->funding_shim);
+        return $this->funding_shim;
     }
 
     /**
@@ -631,6 +631,34 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->remote_max_htlcs = $var;
+
+        return $this;
+    }
+
+    /**
+     *Max local csv is the maximum csv delay we will allow for our own commitment
+     *transaction.
+     *
+     * Generated from protobuf field <code>uint32 max_local_csv = 17;</code>
+     * @return int
+     */
+    public function getMaxLocalCsv()
+    {
+        return $this->max_local_csv;
+    }
+
+    /**
+     *Max local csv is the maximum csv delay we will allow for our own commitment
+     *transaction.
+     *
+     * Generated from protobuf field <code>uint32 max_local_csv = 17;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMaxLocalCsv($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->max_local_csv = $var;
 
         return $this;
     }

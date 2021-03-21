@@ -18,13 +18,13 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes tx_hex = 1;</code>
      */
-    protected $tx_hex = '';
+    private $tx_hex = '';
     /**
      *An optional label to save with the transaction. Limited to 500 characters.
      *
      * Generated from protobuf field <code>string label = 2;</code>
      */
-    protected $label = '';
+    private $label = '';
 
     /**
      * Constructor.

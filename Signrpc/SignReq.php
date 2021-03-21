@@ -18,7 +18,7 @@ class SignReq extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes raw_tx_bytes = 1;</code>
      */
-    protected $raw_tx_bytes = '';
+    private $raw_tx_bytes = '';
     /**
      * A set of sign descriptors, for each input to be signed.
      *

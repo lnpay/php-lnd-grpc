@@ -18,13 +18,13 @@ class RouteFeeRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes dest = 1;</code>
      */
-    protected $dest = '';
+    private $dest = '';
     /**
      *The amount one wishes to send to the target destination.
      *
      * Generated from protobuf field <code>int64 amt_sat = 2;</code>
      */
-    protected $amt_sat = 0;
+    private $amt_sat = 0;
 
     /**
      * Constructor.

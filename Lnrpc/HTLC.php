@@ -16,19 +16,43 @@ class HTLC extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool incoming = 1;</code>
      */
-    protected $incoming = false;
+    private $incoming = false;
     /**
      * Generated from protobuf field <code>int64 amount = 2;</code>
      */
-    protected $amount = 0;
+    private $amount = 0;
     /**
      * Generated from protobuf field <code>bytes hash_lock = 3;</code>
      */
-    protected $hash_lock = '';
+    private $hash_lock = '';
     /**
      * Generated from protobuf field <code>uint32 expiration_height = 4;</code>
      */
-    protected $expiration_height = 0;
+    private $expiration_height = 0;
+    /**
+     * Index identifying the htlc on the channel.
+     *
+     * Generated from protobuf field <code>uint64 htlc_index = 5;</code>
+     */
+    private $htlc_index = 0;
+    /**
+     * If this HTLC is involved in a forwarding operation, this field indicates
+     * the forwarding channel. For an outgoing htlc, it is the incoming channel.
+     * For an incoming htlc, it is the outgoing channel. When the htlc
+     * originates from this node or this node is the final destination,
+     * forwarding_channel will be zero. The forwarding channel will also be zero
+     * for htlcs that need to be forwarded but don't have a forwarding decision
+     * persisted yet.
+     *
+     * Generated from protobuf field <code>uint64 forwarding_channel = 6;</code>
+     */
+    private $forwarding_channel = 0;
+    /**
+     * Index identifying the htlc on the forwarding channel.
+     *
+     * Generated from protobuf field <code>uint64 forwarding_htlc_index = 7;</code>
+     */
+    private $forwarding_htlc_index = 0;
 
     /**
      * Constructor.
@@ -40,6 +64,18 @@ class HTLC extends \Google\Protobuf\Internal\Message
      *     @type int|string $amount
      *     @type string $hash_lock
      *     @type int $expiration_height
+     *     @type int|string $htlc_index
+     *           Index identifying the htlc on the channel.
+     *     @type int|string $forwarding_channel
+     *           If this HTLC is involved in a forwarding operation, this field indicates
+     *           the forwarding channel. For an outgoing htlc, it is the incoming channel.
+     *           For an incoming htlc, it is the outgoing channel. When the htlc
+     *           originates from this node or this node is the final destination,
+     *           forwarding_channel will be zero. The forwarding channel will also be zero
+     *           for htlcs that need to be forwarded but don't have a forwarding decision
+     *           persisted yet.
+     *     @type int|string $forwarding_htlc_index
+     *           Index identifying the htlc on the forwarding channel.
      * }
      */
     public function __construct($data = NULL) {
@@ -131,6 +167,96 @@ class HTLC extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->expiration_height = $var;
+
+        return $this;
+    }
+
+    /**
+     * Index identifying the htlc on the channel.
+     *
+     * Generated from protobuf field <code>uint64 htlc_index = 5;</code>
+     * @return int|string
+     */
+    public function getHtlcIndex()
+    {
+        return $this->htlc_index;
+    }
+
+    /**
+     * Index identifying the htlc on the channel.
+     *
+     * Generated from protobuf field <code>uint64 htlc_index = 5;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setHtlcIndex($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->htlc_index = $var;
+
+        return $this;
+    }
+
+    /**
+     * If this HTLC is involved in a forwarding operation, this field indicates
+     * the forwarding channel. For an outgoing htlc, it is the incoming channel.
+     * For an incoming htlc, it is the outgoing channel. When the htlc
+     * originates from this node or this node is the final destination,
+     * forwarding_channel will be zero. The forwarding channel will also be zero
+     * for htlcs that need to be forwarded but don't have a forwarding decision
+     * persisted yet.
+     *
+     * Generated from protobuf field <code>uint64 forwarding_channel = 6;</code>
+     * @return int|string
+     */
+    public function getForwardingChannel()
+    {
+        return $this->forwarding_channel;
+    }
+
+    /**
+     * If this HTLC is involved in a forwarding operation, this field indicates
+     * the forwarding channel. For an outgoing htlc, it is the incoming channel.
+     * For an incoming htlc, it is the outgoing channel. When the htlc
+     * originates from this node or this node is the final destination,
+     * forwarding_channel will be zero. The forwarding channel will also be zero
+     * for htlcs that need to be forwarded but don't have a forwarding decision
+     * persisted yet.
+     *
+     * Generated from protobuf field <code>uint64 forwarding_channel = 6;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setForwardingChannel($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->forwarding_channel = $var;
+
+        return $this;
+    }
+
+    /**
+     * Index identifying the htlc on the forwarding channel.
+     *
+     * Generated from protobuf field <code>uint64 forwarding_htlc_index = 7;</code>
+     * @return int|string
+     */
+    public function getForwardingHtlcIndex()
+    {
+        return $this->forwarding_htlc_index;
+    }
+
+    /**
+     * Index identifying the htlc on the forwarding channel.
+     *
+     * Generated from protobuf field <code>uint64 forwarding_htlc_index = 7;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setForwardingHtlcIndex($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->forwarding_htlc_index = $var;
 
         return $this;
     }

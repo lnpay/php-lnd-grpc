@@ -19,7 +19,7 @@ class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 start_height = 1;</code>
      */
-    protected $start_height = 0;
+    private $start_height = 0;
     /**
      *The height until which to list transactions, inclusive. To include
      *unconfirmed transactions, this value should be set to -1, which will
@@ -29,7 +29,7 @@ class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 end_height = 2;</code>
      */
-    protected $end_height = 0;
+    private $end_height = 0;
 
     /**
      * Constructor.

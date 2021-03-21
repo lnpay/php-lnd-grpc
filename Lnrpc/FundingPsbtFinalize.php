@@ -20,13 +20,13 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes signed_psbt = 1;</code>
      */
-    protected $signed_psbt = '';
+    private $signed_psbt = '';
     /**
      * The pending channel ID of the channel to get the PSBT for.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
     /**
      *As an alternative to the signed PSBT with all witness data, the final raw
      *wire format transaction can also be specified directly. Cannot be set at the
@@ -34,7 +34,7 @@ class FundingPsbtFinalize extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes final_raw_tx = 3;</code>
      */
-    protected $final_raw_tx = '';
+    private $final_raw_tx = '';
 
     /**
      * Constructor.

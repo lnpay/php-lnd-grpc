@@ -18,13 +18,13 @@ class VerifyMessageResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool valid = 1;</code>
      */
-    protected $valid = false;
+    private $valid = false;
     /**
      * The pubkey recovered from the signature
      *
      * Generated from protobuf field <code>string pubkey = 2;</code>
      */
-    protected $pubkey = '';
+    private $pubkey = '';
 
     /**
      * Constructor.

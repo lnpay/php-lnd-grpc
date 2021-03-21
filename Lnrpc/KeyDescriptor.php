@@ -18,13 +18,13 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      */
-    protected $raw_key_bytes = '';
+    private $raw_key_bytes = '';
     /**
      *The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.lnrpc.KeyLocator key_loc = 2;</code>
      */
-    protected $key_loc = null;
+    private $key_loc = null;
 
     /**
      * Constructor.
@@ -77,17 +77,7 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
      */
     public function getKeyLoc()
     {
-        return isset($this->key_loc) ? $this->key_loc : null;
-    }
-
-    public function hasKeyLoc()
-    {
-        return isset($this->key_loc);
-    }
-
-    public function clearKeyLoc()
-    {
-        unset($this->key_loc);
+        return $this->key_loc;
     }
 
     /**

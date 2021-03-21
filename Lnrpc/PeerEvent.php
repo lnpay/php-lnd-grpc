@@ -18,11 +18,11 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string pub_key = 1;</code>
      */
-    protected $pub_key = '';
+    private $pub_key = '';
     /**
      * Generated from protobuf field <code>.lnrpc.PeerEvent.EventType type = 2;</code>
      */
-    protected $type = 0;
+    private $type = 0;
 
     /**
      * Constructor.
@@ -82,7 +82,7 @@ class PeerEvent extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\PeerEvent\EventType::class);
+        GPBUtil::checkEnum($var, \Lnrpc\PeerEvent_EventType::class);
         $this->type = $var;
 
         return $this;

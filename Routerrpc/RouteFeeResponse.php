@@ -19,7 +19,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 routing_fee_msat = 1;</code>
      */
-    protected $routing_fee_msat = 0;
+    private $routing_fee_msat = 0;
     /**
      *An estimate of the worst case time delay that can occur. Note that callers
      *will still need to factor in the final CLTV delta of the last hop into this
@@ -27,7 +27,7 @@ class RouteFeeResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 time_lock_delay = 2;</code>
      */
-    protected $time_lock_delay = 0;
+    private $time_lock_delay = 0;
 
     /**
      * Constructor.

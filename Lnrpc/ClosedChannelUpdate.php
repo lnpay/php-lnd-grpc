@@ -20,19 +20,19 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 chan_id = 1 [jstype = JS_STRING];</code>
      */
-    protected $chan_id = 0;
+    private $chan_id = 0;
     /**
      * Generated from protobuf field <code>int64 capacity = 2;</code>
      */
-    protected $capacity = 0;
+    private $capacity = 0;
     /**
      * Generated from protobuf field <code>uint32 closed_height = 3;</code>
      */
-    protected $closed_height = 0;
+    private $closed_height = 0;
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 4;</code>
      */
-    protected $chan_point = null;
+    private $chan_point = null;
 
     /**
      * Constructor.
@@ -134,17 +134,7 @@ class ClosedChannelUpdate extends \Google\Protobuf\Internal\Message
      */
     public function getChanPoint()
     {
-        return isset($this->chan_point) ? $this->chan_point : null;
-    }
-
-    public function hasChanPoint()
-    {
-        return isset($this->chan_point);
-    }
-
-    public function clearChanPoint()
-    {
-        unset($this->chan_point);
+        return $this->chan_point;
     }
 
     /**

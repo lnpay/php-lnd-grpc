@@ -18,40 +18,40 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 base_fee_msat = 3;</code>
      */
-    protected $base_fee_msat = 0;
+    private $base_fee_msat = 0;
     /**
      * The effective fee rate in milli-satoshis. The precision of this value
      * goes up to 6 decimal places, so 1e-6.
      *
      * Generated from protobuf field <code>double fee_rate = 4;</code>
      */
-    protected $fee_rate = 0.0;
+    private $fee_rate = 0.0;
     /**
      * The required timelock delta for HTLCs forwarded over the channel.
      *
      * Generated from protobuf field <code>uint32 time_lock_delta = 5;</code>
      */
-    protected $time_lock_delta = 0;
+    private $time_lock_delta = 0;
     /**
      * If set, the maximum HTLC size in milli-satoshis. If unset, the maximum
      * HTLC will be unchanged.
      *
      * Generated from protobuf field <code>uint64 max_htlc_msat = 6;</code>
      */
-    protected $max_htlc_msat = 0;
+    private $max_htlc_msat = 0;
     /**
      * The minimum HTLC size in milli-satoshis. Only applied if
      * min_htlc_msat_specified is true.
      *
      * Generated from protobuf field <code>uint64 min_htlc_msat = 7;</code>
      */
-    protected $min_htlc_msat = 0;
+    private $min_htlc_msat = 0;
     /**
      * If true, min_htlc_msat is applied.
      *
      * Generated from protobuf field <code>bool min_htlc_msat_specified = 8;</code>
      */
-    protected $min_htlc_msat_specified = false;
+    private $min_htlc_msat_specified = false;
     protected $scope;
 
     /**
@@ -97,11 +97,6 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
-    public function hasGlobal()
-    {
-        return $this->hasOneof(1);
-    }
-
     /**
      * If set, then this update applies to all currently active channels.
      *
@@ -126,11 +121,6 @@ class PolicyUpdateRequest extends \Google\Protobuf\Internal\Message
     public function getChanPoint()
     {
         return $this->readOneof(2);
-    }
-
-    public function hasChanPoint()
-    {
-        return $this->hasOneof(2);
     }
 
     /**

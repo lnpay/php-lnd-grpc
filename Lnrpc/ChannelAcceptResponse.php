@@ -18,13 +18,73 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool accept = 1;</code>
      */
-    protected $accept = false;
+    private $accept = false;
     /**
      * The pending channel id to which this response applies.
      *
      * Generated from protobuf field <code>bytes pending_chan_id = 2;</code>
      */
-    protected $pending_chan_id = '';
+    private $pending_chan_id = '';
+    /**
+     *An optional error to send the initiating party to indicate why the channel
+     *was rejected. This field *should not* contain sensitive information, it will
+     *be sent to the initiating party. This field should only be set if accept is
+     *false, the channel will be rejected if an error is set with accept=true
+     *because the meaning of this response is ambiguous. Limited to 500
+     *characters.
+     *
+     * Generated from protobuf field <code>string error = 3;</code>
+     */
+    private $error = '';
+    /**
+     *The upfront shutdown address to use if the initiating peer supports option
+     *upfront shutdown script (see ListPeers for the features supported). Note
+     *that the channel open will fail if this value is set for a peer that does
+     *not support this feature bit.
+     *
+     * Generated from protobuf field <code>string upfront_shutdown = 4;</code>
+     */
+    private $upfront_shutdown = '';
+    /**
+     *The csv delay (in blocks) that we require for the remote party.
+     *
+     * Generated from protobuf field <code>uint32 csv_delay = 5;</code>
+     */
+    private $csv_delay = 0;
+    /**
+     *The reserve amount in satoshis that we require the remote peer to adhere to.
+     *We require that the remote peer always have some reserve amount allocated to
+     *them so that there is always a disincentive to broadcast old state (if they
+     *hold 0 sats on their side of the channel, there is nothing to lose).
+     *
+     * Generated from protobuf field <code>uint64 reserve_sat = 6;</code>
+     */
+    private $reserve_sat = 0;
+    /**
+     *The maximum amount of funds in millisatoshis that we allow the remote peer
+     *to have in outstanding htlcs.
+     *
+     * Generated from protobuf field <code>uint64 in_flight_max_msat = 7;</code>
+     */
+    private $in_flight_max_msat = 0;
+    /**
+     *The maximum number of htlcs that the remote peer can offer us.
+     *
+     * Generated from protobuf field <code>uint32 max_htlc_count = 8;</code>
+     */
+    private $max_htlc_count = 0;
+    /**
+     *The minimum value in millisatoshis for incoming htlcs on the channel.
+     *
+     * Generated from protobuf field <code>uint64 min_htlc_in = 9;</code>
+     */
+    private $min_htlc_in = 0;
+    /**
+     *The number of confirmations we require before we consider the channel open.
+     *
+     * Generated from protobuf field <code>uint32 min_accept_depth = 10;</code>
+     */
+    private $min_accept_depth = 0;
 
     /**
      * Constructor.
@@ -36,6 +96,34 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
      *           Whether or not the client accepts the channel.
      *     @type string $pending_chan_id
      *           The pending channel id to which this response applies.
+     *     @type string $error
+     *          An optional error to send the initiating party to indicate why the channel
+     *          was rejected. This field *should not* contain sensitive information, it will
+     *          be sent to the initiating party. This field should only be set if accept is
+     *          false, the channel will be rejected if an error is set with accept=true
+     *          because the meaning of this response is ambiguous. Limited to 500
+     *          characters.
+     *     @type string $upfront_shutdown
+     *          The upfront shutdown address to use if the initiating peer supports option
+     *          upfront shutdown script (see ListPeers for the features supported). Note
+     *          that the channel open will fail if this value is set for a peer that does
+     *          not support this feature bit.
+     *     @type int $csv_delay
+     *          The csv delay (in blocks) that we require for the remote party.
+     *     @type int|string $reserve_sat
+     *          The reserve amount in satoshis that we require the remote peer to adhere to.
+     *          We require that the remote peer always have some reserve amount allocated to
+     *          them so that there is always a disincentive to broadcast old state (if they
+     *          hold 0 sats on their side of the channel, there is nothing to lose).
+     *     @type int|string $in_flight_max_msat
+     *          The maximum amount of funds in millisatoshis that we allow the remote peer
+     *          to have in outstanding htlcs.
+     *     @type int $max_htlc_count
+     *          The maximum number of htlcs that the remote peer can offer us.
+     *     @type int|string $min_htlc_in
+     *          The minimum value in millisatoshis for incoming htlcs on the channel.
+     *     @type int $min_accept_depth
+     *          The number of confirmations we require before we consider the channel open.
      * }
      */
     public function __construct($data = NULL) {
@@ -91,6 +179,238 @@ class ChannelAcceptResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->pending_chan_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *An optional error to send the initiating party to indicate why the channel
+     *was rejected. This field *should not* contain sensitive information, it will
+     *be sent to the initiating party. This field should only be set if accept is
+     *false, the channel will be rejected if an error is set with accept=true
+     *because the meaning of this response is ambiguous. Limited to 500
+     *characters.
+     *
+     * Generated from protobuf field <code>string error = 3;</code>
+     * @return string
+     */
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     *An optional error to send the initiating party to indicate why the channel
+     *was rejected. This field *should not* contain sensitive information, it will
+     *be sent to the initiating party. This field should only be set if accept is
+     *false, the channel will be rejected if an error is set with accept=true
+     *because the meaning of this response is ambiguous. Limited to 500
+     *characters.
+     *
+     * Generated from protobuf field <code>string error = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setError($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->error = $var;
+
+        return $this;
+    }
+
+    /**
+     *The upfront shutdown address to use if the initiating peer supports option
+     *upfront shutdown script (see ListPeers for the features supported). Note
+     *that the channel open will fail if this value is set for a peer that does
+     *not support this feature bit.
+     *
+     * Generated from protobuf field <code>string upfront_shutdown = 4;</code>
+     * @return string
+     */
+    public function getUpfrontShutdown()
+    {
+        return $this->upfront_shutdown;
+    }
+
+    /**
+     *The upfront shutdown address to use if the initiating peer supports option
+     *upfront shutdown script (see ListPeers for the features supported). Note
+     *that the channel open will fail if this value is set for a peer that does
+     *not support this feature bit.
+     *
+     * Generated from protobuf field <code>string upfront_shutdown = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUpfrontShutdown($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->upfront_shutdown = $var;
+
+        return $this;
+    }
+
+    /**
+     *The csv delay (in blocks) that we require for the remote party.
+     *
+     * Generated from protobuf field <code>uint32 csv_delay = 5;</code>
+     * @return int
+     */
+    public function getCsvDelay()
+    {
+        return $this->csv_delay;
+    }
+
+    /**
+     *The csv delay (in blocks) that we require for the remote party.
+     *
+     * Generated from protobuf field <code>uint32 csv_delay = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCsvDelay($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->csv_delay = $var;
+
+        return $this;
+    }
+
+    /**
+     *The reserve amount in satoshis that we require the remote peer to adhere to.
+     *We require that the remote peer always have some reserve amount allocated to
+     *them so that there is always a disincentive to broadcast old state (if they
+     *hold 0 sats on their side of the channel, there is nothing to lose).
+     *
+     * Generated from protobuf field <code>uint64 reserve_sat = 6;</code>
+     * @return int|string
+     */
+    public function getReserveSat()
+    {
+        return $this->reserve_sat;
+    }
+
+    /**
+     *The reserve amount in satoshis that we require the remote peer to adhere to.
+     *We require that the remote peer always have some reserve amount allocated to
+     *them so that there is always a disincentive to broadcast old state (if they
+     *hold 0 sats on their side of the channel, there is nothing to lose).
+     *
+     * Generated from protobuf field <code>uint64 reserve_sat = 6;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setReserveSat($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->reserve_sat = $var;
+
+        return $this;
+    }
+
+    /**
+     *The maximum amount of funds in millisatoshis that we allow the remote peer
+     *to have in outstanding htlcs.
+     *
+     * Generated from protobuf field <code>uint64 in_flight_max_msat = 7;</code>
+     * @return int|string
+     */
+    public function getInFlightMaxMsat()
+    {
+        return $this->in_flight_max_msat;
+    }
+
+    /**
+     *The maximum amount of funds in millisatoshis that we allow the remote peer
+     *to have in outstanding htlcs.
+     *
+     * Generated from protobuf field <code>uint64 in_flight_max_msat = 7;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setInFlightMaxMsat($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->in_flight_max_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     *The maximum number of htlcs that the remote peer can offer us.
+     *
+     * Generated from protobuf field <code>uint32 max_htlc_count = 8;</code>
+     * @return int
+     */
+    public function getMaxHtlcCount()
+    {
+        return $this->max_htlc_count;
+    }
+
+    /**
+     *The maximum number of htlcs that the remote peer can offer us.
+     *
+     * Generated from protobuf field <code>uint32 max_htlc_count = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMaxHtlcCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->max_htlc_count = $var;
+
+        return $this;
+    }
+
+    /**
+     *The minimum value in millisatoshis for incoming htlcs on the channel.
+     *
+     * Generated from protobuf field <code>uint64 min_htlc_in = 9;</code>
+     * @return int|string
+     */
+    public function getMinHtlcIn()
+    {
+        return $this->min_htlc_in;
+    }
+
+    /**
+     *The minimum value in millisatoshis for incoming htlcs on the channel.
+     *
+     * Generated from protobuf field <code>uint64 min_htlc_in = 9;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setMinHtlcIn($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->min_htlc_in = $var;
+
+        return $this;
+    }
+
+    /**
+     *The number of confirmations we require before we consider the channel open.
+     *
+     * Generated from protobuf field <code>uint32 min_accept_depth = 10;</code>
+     * @return int
+     */
+    public function getMinAcceptDepth()
+    {
+        return $this->min_accept_depth;
+    }
+
+    /**
+     *The number of confirmations we require before we consider the channel open.
+     *
+     * Generated from protobuf field <code>uint32 min_accept_depth = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMinAcceptDepth($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->min_accept_depth = $var;
 
         return $this;
     }

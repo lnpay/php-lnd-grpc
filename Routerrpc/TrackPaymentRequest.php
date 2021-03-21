@@ -18,14 +18,14 @@ class TrackPaymentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    protected $payment_hash = '';
+    private $payment_hash = '';
     /**
      *If set, only the final payment update is streamed back. Intermediate updates
      *that show which htlcs are still in flight are suppressed.
      *
      * Generated from protobuf field <code>bool no_inflight_updates = 2;</code>
      */
-    protected $no_inflight_updates = false;
+    private $no_inflight_updates = false;
 
     /**
      * Constructor.
