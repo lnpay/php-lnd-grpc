@@ -14,6 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class OpenChannelRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * funding transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 1;</code>
+     */
+    private $sat_per_vbyte = 0;
+    /**
      *The pubkey of the node to open a channel with. When using REST, this field
      *must be encoded as base64.
      *
@@ -48,10 +55,11 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $target_conf = 0;
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * funding transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 7 [deprecated = true];</code>
      */
     private $sat_per_byte = 0;
     /**
@@ -139,6 +147,9 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int|string $sat_per_vbyte
+     *           A manual fee rate set in sat/vbyte that should be used when crafting the
+     *           funding transaction.
      *     @type string $node_pubkey
      *          The pubkey of the node to open a channel with. When using REST, this field
      *          must be encoded as base64.
@@ -154,7 +165,8 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *           The target number of blocks that the funding transaction should be
      *           confirmed by.
      *     @type int|string $sat_per_byte
-     *           A manual fee rate set in sat/byte that should be used when crafting the
+     *           Deprecated, use sat_per_vbyte.
+     *           A manual fee rate set in sat/vbyte that should be used when crafting the
      *           funding transaction.
      *     @type bool $private
      *           Whether this channel should be private, not announced to the greater
@@ -199,6 +211,34 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     public function __construct($data = NULL) {
         \GPBMetadata\Rpc::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * funding transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 1;</code>
+     * @return int|string
+     */
+    public function getSatPerVbyte()
+    {
+        return $this->sat_per_vbyte;
+    }
+
+    /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * funding transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 1;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sat_per_vbyte = $var;
+
+        return $this;
     }
 
     /**
@@ -340,10 +380,11 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * funding transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 7 [deprecated = true];</code>
      * @return int|string
      */
     public function getSatPerByte()
@@ -352,10 +393,11 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * funding transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 7;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 7 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */

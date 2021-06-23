@@ -8,11 +8,72 @@ curl -o router.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TA
 curl -o walletkit.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/walletrpc/walletkit.proto"
 curl -o chainnotifier.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/chainrpc/chainnotifier.proto"
 curl -o signer.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/signrpc/signer.proto"
+curl -o autopilot.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/autopilotrpc/autopilot.proto"
+curl -o chainnotifier.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/chainrpc/chainnotifier.proto"
+curl -o lncli.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/lnclipb/lncli.proto"
+curl -o verrpc.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/verrpc/verrpc.proto"
+curl -o watchtower.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/watchtowerrpc/watchtower.proto"
+curl -o wtclient.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/wtclientrpc/wtclient.proto"
+
 
 git submodule update --init --recursive
 
 # apt-get update
 # apt-get install build-essential autoconf automake libtool pkg-config libc-ares-dev google-perftools
+
+./grpc/bins/opt/protobuf/protoc \
+        --proto_path=googleapis/ \
+        --php_out=./ \
+        --grpc_out=./ \
+        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
+        -Igrpc/third_party/protobuf/src \
+        -I./ \
+        wtclient.proto
+
+./grpc/bins/opt/protobuf/protoc \
+        --proto_path=googleapis/ \
+        --php_out=./ \
+        --grpc_out=./ \
+        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
+        -Igrpc/third_party/protobuf/src \
+        -I./ \
+        watchtower.proto
+
+./grpc/bins/opt/protobuf/protoc \
+        --proto_path=googleapis/ \
+        --php_out=./ \
+        --grpc_out=./ \
+        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
+        -Igrpc/third_party/protobuf/src \
+        -I./ \
+        verrpc.proto
+
+./grpc/bins/opt/protobuf/protoc \
+        --proto_path=googleapis/ \
+        --php_out=./ \
+        --grpc_out=./ \
+        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
+        -Igrpc/third_party/protobuf/src \
+        -I./ \
+        lncli.proto
+
+./grpc/bins/opt/protobuf/protoc \
+        --proto_path=googleapis/ \
+        --php_out=./ \
+        --grpc_out=./ \
+        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
+        -Igrpc/third_party/protobuf/src \
+        -I./ \
+       	chainnotifier.proto
+
+./grpc/bins/opt/protobuf/protoc \
+        --proto_path=googleapis/ \
+        --php_out=./ \
+        --grpc_out=./ \
+        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
+        -Igrpc/third_party/protobuf/src \
+        -I./ \
+        autopilot.proto
 
 ./grpc/bins/opt/protobuf/protoc \
         --proto_path=googleapis/ \

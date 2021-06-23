@@ -25,6 +25,12 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 max_confs = 2;</code>
      */
     private $max_confs = 0;
+    /**
+     * An optional filter to only include outputs belonging to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     */
+    private $account = '';
 
     /**
      * Constructor.
@@ -36,6 +42,8 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
      *           The minimum number of confirmations to be included.
      *     @type int $max_confs
      *           The maximum number of confirmations to be included.
+     *     @type string $account
+     *           An optional filter to only include outputs belonging to an account.
      * }
      */
     public function __construct($data = NULL) {
@@ -91,6 +99,32 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->max_confs = $var;
+
+        return $this;
+    }
+
+    /**
+     * An optional filter to only include outputs belonging to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     * An optional filter to only include outputs belonging to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account = $var;
 
         return $this;
     }

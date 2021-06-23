@@ -15,9 +15,9 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
 {
     /**
      * Timestamp is the time (unix epoch offset) that this circuit was
-     * completed.
+     * completed. Deprecated by timestamp_ns.
      *
-     * Generated from protobuf field <code>uint64 timestamp = 1;</code>
+     * Generated from protobuf field <code>uint64 timestamp = 1 [deprecated = true];</code>
      */
     private $timestamp = 0;
     /**
@@ -73,6 +73,13 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint64 amt_out_msat = 10;</code>
      */
     private $amt_out_msat = 0;
+    /**
+     * The number of nanoseconds elapsed since January 1, 1970 UTC when this
+     * circuit was completed.
+     *
+     * Generated from protobuf field <code>uint64 timestamp_ns = 11;</code>
+     */
+    private $timestamp_ns = 0;
 
     /**
      * Constructor.
@@ -82,7 +89,7 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      *
      *     @type int|string $timestamp
      *           Timestamp is the time (unix epoch offset) that this circuit was
-     *           completed.
+     *           completed. Deprecated by timestamp_ns.
      *     @type int|string $chan_id_in
      *           The incoming channel ID that carried the HTLC that created the circuit.
      *     @type int|string $chan_id_out
@@ -104,6 +111,9 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      *     @type int|string $amt_out_msat
      *           The total amount (in milli-satoshis) of the outgoing HTLC that created
      *           the second half of the circuit.
+     *     @type int|string $timestamp_ns
+     *           The number of nanoseconds elapsed since January 1, 1970 UTC when this
+     *           circuit was completed.
      * }
      */
     public function __construct($data = NULL) {
@@ -113,9 +123,9 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
 
     /**
      * Timestamp is the time (unix epoch offset) that this circuit was
-     * completed.
+     * completed. Deprecated by timestamp_ns.
      *
-     * Generated from protobuf field <code>uint64 timestamp = 1;</code>
+     * Generated from protobuf field <code>uint64 timestamp = 1 [deprecated = true];</code>
      * @return int|string
      */
     public function getTimestamp()
@@ -125,9 +135,9 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
 
     /**
      * Timestamp is the time (unix epoch offset) that this circuit was
-     * completed.
+     * completed. Deprecated by timestamp_ns.
      *
-     * Generated from protobuf field <code>uint64 timestamp = 1;</code>
+     * Generated from protobuf field <code>uint64 timestamp = 1 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -353,6 +363,34 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->amt_out_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     * The number of nanoseconds elapsed since January 1, 1970 UTC when this
+     * circuit was completed.
+     *
+     * Generated from protobuf field <code>uint64 timestamp_ns = 11;</code>
+     * @return int|string
+     */
+    public function getTimestampNs()
+    {
+        return $this->timestamp_ns;
+    }
+
+    /**
+     * The number of nanoseconds elapsed since January 1, 1970 UTC when this
+     * circuit was completed.
+     *
+     * Generated from protobuf field <code>uint64 timestamp_ns = 11;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setTimestampNs($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->timestamp_ns = $var;
 
         return $this;
     }

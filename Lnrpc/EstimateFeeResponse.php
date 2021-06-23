@@ -20,11 +20,18 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
      */
     private $fee_sat = 0;
     /**
-     * The fee rate in satoshi/byte.
+     * Deprecated, use sat_per_vbyte.
+     * The fee rate in satoshi/vbyte.
      *
-     * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2;</code>
+     * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2 [deprecated = true];</code>
      */
     private $feerate_sat_per_byte = 0;
+    /**
+     * The fee rate in satoshi/vbyte.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 3;</code>
+     */
+    private $sat_per_vbyte = 0;
 
     /**
      * Constructor.
@@ -35,7 +42,10 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
      *     @type int|string $fee_sat
      *           The total fee in satoshis.
      *     @type int|string $feerate_sat_per_byte
-     *           The fee rate in satoshi/byte.
+     *           Deprecated, use sat_per_vbyte.
+     *           The fee rate in satoshi/vbyte.
+     *     @type int|string $sat_per_vbyte
+     *           The fee rate in satoshi/vbyte.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,9 +80,10 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The fee rate in satoshi/byte.
+     * Deprecated, use sat_per_vbyte.
+     * The fee rate in satoshi/vbyte.
      *
-     * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2;</code>
+     * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2 [deprecated = true];</code>
      * @return int|string
      */
     public function getFeerateSatPerByte()
@@ -81,9 +92,10 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The fee rate in satoshi/byte.
+     * Deprecated, use sat_per_vbyte.
+     * The fee rate in satoshi/vbyte.
      *
-     * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2;</code>
+     * Generated from protobuf field <code>int64 feerate_sat_per_byte = 2 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -91,6 +103,32 @@ class EstimateFeeResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->feerate_sat_per_byte = $var;
+
+        return $this;
+    }
+
+    /**
+     * The fee rate in satoshi/vbyte.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 3;</code>
+     * @return int|string
+     */
+    public function getSatPerVbyte()
+    {
+        return $this->sat_per_vbyte;
+    }
+
+    /**
+     * The fee rate in satoshi/vbyte.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 3;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sat_per_vbyte = $var;
 
         return $this;
     }

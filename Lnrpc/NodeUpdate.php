@@ -14,7 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class NodeUpdate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated string addresses = 1;</code>
+     *Deprecated, use node_addresses.
+     *
+     * Generated from protobuf field <code>repeated string addresses = 1 [deprecated = true];</code>
      */
     private $addresses;
     /**
@@ -22,6 +24,8 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
      */
     private $identity_key = '';
     /**
+     *Deprecated, use features.
+     *
      * Generated from protobuf field <code>bytes global_features = 3 [deprecated = true];</code>
      */
     private $global_features = '';
@@ -33,6 +37,10 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string color = 5;</code>
      */
     private $color = '';
+    /**
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress node_addresses = 7;</code>
+     */
+    private $node_addresses;
     /**
      *Features that the node has advertised in the init message, node
      *announcements and invoices.
@@ -48,10 +56,13 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $addresses
+     *          Deprecated, use node_addresses.
      *     @type string $identity_key
      *     @type string $global_features
+     *          Deprecated, use features.
      *     @type string $alias
      *     @type string $color
+     *     @type \Lnrpc\NodeAddress[]|\Google\Protobuf\Internal\RepeatedField $node_addresses
      *     @type array|\Google\Protobuf\Internal\MapField $features
      *          Features that the node has advertised in the init message, node
      *          announcements and invoices.
@@ -63,7 +74,9 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string addresses = 1;</code>
+     *Deprecated, use node_addresses.
+     *
+     * Generated from protobuf field <code>repeated string addresses = 1 [deprecated = true];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAddresses()
@@ -72,7 +85,9 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string addresses = 1;</code>
+     *Deprecated, use node_addresses.
+     *
+     * Generated from protobuf field <code>repeated string addresses = 1 [deprecated = true];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -107,6 +122,8 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Deprecated, use features.
+     *
      * Generated from protobuf field <code>bytes global_features = 3 [deprecated = true];</code>
      * @return string
      */
@@ -116,6 +133,8 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Deprecated, use features.
+     *
      * Generated from protobuf field <code>bytes global_features = 3 [deprecated = true];</code>
      * @param string $var
      * @return $this
@@ -168,6 +187,28 @@ class NodeUpdate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->color = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress node_addresses = 7;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getNodeAddresses()
+    {
+        return $this->node_addresses;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .lnrpc.NodeAddress node_addresses = 7;</code>
+     * @param \Lnrpc\NodeAddress[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setNodeAddresses($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\NodeAddress::class);
+        $this->node_addresses = $arr;
 
         return $this;
     }
