@@ -14,11 +14,18 @@ use Google\Protobuf\Internal\GPBUtil;
 class NewAddressRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The address type
+     * The type of address to generate.
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      */
     private $type = 0;
+    /**
+     *The name of the account to generate a new address for. If empty, the
+     *default wallet account is used.
+     *
+     * Generated from protobuf field <code>string account = 2;</code>
+     */
+    private $account = '';
 
     /**
      * Constructor.
@@ -27,7 +34,10 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $type
-     *           The address type
+     *           The type of address to generate.
+     *     @type string $account
+     *          The name of the account to generate a new address for. If empty, the
+     *          default wallet account is used.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +46,7 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The address type
+     * The type of address to generate.
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      * @return int
@@ -47,7 +57,7 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The address type
+     * The type of address to generate.
      *
      * Generated from protobuf field <code>.lnrpc.AddressType type = 1;</code>
      * @param int $var
@@ -57,6 +67,34 @@ class NewAddressRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Lnrpc\AddressType::class);
         $this->type = $var;
+
+        return $this;
+    }
+
+    /**
+     *The name of the account to generate a new address for. If empty, the
+     *default wallet account is used.
+     *
+     * Generated from protobuf field <code>string account = 2;</code>
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     *The name of the account to generate a new address for. If empty, the
+     *default wallet account is used.
+     *
+     * Generated from protobuf field <code>string account = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account = $var;
 
         return $this;
     }

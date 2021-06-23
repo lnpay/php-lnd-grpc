@@ -26,10 +26,11 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      */
     private $target_conf = 0;
     /**
-     *The fee rate, expressed in sat/byte, that should be used to spend the input
+     *Deprecated, use sat_per_vbyte.
+     *The fee rate, expressed in sat/vbyte, that should be used to spend the input
      *with.
      *
-     * Generated from protobuf field <code>uint32 sat_per_byte = 3;</code>
+     * Generated from protobuf field <code>uint32 sat_per_byte = 3 [deprecated = true];</code>
      */
     private $sat_per_byte = 0;
     /**
@@ -39,6 +40,13 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool force = 4;</code>
      */
     private $force = false;
+    /**
+     *The fee rate, expressed in sat/vbyte, that should be used to spend the input
+     *with.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 5;</code>
+     */
+    private $sat_per_vbyte = 0;
 
     /**
      * Constructor.
@@ -51,11 +59,15 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
      *     @type int $target_conf
      *           The target number of blocks that the input should be spent within.
      *     @type int $sat_per_byte
-     *          The fee rate, expressed in sat/byte, that should be used to spend the input
+     *          Deprecated, use sat_per_vbyte.
+     *          The fee rate, expressed in sat/vbyte, that should be used to spend the input
      *          with.
      *     @type bool $force
      *          Whether this input must be force-swept. This means that it is swept even
      *          if it has a negative yield.
+     *     @type int|string $sat_per_vbyte
+     *          The fee rate, expressed in sat/vbyte, that should be used to spend the input
+     *          with.
      * }
      */
     public function __construct($data = NULL) {
@@ -116,10 +128,11 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The fee rate, expressed in sat/byte, that should be used to spend the input
+     *Deprecated, use sat_per_vbyte.
+     *The fee rate, expressed in sat/vbyte, that should be used to spend the input
      *with.
      *
-     * Generated from protobuf field <code>uint32 sat_per_byte = 3;</code>
+     * Generated from protobuf field <code>uint32 sat_per_byte = 3 [deprecated = true];</code>
      * @return int
      */
     public function getSatPerByte()
@@ -128,10 +141,11 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The fee rate, expressed in sat/byte, that should be used to spend the input
+     *Deprecated, use sat_per_vbyte.
+     *The fee rate, expressed in sat/vbyte, that should be used to spend the input
      *with.
      *
-     * Generated from protobuf field <code>uint32 sat_per_byte = 3;</code>
+     * Generated from protobuf field <code>uint32 sat_per_byte = 3 [deprecated = true];</code>
      * @param int $var
      * @return $this
      */
@@ -167,6 +181,34 @@ class BumpFeeRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->force = $var;
+
+        return $this;
+    }
+
+    /**
+     *The fee rate, expressed in sat/vbyte, that should be used to spend the input
+     *with.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 5;</code>
+     * @return int|string
+     */
+    public function getSatPerVbyte()
+    {
+        return $this->sat_per_vbyte;
+    }
+
+    /**
+     *The fee rate, expressed in sat/vbyte, that should be used to spend the input
+     *with.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 5;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sat_per_vbyte = $var;
 
         return $this;
     }

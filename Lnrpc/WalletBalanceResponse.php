@@ -31,6 +31,12 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 unconfirmed_balance = 3;</code>
      */
     private $unconfirmed_balance = 0;
+    /**
+     * A mapping of each wallet account's name to its balance.
+     *
+     * Generated from protobuf field <code>map<string, .lnrpc.WalletAccountBalance> account_balance = 4;</code>
+     */
+    private $account_balance;
 
     /**
      * Constructor.
@@ -44,6 +50,8 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
      *           The confirmed balance of a wallet(with >= 1 confirmations)
      *     @type int|string $unconfirmed_balance
      *           The unconfirmed balance of a wallet(with 0 confirmations)
+     *     @type array|\Google\Protobuf\Internal\MapField $account_balance
+     *           A mapping of each wallet account's name to its balance.
      * }
      */
     public function __construct($data = NULL) {
@@ -125,6 +133,32 @@ class WalletBalanceResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->unconfirmed_balance = $var;
+
+        return $this;
+    }
+
+    /**
+     * A mapping of each wallet account's name to its balance.
+     *
+     * Generated from protobuf field <code>map<string, .lnrpc.WalletAccountBalance> account_balance = 4;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getAccountBalance()
+    {
+        return $this->account_balance;
+    }
+
+    /**
+     * A mapping of each wallet account's name to its balance.
+     *
+     * Generated from protobuf field <code>map<string, .lnrpc.WalletAccountBalance> account_balance = 4;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setAccountBalance($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\WalletAccountBalance::class);
+        $this->account_balance = $arr;
 
         return $this;
     }

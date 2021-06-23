@@ -72,6 +72,21 @@ class WalletKitClient extends \Grpc\BaseStub {
 
     /**
      *
+     * ListLeases lists all currently locked utxos.
+     * @param \Walletrpc\ListLeasesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ListLeases(\Walletrpc\ListLeasesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/ListLeases',
+        $argument,
+        ['\Walletrpc\ListLeasesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
      * DeriveNextKey attempts to derive the *next* key within the key family
      * (account in BIP43) specified. This method should return the next external
      * child within this branch.
@@ -115,6 +130,79 @@ class WalletKitClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/walletrpc.WalletKit/NextAddr',
         $argument,
         ['\Walletrpc\AddrResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * ListAccounts retrieves all accounts belonging to the wallet by default. A
+     * name and key scope filter can be provided to filter through all of the
+     * wallet accounts and return only those matching.
+     * @param \Walletrpc\ListAccountsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ListAccounts(\Walletrpc\ListAccountsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/ListAccounts',
+        $argument,
+        ['\Walletrpc\ListAccountsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * ImportAccount imports an account backed by an account extended public key.
+     * The master key fingerprint denotes the fingerprint of the root key
+     * corresponding to the account public key (also known as the key with
+     * derivation path m/). This may be required by some hardware wallets for
+     * proper identification and signing.
+     *
+     * The address type can usually be inferred from the key's version, but may be
+     * required for certain keys to map them into the proper scope.
+     *
+     * For BIP-0044 keys, an address type must be specified as we intend to not
+     * support importing BIP-0044 keys into the wallet using the legacy
+     * pay-to-pubkey-hash (P2PKH) scheme. A nested witness address type will force
+     * the standard BIP-0049 derivation scheme, while a witness address type will
+     * force the standard BIP-0084 derivation scheme.
+     *
+     * For BIP-0049 keys, an address type must also be specified to make a
+     * distinction between the standard BIP-0049 address schema (nested witness
+     * pubkeys everywhere) and our own BIP-0049Plus address schema (nested pubkeys
+     * externally, witness pubkeys internally).
+     *
+     * NOTE: Events (deposits/spends) for keys derived from an account will only be
+     * detected by lnd if they happen after the import. Rescans to detect past
+     * events will be supported later on.
+     * @param \Walletrpc\ImportAccountRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ImportAccount(\Walletrpc\ImportAccountRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/ImportAccount',
+        $argument,
+        ['\Walletrpc\ImportAccountResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * ImportPublicKey imports a public key as watch-only into the wallet.
+     *
+     * NOTE: Events (deposits/spends) for a key will only be detected by lnd if
+     * they happen after the import. Rescans to detect past events will be
+     * supported later on.
+     * @param \Walletrpc\ImportPublicKeyRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ImportPublicKey(\Walletrpc\ImportPublicKeyRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/ImportPublicKey',
+        $argument,
+        ['\Walletrpc\ImportPublicKeyResponse', 'decode'],
         $metadata, $options);
     }
 

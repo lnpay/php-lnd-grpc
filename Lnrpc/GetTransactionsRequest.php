@@ -30,6 +30,12 @@ class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 end_height = 2;</code>
      */
     private $end_height = 0;
+    /**
+     * An optional filter to only include transactions relevant to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     */
+    private $account = '';
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
      *          return transactions from start_height until the current chain tip and
      *          unconfirmed transactions. If no end_height is provided, the call will
      *          default to this option.
+     *     @type string $account
+     *           An optional filter to only include transactions relevant to an account.
      * }
      */
     public function __construct($data = NULL) {
@@ -111,6 +119,32 @@ class GetTransactionsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->end_height = $var;
+
+        return $this;
+    }
+
+    /**
+     * An optional filter to only include transactions relevant to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     * An optional filter to only include transactions relevant to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account = $var;
 
         return $this;
     }

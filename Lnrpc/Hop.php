@@ -22,7 +22,7 @@ class Hop extends \Google\Protobuf\Internal\Message
      */
     private $chan_id = 0;
     /**
-     * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2 [deprecated = true];</code>
      */
     private $chan_capacity = 0;
     /**
@@ -62,13 +62,24 @@ class Hop extends \Google\Protobuf\Internal\Message
     private $tlv_payload = false;
     /**
      *An optional TLV record that signals the use of an MPP payment. If present,
-     *the receiver will enforce that that the same mpp_record is included in the
-     *final hop payload of all non-zero payments in the HTLC set. If empty, a
-     *regular single-shot payment is or was attempted.
+     *the receiver will enforce that the same mpp_record is included in the final
+     *hop payload of all non-zero payments in the HTLC set. If empty, a regular
+     *single-shot payment is or was attempted.
      *
      * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      */
     private $mpp_record = null;
+    /**
+     *An optional TLV record that signals the use of an AMP payment. If present,
+     *the receiver will treat all received payments including the same
+     *(payment_addr, set_id) pair  as being part of one logical payment. The
+     *payment will be settled by XORing the root_share's together and deriving the
+     *child hashes and preimages according to BOLT XX. Must be used in conjunction
+     *with mpp_record.
+     *
+     * Generated from protobuf field <code>.lnrpc.AMPRecord amp_record = 12;</code>
+     */
+    private $amp_record = null;
     /**
      *An optional set of key-value TLV records. This is useful within the context
      *of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
@@ -103,9 +114,16 @@ class Hop extends \Google\Protobuf\Internal\Message
      *          this field MUST be set to true for them to be encoded properly.
      *     @type \Lnrpc\MPPRecord $mpp_record
      *          An optional TLV record that signals the use of an MPP payment. If present,
-     *          the receiver will enforce that that the same mpp_record is included in the
-     *          final hop payload of all non-zero payments in the HTLC set. If empty, a
-     *          regular single-shot payment is or was attempted.
+     *          the receiver will enforce that the same mpp_record is included in the final
+     *          hop payload of all non-zero payments in the HTLC set. If empty, a regular
+     *          single-shot payment is or was attempted.
+     *     @type \Lnrpc\AMPRecord $amp_record
+     *          An optional TLV record that signals the use of an AMP payment. If present,
+     *          the receiver will treat all received payments including the same
+     *          (payment_addr, set_id) pair  as being part of one logical payment. The
+     *          payment will be settled by XORing the root_share's together and deriving the
+     *          child hashes and preimages according to BOLT XX. Must be used in conjunction
+     *          with mpp_record.
      *     @type array|\Google\Protobuf\Internal\MapField $custom_records
      *          An optional set of key-value TLV records. This is useful within the context
      *          of the SendToRoute call as it allows callers to specify arbitrary K-V pairs
@@ -148,7 +166,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2 [deprecated = true];</code>
      * @return int|string
      */
     public function getChanCapacity()
@@ -157,7 +175,7 @@ class Hop extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 chan_capacity = 2;</code>
+     * Generated from protobuf field <code>int64 chan_capacity = 2 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -339,9 +357,9 @@ class Hop extends \Google\Protobuf\Internal\Message
 
     /**
      *An optional TLV record that signals the use of an MPP payment. If present,
-     *the receiver will enforce that that the same mpp_record is included in the
-     *final hop payload of all non-zero payments in the HTLC set. If empty, a
-     *regular single-shot payment is or was attempted.
+     *the receiver will enforce that the same mpp_record is included in the final
+     *hop payload of all non-zero payments in the HTLC set. If empty, a regular
+     *single-shot payment is or was attempted.
      *
      * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      * @return \Lnrpc\MPPRecord
@@ -353,9 +371,9 @@ class Hop extends \Google\Protobuf\Internal\Message
 
     /**
      *An optional TLV record that signals the use of an MPP payment. If present,
-     *the receiver will enforce that that the same mpp_record is included in the
-     *final hop payload of all non-zero payments in the HTLC set. If empty, a
-     *regular single-shot payment is or was attempted.
+     *the receiver will enforce that the same mpp_record is included in the final
+     *hop payload of all non-zero payments in the HTLC set. If empty, a regular
+     *single-shot payment is or was attempted.
      *
      * Generated from protobuf field <code>.lnrpc.MPPRecord mpp_record = 10;</code>
      * @param \Lnrpc\MPPRecord $var
@@ -365,6 +383,42 @@ class Hop extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\MPPRecord::class);
         $this->mpp_record = $var;
+
+        return $this;
+    }
+
+    /**
+     *An optional TLV record that signals the use of an AMP payment. If present,
+     *the receiver will treat all received payments including the same
+     *(payment_addr, set_id) pair  as being part of one logical payment. The
+     *payment will be settled by XORing the root_share's together and deriving the
+     *child hashes and preimages according to BOLT XX. Must be used in conjunction
+     *with mpp_record.
+     *
+     * Generated from protobuf field <code>.lnrpc.AMPRecord amp_record = 12;</code>
+     * @return \Lnrpc\AMPRecord
+     */
+    public function getAmpRecord()
+    {
+        return $this->amp_record;
+    }
+
+    /**
+     *An optional TLV record that signals the use of an AMP payment. If present,
+     *the receiver will treat all received payments including the same
+     *(payment_addr, set_id) pair  as being part of one logical payment. The
+     *payment will be settled by XORing the root_share's together and deriving the
+     *child hashes and preimages according to BOLT XX. Must be used in conjunction
+     *with mpp_record.
+     *
+     * Generated from protobuf field <code>.lnrpc.AMPRecord amp_record = 12;</code>
+     * @param \Lnrpc\AMPRecord $var
+     * @return $this
+     */
+    public function setAmpRecord($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\AMPRecord::class);
+        $this->amp_record = $var;
 
         return $this;
     }

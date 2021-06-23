@@ -36,10 +36,11 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      */
     private $target_conf = 0;
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * closure transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 4 [deprecated = true];</code>
      */
     private $sat_per_byte = 0;
     /**
@@ -51,6 +52,13 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string delivery_address = 5;</code>
      */
     private $delivery_address = '';
+    /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * closure transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 6;</code>
+     */
+    private $sat_per_vbyte = 0;
 
     /**
      * Constructor.
@@ -69,13 +77,17 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
      *           The target number of blocks that the closure transaction should be
      *           confirmed by.
      *     @type int|string $sat_per_byte
-     *           A manual fee rate set in sat/byte that should be used when crafting the
+     *           Deprecated, use sat_per_vbyte.
+     *           A manual fee rate set in sat/vbyte that should be used when crafting the
      *           closure transaction.
      *     @type string $delivery_address
      *          An optional address to send funds to in the case of a cooperative close.
      *          If the channel was opened with an upfront shutdown script and this field
      *          is set, the request to close will fail because the channel must pay out
      *          to the upfront shutdown addresss.
+     *     @type int|string $sat_per_vbyte
+     *           A manual fee rate set in sat/vbyte that should be used when crafting the
+     *           closure transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -170,10 +182,11 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * closure transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 4 [deprecated = true];</code>
      * @return int|string
      */
     public function getSatPerByte()
@@ -182,10 +195,11 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * closure transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 4;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 4 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */
@@ -225,6 +239,34 @@ class CloseChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->delivery_address = $var;
+
+        return $this;
+    }
+
+    /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * closure transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 6;</code>
+     * @return int|string
+     */
+    public function getSatPerVbyte()
+    {
+        return $this->sat_per_vbyte;
+    }
+
+    /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * closure transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 6;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sat_per_vbyte = $var;
 
         return $this;
     }

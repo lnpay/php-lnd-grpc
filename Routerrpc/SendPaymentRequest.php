@@ -176,6 +176,12 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint64 max_shard_size_msat = 21;</code>
      */
     private $max_shard_size_msat = 0;
+    /**
+     *If set, an AMP-payment will be attempted.
+     *
+     * Generated from protobuf field <code>bool amp = 22;</code>
+     */
+    private $amp = false;
 
     /**
      * Constructor.
@@ -262,6 +268,8 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
      *          splitting is necessary. Setting this value will effectively cause lnd to
      *          split more aggressively, vs only when it thinks it needs to. Note that this
      *          value is in milli-satoshis.
+     *     @type bool $amp
+     *          If set, an AMP-payment will be attempted.
      * }
      */
     public function __construct($data = NULL) {
@@ -885,6 +893,32 @@ class SendPaymentRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->max_shard_size_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     *If set, an AMP-payment will be attempted.
+     *
+     * Generated from protobuf field <code>bool amp = 22;</code>
+     * @return bool
+     */
+    public function getAmp()
+    {
+        return $this->amp;
+    }
+
+    /**
+     *If set, an AMP-payment will be attempted.
+     *
+     * Generated from protobuf field <code>bool amp = 22;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAmp($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->amp = $var;
 
         return $this;
     }

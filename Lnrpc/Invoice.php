@@ -196,6 +196,12 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes payment_addr = 26;</code>
      */
     private $payment_addr = '';
+    /**
+     *Signals whether or not this is an AMP invoice.
+     *
+     * Generated from protobuf field <code>bool is_amp = 27;</code>
+     */
+    private $is_amp = false;
 
     /**
      * Constructor.
@@ -286,6 +292,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          The payment address of this invoice. This value will be used in MPP
      *          payments, and also for newer invoies that always require the MPP paylaod
      *          for added end-to-end security.
+     *     @type bool $is_amp
+     *          Signals whether or not this is an AMP invoice.
      * }
      */
     public function __construct($data = NULL) {
@@ -1005,6 +1013,32 @@ class Invoice extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->payment_addr = $var;
+
+        return $this;
+    }
+
+    /**
+     *Signals whether or not this is an AMP invoice.
+     *
+     * Generated from protobuf field <code>bool is_amp = 27;</code>
+     * @return bool
+     */
+    public function getIsAmp()
+    {
+        return $this->is_amp;
+    }
+
+    /**
+     *Signals whether or not this is an AMP invoice.
+     *
+     * Generated from protobuf field <code>bool is_amp = 27;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsAmp($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_amp = $var;
 
         return $this;
     }

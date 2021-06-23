@@ -138,6 +138,55 @@ class RouterClient extends \Grpc\BaseStub {
 
     /**
      *
+     * XImportMissionControl is an experimental API that imports the state provided
+     * to the internal mission control's state, using all results which are more
+     * recent than our existing values. These values will only be imported
+     * in-memory, and will not be persisted across restarts.
+     * @param \Routerrpc\XImportMissionControlRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function XImportMissionControl(\Routerrpc\XImportMissionControlRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/XImportMissionControl',
+        $argument,
+        ['\Routerrpc\XImportMissionControlResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * GetMissionControlConfig returns mission control's current config.
+     * @param \Routerrpc\GetMissionControlConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetMissionControlConfig(\Routerrpc\GetMissionControlConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/GetMissionControlConfig',
+        $argument,
+        ['\Routerrpc\GetMissionControlConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * SetMissionControlConfig will set mission control's config, if the config
+     * provided is valid.
+     * @param \Routerrpc\SetMissionControlConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function SetMissionControlConfig(\Routerrpc\SetMissionControlConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/SetMissionControlConfig',
+        $argument,
+        ['\Routerrpc\SetMissionControlConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
      * QueryProbability returns the current success probability estimate for a
      * given node pair and amount.
      * @param \Routerrpc\QueryProbabilityRequest $argument input argument
@@ -231,6 +280,24 @@ class RouterClient extends \Grpc\BaseStub {
     public function HtlcInterceptor($metadata = [], $options = []) {
         return $this->_bidiRequest('/routerrpc.Router/HtlcInterceptor',
         ['\Routerrpc\ForwardHtlcInterceptRequest','decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * UpdateChanStatus attempts to manually set the state of a channel
+     * (enabled, disabled, or auto). A manual "disable" request will cause the
+     * channel to stay disabled until a subsequent manual request of either
+     * "enable" or "auto".
+     * @param \Routerrpc\UpdateChanStatusRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function UpdateChanStatus(\Routerrpc\UpdateChanStatusRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/UpdateChanStatus',
+        $argument,
+        ['\Routerrpc\UpdateChanStatusResponse', 'decode'],
         $metadata, $options);
     }
 

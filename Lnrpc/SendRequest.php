@@ -126,6 +126,12 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .lnrpc.FeatureBit dest_features = 15;</code>
      */
     private $dest_features;
+    /**
+     *The payment address of the generated invoice.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 16;</code>
+     */
+    private $payment_addr = '';
 
     /**
      * Constructor.
@@ -186,6 +192,8 @@ class SendRequest extends \Google\Protobuf\Internal\Message
      *          optional or remote may be set, but not both. If this field is nil or empty,
      *          the router will try to load destination features from the graph as a
      *          fallback.
+     *     @type string $payment_addr
+     *          The payment address of the generated invoice.
      * }
      */
     public function __construct($data = NULL) {
@@ -625,6 +633,32 @@ class SendRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Lnrpc\FeatureBit::class);
         $this->dest_features = $arr;
+
+        return $this;
+    }
+
+    /**
+     *The payment address of the generated invoice.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 16;</code>
+     * @return string
+     */
+    public function getPaymentAddr()
+    {
+        return $this->payment_addr;
+    }
+
+    /**
+     *The payment address of the generated invoice.
+     *
+     * Generated from protobuf field <code>bytes payment_addr = 16;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPaymentAddr($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->payment_addr = $var;
 
         return $this;
     }

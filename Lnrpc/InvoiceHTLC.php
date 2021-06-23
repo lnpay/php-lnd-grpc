@@ -75,6 +75,12 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint64 mpp_total_amt_msat = 10;</code>
      */
     private $mpp_total_amt_msat = 0;
+    /**
+     * Details relevant to AMP HTLCs, only populated if this is an AMP HTLC.
+     *
+     * Generated from protobuf field <code>.lnrpc.AMP amp = 11;</code>
+     */
+    private $amp = null;
 
     /**
      * Constructor.
@@ -102,6 +108,8 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
      *           Custom tlv records.
      *     @type int|string $mpp_total_amt_msat
      *           The total amount of the mpp payment in msat.
+     *     @type \Lnrpc\AMP $amp
+     *           Details relevant to AMP HTLCs, only populated if this is an AMP HTLC.
      * }
      */
     public function __construct($data = NULL) {
@@ -365,6 +373,32 @@ class InvoiceHTLC extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->mpp_total_amt_msat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Details relevant to AMP HTLCs, only populated if this is an AMP HTLC.
+     *
+     * Generated from protobuf field <code>.lnrpc.AMP amp = 11;</code>
+     * @return \Lnrpc\AMP
+     */
+    public function getAmp()
+    {
+        return $this->amp;
+    }
+
+    /**
+     * Details relevant to AMP HTLCs, only populated if this is an AMP HTLC.
+     *
+     * Generated from protobuf field <code>.lnrpc.AMP amp = 11;</code>
+     * @param \Lnrpc\AMP $var
+     * @return $this
+     */
+    public function setAmp($var)
+    {
+        GPBUtil::checkMessage($var, \Lnrpc\AMP::class);
+        $this->amp = $var;
 
         return $this;
     }

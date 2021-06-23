@@ -33,10 +33,18 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      */
     private $target_conf = 0;
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 4;</code>
+     */
+    private $sat_per_vbyte = 0;
+    /**
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 5 [deprecated = true];</code>
      */
     private $sat_per_byte = 0;
     /**
@@ -80,8 +88,12 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
      *     @type int $target_conf
      *           The target number of blocks that this transaction should be confirmed
      *           by.
+     *     @type int|string $sat_per_vbyte
+     *           A manual fee rate set in sat/vbyte that should be used when crafting the
+     *           transaction.
      *     @type int|string $sat_per_byte
-     *           A manual fee rate set in sat/byte that should be used when crafting the
+     *           Deprecated, use sat_per_vbyte.
+     *           A manual fee rate set in sat/vbyte that should be used when crafting the
      *           transaction.
      *     @type bool $send_all
      *          If set, then the amount field will be ignored, and lnd will attempt to
@@ -182,10 +194,39 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 4;</code>
+     * @return int|string
+     */
+    public function getSatPerVbyte()
+    {
+        return $this->sat_per_vbyte;
+    }
+
+    /**
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * transaction.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 4;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sat_per_vbyte = $var;
+
+        return $this;
+    }
+
+    /**
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
+     * transaction.
+     *
+     * Generated from protobuf field <code>int64 sat_per_byte = 5 [deprecated = true];</code>
      * @return int|string
      */
     public function getSatPerByte()
@@ -194,10 +235,11 @@ class SendCoinsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A manual fee rate set in sat/byte that should be used when crafting the
+     * Deprecated, use sat_per_vbyte.
+     * A manual fee rate set in sat/vbyte that should be used when crafting the
      * transaction.
      *
-     * Generated from protobuf field <code>int64 sat_per_byte = 5;</code>
+     * Generated from protobuf field <code>int64 sat_per_byte = 5 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
      */

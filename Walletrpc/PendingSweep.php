@@ -32,11 +32,12 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      */
     private $amount_sat = 0;
     /**
-     *The fee rate we'll use to sweep the output. The fee rate is only determined
-     *once a sweeping transaction for the output is created, so it's possible for
-     *this to be 0 before this.
+     *Deprecated, use sat_per_vbyte.
+     *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *rate is only determined once a sweeping transaction for the output is
+     *created, so it's possible for this to be 0 before this.
      *
-     * Generated from protobuf field <code>uint32 sat_per_byte = 4;</code>
+     * Generated from protobuf field <code>uint32 sat_per_byte = 4 [deprecated = true];</code>
      */
     private $sat_per_byte = 0;
     /**
@@ -59,11 +60,26 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      */
     private $requested_conf_target = 0;
     /**
-     * The requested fee rate, expressed in sat/byte, for this output.
+     * Deprecated, use requested_sat_per_vbyte.
+     * The requested fee rate, expressed in sat/vbyte, for this output.
      *
-     * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9;</code>
+     * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9 [deprecated = true];</code>
      */
     private $requested_sat_per_byte = 0;
+    /**
+     *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *rate is only determined once a sweeping transaction for the output is
+     *created, so it's possible for this to be 0 before this.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 10;</code>
+     */
+    private $sat_per_vbyte = 0;
+    /**
+     * The requested fee rate, expressed in sat/vbyte, for this output.
+     *
+     * Generated from protobuf field <code>uint64 requested_sat_per_vbyte = 11;</code>
+     */
+    private $requested_sat_per_vbyte = 0;
     /**
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
@@ -85,9 +101,10 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *     @type int $amount_sat
      *           The value of the output we're attempting to sweep.
      *     @type int $sat_per_byte
-     *          The fee rate we'll use to sweep the output. The fee rate is only determined
-     *          once a sweeping transaction for the output is created, so it's possible for
-     *          this to be 0 before this.
+     *          Deprecated, use sat_per_vbyte.
+     *          The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *          rate is only determined once a sweeping transaction for the output is
+     *          created, so it's possible for this to be 0 before this.
      *     @type int $broadcast_attempts
      *           The number of broadcast attempts we've made to sweep the output.
      *     @type int $next_broadcast_height
@@ -96,7 +113,14 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *     @type int $requested_conf_target
      *           The requested confirmation target for this output.
      *     @type int $requested_sat_per_byte
-     *           The requested fee rate, expressed in sat/byte, for this output.
+     *           Deprecated, use requested_sat_per_vbyte.
+     *           The requested fee rate, expressed in sat/vbyte, for this output.
+     *     @type int|string $sat_per_vbyte
+     *          The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *          rate is only determined once a sweeping transaction for the output is
+     *          created, so it's possible for this to be 0 before this.
+     *     @type int|string $requested_sat_per_vbyte
+     *           The requested fee rate, expressed in sat/vbyte, for this output.
      *     @type bool $force
      *          Whether this input must be force-swept. This means that it is swept even
      *          if it has a negative yield.
@@ -186,11 +210,12 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The fee rate we'll use to sweep the output. The fee rate is only determined
-     *once a sweeping transaction for the output is created, so it's possible for
-     *this to be 0 before this.
+     *Deprecated, use sat_per_vbyte.
+     *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *rate is only determined once a sweeping transaction for the output is
+     *created, so it's possible for this to be 0 before this.
      *
-     * Generated from protobuf field <code>uint32 sat_per_byte = 4;</code>
+     * Generated from protobuf field <code>uint32 sat_per_byte = 4 [deprecated = true];</code>
      * @return int
      */
     public function getSatPerByte()
@@ -199,11 +224,12 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The fee rate we'll use to sweep the output. The fee rate is only determined
-     *once a sweeping transaction for the output is created, so it's possible for
-     *this to be 0 before this.
+     *Deprecated, use sat_per_vbyte.
+     *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *rate is only determined once a sweeping transaction for the output is
+     *created, so it's possible for this to be 0 before this.
      *
-     * Generated from protobuf field <code>uint32 sat_per_byte = 4;</code>
+     * Generated from protobuf field <code>uint32 sat_per_byte = 4 [deprecated = true];</code>
      * @param int $var
      * @return $this
      */
@@ -296,9 +322,10 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The requested fee rate, expressed in sat/byte, for this output.
+     * Deprecated, use requested_sat_per_vbyte.
+     * The requested fee rate, expressed in sat/vbyte, for this output.
      *
-     * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9;</code>
+     * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9 [deprecated = true];</code>
      * @return int
      */
     public function getRequestedSatPerByte()
@@ -307,9 +334,10 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The requested fee rate, expressed in sat/byte, for this output.
+     * Deprecated, use requested_sat_per_vbyte.
+     * The requested fee rate, expressed in sat/vbyte, for this output.
      *
-     * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9;</code>
+     * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9 [deprecated = true];</code>
      * @param int $var
      * @return $this
      */
@@ -317,6 +345,62 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->requested_sat_per_byte = $var;
+
+        return $this;
+    }
+
+    /**
+     *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *rate is only determined once a sweeping transaction for the output is
+     *created, so it's possible for this to be 0 before this.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 10;</code>
+     * @return int|string
+     */
+    public function getSatPerVbyte()
+    {
+        return $this->sat_per_vbyte;
+    }
+
+    /**
+     *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
+     *rate is only determined once a sweeping transaction for the output is
+     *created, so it's possible for this to be 0 before this.
+     *
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 10;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sat_per_vbyte = $var;
+
+        return $this;
+    }
+
+    /**
+     * The requested fee rate, expressed in sat/vbyte, for this output.
+     *
+     * Generated from protobuf field <code>uint64 requested_sat_per_vbyte = 11;</code>
+     * @return int|string
+     */
+    public function getRequestedSatPerVbyte()
+    {
+        return $this->requested_sat_per_vbyte;
+    }
+
+    /**
+     * The requested fee rate, expressed in sat/vbyte, for this output.
+     *
+     * Generated from protobuf field <code>uint64 requested_sat_per_vbyte = 11;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setRequestedSatPerVbyte($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->requested_sat_per_vbyte = $var;
 
         return $this;
     }
