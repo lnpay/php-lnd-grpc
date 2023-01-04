@@ -19,20 +19,20 @@ class LeaseOutputRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes id = 1;</code>
      */
-    private $id = '';
+    protected $id = '';
     /**
      * The identifying outpoint of the output being leased.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      * The time in seconds before the lock expires. If set to zero, the default
      * lock duration is used.
      *
      * Generated from protobuf field <code>uint64 expiration_seconds = 3;</code>
      */
-    private $expiration_seconds = 0;
+    protected $expiration_seconds = 0;
 
     /**
      * Constructor.
@@ -87,11 +87,21 @@ class LeaseOutputRequest extends \Google\Protobuf\Internal\Message
      * The identifying outpoint of the output being leased.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
-     * @return \Lnrpc\OutPoint
+     * @return \Lnrpc\OutPoint|null
      */
     public function getOutpoint()
     {
         return $this->outpoint;
+    }
+
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
     }
 
     /**

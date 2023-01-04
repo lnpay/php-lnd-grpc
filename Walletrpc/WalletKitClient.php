@@ -21,10 +21,13 @@ class WalletKitClient extends \Grpc\BaseStub {
     /**
      *
      * ListUnspent returns a list of all utxos spendable by the wallet with a
-     * number of confirmations between the specified minimum and maximum.
+     * number of confirmations between the specified minimum and maximum. By
+     * default, all utxos are listed. To list only the unconfirmed utxos, set
+     * the unconfirmed_only to true.
      * @param \Walletrpc\ListUnspentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListUnspent(\Walletrpc\ListUnspentRequest $argument,
       $metadata = [], $options = []) {
@@ -44,6 +47,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\LeaseOutputRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function LeaseOutput(\Walletrpc\LeaseOutputRequest $argument,
       $metadata = [], $options = []) {
@@ -61,6 +65,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\ReleaseOutputRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ReleaseOutput(\Walletrpc\ReleaseOutputRequest $argument,
       $metadata = [], $options = []) {
@@ -76,6 +81,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\ListLeasesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListLeases(\Walletrpc\ListLeasesRequest $argument,
       $metadata = [], $options = []) {
@@ -93,6 +99,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\KeyReq $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DeriveNextKey(\Walletrpc\KeyReq $argument,
       $metadata = [], $options = []) {
@@ -109,6 +116,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Signrpc\KeyLocator $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DeriveKey(\Signrpc\KeyLocator $argument,
       $metadata = [], $options = []) {
@@ -124,6 +132,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\AddrRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function NextAddr(\Walletrpc\AddrRequest $argument,
       $metadata = [], $options = []) {
@@ -141,12 +150,31 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\ListAccountsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListAccounts(\Walletrpc\ListAccountsRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/walletrpc.WalletKit/ListAccounts',
         $argument,
         ['\Walletrpc\ListAccountsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * RequiredReserve returns the minimum amount of satoshis that should be kept
+     * in the wallet in order to fee bump anchor channels if necessary. The value
+     * scales with the number of public anchor channels but is capped at a maximum.
+     * @param \Walletrpc\RequiredReserveRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function RequiredReserve(\Walletrpc\RequiredReserveRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/RequiredReserve',
+        $argument,
+        ['\Walletrpc\RequiredReserveResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -178,6 +206,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\ImportAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ImportAccount(\Walletrpc\ImportAccountRequest $argument,
       $metadata = [], $options = []) {
@@ -197,6 +226,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\ImportPublicKeyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ImportPublicKey(\Walletrpc\ImportPublicKeyRequest $argument,
       $metadata = [], $options = []) {
@@ -215,6 +245,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\Transaction $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function PublishTransaction(\Walletrpc\Transaction $argument,
       $metadata = [], $options = []) {
@@ -232,6 +263,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\SendOutputsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendOutputs(\Walletrpc\SendOutputsRequest $argument,
       $metadata = [], $options = []) {
@@ -249,6 +281,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\EstimateFeeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function EstimateFee(\Walletrpc\EstimateFeeRequest $argument,
       $metadata = [], $options = []) {
@@ -271,6 +304,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\PendingSweepsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function PendingSweeps(\Walletrpc\PendingSweepsRequest $argument,
       $metadata = [], $options = []) {
@@ -310,6 +344,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\BumpFeeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BumpFee(\Walletrpc\BumpFeeRequest $argument,
       $metadata = [], $options = []) {
@@ -327,6 +362,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\ListSweepsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListSweeps(\Walletrpc\ListSweepsRequest $argument,
       $metadata = [], $options = []) {
@@ -345,6 +381,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\LabelTransactionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function LabelTransaction(\Walletrpc\LabelTransactionRequest $argument,
       $metadata = [], $options = []) {
@@ -377,12 +414,39 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\FundPsbtRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function FundPsbt(\Walletrpc\FundPsbtRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/walletrpc.WalletKit/FundPsbt',
         $argument,
         ['\Walletrpc\FundPsbtResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * SignPsbt expects a partial transaction with all inputs and outputs fully
+     * declared and tries to sign all unsigned inputs that have all required fields
+     * (UTXO information, BIP32 derivation information, witness or sig scripts)
+     * set.
+     * If no error is returned, the PSBT is ready to be given to the next signer or
+     * to be finalized if lnd was the last signer.
+     *
+     * NOTE: This RPC only signs inputs (and only those it can sign), it does not
+     * perform any other tasks (such as coin selection, UTXO locking or
+     * input/output/fee value validation, PSBT finalization). Any input that is
+     * incomplete will be skipped.
+     * @param \Walletrpc\SignPsbtRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SignPsbt(\Walletrpc\SignPsbtRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/SignPsbt',
+        $argument,
+        ['\Walletrpc\SignPsbtResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -402,6 +466,7 @@ class WalletKitClient extends \Grpc\BaseStub {
      * @param \Walletrpc\FinalizePsbtRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function FinalizePsbt(\Walletrpc\FinalizePsbtRequest $argument,
       $metadata = [], $options = []) {

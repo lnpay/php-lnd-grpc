@@ -19,35 +19,36 @@ class TowerSession extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 num_backups = 1;</code>
      */
-    private $num_backups = 0;
+    protected $num_backups = 0;
     /**
      *The total number of backups in the session that are currently pending to be
      *acknowledged by the watchtower.
      *
      * Generated from protobuf field <code>uint32 num_pending_backups = 2;</code>
      */
-    private $num_pending_backups = 0;
+    protected $num_pending_backups = 0;
     /**
      * The maximum number of backups allowed by the watchtower session.
      *
      * Generated from protobuf field <code>uint32 max_backups = 3;</code>
      */
-    private $max_backups = 0;
+    protected $max_backups = 0;
     /**
      *Deprecated, use sweep_sat_per_vbyte.
      *The fee rate, in satoshis per vbyte, that will be used by the watchtower for
      *the justice transaction in the event of a channel breach.
      *
      * Generated from protobuf field <code>uint32 sweep_sat_per_byte = 4 [deprecated = true];</code>
+     * @deprecated
      */
-    private $sweep_sat_per_byte = 0;
+    protected $sweep_sat_per_byte = 0;
     /**
      *The fee rate, in satoshis per vbyte, that will be used by the watchtower for
      *the justice transaction in the event of a channel breach.
      *
      * Generated from protobuf field <code>uint32 sweep_sat_per_vbyte = 5;</code>
      */
-    private $sweep_sat_per_vbyte = 0;
+    protected $sweep_sat_per_vbyte = 0;
 
     /**
      * Constructor.
@@ -166,9 +167,11 @@ class TowerSession extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 sweep_sat_per_byte = 4 [deprecated = true];</code>
      * @return int
+     * @deprecated
      */
     public function getSweepSatPerByte()
     {
+        @trigger_error('sweep_sat_per_byte is deprecated.', E_USER_DEPRECATED);
         return $this->sweep_sat_per_byte;
     }
 
@@ -180,9 +183,11 @@ class TowerSession extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 sweep_sat_per_byte = 4 [deprecated = true];</code>
      * @param int $var
      * @return $this
+     * @deprecated
      */
     public function setSweepSatPerByte($var)
     {
+        @trigger_error('sweep_sat_per_byte is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkUint32($var);
         $this->sweep_sat_per_byte = $var;
 

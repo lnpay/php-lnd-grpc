@@ -18,13 +18,13 @@ class Outpoint extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes hash = 1;</code>
      */
-    private $hash = '';
+    protected $hash = '';
     /**
      * The index of the output within the transaction.
      *
      * Generated from protobuf field <code>uint32 index = 2;</code>
      */
-    private $index = 0;
+    protected $index = 0;
 
     /**
      * Constructor.

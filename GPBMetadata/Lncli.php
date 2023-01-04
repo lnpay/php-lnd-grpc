@@ -15,14 +15,14 @@ class Lncli
           return;
         }
         \GPBMetadata\Verrpc\Verrpc::initOnce();
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0aa0010a0b6c6e636c692e70726f746f12076c6e636c697062224f0a0f56" .
-            "657273696f6e526573706f6e7365121e0a056c6e636c6918012001280b32" .
-            "0f2e7665727270632e56657273696f6e121c0a036c6e6418022001280b32" .
-            "0f2e7665727270632e56657273696f6e422f5a2d6769746875622e636f6d" .
-            "2f6c696768746e696e676e6574776f726b2f6c6e642f6c6e7270632f6c6e" .
-            "636c697062620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+ 
+lncli.protolnclipb"O
+VersionResponse
+lncli (2.verrpc.Version
+lnd (2.verrpc.VersionB/Z-github.com/lightningnetwork/lnd/lnrpc/lnclipbbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

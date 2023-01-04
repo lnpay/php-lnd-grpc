@@ -18,7 +18,7 @@ class RemoveTowerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pubkey = 1;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
     /**
      *If set, then the record for this address will be removed, indicating that is
      *is stale. Otherwise, the watchtower will no longer be used for future
@@ -26,7 +26,7 @@ class RemoveTowerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string address = 2;</code>
      */
-    private $address = '';
+    protected $address = '';
 
     /**
      * Constructor.

@@ -20,7 +20,7 @@ class ListSweepsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool verbose = 1;</code>
      */
-    private $verbose = false;
+    protected $verbose = false;
 
     /**
      * Constructor.

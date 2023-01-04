@@ -26,7 +26,7 @@ class ListTowersResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Wtclientrpc\Tower[]|\Google\Protobuf\Internal\RepeatedField $towers
+     *     @type array<\Wtclientrpc\Tower>|\Google\Protobuf\Internal\RepeatedField $towers
      *           The list of watchtowers available for new backups.
      * }
      */
@@ -50,7 +50,7 @@ class ListTowersResponse extends \Google\Protobuf\Internal\Message
      * The list of watchtowers available for new backups.
      *
      * Generated from protobuf field <code>repeated .wtclientrpc.Tower towers = 1;</code>
-     * @param \Wtclientrpc\Tower[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Wtclientrpc\Tower>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTowers($var)

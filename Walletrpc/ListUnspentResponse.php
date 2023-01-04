@@ -26,7 +26,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Lnrpc\Utxo[]|\Google\Protobuf\Internal\RepeatedField $utxos
+     *     @type array<\Lnrpc\Utxo>|\Google\Protobuf\Internal\RepeatedField $utxos
      *           A list of utxos satisfying the specified number of confirmations.
      * }
      */
@@ -50,7 +50,7 @@ class ListUnspentResponse extends \Google\Protobuf\Internal\Message
      * A list of utxos satisfying the specified number of confirmations.
      *
      * Generated from protobuf field <code>repeated .lnrpc.Utxo utxos = 1;</code>
-     * @param \Lnrpc\Utxo[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Lnrpc\Utxo>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUtxos($var)

@@ -18,13 +18,13 @@ class VersionResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.verrpc.Version lncli = 1;</code>
      */
-    private $lncli = null;
+    protected $lncli = null;
     /**
      * The version information for lnd.
      *
      * Generated from protobuf field <code>.verrpc.Version lnd = 2;</code>
      */
-    private $lnd = null;
+    protected $lnd = null;
 
     /**
      * Constructor.
@@ -47,11 +47,21 @@ class VersionResponse extends \Google\Protobuf\Internal\Message
      * The version information for lncli.
      *
      * Generated from protobuf field <code>.verrpc.Version lncli = 1;</code>
-     * @return \Verrpc\Version
+     * @return \Verrpc\Version|null
      */
     public function getLncli()
     {
         return $this->lncli;
+    }
+
+    public function hasLncli()
+    {
+        return isset($this->lncli);
+    }
+
+    public function clearLncli()
+    {
+        unset($this->lncli);
     }
 
     /**
@@ -73,11 +83,21 @@ class VersionResponse extends \Google\Protobuf\Internal\Message
      * The version information for lnd.
      *
      * Generated from protobuf field <code>.verrpc.Version lnd = 2;</code>
-     * @return \Verrpc\Version
+     * @return \Verrpc\Version|null
      */
     public function getLnd()
     {
         return $this->lnd;
+    }
+
+    public function hasLnd()
+    {
+        return isset($this->lnd);
+    }
+
+    public function clearLnd()
+    {
+        unset($this->lnd);
     }
 
     /**

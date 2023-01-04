@@ -18,13 +18,13 @@ class ImportPublicKeyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes public_key = 1;</code>
      */
-    private $public_key = '';
+    protected $public_key = '';
     /**
      * The type of address that will be generated from the public key.
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 2;</code>
      */
-    private $address_type = 0;
+    protected $address_type = 0;
 
     /**
      * Constructor.

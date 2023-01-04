@@ -26,7 +26,7 @@ class ListLeasesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Walletrpc\UtxoLease[]|\Google\Protobuf\Internal\RepeatedField $locked_utxos
+     *     @type array<\Walletrpc\UtxoLease>|\Google\Protobuf\Internal\RepeatedField $locked_utxos
      *           The list of currently leased utxos.
      * }
      */
@@ -50,7 +50,7 @@ class ListLeasesResponse extends \Google\Protobuf\Internal\Message
      * The list of currently leased utxos.
      *
      * Generated from protobuf field <code>repeated .walletrpc.UtxoLease locked_utxos = 1;</code>
-     * @param \Walletrpc\UtxoLease[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Walletrpc\UtxoLease>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLockedUtxos($var)

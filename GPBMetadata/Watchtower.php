@@ -14,18 +14,19 @@ class Watchtower
         if (static::$is_initialized == true) {
           return;
         }
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0a8e020a107761746368746f7765722e70726f746f120d7761746368746f" .
-            "77657272706322100a0e476574496e666f5265717565737422420a0f4765" .
-            "74496e666f526573706f6e7365120e0a067075626b657918012001280c12" .
-            "110a096c697374656e657273180220032809120c0a047572697318032003" .
-            "280932560a0a5761746368746f77657212480a07476574496e666f121d2e" .
-            "7761746368746f7765727270632e476574496e666f526571756573741a1e" .
-            "2e7761746368746f7765727270632e476574496e666f526573706f6e7365" .
-            "42355a336769746875622e636f6d2f6c696768746e696e676e6574776f72" .
-            "6b2f6c6e642f6c6e7270632f7761746368746f776572727063620670726f" .
-            "746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+Ž
+watchtower.protowatchtowerrpc"
+GetInfoRequest"B
+GetInfoResponse
+pubkey (
+	listeners (	
+uris (	2V
+
+WatchtowerH
+GetInfo.watchtowerrpc.GetInfoRequest.watchtowerrpc.GetInfoResponseB5Z3github.com/lightningnetwork/lnd/lnrpc/watchtowerrpcbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

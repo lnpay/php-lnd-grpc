@@ -18,7 +18,7 @@ class GetMissionControlConfigResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.MissionControlConfig config = 1;</code>
      */
-    private $config = null;
+    protected $config = null;
 
     /**
      * Constructor.
@@ -39,11 +39,21 @@ class GetMissionControlConfigResponse extends \Google\Protobuf\Internal\Message
      *Mission control's currently active config.
      *
      * Generated from protobuf field <code>.routerrpc.MissionControlConfig config = 1;</code>
-     * @return \Routerrpc\MissionControlConfig
+     * @return \Routerrpc\MissionControlConfig|null
      */
     public function getConfig()
     {
         return $this->config;
+    }
+
+    public function hasConfig()
+    {
+        return isset($this->config);
+    }
+
+    public function clearConfig()
+    {
+        unset($this->config);
     }
 
     /**

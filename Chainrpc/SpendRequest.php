@@ -16,11 +16,15 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
     /**
      *The outpoint for which we should request a spend notification for. If set to
      *a zero outpoint, then the spend notification will be requested for the
-     *script instead.
+     *script instead. A zero or nil outpoint is not supported for Taproot spends
+     *because the output script cannot reliably be computed from the witness alone
+     *and the spent output script is not always available in the rescan context.
+     *So an outpoint must _always_ be specified when registering a spend
+     *notification for a Taproot output.
      *
      * Generated from protobuf field <code>.chainrpc.Outpoint outpoint = 1;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      *The output script for the outpoint above. This will be used by light clients
      *to match block filters. If the outpoint is set to a zero outpoint, then a
@@ -28,7 +32,7 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes script = 2;</code>
      */
-    private $script = '';
+    protected $script = '';
     /**
      *The earliest height in the chain for which the outpoint/output script could
      *have been spent. This should in most cases be set to the broadcast height of
@@ -36,7 +40,7 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 height_hint = 3;</code>
      */
-    private $height_hint = 0;
+    protected $height_hint = 0;
 
     /**
      * Constructor.
@@ -47,7 +51,11 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
      *     @type \Chainrpc\Outpoint $outpoint
      *          The outpoint for which we should request a spend notification for. If set to
      *          a zero outpoint, then the spend notification will be requested for the
-     *          script instead.
+     *          script instead. A zero or nil outpoint is not supported for Taproot spends
+     *          because the output script cannot reliably be computed from the witness alone
+     *          and the spent output script is not always available in the rescan context.
+     *          So an outpoint must _always_ be specified when registering a spend
+     *          notification for a Taproot output.
      *     @type string $script
      *          The output script for the outpoint above. This will be used by light clients
      *          to match block filters. If the outpoint is set to a zero outpoint, then a
@@ -66,20 +74,38 @@ class SpendRequest extends \Google\Protobuf\Internal\Message
     /**
      *The outpoint for which we should request a spend notification for. If set to
      *a zero outpoint, then the spend notification will be requested for the
-     *script instead.
+     *script instead. A zero or nil outpoint is not supported for Taproot spends
+     *because the output script cannot reliably be computed from the witness alone
+     *and the spent output script is not always available in the rescan context.
+     *So an outpoint must _always_ be specified when registering a spend
+     *notification for a Taproot output.
      *
      * Generated from protobuf field <code>.chainrpc.Outpoint outpoint = 1;</code>
-     * @return \Chainrpc\Outpoint
+     * @return \Chainrpc\Outpoint|null
      */
     public function getOutpoint()
     {
         return $this->outpoint;
     }
 
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
+    }
+
     /**
      *The outpoint for which we should request a spend notification for. If set to
      *a zero outpoint, then the spend notification will be requested for the
-     *script instead.
+     *script instead. A zero or nil outpoint is not supported for Taproot spends
+     *because the output script cannot reliably be computed from the witness alone
+     *and the spent output script is not always available in the rescan context.
+     *So an outpoint must _always_ be specified when registering a spend
+     *notification for a Taproot output.
      *
      * Generated from protobuf field <code>.chainrpc.Outpoint outpoint = 1;</code>
      * @param \Chainrpc\Outpoint $var

@@ -39,11 +39,16 @@ class SpendEvent extends \Google\Protobuf\Internal\Message
      *request (outpoint/output script).
      *
      * Generated from protobuf field <code>.chainrpc.SpendDetails spend = 1;</code>
-     * @return \Chainrpc\SpendDetails
+     * @return \Chainrpc\SpendDetails|null
      */
     public function getSpend()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasSpend()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -67,11 +72,16 @@ class SpendEvent extends \Google\Protobuf\Internal\Message
      *reorged out of the chain.
      *
      * Generated from protobuf field <code>.chainrpc.Reorg reorg = 2;</code>
-     * @return \Chainrpc\Reorg
+     * @return \Chainrpc\Reorg|null
      */
     public function getReorg()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasReorg()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

@@ -18,7 +18,7 @@ class StatusResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool active = 1;</code>
      */
-    private $active = false;
+    protected $active = false;
 
     /**
      * Constructor.

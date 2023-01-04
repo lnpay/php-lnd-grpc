@@ -18,13 +18,13 @@ class ListAccountsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string name = 1;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      * An optional filter to only return accounts matching this address type.
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 2;</code>
      */
-    private $address_type = 0;
+    protected $address_type = 0;
 
     /**
      * Constructor.

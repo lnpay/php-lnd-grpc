@@ -18,13 +18,13 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>double probability = 1;</code>
      */
-    private $probability = 0.0;
+    protected $probability = 0.0;
     /**
      * The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
      */
-    private $history = null;
+    protected $history = null;
 
     /**
      * Constructor.
@@ -73,11 +73,21 @@ class QueryProbabilityResponse extends \Google\Protobuf\Internal\Message
      * The historical data for the requested pair.
      *
      * Generated from protobuf field <code>.routerrpc.PairData history = 2;</code>
-     * @return \Routerrpc\PairData
+     * @return \Routerrpc\PairData|null
      */
     public function getHistory()
     {
         return $this->history;
+    }
+
+    public function hasHistory()
+    {
+        return isset($this->history);
+    }
+
+    public function clearHistory()
+    {
+        unset($this->history);
     }
 
     /**

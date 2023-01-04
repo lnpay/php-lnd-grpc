@@ -13,6 +13,12 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class SettleEvent extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * The revealed preimage.
+     *
+     * Generated from protobuf field <code>bytes preimage = 1;</code>
+     */
+    protected $preimage = '';
 
     /**
      * Constructor.
@@ -20,11 +26,39 @@ class SettleEvent extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $preimage
+     *           The revealed preimage.
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Router::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * The revealed preimage.
+     *
+     * Generated from protobuf field <code>bytes preimage = 1;</code>
+     * @return string
+     */
+    public function getPreimage()
+    {
+        return $this->preimage;
+    }
+
+    /**
+     * The revealed preimage.
+     *
+     * Generated from protobuf field <code>bytes preimage = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPreimage($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->preimage = $var;
+
+        return $this;
     }
 
 }

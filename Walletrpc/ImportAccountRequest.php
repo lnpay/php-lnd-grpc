@@ -18,7 +18,7 @@ class ImportAccountRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string name = 1;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      *A public key that corresponds to a wallet account represented as an extended
      *key. It must conform to a derivation path of the form
@@ -26,7 +26,7 @@ class ImportAccountRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string extended_public_key = 2;</code>
      */
-    private $extended_public_key = '';
+    protected $extended_public_key = '';
     /**
      *The fingerprint of the root key (also known as the key with derivation path
      *m/) from which the account public key was derived from. This may be required
@@ -35,7 +35,7 @@ class ImportAccountRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes master_key_fingerprint = 3;</code>
      */
-    private $master_key_fingerprint = '';
+    protected $master_key_fingerprint = '';
     /**
      *An address type is only required when the extended account public key has a
      *legacy version (xpub, tpub, etc.), such that the wallet cannot detect what
@@ -43,7 +43,7 @@ class ImportAccountRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 4;</code>
      */
-    private $address_type = 0;
+    protected $address_type = 0;
     /**
      *Whether a dry run should be attempted when importing the account. This
      *serves as a way to confirm whether the account is being imported correctly
@@ -53,7 +53,7 @@ class ImportAccountRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool dry_run = 5;</code>
      */
-    private $dry_run = false;
+    protected $dry_run = false;
 
     /**
      * Constructor.

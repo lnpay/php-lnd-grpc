@@ -27,7 +27,7 @@ class SignResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $raw_sigs
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $raw_sigs
      *          A set of signatures realized in a fixed 64-byte format ordered in ascending
      *          input order.
      * }
@@ -54,7 +54,7 @@ class SignResp extends \Google\Protobuf\Internal\Message
      *input order.
      *
      * Generated from protobuf field <code>repeated bytes raw_sigs = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRawSigs($var)

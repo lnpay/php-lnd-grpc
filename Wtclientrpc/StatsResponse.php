@@ -19,33 +19,33 @@ class StatsResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 num_backups = 1;</code>
      */
-    private $num_backups = 0;
+    protected $num_backups = 0;
     /**
      *The total number of backups that are pending to be acknowledged by all
      *active and exhausted watchtower sessions.
      *
      * Generated from protobuf field <code>uint32 num_pending_backups = 2;</code>
      */
-    private $num_pending_backups = 0;
+    protected $num_pending_backups = 0;
     /**
      *The total number of backups that all active and exhausted watchtower
      *sessions have failed to acknowledge.
      *
      * Generated from protobuf field <code>uint32 num_failed_backups = 3;</code>
      */
-    private $num_failed_backups = 0;
+    protected $num_failed_backups = 0;
     /**
      * The total number of new sessions made to watchtowers.
      *
      * Generated from protobuf field <code>uint32 num_sessions_acquired = 4;</code>
      */
-    private $num_sessions_acquired = 0;
+    protected $num_sessions_acquired = 0;
     /**
      * The total number of watchtower sessions that have been exhausted.
      *
      * Generated from protobuf field <code>uint32 num_sessions_exhausted = 5;</code>
      */
-    private $num_sessions_exhausted = 0;
+    protected $num_sessions_exhausted = 0;
 
     /**
      * Constructor.

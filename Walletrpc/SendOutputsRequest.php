@@ -19,7 +19,7 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 sat_per_kw = 1;</code>
      */
-    private $sat_per_kw = 0;
+    protected $sat_per_kw = 0;
     /**
      *A slice of the outputs that should be created in the transaction produced.
      *
@@ -31,20 +31,20 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string label = 3;</code>
      */
-    private $label = '';
+    protected $label = '';
     /**
      * The minimum number of confirmations each one of your outputs used for
      * the transaction must satisfy.
      *
      * Generated from protobuf field <code>int32 min_confs = 4;</code>
      */
-    private $min_confs = 0;
+    protected $min_confs = 0;
     /**
      * Whether unconfirmed outputs should be used as inputs for the transaction.
      *
      * Generated from protobuf field <code>bool spend_unconfirmed = 5;</code>
      */
-    private $spend_unconfirmed = false;
+    protected $spend_unconfirmed = false;
 
     /**
      * Constructor.
@@ -55,7 +55,7 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *     @type int|string $sat_per_kw
      *          The number of satoshis per kilo weight that should be used when crafting
      *          this transaction.
-     *     @type \Signrpc\TxOut[]|\Google\Protobuf\Internal\RepeatedField $outputs
+     *     @type array<\Signrpc\TxOut>|\Google\Protobuf\Internal\RepeatedField $outputs
      *          A slice of the outputs that should be created in the transaction produced.
      *     @type string $label
      *           An optional label for the transaction, limited to 500 characters.
@@ -114,7 +114,7 @@ class SendOutputsRequest extends \Google\Protobuf\Internal\Message
      *A slice of the outputs that should be created in the transaction produced.
      *
      * Generated from protobuf field <code>repeated .signrpc.TxOut outputs = 2;</code>
-     * @param \Signrpc\TxOut[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Signrpc\TxOut>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOutputs($var)

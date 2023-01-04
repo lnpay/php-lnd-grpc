@@ -8,12 +8,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Lnrpc\\": "Lnrpc/",
-            "Invoicesrpc\\": "Invoicesrpc/",
-            "Routerrpc\\": "Routerrpc/",
-            "Walletrpc\\": "Walletrpc/",
+            "Autopilotrpc\\": "Autopilotrpc/",
             "Chainrpc\\": "Chainrpc/",
+            "Devrpc\\": "Devrpc/",
+            "Invoicesrpc\\": "Invoicesrpc/",
+            "Lnrpc\\": "Lnrpc/",
+            "Neutrinorpc\\":"Neutrinorpc/",
+            "Peersrpc\\":"Peersrpc/",
+            "Routerrpc\\": "Routerrpc/",
             "Signrpc\\": "Signrpc/",
+            "Verrpc\\": "Verrpc/",
+            "Walletrpc\\": "Walletrpc/",
+            "Watchtowerrpc\\":"Watchtowerrpc/",
+            "Wtclientrpc\\": "Wtclientrpc/",
             "GPBMetadata\\Google\\": "grpc/third_party/protobuf/php/src/GPBMetadata/Google/Protobuf/",
             "GPBMetadata\\": "GPBMetadata/"
         }
@@ -25,7 +32,7 @@
     },
     "authors": [
         {
-            "name": "Tim Kijewski",
+            "name": "Tim K",
             "email": "bootstrapbandit7@gmail.com"
         }
     ]

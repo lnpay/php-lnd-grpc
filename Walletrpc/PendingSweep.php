@@ -18,19 +18,19 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 1;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      * The witness type of the output we're attempting to sweep.
      *
      * Generated from protobuf field <code>.walletrpc.WitnessType witness_type = 2;</code>
      */
-    private $witness_type = 0;
+    protected $witness_type = 0;
     /**
      * The value of the output we're attempting to sweep.
      *
      * Generated from protobuf field <code>uint32 amount_sat = 3;</code>
      */
-    private $amount_sat = 0;
+    protected $amount_sat = 0;
     /**
      *Deprecated, use sat_per_vbyte.
      *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
@@ -38,34 +38,36 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *created, so it's possible for this to be 0 before this.
      *
      * Generated from protobuf field <code>uint32 sat_per_byte = 4 [deprecated = true];</code>
+     * @deprecated
      */
-    private $sat_per_byte = 0;
+    protected $sat_per_byte = 0;
     /**
      * The number of broadcast attempts we've made to sweep the output.
      *
      * Generated from protobuf field <code>uint32 broadcast_attempts = 5;</code>
      */
-    private $broadcast_attempts = 0;
+    protected $broadcast_attempts = 0;
     /**
      *The next height of the chain at which we'll attempt to broadcast the
      *sweep transaction of the output.
      *
      * Generated from protobuf field <code>uint32 next_broadcast_height = 6;</code>
      */
-    private $next_broadcast_height = 0;
+    protected $next_broadcast_height = 0;
     /**
      * The requested confirmation target for this output.
      *
      * Generated from protobuf field <code>uint32 requested_conf_target = 8;</code>
      */
-    private $requested_conf_target = 0;
+    protected $requested_conf_target = 0;
     /**
      * Deprecated, use requested_sat_per_vbyte.
      * The requested fee rate, expressed in sat/vbyte, for this output.
      *
      * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9 [deprecated = true];</code>
+     * @deprecated
      */
-    private $requested_sat_per_byte = 0;
+    protected $requested_sat_per_byte = 0;
     /**
      *The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
      *rate is only determined once a sweeping transaction for the output is
@@ -73,20 +75,20 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 sat_per_vbyte = 10;</code>
      */
-    private $sat_per_vbyte = 0;
+    protected $sat_per_vbyte = 0;
     /**
      * The requested fee rate, expressed in sat/vbyte, for this output.
      *
      * Generated from protobuf field <code>uint64 requested_sat_per_vbyte = 11;</code>
      */
-    private $requested_sat_per_vbyte = 0;
+    protected $requested_sat_per_vbyte = 0;
     /**
      *Whether this input must be force-swept. This means that it is swept even
      *if it has a negative yield.
      *
      * Generated from protobuf field <code>bool force = 7;</code>
      */
-    private $force = false;
+    protected $force = false;
 
     /**
      * Constructor.
@@ -135,11 +137,21 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      * The outpoint of the output we're attempting to sweep.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 1;</code>
-     * @return \Lnrpc\OutPoint
+     * @return \Lnrpc\OutPoint|null
      */
     public function getOutpoint()
     {
         return $this->outpoint;
+    }
+
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
     }
 
     /**
@@ -217,9 +229,11 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 sat_per_byte = 4 [deprecated = true];</code>
      * @return int
+     * @deprecated
      */
     public function getSatPerByte()
     {
+        @trigger_error('sat_per_byte is deprecated.', E_USER_DEPRECATED);
         return $this->sat_per_byte;
     }
 
@@ -232,9 +246,11 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 sat_per_byte = 4 [deprecated = true];</code>
      * @param int $var
      * @return $this
+     * @deprecated
      */
     public function setSatPerByte($var)
     {
+        @trigger_error('sat_per_byte is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkUint32($var);
         $this->sat_per_byte = $var;
 
@@ -327,9 +343,11 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9 [deprecated = true];</code>
      * @return int
+     * @deprecated
      */
     public function getRequestedSatPerByte()
     {
+        @trigger_error('requested_sat_per_byte is deprecated.', E_USER_DEPRECATED);
         return $this->requested_sat_per_byte;
     }
 
@@ -340,9 +358,11 @@ class PendingSweep extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 requested_sat_per_byte = 9 [deprecated = true];</code>
      * @param int $var
      * @return $this
+     * @deprecated
      */
     public function setRequestedSatPerByte($var)
     {
+        @trigger_error('requested_sat_per_byte is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkUint32($var);
         $this->requested_sat_per_byte = $var;
 
