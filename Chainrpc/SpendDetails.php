@@ -18,31 +18,31 @@ class SpendDetails extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.chainrpc.Outpoint spending_outpoint = 1;</code>
      */
-    private $spending_outpoint = null;
+    protected $spending_outpoint = null;
     /**
      * The raw bytes of the spending transaction.
      *
      * Generated from protobuf field <code>bytes raw_spending_tx = 2;</code>
      */
-    private $raw_spending_tx = '';
+    protected $raw_spending_tx = '';
     /**
      * The hash of the spending transaction.
      *
      * Generated from protobuf field <code>bytes spending_tx_hash = 3;</code>
      */
-    private $spending_tx_hash = '';
+    protected $spending_tx_hash = '';
     /**
      * The input of the spending transaction that fulfilled the spend request.
      *
      * Generated from protobuf field <code>uint32 spending_input_index = 4;</code>
      */
-    private $spending_input_index = 0;
+    protected $spending_input_index = 0;
     /**
      * The height at which the spending transaction was included in a block.
      *
      * Generated from protobuf field <code>uint32 spending_height = 5;</code>
      */
-    private $spending_height = 0;
+    protected $spending_height = 0;
 
     /**
      * Constructor.
@@ -71,11 +71,21 @@ class SpendDetails extends \Google\Protobuf\Internal\Message
      * The outpoint was that spent.
      *
      * Generated from protobuf field <code>.chainrpc.Outpoint spending_outpoint = 1;</code>
-     * @return \Chainrpc\Outpoint
+     * @return \Chainrpc\Outpoint|null
      */
     public function getSpendingOutpoint()
     {
         return $this->spending_outpoint;
+    }
+
+    public function hasSpendingOutpoint()
+    {
+        return isset($this->spending_outpoint);
+    }
+
+    public function clearSpendingOutpoint()
+    {
+        unset($this->spending_outpoint);
     }
 
     /**

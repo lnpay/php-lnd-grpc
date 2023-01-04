@@ -18,7 +18,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string name = 1;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      *The type of addresses the account supports.
      *AddressType                       | External Branch | Internal Branch
@@ -29,7 +29,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 2;</code>
      */
-    private $address_type = 0;
+    protected $address_type = 0;
     /**
      *The public key backing the account that all keys are derived from
      *represented as an extended key. This will always be empty for the default
@@ -37,7 +37,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string extended_public_key = 3;</code>
      */
-    private $extended_public_key = '';
+    protected $extended_public_key = '';
     /**
      *The fingerprint of the root key from which the account public key was
      *derived from. This will always be zero for the default imported account in
@@ -46,7 +46,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes master_key_fingerprint = 4;</code>
      */
-    private $master_key_fingerprint = '';
+    protected $master_key_fingerprint = '';
     /**
      *The derivation path corresponding to the account public key. This will
      *always be empty for the default imported account in which single public keys
@@ -54,7 +54,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string derivation_path = 5;</code>
      */
-    private $derivation_path = '';
+    protected $derivation_path = '';
     /**
      *The number of keys derived from the external branch of the account public
      *key. This will always be zero for the default imported account in which
@@ -62,7 +62,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 external_key_count = 6;</code>
      */
-    private $external_key_count = 0;
+    protected $external_key_count = 0;
     /**
      *The number of keys derived from the internal branch of the account public
      *key. This will always be zero for the default imported account in which
@@ -70,13 +70,13 @@ class Account extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 internal_key_count = 7;</code>
      */
-    private $internal_key_count = 0;
+    protected $internal_key_count = 0;
     /**
      * Whether the wallet stores private keys for the account.
      *
      * Generated from protobuf field <code>bool watch_only = 8;</code>
      */
-    private $watch_only = false;
+    protected $watch_only = false;
 
     /**
      * Constructor.

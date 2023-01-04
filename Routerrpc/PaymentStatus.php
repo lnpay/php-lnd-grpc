@@ -18,13 +18,13 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.PaymentState state = 1;</code>
      */
-    private $state = 0;
+    protected $state = 0;
     /**
      *The pre-image of the payment when state is SUCCEEDED.
      *
      * Generated from protobuf field <code>bytes preimage = 2;</code>
      */
-    private $preimage = '';
+    protected $preimage = '';
     /**
      *The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *
@@ -42,7 +42,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
      *           Current state the payment is in.
      *     @type string $preimage
      *          The pre-image of the payment when state is SUCCEEDED.
-     *     @type \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $htlcs
+     *     @type array<\Lnrpc\HTLCAttempt>|\Google\Protobuf\Internal\RepeatedField $htlcs
      *          The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      * }
      */
@@ -118,7 +118,7 @@ class PaymentStatus extends \Google\Protobuf\Internal\Message
      *The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
      *
      * Generated from protobuf field <code>repeated .lnrpc.HTLCAttempt htlcs = 4;</code>
-     * @param \Lnrpc\HTLCAttempt[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Lnrpc\HTLCAttempt>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHtlcs($var)

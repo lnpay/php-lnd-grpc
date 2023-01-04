@@ -28,7 +28,7 @@ class QueryMissionControlResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Routerrpc\PairHistory[]|\Google\Protobuf\Internal\RepeatedField $pairs
+     *     @type array<\Routerrpc\PairHistory>|\Google\Protobuf\Internal\RepeatedField $pairs
      *           Node pair-level mission control state.
      * }
      */
@@ -52,7 +52,7 @@ class QueryMissionControlResponse extends \Google\Protobuf\Internal\Message
      * Node pair-level mission control state.
      *
      * Generated from protobuf field <code>repeated .routerrpc.PairHistory pairs = 2;</code>
-     * @param \Routerrpc\PairHistory[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Routerrpc\PairHistory>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPairs($var)

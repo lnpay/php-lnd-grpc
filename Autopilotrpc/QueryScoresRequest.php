@@ -22,7 +22,7 @@ class QueryScoresRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool ignore_local_state = 2;</code>
      */
-    private $ignore_local_state = false;
+    protected $ignore_local_state = false;
 
     /**
      * Constructor.
@@ -30,7 +30,7 @@ class QueryScoresRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $pubkeys
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $pubkeys
      *     @type bool $ignore_local_state
      *           If set, we will ignore the local channel state when calculating scores.
      * }
@@ -51,7 +51,7 @@ class QueryScoresRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string pubkeys = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPubkeys($var)

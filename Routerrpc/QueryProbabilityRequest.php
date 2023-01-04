@@ -18,19 +18,19 @@ class QueryProbabilityRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes from_node = 1;</code>
      */
-    private $from_node = '';
+    protected $from_node = '';
     /**
      * The destination node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes to_node = 2;</code>
      */
-    private $to_node = '';
+    protected $to_node = '';
     /**
      * The amount for which to calculate a probability.
      *
      * Generated from protobuf field <code>int64 amt_msat = 3;</code>
      */
-    private $amt_msat = 0;
+    protected $amt_msat = 0;
 
     /**
      * Constructor.

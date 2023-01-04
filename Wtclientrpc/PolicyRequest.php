@@ -18,7 +18,7 @@ class PolicyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.wtclientrpc.PolicyType policy_type = 1;</code>
      */
-    private $policy_type = 0;
+    protected $policy_type = 0;
 
     /**
      * Constructor.

@@ -19,21 +19,21 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 amt_msat = 1;</code>
      */
-    private $amt_msat = 0;
+    protected $amt_msat = 0;
     /**
      *CLTV delta from the current height that should be used for the timelock
      *of the final hop
      *
      * Generated from protobuf field <code>int32 final_cltv_delta = 2;</code>
      */
-    private $final_cltv_delta = 0;
+    protected $final_cltv_delta = 0;
     /**
      *The channel id of the channel that must be taken to the first hop. If zero,
      *any channel may be used.
      *
      * Generated from protobuf field <code>uint64 outgoing_chan_id = 3 [jstype = JS_STRING];</code>
      */
-    private $outgoing_chan_id = 0;
+    protected $outgoing_chan_id = 0;
     /**
      *A list of hops that defines the route. This does not include the source hop
      *pubkey.
@@ -46,7 +46,7 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_addr = 5;</code>
      */
-    private $payment_addr = '';
+    protected $payment_addr = '';
 
     /**
      * Constructor.
@@ -63,7 +63,7 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
      *     @type int|string $outgoing_chan_id
      *          The channel id of the channel that must be taken to the first hop. If zero,
      *          any channel may be used.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $hop_pubkeys
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $hop_pubkeys
      *          A list of hops that defines the route. This does not include the source hop
      *          pubkey.
      *     @type string $payment_addr
@@ -176,7 +176,7 @@ class BuildRouteRequest extends \Google\Protobuf\Internal\Message
      *pubkey.
      *
      * Generated from protobuf field <code>repeated bytes hop_pubkeys = 4;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setHopPubkeys($var)

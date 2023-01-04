@@ -20,14 +20,14 @@ class FinalizePsbtRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes funded_psbt = 1;</code>
      */
-    private $funded_psbt = '';
+    protected $funded_psbt = '';
     /**
      *The name of the account to finalize the PSBT with. If empty, the default
      *wallet account is used.
      *
      * Generated from protobuf field <code>string account = 5;</code>
      */
-    private $account = '';
+    protected $account = '';
 
     /**
      * Constructor.

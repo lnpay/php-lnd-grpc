@@ -18,7 +18,7 @@ class SetScoresRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string heuristic = 1;</code>
      */
-    private $heuristic = '';
+    protected $heuristic = '';
     /**
      *A map from hex-encoded public keys to scores. Scores must be in the range
      *[0.0, 1.0].

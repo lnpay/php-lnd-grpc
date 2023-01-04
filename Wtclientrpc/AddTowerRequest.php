@@ -18,13 +18,13 @@ class AddTowerRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pubkey = 1;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
     /**
      * A network address the watchtower is reachable over.
      *
      * Generated from protobuf field <code>string address = 2;</code>
      */
-    private $address = '';
+    protected $address = '';
 
     /**
      * Constructor.

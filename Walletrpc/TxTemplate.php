@@ -37,7 +37,7 @@ class TxTemplate extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Lnrpc\OutPoint[]|\Google\Protobuf\Internal\RepeatedField $inputs
+     *     @type array<\Lnrpc\OutPoint>|\Google\Protobuf\Internal\RepeatedField $inputs
      *          An optional list of inputs to use. Every input must be an UTXO known to the
      *          wallet that has not been locked before. The sum of all inputs must be
      *          sufficiently greater than the sum of all outputs to pay a miner fee with the
@@ -78,7 +78,7 @@ class TxTemplate extends \Google\Protobuf\Internal\Message
      *inputs of sufficient value will be added to the resulting PSBT.
      *
      * Generated from protobuf field <code>repeated .lnrpc.OutPoint inputs = 1;</code>
-     * @param \Lnrpc\OutPoint[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Lnrpc\OutPoint>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInputs($var)

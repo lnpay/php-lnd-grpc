@@ -28,7 +28,7 @@ class TransactionIDs extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $transaction_ids
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $transaction_ids
      *          Reversed, hex-encoded string representing the transaction ids of the
      *          sweeps that our node has broadcast. Note that these transactions may
      *          not have confirmed yet, we record sweeps on broadcast, not confirmation.
@@ -58,7 +58,7 @@ class TransactionIDs extends \Google\Protobuf\Internal\Message
      *not have confirmed yet, we record sweeps on broadcast, not confirmation.
      *
      * Generated from protobuf field <code>repeated string transaction_ids = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTransactionIds($var)

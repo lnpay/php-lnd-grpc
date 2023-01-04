@@ -37,7 +37,7 @@ class PaymentState
      */
     const FAILED_NO_ROUTE = 3;
     /**
-     *A non-recoverable error has occured.
+     *A non-recoverable error has occurred.
      *
      * Generated from protobuf enum <code>FAILED_ERROR = 4;</code>
      */

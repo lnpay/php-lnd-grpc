@@ -16,7 +16,7 @@ class HeuristicResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string heuristic = 1;</code>
      */
-    private $heuristic = '';
+    protected $heuristic = '';
     /**
      * Generated from protobuf field <code>map<string, double> scores = 2;</code>
      */

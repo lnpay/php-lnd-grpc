@@ -14,20 +14,27 @@ class Verrpc
         if (static::$is_initialized == true) {
           return;
         }
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0ae0020a0c7665727270632e70726f746f120676657272706322100a0e56" .
-            "657273696f6e5265717565737422b9010a0756657273696f6e120e0a0663" .
-            "6f6d6d697418012001280912130a0b636f6d6d69745f6861736818022001" .
-            "2809120f0a0776657273696f6e18032001280912110a096170705f6d616a" .
-            "6f7218042001280d12110a096170705f6d696e6f7218052001280d12110a" .
-            "096170705f706174636818062001280d12170a0f6170705f7072655f7265" .
-            "6c6561736518072001280912120a0a6275696c645f746167731808200328" .
-            "0912120a0a676f5f76657273696f6e18092001280932420a095665727369" .
-            "6f6e657212350a0a47657456657273696f6e12162e7665727270632e5665" .
-            "7273696f6e526571756573741a0f2e7665727270632e56657273696f6e42" .
-            "2e5a2c6769746875622e636f6d2f6c696768746e696e676e6574776f726b" .
-            "2f6c6e642f6c6e7270632f766572727063620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+à
+verrpc.protoverrpc"
+VersionRequest"¹
+Version
+commit (	
+commit_hash (	
+version (	
+	app_major (
+	app_minor (
+	app_patch (
+app_pre_release (	
+
+build_tags (	
+
+go_version	 (	2B
+	Versioner5
+
+GetVersion.verrpc.VersionRequest.verrpc.VersionB.Z,github.com/lightningnetwork/lnd/lnrpc/verrpcbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

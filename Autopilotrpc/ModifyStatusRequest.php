@@ -18,7 +18,7 @@ class ModifyStatusRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool enable = 1;</code>
      */
-    private $enable = false;
+    protected $enable = false;
 
     /**
      * Constructor.

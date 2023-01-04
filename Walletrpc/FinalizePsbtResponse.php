@@ -18,13 +18,13 @@ class FinalizePsbtResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes signed_psbt = 1;</code>
      */
-    private $signed_psbt = '';
+    protected $signed_psbt = '';
     /**
      * The fully signed and finalized transaction in the raw wire format.
      *
      * Generated from protobuf field <code>bytes raw_final_tx = 2;</code>
      */
-    private $raw_final_tx = '';
+    protected $raw_final_tx = '';
 
     /**
      * Constructor.

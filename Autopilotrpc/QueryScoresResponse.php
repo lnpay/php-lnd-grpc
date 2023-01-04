@@ -24,7 +24,7 @@ class QueryScoresResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Autopilotrpc\QueryScoresResponse\HeuristicResult[]|\Google\Protobuf\Internal\RepeatedField $results
+     *     @type array<\Autopilotrpc\QueryScoresResponse\HeuristicResult>|\Google\Protobuf\Internal\RepeatedField $results
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class QueryScoresResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .autopilotrpc.QueryScoresResponse.HeuristicResult results = 1;</code>
-     * @param \Autopilotrpc\QueryScoresResponse\HeuristicResult[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Autopilotrpc\QueryScoresResponse\HeuristicResult>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setResults($var)

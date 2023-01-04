@@ -21,7 +21,7 @@ class PublishResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string publish_error = 1;</code>
      */
-    private $publish_error = '';
+    protected $publish_error = '';
 
     /**
      * Constructor.

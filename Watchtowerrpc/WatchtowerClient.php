@@ -26,6 +26,7 @@ class WatchtowerClient extends \Grpc\BaseStub {
      * @param \Watchtowerrpc\GetInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetInfo(\Watchtowerrpc\GetInfoRequest $argument,
       $metadata = [], $options = []) {

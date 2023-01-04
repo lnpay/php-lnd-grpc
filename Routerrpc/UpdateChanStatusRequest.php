@@ -16,11 +16,11 @@ class UpdateChanStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
      */
-    private $chan_point = null;
+    protected $chan_point = null;
     /**
      * Generated from protobuf field <code>.routerrpc.ChanStatusAction action = 2;</code>
      */
-    private $action = 0;
+    protected $action = 0;
 
     /**
      * Constructor.
@@ -39,11 +39,21 @@ class UpdateChanStatusRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.lnrpc.ChannelPoint chan_point = 1;</code>
-     * @return \Lnrpc\ChannelPoint
+     * @return \Lnrpc\ChannelPoint|null
      */
     public function getChanPoint()
     {
         return $this->chan_point;
+    }
+
+    public function hasChanPoint()
+    {
+        return isset($this->chan_point);
+    }
+
+    public function clearChanPoint()
+    {
+        unset($this->chan_point);
     }
 
     /**

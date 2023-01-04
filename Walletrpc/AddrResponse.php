@@ -18,7 +18,7 @@ class AddrResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string addr = 1;</code>
      */
-    private $addr = '';
+    protected $addr = '';
 
     /**
      * Constructor.
