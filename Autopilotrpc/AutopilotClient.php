@@ -25,6 +25,7 @@ class AutopilotClient extends \Grpc\BaseStub {
      * @param \Autopilotrpc\StatusRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function Status(\Autopilotrpc\StatusRequest $argument,
       $metadata = [], $options = []) {
@@ -41,6 +42,7 @@ class AutopilotClient extends \Grpc\BaseStub {
      * @param \Autopilotrpc\ModifyStatusRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ModifyStatus(\Autopilotrpc\ModifyStatusRequest $argument,
       $metadata = [], $options = []) {
@@ -58,6 +60,7 @@ class AutopilotClient extends \Grpc\BaseStub {
      * @param \Autopilotrpc\QueryScoresRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function QueryScores(\Autopilotrpc\QueryScoresRequest $argument,
       $metadata = [], $options = []) {
@@ -74,6 +77,7 @@ class AutopilotClient extends \Grpc\BaseStub {
      * @param \Autopilotrpc\SetScoresRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SetScores(\Autopilotrpc\SetScoresRequest $argument,
       $metadata = [], $options = []) {

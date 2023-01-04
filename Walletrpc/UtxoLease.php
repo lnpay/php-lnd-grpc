@@ -18,19 +18,31 @@ class UtxoLease extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes id = 1;</code>
      */
-    private $id = '';
+    protected $id = '';
     /**
      * The identifying outpoint of the output being leased.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
     /**
      *The absolute expiration of the output lease represented as a unix timestamp.
      *
      * Generated from protobuf field <code>uint64 expiration = 3;</code>
      */
-    private $expiration = 0;
+    protected $expiration = 0;
+    /**
+     *The public key script of the leased output.
+     *
+     * Generated from protobuf field <code>bytes pk_script = 4;</code>
+     */
+    protected $pk_script = '';
+    /**
+     *The value of the leased output in satoshis.
+     *
+     * Generated from protobuf field <code>uint64 value = 5;</code>
+     */
+    protected $value = 0;
 
     /**
      * Constructor.
@@ -44,6 +56,10 @@ class UtxoLease extends \Google\Protobuf\Internal\Message
      *           The identifying outpoint of the output being leased.
      *     @type int|string $expiration
      *          The absolute expiration of the output lease represented as a unix timestamp.
+     *     @type string $pk_script
+     *          The public key script of the leased output.
+     *     @type int|string $value
+     *          The value of the leased output in satoshis.
      * }
      */
     public function __construct($data = NULL) {
@@ -81,11 +97,21 @@ class UtxoLease extends \Google\Protobuf\Internal\Message
      * The identifying outpoint of the output being leased.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
-     * @return \Lnrpc\OutPoint
+     * @return \Lnrpc\OutPoint|null
      */
     public function getOutpoint()
     {
         return $this->outpoint;
+    }
+
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
     }
 
     /**
@@ -125,6 +151,58 @@ class UtxoLease extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->expiration = $var;
+
+        return $this;
+    }
+
+    /**
+     *The public key script of the leased output.
+     *
+     * Generated from protobuf field <code>bytes pk_script = 4;</code>
+     * @return string
+     */
+    public function getPkScript()
+    {
+        return $this->pk_script;
+    }
+
+    /**
+     *The public key script of the leased output.
+     *
+     * Generated from protobuf field <code>bytes pk_script = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPkScript($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->pk_script = $var;
+
+        return $this;
+    }
+
+    /**
+     *The value of the leased output in satoshis.
+     *
+     * Generated from protobuf field <code>uint64 value = 5;</code>
+     * @return int|string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     *The value of the leased output in satoshis.
+     *
+     * Generated from protobuf field <code>uint64 value = 5;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setValue($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->value = $var;
 
         return $this;
     }

@@ -22,7 +22,7 @@ class MissionControlConfig extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint64 half_life_seconds = 1;</code>
      */
-    private $half_life_seconds = 0;
+    protected $half_life_seconds = 0;
     /**
      *The probability of success mission control should assign to hop in a route
      *where it has no other information available. Higher values will make mission
@@ -31,7 +31,7 @@ class MissionControlConfig extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>float hop_probability = 2;</code>
      */
-    private $hop_probability = 0.0;
+    protected $hop_probability = 0.0;
     /**
      *The importance that mission control should place on historical results,
      *expressed as a value in [0;1]. Setting this value to 1 will ignore all
@@ -42,20 +42,20 @@ class MissionControlConfig extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>float weight = 3;</code>
      */
-    private $weight = 0.0;
+    protected $weight = 0.0;
     /**
      *The maximum number of payment results that mission control will store.
      *
      * Generated from protobuf field <code>uint32 maximum_payment_results = 4;</code>
      */
-    private $maximum_payment_results = 0;
+    protected $maximum_payment_results = 0;
     /**
      *The minimum time that must have passed since the previously recorded failure
      *before we raise the failure amount.
      *
      * Generated from protobuf field <code>uint64 minimum_failure_relax_interval = 5;</code>
      */
-    private $minimum_failure_relax_interval = 0;
+    protected $minimum_failure_relax_interval = 0;
 
     /**
      * Constructor.

@@ -25,6 +25,7 @@ class VersionerClient extends \Grpc\BaseStub {
      * @param \Verrpc\VersionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetVersion(\Verrpc\VersionRequest $argument,
       $metadata = [], $options = []) {

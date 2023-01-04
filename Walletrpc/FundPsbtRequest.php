@@ -19,20 +19,20 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string account = 5;</code>
      */
-    private $account = '';
+    protected $account = '';
     /**
      * The minimum number of confirmations each one of your outputs used for
      * the transaction must satisfy.
      *
      * Generated from protobuf field <code>int32 min_confs = 6;</code>
      */
-    private $min_confs = 0;
+    protected $min_confs = 0;
     /**
      * Whether unconfirmed outputs should be used as inputs for the transaction.
      *
      * Generated from protobuf field <code>bool spend_unconfirmed = 7;</code>
      */
-    private $spend_unconfirmed = false;
+    protected $spend_unconfirmed = false;
     protected $template;
     protected $fees;
 
@@ -89,6 +89,11 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
         return $this->readOneof(1);
     }
 
+    public function hasPsbt()
+    {
+        return $this->hasOneof(1);
+    }
+
     /**
      *Use an existing PSBT packet as the template for the funded PSBT.
      *The packet must contain at least one non-dust output. If one or more
@@ -114,11 +119,16 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      *Use the outputs and optional inputs from this raw template.
      *
      * Generated from protobuf field <code>.walletrpc.TxTemplate raw = 2;</code>
-     * @return \Walletrpc\TxTemplate
+     * @return \Walletrpc\TxTemplate|null
      */
     public function getRaw()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasRaw()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -147,6 +157,11 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
         return $this->readOneof(3);
     }
 
+    public function hasTargetConf()
+    {
+        return $this->hasOneof(3);
+    }
+
     /**
      *The target number of blocks that the transaction should be confirmed in.
      *
@@ -172,6 +187,11 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
     public function getSatPerVbyte()
     {
         return $this->readOneof(4);
+    }
+
+    public function hasSatPerVbyte()
+    {
+        return $this->hasOneof(4);
     }
 
     /**

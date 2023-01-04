@@ -27,6 +27,7 @@ class WatchtowerClientClient extends \Grpc\BaseStub {
      * @param \Wtclientrpc\AddTowerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function AddTower(\Wtclientrpc\AddTowerRequest $argument,
       $metadata = [], $options = []) {
@@ -45,6 +46,7 @@ class WatchtowerClientClient extends \Grpc\BaseStub {
      * @param \Wtclientrpc\RemoveTowerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function RemoveTower(\Wtclientrpc\RemoveTowerRequest $argument,
       $metadata = [], $options = []) {
@@ -59,6 +61,7 @@ class WatchtowerClientClient extends \Grpc\BaseStub {
      * @param \Wtclientrpc\ListTowersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListTowers(\Wtclientrpc\ListTowersRequest $argument,
       $metadata = [], $options = []) {
@@ -73,6 +76,7 @@ class WatchtowerClientClient extends \Grpc\BaseStub {
      * @param \Wtclientrpc\GetTowerInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetTowerInfo(\Wtclientrpc\GetTowerInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -87,6 +91,7 @@ class WatchtowerClientClient extends \Grpc\BaseStub {
      * @param \Wtclientrpc\StatsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function Stats(\Wtclientrpc\StatsRequest $argument,
       $metadata = [], $options = []) {
@@ -101,6 +106,7 @@ class WatchtowerClientClient extends \Grpc\BaseStub {
      * @param \Wtclientrpc\PolicyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function Policy(\Wtclientrpc\PolicyRequest $argument,
       $metadata = [], $options = []) {

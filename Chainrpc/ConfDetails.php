@@ -18,26 +18,26 @@ class ConfDetails extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes raw_tx = 1;</code>
      */
-    private $raw_tx = '';
+    protected $raw_tx = '';
     /**
      * The hash of the block in which the confirmed transaction was included in.
      *
      * Generated from protobuf field <code>bytes block_hash = 2;</code>
      */
-    private $block_hash = '';
+    protected $block_hash = '';
     /**
      * The height of the block in which the confirmed transaction was included
      * in.
      *
      * Generated from protobuf field <code>uint32 block_height = 3;</code>
      */
-    private $block_height = 0;
+    protected $block_height = 0;
     /**
      * The index of the confirmed transaction within the transaction.
      *
      * Generated from protobuf field <code>uint32 tx_index = 4;</code>
      */
-    private $tx_index = 0;
+    protected $tx_index = 0;
 
     /**
      * Constructor.

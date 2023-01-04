@@ -18,7 +18,7 @@ class ListTowersRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool include_sessions = 1;</code>
      */
-    private $include_sessions = false;
+    protected $include_sessions = false;
 
     /**
      * Constructor.

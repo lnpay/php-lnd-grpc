@@ -18,7 +18,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pubkey = 1;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
     /**
      * The listening addresses of the watchtower.
      *
@@ -40,9 +40,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $pubkey
      *           The public key of the watchtower.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $listeners
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $listeners
      *           The listening addresses of the watchtower.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $uris
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $uris
      *           The URIs of the watchtower.
      * }
      */
@@ -92,7 +92,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * The listening addresses of the watchtower.
      *
      * Generated from protobuf field <code>repeated string listeners = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setListeners($var)
@@ -118,7 +118,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * The URIs of the watchtower.
      *
      * Generated from protobuf field <code>repeated string uris = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUris($var)

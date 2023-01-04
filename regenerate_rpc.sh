@@ -2,142 +2,89 @@
 
 TAG=$1
 
-curl -o rpc.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/rpc.proto"
-curl -o invoices.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/invoicesrpc/invoices.proto"
-curl -o router.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/routerrpc/router.proto"
-curl -o walletkit.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/walletrpc/walletkit.proto"
-curl -o chainnotifier.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/chainrpc/chainnotifier.proto"
-curl -o signer.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/signrpc/signer.proto"
-curl -o autopilot.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/autopilotrpc/autopilot.proto"
-curl -o chainnotifier.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/chainrpc/chainnotifier.proto"
-curl -o lncli.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/lnclipb/lncli.proto"
-curl -o verrpc.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/verrpc/verrpc.proto"
-curl -o watchtower.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/watchtowerrpc/watchtower.proto"
-curl -o wtclient.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/wtclientrpc/wtclient.proto"
+#autopilotrpc
+echo "----autopilotrpc"
+curl -o proto/autopilot.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/autopilotrpc/autopilot.proto"
+./bin/protoc -I=./proto autopilot.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
+# chainrpc
+echo "----chainrpc"
+curl -o proto/chainnotifier.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/chainrpc/chainnotifier.proto"
+./bin/protoc -I=./proto chainnotifier.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-git submodule update --init --recursive
+# curl -o proto/chainkit.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/chainrpc/chainkit.proto"
+#./bin/protoc -I=./proto chainkit.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-# apt-get update
-# apt-get install build-essential autoconf automake libtool pkg-config libc-ares-dev google-perftools
+#devrpc
+echo "----devrpc"
+curl -o proto/dev.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/devrpc/dev.proto"
+./bin/protoc -I=./proto dev.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        wtclient.proto
+#invoicesrpc
+echo "----invoicesrpc"
+curl -o proto/invoices.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/invoicesrpc/invoices.proto"
+./bin/protoc -I=./proto invoices.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        watchtower.proto
+#verrpc
+echo "-----verrpc"
+curl -o proto/verrpc.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/verrpc/verrpc.proto"
+curl -o proto/verrpc/verrpc.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/verrpc/verrpc.proto"
+./bin/protoc -I=./proto verrpc.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        verrpc.proto
+#lnclipb
+echo "----lnclipb"
+curl -o proto/lncli.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/lnclipb/lncli.proto"
+./bin/protoc -I=./proto lncli.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        lncli.proto
+#neutrinorpc
+echo "----neutrinorpc"
+curl -o proto/neutrino.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/neutrinorpc/neutrino.proto"
+./bin/protoc -I=./proto neutrino.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-       	chainnotifier.proto
+#peersrpc
+echo "----peersrpc"
+curl -o proto/peers.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/peersrpc/peers.proto"
+./bin/protoc -I=./proto peers.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        autopilot.proto
+#routerrpc
+echo "----routerrpc"
+curl -o proto/router.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/routerrpc/router.proto"
+./bin/protoc -I=./proto router.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        rpc.proto
+#signrpc
+echo "----signrpc"
+curl -o proto/signer.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/signrpc/signer.proto"
+curl -o proto/signrpc/signer.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/signrpc/signer.proto"
+./bin/protoc -I=./proto signer.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        invoices.proto
+#walletrpc
+echo "-----walletrpc"
+curl -o proto/walletkit.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/walletrpc/walletkit.proto"
+./bin/protoc -I=./proto walletkit.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        router.proto
+#watchtowerrpc
+echo "----watchtowerrpc"
+curl -o proto/watchtower.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/watchtowerrpc/watchtower.proto"
+./bin/protoc -I=./proto watchtower.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
+#wtclientrpc
+echo "----wtclientrpc"
+curl -o proto/wtclient.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/wtclientrpc/wtclient.proto"
+./bin/protoc -I=./proto wtclient.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        signer.proto
+#lightning
+echo "----lightning"
+curl -o proto/lightning.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/lightning.proto"
+./bin/protoc -I=./proto lightning.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
+#stateservice
+echo "----stateservice"
+curl -o proto/stateservice.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/stateservice.proto"
+./bin/protoc -I=./proto stateservice.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        walletkit.proto
-
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        chainnotifier.proto
-
-./grpc/bins/opt/protobuf/protoc \
-        --proto_path=googleapis/ \
-        --php_out=./ \
-        --grpc_out=./ \
-        --plugin=protoc-gen-grpc=bin/grpc_php_plugin \
-        -Igrpc/third_party/protobuf/src \
-        -I./ \
-        signer.proto
+#walletunlocker
+echo "-----walletunlocker"
+curl -o proto/walletunlocker.proto "https://raw.githubusercontent.com/lightningnetwork/lnd/$TAG/lnrpc/walletunlocker.proto"
+./bin/protoc -I=./proto walletunlocker.proto --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=bin/grpc_php_plugin
 
 echo "DONE - $1"

@@ -18,7 +18,7 @@ class BuildRouteResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 1;</code>
      */
-    private $route = null;
+    protected $route = null;
 
     /**
      * Constructor.
@@ -39,11 +39,21 @@ class BuildRouteResponse extends \Google\Protobuf\Internal\Message
      *Fully specified route that can be used to execute the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 1;</code>
-     * @return \Lnrpc\Route
+     * @return \Lnrpc\Route|null
      */
     public function getRoute()
     {
         return $this->route;
+    }
+
+    public function hasRoute()
+    {
+        return isset($this->route);
+    }
+
+    public function clearRoute()
+    {
+        unset($this->route);
     }
 
     /**

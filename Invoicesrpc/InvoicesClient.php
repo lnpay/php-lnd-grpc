@@ -26,6 +26,7 @@ class InvoicesClient extends \Grpc\BaseStub {
      * @param \Invoicesrpc\SubscribeSingleInvoiceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeSingleInvoice(\Invoicesrpc\SubscribeSingleInvoiceRequest $argument,
       $metadata = [], $options = []) {
@@ -43,6 +44,7 @@ class InvoicesClient extends \Grpc\BaseStub {
      * @param \Invoicesrpc\CancelInvoiceMsg $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function CancelInvoice(\Invoicesrpc\CancelInvoiceMsg $argument,
       $metadata = [], $options = []) {
@@ -59,6 +61,7 @@ class InvoicesClient extends \Grpc\BaseStub {
      * @param \Invoicesrpc\AddHoldInvoiceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function AddHoldInvoice(\Invoicesrpc\AddHoldInvoiceRequest $argument,
       $metadata = [], $options = []) {
@@ -75,12 +78,30 @@ class InvoicesClient extends \Grpc\BaseStub {
      * @param \Invoicesrpc\SettleInvoiceMsg $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SettleInvoice(\Invoicesrpc\SettleInvoiceMsg $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/invoicesrpc.Invoices/SettleInvoice',
         $argument,
         ['\Invoicesrpc\SettleInvoiceResp', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * LookupInvoiceV2 attempts to look up at invoice. An invoice can be refrenced
+     * using either its payment hash, payment address, or set ID.
+     * @param \Invoicesrpc\LookupInvoiceMsg $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function LookupInvoiceV2(\Invoicesrpc\LookupInvoiceMsg $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/invoicesrpc.Invoices/LookupInvoiceV2',
+        $argument,
+        ['\Lnrpc\Invoice', 'decode'],
         $metadata, $options);
     }
 

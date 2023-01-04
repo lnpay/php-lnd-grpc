@@ -18,13 +18,13 @@ class GetTowerInfoRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pubkey = 1;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
     /**
      * Whether we should include sessions with the watchtower in the response.
      *
      * Generated from protobuf field <code>bool include_sessions = 2;</code>
      */
-    private $include_sessions = false;
+    protected $include_sessions = false;
 
     /**
      * Constructor.

@@ -18,7 +18,7 @@ class Tower extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes pubkey = 1;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
     /**
      * The list of addresses the watchtower is reachable over.
      *
@@ -30,13 +30,13 @@ class Tower extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool active_session_candidate = 3;</code>
      */
-    private $active_session_candidate = false;
+    protected $active_session_candidate = false;
     /**
      * The number of sessions that have been negotiated with the watchtower.
      *
      * Generated from protobuf field <code>uint32 num_sessions = 4;</code>
      */
-    private $num_sessions = 0;
+    protected $num_sessions = 0;
     /**
      * The list of sessions that have been negotiated with the watchtower.
      *
@@ -52,13 +52,13 @@ class Tower extends \Google\Protobuf\Internal\Message
      *
      *     @type string $pubkey
      *           The identifying public key of the watchtower.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $addresses
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $addresses
      *           The list of addresses the watchtower is reachable over.
      *     @type bool $active_session_candidate
      *           Whether the watchtower is currently a candidate for new sessions.
      *     @type int $num_sessions
      *           The number of sessions that have been negotiated with the watchtower.
-     *     @type \Wtclientrpc\TowerSession[]|\Google\Protobuf\Internal\RepeatedField $sessions
+     *     @type array<\Wtclientrpc\TowerSession>|\Google\Protobuf\Internal\RepeatedField $sessions
      *           The list of sessions that have been negotiated with the watchtower.
      * }
      */
@@ -108,7 +108,7 @@ class Tower extends \Google\Protobuf\Internal\Message
      * The list of addresses the watchtower is reachable over.
      *
      * Generated from protobuf field <code>repeated string addresses = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAddresses($var)
@@ -186,7 +186,7 @@ class Tower extends \Google\Protobuf\Internal\Message
      * The list of sessions that have been negotiated with the watchtower.
      *
      * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5;</code>
-     * @param \Wtclientrpc\TowerSession[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Wtclientrpc\TowerSession>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSessions($var)

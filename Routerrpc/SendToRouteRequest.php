@@ -18,13 +18,22 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes payment_hash = 1;</code>
      */
-    private $payment_hash = '';
+    protected $payment_hash = '';
     /**
      * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
      */
-    private $route = null;
+    protected $route = null;
+    /**
+     *Whether the payment should be marked as failed when a temporary error is
+     *returned from the given route. Set it to true so the payment won't be
+     *failed unless a terminal error is occurred, such as payment timeout, no
+     *routes, incorrect payment details, or insufficient funds.
+     *
+     * Generated from protobuf field <code>bool skip_temp_err = 3;</code>
+     */
+    protected $skip_temp_err = false;
 
     /**
      * Constructor.
@@ -36,6 +45,11 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      *           The payment hash to use for the HTLC.
      *     @type \Lnrpc\Route $route
      *           Route that should be used to attempt to complete the payment.
+     *     @type bool $skip_temp_err
+     *          Whether the payment should be marked as failed when a temporary error is
+     *          returned from the given route. Set it to true so the payment won't be
+     *          failed unless a terminal error is occurred, such as payment timeout, no
+     *          routes, incorrect payment details, or insufficient funds.
      * }
      */
     public function __construct($data = NULL) {
@@ -73,11 +87,21 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
      * Route that should be used to attempt to complete the payment.
      *
      * Generated from protobuf field <code>.lnrpc.Route route = 2;</code>
-     * @return \Lnrpc\Route
+     * @return \Lnrpc\Route|null
      */
     public function getRoute()
     {
         return $this->route;
+    }
+
+    public function hasRoute()
+    {
+        return isset($this->route);
+    }
+
+    public function clearRoute()
+    {
+        unset($this->route);
     }
 
     /**
@@ -91,6 +115,38 @@ class SendToRouteRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\Route::class);
         $this->route = $var;
+
+        return $this;
+    }
+
+    /**
+     *Whether the payment should be marked as failed when a temporary error is
+     *returned from the given route. Set it to true so the payment won't be
+     *failed unless a terminal error is occurred, such as payment timeout, no
+     *routes, incorrect payment details, or insufficient funds.
+     *
+     * Generated from protobuf field <code>bool skip_temp_err = 3;</code>
+     * @return bool
+     */
+    public function getSkipTempErr()
+    {
+        return $this->skip_temp_err;
+    }
+
+    /**
+     *Whether the payment should be marked as failed when a temporary error is
+     *returned from the given route. Set it to true so the payment won't be
+     *failed unless a terminal error is occurred, such as payment timeout, no
+     *routes, incorrect payment details, or insufficient funds.
+     *
+     * Generated from protobuf field <code>bool skip_temp_err = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSkipTempErr($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->skip_temp_err = $var;
 
         return $this;
     }

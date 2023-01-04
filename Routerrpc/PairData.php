@@ -18,39 +18,39 @@ class PairData extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int64 fail_time = 1;</code>
      */
-    private $fail_time = 0;
+    protected $fail_time = 0;
     /**
      *Lowest amount that failed to forward rounded to whole sats. This may be
      *set to zero if the failure is independent of amount.
      *
      * Generated from protobuf field <code>int64 fail_amt_sat = 2;</code>
      */
-    private $fail_amt_sat = 0;
+    protected $fail_amt_sat = 0;
     /**
      *Lowest amount that failed to forward in millisats. This may be
      *set to zero if the failure is independent of amount.
      *
      * Generated from protobuf field <code>int64 fail_amt_msat = 4;</code>
      */
-    private $fail_amt_msat = 0;
+    protected $fail_amt_msat = 0;
     /**
      * Time of last success.
      *
      * Generated from protobuf field <code>int64 success_time = 5;</code>
      */
-    private $success_time = 0;
+    protected $success_time = 0;
     /**
      * Highest amount that we could successfully forward rounded to whole sats.
      *
      * Generated from protobuf field <code>int64 success_amt_sat = 6;</code>
      */
-    private $success_amt_sat = 0;
+    protected $success_amt_sat = 0;
     /**
      * Highest amount that we could successfully forward in millisats.
      *
      * Generated from protobuf field <code>int64 success_amt_msat = 7;</code>
      */
-    private $success_amt_msat = 0;
+    protected $success_amt_msat = 0;
 
     /**
      * Constructor.

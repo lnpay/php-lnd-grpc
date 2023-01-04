@@ -24,7 +24,7 @@ class ListAccountsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Walletrpc\Account[]|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type array<\Walletrpc\Account>|\Google\Protobuf\Internal\RepeatedField $accounts
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class ListAccountsResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .walletrpc.Account accounts = 1;</code>
-     * @param \Walletrpc\Account[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Walletrpc\Account>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)

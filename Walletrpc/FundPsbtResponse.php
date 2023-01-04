@@ -18,13 +18,13 @@ class FundPsbtResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes funded_psbt = 1;</code>
      */
-    private $funded_psbt = '';
+    protected $funded_psbt = '';
     /**
      *The index of the added change output or -1 if no change was left over.
      *
      * Generated from protobuf field <code>int32 change_output_index = 2;</code>
      */
-    private $change_output_index = 0;
+    protected $change_output_index = 0;
     /**
      *The list of lock leases that were acquired for the inputs in the funded PSBT
      *packet.
@@ -43,7 +43,7 @@ class FundPsbtResponse extends \Google\Protobuf\Internal\Message
      *          The funded but not yet signed PSBT packet.
      *     @type int $change_output_index
      *          The index of the added change output or -1 if no change was left over.
-     *     @type \Walletrpc\UtxoLease[]|\Google\Protobuf\Internal\RepeatedField $locked_utxos
+     *     @type array<\Walletrpc\UtxoLease>|\Google\Protobuf\Internal\RepeatedField $locked_utxos
      *          The list of lock leases that were acquired for the inputs in the funded PSBT
      *          packet.
      * }
@@ -122,7 +122,7 @@ class FundPsbtResponse extends \Google\Protobuf\Internal\Message
      *packet.
      *
      * Generated from protobuf field <code>repeated .walletrpc.UtxoLease locked_utxos = 3;</code>
-     * @param \Walletrpc\UtxoLease[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Walletrpc\UtxoLease>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLockedUtxos($var)

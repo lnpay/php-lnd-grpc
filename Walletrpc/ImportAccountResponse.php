@@ -18,7 +18,7 @@ class ImportAccountResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.walletrpc.Account account = 1;</code>
      */
-    private $account = null;
+    protected $account = null;
     /**
      *The first N addresses that belong to the external branch of the account.
      *The external branch is typically used for external non-change addresses.
@@ -44,11 +44,11 @@ class ImportAccountResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type \Walletrpc\Account $account
      *           The details of the imported account.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $dry_run_external_addrs
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $dry_run_external_addrs
      *          The first N addresses that belong to the external branch of the account.
      *          The external branch is typically used for external non-change addresses.
      *          These are only returned if a dry run was specified within the request.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $dry_run_internal_addrs
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $dry_run_internal_addrs
      *          The first N addresses that belong to the internal branch of the account.
      *          The internal branch is typically used for change addresses. These are only
      *          returned if a dry run was specified within the request.
@@ -63,11 +63,21 @@ class ImportAccountResponse extends \Google\Protobuf\Internal\Message
      * The details of the imported account.
      *
      * Generated from protobuf field <code>.walletrpc.Account account = 1;</code>
-     * @return \Walletrpc\Account
+     * @return \Walletrpc\Account|null
      */
     public function getAccount()
     {
         return $this->account;
+    }
+
+    public function hasAccount()
+    {
+        return isset($this->account);
+    }
+
+    public function clearAccount()
+    {
+        unset($this->account);
     }
 
     /**
@@ -104,7 +114,7 @@ class ImportAccountResponse extends \Google\Protobuf\Internal\Message
      *These are only returned if a dry run was specified within the request.
      *
      * Generated from protobuf field <code>repeated string dry_run_external_addrs = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDryRunExternalAddrs($var)
@@ -134,7 +144,7 @@ class ImportAccountResponse extends \Google\Protobuf\Internal\Message
      *returned if a dry run was specified within the request.
      *
      * Generated from protobuf field <code>repeated string dry_run_internal_addrs = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDryRunInternalAddrs($var)

@@ -42,6 +42,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\WalletBalanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function WalletBalance(\Lnrpc\WalletBalanceRequest $argument,
       $metadata = [], $options = []) {
@@ -59,6 +60,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChannelBalanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ChannelBalance(\Lnrpc\ChannelBalanceRequest $argument,
       $metadata = [], $options = []) {
@@ -75,6 +77,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\GetTransactionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetTransactions(\Lnrpc\GetTransactionsRequest $argument,
       $metadata = [], $options = []) {
@@ -96,6 +99,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\EstimateFeeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function EstimateFee(\Lnrpc\EstimateFeeRequest $argument,
       $metadata = [], $options = []) {
@@ -115,6 +119,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\SendCoinsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendCoins(\Lnrpc\SendCoinsRequest $argument,
       $metadata = [], $options = []) {
@@ -133,6 +138,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListUnspentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListUnspent(\Lnrpc\ListUnspentRequest $argument,
       $metadata = [], $options = []) {
@@ -150,6 +156,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\GetTransactionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeTransactions(\Lnrpc\GetTransactionsRequest $argument,
       $metadata = [], $options = []) {
@@ -168,6 +175,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\SendManyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendMany(\Lnrpc\SendManyRequest $argument,
       $metadata = [], $options = []) {
@@ -183,6 +191,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\NewAddressRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function NewAddress(\Lnrpc\NewAddressRequest $argument,
       $metadata = [], $options = []) {
@@ -200,6 +209,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\SignMessageRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SignMessage(\Lnrpc\SignMessageRequest $argument,
       $metadata = [], $options = []) {
@@ -218,6 +228,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\VerifyMessageRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function VerifyMessage(\Lnrpc\VerifyMessageRequest $argument,
       $metadata = [], $options = []) {
@@ -235,6 +246,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ConnectPeerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ConnectPeer(\Lnrpc\ConnectPeerRequest $argument,
       $metadata = [], $options = []) {
@@ -252,6 +264,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\DisconnectPeerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DisconnectPeer(\Lnrpc\DisconnectPeerRequest $argument,
       $metadata = [], $options = []) {
@@ -267,6 +280,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListPeersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListPeers(\Lnrpc\ListPeersRequest $argument,
       $metadata = [], $options = []) {
@@ -284,6 +298,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\PeerEventSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribePeerEvents(\Lnrpc\PeerEventSubscription $argument,
       $metadata = [], $options = []) {
@@ -301,6 +316,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\GetInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetInfo(\Lnrpc\GetInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -318,6 +334,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\GetRecoveryInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetRecoveryInfo(\Lnrpc\GetRecoveryInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -338,6 +355,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\PendingChannelsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function PendingChannels(\Lnrpc\PendingChannelsRequest $argument,
       $metadata = [], $options = []) {
@@ -354,6 +372,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListChannelsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListChannels(\Lnrpc\ListChannelsRequest $argument,
       $metadata = [], $options = []) {
@@ -372,6 +391,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChannelEventSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeChannelEvents(\Lnrpc\ChannelEventSubscription $argument,
       $metadata = [], $options = []) {
@@ -388,6 +408,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ClosedChannelsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ClosedChannels(\Lnrpc\ClosedChannelsRequest $argument,
       $metadata = [], $options = []) {
@@ -406,6 +427,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\OpenChannelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function OpenChannelSync(\Lnrpc\OpenChannelRequest $argument,
       $metadata = [], $options = []) {
@@ -428,12 +450,33 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\OpenChannelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function OpenChannel(\Lnrpc\OpenChannelRequest $argument,
       $metadata = [], $options = []) {
         return $this->_serverStreamRequest('/lnrpc.Lightning/OpenChannel',
         $argument,
         ['\Lnrpc\OpenStatusUpdate', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * lncli: `batchopenchannel`
+     * BatchOpenChannel attempts to open multiple single-funded channels in a
+     * single transaction in an atomic way. This means either all channel open
+     * requests succeed at once or all attempts are aborted if any of them fail.
+     * This is the safer variant of using PSBTs to manually fund a batch of
+     * channels through the OpenChannel RPC.
+     * @param \Lnrpc\BatchOpenChannelRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function BatchOpenChannel(\Lnrpc\BatchOpenChannelRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/BatchOpenChannel',
+        $argument,
+        ['\Lnrpc\BatchOpenChannelResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -450,6 +493,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\FundingTransitionMsg $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function FundingStateStep(\Lnrpc\FundingTransitionMsg $argument,
       $metadata = [], $options = []) {
@@ -468,6 +512,7 @@ class LightningClient extends \Grpc\BaseStub {
      * through a single persistent connection.
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
      */
     public function ChannelAcceptor($metadata = [], $options = []) {
         return $this->_bidiRequest('/lnrpc.Lightning/ChannelAcceptor',
@@ -487,6 +532,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\CloseChannelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function CloseChannel(\Lnrpc\CloseChannelRequest $argument,
       $metadata = [], $options = []) {
@@ -507,6 +553,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\AbandonChannelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function AbandonChannel(\Lnrpc\AbandonChannelRequest $argument,
       $metadata = [], $options = []) {
@@ -525,6 +572,7 @@ class LightningClient extends \Grpc\BaseStub {
      * Network with a single persistent connection.
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
      */
     public function SendPayment($metadata = [], $options = []) {
         return $this->_bidiRequest('/lnrpc.Lightning/SendPayment',
@@ -541,6 +589,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\SendRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendPaymentSync(\Lnrpc\SendRequest $argument,
       $metadata = [], $options = []) {
@@ -559,6 +608,7 @@ class LightningClient extends \Grpc\BaseStub {
      * swaps.
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
      */
     public function SendToRoute($metadata = [], $options = []) {
         return $this->_bidiRequest('/lnrpc.Lightning/SendToRoute',
@@ -573,6 +623,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\SendToRouteRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendToRouteSync(\Lnrpc\SendToRouteRequest $argument,
       $metadata = [], $options = []) {
@@ -590,6 +641,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\Invoice $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function AddInvoice(\Lnrpc\Invoice $argument,
       $metadata = [], $options = []) {
@@ -611,6 +663,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListInvoiceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListInvoices(\Lnrpc\ListInvoiceRequest $argument,
       $metadata = [], $options = []) {
@@ -628,6 +681,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\PaymentHash $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function LookupInvoice(\Lnrpc\PaymentHash $argument,
       $metadata = [], $options = []) {
@@ -651,6 +705,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\InvoiceSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeInvoices(\Lnrpc\InvoiceSubscription $argument,
       $metadata = [], $options = []) {
@@ -668,6 +723,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\PayReqString $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DecodePayReq(\Lnrpc\PayReqString $argument,
       $metadata = [], $options = []) {
@@ -683,6 +739,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListPaymentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListPayments(\Lnrpc\ListPaymentsRequest $argument,
       $metadata = [], $options = []) {
@@ -694,10 +751,29 @@ class LightningClient extends \Grpc\BaseStub {
 
     /**
      *
-     * DeleteAllPayments deletes all outgoing payments from DB.
+     * DeletePayment deletes an outgoing payment from DB. Note that it will not
+     * attempt to delete an In-Flight payment, since that would be unsafe.
+     * @param \Lnrpc\DeletePaymentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function DeletePayment(\Lnrpc\DeletePaymentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/DeletePayment',
+        $argument,
+        ['\Lnrpc\DeletePaymentResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * DeleteAllPayments deletes all outgoing payments from DB. Note that it will
+     * not attempt to delete In-Flight payments, since that would be unsafe.
      * @param \Lnrpc\DeleteAllPaymentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DeleteAllPayments(\Lnrpc\DeleteAllPaymentsRequest $argument,
       $metadata = [], $options = []) {
@@ -718,6 +794,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChannelGraphRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DescribeGraph(\Lnrpc\ChannelGraphRequest $argument,
       $metadata = [], $options = []) {
@@ -734,6 +811,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\NodeMetricsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetNodeMetrics(\Lnrpc\NodeMetricsRequest $argument,
       $metadata = [], $options = []) {
@@ -752,6 +830,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChanInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetChanInfo(\Lnrpc\ChanInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -768,6 +847,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\NodeInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetNodeInfo(\Lnrpc\NodeInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -792,6 +872,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\QueryRoutesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function QueryRoutes(\Lnrpc\QueryRoutesRequest $argument,
       $metadata = [], $options = []) {
@@ -808,6 +889,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\NetworkInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetNetworkInfo(\Lnrpc\NetworkInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -824,6 +906,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\StopRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function StopDaemon(\Lnrpc\StopRequest $argument,
       $metadata = [], $options = []) {
@@ -844,6 +927,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\GraphTopologySubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeChannelGraph(\Lnrpc\GraphTopologySubscription $argument,
       $metadata = [], $options = []) {
@@ -862,6 +946,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\DebugLevelRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DebugLevel(\Lnrpc\DebugLevelRequest $argument,
       $metadata = [], $options = []) {
@@ -878,6 +963,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\FeeReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function FeeReport(\Lnrpc\FeeReportRequest $argument,
       $metadata = [], $options = []) {
@@ -894,6 +980,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\PolicyUpdateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function UpdateChannelPolicy(\Lnrpc\PolicyUpdateRequest $argument,
       $metadata = [], $options = []) {
@@ -907,8 +994,9 @@ class LightningClient extends \Grpc\BaseStub {
      * lncli: `fwdinghistory`
      * ForwardingHistory allows the caller to query the htlcswitch for a record of
      * all HTLCs forwarded within the target time range, and integer offset
-     * within that time range. If no time-range is specified, then the first chunk
-     * of the past 24 hrs of forwarding history are returned.
+     * within that time range, for a maximum number of events. If no maximum number
+     * of events is specified, up to 100 events will be returned. If no time-range
+     * is specified, then events will be returned in the order that they occured.
      *
      * A list of forwarding events are returned. The size of each forwarding event
      * is 40 bytes, and the max message size able to be returned in gRPC is 4 MiB.
@@ -918,6 +1006,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ForwardingHistoryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ForwardingHistory(\Lnrpc\ForwardingHistoryRequest $argument,
       $metadata = [], $options = []) {
@@ -938,6 +1027,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ExportChannelBackupRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ExportChannelBackup(\Lnrpc\ExportChannelBackupRequest $argument,
       $metadata = [], $options = []) {
@@ -957,6 +1047,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChanBackupExportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ExportAllChannelBackups(\Lnrpc\ChanBackupExportRequest $argument,
       $metadata = [], $options = []) {
@@ -974,6 +1065,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChanBackupSnapshot $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function VerifyChanBackup(\Lnrpc\ChanBackupSnapshot $argument,
       $metadata = [], $options = []) {
@@ -992,6 +1084,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\RestoreChanBackupRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function RestoreChannelBackups(\Lnrpc\RestoreChanBackupRequest $argument,
       $metadata = [], $options = []) {
@@ -1013,6 +1106,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ChannelBackupSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeChannelBackups(\Lnrpc\ChannelBackupSubscription $argument,
       $metadata = [], $options = []) {
@@ -1030,6 +1124,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\BakeMacaroonRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BakeMacaroon(\Lnrpc\BakeMacaroonRequest $argument,
       $metadata = [], $options = []) {
@@ -1045,6 +1140,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListMacaroonIDsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListMacaroonIDs(\Lnrpc\ListMacaroonIDsRequest $argument,
       $metadata = [], $options = []) {
@@ -1061,6 +1157,7 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\DeleteMacaroonIDRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function DeleteMacaroonID(\Lnrpc\DeleteMacaroonIDRequest $argument,
       $metadata = [], $options = []) {
@@ -1077,12 +1174,106 @@ class LightningClient extends \Grpc\BaseStub {
      * @param \Lnrpc\ListPermissionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListPermissions(\Lnrpc\ListPermissionsRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/lnrpc.Lightning/ListPermissions',
         $argument,
         ['\Lnrpc\ListPermissionsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * CheckMacaroonPermissions checks whether a request follows the constraints
+     * imposed on the macaroon and that the macaroon is authorized to follow the
+     * provided permissions.
+     * @param \Lnrpc\CheckMacPermRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function CheckMacaroonPermissions(\Lnrpc\CheckMacPermRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/CheckMacaroonPermissions',
+        $argument,
+        ['\Lnrpc\CheckMacPermResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * RegisterRPCMiddleware adds a new gRPC middleware to the interceptor chain. A
+     * gRPC middleware is software component external to lnd that aims to add
+     * additional business logic to lnd by observing/intercepting/validating
+     * incoming gRPC client requests and (if needed) replacing/overwriting outgoing
+     * messages before they're sent to the client. When registering the middleware
+     * must identify itself and indicate what custom macaroon caveats it wants to
+     * be responsible for. Only requests that contain a macaroon with that specific
+     * custom caveat are then sent to the middleware for inspection. The other
+     * option is to register for the read-only mode in which all requests/responses
+     * are forwarded for interception to the middleware but the middleware is not
+     * allowed to modify any responses. As a security measure, _no_ middleware can
+     * modify responses for requests made with _unencumbered_ macaroons!
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
+     */
+    public function RegisterRPCMiddleware($metadata = [], $options = []) {
+        return $this->_bidiRequest('/lnrpc.Lightning/RegisterRPCMiddleware',
+        ['\Lnrpc\RPCMiddlewareRequest','decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * lncli: `sendcustom`
+     * SendCustomMessage sends a custom peer message.
+     * @param \Lnrpc\SendCustomMessageRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SendCustomMessage(\Lnrpc\SendCustomMessageRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/SendCustomMessage',
+        $argument,
+        ['\Lnrpc\SendCustomMessageResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * lncli: `subscribecustom`
+     * SubscribeCustomMessages subscribes to a stream of incoming custom peer
+     * messages.
+     * @param \Lnrpc\SubscribeCustomMessagesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function SubscribeCustomMessages(\Lnrpc\SubscribeCustomMessagesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/lnrpc.Lightning/SubscribeCustomMessages',
+        $argument,
+        ['\Lnrpc\CustomMessage', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * lncli: `listaliases`
+     * ListAliases returns the set of all aliases that have ever existed with
+     * their confirmed SCID (if it exists) and/or the base SCID (in the case of
+     * zero conf).
+     * @param \Lnrpc\ListAliasesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ListAliases(\Lnrpc\ListAliasesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/ListAliases',
+        $argument,
+        ['\Lnrpc\ListAliasesResponse', 'decode'],
         $metadata, $options);
     }
 

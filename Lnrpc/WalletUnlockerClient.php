@@ -4,15 +4,11 @@
 namespace Lnrpc;
 
 /**
- * *
+ *
  * Comments in this file will be directly parsed into the API
  * Documentation as descriptions of the associated method, message, or field.
  * These descriptions should go right above the definition of the object, and
- * can be in either block or /// comment format.
- *
- * One edge case exists where a // comment followed by a /// comment in the
- * next line will cause the description not to show up in the documentation. In
- * that instance, simply separate the two comments with a blank line.
+ * can be in either block or // comment format.
  *
  * An RPC method can be matched to an lncli command by placing a line in the
  * beginning of the description in exactly the following format:
@@ -25,7 +21,7 @@ namespace Lnrpc;
  * this proto file can be found here:
  * https://github.com/lightninglabs/lightning-api
  *
- * The WalletUnlocker service is used to set up a wallet password for
+ * WalletUnlocker is a service that is used to set up a wallet password for
  * lnd at first startup, and unlock a previously set up wallet.
  */
 class WalletUnlockerClient extends \Grpc\BaseStub {
@@ -40,7 +36,7 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     *
      * GenSeed is the first method that should be used to instantiate a new lnd
      * instance. This method allows a caller to generate a new aezeed cipher seed
      * given an optional passphrase. If provided, the passphrase will be necessary
@@ -52,6 +48,7 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
      * @param \Lnrpc\GenSeedRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GenSeed(\Lnrpc\GenSeedRequest $argument,
       $metadata = [], $options = []) {
@@ -62,7 +59,7 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * *
+     *
      * InitWallet is used when lnd is starting up for the first time to fully
      * initialize the daemon and its internal wallet. At the very least a wallet
      * password must be provided. This will be used to encrypt sensitive material
@@ -78,6 +75,7 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
      * @param \Lnrpc\InitWalletRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function InitWallet(\Lnrpc\InitWalletRequest $argument,
       $metadata = [], $options = []) {
@@ -88,12 +86,13 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * * lncli: `unlock`
+     * lncli: `unlock`
      * UnlockWallet is used at startup of lnd to provide a password to unlock
      * the wallet database.
      * @param \Lnrpc\UnlockWalletRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function UnlockWallet(\Lnrpc\UnlockWalletRequest $argument,
       $metadata = [], $options = []) {
@@ -104,12 +103,13 @@ class WalletUnlockerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * * lncli: `changepassword`
+     * lncli: `changepassword`
      * ChangePassword changes the password of the encrypted wallet. This will
      * automatically unlock the wallet database if successful.
      * @param \Lnrpc\ChangePasswordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ChangePassword(\Lnrpc\ChangePasswordRequest $argument,
       $metadata = [], $options = []) {

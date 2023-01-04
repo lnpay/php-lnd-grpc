@@ -27,12 +27,17 @@ class AddressType
      * Generated from protobuf enum <code>HYBRID_NESTED_WITNESS_PUBKEY_HASH = 3;</code>
      */
     const HYBRID_NESTED_WITNESS_PUBKEY_HASH = 3;
+    /**
+     * Generated from protobuf enum <code>TAPROOT_PUBKEY = 4;</code>
+     */
+    const TAPROOT_PUBKEY = 4;
 
     private static $valueToName = [
         self::UNKNOWN => 'UNKNOWN',
         self::WITNESS_PUBKEY_HASH => 'WITNESS_PUBKEY_HASH',
         self::NESTED_WITNESS_PUBKEY_HASH => 'NESTED_WITNESS_PUBKEY_HASH',
         self::HYBRID_NESTED_WITNESS_PUBKEY_HASH => 'HYBRID_NESTED_WITNESS_PUBKEY_HASH',
+        self::TAPROOT_PUBKEY => 'TAPROOT_PUBKEY',
     ];
 
     public static function name($value)

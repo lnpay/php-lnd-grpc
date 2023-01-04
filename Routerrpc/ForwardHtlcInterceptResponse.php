@@ -27,19 +27,37 @@ class ForwardHtlcInterceptResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.CircuitKey incoming_circuit_key = 1;</code>
      */
-    private $incoming_circuit_key = null;
+    protected $incoming_circuit_key = null;
     /**
      * The resolve action for this intercepted htlc.
      *
      * Generated from protobuf field <code>.routerrpc.ResolveHoldForwardAction action = 2;</code>
      */
-    private $action = 0;
+    protected $action = 0;
     /**
      * The preimage in case the resolve action is Settle.
      *
      * Generated from protobuf field <code>bytes preimage = 3;</code>
      */
-    private $preimage = '';
+    protected $preimage = '';
+    /**
+     * Encrypted failure message in case the resolve action is Fail.
+     * If failure_message is specified, the failure_code field must be set
+     * to zero.
+     *
+     * Generated from protobuf field <code>bytes failure_message = 4;</code>
+     */
+    protected $failure_message = '';
+    /**
+     * Return the specified failure code in case the resolve action is Fail. The
+     * message data fields are populated automatically.
+     * If a non-zero failure_code is specified, failure_message must not be set.
+     * For backwards-compatibility reasons, TEMPORARY_CHANNEL_FAILURE is the
+     * default value for this field.
+     *
+     * Generated from protobuf field <code>.lnrpc.Failure.FailureCode failure_code = 5;</code>
+     */
+    protected $failure_code = 0;
 
     /**
      * Constructor.
@@ -55,6 +73,16 @@ class ForwardHtlcInterceptResponse extends \Google\Protobuf\Internal\Message
      *           The resolve action for this intercepted htlc.
      *     @type string $preimage
      *           The preimage in case the resolve action is Settle.
+     *     @type string $failure_message
+     *           Encrypted failure message in case the resolve action is Fail.
+     *           If failure_message is specified, the failure_code field must be set
+     *           to zero.
+     *     @type int $failure_code
+     *           Return the specified failure code in case the resolve action is Fail. The
+     *           message data fields are populated automatically.
+     *           If a non-zero failure_code is specified, failure_message must not be set.
+     *           For backwards-compatibility reasons, TEMPORARY_CHANNEL_FAILURE is the
+     *           default value for this field.
      * }
      */
     public function __construct($data = NULL) {
@@ -68,11 +96,21 @@ class ForwardHtlcInterceptResponse extends \Google\Protobuf\Internal\Message
      *the index in this channel.
      *
      * Generated from protobuf field <code>.routerrpc.CircuitKey incoming_circuit_key = 1;</code>
-     * @return \Routerrpc\CircuitKey
+     * @return \Routerrpc\CircuitKey|null
      */
     public function getIncomingCircuitKey()
     {
         return $this->incoming_circuit_key;
+    }
+
+    public function hasIncomingCircuitKey()
+    {
+        return isset($this->incoming_circuit_key);
+    }
+
+    public function clearIncomingCircuitKey()
+    {
+        unset($this->incoming_circuit_key);
     }
 
     /**
@@ -140,6 +178,70 @@ class ForwardHtlcInterceptResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->preimage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Encrypted failure message in case the resolve action is Fail.
+     * If failure_message is specified, the failure_code field must be set
+     * to zero.
+     *
+     * Generated from protobuf field <code>bytes failure_message = 4;</code>
+     * @return string
+     */
+    public function getFailureMessage()
+    {
+        return $this->failure_message;
+    }
+
+    /**
+     * Encrypted failure message in case the resolve action is Fail.
+     * If failure_message is specified, the failure_code field must be set
+     * to zero.
+     *
+     * Generated from protobuf field <code>bytes failure_message = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFailureMessage($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->failure_message = $var;
+
+        return $this;
+    }
+
+    /**
+     * Return the specified failure code in case the resolve action is Fail. The
+     * message data fields are populated automatically.
+     * If a non-zero failure_code is specified, failure_message must not be set.
+     * For backwards-compatibility reasons, TEMPORARY_CHANNEL_FAILURE is the
+     * default value for this field.
+     *
+     * Generated from protobuf field <code>.lnrpc.Failure.FailureCode failure_code = 5;</code>
+     * @return int
+     */
+    public function getFailureCode()
+    {
+        return $this->failure_code;
+    }
+
+    /**
+     * Return the specified failure code in case the resolve action is Fail. The
+     * message data fields are populated automatically.
+     * If a non-zero failure_code is specified, failure_message must not be set.
+     * For backwards-compatibility reasons, TEMPORARY_CHANNEL_FAILURE is the
+     * default value for this field.
+     *
+     * Generated from protobuf field <code>.lnrpc.Failure.FailureCode failure_code = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFailureCode($var)
+    {
+        GPBUtil::checkEnum($var, \Lnrpc\Failure\FailureCode::class);
+        $this->failure_code = $var;
 
         return $this;
     }

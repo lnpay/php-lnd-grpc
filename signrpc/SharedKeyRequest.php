@@ -18,15 +18,16 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes ephemeral_pubkey = 1;</code>
      */
-    private $ephemeral_pubkey = '';
+    protected $ephemeral_pubkey = '';
     /**
      *Deprecated. The optional key locator of the local key that should be used.
      *If this parameter is not set then the node's identity private key will be
      *used.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2 [deprecated = true];</code>
+     * @deprecated
      */
-    private $key_loc = null;
+    protected $key_loc = null;
     /**
      *A key descriptor describes the key used for performing ECDH. Either a key
      *locator or a raw public key is expected, if neither is supplied, defaults to
@@ -34,7 +35,7 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 3;</code>
      */
-    private $key_desc = null;
+    protected $key_desc = null;
 
     /**
      * Constructor.
@@ -91,11 +92,25 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *used.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2 [deprecated = true];</code>
-     * @return \Signrpc\KeyLocator
+     * @return \Signrpc\KeyLocator|null
+     * @deprecated
      */
     public function getKeyLoc()
     {
+        @trigger_error('key_loc is deprecated.', E_USER_DEPRECATED);
         return $this->key_loc;
+    }
+
+    public function hasKeyLoc()
+    {
+        @trigger_error('key_loc is deprecated.', E_USER_DEPRECATED);
+        return isset($this->key_loc);
+    }
+
+    public function clearKeyLoc()
+    {
+        @trigger_error('key_loc is deprecated.', E_USER_DEPRECATED);
+        unset($this->key_loc);
     }
 
     /**
@@ -106,9 +121,11 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2 [deprecated = true];</code>
      * @param \Signrpc\KeyLocator $var
      * @return $this
+     * @deprecated
      */
     public function setKeyLoc($var)
     {
+        @trigger_error('key_loc is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Signrpc\KeyLocator::class);
         $this->key_loc = $var;
 
@@ -121,11 +138,21 @@ class SharedKeyRequest extends \Google\Protobuf\Internal\Message
      *the node's identity private key.
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 3;</code>
-     * @return \Signrpc\KeyDescriptor
+     * @return \Signrpc\KeyDescriptor|null
      */
     public function getKeyDesc()
     {
         return $this->key_desc;
+    }
+
+    public function hasKeyDesc()
+    {
+        return isset($this->key_desc);
+    }
+
+    public function clearKeyDesc()
+    {
+        unset($this->key_desc);
     }
 
     /**

@@ -26,7 +26,7 @@ class PendingSweepsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Walletrpc\PendingSweep[]|\Google\Protobuf\Internal\RepeatedField $pending_sweeps
+     *     @type array<\Walletrpc\PendingSweep>|\Google\Protobuf\Internal\RepeatedField $pending_sweeps
      *          The set of outputs currently being swept by lnd's central batching engine.
      * }
      */
@@ -50,7 +50,7 @@ class PendingSweepsResponse extends \Google\Protobuf\Internal\Message
      *The set of outputs currently being swept by lnd's central batching engine.
      *
      * Generated from protobuf field <code>repeated .walletrpc.PendingSweep pending_sweeps = 1;</code>
-     * @param \Walletrpc\PendingSweep[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Walletrpc\PendingSweep>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPendingSweeps($var)

@@ -32,11 +32,16 @@ class ListSweepsResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.lnrpc.TransactionDetails transaction_details = 1;</code>
-     * @return \Lnrpc\TransactionDetails
+     * @return \Lnrpc\TransactionDetails|null
      */
     public function getTransactionDetails()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasTransactionDetails()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -54,11 +59,16 @@ class ListSweepsResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.walletrpc.ListSweepsResponse.TransactionIDs transaction_ids = 2;</code>
-     * @return \Walletrpc\ListSweepsResponse\TransactionIDs
+     * @return \Walletrpc\ListSweepsResponse\TransactionIDs|null
      */
     public function getTransactionIds()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasTransactionIds()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -68,7 +78,7 @@ class ListSweepsResponse extends \Google\Protobuf\Internal\Message
      */
     public function setTransactionIds($var)
     {
-        GPBUtil::checkMessage($var, \Walletrpc\ListSweepsResponse_TransactionIDs::class);
+        GPBUtil::checkMessage($var, \Walletrpc\ListSweepsResponse\TransactionIDs::class);
         $this->writeOneof(2, $var);
 
         return $this;
