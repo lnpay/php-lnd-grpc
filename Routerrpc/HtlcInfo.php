@@ -18,25 +18,25 @@ class HtlcInfo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>uint32 incoming_timelock = 1;</code>
      */
-    private $incoming_timelock = 0;
+    protected $incoming_timelock = 0;
     /**
      * The timelock on the outgoing htlc.
      *
      * Generated from protobuf field <code>uint32 outgoing_timelock = 2;</code>
      */
-    private $outgoing_timelock = 0;
+    protected $outgoing_timelock = 0;
     /**
      * The amount of the incoming htlc.
      *
      * Generated from protobuf field <code>uint64 incoming_amt_msat = 3;</code>
      */
-    private $incoming_amt_msat = 0;
+    protected $incoming_amt_msat = 0;
     /**
      * The amount of the outgoing htlc.
      *
      * Generated from protobuf field <code>uint64 outgoing_amt_msat = 4;</code>
      */
-    private $outgoing_amt_msat = 0;
+    protected $outgoing_amt_msat = 0;
 
     /**
      * Constructor.

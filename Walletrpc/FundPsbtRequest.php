@@ -13,6 +13,26 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class FundPsbtRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     *The name of the account to fund the PSBT with. If empty, the default wallet
+     *account is used.
+     *
+     * Generated from protobuf field <code>string account = 5;</code>
+     */
+    protected $account = '';
+    /**
+     * The minimum number of confirmations each one of your outputs used for
+     * the transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 6;</code>
+     */
+    protected $min_confs = 0;
+    /**
+     * Whether unconfirmed outputs should be used as inputs for the transaction.
+     *
+     * Generated from protobuf field <code>bool spend_unconfirmed = 7;</code>
+     */
+    protected $spend_unconfirmed = false;
     protected $template;
     protected $fees;
 
@@ -34,9 +54,17 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      *          Use the outputs and optional inputs from this raw template.
      *     @type int $target_conf
      *          The target number of blocks that the transaction should be confirmed in.
-     *     @type int $sat_per_vbyte
+     *     @type int|string $sat_per_vbyte
      *          The fee rate, expressed in sat/vbyte, that should be used to spend the
      *          input with.
+     *     @type string $account
+     *          The name of the account to fund the PSBT with. If empty, the default wallet
+     *          account is used.
+     *     @type int $min_confs
+     *           The minimum number of confirmations each one of your outputs used for
+     *           the transaction must satisfy.
+     *     @type bool $spend_unconfirmed
+     *           Whether unconfirmed outputs should be used as inputs for the transaction.
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +87,11 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
     public function getPsbt()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasPsbt()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -86,11 +119,16 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      *Use the outputs and optional inputs from this raw template.
      *
      * Generated from protobuf field <code>.walletrpc.TxTemplate raw = 2;</code>
-     * @return \Walletrpc\TxTemplate
+     * @return \Walletrpc\TxTemplate|null
      */
     public function getRaw()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasRaw()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -119,6 +157,11 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
         return $this->readOneof(3);
     }
 
+    public function hasTargetConf()
+    {
+        return $this->hasOneof(3);
+    }
+
     /**
      *The target number of blocks that the transaction should be confirmed in.
      *
@@ -138,26 +181,113 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      *The fee rate, expressed in sat/vbyte, that should be used to spend the
      *input with.
      *
-     * Generated from protobuf field <code>uint32 sat_per_vbyte = 4;</code>
-     * @return int
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 4;</code>
+     * @return int|string
      */
     public function getSatPerVbyte()
     {
         return $this->readOneof(4);
     }
 
+    public function hasSatPerVbyte()
+    {
+        return $this->hasOneof(4);
+    }
+
     /**
      *The fee rate, expressed in sat/vbyte, that should be used to spend the
      *input with.
      *
-     * Generated from protobuf field <code>uint32 sat_per_vbyte = 4;</code>
-     * @param int $var
+     * Generated from protobuf field <code>uint64 sat_per_vbyte = 4;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setSatPerVbyte($var)
     {
-        GPBUtil::checkUint32($var);
+        GPBUtil::checkUint64($var);
         $this->writeOneof(4, $var);
+
+        return $this;
+    }
+
+    /**
+     *The name of the account to fund the PSBT with. If empty, the default wallet
+     *account is used.
+     *
+     * Generated from protobuf field <code>string account = 5;</code>
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     *The name of the account to fund the PSBT with. If empty, the default wallet
+     *account is used.
+     *
+     * Generated from protobuf field <code>string account = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account = $var;
+
+        return $this;
+    }
+
+    /**
+     * The minimum number of confirmations each one of your outputs used for
+     * the transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 6;</code>
+     * @return int
+     */
+    public function getMinConfs()
+    {
+        return $this->min_confs;
+    }
+
+    /**
+     * The minimum number of confirmations each one of your outputs used for
+     * the transaction must satisfy.
+     *
+     * Generated from protobuf field <code>int32 min_confs = 6;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMinConfs($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->min_confs = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether unconfirmed outputs should be used as inputs for the transaction.
+     *
+     * Generated from protobuf field <code>bool spend_unconfirmed = 7;</code>
+     * @return bool
+     */
+    public function getSpendUnconfirmed()
+    {
+        return $this->spend_unconfirmed;
+    }
+
+    /**
+     * Whether unconfirmed outputs should be used as inputs for the transaction.
+     *
+     * Generated from protobuf field <code>bool spend_unconfirmed = 7;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSpendUnconfirmed($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->spend_unconfirmed = $var;
 
         return $this;
     }

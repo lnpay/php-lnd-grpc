@@ -14,19 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class KeyDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     *The raw bytes of the key being identified. Either this or the KeyLocator
-     *must be specified.
+     *The raw bytes of the public key in the key pair being identified. Either
+     *this or the KeyLocator must be specified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      */
-    private $raw_key_bytes = '';
+    protected $raw_key_bytes = '';
     /**
-     *The key locator that identifies which key to use for signing. Either this
-     *or the raw bytes of the target key must be specified.
+     *The key locator that identifies which private key to use for signing.
+     *Either this or the raw bytes of the target public key must be specified.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      */
-    private $key_loc = null;
+    protected $key_loc = null;
 
     /**
      * Constructor.
@@ -35,11 +35,11 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $raw_key_bytes
-     *          The raw bytes of the key being identified. Either this or the KeyLocator
-     *          must be specified.
+     *          The raw bytes of the public key in the key pair being identified. Either
+     *          this or the KeyLocator must be specified.
      *     @type \Signrpc\KeyLocator $key_loc
-     *          The key locator that identifies which key to use for signing. Either this
-     *          or the raw bytes of the target key must be specified.
+     *          The key locator that identifies which private key to use for signing.
+     *          Either this or the raw bytes of the target public key must be specified.
      * }
      */
     public function __construct($data = NULL) {
@@ -48,8 +48,8 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The raw bytes of the key being identified. Either this or the KeyLocator
-     *must be specified.
+     *The raw bytes of the public key in the key pair being identified. Either
+     *this or the KeyLocator must be specified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      * @return string
@@ -60,8 +60,8 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The raw bytes of the key being identified. Either this or the KeyLocator
-     *must be specified.
+     *The raw bytes of the public key in the key pair being identified. Either
+     *this or the KeyLocator must be specified.
      *
      * Generated from protobuf field <code>bytes raw_key_bytes = 1;</code>
      * @param string $var
@@ -76,20 +76,30 @@ class KeyDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The key locator that identifies which key to use for signing. Either this
-     *or the raw bytes of the target key must be specified.
+     *The key locator that identifies which private key to use for signing.
+     *Either this or the raw bytes of the target public key must be specified.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
-     * @return \Signrpc\KeyLocator
+     * @return \Signrpc\KeyLocator|null
      */
     public function getKeyLoc()
     {
         return $this->key_loc;
     }
 
+    public function hasKeyLoc()
+    {
+        return isset($this->key_loc);
+    }
+
+    public function clearKeyLoc()
+    {
+        unset($this->key_loc);
+    }
+
     /**
-     *The key locator that identifies which key to use for signing. Either this
-     *or the raw bytes of the target key must be specified.
+     *The key locator that identifies which private key to use for signing.
+     *Either this or the raw bytes of the target public key must be specified.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      * @param \Signrpc\KeyLocator $var

@@ -18,13 +18,13 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.HtlcInfo info = 1;</code>
      */
-    private $info = null;
+    protected $info = null;
     /**
      * FailureCode is the BOLT error code for the failure.
      *
      * Generated from protobuf field <code>.lnrpc.Failure.FailureCode wire_failure = 2;</code>
      */
-    private $wire_failure = 0;
+    protected $wire_failure = 0;
     /**
      *FailureDetail provides additional information about the reason for the
      *failure. This detail enriches the information provided by the wire message
@@ -32,13 +32,13 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.routerrpc.FailureDetail failure_detail = 3;</code>
      */
-    private $failure_detail = 0;
+    protected $failure_detail = 0;
     /**
      * A string representation of the link failure.
      *
      * Generated from protobuf field <code>string failure_string = 4;</code>
      */
-    private $failure_string = '';
+    protected $failure_string = '';
 
     /**
      * Constructor.
@@ -67,11 +67,21 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      * Info contains details about the htlc that we failed.
      *
      * Generated from protobuf field <code>.routerrpc.HtlcInfo info = 1;</code>
-     * @return \Routerrpc\HtlcInfo
+     * @return \Routerrpc\HtlcInfo|null
      */
     public function getInfo()
     {
         return $this->info;
+    }
+
+    public function hasInfo()
+    {
+        return isset($this->info);
+    }
+
+    public function clearInfo()
+    {
+        unset($this->info);
     }
 
     /**
@@ -109,7 +119,7 @@ class LinkFailEvent extends \Google\Protobuf\Internal\Message
      */
     public function setWireFailure($var)
     {
-        GPBUtil::checkEnum($var, \Lnrpc\Failure_FailureCode::class);
+        GPBUtil::checkEnum($var, \Lnrpc\Failure\FailureCode::class);
         $this->wire_failure = $var;
 
         return $this;

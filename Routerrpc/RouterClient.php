@@ -26,6 +26,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\SendPaymentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SendPaymentV2(\Routerrpc\SendPaymentRequest $argument,
       $metadata = [], $options = []) {
@@ -42,6 +43,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\TrackPaymentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function TrackPaymentV2(\Routerrpc\TrackPaymentRequest $argument,
       $metadata = [], $options = []) {
@@ -58,6 +60,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\RouteFeeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function EstimateRouteFee(\Routerrpc\RouteFeeRequest $argument,
       $metadata = [], $options = []) {
@@ -77,6 +80,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\SendToRouteRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendToRoute(\Routerrpc\SendToRouteRequest $argument,
       $metadata = [], $options = []) {
@@ -95,6 +99,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\SendToRouteRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SendToRouteV2(\Routerrpc\SendToRouteRequest $argument,
       $metadata = [], $options = []) {
@@ -111,6 +116,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\ResetMissionControlRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ResetMissionControl(\Routerrpc\ResetMissionControlRequest $argument,
       $metadata = [], $options = []) {
@@ -127,6 +133,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\QueryMissionControlRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function QueryMissionControl(\Routerrpc\QueryMissionControlRequest $argument,
       $metadata = [], $options = []) {
@@ -138,11 +145,64 @@ class RouterClient extends \Grpc\BaseStub {
 
     /**
      *
+     * XImportMissionControl is an experimental API that imports the state provided
+     * to the internal mission control's state, using all results which are more
+     * recent than our existing values. These values will only be imported
+     * in-memory, and will not be persisted across restarts.
+     * @param \Routerrpc\XImportMissionControlRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function XImportMissionControl(\Routerrpc\XImportMissionControlRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/XImportMissionControl',
+        $argument,
+        ['\Routerrpc\XImportMissionControlResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * GetMissionControlConfig returns mission control's current config.
+     * @param \Routerrpc\GetMissionControlConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetMissionControlConfig(\Routerrpc\GetMissionControlConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/GetMissionControlConfig',
+        $argument,
+        ['\Routerrpc\GetMissionControlConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * SetMissionControlConfig will set mission control's config, if the config
+     * provided is valid.
+     * @param \Routerrpc\SetMissionControlConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SetMissionControlConfig(\Routerrpc\SetMissionControlConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/SetMissionControlConfig',
+        $argument,
+        ['\Routerrpc\SetMissionControlConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
      * QueryProbability returns the current success probability estimate for a
      * given node pair and amount.
      * @param \Routerrpc\QueryProbabilityRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function QueryProbability(\Routerrpc\QueryProbabilityRequest $argument,
       $metadata = [], $options = []) {
@@ -160,6 +220,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\BuildRouteRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BuildRoute(\Routerrpc\BuildRouteRequest $argument,
       $metadata = [], $options = []) {
@@ -176,6 +237,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\SubscribeHtlcEventsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SubscribeHtlcEvents(\Routerrpc\SubscribeHtlcEventsRequest $argument,
       $metadata = [], $options = []) {
@@ -193,6 +255,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\SendPaymentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function SendPayment(\Routerrpc\SendPaymentRequest $argument,
       $metadata = [], $options = []) {
@@ -209,6 +272,7 @@ class RouterClient extends \Grpc\BaseStub {
      * @param \Routerrpc\TrackPaymentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function TrackPayment(\Routerrpc\TrackPaymentRequest $argument,
       $metadata = [], $options = []) {
@@ -227,10 +291,30 @@ class RouterClient extends \Grpc\BaseStub {
      * resumed later by using the ResolveHoldForward endpoint.
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
      */
     public function HtlcInterceptor($metadata = [], $options = []) {
         return $this->_bidiRequest('/routerrpc.Router/HtlcInterceptor',
         ['\Routerrpc\ForwardHtlcInterceptRequest','decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * UpdateChanStatus attempts to manually set the state of a channel
+     * (enabled, disabled, or auto). A manual "disable" request will cause the
+     * channel to stay disabled until a subsequent manual request of either
+     * "enable" or "auto".
+     * @param \Routerrpc\UpdateChanStatusRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function UpdateChanStatus(\Routerrpc\UpdateChanStatusRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/routerrpc.Router/UpdateChanStatus',
+        $argument,
+        ['\Routerrpc\UpdateChanStatusResponse', 'decode'],
         $metadata, $options);
     }
 

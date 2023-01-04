@@ -20,17 +20,17 @@ class PairHistory extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes node_from = 1;</code>
      */
-    private $node_from = '';
+    protected $node_from = '';
     /**
      * The destination node pubkey of the pair.
      *
      * Generated from protobuf field <code>bytes node_to = 2;</code>
      */
-    private $node_to = '';
+    protected $node_to = '';
     /**
      * Generated from protobuf field <code>.routerrpc.PairData history = 7;</code>
      */
-    private $history = null;
+    protected $history = null;
 
     /**
      * Constructor.
@@ -104,11 +104,21 @@ class PairHistory extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.routerrpc.PairData history = 7;</code>
-     * @return \Routerrpc\PairData
+     * @return \Routerrpc\PairData|null
      */
     public function getHistory()
     {
         return $this->history;
+    }
+
+    public function hasHistory()
+    {
+        return isset($this->history);
+    }
+
+    public function clearHistory()
+    {
+        unset($this->history);
     }
 
     /**

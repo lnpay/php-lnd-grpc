@@ -9,12 +9,29 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * No fields, as we always give out a p2wkh address.
- *
  * Generated from protobuf message <code>walletrpc.AddrRequest</code>
  */
 class AddrRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     *The name of the account to retrieve the next address of. If empty, the
+     *default wallet account is used.
+     *
+     * Generated from protobuf field <code>string account = 1;</code>
+     */
+    protected $account = '';
+    /**
+     *The type of address to derive.
+     *
+     * Generated from protobuf field <code>.walletrpc.AddressType type = 2;</code>
+     */
+    protected $type = 0;
+    /**
+     *Whether a change address should be derived.
+     *
+     * Generated from protobuf field <code>bool change = 3;</code>
+     */
+    protected $change = false;
 
     /**
      * Constructor.
@@ -22,11 +39,98 @@ class AddrRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $account
+     *          The name of the account to retrieve the next address of. If empty, the
+     *          default wallet account is used.
+     *     @type int $type
+     *          The type of address to derive.
+     *     @type bool $change
+     *          Whether a change address should be derived.
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Walletkit::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     *The name of the account to retrieve the next address of. If empty, the
+     *default wallet account is used.
+     *
+     * Generated from protobuf field <code>string account = 1;</code>
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     *The name of the account to retrieve the next address of. If empty, the
+     *default wallet account is used.
+     *
+     * Generated from protobuf field <code>string account = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account = $var;
+
+        return $this;
+    }
+
+    /**
+     *The type of address to derive.
+     *
+     * Generated from protobuf field <code>.walletrpc.AddressType type = 2;</code>
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     *The type of address to derive.
+     *
+     * Generated from protobuf field <code>.walletrpc.AddressType type = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setType($var)
+    {
+        GPBUtil::checkEnum($var, \Walletrpc\AddressType::class);
+        $this->type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Whether a change address should be derived.
+     *
+     * Generated from protobuf field <code>bool change = 3;</code>
+     * @return bool
+     */
+    public function getChange()
+    {
+        return $this->change;
+    }
+
+    /**
+     *Whether a change address should be derived.
+     *
+     * Generated from protobuf field <code>bool change = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setChange($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->change = $var;
+
+        return $this;
     }
 
 }

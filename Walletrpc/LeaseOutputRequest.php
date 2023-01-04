@@ -19,13 +19,20 @@ class LeaseOutputRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes id = 1;</code>
      */
-    private $id = '';
+    protected $id = '';
     /**
      * The identifying outpoint of the output being leased.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
      */
-    private $outpoint = null;
+    protected $outpoint = null;
+    /**
+     * The time in seconds before the lock expires. If set to zero, the default
+     * lock duration is used.
+     *
+     * Generated from protobuf field <code>uint64 expiration_seconds = 3;</code>
+     */
+    protected $expiration_seconds = 0;
 
     /**
      * Constructor.
@@ -38,6 +45,9 @@ class LeaseOutputRequest extends \Google\Protobuf\Internal\Message
      *          using this RPC which will be used to bound the output lease to.
      *     @type \Lnrpc\OutPoint $outpoint
      *           The identifying outpoint of the output being leased.
+     *     @type int|string $expiration_seconds
+     *           The time in seconds before the lock expires. If set to zero, the default
+     *           lock duration is used.
      * }
      */
     public function __construct($data = NULL) {
@@ -77,11 +87,21 @@ class LeaseOutputRequest extends \Google\Protobuf\Internal\Message
      * The identifying outpoint of the output being leased.
      *
      * Generated from protobuf field <code>.lnrpc.OutPoint outpoint = 2;</code>
-     * @return \Lnrpc\OutPoint
+     * @return \Lnrpc\OutPoint|null
      */
     public function getOutpoint()
     {
         return $this->outpoint;
+    }
+
+    public function hasOutpoint()
+    {
+        return isset($this->outpoint);
+    }
+
+    public function clearOutpoint()
+    {
+        unset($this->outpoint);
     }
 
     /**
@@ -95,6 +115,34 @@ class LeaseOutputRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\OutPoint::class);
         $this->outpoint = $var;
+
+        return $this;
+    }
+
+    /**
+     * The time in seconds before the lock expires. If set to zero, the default
+     * lock duration is used.
+     *
+     * Generated from protobuf field <code>uint64 expiration_seconds = 3;</code>
+     * @return int|string
+     */
+    public function getExpirationSeconds()
+    {
+        return $this->expiration_seconds;
+    }
+
+    /**
+     * The time in seconds before the lock expires. If set to zero, the default
+     * lock duration is used.
+     *
+     * Generated from protobuf field <code>uint64 expiration_seconds = 3;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setExpirationSeconds($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->expiration_seconds = $var;
 
         return $this;
     }

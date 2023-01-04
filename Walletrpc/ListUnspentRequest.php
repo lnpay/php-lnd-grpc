@@ -18,13 +18,28 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 min_confs = 1;</code>
      */
-    private $min_confs = 0;
+    protected $min_confs = 0;
     /**
      * The maximum number of confirmations to be included.
      *
      * Generated from protobuf field <code>int32 max_confs = 2;</code>
      */
-    private $max_confs = 0;
+    protected $max_confs = 0;
+    /**
+     * An optional filter to only include outputs belonging to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     */
+    protected $account = '';
+    /**
+     *When min_confs and max_confs are zero, setting false implicitly
+     *overrides max_confs to be MaxInt32, otherwise max_confs remains
+     *zero. An error is returned if the value is true and both min_confs
+     *and max_confs are non-zero. (default: false)
+     *
+     * Generated from protobuf field <code>bool unconfirmed_only = 4;</code>
+     */
+    protected $unconfirmed_only = false;
 
     /**
      * Constructor.
@@ -36,6 +51,13 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
      *           The minimum number of confirmations to be included.
      *     @type int $max_confs
      *           The maximum number of confirmations to be included.
+     *     @type string $account
+     *           An optional filter to only include outputs belonging to an account.
+     *     @type bool $unconfirmed_only
+     *          When min_confs and max_confs are zero, setting false implicitly
+     *          overrides max_confs to be MaxInt32, otherwise max_confs remains
+     *          zero. An error is returned if the value is true and both min_confs
+     *          and max_confs are non-zero. (default: false)
      * }
      */
     public function __construct($data = NULL) {
@@ -91,6 +113,64 @@ class ListUnspentRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->max_confs = $var;
+
+        return $this;
+    }
+
+    /**
+     * An optional filter to only include outputs belonging to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     * An optional filter to only include outputs belonging to an account.
+     *
+     * Generated from protobuf field <code>string account = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account = $var;
+
+        return $this;
+    }
+
+    /**
+     *When min_confs and max_confs are zero, setting false implicitly
+     *overrides max_confs to be MaxInt32, otherwise max_confs remains
+     *zero. An error is returned if the value is true and both min_confs
+     *and max_confs are non-zero. (default: false)
+     *
+     * Generated from protobuf field <code>bool unconfirmed_only = 4;</code>
+     * @return bool
+     */
+    public function getUnconfirmedOnly()
+    {
+        return $this->unconfirmed_only;
+    }
+
+    /**
+     *When min_confs and max_confs are zero, setting false implicitly
+     *overrides max_confs to be MaxInt32, otherwise max_confs remains
+     *zero. An error is returned if the value is true and both min_confs
+     *and max_confs are non-zero. (default: false)
+     *
+     * Generated from protobuf field <code>bool unconfirmed_only = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setUnconfirmedOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->unconfirmed_only = $var;
 
         return $this;
     }

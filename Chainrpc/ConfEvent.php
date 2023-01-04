@@ -39,11 +39,16 @@ class ConfEvent extends \Google\Protobuf\Internal\Message
      *(txid/ouput script).
      *
      * Generated from protobuf field <code>.chainrpc.ConfDetails conf = 1;</code>
-     * @return \Chainrpc\ConfDetails
+     * @return \Chainrpc\ConfDetails|null
      */
     public function getConf()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasConf()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -67,11 +72,16 @@ class ConfEvent extends \Google\Protobuf\Internal\Message
      *chain.
      *
      * Generated from protobuf field <code>.chainrpc.Reorg reorg = 2;</code>
-     * @return \Chainrpc\Reorg
+     * @return \Chainrpc\Reorg|null
      */
     public function getReorg()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasReorg()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

@@ -18,13 +18,13 @@ class BlockEpoch extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes hash = 1;</code>
      */
-    private $hash = '';
+    protected $hash = '';
     /**
      * The height of the block.
      *
      * Generated from protobuf field <code>uint32 height = 2;</code>
      */
-    private $height = 0;
+    protected $height = 0;
 
     /**
      * Constructor.

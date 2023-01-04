@@ -14,11 +14,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Hash corresponding to the (hold) invoice to subscribe to.
+     * Hash corresponding to the (hold) invoice to subscribe to. When using
+     * REST, this field must be encoded as base64url.
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      */
-    private $r_hash = '';
+    protected $r_hash = '';
 
     /**
      * Constructor.
@@ -27,7 +28,8 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $r_hash
-     *           Hash corresponding to the (hold) invoice to subscribe to.
+     *           Hash corresponding to the (hold) invoice to subscribe to. When using
+     *           REST, this field must be encoded as base64url.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +38,8 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash corresponding to the (hold) invoice to subscribe to.
+     * Hash corresponding to the (hold) invoice to subscribe to. When using
+     * REST, this field must be encoded as base64url.
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @return string
@@ -47,7 +50,8 @@ class SubscribeSingleInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hash corresponding to the (hold) invoice to subscribe to.
+     * Hash corresponding to the (hold) invoice to subscribe to. When using
+     * REST, this field must be encoded as base64url.
      *
      * Generated from protobuf field <code>bytes r_hash = 2;</code>
      * @param string $var

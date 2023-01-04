@@ -14,24 +14,34 @@ use Google\Protobuf\Internal\GPBUtil;
 class VerifyMessageReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The message over which the signature is to be verified.
+     * The message over which the signature is to be verified. When using
+     * REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    private $msg = '';
+    protected $msg = '';
     /**
      *The fixed-size LN wire encoded signature to be verified over the given
-     *message.
+     *message. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes signature = 2;</code>
      */
-    private $signature = '';
+    protected $signature = '';
     /**
-     * The public key the signature has to be valid for.
+     *The public key the signature has to be valid for. When using REST, this
+     *field must be encoded as base64. If the is_schnorr_sig option is true, then
+     *the public key is expected to be in the 32-byte x-only serialization
+     *according to BIP-340.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      */
-    private $pubkey = '';
+    protected $pubkey = '';
+    /**
+     *Specifies if the signature is a Schnorr signature.
+     *
+     * Generated from protobuf field <code>bool is_schnorr_sig = 4;</code>
+     */
+    protected $is_schnorr_sig = false;
 
     /**
      * Constructor.
@@ -40,12 +50,18 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $msg
-     *           The message over which the signature is to be verified.
+     *           The message over which the signature is to be verified. When using
+     *           REST, this field must be encoded as base64.
      *     @type string $signature
      *          The fixed-size LN wire encoded signature to be verified over the given
-     *          message.
+     *          message. When using REST, this field must be encoded as base64.
      *     @type string $pubkey
-     *           The public key the signature has to be valid for.
+     *          The public key the signature has to be valid for. When using REST, this
+     *          field must be encoded as base64. If the is_schnorr_sig option is true, then
+     *          the public key is expected to be in the 32-byte x-only serialization
+     *          according to BIP-340.
+     *     @type bool $is_schnorr_sig
+     *          Specifies if the signature is a Schnorr signature.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +70,8 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The message over which the signature is to be verified.
+     * The message over which the signature is to be verified. When using
+     * REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @return string
@@ -65,7 +82,8 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The message over which the signature is to be verified.
+     * The message over which the signature is to be verified. When using
+     * REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @param string $var
@@ -81,7 +99,7 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
 
     /**
      *The fixed-size LN wire encoded signature to be verified over the given
-     *message.
+     *message. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes signature = 2;</code>
      * @return string
@@ -93,7 +111,7 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
 
     /**
      *The fixed-size LN wire encoded signature to be verified over the given
-     *message.
+     *message. When using REST, this field must be encoded as base64.
      *
      * Generated from protobuf field <code>bytes signature = 2;</code>
      * @param string $var
@@ -108,7 +126,10 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The public key the signature has to be valid for.
+     *The public key the signature has to be valid for. When using REST, this
+     *field must be encoded as base64. If the is_schnorr_sig option is true, then
+     *the public key is expected to be in the 32-byte x-only serialization
+     *according to BIP-340.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      * @return string
@@ -119,7 +140,10 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The public key the signature has to be valid for.
+     *The public key the signature has to be valid for. When using REST, this
+     *field must be encoded as base64. If the is_schnorr_sig option is true, then
+     *the public key is expected to be in the 32-byte x-only serialization
+     *according to BIP-340.
      *
      * Generated from protobuf field <code>bytes pubkey = 3;</code>
      * @param string $var
@@ -129,6 +153,32 @@ class VerifyMessageReq extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->pubkey = $var;
+
+        return $this;
+    }
+
+    /**
+     *Specifies if the signature is a Schnorr signature.
+     *
+     * Generated from protobuf field <code>bool is_schnorr_sig = 4;</code>
+     * @return bool
+     */
+    public function getIsSchnorrSig()
+    {
+        return $this->is_schnorr_sig;
+    }
+
+    /**
+     *Specifies if the signature is a Schnorr signature.
+     *
+     * Generated from protobuf field <code>bool is_schnorr_sig = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsSchnorrSig($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_schnorr_sig = $var;
 
         return $this;
     }

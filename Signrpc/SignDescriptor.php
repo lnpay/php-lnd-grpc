@@ -23,7 +23,7 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 1;</code>
      */
-    private $key_desc = null;
+    protected $key_desc = null;
     /**
      *A scalar value that will be added to the private key corresponding to the
      *above public key to obtain the private key to be used to sign this input.
@@ -32,7 +32,7 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes single_tweak = 2;</code>
      */
-    private $single_tweak = '';
+    protected $single_tweak = '';
     /**
      *A private key that will be used in combination with its corresponding
      *private key to derive the private key that is to be used to sign the target
@@ -45,34 +45,56 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes double_tweak = 3;</code>
      */
-    private $double_tweak = '';
+    protected $double_tweak = '';
     /**
-     *The full script required to properly redeem the output.  This field will
-     *only be populated if a p2wsh or a p2sh output is being signed.
+     *The 32 byte input to the taproot tweak derivation that is used to derive
+     *the output key from an internal key: outputKey = internalKey +
+     *tagged_hash("tapTweak", internalKey || tapTweak).
+     *When doing a BIP 86 spend, this field can be an empty byte slice.
+     *When doing a normal key path spend, with the output key committing to an
+     *actual script root, then this field should be: the tapscript root hash.
+     *
+     * Generated from protobuf field <code>bytes tap_tweak = 10;</code>
+     */
+    protected $tap_tweak = '';
+    /**
+     *The full script required to properly redeem the output. This field will
+     *only be populated if a p2tr, p2wsh or a p2sh output is being signed. If a
+     *taproot script path spend is being attempted, then this should be the raw
+     *leaf script.
      *
      * Generated from protobuf field <code>bytes witness_script = 4;</code>
      */
-    private $witness_script = '';
+    protected $witness_script = '';
     /**
      *A description of the output being spent. The value and script MUST be
      *provided.
      *
      * Generated from protobuf field <code>.signrpc.TxOut output = 5;</code>
      */
-    private $output = null;
+    protected $output = null;
     /**
      *The target sighash type that should be used when generating the final
      *sighash, and signature.
      *
      * Generated from protobuf field <code>uint32 sighash = 7;</code>
      */
-    private $sighash = 0;
+    protected $sighash = 0;
     /**
      *The target input within the transaction that should be signed.
      *
      * Generated from protobuf field <code>int32 input_index = 8;</code>
      */
-    private $input_index = 0;
+    protected $input_index = 0;
+    /**
+     *The sign method specifies how the input should be signed. Depending on the
+     *method, either the tap_tweak, witness_script or both need to be specified.
+     *Defaults to SegWit v0 signing to be backward compatible with older RPC
+     *clients.
+     *
+     * Generated from protobuf field <code>.signrpc.SignMethod sign_method = 9;</code>
+     */
+    protected $sign_method = 0;
 
     /**
      * Constructor.
@@ -101,9 +123,18 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *          to derive the private key to be used when signing.
      *           k = (privKey*sha256(pubKey || tweakPub) +
      *          tweakPriv*sha256(tweakPub || pubKey)) mod N
+     *     @type string $tap_tweak
+     *          The 32 byte input to the taproot tweak derivation that is used to derive
+     *          the output key from an internal key: outputKey = internalKey +
+     *          tagged_hash("tapTweak", internalKey || tapTweak).
+     *          When doing a BIP 86 spend, this field can be an empty byte slice.
+     *          When doing a normal key path spend, with the output key committing to an
+     *          actual script root, then this field should be: the tapscript root hash.
      *     @type string $witness_script
-     *          The full script required to properly redeem the output.  This field will
-     *          only be populated if a p2wsh or a p2sh output is being signed.
+     *          The full script required to properly redeem the output. This field will
+     *          only be populated if a p2tr, p2wsh or a p2sh output is being signed. If a
+     *          taproot script path spend is being attempted, then this should be the raw
+     *          leaf script.
      *     @type \Signrpc\TxOut $output
      *          A description of the output being spent. The value and script MUST be
      *          provided.
@@ -112,6 +143,11 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *          sighash, and signature.
      *     @type int $input_index
      *          The target input within the transaction that should be signed.
+     *     @type int $sign_method
+     *          The sign method specifies how the input should be signed. Depending on the
+     *          method, either the tap_tweak, witness_script or both need to be specified.
+     *          Defaults to SegWit v0 signing to be backward compatible with older RPC
+     *          clients.
      * }
      */
     public function __construct($data = NULL) {
@@ -128,11 +164,21 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *persisted unlike with DeriveNextKey.
      *
      * Generated from protobuf field <code>.signrpc.KeyDescriptor key_desc = 1;</code>
-     * @return \Signrpc\KeyDescriptor
+     * @return \Signrpc\KeyDescriptor|null
      */
     public function getKeyDesc()
     {
         return $this->key_desc;
+    }
+
+    public function hasKeyDesc()
+    {
+        return isset($this->key_desc);
+    }
+
+    public function clearKeyDesc()
+    {
+        unset($this->key_desc);
     }
 
     /**
@@ -228,8 +274,46 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The full script required to properly redeem the output.  This field will
-     *only be populated if a p2wsh or a p2sh output is being signed.
+     *The 32 byte input to the taproot tweak derivation that is used to derive
+     *the output key from an internal key: outputKey = internalKey +
+     *tagged_hash("tapTweak", internalKey || tapTweak).
+     *When doing a BIP 86 spend, this field can be an empty byte slice.
+     *When doing a normal key path spend, with the output key committing to an
+     *actual script root, then this field should be: the tapscript root hash.
+     *
+     * Generated from protobuf field <code>bytes tap_tweak = 10;</code>
+     * @return string
+     */
+    public function getTapTweak()
+    {
+        return $this->tap_tweak;
+    }
+
+    /**
+     *The 32 byte input to the taproot tweak derivation that is used to derive
+     *the output key from an internal key: outputKey = internalKey +
+     *tagged_hash("tapTweak", internalKey || tapTweak).
+     *When doing a BIP 86 spend, this field can be an empty byte slice.
+     *When doing a normal key path spend, with the output key committing to an
+     *actual script root, then this field should be: the tapscript root hash.
+     *
+     * Generated from protobuf field <code>bytes tap_tweak = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTapTweak($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->tap_tweak = $var;
+
+        return $this;
+    }
+
+    /**
+     *The full script required to properly redeem the output. This field will
+     *only be populated if a p2tr, p2wsh or a p2sh output is being signed. If a
+     *taproot script path spend is being attempted, then this should be the raw
+     *leaf script.
      *
      * Generated from protobuf field <code>bytes witness_script = 4;</code>
      * @return string
@@ -240,8 +324,10 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The full script required to properly redeem the output.  This field will
-     *only be populated if a p2wsh or a p2sh output is being signed.
+     *The full script required to properly redeem the output. This field will
+     *only be populated if a p2tr, p2wsh or a p2sh output is being signed. If a
+     *taproot script path spend is being attempted, then this should be the raw
+     *leaf script.
      *
      * Generated from protobuf field <code>bytes witness_script = 4;</code>
      * @param string $var
@@ -260,11 +346,21 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
      *provided.
      *
      * Generated from protobuf field <code>.signrpc.TxOut output = 5;</code>
-     * @return \Signrpc\TxOut
+     * @return \Signrpc\TxOut|null
      */
     public function getOutput()
     {
         return $this->output;
+    }
+
+    public function hasOutput()
+    {
+        return isset($this->output);
+    }
+
+    public function clearOutput()
+    {
+        unset($this->output);
     }
 
     /**
@@ -333,6 +429,38 @@ class SignDescriptor extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->input_index = $var;
+
+        return $this;
+    }
+
+    /**
+     *The sign method specifies how the input should be signed. Depending on the
+     *method, either the tap_tweak, witness_script or both need to be specified.
+     *Defaults to SegWit v0 signing to be backward compatible with older RPC
+     *clients.
+     *
+     * Generated from protobuf field <code>.signrpc.SignMethod sign_method = 9;</code>
+     * @return int
+     */
+    public function getSignMethod()
+    {
+        return $this->sign_method;
+    }
+
+    /**
+     *The sign method specifies how the input should be signed. Depending on the
+     *method, either the tap_tweak, witness_script or both need to be specified.
+     *Defaults to SegWit v0 signing to be backward compatible with older RPC
+     *clients.
+     *
+     * Generated from protobuf field <code>.signrpc.SignMethod sign_method = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSignMethod($var)
+    {
+        GPBUtil::checkEnum($var, \Signrpc\SignMethod::class);
+        $this->sign_method = $var;
 
         return $this;
     }

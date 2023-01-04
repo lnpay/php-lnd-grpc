@@ -24,12 +24,15 @@ class ChainNotifierClient extends \Grpc\BaseStub {
      * registers an intent for a client to be notified once a confirmation request
      * has reached its required number of confirmations on-chain.
      *
-     * A client can specify whether the confirmation request should be for a
-     * particular transaction by its hash or for an output script by specifying a
-     * zero hash.
+     * A confirmation request must have a valid output script. It is also possible
+     * to give a transaction ID. If the transaction ID is not set, a notification
+     * is sent once the output script confirms. If the transaction ID is also set,
+     * a notification is sent once the output script confirms in the given
+     * transaction.
      * @param \Chainrpc\ConfRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function RegisterConfirmationsNtfn(\Chainrpc\ConfRequest $argument,
       $metadata = [], $options = []) {
@@ -50,6 +53,7 @@ class ChainNotifierClient extends \Grpc\BaseStub {
      * @param \Chainrpc\SpendRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function RegisterSpendNtfn(\Chainrpc\SpendRequest $argument,
       $metadata = [], $options = []) {
@@ -73,6 +77,7 @@ class ChainNotifierClient extends \Grpc\BaseStub {
      * @param \Chainrpc\BlockEpoch $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function RegisterBlockEpochNtfn(\Chainrpc\BlockEpoch $argument,
       $metadata = [], $options = []) {
