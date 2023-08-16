@@ -20,12 +20,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     protected $name = '';
     /**
-     *The type of addresses the account supports.
-     *AddressType                       | External Branch | Internal Branch
-     *---------------------------------------------------------------------
-     *WITNESS_PUBKEY_HASH               | P2WPKH          | P2WPKH
-     *NESTED_WITNESS_PUBKEY_HASH        | NP2WPKH         | NP2WPKH
-     *HYBRID_NESTED_WITNESS_PUBKEY_HASH | NP2WPKH         | P2WPKH
+     * The type of addresses the account supports.
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 2;</code>
      */
@@ -87,12 +82,7 @@ class Account extends \Google\Protobuf\Internal\Message
      *     @type string $name
      *           The name used to identify the account.
      *     @type int $address_type
-     *          The type of addresses the account supports.
-     *          AddressType                       | External Branch | Internal Branch
-     *          ---------------------------------------------------------------------
-     *          WITNESS_PUBKEY_HASH               | P2WPKH          | P2WPKH
-     *          NESTED_WITNESS_PUBKEY_HASH        | NP2WPKH         | NP2WPKH
-     *          HYBRID_NESTED_WITNESS_PUBKEY_HASH | NP2WPKH         | P2WPKH
+     *           The type of addresses the account supports.
      *     @type string $extended_public_key
      *          The public key backing the account that all keys are derived from
      *          represented as an extended key. This will always be empty for the default
@@ -150,12 +140,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The type of addresses the account supports.
-     *AddressType                       | External Branch | Internal Branch
-     *---------------------------------------------------------------------
-     *WITNESS_PUBKEY_HASH               | P2WPKH          | P2WPKH
-     *NESTED_WITNESS_PUBKEY_HASH        | NP2WPKH         | NP2WPKH
-     *HYBRID_NESTED_WITNESS_PUBKEY_HASH | NP2WPKH         | P2WPKH
+     * The type of addresses the account supports.
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 2;</code>
      * @return int
@@ -166,12 +151,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *The type of addresses the account supports.
-     *AddressType                       | External Branch | Internal Branch
-     *---------------------------------------------------------------------
-     *WITNESS_PUBKEY_HASH               | P2WPKH          | P2WPKH
-     *NESTED_WITNESS_PUBKEY_HASH        | NP2WPKH         | NP2WPKH
-     *HYBRID_NESTED_WITNESS_PUBKEY_HASH | NP2WPKH         | P2WPKH
+     * The type of addresses the account supports.
      *
      * Generated from protobuf field <code>.walletrpc.AddressType address_type = 2;</code>
      * @param int $var

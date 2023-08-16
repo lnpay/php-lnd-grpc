@@ -107,6 +107,14 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.lnrpc.WatchOnly watch_only = 9;</code>
      */
     protected $watch_only = null;
+    /**
+     *macaroon_root_key is an optional 32 byte macaroon root key that can be
+     *provided when initializing the wallet rather than letting lnd generate one
+     *on its own.
+     *
+     * Generated from protobuf field <code>bytes macaroon_root_key = 10;</code>
+     */
+    protected $macaroon_root_key = '';
 
     /**
      * Constructor.
@@ -172,6 +180,10 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
      *          contain any private keys. That means the wallet won't be able to sign for
      *          any of the keys and _needs_ to be run with a remote signer that has the
      *          corresponding private keys and can serve signing RPC requests.
+     *     @type string $macaroon_root_key
+     *          macaroon_root_key is an optional 32 byte macaroon root key that can be
+     *          provided when initializing the wallet rather than letting lnd generate one
+     *          on its own.
      * }
      */
     public function __construct($data = NULL) {
@@ -509,6 +521,36 @@ class InitWalletRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\WatchOnly::class);
         $this->watch_only = $var;
+
+        return $this;
+    }
+
+    /**
+     *macaroon_root_key is an optional 32 byte macaroon root key that can be
+     *provided when initializing the wallet rather than letting lnd generate one
+     *on its own.
+     *
+     * Generated from protobuf field <code>bytes macaroon_root_key = 10;</code>
+     * @return string
+     */
+    public function getMacaroonRootKey()
+    {
+        return $this->macaroon_root_key;
+    }
+
+    /**
+     *macaroon_root_key is an optional 32 byte macaroon root key that can be
+     *provided when initializing the wallet rather than letting lnd generate one
+     *on its own.
+     *
+     * Generated from protobuf field <code>bytes macaroon_root_key = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMacaroonRootKey($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->macaroon_root_key = $var;
 
         return $this;
     }

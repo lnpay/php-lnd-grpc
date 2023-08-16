@@ -56,6 +56,12 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.lnrpc.RoutingPolicy node2_policy = 8;</code>
      */
     protected $node2_policy = null;
+    /**
+     * Custom channel announcement tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9;</code>
+     */
+    private $custom_records;
 
     /**
      * Constructor.
@@ -74,6 +80,8 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
      *     @type int|string $capacity
      *     @type \Lnrpc\RoutingPolicy $node1_policy
      *     @type \Lnrpc\RoutingPolicy $node2_policy
+     *     @type array|\Google\Protobuf\Internal\MapField $custom_records
+     *           Custom channel announcement tlv records.
      * }
      */
     public function __construct($data = NULL) {
@@ -285,6 +293,32 @@ class ChannelEdge extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Lnrpc\RoutingPolicy::class);
         $this->node2_policy = $var;
+
+        return $this;
+    }
+
+    /**
+     * Custom channel announcement tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getCustomRecords()
+    {
+        return $this->custom_records;
+    }
+
+    /**
+     * Custom channel announcement tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 9;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setCustomRecords($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
+        $this->custom_records = $arr;
 
         return $this;
     }

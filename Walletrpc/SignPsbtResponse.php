@@ -19,6 +19,12 @@ class SignPsbtResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes signed_psbt = 1;</code>
      */
     protected $signed_psbt = '';
+    /**
+     * The indices of signed inputs.
+     *
+     * Generated from protobuf field <code>repeated uint32 signed_inputs = 2;</code>
+     */
+    private $signed_inputs;
 
     /**
      * Constructor.
@@ -28,6 +34,8 @@ class SignPsbtResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $signed_psbt
      *           The signed transaction in PSBT format.
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $signed_inputs
+     *           The indices of signed inputs.
      * }
      */
     public function __construct($data = NULL) {
@@ -57,6 +65,32 @@ class SignPsbtResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->signed_psbt = $var;
+
+        return $this;
+    }
+
+    /**
+     * The indices of signed inputs.
+     *
+     * Generated from protobuf field <code>repeated uint32 signed_inputs = 2;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getSignedInputs()
+    {
+        return $this->signed_inputs;
+    }
+
+    /**
+     * The indices of signed inputs.
+     *
+     * Generated from protobuf field <code>repeated uint32 signed_inputs = 2;</code>
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setSignedInputs($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT32);
+        $this->signed_inputs = $arr;
 
         return $this;
     }

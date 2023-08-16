@@ -162,6 +162,53 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool scid_alias = 20;</code>
      */
     protected $scid_alias = false;
+    /**
+     *The base fee charged regardless of the number of milli-satoshis sent.
+     *
+     * Generated from protobuf field <code>uint64 base_fee = 21;</code>
+     */
+    protected $base_fee = 0;
+    /**
+     *The fee rate in ppm (parts per million) that will be charged in
+     *proportion of the value of each forwarded HTLC.
+     *
+     * Generated from protobuf field <code>uint64 fee_rate = 22;</code>
+     */
+    protected $fee_rate = 0;
+    /**
+     *If use_base_fee is true the open channel announcement will update the
+     *channel base fee with the value specified in base_fee. In the case of
+     *a base_fee of 0 use_base_fee is needed downstream to distinguish whether
+     *to use the default base fee value specified in the config or 0.
+     *
+     * Generated from protobuf field <code>bool use_base_fee = 23;</code>
+     */
+    protected $use_base_fee = false;
+    /**
+     *If use_fee_rate is true the open channel announcement will update the
+     *channel fee rate with the value specified in fee_rate. In the case of
+     *a fee_rate of 0 use_fee_rate is needed downstream to distinguish whether
+     *to use the default fee rate value specified in the config or 0.
+     *
+     * Generated from protobuf field <code>bool use_fee_rate = 24;</code>
+     */
+    protected $use_fee_rate = false;
+    /**
+     *The number of satoshis we require the remote peer to reserve. This value,
+     *if specified, must be above the dust limit and below 20% of the channel
+     *capacity.
+     *
+     * Generated from protobuf field <code>uint64 remote_chan_reserve_sat = 25;</code>
+     */
+    protected $remote_chan_reserve_sat = 0;
+    /**
+     *If set, then lnd will attempt to commit all the coins under control of the
+     *internal wallet to open the channel, and the LocalFundingAmount field must
+     *be zero and is ignored.
+     *
+     * Generated from protobuf field <code>bool fund_max = 26;</code>
+     */
+    protected $fund_max = false;
 
     /**
      * Constructor.
@@ -236,6 +283,29 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $scid_alias
      *          If this is true, then an option-scid-alias channel-type open will be
      *          attempted.
+     *     @type int|string $base_fee
+     *          The base fee charged regardless of the number of milli-satoshis sent.
+     *     @type int|string $fee_rate
+     *          The fee rate in ppm (parts per million) that will be charged in
+     *          proportion of the value of each forwarded HTLC.
+     *     @type bool $use_base_fee
+     *          If use_base_fee is true the open channel announcement will update the
+     *          channel base fee with the value specified in base_fee. In the case of
+     *          a base_fee of 0 use_base_fee is needed downstream to distinguish whether
+     *          to use the default base fee value specified in the config or 0.
+     *     @type bool $use_fee_rate
+     *          If use_fee_rate is true the open channel announcement will update the
+     *          channel fee rate with the value specified in fee_rate. In the case of
+     *          a fee_rate of 0 use_fee_rate is needed downstream to distinguish whether
+     *          to use the default fee rate value specified in the config or 0.
+     *     @type int|string $remote_chan_reserve_sat
+     *          The number of satoshis we require the remote peer to reserve. This value,
+     *          if specified, must be above the dust limit and below 20% of the channel
+     *          capacity.
+     *     @type bool $fund_max
+     *          If set, then lnd will attempt to commit all the coins under control of the
+     *          internal wallet to open the channel, and the LocalFundingAmount field must
+     *          be zero and is ignored.
      * }
      */
     public function __construct($data = NULL) {
@@ -831,6 +901,184 @@ class OpenChannelRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->scid_alias = $var;
+
+        return $this;
+    }
+
+    /**
+     *The base fee charged regardless of the number of milli-satoshis sent.
+     *
+     * Generated from protobuf field <code>uint64 base_fee = 21;</code>
+     * @return int|string
+     */
+    public function getBaseFee()
+    {
+        return $this->base_fee;
+    }
+
+    /**
+     *The base fee charged regardless of the number of milli-satoshis sent.
+     *
+     * Generated from protobuf field <code>uint64 base_fee = 21;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setBaseFee($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->base_fee = $var;
+
+        return $this;
+    }
+
+    /**
+     *The fee rate in ppm (parts per million) that will be charged in
+     *proportion of the value of each forwarded HTLC.
+     *
+     * Generated from protobuf field <code>uint64 fee_rate = 22;</code>
+     * @return int|string
+     */
+    public function getFeeRate()
+    {
+        return $this->fee_rate;
+    }
+
+    /**
+     *The fee rate in ppm (parts per million) that will be charged in
+     *proportion of the value of each forwarded HTLC.
+     *
+     * Generated from protobuf field <code>uint64 fee_rate = 22;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setFeeRate($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->fee_rate = $var;
+
+        return $this;
+    }
+
+    /**
+     *If use_base_fee is true the open channel announcement will update the
+     *channel base fee with the value specified in base_fee. In the case of
+     *a base_fee of 0 use_base_fee is needed downstream to distinguish whether
+     *to use the default base fee value specified in the config or 0.
+     *
+     * Generated from protobuf field <code>bool use_base_fee = 23;</code>
+     * @return bool
+     */
+    public function getUseBaseFee()
+    {
+        return $this->use_base_fee;
+    }
+
+    /**
+     *If use_base_fee is true the open channel announcement will update the
+     *channel base fee with the value specified in base_fee. In the case of
+     *a base_fee of 0 use_base_fee is needed downstream to distinguish whether
+     *to use the default base fee value specified in the config or 0.
+     *
+     * Generated from protobuf field <code>bool use_base_fee = 23;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setUseBaseFee($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->use_base_fee = $var;
+
+        return $this;
+    }
+
+    /**
+     *If use_fee_rate is true the open channel announcement will update the
+     *channel fee rate with the value specified in fee_rate. In the case of
+     *a fee_rate of 0 use_fee_rate is needed downstream to distinguish whether
+     *to use the default fee rate value specified in the config or 0.
+     *
+     * Generated from protobuf field <code>bool use_fee_rate = 24;</code>
+     * @return bool
+     */
+    public function getUseFeeRate()
+    {
+        return $this->use_fee_rate;
+    }
+
+    /**
+     *If use_fee_rate is true the open channel announcement will update the
+     *channel fee rate with the value specified in fee_rate. In the case of
+     *a fee_rate of 0 use_fee_rate is needed downstream to distinguish whether
+     *to use the default fee rate value specified in the config or 0.
+     *
+     * Generated from protobuf field <code>bool use_fee_rate = 24;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setUseFeeRate($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->use_fee_rate = $var;
+
+        return $this;
+    }
+
+    /**
+     *The number of satoshis we require the remote peer to reserve. This value,
+     *if specified, must be above the dust limit and below 20% of the channel
+     *capacity.
+     *
+     * Generated from protobuf field <code>uint64 remote_chan_reserve_sat = 25;</code>
+     * @return int|string
+     */
+    public function getRemoteChanReserveSat()
+    {
+        return $this->remote_chan_reserve_sat;
+    }
+
+    /**
+     *The number of satoshis we require the remote peer to reserve. This value,
+     *if specified, must be above the dust limit and below 20% of the channel
+     *capacity.
+     *
+     * Generated from protobuf field <code>uint64 remote_chan_reserve_sat = 25;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setRemoteChanReserveSat($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->remote_chan_reserve_sat = $var;
+
+        return $this;
+    }
+
+    /**
+     *If set, then lnd will attempt to commit all the coins under control of the
+     *internal wallet to open the channel, and the LocalFundingAmount field must
+     *be zero and is ignored.
+     *
+     * Generated from protobuf field <code>bool fund_max = 26;</code>
+     * @return bool
+     */
+    public function getFundMax()
+    {
+        return $this->fund_max;
+    }
+
+    /**
+     *If set, then lnd will attempt to commit all the coins under control of the
+     *internal wallet to open the channel, and the LocalFundingAmount field must
+     *be zero and is ignored.
+     *
+     * Generated from protobuf field <code>bool fund_max = 26;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setFundMax($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->fund_max = $var;
 
         return $this;
     }

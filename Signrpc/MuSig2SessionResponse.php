@@ -53,6 +53,12 @@ class MuSig2SessionResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool have_all_nonces = 5;</code>
      */
     protected $have_all_nonces = false;
+    /**
+     *The version of the MuSig2 BIP that was used to create the session.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 6;</code>
+     */
+    protected $version = 0;
 
     /**
      * Constructor.
@@ -80,6 +86,8 @@ class MuSig2SessionResponse extends \Google\Protobuf\Internal\Message
      *     @type bool $have_all_nonces
      *          Indicates whether all nonces required to start the signing process are known
      *          now.
+     *     @type int $version
+     *          The version of the MuSig2 BIP that was used to create the session.
      * }
      */
     public function __construct($data = NULL) {
@@ -233,6 +241,32 @@ class MuSig2SessionResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->have_all_nonces = $var;
+
+        return $this;
+    }
+
+    /**
+     *The version of the MuSig2 BIP that was used to create the session.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 6;</code>
+     * @return int
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     *The version of the MuSig2 BIP that was used to create the session.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 6;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setVersion($var)
+    {
+        GPBUtil::checkEnum($var, \Signrpc\MuSig2Version::class);
+        $this->version = $var;
 
         return $this;
     }

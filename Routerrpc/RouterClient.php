@@ -55,6 +55,27 @@ class RouterClient extends \Grpc\BaseStub {
 
     /**
      *
+     * TrackPayments returns an update stream for every payment that is not in a
+     * terminal state. Note that if payments are in-flight while starting a new
+     * subscription, the start of the payment stream could produce out-of-order
+     * and/or duplicate events. In order to get updates for every in-flight
+     * payment attempt make sure to subscribe to this method before initiating any
+     * payments.
+     * @param \Routerrpc\TrackPaymentsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function TrackPayments(\Routerrpc\TrackPaymentsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/routerrpc.Router/TrackPayments',
+        $argument,
+        ['\Lnrpc\Payment', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
      * EstimateRouteFee allows callers to obtain a lower bound w.r.t how much it
      * may cost to send an HTLC to the target end destination.
      * @param \Routerrpc\RouteFeeRequest $argument input argument
@@ -71,6 +92,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @deprecated
      *
      * Deprecated, use SendToRouteV2. SendToRoute attempts to make a payment via
      * the specified route. This method differs from SendPayment in that it
@@ -197,8 +219,10 @@ class RouterClient extends \Grpc\BaseStub {
 
     /**
      *
-     * QueryProbability returns the current success probability estimate for a
-     * given node pair and amount.
+     * Deprecated. QueryProbability returns the current success probability
+     * estimate for a given node pair and amount. The call returns a zero success
+     * probability if no channel is available or if the amount violates min/max
+     * HTLC constraints.
      * @param \Routerrpc\QueryProbabilityRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -248,6 +272,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @deprecated
      *
      * Deprecated, use SendPaymentV2. SendPayment attempts to route a payment
      * described by the passed PaymentRequest to the final destination. The call
@@ -266,6 +291,7 @@ class RouterClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @deprecated
      *
      * Deprecated, use TrackPaymentV2. TrackPayment returns an update stream for
      * the payment identified by the payment hash.

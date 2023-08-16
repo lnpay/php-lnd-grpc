@@ -90,6 +90,8 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
      *     @type \Routerrpc\ForwardFailEvent $forward_fail_event
      *     @type \Routerrpc\SettleEvent $settle_event
      *     @type \Routerrpc\LinkFailEvent $link_fail_event
+     *     @type \Routerrpc\SubscribedEvent $subscribed_event
+     *     @type \Routerrpc\FinalHtlcEvent $final_htlc_event
      * }
      */
     public function __construct($data = NULL) {
@@ -367,6 +369,60 @@ class HtlcEvent extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Routerrpc\LinkFailEvent::class);
         $this->writeOneof(10, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.routerrpc.SubscribedEvent subscribed_event = 11;</code>
+     * @return \Routerrpc\SubscribedEvent|null
+     */
+    public function getSubscribedEvent()
+    {
+        return $this->readOneof(11);
+    }
+
+    public function hasSubscribedEvent()
+    {
+        return $this->hasOneof(11);
+    }
+
+    /**
+     * Generated from protobuf field <code>.routerrpc.SubscribedEvent subscribed_event = 11;</code>
+     * @param \Routerrpc\SubscribedEvent $var
+     * @return $this
+     */
+    public function setSubscribedEvent($var)
+    {
+        GPBUtil::checkMessage($var, \Routerrpc\SubscribedEvent::class);
+        $this->writeOneof(11, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.routerrpc.FinalHtlcEvent final_htlc_event = 12;</code>
+     * @return \Routerrpc\FinalHtlcEvent|null
+     */
+    public function getFinalHtlcEvent()
+    {
+        return $this->readOneof(12);
+    }
+
+    public function hasFinalHtlcEvent()
+    {
+        return $this->hasOneof(12);
+    }
+
+    /**
+     * Generated from protobuf field <code>.routerrpc.FinalHtlcEvent final_htlc_event = 12;</code>
+     * @param \Routerrpc\FinalHtlcEvent $var
+     * @return $this
+     */
+    public function setFinalHtlcEvent($var)
+    {
+        GPBUtil::checkMessage($var, \Routerrpc\FinalHtlcEvent::class);
+        $this->writeOneof(12, $var);
 
         return $this;
     }

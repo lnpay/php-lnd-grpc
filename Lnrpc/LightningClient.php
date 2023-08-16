@@ -564,6 +564,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @deprecated
      * lncli: `sendpayment`
      * Deprecated, use routerrpc.SendPaymentV2. SendPayment dispatches a
      * bi-directional streaming RPC for sending payments through the Lightning
@@ -600,6 +601,7 @@ class LightningClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @deprecated
      * lncli: `sendtoroute`
      * Deprecated, use routerrpc.SendToRouteV2. SendToRoute is a bi-directional
      * streaming RPC for sending payment through the Lightning Network. This
@@ -1246,6 +1248,10 @@ class LightningClient extends \Grpc\BaseStub {
      * lncli: `subscribecustom`
      * SubscribeCustomMessages subscribes to a stream of incoming custom peer
      * messages.
+     *
+     * To include messages with type outside of the custom range (>= 32768) lnd
+     * needs to be compiled with  the `dev` build tag, and the message type to
+     * override should be specified in lnd's experimental protocol configuration.
      * @param \Lnrpc\SubscribeCustomMessagesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -1274,6 +1280,24 @@ class LightningClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/lnrpc.Lightning/ListAliases',
         $argument,
         ['\Lnrpc\ListAliasesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * LookupHtlcResolution retrieves a final htlc resolution from the database.
+     * If the htlc has no final resolution yet, a NotFound grpc status code is
+     * returned.
+     * @param \Lnrpc\LookupHtlcResolutionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function LookupHtlcResolution(\Lnrpc\LookupHtlcResolutionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/lnrpc.Lightning/LookupHtlcResolution',
+        $argument,
+        ['\Lnrpc\LookupHtlcResolutionResponse', 'decode'],
         $metadata, $options);
     }
 

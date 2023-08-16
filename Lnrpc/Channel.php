@@ -247,6 +247,18 @@ class Channel extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint64 zero_conf_confirmed_scid = 33;</code>
      */
     protected $zero_conf_confirmed_scid = 0;
+    /**
+     * The configured alias name of our peer.
+     *
+     * Generated from protobuf field <code>string peer_alias = 34;</code>
+     */
+    protected $peer_alias = '';
+    /**
+     * This is the peer SCID alias.
+     *
+     * Generated from protobuf field <code>uint64 peer_scid_alias = 35 [jstype = JS_STRING];</code>
+     */
+    protected $peer_scid_alias = 0;
 
     /**
      * Constructor.
@@ -352,6 +364,10 @@ class Channel extends \Google\Protobuf\Internal\Message
      *           Whether or not this is a zero-conf channel.
      *     @type int|string $zero_conf_confirmed_scid
      *           This is the confirmed / on-chain zero-conf SCID.
+     *     @type string $peer_alias
+     *           The configured alias name of our peer.
+     *     @type int|string $peer_scid_alias
+     *           This is the peer SCID alias.
      * }
      */
     public function __construct($data = NULL) {
@@ -1313,6 +1329,58 @@ class Channel extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->zero_conf_confirmed_scid = $var;
+
+        return $this;
+    }
+
+    /**
+     * The configured alias name of our peer.
+     *
+     * Generated from protobuf field <code>string peer_alias = 34;</code>
+     * @return string
+     */
+    public function getPeerAlias()
+    {
+        return $this->peer_alias;
+    }
+
+    /**
+     * The configured alias name of our peer.
+     *
+     * Generated from protobuf field <code>string peer_alias = 34;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPeerAlias($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->peer_alias = $var;
+
+        return $this;
+    }
+
+    /**
+     * This is the peer SCID alias.
+     *
+     * Generated from protobuf field <code>uint64 peer_scid_alias = 35 [jstype = JS_STRING];</code>
+     * @return int|string
+     */
+    public function getPeerScidAlias()
+    {
+        return $this->peer_scid_alias;
+    }
+
+    /**
+     * This is the peer SCID alias.
+     *
+     * Generated from protobuf field <code>uint64 peer_scid_alias = 35 [jstype = JS_STRING];</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setPeerScidAlias($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->peer_scid_alias = $var;
 
         return $this;
     }

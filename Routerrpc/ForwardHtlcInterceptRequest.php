@@ -72,6 +72,13 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes onion_blob = 9;</code>
      */
     protected $onion_blob = '';
+    /**
+     * The block height at which this htlc will be auto-failed to prevent the
+     * channel from force-closing.
+     *
+     * Generated from protobuf field <code>int32 auto_fail_height = 10;</code>
+     */
+    protected $auto_fail_height = 0;
 
     /**
      * Constructor.
@@ -102,6 +109,9 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
      *           Any custom records that were present in the payload.
      *     @type string $onion_blob
      *           The onion blob for the next hop
+     *     @type int $auto_fail_height
+     *           The block height at which this htlc will be auto-failed to prevent the
+     *           channel from force-closing.
      * }
      */
     public function __construct($data = NULL) {
@@ -359,6 +369,34 @@ class ForwardHtlcInterceptRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->onion_blob = $var;
+
+        return $this;
+    }
+
+    /**
+     * The block height at which this htlc will be auto-failed to prevent the
+     * channel from force-closing.
+     *
+     * Generated from protobuf field <code>int32 auto_fail_height = 10;</code>
+     * @return int
+     */
+    public function getAutoFailHeight()
+    {
+        return $this->auto_fail_height;
+    }
+
+    /**
+     * The block height at which this htlc will be auto-failed to prevent the
+     * channel from force-closing.
+     *
+     * Generated from protobuf field <code>int32 auto_fail_height = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setAutoFailHeight($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->auto_fail_height = $var;
 
         return $this;
     }

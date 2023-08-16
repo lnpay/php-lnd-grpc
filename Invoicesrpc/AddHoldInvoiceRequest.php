@@ -51,7 +51,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      */
     protected $description_hash = '';
     /**
-     * Payment request expiry time in seconds. Default is 3600 (1 hour).
+     * Payment request expiry time in seconds. Default is 86400 (24 hours).
      *
      * Generated from protobuf field <code>int64 expiry = 5;</code>
      */
@@ -106,7 +106,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
      *          payment (memo) is too long to naturally fit within the description field
      *          of an encoded payment request.
      *     @type int|string $expiry
-     *           Payment request expiry time in seconds. Default is 3600 (1 hour).
+     *           Payment request expiry time in seconds. Default is 86400 (24 hours).
      *     @type string $fallback_addr
      *           Fallback on-chain address.
      *     @type int|string $cltv_expiry
@@ -268,7 +268,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Payment request expiry time in seconds. Default is 3600 (1 hour).
+     * Payment request expiry time in seconds. Default is 86400 (24 hours).
      *
      * Generated from protobuf field <code>int64 expiry = 5;</code>
      * @return int|string
@@ -279,7 +279,7 @@ class AddHoldInvoiceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Payment request expiry time in seconds. Default is 3600 (1 hour).
+     * Payment request expiry time in seconds. Default is 86400 (24 hours).
      *
      * Generated from protobuf field <code>int64 expiry = 5;</code>
      * @param int|string $var
