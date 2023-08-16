@@ -25,7 +25,7 @@ class InputScript extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bytes sig_script = 2;</code>
      */
-    private $sig_script = '';
+    protected $sig_script = '';
 
     /**
      * Constructor.
@@ -33,7 +33,7 @@ class InputScript extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $witness
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $witness
      *           The serializes witness stack for the specified input.
      *     @type string $sig_script
      *          The optional sig script for the specified witness that will only be set if
@@ -60,7 +60,7 @@ class InputScript extends \Google\Protobuf\Internal\Message
      * The serializes witness stack for the specified input.
      *
      * Generated from protobuf field <code>repeated bytes witness = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setWitness($var)

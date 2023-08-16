@@ -25,6 +25,13 @@ class GetTowerInfoRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool include_sessions = 2;</code>
      */
     protected $include_sessions = false;
+    /**
+     * Whether to exclude exhausted sessions in the response info. This option
+     * is only meaningful if include_sessions is true.
+     *
+     * Generated from protobuf field <code>bool exclude_exhausted_sessions = 3;</code>
+     */
+    protected $exclude_exhausted_sessions = false;
 
     /**
      * Constructor.
@@ -36,6 +43,9 @@ class GetTowerInfoRequest extends \Google\Protobuf\Internal\Message
      *           The identifying public key of the watchtower to retrieve information for.
      *     @type bool $include_sessions
      *           Whether we should include sessions with the watchtower in the response.
+     *     @type bool $exclude_exhausted_sessions
+     *           Whether to exclude exhausted sessions in the response info. This option
+     *           is only meaningful if include_sessions is true.
      * }
      */
     public function __construct($data = NULL) {
@@ -91,6 +101,34 @@ class GetTowerInfoRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->include_sessions = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether to exclude exhausted sessions in the response info. This option
+     * is only meaningful if include_sessions is true.
+     *
+     * Generated from protobuf field <code>bool exclude_exhausted_sessions = 3;</code>
+     * @return bool
+     */
+    public function getExcludeExhaustedSessions()
+    {
+        return $this->exclude_exhausted_sessions;
+    }
+
+    /**
+     * Whether to exclude exhausted sessions in the response info. This option
+     * is only meaningful if include_sessions is true.
+     *
+     * Generated from protobuf field <code>bool exclude_exhausted_sessions = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setExcludeExhaustedSessions($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->exclude_exhausted_sessions = $var;
 
         return $this;
     }

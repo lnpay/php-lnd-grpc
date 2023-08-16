@@ -36,6 +36,14 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes peer = 5;</code>
      */
     protected $peer = '';
+    /**
+     * Informs the server if the peer alias lookup per channel should be
+     * enabled. It is turned off by default in order to avoid degradation of
+     * performance for existing clients.
+     *
+     * Generated from protobuf field <code>bool peer_alias_lookup = 6;</code>
+     */
+    protected $peer_alias_lookup = false;
 
     /**
      * Constructor.
@@ -50,6 +58,10 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
      *     @type string $peer
      *          Filters the response for channels with a target peer's pubkey. If peer is
      *          empty, all channels will be returned.
+     *     @type bool $peer_alias_lookup
+     *           Informs the server if the peer alias lookup per channel should be
+     *           enabled. It is turned off by default in order to avoid degradation of
+     *           performance for existing clients.
      * }
      */
     public function __construct($data = NULL) {
@@ -169,6 +181,36 @@ class ListChannelsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->peer = $var;
+
+        return $this;
+    }
+
+    /**
+     * Informs the server if the peer alias lookup per channel should be
+     * enabled. It is turned off by default in order to avoid degradation of
+     * performance for existing clients.
+     *
+     * Generated from protobuf field <code>bool peer_alias_lookup = 6;</code>
+     * @return bool
+     */
+    public function getPeerAliasLookup()
+    {
+        return $this->peer_alias_lookup;
+    }
+
+    /**
+     * Informs the server if the peer alias lookup per channel should be
+     * enabled. It is turned off by default in order to avoid degradation of
+     * performance for existing clients.
+     *
+     * Generated from protobuf field <code>bool peer_alias_lookup = 6;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPeerAliasLookup($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->peer_alias_lookup = $var;
 
         return $this;
     }

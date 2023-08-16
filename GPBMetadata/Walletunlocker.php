@@ -17,14 +17,14 @@ class Walletunlocker
         \GPBMetadata\Lightning::initOnce();
         $pool->internalAddGeneratedFile(
             '
-§
+Â
 walletunlocker.protolnrpc"A
 GenSeedRequest
 aezeed_passphrase (
 seed_entropy ("H
 GenSeedResponse
 cipher_seed_mnemonic (	
-enciphered_seed ("½
+enciphered_seed ("Ø
 InitWalletRequest
 wallet_password (
 cipher_seed_mnemonic (	
@@ -35,7 +35,9 @@ class Walletunlocker
 extended_master_key (	.
 &extended_master_key_birthday_timestamp ($
 
-watch_only	 (2.lnrpc.WatchOnly",
+watch_only	 (2.lnrpc.WatchOnly
+macaroon_root_key
+ (",
 InitWalletResponse
 admin_macaroon ("}
 	WatchOnly%

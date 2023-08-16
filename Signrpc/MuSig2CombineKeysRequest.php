@@ -14,10 +14,10 @@ use Google\Protobuf\Internal\GPBUtil;
 class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *A list of all public keys (serialized in 32-byte x-only format!)
-     *participating in the signing session. The list will always be sorted
-     *lexicographically internally. This must include the local key which is
-     *described by the above key_loc.
+     *A list of all public keys (serialized in 32-byte x-only format for v0.4.0
+     *and 33-byte compressed format for v1.0.0rc2!) participating in the signing
+     *session. The list will always be sorted lexicographically internally. This
+     *must include the local key which is described by the above key_loc.
      *
      * Generated from protobuf field <code>repeated bytes all_signer_pubkeys = 1;</code>
      */
@@ -37,6 +37,15 @@ class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.signrpc.TaprootTweakDesc taproot_tweak = 3;</code>
      */
     protected $taproot_tweak = null;
+    /**
+     *The mandatory version of the MuSig2 BIP draft to use. This is necessary to
+     *differentiate between the changes that were made to the BIP while this
+     *experimental RPC was already released. Some of those changes affect how the
+     *combined key and nonces are created.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 4;</code>
+     */
+    protected $version = 0;
 
     /**
      * Constructor.
@@ -45,10 +54,10 @@ class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $all_signer_pubkeys
-     *          A list of all public keys (serialized in 32-byte x-only format!)
-     *          participating in the signing session. The list will always be sorted
-     *          lexicographically internally. This must include the local key which is
-     *          described by the above key_loc.
+     *          A list of all public keys (serialized in 32-byte x-only format for v0.4.0
+     *          and 33-byte compressed format for v1.0.0rc2!) participating in the signing
+     *          session. The list will always be sorted lexicographically internally. This
+     *          must include the local key which is described by the above key_loc.
      *     @type array<\Signrpc\TweakDesc>|\Google\Protobuf\Internal\RepeatedField $tweaks
      *          A series of optional generic tweaks to be applied to the the aggregated
      *          public key.
@@ -56,6 +65,11 @@ class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
      *          An optional taproot specific tweak that must be specified if the MuSig2
      *          combined key will be used as the main taproot key of a taproot output
      *          on-chain.
+     *     @type int $version
+     *          The mandatory version of the MuSig2 BIP draft to use. This is necessary to
+     *          differentiate between the changes that were made to the BIP while this
+     *          experimental RPC was already released. Some of those changes affect how the
+     *          combined key and nonces are created.
      * }
      */
     public function __construct($data = NULL) {
@@ -64,10 +78,10 @@ class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *A list of all public keys (serialized in 32-byte x-only format!)
-     *participating in the signing session. The list will always be sorted
-     *lexicographically internally. This must include the local key which is
-     *described by the above key_loc.
+     *A list of all public keys (serialized in 32-byte x-only format for v0.4.0
+     *and 33-byte compressed format for v1.0.0rc2!) participating in the signing
+     *session. The list will always be sorted lexicographically internally. This
+     *must include the local key which is described by the above key_loc.
      *
      * Generated from protobuf field <code>repeated bytes all_signer_pubkeys = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -78,10 +92,10 @@ class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *A list of all public keys (serialized in 32-byte x-only format!)
-     *participating in the signing session. The list will always be sorted
-     *lexicographically internally. This must include the local key which is
-     *described by the above key_loc.
+     *A list of all public keys (serialized in 32-byte x-only format for v0.4.0
+     *and 33-byte compressed format for v1.0.0rc2!) participating in the signing
+     *session. The list will always be sorted lexicographically internally. This
+     *must include the local key which is described by the above key_loc.
      *
      * Generated from protobuf field <code>repeated bytes all_signer_pubkeys = 1;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
@@ -159,6 +173,38 @@ class MuSig2CombineKeysRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Signrpc\TaprootTweakDesc::class);
         $this->taproot_tweak = $var;
+
+        return $this;
+    }
+
+    /**
+     *The mandatory version of the MuSig2 BIP draft to use. This is necessary to
+     *differentiate between the changes that were made to the BIP while this
+     *experimental RPC was already released. Some of those changes affect how the
+     *combined key and nonces are created.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 4;</code>
+     * @return int
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     *The mandatory version of the MuSig2 BIP draft to use. This is necessary to
+     *differentiate between the changes that were made to the BIP while this
+     *experimental RPC was already released. Some of those changes affect how the
+     *combined key and nonces are created.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setVersion($var)
+    {
+        GPBUtil::checkEnum($var, \Signrpc\MuSig2Version::class);
+        $this->version = $var;
 
         return $this;
     }

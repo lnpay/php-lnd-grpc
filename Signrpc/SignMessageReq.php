@@ -14,17 +14,45 @@ use Google\Protobuf\Internal\GPBUtil;
 class SignMessageReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The message to be signed.
+     *The message to be signed. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      */
-    private $msg = '';
+    protected $msg = '';
     /**
      * The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
      */
-    private $key_loc = null;
+    protected $key_loc = null;
+    /**
+     * Double-SHA256 hash instead of just the default single round.
+     *
+     * Generated from protobuf field <code>bool double_hash = 3;</code>
+     */
+    protected $double_hash = false;
+    /**
+     *Use the compact (pubkey recoverable) format instead of the raw lnwire
+     *format. This option cannot be used with Schnorr signatures.
+     *
+     * Generated from protobuf field <code>bool compact_sig = 4;</code>
+     */
+    protected $compact_sig = false;
+    /**
+     *Use Schnorr signature. This option cannot be used with compact format.
+     *
+     * Generated from protobuf field <code>bool schnorr_sig = 5;</code>
+     */
+    protected $schnorr_sig = false;
+    /**
+     *The optional Taproot tweak bytes to apply to the private key before creating
+     *a Schnorr signature. The private key is tweaked as described in BIP-341:
+     *privKey + h_tapTweak(internalKey || tapTweak)
+     *
+     * Generated from protobuf field <code>bytes schnorr_sig_tap_tweak = 6;</code>
+     */
+    protected $schnorr_sig_tap_tweak = '';
 
     /**
      * Constructor.
@@ -33,9 +61,21 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $msg
-     *           The message to be signed.
+     *          The message to be signed. When using REST, this field must be encoded as
+     *          base64.
      *     @type \Signrpc\KeyLocator $key_loc
      *           The key locator that identifies which key to use for signing.
+     *     @type bool $double_hash
+     *           Double-SHA256 hash instead of just the default single round.
+     *     @type bool $compact_sig
+     *          Use the compact (pubkey recoverable) format instead of the raw lnwire
+     *          format. This option cannot be used with Schnorr signatures.
+     *     @type bool $schnorr_sig
+     *          Use Schnorr signature. This option cannot be used with compact format.
+     *     @type string $schnorr_sig_tap_tweak
+     *          The optional Taproot tweak bytes to apply to the private key before creating
+     *          a Schnorr signature. The private key is tweaked as described in BIP-341:
+     *          privKey + h_tapTweak(internalKey || tapTweak)
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +84,8 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The message to be signed.
+     *The message to be signed. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @return string
@@ -55,7 +96,8 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The message to be signed.
+     *The message to be signed. When using REST, this field must be encoded as
+     *base64.
      *
      * Generated from protobuf field <code>bytes msg = 1;</code>
      * @param string $var
@@ -73,11 +115,21 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
      * The key locator that identifies which key to use for signing.
      *
      * Generated from protobuf field <code>.signrpc.KeyLocator key_loc = 2;</code>
-     * @return \Signrpc\KeyLocator
+     * @return \Signrpc\KeyLocator|null
      */
     public function getKeyLoc()
     {
         return $this->key_loc;
+    }
+
+    public function hasKeyLoc()
+    {
+        return isset($this->key_loc);
+    }
+
+    public function clearKeyLoc()
+    {
+        unset($this->key_loc);
     }
 
     /**
@@ -91,6 +143,116 @@ class SignMessageReq extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Signrpc\KeyLocator::class);
         $this->key_loc = $var;
+
+        return $this;
+    }
+
+    /**
+     * Double-SHA256 hash instead of just the default single round.
+     *
+     * Generated from protobuf field <code>bool double_hash = 3;</code>
+     * @return bool
+     */
+    public function getDoubleHash()
+    {
+        return $this->double_hash;
+    }
+
+    /**
+     * Double-SHA256 hash instead of just the default single round.
+     *
+     * Generated from protobuf field <code>bool double_hash = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDoubleHash($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->double_hash = $var;
+
+        return $this;
+    }
+
+    /**
+     *Use the compact (pubkey recoverable) format instead of the raw lnwire
+     *format. This option cannot be used with Schnorr signatures.
+     *
+     * Generated from protobuf field <code>bool compact_sig = 4;</code>
+     * @return bool
+     */
+    public function getCompactSig()
+    {
+        return $this->compact_sig;
+    }
+
+    /**
+     *Use the compact (pubkey recoverable) format instead of the raw lnwire
+     *format. This option cannot be used with Schnorr signatures.
+     *
+     * Generated from protobuf field <code>bool compact_sig = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setCompactSig($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->compact_sig = $var;
+
+        return $this;
+    }
+
+    /**
+     *Use Schnorr signature. This option cannot be used with compact format.
+     *
+     * Generated from protobuf field <code>bool schnorr_sig = 5;</code>
+     * @return bool
+     */
+    public function getSchnorrSig()
+    {
+        return $this->schnorr_sig;
+    }
+
+    /**
+     *Use Schnorr signature. This option cannot be used with compact format.
+     *
+     * Generated from protobuf field <code>bool schnorr_sig = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSchnorrSig($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->schnorr_sig = $var;
+
+        return $this;
+    }
+
+    /**
+     *The optional Taproot tweak bytes to apply to the private key before creating
+     *a Schnorr signature. The private key is tweaked as described in BIP-341:
+     *privKey + h_tapTweak(internalKey || tapTweak)
+     *
+     * Generated from protobuf field <code>bytes schnorr_sig_tap_tweak = 6;</code>
+     * @return string
+     */
+    public function getSchnorrSigTapTweak()
+    {
+        return $this->schnorr_sig_tap_tweak;
+    }
+
+    /**
+     *The optional Taproot tweak bytes to apply to the private key before creating
+     *a Schnorr signature. The private key is tweaked as described in BIP-341:
+     *privKey + h_tapTweak(internalKey || tapTweak)
+     *
+     * Generated from protobuf field <code>bytes schnorr_sig_tap_tweak = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSchnorrSigTapTweak($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->schnorr_sig_tap_tweak = $var;
 
         return $this;
     }

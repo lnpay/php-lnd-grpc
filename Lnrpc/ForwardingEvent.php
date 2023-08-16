@@ -81,6 +81,18 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint64 timestamp_ns = 11;</code>
      */
     protected $timestamp_ns = 0;
+    /**
+     * The peer alias of the incoming channel.
+     *
+     * Generated from protobuf field <code>string peer_alias_in = 12;</code>
+     */
+    protected $peer_alias_in = '';
+    /**
+     * The peer alias of the outgoing channel.
+     *
+     * Generated from protobuf field <code>string peer_alias_out = 13;</code>
+     */
+    protected $peer_alias_out = '';
 
     /**
      * Constructor.
@@ -115,6 +127,10 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
      *     @type int|string $timestamp_ns
      *           The number of nanoseconds elapsed since January 1, 1970 UTC when this
      *           circuit was completed.
+     *     @type string $peer_alias_in
+     *           The peer alias of the incoming channel.
+     *     @type string $peer_alias_out
+     *           The peer alias of the outgoing channel.
      * }
      */
     public function __construct($data = NULL) {
@@ -396,6 +412,58 @@ class ForwardingEvent extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->timestamp_ns = $var;
+
+        return $this;
+    }
+
+    /**
+     * The peer alias of the incoming channel.
+     *
+     * Generated from protobuf field <code>string peer_alias_in = 12;</code>
+     * @return string
+     */
+    public function getPeerAliasIn()
+    {
+        return $this->peer_alias_in;
+    }
+
+    /**
+     * The peer alias of the incoming channel.
+     *
+     * Generated from protobuf field <code>string peer_alias_in = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPeerAliasIn($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->peer_alias_in = $var;
+
+        return $this;
+    }
+
+    /**
+     * The peer alias of the outgoing channel.
+     *
+     * Generated from protobuf field <code>string peer_alias_out = 13;</code>
+     * @return string
+     */
+    public function getPeerAliasOut()
+    {
+        return $this->peer_alias_out;
+    }
+
+    /**
+     * The peer alias of the outgoing channel.
+     *
+     * Generated from protobuf field <code>string peer_alias_out = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPeerAliasOut($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->peer_alias_out = $var;
 
         return $this;
     }

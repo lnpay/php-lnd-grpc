@@ -7,19 +7,29 @@ namespace Lnrpc\PendingChannelsResponse\ForceClosedChannel;
 use UnexpectedValueException;
 
 /**
+ *There are three resolution states for the anchor:
+ *limbo, lost and recovered. Derive the current state
+ *from the limbo and recovered balances.
+ *
  * Protobuf type <code>lnrpc.PendingChannelsResponse.ForceClosedChannel.AnchorState</code>
  */
 class AnchorState
 {
     /**
+     * The recovered_balance is zero and limbo_balance is non-zero.
+     *
      * Generated from protobuf enum <code>LIMBO = 0;</code>
      */
     const LIMBO = 0;
     /**
+     * The recovered_balance is non-zero.
+     *
      * Generated from protobuf enum <code>RECOVERED = 1;</code>
      */
     const RECOVERED = 1;
     /**
+     * A state that is neither LIMBO nor RECOVERED.
+     *
      * Generated from protobuf enum <code>LOST = 2;</code>
      */
     const LOST = 2;

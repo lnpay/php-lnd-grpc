@@ -33,11 +33,18 @@ class ConfDetails extends \Google\Protobuf\Internal\Message
      */
     protected $block_height = 0;
     /**
-     * The index of the confirmed transaction within the transaction.
+     * The index of the confirmed transaction within the block.
      *
      * Generated from protobuf field <code>uint32 tx_index = 4;</code>
      */
     protected $tx_index = 0;
+    /**
+     *The raw bytes of the block that mined the transaction. Only included if
+     *include_block was set in the request.
+     *
+     * Generated from protobuf field <code>bytes raw_block = 5;</code>
+     */
+    protected $raw_block = '';
 
     /**
      * Constructor.
@@ -53,7 +60,10 @@ class ConfDetails extends \Google\Protobuf\Internal\Message
      *           The height of the block in which the confirmed transaction was included
      *           in.
      *     @type int $tx_index
-     *           The index of the confirmed transaction within the transaction.
+     *           The index of the confirmed transaction within the block.
+     *     @type string $raw_block
+     *          The raw bytes of the block that mined the transaction. Only included if
+     *          include_block was set in the request.
      * }
      */
     public function __construct($data = NULL) {
@@ -142,7 +152,7 @@ class ConfDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The index of the confirmed transaction within the transaction.
+     * The index of the confirmed transaction within the block.
      *
      * Generated from protobuf field <code>uint32 tx_index = 4;</code>
      * @return int
@@ -153,7 +163,7 @@ class ConfDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The index of the confirmed transaction within the transaction.
+     * The index of the confirmed transaction within the block.
      *
      * Generated from protobuf field <code>uint32 tx_index = 4;</code>
      * @param int $var
@@ -163,6 +173,34 @@ class ConfDetails extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->tx_index = $var;
+
+        return $this;
+    }
+
+    /**
+     *The raw bytes of the block that mined the transaction. Only included if
+     *include_block was set in the request.
+     *
+     * Generated from protobuf field <code>bytes raw_block = 5;</code>
+     * @return string
+     */
+    public function getRawBlock()
+    {
+        return $this->raw_block;
+    }
+
+    /**
+     *The raw bytes of the block that mined the transaction. Only included if
+     *include_block was set in the request.
+     *
+     * Generated from protobuf field <code>bytes raw_block = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRawBlock($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->raw_block = $var;
 
         return $this;
     }

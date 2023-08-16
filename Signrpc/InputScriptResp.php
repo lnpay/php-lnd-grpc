@@ -26,7 +26,7 @@ class InputScriptResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Signrpc\InputScript[]|\Google\Protobuf\Internal\RepeatedField $input_scripts
+     *     @type array<\Signrpc\InputScript>|\Google\Protobuf\Internal\RepeatedField $input_scripts
      *           The set of fully valid input scripts requested.
      * }
      */
@@ -50,7 +50,7 @@ class InputScriptResp extends \Google\Protobuf\Internal\Message
      * The set of fully valid input scripts requested.
      *
      * Generated from protobuf field <code>repeated .signrpc.InputScript input_scripts = 1;</code>
-     * @param \Signrpc\InputScript[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Signrpc\InputScript>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInputScripts($var)

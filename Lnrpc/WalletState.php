@@ -12,18 +12,28 @@ use UnexpectedValueException;
 class WalletState
 {
     /**
+     * NON_EXISTING means that the wallet has not yet been initialized.
+     *
      * Generated from protobuf enum <code>NON_EXISTING = 0;</code>
      */
     const NON_EXISTING = 0;
     /**
+     * LOCKED means that the wallet is locked and requires a password to unlock.
+     *
      * Generated from protobuf enum <code>LOCKED = 1;</code>
      */
     const LOCKED = 1;
     /**
+     * UNLOCKED means that the wallet was unlocked successfully, but RPC server
+     * isn't ready.
+     *
      * Generated from protobuf enum <code>UNLOCKED = 2;</code>
      */
     const UNLOCKED = 2;
     /**
+     * RPC_ACTIVE means that the lnd server is active but not fully ready for
+     * calls.
+     *
      * Generated from protobuf enum <code>RPC_ACTIVE = 3;</code>
      */
     const RPC_ACTIVE = 3;
@@ -34,6 +44,9 @@ class WalletState
      */
     const SERVER_ACTIVE = 4;
     /**
+     * WAITING_TO_START means that node is waiting to become the leader in a
+     * cluster and is not started yet.
+     *
      * Generated from protobuf enum <code>WAITING_TO_START = 255;</code>
      */
     const WAITING_TO_START = 255;

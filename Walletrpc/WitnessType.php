@@ -114,6 +114,85 @@ class WitnessType
      * Generated from protobuf enum <code>COMMITMENT_ANCHOR = 13;</code>
      */
     const COMMITMENT_ANCHOR = 13;
+    /**
+     *A witness type that is similar to the COMMITMENT_NO_DELAY type,
+     *but it omits the tweak that randomizes the key we need to
+     *spend with a channel peer supplied set of randomness.
+     *
+     * Generated from protobuf enum <code>COMMITMENT_NO_DELAY_TWEAKLESS = 14;</code>
+     */
+    const COMMITMENT_NO_DELAY_TWEAKLESS = 14;
+    /**
+     *A witness type that allows us to spend our output on the counterparty's
+     *commitment transaction after a confirmation.
+     *
+     * Generated from protobuf enum <code>COMMITMENT_TO_REMOTE_CONFIRMED = 15;</code>
+     */
+    const COMMITMENT_TO_REMOTE_CONFIRMED = 15;
+    /**
+     *A witness type that allows us to sweep an HTLC output that we extended
+     *to a party, but was never fulfilled. This _is_ the HTLC output directly
+     *on our commitment transaction, and the input to the second-level HTLC
+     *timeout transaction. It can only be spent after CLTV expiry, and
+     *commitment confirmation.
+     *
+     * Generated from protobuf enum <code>HTLC_OFFERED_TIMEOUT_SECOND_LEVEL_INPUT_CONFIRMED = 16;</code>
+     */
+    const HTLC_OFFERED_TIMEOUT_SECOND_LEVEL_INPUT_CONFIRMED = 16;
+    /**
+     *A witness type that allows us to sweep an HTLC output that was offered
+     *to us, and for which we have a payment preimage. This _is_ the HTLC
+     *output directly on our commitment transaction, and the input to the
+     *second-level HTLC success transaction. It can only be spent after the
+     *commitment has confirmed.
+     *
+     * Generated from protobuf enum <code>HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL_INPUT_CONFIRMED = 17;</code>
+     */
+    const HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL_INPUT_CONFIRMED = 17;
+    /**
+     *A witness type that allows us to spend our output on our local
+     *commitment transaction after a relative and absolute lock-time lockout as
+     *part of the script enforced lease commitment type.
+     *
+     * Generated from protobuf enum <code>LEASE_COMMITMENT_TIME_LOCK = 18;</code>
+     */
+    const LEASE_COMMITMENT_TIME_LOCK = 18;
+    /**
+     *A witness type that allows us to spend our output on the counterparty's
+     *commitment transaction after a confirmation and absolute locktime as part
+     *of the script enforced lease commitment type.
+     *
+     * Generated from protobuf enum <code>LEASE_COMMITMENT_TO_REMOTE_CONFIRMED = 19;</code>
+     */
+    const LEASE_COMMITMENT_TO_REMOTE_CONFIRMED = 19;
+    /**
+     *A witness type that allows us to sweep an HTLC output that we extended
+     *to a party, but was never fulfilled. This HTLC output isn't directly on
+     *the commitment transaction, but is the result of a confirmed second-level
+     *HTLC transaction. As a result, we can only spend this after a CSV delay
+     *and CLTV locktime as part of the script enforced lease commitment type.
+     *
+     * Generated from protobuf enum <code>LEASE_HTLC_OFFERED_TIMEOUT_SECOND_LEVEL = 20;</code>
+     */
+    const LEASE_HTLC_OFFERED_TIMEOUT_SECOND_LEVEL = 20;
+    /**
+     *A witness type that allows us to sweep an HTLC output that was offered
+     *to us, and for which we have a payment preimage. This HTLC output isn't
+     *directly on our commitment transaction, but is the result of confirmed
+     *second-level HTLC transaction. As a result, we can only spend this after
+     *a CSV delay and CLTV locktime as part of the script enforced lease
+     *commitment type.
+     *
+     * Generated from protobuf enum <code>LEASE_HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL = 21;</code>
+     */
+    const LEASE_HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL = 21;
+    /**
+     *A witness type that allows us to spend a regular p2tr output that's sent
+     *to an output which is under complete control of the backing wallet.
+     *
+     * Generated from protobuf enum <code>TAPROOT_PUB_KEY_SPEND = 22;</code>
+     */
+    const TAPROOT_PUB_KEY_SPEND = 22;
 
     private static $valueToName = [
         self::UNKNOWN_WITNESS => 'UNKNOWN_WITNESS',
@@ -130,6 +209,15 @@ class WitnessType
         self::WITNESS_KEY_HASH => 'WITNESS_KEY_HASH',
         self::NESTED_WITNESS_KEY_HASH => 'NESTED_WITNESS_KEY_HASH',
         self::COMMITMENT_ANCHOR => 'COMMITMENT_ANCHOR',
+        self::COMMITMENT_NO_DELAY_TWEAKLESS => 'COMMITMENT_NO_DELAY_TWEAKLESS',
+        self::COMMITMENT_TO_REMOTE_CONFIRMED => 'COMMITMENT_TO_REMOTE_CONFIRMED',
+        self::HTLC_OFFERED_TIMEOUT_SECOND_LEVEL_INPUT_CONFIRMED => 'HTLC_OFFERED_TIMEOUT_SECOND_LEVEL_INPUT_CONFIRMED',
+        self::HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL_INPUT_CONFIRMED => 'HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL_INPUT_CONFIRMED',
+        self::LEASE_COMMITMENT_TIME_LOCK => 'LEASE_COMMITMENT_TIME_LOCK',
+        self::LEASE_COMMITMENT_TO_REMOTE_CONFIRMED => 'LEASE_COMMITMENT_TO_REMOTE_CONFIRMED',
+        self::LEASE_HTLC_OFFERED_TIMEOUT_SECOND_LEVEL => 'LEASE_HTLC_OFFERED_TIMEOUT_SECOND_LEVEL',
+        self::LEASE_HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL => 'LEASE_HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL',
+        self::TAPROOT_PUB_KEY_SPEND => 'TAPROOT_PUB_KEY_SPEND',
     ];
 
     public static function name($value)

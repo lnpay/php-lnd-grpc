@@ -43,6 +43,13 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 num_max_events = 4;</code>
      */
     protected $num_max_events = 0;
+    /**
+     * Informs the server if the peer alias should be looked up for each
+     * forwarding event.
+     *
+     * Generated from protobuf field <code>bool peer_alias_lookup = 5;</code>
+     */
+    protected $peer_alias_lookup = false;
 
     /**
      * Constructor.
@@ -64,6 +71,9 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
      *           around within a packed time series.
      *     @type int $num_max_events
      *           The max number of events to return in the response to this query.
+     *     @type bool $peer_alias_lookup
+     *           Informs the server if the peer alias should be looked up for each
+     *           forwarding event.
      * }
      */
     public function __construct($data = NULL) {
@@ -183,6 +193,34 @@ class ForwardingHistoryRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->num_max_events = $var;
+
+        return $this;
+    }
+
+    /**
+     * Informs the server if the peer alias should be looked up for each
+     * forwarding event.
+     *
+     * Generated from protobuf field <code>bool peer_alias_lookup = 5;</code>
+     * @return bool
+     */
+    public function getPeerAliasLookup()
+    {
+        return $this->peer_alias_lookup;
+    }
+
+    /**
+     * Informs the server if the peer alias should be looked up for each
+     * forwarding event.
+     *
+     * Generated from protobuf field <code>bool peer_alias_lookup = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPeerAliasLookup($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->peer_alias_lookup = $var;
 
         return $this;
     }
