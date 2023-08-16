@@ -180,6 +180,85 @@ class WalletKitClient extends \Grpc\BaseStub {
 
     /**
      *
+     * ListAddresses retrieves all the addresses along with their balance. An
+     * account name filter can be provided to filter through all of the
+     * wallet accounts and return the addresses of only those matching.
+     * @param \Walletrpc\ListAddressesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ListAddresses(\Walletrpc\ListAddressesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/ListAddresses',
+        $argument,
+        ['\Walletrpc\ListAddressesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * SignMessageWithAddr returns the compact signature (base64 encoded) created
+     * with the private key of the provided address. This requires the address
+     * to be solely based on a public key lock (no scripts). Obviously the internal
+     * lnd wallet has to possess the private key of the address otherwise
+     * an error is returned.
+     *
+     * This method aims to provide full compatibility with the bitcoin-core and
+     * btcd implementation. Bitcoin-core's algorithm is not specified in a
+     * BIP and only applicable for legacy addresses. This method enhances the
+     * signing for additional address types: P2WKH, NP2WKH, P2TR.
+     * For P2TR addresses this represents a special case. ECDSA is used to create
+     * a compact signature which makes the public key of the signature recoverable.
+     * @param \Walletrpc\SignMessageWithAddrRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SignMessageWithAddr(\Walletrpc\SignMessageWithAddrRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/SignMessageWithAddr',
+        $argument,
+        ['\Walletrpc\SignMessageWithAddrResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * VerifyMessageWithAddr returns the validity and the recovered public key of
+     * the provided compact signature (base64 encoded). The verification is
+     * twofold. First the validity of the signature itself is checked and then
+     * it is verified that the recovered public key of the signature equals
+     * the public key of the provided address. There is no dependence on the
+     * private key of the address therefore also external addresses are allowed
+     * to verify signatures.
+     * Supported address types are P2PKH, P2WKH, NP2WKH, P2TR.
+     *
+     * This method is the counterpart of the related signing method
+     * (SignMessageWithAddr) and aims to provide full compatibility to
+     * bitcoin-core's implementation. Although bitcoin-core/btcd only provide
+     * this functionality for legacy addresses this function enhances it to
+     * the address types: P2PKH, P2WKH, NP2WKH, P2TR.
+     *
+     * The verification for P2TR addresses is a special case and requires the
+     * ECDSA compact signature to compare the reovered public key to the internal
+     * taproot key. The compact ECDSA signature format was used because there
+     * are still no known compact signature schemes for schnorr signatures.
+     * @param \Walletrpc\VerifyMessageWithAddrRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function VerifyMessageWithAddr(\Walletrpc\VerifyMessageWithAddrRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/VerifyMessageWithAddr',
+        $argument,
+        ['\Walletrpc\VerifyMessageWithAddrResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
      * ImportAccount imports an account backed by an account extended public key.
      * The master key fingerprint denotes the fingerprint of the root key
      * corresponding to the account public key (also known as the key with
@@ -218,7 +297,11 @@ class WalletKitClient extends \Grpc\BaseStub {
 
     /**
      *
-     * ImportPublicKey imports a public key as watch-only into the wallet.
+     * ImportPublicKey imports a public key as watch-only into the wallet. The
+     * public key is converted into a simple address of the given type and that
+     * address script is watched on chain. For Taproot keys, this will only watch
+     * the BIP-0086 style output script. Use ImportTapscript for more advanced key
+     * spend or script spend outputs.
      *
      * NOTE: Events (deposits/spends) for a key will only be detected by lnd if
      * they happen after the import. Rescans to detect past events will be
@@ -233,6 +316,32 @@ class WalletKitClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/walletrpc.WalletKit/ImportPublicKey',
         $argument,
         ['\Walletrpc\ImportPublicKeyResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     *
+     * ImportTapscript imports a Taproot script and internal key and adds the
+     * resulting Taproot output key as a watch-only output script into the wallet.
+     * For BIP-0086 style Taproot keys (no root hash commitment and no script spend
+     * path) use ImportPublicKey.
+     *
+     * NOTE: Events (deposits/spends) for a key will only be detected by lnd if
+     * they happen after the import. Rescans to detect past events will be
+     * supported later on.
+     *
+     * NOTE: Taproot keys imported through this RPC currently _cannot_ be used for
+     * funding PSBTs. Only tracking the balance and UTXOs is currently supported.
+     * @param \Walletrpc\ImportTapscriptRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ImportTapscript(\Walletrpc\ImportTapscriptRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/walletrpc.WalletKit/ImportTapscript',
+        $argument,
+        ['\Walletrpc\ImportTapscriptResponse', 'decode'],
         $metadata, $options);
     }
 

@@ -14,7 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class LabelTransactionRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The txid of the transaction to label.
+     * The txid of the transaction to label. Note: When using gRPC, the bytes
+     * must be in little-endian (reverse) order.
      *
      * Generated from protobuf field <code>bytes txid = 1;</code>
      */
@@ -39,7 +40,8 @@ class LabelTransactionRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $txid
-     *           The txid of the transaction to label.
+     *           The txid of the transaction to label. Note: When using gRPC, the bytes
+     *           must be in little-endian (reverse) order.
      *     @type string $label
      *           The label to add to the transaction, limited to 500 characters.
      *     @type bool $overwrite
@@ -52,7 +54,8 @@ class LabelTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The txid of the transaction to label.
+     * The txid of the transaction to label. Note: When using gRPC, the bytes
+     * must be in little-endian (reverse) order.
      *
      * Generated from protobuf field <code>bytes txid = 1;</code>
      * @return string
@@ -63,7 +66,8 @@ class LabelTransactionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The txid of the transaction to label.
+     * The txid of the transaction to label. Note: When using gRPC, the bytes
+     * must be in little-endian (reverse) order.
      *
      * Generated from protobuf field <code>bytes txid = 1;</code>
      * @param string $var

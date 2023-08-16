@@ -41,6 +41,12 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 last_update = 7;</code>
      */
     protected $last_update = 0;
+    /**
+     * Custom channel update tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 8;</code>
+     */
+    private $custom_records;
 
     /**
      * Constructor.
@@ -55,6 +61,8 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
      *     @type bool $disabled
      *     @type int|string $max_htlc_msat
      *     @type int $last_update
+     *     @type array|\Google\Protobuf\Internal\MapField $custom_records
+     *           Custom channel update tlv records.
      * }
      */
     public function __construct($data = NULL) {
@@ -212,6 +220,32 @@ class RoutingPolicy extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->last_update = $var;
+
+        return $this;
+    }
+
+    /**
+     * Custom channel update tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 8;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getCustomRecords()
+    {
+        return $this->custom_records;
+    }
+
+    /**
+     * Custom channel update tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 8;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setCustomRecords($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
+        $this->custom_records = $arr;
 
         return $this;
     }

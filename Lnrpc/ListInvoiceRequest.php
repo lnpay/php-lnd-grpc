@@ -40,6 +40,20 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool reversed = 6;</code>
      */
     protected $reversed = false;
+    /**
+     * If set, returns all invoices with a creation date greater than or equal
+     * to it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_start = 7;</code>
+     */
+    protected $creation_date_start = 0;
+    /**
+     * If set, returns all invoices with a creation date less than or equal to
+     * it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_end = 8;</code>
+     */
+    protected $creation_date_end = 0;
 
     /**
      * Constructor.
@@ -58,6 +72,12 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $reversed
      *          If set, the invoices returned will result from seeking backwards from the
      *          specified index offset. This can be used to paginate backwards.
+     *     @type int|string $creation_date_start
+     *           If set, returns all invoices with a creation date greater than or equal
+     *           to it. Measured in seconds since the unix epoch.
+     *     @type int|string $creation_date_end
+     *           If set, returns all invoices with a creation date less than or equal to
+     *           it. Measured in seconds since the unix epoch.
      * }
      */
     public function __construct($data = NULL) {
@@ -171,6 +191,62 @@ class ListInvoiceRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->reversed = $var;
+
+        return $this;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date greater than or equal
+     * to it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_start = 7;</code>
+     * @return int|string
+     */
+    public function getCreationDateStart()
+    {
+        return $this->creation_date_start;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date greater than or equal
+     * to it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_start = 7;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreationDateStart($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->creation_date_start = $var;
+
+        return $this;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date less than or equal to
+     * it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_end = 8;</code>
+     * @return int|string
+     */
+    public function getCreationDateEnd()
+    {
+        return $this->creation_date_end;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date less than or equal to
+     * it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_end = 8;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreationDateEnd($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->creation_date_end = $var;
 
         return $this;
     }

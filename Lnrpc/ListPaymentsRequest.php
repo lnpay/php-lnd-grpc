@@ -55,6 +55,20 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool count_total_payments = 5;</code>
      */
     protected $count_total_payments = false;
+    /**
+     * If set, returns all invoices with a creation date greater than or equal
+     * to it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_start = 6;</code>
+     */
+    protected $creation_date_start = 0;
+    /**
+     * If set, returns all invoices with a creation date less than or equal to
+     * it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_end = 7;</code>
+     */
+    protected $creation_date_end = 0;
 
     /**
      * Constructor.
@@ -84,6 +98,12 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
      *          max_payments parameter) will be counted. Note that setting this to true will
      *          increase the run time of the call significantly on systems that have a lot
      *          of payments, as all of them have to be iterated through to be counted.
+     *     @type int|string $creation_date_start
+     *           If set, returns all invoices with a creation date greater than or equal
+     *           to it. Measured in seconds since the unix epoch.
+     *     @type int|string $creation_date_end
+     *           If set, returns all invoices with a creation date less than or equal to
+     *           it. Measured in seconds since the unix epoch.
      * }
      */
     public function __construct($data = NULL) {
@@ -241,6 +261,62 @@ class ListPaymentsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->count_total_payments = $var;
+
+        return $this;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date greater than or equal
+     * to it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_start = 6;</code>
+     * @return int|string
+     */
+    public function getCreationDateStart()
+    {
+        return $this->creation_date_start;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date greater than or equal
+     * to it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_start = 6;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreationDateStart($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->creation_date_start = $var;
+
+        return $this;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date less than or equal to
+     * it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_end = 7;</code>
+     * @return int|string
+     */
+    public function getCreationDateEnd()
+    {
+        return $this->creation_date_end;
+    }
+
+    /**
+     * If set, returns all invoices with a creation date less than or equal to
+     * it. Measured in seconds since the unix epoch.
+     *
+     * Generated from protobuf field <code>uint64 creation_date_end = 7;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreationDateEnd($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->creation_date_end = $var;
 
         return $this;
     }

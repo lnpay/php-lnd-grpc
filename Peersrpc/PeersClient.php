@@ -5,7 +5,7 @@ namespace Peersrpc;
 
 /**
  * Peers is a service that can be used to get information and interact
- * with the other nodes of the newtwork.
+ * with the other nodes of the network.
  */
 class PeersClient extends \Grpc\BaseStub {
 

@@ -21,6 +21,9 @@ class SendCustomMessageRequest extends \Google\Protobuf\Internal\Message
     protected $peer = '';
     /**
      * Message type. This value needs to be in the custom range (>= 32768).
+     * To send a type < custom range, lnd needs to be compiled with the `dev`
+     * build tag, and the message type to override should be specified in lnd's
+     * experimental protocol configuration.
      *
      * Generated from protobuf field <code>uint32 type = 2;</code>
      */
@@ -42,6 +45,9 @@ class SendCustomMessageRequest extends \Google\Protobuf\Internal\Message
      *           Peer to send the message to
      *     @type int $type
      *           Message type. This value needs to be in the custom range (>= 32768).
+     *           To send a type < custom range, lnd needs to be compiled with the `dev`
+     *           build tag, and the message type to override should be specified in lnd's
+     *           experimental protocol configuration.
      *     @type string $data
      *           Raw message data.
      * }
@@ -79,6 +85,9 @@ class SendCustomMessageRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Message type. This value needs to be in the custom range (>= 32768).
+     * To send a type < custom range, lnd needs to be compiled with the `dev`
+     * build tag, and the message type to override should be specified in lnd's
+     * experimental protocol configuration.
      *
      * Generated from protobuf field <code>uint32 type = 2;</code>
      * @return int
@@ -90,6 +99,9 @@ class SendCustomMessageRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Message type. This value needs to be in the custom range (>= 32768).
+     * To send a type < custom range, lnd needs to be compiled with the `dev`
+     * build tag, and the message type to override should be specified in lnd's
+     * experimental protocol configuration.
      *
      * Generated from protobuf field <code>uint32 type = 2;</code>
      * @param int $var

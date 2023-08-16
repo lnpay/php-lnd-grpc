@@ -53,7 +53,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     protected $value_msat = 0;
     /**
-     *Whether this invoice has been fulfilled
+     *Whether this invoice has been fulfilled.
      *The field is deprecated. Use the state field instead (compare to SETTLED).
      *
      * Generated from protobuf field <code>bool settled = 6 [deprecated = true];</code>
@@ -62,6 +62,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     protected $settled = false;
     /**
      *When this invoice was created.
+     *Measured in seconds since the unix epoch.
      *Note: Output only, don't specify for creating an invoice.
      *
      * Generated from protobuf field <code>int64 creation_date = 7;</code>
@@ -69,6 +70,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     protected $creation_date = 0;
     /**
      *When this invoice was settled.
+     *Measured in seconds since the unix epoch.
      *Note: Output only, don't specify for creating an invoice.
      *
      * Generated from protobuf field <code>int64 settle_date = 8;</code>
@@ -93,7 +95,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     protected $description_hash = '';
     /**
-     * Payment request expiry time in seconds. Default is 3600 (1 hour).
+     * Payment request expiry time in seconds. Default is 86400 (24 hours).
      *
      * Generated from protobuf field <code>int64 expiry = 11;</code>
      */
@@ -119,6 +121,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     private $route_hints;
     /**
      * Whether this invoice should include routing hints for private channels.
+     * Note: When enabled, if value and value_msat are zero, a large number of
+     * hints with these channels can be included, which might not be desirable.
      *
      * Generated from protobuf field <code>bool private = 15;</code>
      */
@@ -256,13 +260,15 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          The value of this invoice in millisatoshis
      *          The fields value and value_msat are mutually exclusive.
      *     @type bool $settled
-     *          Whether this invoice has been fulfilled
+     *          Whether this invoice has been fulfilled.
      *          The field is deprecated. Use the state field instead (compare to SETTLED).
      *     @type int|string $creation_date
      *          When this invoice was created.
+     *          Measured in seconds since the unix epoch.
      *          Note: Output only, don't specify for creating an invoice.
      *     @type int|string $settle_date
      *          When this invoice was settled.
+     *          Measured in seconds since the unix epoch.
      *          Note: Output only, don't specify for creating an invoice.
      *     @type string $payment_request
      *          A bare-bones invoice for a payment within the Lightning Network. With the
@@ -275,7 +281,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          of an encoded payment request. When using REST, this field must be encoded
      *          as base64.
      *     @type int|string $expiry
-     *           Payment request expiry time in seconds. Default is 3600 (1 hour).
+     *           Payment request expiry time in seconds. Default is 86400 (24 hours).
      *     @type string $fallback_addr
      *           Fallback on-chain address.
      *     @type int|string $cltv_expiry
@@ -285,6 +291,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *          invoice's destination.
      *     @type bool $private
      *           Whether this invoice should include routing hints for private channels.
+     *           Note: When enabled, if value and value_msat are zero, a large number of
+     *           hints with these channels can be included, which might not be desirable.
      *     @type int|string $add_index
      *          The "add" index of this invoice. Each newly created invoice will increment
      *          this index making it monotonically increasing. Callers to the
@@ -498,7 +506,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Whether this invoice has been fulfilled
+     *Whether this invoice has been fulfilled.
      *The field is deprecated. Use the state field instead (compare to SETTLED).
      *
      * Generated from protobuf field <code>bool settled = 6 [deprecated = true];</code>
@@ -512,7 +520,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Whether this invoice has been fulfilled
+     *Whether this invoice has been fulfilled.
      *The field is deprecated. Use the state field instead (compare to SETTLED).
      *
      * Generated from protobuf field <code>bool settled = 6 [deprecated = true];</code>
@@ -531,6 +539,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      *When this invoice was created.
+     *Measured in seconds since the unix epoch.
      *Note: Output only, don't specify for creating an invoice.
      *
      * Generated from protobuf field <code>int64 creation_date = 7;</code>
@@ -543,6 +552,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      *When this invoice was created.
+     *Measured in seconds since the unix epoch.
      *Note: Output only, don't specify for creating an invoice.
      *
      * Generated from protobuf field <code>int64 creation_date = 7;</code>
@@ -559,6 +569,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      *When this invoice was settled.
+     *Measured in seconds since the unix epoch.
      *Note: Output only, don't specify for creating an invoice.
      *
      * Generated from protobuf field <code>int64 settle_date = 8;</code>
@@ -571,6 +582,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      *When this invoice was settled.
+     *Measured in seconds since the unix epoch.
      *Note: Output only, don't specify for creating an invoice.
      *
      * Generated from protobuf field <code>int64 settle_date = 8;</code>
@@ -650,7 +662,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Payment request expiry time in seconds. Default is 3600 (1 hour).
+     * Payment request expiry time in seconds. Default is 86400 (24 hours).
      *
      * Generated from protobuf field <code>int64 expiry = 11;</code>
      * @return int|string
@@ -661,7 +673,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Payment request expiry time in seconds. Default is 3600 (1 hour).
+     * Payment request expiry time in seconds. Default is 86400 (24 hours).
      *
      * Generated from protobuf field <code>int64 expiry = 11;</code>
      * @param int|string $var
@@ -757,6 +769,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      * Whether this invoice should include routing hints for private channels.
+     * Note: When enabled, if value and value_msat are zero, a large number of
+     * hints with these channels can be included, which might not be desirable.
      *
      * Generated from protobuf field <code>bool private = 15;</code>
      * @return bool
@@ -768,6 +782,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
 
     /**
      * Whether this invoice should include routing hints for private channels.
+     * Note: When enabled, if value and value_msat are zero, a large number of
+     * hints with these channels can be included, which might not be desirable.
      *
      * Generated from protobuf field <code>bool private = 15;</code>
      * @param bool $var

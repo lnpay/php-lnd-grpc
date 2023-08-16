@@ -30,6 +30,12 @@ class MuSig2CombineKeysResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes taproot_internal_key = 2;</code>
      */
     protected $taproot_internal_key = '';
+    /**
+     *The version of the MuSig2 BIP that was used to combine the keys.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 4;</code>
+     */
+    protected $version = 0;
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class MuSig2CombineKeysResponse extends \Google\Protobuf\Internal\Message
      *          are applied to it. If a taproot tweak is specified, this corresponds to the
      *          internal key that needs to be put into the witness if the script spend path
      *          is used.
+     *     @type int $version
+     *          The version of the MuSig2 BIP that was used to combine the keys.
      * }
      */
     public function __construct($data = NULL) {
@@ -111,6 +119,32 @@ class MuSig2CombineKeysResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->taproot_internal_key = $var;
+
+        return $this;
+    }
+
+    /**
+     *The version of the MuSig2 BIP that was used to combine the keys.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 4;</code>
+     * @return int
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     *The version of the MuSig2 BIP that was used to combine the keys.
+     *
+     * Generated from protobuf field <code>.signrpc.MuSig2Version version = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setVersion($var)
+    {
+        GPBUtil::checkEnum($var, \Signrpc\MuSig2Version::class);
+        $this->version = $var;
 
         return $this;
     }

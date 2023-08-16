@@ -45,6 +45,13 @@ class ConfRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 height_hint = 4;</code>
      */
     protected $height_hint = 0;
+    /**
+     *If true, then the block that mines the specified txid/script will be
+     *included in eventual the notification event.
+     *
+     * Generated from protobuf field <code>bool include_block = 5;</code>
+     */
+    protected $include_block = false;
 
     /**
      * Constructor.
@@ -68,6 +75,9 @@ class ConfRequest extends \Google\Protobuf\Internal\Message
      *          The earliest height in the chain for which the transaction/output script
      *          could have been included in a block. This should in most cases be set to the
      *          broadcast height of the transaction/output script.
+     *     @type bool $include_block
+     *          If true, then the block that mines the specified txid/script will be
+     *          included in eventual the notification event.
      * }
      */
     public function __construct($data = NULL) {
@@ -191,6 +201,34 @@ class ConfRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->height_hint = $var;
+
+        return $this;
+    }
+
+    /**
+     *If true, then the block that mines the specified txid/script will be
+     *included in eventual the notification event.
+     *
+     * Generated from protobuf field <code>bool include_block = 5;</code>
+     * @return bool
+     */
+    public function getIncludeBlock()
+    {
+        return $this->include_block;
+    }
+
+    /**
+     *If true, then the block that mines the specified txid/script will be
+     *included in eventual the notification event.
+     *
+     * Generated from protobuf field <code>bool include_block = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIncludeBlock($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->include_block = $var;
 
         return $this;
     }

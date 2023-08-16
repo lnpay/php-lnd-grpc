@@ -130,6 +130,12 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool require_htlc_interceptor = 21;</code>
      */
     protected $require_htlc_interceptor = false;
+    /**
+     * Indicates whether final htlc resolutions are stored on disk.
+     *
+     * Generated from protobuf field <code>bool store_final_htlc_resolutions = 22;</code>
+     */
+    protected $store_final_htlc_resolutions = false;
 
     /**
      * Constructor.
@@ -177,6 +183,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *          announcements and invoices.
      *     @type bool $require_htlc_interceptor
      *          Indicates whether the HTLC interceptor API is in always-on mode.
+     *     @type bool $store_final_htlc_resolutions
+     *           Indicates whether final htlc resolutions are stored on disk.
      * }
      */
     public function __construct($data = NULL) {
@@ -682,6 +690,32 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->require_htlc_interceptor = $var;
+
+        return $this;
+    }
+
+    /**
+     * Indicates whether final htlc resolutions are stored on disk.
+     *
+     * Generated from protobuf field <code>bool store_final_htlc_resolutions = 22;</code>
+     * @return bool
+     */
+    public function getStoreFinalHtlcResolutions()
+    {
+        return $this->store_final_htlc_resolutions;
+    }
+
+    /**
+     * Indicates whether final htlc resolutions are stored on disk.
+     *
+     * Generated from protobuf field <code>bool store_final_htlc_resolutions = 22;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setStoreFinalHtlcResolutions($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->store_final_htlc_resolutions = $var;
 
         return $this;
     }

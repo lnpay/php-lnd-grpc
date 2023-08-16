@@ -26,23 +26,38 @@ class Tower extends \Google\Protobuf\Internal\Message
      */
     private $addresses;
     /**
+     * Deprecated, use the active_session_candidate field under the
+     * correct identifier in the client_type map.
      * Whether the watchtower is currently a candidate for new sessions.
      *
-     * Generated from protobuf field <code>bool active_session_candidate = 3;</code>
+     * Generated from protobuf field <code>bool active_session_candidate = 3 [deprecated = true];</code>
+     * @deprecated
      */
     protected $active_session_candidate = false;
     /**
+     * Deprecated, use the num_sessions field under the correct identifier
+     * in the client_type map.
      * The number of sessions that have been negotiated with the watchtower.
      *
-     * Generated from protobuf field <code>uint32 num_sessions = 4;</code>
+     * Generated from protobuf field <code>uint32 num_sessions = 4 [deprecated = true];</code>
+     * @deprecated
      */
     protected $num_sessions = 0;
     /**
+     * Deprecated, use the sessions field under the correct identifier in the
+     * client_type map.
      * The list of sessions that have been negotiated with the watchtower.
      *
-     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5;</code>
+     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5 [deprecated = true];</code>
+     * @deprecated
      */
     private $sessions;
+    /**
+     * A list sessions held with the tower.
+     *
+     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSessionInfo session_info = 6;</code>
+     */
+    private $session_info;
 
     /**
      * Constructor.
@@ -55,11 +70,19 @@ class Tower extends \Google\Protobuf\Internal\Message
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $addresses
      *           The list of addresses the watchtower is reachable over.
      *     @type bool $active_session_candidate
+     *           Deprecated, use the active_session_candidate field under the
+     *           correct identifier in the client_type map.
      *           Whether the watchtower is currently a candidate for new sessions.
      *     @type int $num_sessions
+     *           Deprecated, use the num_sessions field under the correct identifier
+     *           in the client_type map.
      *           The number of sessions that have been negotiated with the watchtower.
      *     @type array<\Wtclientrpc\TowerSession>|\Google\Protobuf\Internal\RepeatedField $sessions
+     *           Deprecated, use the sessions field under the correct identifier in the
+     *           client_type map.
      *           The list of sessions that have been negotiated with the watchtower.
+     *     @type array<\Wtclientrpc\TowerSessionInfo>|\Google\Protobuf\Internal\RepeatedField $session_info
+     *           A list sessions held with the tower.
      * }
      */
     public function __construct($data = NULL) {
@@ -120,25 +143,33 @@ class Tower extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Deprecated, use the active_session_candidate field under the
+     * correct identifier in the client_type map.
      * Whether the watchtower is currently a candidate for new sessions.
      *
-     * Generated from protobuf field <code>bool active_session_candidate = 3;</code>
+     * Generated from protobuf field <code>bool active_session_candidate = 3 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getActiveSessionCandidate()
     {
+        @trigger_error('active_session_candidate is deprecated.', E_USER_DEPRECATED);
         return $this->active_session_candidate;
     }
 
     /**
+     * Deprecated, use the active_session_candidate field under the
+     * correct identifier in the client_type map.
      * Whether the watchtower is currently a candidate for new sessions.
      *
-     * Generated from protobuf field <code>bool active_session_candidate = 3;</code>
+     * Generated from protobuf field <code>bool active_session_candidate = 3 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setActiveSessionCandidate($var)
     {
+        @trigger_error('active_session_candidate is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->active_session_candidate = $var;
 
@@ -146,25 +177,33 @@ class Tower extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Deprecated, use the num_sessions field under the correct identifier
+     * in the client_type map.
      * The number of sessions that have been negotiated with the watchtower.
      *
-     * Generated from protobuf field <code>uint32 num_sessions = 4;</code>
+     * Generated from protobuf field <code>uint32 num_sessions = 4 [deprecated = true];</code>
      * @return int
+     * @deprecated
      */
     public function getNumSessions()
     {
+        @trigger_error('num_sessions is deprecated.', E_USER_DEPRECATED);
         return $this->num_sessions;
     }
 
     /**
+     * Deprecated, use the num_sessions field under the correct identifier
+     * in the client_type map.
      * The number of sessions that have been negotiated with the watchtower.
      *
-     * Generated from protobuf field <code>uint32 num_sessions = 4;</code>
+     * Generated from protobuf field <code>uint32 num_sessions = 4 [deprecated = true];</code>
      * @param int $var
      * @return $this
+     * @deprecated
      */
     public function setNumSessions($var)
     {
+        @trigger_error('num_sessions is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkUint32($var);
         $this->num_sessions = $var;
 
@@ -172,27 +211,61 @@ class Tower extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Deprecated, use the sessions field under the correct identifier in the
+     * client_type map.
      * The list of sessions that have been negotiated with the watchtower.
      *
-     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5;</code>
+     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5 [deprecated = true];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
+     * @deprecated
      */
     public function getSessions()
     {
+        @trigger_error('sessions is deprecated.', E_USER_DEPRECATED);
         return $this->sessions;
     }
 
     /**
+     * Deprecated, use the sessions field under the correct identifier in the
+     * client_type map.
      * The list of sessions that have been negotiated with the watchtower.
      *
-     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5;</code>
+     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSession sessions = 5 [deprecated = true];</code>
      * @param array<\Wtclientrpc\TowerSession>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
+     * @deprecated
      */
     public function setSessions($var)
     {
+        @trigger_error('sessions is deprecated.', E_USER_DEPRECATED);
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Wtclientrpc\TowerSession::class);
         $this->sessions = $arr;
+
+        return $this;
+    }
+
+    /**
+     * A list sessions held with the tower.
+     *
+     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSessionInfo session_info = 6;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getSessionInfo()
+    {
+        return $this->session_info;
+    }
+
+    /**
+     * A list sessions held with the tower.
+     *
+     * Generated from protobuf field <code>repeated .wtclientrpc.TowerSessionInfo session_info = 6;</code>
+     * @param array<\Wtclientrpc\TowerSessionInfo>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setSessionInfo($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Wtclientrpc\TowerSessionInfo::class);
+        $this->session_info = $arr;
 
         return $this;
     }

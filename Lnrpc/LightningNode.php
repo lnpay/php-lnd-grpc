@@ -42,6 +42,12 @@ class LightningNode extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>map<uint32, .lnrpc.Feature> features = 6;</code>
      */
     private $features;
+    /**
+     * Custom node announcement tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 7;</code>
+     */
+    private $custom_records;
 
     /**
      * Constructor.
@@ -55,6 +61,8 @@ class LightningNode extends \Google\Protobuf\Internal\Message
      *     @type array<\Lnrpc\NodeAddress>|\Google\Protobuf\Internal\RepeatedField $addresses
      *     @type string $color
      *     @type array|\Google\Protobuf\Internal\MapField $features
+     *     @type array|\Google\Protobuf\Internal\MapField $custom_records
+     *           Custom node announcement tlv records.
      * }
      */
     public function __construct($data = NULL) {
@@ -190,6 +198,32 @@ class LightningNode extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Lnrpc\Feature::class);
         $this->features = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Custom node announcement tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 7;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getCustomRecords()
+    {
+        return $this->custom_records;
+    }
+
+    /**
+     * Custom node announcement tlv records.
+     *
+     * Generated from protobuf field <code>map<uint64, bytes> custom_records = 7;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setCustomRecords($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT64, \Google\Protobuf\Internal\GPBType::BYTES);
+        $this->custom_records = $arr;
 
         return $this;
     }

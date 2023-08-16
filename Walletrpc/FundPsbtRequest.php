@@ -33,6 +33,15 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool spend_unconfirmed = 7;</code>
      */
     protected $spend_unconfirmed = false;
+    /**
+     * The address type for the change. If empty, P2WPKH addresses will be used
+     * for default accounts and single imported public keys. For custom
+     * accounts, no change type should be provided as the coin selection key
+     * scope will always be used to generate the change address.
+     *
+     * Generated from protobuf field <code>.walletrpc.ChangeAddressType change_type = 8;</code>
+     */
+    protected $change_type = 0;
     protected $template;
     protected $fees;
 
@@ -65,6 +74,11 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
      *           the transaction must satisfy.
      *     @type bool $spend_unconfirmed
      *           Whether unconfirmed outputs should be used as inputs for the transaction.
+     *     @type int $change_type
+     *           The address type for the change. If empty, P2WPKH addresses will be used
+     *           for default accounts and single imported public keys. For custom
+     *           accounts, no change type should be provided as the coin selection key
+     *           scope will always be used to generate the change address.
      * }
      */
     public function __construct($data = NULL) {
@@ -288,6 +302,38 @@ class FundPsbtRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->spend_unconfirmed = $var;
+
+        return $this;
+    }
+
+    /**
+     * The address type for the change. If empty, P2WPKH addresses will be used
+     * for default accounts and single imported public keys. For custom
+     * accounts, no change type should be provided as the coin selection key
+     * scope will always be used to generate the change address.
+     *
+     * Generated from protobuf field <code>.walletrpc.ChangeAddressType change_type = 8;</code>
+     * @return int
+     */
+    public function getChangeType()
+    {
+        return $this->change_type;
+    }
+
+    /**
+     * The address type for the change. If empty, P2WPKH addresses will be used
+     * for default accounts and single imported public keys. For custom
+     * accounts, no change type should be provided as the coin selection key
+     * scope will always be used to generate the change address.
+     *
+     * Generated from protobuf field <code>.walletrpc.ChangeAddressType change_type = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setChangeType($var)
+    {
+        GPBUtil::checkEnum($var, \Walletrpc\ChangeAddressType::class);
+        $this->change_type = $var;
 
         return $this;
     }

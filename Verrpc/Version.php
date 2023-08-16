@@ -18,43 +18,43 @@ class Version extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string commit = 1;</code>
      */
-    private $commit = '';
+    protected $commit = '';
     /**
      * The SHA1 commit hash that the daemon is compiled with.
      *
      * Generated from protobuf field <code>string commit_hash = 2;</code>
      */
-    private $commit_hash = '';
+    protected $commit_hash = '';
     /**
      * The semantic version.
      *
      * Generated from protobuf field <code>string version = 3;</code>
      */
-    private $version = '';
+    protected $version = '';
     /**
      * The major application version.
      *
      * Generated from protobuf field <code>uint32 app_major = 4;</code>
      */
-    private $app_major = 0;
+    protected $app_major = 0;
     /**
      * The minor application version.
      *
      * Generated from protobuf field <code>uint32 app_minor = 5;</code>
      */
-    private $app_minor = 0;
+    protected $app_minor = 0;
     /**
      * The application patch number.
      *
      * Generated from protobuf field <code>uint32 app_patch = 6;</code>
      */
-    private $app_patch = 0;
+    protected $app_patch = 0;
     /**
      * The application pre-release modifier, possibly empty.
      *
      * Generated from protobuf field <code>string app_pre_release = 7;</code>
      */
-    private $app_pre_release = '';
+    protected $app_pre_release = '';
     /**
      * The list of build tags that were supplied during compilation.
      *
@@ -66,7 +66,7 @@ class Version extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string go_version = 9;</code>
      */
-    private $go_version = '';
+    protected $go_version = '';
 
     /**
      * Constructor.
@@ -88,7 +88,7 @@ class Version extends \Google\Protobuf\Internal\Message
      *           The application patch number.
      *     @type string $app_pre_release
      *           The application pre-release modifier, possibly empty.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $build_tags
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $build_tags
      *           The list of build tags that were supplied during compilation.
      *     @type string $go_version
      *           The version of go that compiled the executable.
@@ -296,7 +296,7 @@ class Version extends \Google\Protobuf\Internal\Message
      * The list of build tags that were supplied during compilation.
      *
      * Generated from protobuf field <code>repeated string build_tags = 8;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBuildTags($var)
